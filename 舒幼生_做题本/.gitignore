@@ -8,7 +8,7 @@
 *.fdb_latexmk
 
 # 忽略大PDF（需要时手动上传）
-latex_做题本/main.pdf
+# latex_做题本/main.pdf
 
 # 忽略临时脚本
 _*.py
