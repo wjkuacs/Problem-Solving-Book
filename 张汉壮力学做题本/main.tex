@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt]{book}
+
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{graphicx}
+\usepackage[margin=2.5cm,top=3cm,bottom=2.5cm]{geometry}
+\usepackage{float}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{setspace}
+
+% Page style
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[LE]{\leftmark}
+\fancyhead[RO]{\rightmark}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Paragraph spacing
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+
+\begin{document}
+
+\begin{titlepage}
+\centering
+\vspace*{3cm}
+{\Huge\bfseries 力学（第二版）\par}
+\vspace{1cm}
+{\LARGE 习题做题本\par}
+\vspace{0.5cm}
+{\Large 张汉壮 编著\par}
+\vfill
+{\large \today\par}
+\end{titlepage}
+
+\newpage
+
+% Part 1
+\input{chapters/chapter1_质点运动学}
+
+\input{chapters/chapter2_惯性系下质点动力学}
+
+\input{chapters/chapter3_非惯性系下质点动力学}
+
+\input{chapters/chapter4_动量定理与动量守恒定律}
+
+\input{chapters/chapter5_功能原理与机械能守恒定律}
+
+\input{chapters/chapter6_角动量定理与角动量守恒定律}
+
+
+% Part 3
+\input{chapters/chapter7_刚体}
+
+\input{chapters/chapter8_流体}
+
+\input{chapters/chapter9_振动}
+
+\input{chapters/chapter10_波动}
+
+\input{chapters/chapter11_狭义相对论}
+
+\end{document}
