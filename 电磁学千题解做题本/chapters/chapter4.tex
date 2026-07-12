@@ -453,32 +453,6 @@ $$
 
 \textbf{4.2.7.} 一电流计的电阻为 $500\Omega$ ，当通过它的电流为 $1.0\mu \mathrm{A}$ 时，指针偏转满格。如果将它改装成量程为 $150\mathrm{mV}$ 的伏特计，应如何办？用它测量电压时如何接法？试画出电路图。
 
-【解答】这电流计满格(即指针偏转满格)时通过它的电流为 $1.0\mu A$ ，即通过它的最大电流为
-
-$$
-I _ {\max} = 1. 0 \times 1 0 ^ {- 6} \mathrm{A}\tag{1}
-$$
-
-现在要使它满格时被测量的电压为 150mV, 故应串联一个高电阻 R, 使得
-
-解得
-
-$$
-I _ {\max} (R _ {V} + R) = 1 5 0 \times 1 0 ^ {- 3} \mathrm{V}\tag{2}
-$$
-
-
-$$
-\begin{array}{r l} R & = \frac {1 5 0 \times 1 0 ^ {- 3}}{1 . 0 \times 1 0 ^ {- 6}} - R _ {V} = 1 5 0 \times 1 0 ^ {3} - 5 0 0 \\ & = 1. 5 \times 1 0 ^ {5} (\Omega) \end{array}\tag{3}
-$$
-
-用它测量电压时,接法如图 4.2.7 所示.
-
-图4.2.7
-\begin{center}
-    \includegraphics[width=0.5\linewidth]{figures/fig_4_2_7.jpg}
-\end{center}
-
 \vfill
 
 \textbf{4.2.8.} 有一个内阻为 $R_{g}$ 的电流计，能通过的最大电流为 $I_{g}$ ，因此它能测量的最高电压为 $U_{g} = I_{g}R_{g}$ . 现在要将它改装成量程为 $U = nU_{g}$ 的伏特计 $(n > 1)$ ，试
@@ -486,14 +460,6 @@ $$
 问应如何办?用它测量电压时如何接法?试画出电路图.
 
 图4.2.8
-
-【解答】本题要求:这电流计通过电流 $I_{g}$ (即它两端的电压为 $U_{g}=I_{g}R_{g}$ ) 时, 被测量的电压为 $U=nU_{g}$ . 故必须将多余的电压 $(n-1)U_{g}=(n-1)I_{g}R_{g}$ 安排在它外边. 因此, 要与它串联一个电阻 R, 使得
-
-$$
-\begin{array}{r l} I _ {g} R & = (n - 1) U _ {g} = (n - 1) I _ {g} R _ {g} \\ & R = (n - 1) R _ {g} \end{array}\tag{所以}
-$$
-
-用它测量电压时,接法如图 4.2.8 所示.
 \begin{center}
     \includegraphics[width=0.5\linewidth]{figures/fig_4_2_8.jpg}
 \end{center}
@@ -503,25 +469,6 @@ $$
 \newpage
 
 \textbf{4.2.9.} 有一个内阻为 $R_{g}$ 的电流计，它的量程为 $I_{g}$ . (1) 现在要把它的量程扩大为 $I = nI_{g}, n > 1$ ，问应如何办？用它测量电流时如何接法？试画出电路图. (2) 当 $R_{g} = 50\Omega, I_{g} = 2.0\mathrm{mA}, I = 0.50\mathrm{A}$ 时，试算出具体数据.
-
-【解答】(1)这电流计能通过的最大电流为 $I_g$ ，现在要使它通过的电流为 $I_g$ 时，被测量的电流为 $nI_{g}$ . 故必须使多余的电流 $(n - 1)I_{g}$ 从它外边流过. 因此, 要与它并联一个电阻 $R$ , 使得
-
-图4.2.9
-
-$$
-\begin{array}{r l} (n - 1) I _ {g} R & = I _ {g} R _ {g} \\ R & = \frac {R _ {g}}{n - 1} \end{array}
-$$
-
-用它测量电流时, 将它和 R 并联后两端 a、b 接到待测电路中, 如图 4.2.9 所示.
-
-(2) 当 $R_{\mathrm{g}} = 50\Omega, I_{\mathrm{g}} = 2.0\mathrm{mA}, I = 0.50\mathrm{A}$ 时， $n = \frac{0.50}{2.0\times 10^{-3}} = 250$ ，故得
-
-$$
-R = \frac {5 0}{2 5 0 - 1} = 0. 2 0 (\Omega)
-$$
-\begin{center}
-    \includegraphics[width=0.5\linewidth]{figures/fig_4_2_9.jpg}
-\end{center}
 
 \vfill
 
@@ -569,42 +516,6 @@ $$
 
 
 $$
-\begin{array}{r l} \text {【解】} & (1) U _ {a} - U _ {b} = - I R + \mathcal {E} - I r = - 1. 0 \times 8. 0 + 3. 0 - 1. 0 \times 2. 0 \\ & = - 7. 0 (\mathrm{V}) \end{array}
-$$
-
-负号表示，a 点的电势比 b 点的低。
-
-(2)电源作功(电源中非静电力作功)的功率为
-
-$$
-P = I \mathcal {E} = 1. 0 \times 3. 0 = 3. 0 (\mathrm{W})
-$$
-
-(3)电源输出的功率为
-
-$$
-P _ {0} = I U = I \mathcal {E} - I ^ {2} r = 3. 0 - 1. 0 ^ {2} \times 2. 0 = 1. 0 (\mathrm{W})
-$$
-
-(4) 若电流 I 反向, 则
-
-$$
-U _ {a} ^ {\prime} - U _ {b} ^ {\prime} = I R + \varepsilon + I r = 1. 0 \times 8. 0 + 3. 0 + 1. 0 \times 2. 0 = 1 3. 0 (\mathrm{V})
-$$
-
-这时 a 点的电势比 b 点的高. 电源做功的功率为
-
-$$
-P ^ {\prime} = - I \varepsilon = - 1. 0 \times 3. 0 = - 3. 0 (\mathrm{W})
-$$
-
-负号表示电源(电源中非静电力)作负功,这时电源充电,外界对电源作正功.电源输出的功率为
-
-$$
-P _ {0} ^ {\prime} = - I U = - I (\mathcal {E} + I r) = - 1. 0 \times (3. 0 + 1. 0 \times 2. 0) = - 5. 0 (\mathrm{W})
-$$
-
-负号表示,外界输入电源的功率为5.0W.其中3.0W储存在电源中,2.0W则消耗在r的焦耳热上.
 \begin{center}
     \includegraphics[width=0.5\linewidth]{figures/fig_4_2_14.jpg}
 \end{center}
@@ -801,16 +712,6 @@ $$
 
 (2)
 图4.2.38
-
-【解答】（1）(i) $R_{ab}=0$ ; (ii) $R_{ab}=\infty$ .
-
-(2)(i) $C_{ab}=\infty$ ; (ii) $C_{ab}=0$ .
-
-(3) 对. $a, b$ 间短路: 在 $a, b$ 间加上电压, 便有非常大的电流流过, 故从电阻的角度看, $a, b$ 间的电阻非常小, 可看作零; 从电容的角度看, 电流不断地流, 相当于 $a, b$ 间有一个电容为无穷大的电容器.
-
-a、b间开路：在a、b间加上电压，电流为零.从电阻的角度看，a、b间的电阻为无穷大；从电
-
-容的角度看,电荷不能流入,相当于a、b间有一个电容为零的电容器.
 \begin{center}
     \includegraphics[width=0.5\linewidth]{figures/fig_4_2_38_1.jpg}
 \end{center}
@@ -842,16 +743,6 @@ a、b间开路：在a、b间加上电压，电流为零.从电阻的角度看，
 \vfill
 
 \textbf{4.2.42.} 导线里的电流 I 既然有方向,为什么不是矢量?
-
-【解答】电流(电流强度) $I$ 是单位时间内通过给定面积的电荷量, 它只有正负 (如规定正电荷从该面积的一边流到另一边为正, 反过来便为负), 而无方向. 通常说的导线里的 $I$ 的方向, 实际上是指它的值的正负.
-
-描述电荷在空间流动状态的量是电流密度 j，它是矢量。电流(电流强度) I 与电流密度 j 的关系为
-
-$$
-I = \iint_ {S} \boldsymbol {j} \cdot \mathrm{d} \boldsymbol {S}
-$$
-
-式中积分是对某个面积 S 的积分. 由此亦可见 I 不是矢量.
 
 \vfill
 
@@ -890,42 +781,6 @@ $$
 
 \textbf{4.2.48.} 有两个电灯泡,分别标明 110V 40W 和 110V 120W,如果把它们串联起来接到 220 伏的电源上,其中一个马上就烧坏了.哪个灯泡烧坏了?为什么会烧坏?如果两个灯泡都是 110V 40W 的,则如何?
 
-【解答】110V 40W 灯泡的电阻和额定电流分别为
-
-$$
-R _ {1} = \frac {U _ {1} ^ {2}}{P _ {1}} = \frac {1 1 0 ^ {2}}{4 0} = 3 0 3 (\Omega)
-$$
-
-$$
-I _ {1} = \frac {P _ {1}}{U _ {1}} = \frac {4 0}{1 1 0} = 0. 3 6 4 (\mathrm{A})
-$$
-
-110V 120W 灯泡的电阻和额定电流分别为
-
-$$
-R _ {2} = \frac {U _ {2} ^ {2}}{P _ {2}} = \frac {1 1 0 ^ {2}}{1 2 0} = 1 0 1 (\Omega)
-$$
-
-$$
-I _ {2} = \frac {P _ {2}}{U _ {2}} = \frac {1 2 0}{1 1 0} = 1. 0 9 (\mathrm{A})
-$$
-
-两灯泡串联后，总电阻为
-
-$$
-R = R _ {1} + R _ {2} = 3 0 3 + 1 0 1 = 4 0 4 (\Omega)
-$$
-
-接到 220V 的电压上,通过的电流为
-
-$$
-I = \frac {U}{R} = \frac {2 2 0}{4 0 4} = 0. 5 4 5 (\mathrm{A})
-$$
-
-因 I 超出 $I_{1}$ 很多, 故烧坏的是 110V 40W 的灯泡. 烧坏的原因是通过的电流太大, 发热过多, 使灯泡的灯丝熔化而断裂.
-
-如果两个灯泡都是 110V 40W 的,串联后接到 220V 的电源上,则加在每个灯泡上的电压便都是 110V,就能正常发光而不会烧坏.
-
 \vfill
 
 \newpage
@@ -952,24 +807,6 @@ $$
 \vfill
 
 \textbf{4.2.52.} 有一个标明 $1\mathrm{k}\Omega$ 40W 的电位器, 试问: (1) 允许通过它的最大电流是多少? (2) 允许加在它两端的最高电压是多少? (3) 在它两端加上 $10\mathrm{V}$ 电压时, 它消耗的功率是多少?
-
-【解答】(1)允许通过它的最大电流为
-
-$$
-I _ {\mathrm{mex}} = \sqrt {\frac {P}{R}} = \sqrt {\frac {4 0}{1 0 ^ {3}}} = 0. 2 (\mathrm{A})
-$$
-
-(2)允许加在它两端的最高电压为
-
-$$
-U _ {\max} = \frac {P}{I} - \frac {4 0}{0 . 2} = 2 0 0 (\mathrm{V})
-$$
-
-(3)消耗的功率为
-
-$$
-P = \frac {U ^ {2}}{R} = \frac {1 0 ^ {2}}{1 0 ^ {3}} = 0. 1 (\mathrm{W})
-$$
 
 \vfill
 
@@ -998,38 +835,6 @@ $$
 \textbf{4.2.56.} 电学量的量纲可以用长度 L、质量 M、时间 T 和电流 I 四个基本量表示，如电荷 q 的量纲为 $[q] = TI$ 。试导出电场强度 E、电势 U、真空电容率 $\varepsilon_{0}$ 、电位移 D、电偶极矩 p、极化强度 P、电容 C 和电阻 R 的量纲。
 
 $$
-\text {   【解】   } \quad [ E ] = \left[ \frac {F}{q} \right] = \left[ \frac {m a}{q} \right] = \frac {\mathrm{MLT} ^ {- 2}}{\mathrm{TI}} = \mathrm{LMT} ^ {- 3} \mathrm{I} ^ {- 1}
-$$
-
-$$
-[ U ] = [ \boldsymbol {E} \cdot \boldsymbol {l} ] = \mathrm{L} ^ {2} \mathrm{MT} ^ {- 3} \mathrm{I} ^ {- 1}
-$$
-
-$$
-[ \varepsilon_ {0} ] = \frac {[ q ]}{[ r ^ {2} ] [ E ]} = \frac {\mathrm{TI}}{\mathrm{L} ^ {2} \cdot \mathrm{LMT} ^ {- 3} \mathrm{I} ^ {- 1}} = \mathrm{L} ^ {- 3} \mathrm{M} ^ {- 1} \mathrm{T} ^ {4} \mathrm{I} ^ {2}
-$$
-
-$$
-[ \boldsymbol {D} ] = [ \varepsilon_ {0} \boldsymbol {E} ] = L ^ {- 3} M ^ {- 1} T ^ {4} I ^ {2} \cdot L M T ^ {- 3} I ^ {- 1} = L ^ {- 2} T I
-$$
-
-$$
-[ \boldsymbol {p} ] = [ q l ] = \mathrm{TI} \cdot \mathrm{L} = \mathrm{LTI}
-$$
-
-$$
-[ \boldsymbol {P} ] = \left[ \frac {\sum \boldsymbol {p}}{\Delta V} \right] = \frac {[ \boldsymbol {p} ]}{[ V ]} = \frac {\mathrm{LTI}}{\mathrm{L} ^ {3}} = \mathrm{L} ^ {- 2} \mathrm{TI}
-$$
-
-$$
-[ C ] = \left[ \frac {q}{U} \right] = \frac {\mathrm{TI}}{\mathrm{L} ^ {2} \mathrm{MT} ^ {- 3} \mathrm{I} ^ {- 1}} = \mathrm{L} ^ {- 2} \mathrm{M} ^ {- 1} \mathrm{T} ^ {4} \mathrm{I} ^ {2}
-$$
-
-$$
-[ R ] = \left[ \frac {U}{I} \right] = \frac {\mathrm{L} ^ {2} \mathrm{MT} ^ {- 3} \mathrm{I} ^ {- 1}}{\mathrm{I}} = \mathrm{L} ^ {2} \mathrm{MT} ^ {- 3} \mathrm{I} ^ {- 2}
-$$
-
-§ 4.3 电流的微观机制
 
 \vfill
 
@@ -1077,8 +882,6 @@ $$
 
 \textbf{4.3.9.} 用 X 射线使空气电离时, 在平衡情况下, 每立方厘米内有 $1.0 \times 10^{7}$ 对正负离子. 已知每个正负离子电荷量的大小都是 $1.6 \times 10^{-19} \mathrm{C}$ . 当正离子的平均定向速率为 $1.27 \mathrm{~cm} / \mathrm{s}$ , 负离子的平均定向速率为 $1.84 \mathrm{~cm} / \mathrm{s}$ 时, 试求空气中电流密度的大小 $j$ .
 
-$$
-\begin{array}{r l} {\mathrm{【解】}} & {j = n e (\bar {u} _ {+} + \bar {u} _ {-}) = 1. 0 \times 1 0 ^ {7} \times 1 0 ^ {6} \times 1. 6 \times 1 0 ^ {- 1 9} \times (1. 2 7 + 1. 8 4) \times 1 0 ^ {- 2}} \\ & {\qquad = 5. 0 \times 1 0 ^ {- 8} (\mathrm {A/ m^ {2}})} \end{array}
 $$
 
 \vfill
