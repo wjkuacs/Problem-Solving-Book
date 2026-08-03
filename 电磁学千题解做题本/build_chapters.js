@@ -79,9 +79,10 @@ function renderProblemText(text, images) {
   const noTag = body.replace(/\\tag\s*\{[^}]*\}/g, '');
   const out = noTag.split('\n');
   // 图片统一渲染在题目末尾（含图注）
+  // width=0.3\linewidth 常规宽度；height=0.6\textheight+keepaspectratio 约束超高图适配页面
   for (const img of images) {
     out.push('\\begin{center}');
-    out.push('    \\includegraphics[width=0.3\\linewidth]{' + img.figPath + '}');
+    out.push('    \\includegraphics[width=0.3\\linewidth,height=0.6\\textheight,keepaspectratio]{' + img.figPath + '}');
     out.push('\\end{center}');
     if (img.caption) {
       out.push('\\textit{' + escapeLatex(img.caption) + '}');
