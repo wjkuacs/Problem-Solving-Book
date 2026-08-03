@@ -162,105 +162,34 @@ function main() {
   const probMap = new Map();
   for (const p of problems) probMap.set(p.id, p);
 
-  // ============ 图片归属：全局扫描 ============
-  // 收集图片事件与图注事件，图片与其后最近的未消费图注配对（行距<=8）
-  const imgEvents = [];   // {file, line, dir}
-  const capEvents = [];   // {cap, line, dir}
-  for (const dir of SOURCE_DIRS) {
-    const mdPath = path.join(BASE_DIR, dir, 'full.md');
-    const lines = fs.readFileSync(mdPath, 'utf8').split('\n');
-    for (let i = 0; i < lines.length; i++) {
-      for (const m of lines[i].matchAll(IMG_RE)) {
-        imgEvents.push({ file: m[1], line: i, dir });
-      }
-      // 图注事件：行内所有图注（独立图注行或同行图注）
-      const sameLineImgs = [...lines[i].matchAll(IMG_RE)];
-      const lineNoImg = lines[i].replace(IMG_RE, '');
-      for (const m of lineNoImg.matchAll(CAPTION_RE)) {
-        capEvents.push({ cap: m[0], line: i, dir });
-      }
-    }
-  }
-
-  // 配对：每个图片找其后最近未消费图注
-  const imgRecords = [];
-  const usedCaps = new Set();
-  for (const ev of imgEvents) {
-    let best = null, bestDist = Infinity;
-    for (let ci = 0; ci < capEvents.length; ci++) {
-      const c = capEvents[ci];
-      if (usedCaps.has(ci)) continue;
-      if (c.dir !== ev.dir) continue;
-      if (c.line < ev.line) continue;
-      const dist = c.line - ev.line;
-      if (dist <= 8 && dist < bestDist) { best = ci; bestDist = dist; }
-    }
-    if (best !== null) {
-      usedCaps.add(best);
-      imgRecords.push({ file: ev.file, caption: capEvents[best].cap, line: ev.line, dir: ev.dir });
-    } else {
-      imgRecords.push({ file: ev.file, caption: null, line: ev.line, dir: ev.dir });
-    }
-  }
-
-  // 图注匹配题号 => 归属该题；无图注 => 兜底归属"图片行之前最近题号"（题目区内）
-  // 先建立每个文件的行号 -> 题号映射（题目区内的行）
-  const lineProbMap = new Map(); // key: dir + ':' + lineIndex => probId
-  for (const dir of SOURCE_DIRS) {
-    const mdPath = path.join(BASE_DIR, dir, 'full.md');
-    const lines = fs.readFileSync(mdPath, 'utf8').split('\n');
-    let curProb = null, lastProbId = null;
+  // ============ 图片归属：仅题目区内图片引用 ============
+  // 从每个题目的题目区文本中提取图片引用（![](...)），只保留题目提及的图片；
+  // 图注文字（如 图1.1.6(1)）取自图片行同行或下一行
+  const assign = new Map(); // probId -> [{file, caption}]
+  const CAP_RE = /图\s*(\d{1,2})\.(\d{1,2})(?:\.(\d{1,2}))?(?:\((\d+)\))?/;
+  for (const p of problems) {
+    const lines = p.text.split('\n');
+    const list = [];
     for (let i = 0; i < lines.length; i++) {
       const line = lines[i];
-      let probId = null;
-      const leadCap = line.match(LEAD_CAPTION_RE);
-      let work = line;
-      if (leadCap) work = line.slice(leadCap[0].length);
-      const m3 = work.match(THREE_RE);
-      const m2 = work.match(TWO_RE);
-      if (m3) probId = m3[0];
-      else if (m2) probId = m2[0];
-      if (probId) {
-        const ch = parseInt(probId.split('.')[0], 10);
-        if ((m2 && !TWO_LEVEL_CHAPS.has(ch)) || (m3 && TWO_LEVEL_CHAPS.has(ch))) probId = null;
-      }
-      if (probId) {
-        const rest = work.replace(probId, '').trim();
-        if (curProb && probId === lastProbId && /^(所示|图\s*\d)/.test(rest)) {
-          lineProbMap.set(dir + ':' + i, curProb);
-          continue;
+      const imgs = [...line.matchAll(IMG_RE)];
+      if (imgs.length === 0) continue;
+      for (const m of imgs) {
+        const file = m[1];
+        // 图注：同行剩余部分 或 下一行
+        let caption = null;
+        const after = line.slice(m.index + m[0].length);
+        const c1 = after.match(CAP_RE);
+        if (c1) caption = c1[0];
+        else {
+          const nxt = (lines[i + 1] || '').trim();
+          const c2 = nxt.match(CAP_RE);
+          if (c2 && /^图\s*\d/.test(nxt)) caption = c2[0];
         }
-        curProb = probId;
-        lastProbId = probId;
-        lineProbMap.set(dir + ':' + i, curProb);
-      } else if (curProb) {
-        // 题目区行（解题标记前的行）也映射到当前题
-        if (!SOLUTION_MARK.test(line.trim())) {
-          lineProbMap.set(dir + ':' + i, curProb);
-        } else {
-          curProb = null; // 进入解答区，之后行不再兜底归属
-        }
+        list.push({ file, caption });
       }
     }
-  }
-
-  // 归属
-  const assign = new Map(); // probId -> [{file, caption}]
-  let unmatched = 0;
-  for (const rec of imgRecords) {
-    let target = null;
-    if (rec.caption) {
-      target = captionTarget(rec.caption);
-      if (target && !probMap.has(target)) {
-        // 图注题号无效（如指向缺失题），回退按位置归属
-        target = lineProbMap.get(rec.dir + ':' + rec.line) || null;
-      }
-    } else {
-      target = lineProbMap.get(rec.dir + ':' + rec.line) || null;
-    }
-    if (!target) { unmatched++; continue; }
-    if (!assign.has(target)) assign.set(target, []);
-    assign.get(target).push({ file: rec.file, caption: rec.caption });
+    assign.set(p.id, list);
   }
 
   // 已知文本缺失题（跳过生成，但保留其图注匹配的图片到 anomalies 参考）
@@ -324,7 +253,7 @@ function main() {
   for (const a of anomalies) console.log('  -', a.type, a.id || a.from);
   let imgTotal = 0;
   for (const p of sortedProblems) imgTotal += (assign.get(p.id) || []).length;
-  console.log('归属图片总数:', imgTotal, '| 未归属图片:', unmatched);
+  console.log('归属图片总数:', imgTotal);
 }
 
 main();
