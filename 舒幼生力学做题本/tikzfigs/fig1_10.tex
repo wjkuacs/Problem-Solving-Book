@@ -1,0 +1,26 @@
+% 1-17 题 图 1-10：三个动点构成等边三角形，A 朝 B、B 朝 C、C 朝 A
+% 中心 O 为极点，极轴取 O→A；边长 l（示意比例 l=3，外接圆半径 sqrt(3)）
+\begin{tikzpicture}[scale=1.05, font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.732,0);
+  \coordinate (B) at (-0.866,1.5);
+  \coordinate (C) at (-0.866,-1.5);
+  % 三角形
+  \draw[thick] (A) -- (B) -- (C) -- cycle;
+  % 极轴（O→A）
+  \draw[->, >=Stealth, dashed] (O) -- (2.45,0) node[right] {极轴};
+  % 速度箭头：A→B、B→C、C→A
+  \draw[->, >=Stealth, thick, blue!70!black] (A) -- ($(A)+(-1.212,0.7)$);
+  \draw[->, >=Stealth, thick, blue!70!black] (B) -- ($(B)+(0,-0.85)$);
+  \draw[->, >=Stealth, thick, blue!70!black] (C) -- ($(C)+(0.9,0.519)$);
+  \node[blue!70!black, right] at ($(A)+(-0.55,0.72)$) {$u$};
+  \node[blue!70!black, left]  at ($(B)+(0.16,-0.75)$) {$u$};
+  \node[blue!70!black, left]  at ($(C)+(0.45,0.62)$) {$u$};
+  % 边长 l（AB 边）
+  \draw[<->, >=Stealth] ($(A)+(0.32,-0.32)$) -- ($(B)+(0.32,0.18)$) node[midway,below right] {$l$};
+  % 顶点与中心
+  \fill (A) circle (2pt) node[above right] {$A$};
+  \fill (B) circle (2pt) node[above left] {$B$};
+  \fill (C) circle (2pt) node[below left] {$C$};
+  \fill (O) circle (1.8pt) node[below] {$O$};
+\end{tikzpicture}

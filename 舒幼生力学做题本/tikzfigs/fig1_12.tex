@@ -1,0 +1,13 @@
+% 1-18 题 图 1-12：心脏线 r = A(1-cosθ)，尖点在极点，A 为比例参数（取 A=1.2）
+% 心底 P 依题意取尖点正对的圆底（θ=π 处，最左端 (-2A,0)）
+\begin{tikzpicture}[scale=1.05, font=\small]
+  % 心脏线参数方程 x=A(1-cosθ)cosθ, y=A(1-cosθ)sinθ
+  \draw[thick] plot[domain=0:360, samples=150]
+       ({1.2*(1-cos(\x))*cos(\x)}, {1.2*(1-cos(\x))*sin(\x)});
+  % 对称轴（虚线）
+  \draw[dashed, gray!70] (0,-1.5) -- (0.55,0.6);
+  % 极点（尖点）
+  \fill (0,0) circle (1.8pt) node[below left] {$O$};
+  % 心底 P（θ=π，圆底最左端）
+  \fill (-2.4,0) circle (2pt) node[below] {心底 $P$};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+% 1-15 题 图 1-8：极坐标系中质点沿不过极点的直线以恒速 v0 运动
+% 直线方程 r cos(θ-θ0)=d，取 θ0=30°、d=2.2（示意），直线 0.866x+0.5y=2.2
+\begin{tikzpicture}[scale=1.1, font=\small]
+  \coordinate (O) at (0,0);
+  \coordinate (X) at (3.4,0);          % 极轴方向参考点
+  \coordinate (H) at (1.905,1.1);      % 垂足
+  \coordinate (P) at (1.2,2.322);      % 直线上质点
+  % 极轴
+  \draw[->, >=Stealth, thick] (O) -- (4.6,0) node[right] {极轴};
+  % 直线 L
+  \draw[thick] (-0.55,5.35) -- (3.15,-1.06) node[above left] {$L$};
+  % 垂距 d（O→H）
+  \draw[<->, >=Stealth] (O) -- (H);
+  \node[above right] at ($(O)!0.5!(H)$) {$d$};
+  % 位矢 r（O→P）
+  \draw[dashed] (O) -- (P);
+  % 质点与速度
+  \fill (P) circle (2.2pt) node[above] {$P$};
+  \draw[->, >=Stealth, thick, blue!70!black] (P) -- ($(P)+(0.72,-1.247)$) node[below] {$v_{0}$};
+  % θ0：极轴与 OH 的夹角
+  \pic[draw, angle radius=7mm, angle eccentricity=1.45, "$\theta_{0}$"] {angle = X--O--H};
+  % θ：极轴与 OP 的夹角
+  \pic[draw, angle radius=12mm, angle eccentricity=1.3, "$\theta$"] {angle = X--O--P};
+  \fill (O) circle (1.8pt) node[below left] {$O$};
+  \fill (H) circle (1.5pt);
+\end{tikzpicture}
