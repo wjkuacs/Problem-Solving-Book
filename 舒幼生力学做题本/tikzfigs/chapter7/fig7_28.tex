@@ -1,0 +1,34 @@
+% fig7_28.tex — 7-42: 驻波（绳左端固定在墙上，O点距墙5λ/4）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 墙
+  \draw[thick] (-0.3,1.5) -- (-0.3,-1.5);
+  \foreach \y in {-1.3,-1.1,...,1.3}
+    \draw (-0.3,\y) -- (-0.6,{\y+0.15});
+  \node[left] at (-0.3,0) {墙};
+  % 绳子（平衡位置为水平线）
+  \draw[thick] (-0.3,0) -- (8,0);
+  % 驻波波形（包络线）
+  % 5λ/4 = 1.25λ，从墙到O点
+  % 节点在墙处（固定端），在 λ/4, 3λ/4, 5λ/4 处有节点
+  % 设λ = 2单位，则5λ/4 = 2.5单位
+  % 绘制驻波的两个极端包络
+  \draw[thick,blue!60,domain=0:2.5,samples=100] plot (\x,{1.2*sin(deg(pi*\x/1.25))});
+  \draw[thick,blue!60,domain=0:2.5,samples=100] plot (\x,{-1.2*sin(deg(pi*\x/1.25))});
+  % 虚线填充中间区域
+  \draw[blue!20,fill=blue!10,domain=0:2.5,samples=100] plot (\x,{1.2*sin(deg(pi*\x/1.25))})
+    -- (2.5,0) -- cycle;
+  % O点标记
+  \fill (2.5,0) circle (2pt) node[below] {$O$};
+  % 节点标注
+  \foreach \x in {0,1.25,2.5}
+    \fill (\x,0) circle (1.5pt);
+  \node[below,font=\footnotesize] at (0.625,0) {波腹};
+  \node[below,font=\footnotesize] at (1.875,0) {波腹};
+  \node[above,font=\footnotesize] at (1.25,0.15) {节点};
+  % λ/4 标注
+  \draw[<->] (0,-1.8) -- (0.625,-1.8) node[midway,below,font=\footnotesize] {$\lambda/4$};
+  % 5λ/4 标注
+  \draw[<->] (0,-2.2) -- (2.5,-2.2) node[midway,below,font=\footnotesize] {$\frac{5}{4}\lambda$};
+  % 墙到O标注
+  \draw[|<->|] (-0.3,-2.6) -- (2.5,-2.6) node[midway,below] {墙到 $O$};
+\end{tikzpicture}

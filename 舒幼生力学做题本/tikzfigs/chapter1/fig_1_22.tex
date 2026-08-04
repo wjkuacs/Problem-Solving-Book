@@ -1,0 +1,19 @@
+% 1-27 题 图_1_22：两球 A、B 在同一竖直线上自由落下，h_A > h_B
+\begin{tikzpicture}[scale=0.9, font=\small]
+  \coordinate (A) at (0,3.8);
+  \coordinate (B) at (0,2.2);
+  \coordinate (G) at (0,0);
+  % 地面
+  \draw[thick, gray!70] (-1.5,0) -- (2,0);
+  \fill[pattern=north east lines, pattern color=gray!40] (-1.5,-0.1) rectangle (2,0);
+  % 竖直线
+  \draw[dashed] (A) -- (G);
+  % 球 A
+  \fill[blue!70!black] (A) circle (0.18) node[right] {$A$};
+  % 球 B
+  \fill[red!70!black] (B) circle (0.18) node[right] {$B$};
+  % h_A, h_B
+  \draw[<->, >=Stealth] (-0.8,0) -- (-0.8,3.8) node[midway,left] {$h_A$};
+  \draw[<->, >=Stealth] (0.6,0) -- (0.6,2.2) node[midway,right] {$h_B$};
+  \node[below right] at (G) {地面};
+\end{tikzpicture}

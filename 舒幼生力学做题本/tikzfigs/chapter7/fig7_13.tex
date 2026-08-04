@@ -1,0 +1,19 @@
+% fig7_13.tex — 7-15: 浮在水面的匀质柱形木块
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 水面
+  \draw[thick,blue!60] (-2,0) -- (2,0);
+  \node[blue!60,right] at (2,0.15) {水面};
+  % 木块（部分浸入水中）
+  \draw[thick,fill=brown!20] (-0.4,-1.2) rectangle (0.4,0.8);
+  % 水中部分标注
+  \draw[<->] (0.55,0) -- (0.55,-1.2) node[midway,right] {$h$};
+  % h 标注线
+  \draw[dashed] (0.45,0) -- (0.6,0);
+  \draw[dashed] (0.45,-1.2) -- (0.6,-1.2);
+  % 水面以下填充
+  \fill[blue!10] (-2,-1.2) rectangle (2,0);
+  % 水面线加强
+  \draw[thick,blue!60] (-2,0) -- (2,0);
+  % 水的标注
+  \node[blue!50] at (1.5,-0.6) {水};
+\end{tikzpicture}

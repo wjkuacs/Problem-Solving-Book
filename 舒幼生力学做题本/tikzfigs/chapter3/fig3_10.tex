@@ -1,0 +1,17 @@
+\begin{tikzpicture}[font=\small]
+  % 车厢内有半圆柱面，小球在顶部
+  % 车厢
+  \draw[thick] (-1.5,-2.5) rectangle (4.5,2.5);
+  % 半圆柱面
+  \draw[thick] (1.5,0) arc[start angle=180, end angle=360, radius=1.5];
+  \draw[thick] (0,0) -- (3,0);
+  \node at (1.5,-0.4) {$R$};
+  % 小球在顶部
+  \filldraw (0,1.5) circle (3pt) node[above] {$m$};
+  % 速度标注
+  \draw[->, thick] (1.5,2.8) -- (2.5,2.8) node[above] {$v_0$};
+  % 车厢速度
+  \draw[->, thick] (1.5,-2.8) -- (3,-2.8) node[midway, below] {$v_0$};
+  % 圆弧中心
+  \filldraw (1.5,0) circle (1pt) node[below right] {};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[scale=1, font=\small]
+  % Problem 5-9: Ring with two balls at diameter ends, force F
+  % Ring
+  \draw[thick] (0, 0) circle (1.2);
+
+  % Two small balls at diameter endpoints (horizontal)
+  \filldraw[fill=blue!30] (-1.2, 0) circle (0.1);
+  \node[below left] at (-1.2, -0.1) {$m$};
+
+  \filldraw[fill=blue!30] (1.2, 0) circle (0.1);
+  \node[below right] at (1.2, -0.1) {$m$};
+
+  % Force F perpendicular to diameter (vertical)
+  \draw[->, very thick] (0, 1.2) -- (0, 2.0);
+  \node[above] at (0, 2.05) {$\pmb{F}$};
+
+  % Center mark
+  \fill (0, 0) circle (1.5pt);
+
+  % Ring label
+  \node at (0, -1.5) {质量 $M$};
+
+  % Diameter line (dashed)
+  \draw[dashed, gray] (-1.2, 0) -- (1.2, 0);
+
+  % Radius label
+  \draw[<->] (0, 0) -- (0, 1.2) node[midway, left] {$R$};
+\end{tikzpicture}

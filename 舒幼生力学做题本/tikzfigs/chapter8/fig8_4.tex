@@ -1,0 +1,17 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-7: 正方形面板运动的正确形状
+  \node[above] at (1.5,3.2) {正确形状（菱形）};
+
+  % 原始正方形（虚线）
+  \draw[thick, dashed, gray] (0,0) rectangle (2,2);
+
+  % 正确形状：旋转45°的菱形，沿对角线拉伸
+  \draw[thick, blue, fill=cyan!10] (1,0) -- (2.5,1) -- (1,2) -- (-0.5,1) -- cycle;
+
+  % 速度方向
+  \draw[->, thick, red] (1,1) -- (3,1) node[right] {$\pmb{v}$};
+
+  % 标注边长
+  \node[above left] at (0.25,0.5) {$l_1$};
+  \node[above right] at (1.75,0.5) {$l_2$};
+\end{tikzpicture}

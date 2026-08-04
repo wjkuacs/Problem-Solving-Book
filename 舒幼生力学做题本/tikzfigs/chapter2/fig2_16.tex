@@ -1,0 +1,32 @@
+\begin{tikzpicture}[font=\small]
+  % 喷泉底座
+  \draw[thick, fill=blue!10] (-1.5,0) rectangle (1.5,0.3);
+
+  % 喷嘴
+  \draw[thick, fill=gray!40] (-0.15,0.3) rectangle (0.15,0.6);
+  \node[below right] at (0.15,0.3) {喷嘴};
+
+  % 水柱
+  \draw[thick, blue!60, decoration={markings, mark=at position 0.3 with {\arrow{>}}, mark=at position 0.6 with {\arrow{>}}},
+        postaction={decorate}] (0,0.6) -- (0,2.5);
+  \node[left] at (0,1.5) {水柱};
+
+  % 圆筒（倒扣在水柱上）
+  \draw[thick, fill=gray!30] (-0.5,2.5) rectangle (0.5,2.8);
+  \draw[thick, fill=gray!30] (-0.5,2.5) -- (-0.5,3.1) -- (0.5,3.1) -- (0.5,2.5);
+  \node[above] at (0,3.1) {圆筒};
+
+  % 圆筒上的质量
+  \node[above] at (0,3.4) {$m$};
+
+  % 高度 H 标注
+  \draw[<->] (1.5,0.3) -- (1.5,3.1);
+  \node[right] at (1.5,1.7) {$H$};
+
+  % 水流量标注
+  \draw[->, thick, blue] (0.8,0.3) -- (0.8,2.5);
+  \node[right] at (0.85,1.5) {$v_0, S$};
+
+  % 水的密度
+  \node[below right] at (0.6,0.15) {$\rho$};
+\end{tikzpicture}

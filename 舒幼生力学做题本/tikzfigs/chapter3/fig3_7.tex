@@ -1,0 +1,22 @@
+\begin{tikzpicture}[font=\small]
+  % 弹簧组：左墙 + 弹簧2 + 弹簧1 + 挡板
+  \draw[thick] (-2,-0.5) -- (-2,0.5); % 左墙
+  \foreach \y in {-0.4,-0.2,...,0.4}
+    \draw (-2,\y) -- (-2.15,\y-0.08);
+  % 弹簧2 (自由长度较长)
+  \draw[thick, decorate, decoration={zigzag, amplitude=2.5pt, segment length=5pt}]
+    (-2,0) -- (0,0);
+  \node at (-1,0.35) {$k_2$};
+  % 弹簧1 (自由长度较短)
+  \draw[thick, decorate, decoration={zigzag, amplitude=2.5pt, segment length=5pt}]
+    (0,0) -- (1.5,0);
+  \node at (0.75,0.35) {$k_1$};
+  % 挡板
+  \draw[thick, fill=gray!30] (1.5,-0.6) rectangle (1.7,0.6);
+  \node at (2.1,0) {$x$};
+  % x轴
+  \draw[->] (-2.3,-1) -- (2.5,-1) node[right] {$x$};
+  \filldraw (0,-1) circle (1pt) node[below] {$0$};
+  % 自由长度标注
+  \draw[<->, dashed] (0,-0.5) -- (1.5,-0.5) node[midway, below] {自由长度$l$};
+\end{tikzpicture}

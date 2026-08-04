@@ -1,0 +1,30 @@
+\begin{tikzpicture}[font=\small]
+  % 劈形木块
+  \draw[thick, fill=gray!20] (0,0) -- (3,0) -- (0,3) -- cycle;
+
+  % 斜面角
+  \draw[thin, <->] (2.5,0) arc[start angle=0, end angle=53.13, radius=0.8];
+  \node[right] at (3.0,0.35) {$\phi$};
+
+  % 高度标注
+  \draw[<->] (3.3,0) -- (3.3,3);
+  \node[right] at (3.3,1.5) {$H$};
+
+  % 小物块（在斜面顶部）
+  \draw[thick, fill=yellow!50] (-0.15,2.85) rectangle (0.15,3.15);
+  \node[left] at (-0.15,3.0) {$m$};
+
+  % 劈形木块标注
+  \node[below right] at (1.2,0.2) {$M$};
+
+  % 光滑地面
+  \draw[thick] (-0.5,0) -- (4,0);
+  \node[below] at (1.8,-0.15) {光滑地面};
+
+  % 路程 s
+  \draw[<->] (0,-0.8) -- (3,-0.8);
+  \node[below] at (1.5,-0.8) {$s$（劈的位移）};
+
+  % 坐标轴
+  \draw[->] (-0.8,0) -- (4.5,0) node[right] {$x$};
+\end{tikzpicture}

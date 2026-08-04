@@ -1,0 +1,21 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-38: 两飞船加速运动
+  % 坐标轴
+  \draw[->, thick] (-0.5,0) -- (8,0) node[right] {$x$};
+  \draw[->, thick] (0,-0.5) -- (0,6) node[above] {$t$};
+  \node[below left] at (0,0) {$O$};
+
+  % S'系（以v=c/2运动）
+  \draw[->, thick, blue, dashed] (0,0) -- (4,6) node[above] {$S'$};
+  \node at (1.5,2.5) [left] {$v = c/2$};
+
+  % 飞船1世界线（从O'出发，沿x'加速）
+  \draw[thick, red] (0,0) .. controls (2,1.5) and (3,3) .. (5,5.5);
+  \node[right] at (5,5.5) {飞船1};
+  \node at (3.5,2.5) {$a_1$};
+
+  % 飞船2世界线（从O出发，沿x加速）
+  \draw[thick, green!60!black] (0,0) .. controls (3,1) and (5,2) .. (7,4);
+  \node[right] at (7,4) {飞船2};
+  \node at (5,1.8) {$a_2 = 100\,a_1$};
+\end{tikzpicture}

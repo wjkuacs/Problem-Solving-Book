@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3, 1.2);
+    \coordinate (C) at (5, 2.0);
+
+    % 绘制地面线 (下层、竖直台阶、上层)
+    \draw (-0.5, 0) -- (3, 0); 
+    \draw (3, 0) -- (3, 1.2);  
+    \draw (3, 1.2) -- (5.5, 1.2); 
+
+    % 绘制下层地面阴影线 (使用 foreach 批量生成)
+    \foreach \x in {-0.2, 0.2, 0.6, 1.0, 1.4, 1.8, 2.2, 2.6, 3.0} {
+        \draw (\x,0) -- (\x-0.2,-0.2);
+    }
+    % 绘制上层地面阴影线
+    \foreach \x in {3.2, 3.6, 4.0, 4.4, 4.8, 5.2} {
+        \draw (\x,1.2) -- (\x-0.2,1.0);
+    }
+
+    % 绘制斜杆 AC
+    \draw[thick] (A) -- (C);
+
+    % 标注字母
+    \node[above left] at (A) {$A$};
+    \node[above left] at (B) {$B$};
+    \node[above] at (C) {$C$};
+
+    % 绘制角度 \phi (根据几何关系 arctan(1.2/3) ≈ 21.8度)
+    \draw (0.8,0) arc[start angle=0, end angle=21.8, radius=0.8];
+    \node at (1.1, 0.2) {$\phi$};
+\end{tikzpicture}

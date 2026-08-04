@@ -1,0 +1,18 @@
+\begin{tikzpicture}[font=\small]
+  % 圆环用绳悬挂，环上两颗串珠
+  % 悬绳
+  \draw[thick] (0,3) -- (0,1.5);
+  % 圆环
+  \draw[thick] (0,0) circle (1.5);
+  \node at (0,1.7) {环};
+  \filldraw (0,1.5) circle (2pt); % 环顶
+  % 两颗串珠（从顶部左右两侧滑下）
+  \filldraw[fill=gray!50] (-1.06,1.06) circle (3pt) node[above left] {$m$};
+  \filldraw[fill=gray!50] (1.06,1.06) circle (3pt) node[above right] {$m$};
+  % 标注环质量
+  \node at (2,0) {$\gamma m$};
+  % 重力标注
+  \draw[->] (-1.06,1.06) -- (-1.06,0.3) node[midway, left] {$mg$};
+  \draw[->] (1.06,1.06) -- (1.06,0.3) node[midway, right] {$mg$};
+  \draw[->] (0,0) -- (0,-0.8) node[below] {$\gamma mg$};
+\end{tikzpicture}

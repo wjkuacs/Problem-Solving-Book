@@ -1,0 +1,54 @@
+% fig_7_39.tex — 7-54: 竖直圆环内放直角三角板（斜边2R，短边R）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 圆环
+  \draw[thick] (0,0) circle (2);
+  % 圆心 O
+  \fill (0,0) circle (1.5pt);
+  \node[below right] at (0,0) {$O$};
+  % 铅垂线
+  \draw[dashed,gray] (0,2.3) -- (0,-2.3);
+  % 直角三角板（斜边=2R，短边=R，放在环内底部平衡）
+  % 斜边 = 2R = 环的直径的一端到另一端？不，斜边=2R=环直径
+  % 短边=R，另一条直角边=√(4R²-R²)=R√3
+  % 平衡位置：斜边在底部
+  % 三角板的三个顶点在环上
+  % 设斜边水平放在底部，两端在环上
+  % 短边=R 从一端向上
+  % 顶点1: (-R, -√(R²-R²)) = (-R, 0) → 不对
+  % 用参数：斜边长2R，放在圆环内
+  % 圆环半径=R，三角板斜边=2R=直径
+  % 所以斜边两端在圆环直径两端
+  % 斜边水平时：(-R,0) 和 (R,0)
+  % 短边R从(-R,0)出发，垂直方向？
+  % 直角在短边和长直角边的交点
+  % 短边=R，从(-R,0)向上R → (-R,R)
+  % 但(-R,R)到(R,0)的距离 = √(4R²+R²) = R√5 ≠ R√3
+  % 重新考虑：直角三角形斜边2R，一条直角边R
+  % 直角顶点C，两条直角边CA=R, CB=R√3, 斜边AB=2R
+  % 放在环内：A和B在环上，C在环内
+  % 平衡：重心在最低点
+  % 三角板顶点坐标（斜边AB水平在底部）
+  % A=(-R,0), B=(R,0), C在AB上方
+  % C到AB的距离h = R*R√3/(2R) = R√3/2
+  % 但C的位置需要满足CA=R, CB=R√3
+  % 从A=(-R,0)出发，CA=R：C在以A为圆心R为半径的圆上
+  % 从B=(R,0)出发，CB=R√3：C在以B为圆心R√3为半径的圆上
+  % C = (-R + R*cosα, R*sinα) 其中α满足
+  % (-R+R*cosα-R)² + (R*sinα)² = 3R²
+  % (R*cosα-2R)² + R²sin²α = 3R²
+  % R²cos²α - 4R²cosα + 4R² + R²sin²α = 3R²
+  % R² - 4R²cosα + 4R² = 3R²
+  % 5R² - 4R²cosα = 3R²
+  % cosα = 1/2 → α = 60°
+  % C = (-R + R/2, R√3/2) = (-R/2, R√3/2)
+  \draw[thick,fill=orange!15] (-2,0) -- (2,0) -- ({-2*0.5},{2*0.866}) -- cycle;
+  \node[font=\footnotesize] at (-0.7,0.5) {三角板};
+  % 标注顶点
+  \fill (-2,0) circle (1.5pt) node[left] {$A$};
+  \fill (2,0) circle (1.5pt) node[right] {$B$};
+  \fill ({-2*0.5},{2*0.866}) circle (1.5pt) node[above] {$C$};
+  % 标注边长
+  \node[below,font=\footnotesize] at (0,-0.2) {斜边 $2R$};
+  \node[left,font=\footnotesize] at (-1.6,0.5) {$R$};
+  \node[right,font=\footnotesize] at (0.6,0.5) {$R\sqrt{3}$};
+\end{tikzpicture}

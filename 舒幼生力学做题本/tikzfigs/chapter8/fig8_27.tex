@@ -1,0 +1,27 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-40: 球坐标与星体分布
+  % 球体（星体表面）
+  \draw[thick, fill=yellow!20] (0,0) circle(1.5);
+  \node at (0,0) {星体};
+  \node at (0,-0.4) {$M$};
+
+  % O点
+  \fill (0,0) circle(2pt) node[below left] {$O$};
+
+  % 星体数 N 各向同性
+  \foreach \a in {0,30,...,330} {
+    \draw[thick, blue, ->] (0,0) -- ({2.5*cos(\a)},{2.5*sin(\a)});
+  }
+  \node at (2.8,2.8) {$N$ = const};
+
+  % 球坐标角
+  \draw[->, thick] (-0.3,0) -- (3.5,0) node[right] {$z$};
+
+  % 角度 theta
+  \draw[dashed] (0,0) -- (2,1.5);
+  \draw[<->] (1.2,0) arc[start angle=0, end angle=37, radius=1.2cm];
+  \node at (1.5,0.5) {$\theta$};
+
+  % S'系标注
+  \draw[->, thick, blue, dashed] (-2,-2) -- (2,-2) node[below] {$S'$以$v$运动};
+\end{tikzpicture}

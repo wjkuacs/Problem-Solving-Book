@@ -1,0 +1,21 @@
+\begin{tikzpicture}[font=\small]
+  % 扭摆：三根绳悬挂圆环，中心固定小物块
+  % 天花板
+  \draw[thick] (-2.5,3) -- (2.5,3);
+  % 三根悬绳
+  \draw[thick] (-1.5,3) -- (-1.5,1.5);
+  \draw[thick] (1.5,3) -- (1.5,1.5);
+  \draw[thick] (0,3) -- (0,1.5);
+  % 圆环
+  \draw[thick] (0,0) circle (1.5);
+  % 中心小物块
+  \filldraw[fill=gray!40] (-0.15,-0.15) rectangle (0.15,0.15);
+  % 辐条（虚线）
+  \draw[dashed] (0,0) -- (1.5,0);
+  \draw[dashed] (0,0) -- (-1.5,0);
+  \draw[dashed] (0,0) -- (0,1.5);
+  \draw[dashed] (0,0) -- (0,-1.5);
+  % 标注
+  \node at (0,0.5) {$m$};
+  \node at (0,-2) {环质量 $m$};
+\end{tikzpicture}

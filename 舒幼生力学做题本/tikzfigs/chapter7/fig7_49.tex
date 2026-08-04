@@ -1,0 +1,30 @@
+% fig7_49.tex — 7-61: 直线MN上O点两侧固定电荷 + 细管 + 带电质点
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 直线 MN
+  \draw[thick] (-3.5,0) -- (3.5,0);
+  \node[left] at (-3.5,0) {$M$};
+  \node[right] at (3.5,0) {$N$};
+  % O点
+  \fill (0,0) circle (1.5pt);
+  \node[below left] at (0,0) {$O$};
+  % 左侧电荷 Q（距离O为a）
+  \draw[thick,fill=red!40] (-2,0) circle (0.15);
+  \node[above] at (-2,0.25) {$Q>0$};
+  \node[below,font=\footnotesize] at (-2,-0.25) {$-a$};
+  % 右侧电荷 Q（距离O为a）
+  \draw[thick,fill=red!40] (2,0) circle (0.15);
+  \node[above] at (2,0.25) {$Q>0$};
+  \node[below,font=\footnotesize] at (2,-0.25) {$a$};
+  % 细管（与MN夹角φ，过O点）
+  \draw[thick,brown!60!black] (-2.5,-1.8) -- (2.5,1.8);
+  \node[above left,font=\footnotesize] at (2.2,1.6) {细管};
+  % φ 标注
+  \draw[->] (1.2,0) arc[start angle=0,end angle=37,radius=1.2];
+  \node[right,font=\footnotesize] at (1.1,0.4) {$\phi$};
+  % 带电质点在O点
+  \draw[thick,fill=blue!40] (0,0) circle (0.1);
+  \node[below right] at (0.15,-0.15) {$q>0$, $m$};
+  % a 标注
+  \draw[<->] (0,-0.5) -- (2,-0.5) node[midway,below] {$a$};
+  \draw[<->] (-2,-0.5) -- (0,-0.5) node[midway,below] {$a$};
+\end{tikzpicture}

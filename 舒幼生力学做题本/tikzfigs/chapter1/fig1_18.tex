@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义坐标
+    \coordinate (A) at (-3, 0);
+    \coordinate (B) at (0, 3);
+    \coordinate (C) at (3, 0);
+    \coordinate (D) at (0, -3);
+
+    % 绘制虚线对角线
+    \draw[dashed] (A) -- (C);
+    \draw[dashed] (B) -- (D);
+
+    % 绘制菱形边并标注长度 l
+    \draw (A) -- (B) node[midway, above left] {$l$};
+    \draw (B) -- (C) node[midway, above right] {$l$};
+    \draw (C) -- (D) node[midway, below right] {$l$};
+    \draw (D) -- (A) node[midway, below left] {$l$};
+
+    % 绘制节点和字母
+    \fill (A) circle (1.5pt) node[left] {$A$};
+    \fill (B) circle (1.5pt) node[above] {$B$};
+    \fill (C) circle (1.5pt) node[right, yshift=-2mm, xshift=-1mm] {$C$}; 
+    \fill (D) circle (1.5pt) node[below] {$D$};
+
+    % 绘制速度和加速度向量 v, a (在 C 的右侧)
+    \draw[->, thick] (3.2, 0.4) -- (4.8, 0.4) node[midway, above] {$v$};
+    \draw[->, thick] (3.2, -0.4) -- (4.8, -0.4) node[midway, below] {$a$};
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[font=\small]
+  % 车厢
+  \draw[thick] (-2,-2) rectangle (4,2);
+  \node[above] at (1,2) {车厢};
+
+  % 加速度箭头
+  \draw[->, thick, blue] (1,2.5) -- (2.5,2.5);
+  \node[above] at (1.75,2.5) {$a$（向右）};
+
+  % 悬挂点（天花板）
+  \draw[thick] (1,2) -- (1,1.5);
+
+  % 圆锥摆的绳
+  \draw[thick] (1,1.5) -- (0.0,0.3);
+  \node[above left] at (0.4,1.0) {$L$};
+
+  % 摆球（最左位置）
+  \draw[fill=red!50] (0.0,0.3) circle (0.2);
+  \node[below left] at (0,0.1) {摆球};
+
+  % 竖直虚线
+  \draw[dashed, gray] (1,1.5) -- (1,0);
+
+  % 辐角 θ
+  \draw[thin, <->] (1,1.0) arc[start angle=270, end angle=320, radius=0.6];
+  \node[left] at (0.65,0.85) {$\theta$};
+
+  % 简要说明
+  \node[below] at (1,-1.8) {摆球在最左位置时车厢开始加速};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-25: 粒子衰变
+  % 原粒子
+  \draw[->, thick, blue] (-3,0) -- (-0.5,0) node[above] {$M_0$, $0.8c$};
+
+  % 衰变点
+  \fill (0,0) circle(3pt) node[below] {衰变};
+
+  % 衰变后粒子1：沿-y方向
+  \draw[->, thick, red] (0,0) -- (0,-2.5) node[below] {$m_0$, $0.6c$};
+
+  % 衰变后粒子2：未知方向
+  \draw[->, thick, green!60!black] (0,0) -- (2.5,1.5) node[above right] {$m_0$, $v$};
+
+  % 角度 theta
+  \draw[dashed] (0,0) -- (2.5,0);
+  \draw[<->] (1.5,0) arc[start angle=0, end angle=31, radius=1.5cm];
+  \node at (1.8,0.5) {$\theta$};
+
+  % 坐标轴
+  \draw[->, gray] (-3.5,0) -- (3.5,0) node[right] {$x$};
+  \draw[->, gray] (0,-3) -- (0,2.5) node[above] {$y$};
+\end{tikzpicture}

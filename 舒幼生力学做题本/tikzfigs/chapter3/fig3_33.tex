@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\small]
+  % 航天飞船中的旋转圆筒
+  % 轴MN
+  \draw[thick] (-3,0) -- (3,0);
+  \node at (-3.3,0) {$M$};
+  \node at (3.3,0) {$N$};
+  % 圆筒
+  \draw[thick] (0.5,-0.8) rectangle (2.5,0.8);
+  \node at (1.5,1.1) {圆筒};
+  % 圆筒尺寸
+  \draw[<->] (0.5,-1.2) -- (2.5,-1.2) node[midway, below] {$l=20\,\mathrm{cm}$};
+  \draw[<->] (0.5,1.3) -- (0.5,-1.3);
+  % 距离d
+  \draw[<->] (-3,-1.2) -- (0.5,-1.2) node[midway, below] {$d=10\,\mathrm{cm}$};
+  % 旋转箭头
+  \draw[->, thick] (1.5,1) arc[start angle=90, end angle=200, radius=0.4];
+  \node at (1.2,1.3) {$\omega$};
+  % 颗粒P
+  \filldraw (1.5,0) circle (2pt) node[below] {$P$};
+  % 液体填充（阴影）
+  \fill[blue!10] (0.5,-0.8) rectangle (2.5,0.8);
+  \node at (1.5,-0.4) {$\rho$};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+% 4-28 题 图4_27：两球固连在轻杆两端，绕水平轴x旋转
+\begin{tikzpicture}[font=\small]
+  % x轴（轻轴）
+  \draw[->, thick] (-2,0) -- (4,0) node[right] {$x$};
+  % 中心O
+  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+  % 轻杆（倾斜一定角度，两端球在不同竖直面内运动）
+  % 球A1（在左上方竖直面内圆运动）
+  \coordinate (A1) at (-1.2,1.5);
+  \coordinate (A2) at (1.2,-1.5);
+  \draw[thick] (A1) -- (A2);  % 轻杆
+  \filldraw (A1) circle (2pt) node[above left] {$A_1$};
+  \filldraw (A2) circle (2pt) node[below right] {$A_2$};
+  % A1的圆周运动轨迹（虚线竖直圆）
+  \draw[dashed] (-1.2,0) circle (1.5);
+  % A2的圆周运动轨迹
+  \draw[dashed] (1.2,0) circle (1.5);
+  % 两个竖直平面的标注
+  \node at (-1.2,-1.8) {平面1};
+  \node at (1.2,1.8) {平面2};
+  % 角速度标注
+  \draw[->, thick] (-0.3,1.2) arc[start angle=100, end angle=155, radius=1.3];
+  \node at (-1.5,1.2) {$\omega$};
+  % 轴承标注
+  \draw[thick, gray] (-0.8,-0.3) rectangle (-0.3,0.3);
+  \node[below] at (-0.55,-0.35) {轴承};
+  \draw[thick, gray] (0.3,-0.3) rectangle (0.8,0.3);
+  \node[below] at (0.55,-0.35) {轴承};
+\end{tikzpicture}

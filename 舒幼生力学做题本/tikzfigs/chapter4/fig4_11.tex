@@ -1,0 +1,25 @@
+% 4-13 题 图4_11：无动力航天器飞向行星，瞄准距离b
+\begin{tikzpicture}[font=\small]
+  % 行星
+  \filldraw (0,0) circle (0.6) node[below] {行星};
+  \draw[thick] (0,0) circle (0.6);
+  % 行星中心O
+  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+  % 行星半径R标注
+  \draw[<->] (0,0) -- (0.6,0) node[midway, above] {$R$};
+  % 入射轨迹（从左侧远处飞来，被引力偏转后落向行星表面）
+  \draw[->, thick, blue!70!black] (-4.5,1.2) -- (-2.5,1.2)
+    .. controls (-1,1.2) and (0.2,0.8) .. (0.35,0.35);
+  % 初速度标注
+  \node at (-3.5,1.6) {$\boldsymbol{v}_0$};
+  % 瞄准距离b（从O到v₀方向线的垂直距离）
+  \draw[dashed] (-4.5,1.2) -- (-4.5,0);
+  \draw[<->] (-4.8,0) -- (-4.8,1.2) node[midway, left] {$b$};
+  % 中心O到轨迹的垂直距离线
+  \draw[dashed] (0,0) -- (0,1.2);
+  \draw[<->] (0,1.2) node[above] {} ;
+  % 更清晰的b标注
+  \draw[<->] (0.3,0) -- (0.3,1.2) node[midway, right] {$b$};
+  % 碰撞区域标注
+  \node[below right] at (0.35,0.35) {碰撞};
+\end{tikzpicture}

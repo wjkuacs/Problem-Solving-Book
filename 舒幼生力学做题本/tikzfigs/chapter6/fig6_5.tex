@@ -1,0 +1,31 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 液面
+  \fill[cyan!15] (-4,-0.1) rectangle (6,0);
+  \draw[thick, blue] (-4,0) -- (6,0);
+  \node[above left] at (6,0) {液面};
+
+  % 杆，与液面夹角 theta，一端高液面 d
+  \coordinate (A) at (1,2.5);   % 高出液面的端点
+  \coordinate (B) at (5,-1.5);  % 浸入液体中的端点
+  \draw[thick, brown!70!black, line width=2pt] (A) -- (B);
+
+  % 悬挂细绳
+  \draw[thick] (A) -- (1,4);
+  \draw[thick] (1,4) -- (0.5,4) -- (0.5,4.3);
+  \node[above] at (0.5,4.3) {天花板};
+
+  % 标注 d
+  \draw[<->] (-0.2,0) -- (-0.2,2.5) node[midway, left] {$d$};
+
+  % 标注 theta
+  \draw[dashed] (1,0) -- (5,0);
+  \draw[<->] (3.5,0) arc[start angle=0, end angle=-27, radius=2cm];
+  \node at (4.8,-0.6) {$\theta$};
+
+  % 标注 l
+  \node[above right] at (3,0.5) {$l$};
+
+  % 液面交点标注
+  \fill (3,0) circle(2pt);
+  \node[below right] at (3,0) {交点};
+\end{tikzpicture}

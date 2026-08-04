@@ -1,0 +1,23 @@
+% 4-27 题 图4_25：发射装置P在光滑大圆环内侧连续发射珠子
+\begin{tikzpicture}[font=\small]
+  % 大圆环
+  \draw[thick] (0,0) circle (2.5);
+  % 发射装置P（在圆环内侧右侧）
+  \draw[thick, fill=gray!20] (2.2,-0.2) -- (2.5,0) -- (2.2,0.2) -- cycle;
+  \node[right] at (2.5,0) {$P$};
+  % 头部和尾部标注
+  \node[above] at (2.5,0.1) {头};
+  \node[below] at (2.15,-0.15) {尾};
+  % 发射方向（尾部向后）
+  \draw[->, thick, red!70!black] (2.1,-0.15) -- (1.5,0.3);
+  \node[above left] at (1.6,0.3) {珠子};
+  % 圆环中心
+  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+  % 旋转方向
+  \draw[->, thick] (1.5,2) arc[start angle=50, end angle=100, radius=2.5];
+  \node at (0.8,2.7) {$v$};
+  % 圆环中心O到P的半径线
+  \draw[dashed] (0,0) -- (2.5,0);
+  % 圆环半径标注
+  \draw[<->] (0,0.3) -- (2.5,0.3) node[midway, above] {$R$};
+\end{tikzpicture}

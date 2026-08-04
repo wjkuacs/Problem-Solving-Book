@@ -1,0 +1,24 @@
+% fig_7_17.tex — 7-18: 竖直圆环内放匀质细杆
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 圆环
+  \draw[thick] (0,0) circle (2);
+  % 圆心 O
+  \fill (0,0) circle (1.5pt);
+  \node[below right] at (0,0) {$O$};
+  % 圆环半径标注
+  \draw[->] (0,0) -- (1.414,1.414) node[midway,above right,font=\footnotesize] {$R$};
+  % 铅垂线（虚线）
+  \draw[dashed,gray] (0,2.3) -- (0,-2.3);
+  % 细杆（长R，放在环内底部附近）
+  % 杆的端点在圆环上，杆长R
+  % 设杆水平放在底部，两端在环上
+  % 杆长 = R, 环半径 = R
+  % 两端点：(-R/2, -√(R²-R²/4)) = (-R/2, -R√3/2) 和 (R/2, -R√3/2)
+  \draw[thick,brown!50!black] ({-2*0.5},{-2*0.866}) -- ({2*0.5},{-2*0.866});
+  \node[below] at (0,-1.732-0.2) {杆, 长 $R$};
+  % 杆两端标记
+  \fill ({-2*0.5},{-2*0.866}) circle (1.5pt);
+  \fill ({2*0.5},{-2*0.866}) circle (1.5pt);
+  % 平衡位置说明（杆在最低点水平）
+  \node[below] at (0,-2.5) {平衡位置};
+\end{tikzpicture}

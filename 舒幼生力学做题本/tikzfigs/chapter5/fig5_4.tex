@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=1, font=\small]
+  % Problem 5-4: Two balls A, B on table, rope half outside
+  % Table surface
+  \fill[gray!15] (-2, 0) rectangle (2, -0.3);
+  \draw[thick] (-2, 0) -- (2, 0);
+  \draw[thick] (2, 0) -- (2, -1.5);
+
+  % Edge of table
+  \draw[thick] (0, 0) -- (0, -0.3);
+
+  % Ball A on table
+  \filldraw[fill=blue!20] (-1.5, 0.3) circle (0.2);
+  \node at (-1.5, 0.3) {$A$};
+
+  % Rope on table
+  \draw[thick] (-1.3, 0.3) -- (0, 0.15);
+
+  % Rope going over edge
+  \draw[thick] (0, 0.15) -- (0, -0.8);
+
+  % Ball B hanging
+  \filldraw[fill=red!20] (0, -1.1) circle (0.2);
+  \node at (0, -1.1) {$B$};
+
+  % Velocity arrow for B
+  \draw[->, thick] (0, -1.1) -- (0, -1.6);
+  \node[right] at (0.1, -1.55) {$v$};
+
+  % Labels
+  \node[above left] at (-2, 0) {桌面};
+\end{tikzpicture}

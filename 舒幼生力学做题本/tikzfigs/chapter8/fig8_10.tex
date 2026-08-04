@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-16: 三角板运动
+  % 运动前（虚线）：等腰直角三角形
+  \draw[thick, dashed, gray] (0,0) -- (0,2) -- (2,0) -- cycle;
+  \node[left] at (0,1) {静止};
+  \node[above] at (0,2) {$A$};
+  \node[below left] at (0,0) {$C$};
+  \node[below right] at (2,0) {$B$};
+
+  % 运动后（沿BC方向收缩）
+  \draw[thick, blue, fill=cyan!10] (3.5,0) -- (3.5,2) -- (5.27,0) -- cycle;
+  \node[above] at (3.5,2) {$A'$};
+  \node[below left] at (3.5,0) {$C'$};
+  \node[below right] at (5.27,0) {$B'$};
+  \node[above] at (4.5,2.3) {运动后 $\angle C'=60°$};
+
+  % 速度
+  \draw[->, thick, blue] (5.5,1) -- (6.5,1) node[right] {$v$};
+
+  % 标注
+  \node at (1,0.8) {等腰直角};
+  \node at (4.3,0.8) {直角三角形};
+\end{tikzpicture}

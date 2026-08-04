@@ -1,0 +1,29 @@
+\begin{tikzpicture}[font=\small]
+  % 绳搭在滑轮上，左侧垂地，右侧挂重物
+  % 滑轮
+  \draw[thick] (0,4) circle (0.4);
+  \filldraw (0,4) circle (1pt);
+  % 支架
+  \draw[thick] (0,4.4) -- (0,5);
+  \draw[thick] (-0.5,5) -- (0.5,5);
+  \foreach \x in {-0.4,-0.2,...,0.4}
+    \draw (\x,5) -- (\x-0.1,5.15);
+  % 绳子左侧（搭在滑轮上+垂到地面）
+  \draw[thick] (-0.4,4) arc[start angle=180, end angle=360, radius=0.4];
+  % 左侧垂下
+  \draw[thick] (-0.4,4) -- (-0.4,0);
+  % 右侧垂下挂重物
+  \draw[thick] (0.4,4) -- (0.4,1.5);
+  % 重物
+  \draw[thick, fill=gray!30] (0.1,1) rectangle (0.7,1.5);
+  \node at (0.4,0.7) {$m$};
+  % 标注
+  \node at (-0.8,2) {$H$};
+  \draw[<->] (-0.9,0) -- (-0.9,4) node[midway, left] {$H$};
+  % 速度v0
+  \draw[->, thick] (0.9,1.5) -- (0.9,0.5) node[midway, right] {$v_0$};
+  % 地面
+  \draw[thick] (-1,0) -- (1,0);
+  \foreach \x in {-0.9,-0.6,...,0.9}
+    \draw (\x,0) -- (\x-0.1,-0.15);
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=1, font=\small]
+  % Problem 5-13: Wire bent into two tangent semicircles of radius R
+  % Left semicircle (center at origin, right half = arc from bottom to top)
+  \draw[thick] (0, -1.2) arc (-90:90:1.2);
+
+  % Right semicircle (center at (2.4, 0), left half = arc from top to bottom)
+  \draw[thick] (2.4, 1.2) arc (90:270:1.2);
+
+  % Tangent point
+  \fill (1.2, 0) circle (2pt);
+  \node[below] at (1.2, -0.1) {切点};
+
+  % Center of left semicircle
+  \fill (0, 0) circle (1.5pt);
+  \node[below left] at (0, -0.1) {$O_1$};
+
+  % Center of right semicircle
+  \fill (2.4, 0) circle (1.5pt);
+  \node[below right] at (2.4, -0.1) {$O_2$};
+
+  % Point A (midpoint of left semicircle's arc = leftmost point)
+  \fill (-1.2, 0) circle (2pt);
+  \node[above left] at (-1.2, 0.1) {$A$};
+
+  % Radius labels
+  \draw[<->] (0, 0) -- (1.2, 0) node[midway, above] {$R$};
+  \draw[<->] (1.2, 0) -- (2.4, 0) node[midway, above] {$R$};
+
+  % Rotation axis at A (dot)
+  \draw[->, thick] (-1.2, 0) -- (-1.8, 0) node[left] {\tiny $\otimes$轴};
+\end{tikzpicture}

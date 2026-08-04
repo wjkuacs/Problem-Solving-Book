@@ -1,0 +1,19 @@
+\begin{tikzpicture}[font=\small]
+  % 弹弓效应：土星和探测器轨道
+  % 土星轨道（大弧）
+  \draw[thick, ->] (-3,0) arc[start angle=180, end angle=280, radius=3];
+  % 土星
+  \filldraw[fill=yellow!60] (3,0) circle (0.4) node[right] {土星};
+  \draw[->, thick] (3,-0.6) -- (3,-1.6) node[midway, right] {$v_M$};
+  % 探测器来向
+  \draw[thick, ->] (-4,2) -- (-1,0.3);
+  \node at (-3.5,2.3) {$v_0$};
+  % 探测器去向（绕土星后反向）
+  \draw[thick, ->] (1,-0.3) -- (4,1.5);
+  \node at (3.5,1.8) {$v$};
+  % 探测器标记
+  \filldraw (-1,0.3) circle (2pt) node[below left] {探测器};
+  \filldraw (1,-0.3) circle (2pt);
+  % 太阳参考系标注
+  \node at (0,2.8) {太阳参考系};
+\end{tikzpicture}

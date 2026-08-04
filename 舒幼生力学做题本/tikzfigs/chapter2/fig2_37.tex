@@ -1,0 +1,34 @@
+\begin{tikzpicture}[font=\small]
+  % 菱形 ABCD
+  \coordinate (A) at (0,2.5);
+  \coordinate (B) at (-1.8,1.0);
+  \coordinate (C) at (0,-0.5);
+  \coordinate (D) at (1.8,1.0);
+
+  % 绳连接
+  \draw[thick] (A) -- (B) -- (C) -- (D) -- cycle;
+
+  % 四个小球
+  \draw[fill=red!50] (A) circle (0.15);
+  \node[above] at (A) {$A$};
+  \draw[fill=gray!50] (B) circle (0.15);
+  \node[left] at (B) {$B$};
+  \draw[fill=gray!50] (C) circle (0.15);
+  \node[below] at (C) {$C$};
+  \draw[fill=gray!50] (D) circle (0.15);
+  \node[right] at (D) {$D$};
+
+  % 角度 2α
+  \draw[thin, <->] ($(A)+(-0.4,-0.15)$) arc[start angle=250, end angle=290, radius=0.5];
+  \node[below left] at (A) {$\alpha$};
+
+  % 冲击方向：CA 方向
+  \draw[->, thick, blue] (C) -- (A);
+  \node[right] at ($(A)!0.5!(C)+(0.2,0)$) {$v$};
+
+  % 对角线 AC（虚线）
+  \draw[dashed, gray] (A) -- (C);
+
+  % 对角线 BD（虚线）
+  \draw[dashed, gray] (B) -- (D);
+\end{tikzpicture}

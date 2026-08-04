@@ -1,0 +1,26 @@
+% 4-9 题 图4_6：旋转台面上小球Q系于固定点P的轻线
+\begin{tikzpicture}[font=\small]
+  % 台面（大圆表示）
+  \draw[thick] (0,0) circle (3.5);
+  % 中心O
+  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
+  % 角速度箭头
+  \draw[->, thick] (2.5,1.5) arc[start angle=30, end angle=100, radius=2.9];
+  \node at (2.8,2.5) {$\omega$};
+  % 固定点P（在O右侧距离b处）
+  \coordinate (P) at (1.8,0);
+  \filldraw (P) circle (1.5pt) node[below] {$P$};
+  % 距离b标注
+  \draw[<->] (0,-0.3) -- (P) node[midway, below] {$b$};
+  % 轻线和小球Q（线长l，偏离平衡位置角θ）
+  \coordinate (Q) at ({1.8+1.5*cos(30)},{1.5*sin(30)});
+  \draw[thick] (P) -- (Q);
+  \filldraw (Q) circle (2pt) node[right] {$Q$};
+  % 线长标注
+  \node[above, sloped] at ({1.8+0.75*cos(30)},{0.75*sin(30)}) {$l$};
+  % 角度θ标注
+  \draw (2.4,0) arc[start angle=0, end angle=30, radius=0.6];
+  \node at (2.7,0.2) {$\theta$};
+  % 平衡位置虚线（O-P延长线）
+  \draw[dashed] (P) -- (3.3,0);
+\end{tikzpicture}

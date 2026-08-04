@@ -1,0 +1,22 @@
+% fig_7_30.tex — 7-43: 多普勒效应（警车 + 峭壁 + 骑车者）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 地面
+  \draw[thick] (-1,-1) -- (8,-1);
+  % 峭壁
+  \draw[thick,fill=gray!30] (7,-1) rectangle (7.5,2.5);
+  \node[above] at (7.25,2.5) {峭壁};
+  % 警车 S（向右运动）
+  \draw[thick,fill=blue!20] (2,-1) rectangle (3,-0.5);
+  \node at (2.5,-0.75) {$S$};
+  \draw[->,thick,red] (3.2,-0.75) -- (3.8,-0.75) node[midway,above] {$v_S$};
+  % 骑车者 B（向左运动，远离峭壁）
+  \draw[thick] (0.5,-1) -- (0.5,-0.3);
+  \draw[thick] (0.5,-0.3) circle (0.12);
+  \node at (0.5,0) {$B$};
+  \draw[->,thick,red] (0.3,-0.5) -- (-0.3,-0.5) node[midway,above] {$v_B$};
+  % 声波传播示意
+  \draw[->,dashed,blue] (3,-0.3) -- (6.5,-0.3) node[midway,above,font=\footnotesize] {声波};
+  \draw[->,dashed,blue] (6.5,-0.1) -- (3.5,-0.1) node[midway,below,font=\footnotesize] {反射波};
+  % 距离标注
+  \node[font=\footnotesize] at (5,-1.3) {声波 $u=330$ m/s};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[font=\small]
+  % 气缸内分子往返运动，活塞推进
+  % 气缸壁（左侧固定）
+  \draw[thick] (0,-0.8) -- (0,0.8);
+  \foreach \y in {0.7,0.4,...,-0.7}
+    \draw (0,\y) -- (-0.15,\y-0.1);
+  % 气缸上下壁
+  \draw[thick] (0,0.8) -- (4,0.8);
+  \draw[thick] (0,-0.8) -- (4,-0.8);
+  % 活塞
+  \draw[thick, fill=gray!30] (3.5,-0.8) rectangle (3.7,0.8);
+  \node at (3.6,1.1) {活塞};
+  % 活塞推进方向
+  \draw[->, thick] (4,0) -- (3.8,0) node[midway, above] {$u$};
+  % 分子
+  \filldraw (2,0.2) circle (2pt) node[above] {分子};
+  % 分子速度
+  \draw[->, thick] (2,0.2) -- (1.2,0.2) node[midway, above] {$v_0$};
+  % 气缸长度
+  \draw[<->] (0,-1.2) -- (3.5,-1.2) node[midway, below] {$l_0$};
+  % 标注
+  \node at (-0.5,0) {左壁};
+  \node at (4.3,0) {活塞};
+\end{tikzpicture}

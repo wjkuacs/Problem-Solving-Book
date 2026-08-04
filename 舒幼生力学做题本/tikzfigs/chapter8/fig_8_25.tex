@@ -1,0 +1,30 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-37: 正方形ABCD面板，质点P绕行
+  % 面板（S'系中的正方形，S系中沿AB收缩）
+  \draw[thick, fill=cyan!15] (0,0) rectangle (4,3);
+  \node at (2,1.5) {面板};
+
+  % 顶点
+  \node[below left] at (0,0) {$A$};
+  \node[below right] at (4,0) {$B$};
+  \node[above right] at (4,3) {$C$};
+  \node[above left] at (0,3) {$D$};
+
+  % 面板运动速度（沿AB方向）
+  \draw[->, thick, blue] (4.5,1.5) -- (6,1.5) node[right] {$\pmb{v}$};
+
+  % 质点P路径（逆时针绕行）
+  \draw[thick, red, dashed, ->] (0.3,0.3) -- (3.7,0.3);
+  \draw[thick, red, dashed, ->] (3.7,0.3) -- (3.7,2.7);
+  \draw[thick, red, dashed, ->] (3.7,2.7) -- (0.3,2.7);
+  \draw[thick, red, dashed, ->] (0.3,2.7) -- (0.3,0.3);
+
+  % P标注
+  \fill[red] (0.3,0.3) circle(2pt) node[above right] {$P$};
+
+  % 标注u
+  \node[above] at (2,0.5) {$u$};
+
+  % 静长 l
+  \node[below] at (2,-0.5) {静长 $l$};
+\end{tikzpicture}

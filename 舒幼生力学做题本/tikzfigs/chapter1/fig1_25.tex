@@ -1,0 +1,29 @@
+% 1-33 题 图1_25：岸高 h，人用绳经滑轮拉船靠岸，绳与水面夹角 θ
+\begin{tikzpicture}[scale=0.9, font=\small]
+  \coordinate (P) at (0,2.5);     % 滑轮（岸边顶端）
+  \coordinate (H) at (0,0);       % 滑轮正下方水面
+  \coordinate (Boat) at (3.5,0);  % 船
+  \coordinate (Person) at (-1.2,1.8); % 人
+  % 岸壁（竖直线）
+  \draw[thick] (0,-0.1) -- (0,2.8);
+  \fill[pattern=north east lines, pattern color=gray!30] (-0.15,-0.1) rectangle (0,2.8);
+  % 水面
+  \draw[blue!50] (-1,0) -- (5,0);
+  \node[blue!50, below] at (4.5,-0.08) {水面};
+  % 绳：船→滑轮→人
+  \draw[thick, brown!70!black] (Boat) -- (P) -- (Person);
+  % θ 角（绳与水面夹角）
+  \pic[draw, angle radius=12mm, angle eccentricity=1.4, "$\theta$"] {angle = Boat--H--P};
+  % 船
+  \fill[black] (Boat) circle (1.5pt);
+  \draw[thick] ($(Boat)+(-0.5,-0.08)$) -- ($(Boat)+(0.5,-0.08)$);
+  \node[below] at (Boat) {船};
+  % 滑轮
+  \fill[black] (P) circle (2pt) node[above right] {滑轮};
+  % 人
+  \node at (Person) {人};
+  % h 标注
+  \draw[<->, >=Stealth] (-0.6,0) -- (-0.6,2.5) node[midway,left] {$h$};
+  % 绳段标注
+  \node[above right, brown!70!black] at ($(P)!0.55!(Boat)+(0,0.12)$) {绳};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-41: 两介质界面，折射
+  % 界面
+  \draw[thick] (0,-3) -- (0,3);
+  \node[left] at (0,2.8) {界面};
+
+  % 介质标注
+  \node at (-2,0) {介质 1};
+  \node at (-2,-0.5) {$n_1$};
+  \node at (2,0) {介质 2};
+  \node at (2,-0.5) {$n_2$};
+
+  % 法线（x轴方向）
+  \draw[thick, dashed] (-3,0) -- (3,0);
+  \node[above] at (3,0) {法线};
+
+  % 入射光
+  \draw[thick, blue, ->] (-2.5,2) -- (0,0);
+  \node[above left] at (-1.5,1.2) {入射光 $u_i$};
+
+  % 反射光
+  \draw[thick, red, ->] (0,0) -- (-2.5,2);
+
+  % 折射光
+  \draw[thick, green!60!black, ->] (0,0) -- (2.5,1.2);
+
+  % 角度标注
+  \draw[<->] (-1.5,0) arc[start angle=180, end angle=144, radius=1.5cm];
+  \node at (-1.2,0.8) {$\theta_i$};
+
+  \draw[<->] (-1.5,0) arc[start angle=180, end angle=216, radius=1.5cm];
+  \node at (-1.2,-0.8) {$\theta_r$};
+
+  \draw[<->] (1.5,0) arc[start angle=0, end angle=26, radius=1.5cm];
+  \node at (1.7,0.5) {$\theta_t$};
+
+  % 界面速度
+  \draw[->, thick, blue, dashed] (0.5,-2.8) -- (0.5,-3.5) node[below] {$v$ (界面速度)};
+\end{tikzpicture}

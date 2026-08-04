@@ -1,0 +1,49 @@
+\begin{tikzpicture}[font=\small]
+  % 定滑轮和两猴
+  % 定滑轮
+  \draw[thick] (0,3.5) circle (0.25);
+  \draw[fill=black] (0,3.5) circle (1.5pt);
+  \node[above] at (0,3.75) {定滑轮};
+
+  % 左侧猴子（胖猴）
+  \draw[thick] (-2,3.25) -- (-2,2.75) -- (-2,1.75); % 绳上段
+  \draw[thick] (-2.3,1.75) -- (-1.7,1.75); % 头顶
+  \draw[thick] (-2.3,1.75) -- (-2.3,1.0); % 左身
+  \draw[thick] (-1.7,1.75) -- (-1.7,1.0); % 右身
+  \draw[thick] (-2.3,1.0) -- (-1.7,1.0); % 身底
+  % 眼
+  \draw[fill=black] (-2.15,1.55) circle (1pt);
+  \draw[fill=black] (-1.85,1.55) circle (1pt);
+  % 眉毛
+  \draw (-2.2,1.65) -- (-2.1,1.7);
+  \draw (-1.8,1.65) -- (-1.9,1.7);
+  % 嘴
+  \draw (-2.15,1.25) .. controls (-2.05,1.2) and (-1.95,1.2) .. (-1.85,1.25);
+  % 手臂（向上爬）
+  \draw[thick] (-2.3,1.5) -- (-2.6,2.0);
+  \draw[thick] (-1.7,1.5) -- (-1.7,2.0) -- (-2,2.2);
+  \node[below] at (-2,0.9) {胖猴};
+  \node[left] at (-2.7,1.9) {\textit{向上爬}};
+
+  % 右侧猴子（瘦猴）
+  \draw[thick] (2,3.25) -- (2,2.75) -- (2,1.75);
+  \draw[thick] (1.8,1.75) -- (2.2,1.75);
+  \draw[thick] (1.8,1.75) -- (1.8,1.1);
+  \draw[thick] (2.2,1.75) -- (2.2,1.1);
+  \draw[thick] (1.8,1.1) -- (2.2,1.1);
+  % 眼
+  \draw[fill=black] (1.9,1.55) circle (1pt);
+  \draw[fill=black] (2.1,1.55) circle (1pt);
+  % 嘴
+  \draw (1.9,1.3) -- (2.1,1.3);
+  \node[below] at (2,1.0) {瘦猴};
+
+  % 香蕉（挂在滑轮下方）
+  \draw[thick, yellow!60!orange, fill=yellow!60!orange] (0,2.8) .. controls (0.15,2.6) and (0.15,2.3) .. (0,2.15)
+    .. controls (-0.15,2.3) and (-0.15,2.6) .. (0,2.8);
+  \node[below] at (0,2.0) {🍌};
+
+  % 绳（从滑轮到两猴的弧线）
+  \draw[thick] (-2,3.25) .. controls (-1.5,3.6) and (-0.5,3.75) .. (0,3.75);
+  \draw[thick] (0,3.75) .. controls (0.5,3.75) and (1.5,3.6) .. (2,3.25);
+\end{tikzpicture}

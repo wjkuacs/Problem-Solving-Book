@@ -1,0 +1,18 @@
+% fig7_22.tex — 7-38: 平面简谐波 t=0 时刻波形曲线（向x负方向传播）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 坐标轴
+  \draw[->] (-0.5,0) -- (7,0) node[below] {$x$};
+  \draw[->] (0,-2.2) -- (0,2.2) node[left] {$\xi$};
+  % 正弦波形（t=0时刻，向x负方向传播）
+  \draw[thick,blue!70] plot[domain=0:6.28,samples=80] (\x,{1.8*sin(deg(2*pi*\x/4))});
+  % 振幅标注
+  \draw[dashed] (0,1.8) -- (3,1.8);
+  \node[left] at (0,1.8) {$A$};
+  \draw[dashed] (0,-1.8) -- (3,-1.8);
+  % 波长标注
+  \draw[<->] (0,-2.5) -- (4,-2.5) node[midway,below] {$\lambda$};
+  % 传播方向（向左）
+  \draw[->,thick,red] (5,2) -- (3.5,2) node[midway,above] {传播方向};
+  % 原点标记
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

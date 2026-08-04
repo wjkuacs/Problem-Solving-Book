@@ -1,0 +1,26 @@
+\begin{tikzpicture}[font=\small]
+  % 倾斜轨道 + 圆弧过渡 + 水平段
+  \draw[thick] (0,3) -- (3,0) -- (3.3,0) -- (7,0);
+  \draw[thick] (3,0) arc[start angle=180, end angle=270, radius=0.3]
+    -- (3.3,0);
+  % 高度标注
+  \draw[<->] (-0.4,0) -- (-0.4,3) node[midway, left] {$h_3$};
+  \draw[<->] (-0.8,0) -- (-0.8,2.2) node[midway, left] {$h_2$};
+  \draw[<->] (-1.2,0) -- (-1.2,1.5) node[midway, left] {$h_1$};
+  % 起点标记
+  \filldraw (0,3) circle (2pt) node[above left] {$A_3$};
+  \filldraw (0,2.2) circle (2pt) node[above left] {$A_2$};
+  \filldraw (0,1.5) circle (2pt) node[above left] {$A_1$};
+  % 斜面标签
+  \node at (1.2,1.8) {$A_3B$};
+  % 终点标记
+  \filldraw (4.5,0) circle (2pt) node[below] {$D_1$};
+  \filldraw (5.5,0) circle (2pt) node[below] {$D_2$};
+  \filldraw (6.5,0) circle (2pt) node[below] {$D_3$};
+  \node at (4,0.3) {$B$};
+  \node at (7.3,0.3) {$D_3$};
+  % 水平段标签
+  \node at (5.5,0.5) {水平段};
+  % 地面
+  \draw[dashed] (0,0) -- (7,0);
+\end{tikzpicture}

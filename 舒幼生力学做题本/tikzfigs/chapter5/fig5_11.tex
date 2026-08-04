@@ -1,0 +1,30 @@
+\begin{tikzpicture}[scale=1, font=\small]
+  % Problem 5-12: Pendulum = rod of length l + disk of radius R
+  % Pivot point A at top
+  \fill (0, 3) circle (2pt);
+  \node[above] at (0, 3.1) {$A$};
+
+  % Rod from A downward
+  \draw[very thick] (0, 3) -- (0, 0.5);
+
+  % Rod label
+  \node[left] at (-0.15, 1.75) {$l$};
+
+  % Disk at bottom of rod
+  \draw[thick] (0, 0.5) circle (0.5);
+
+  % Center of disk
+  \fill (0, 0.5) circle (1.5pt);
+  \node[right] at (0.55, 0.5) {$R$};
+
+  % Disk radius
+  \draw[->] (0, 0.5) -- (0.45, 0.5);
+
+  % Mass labels
+  \node[left] at (-0.2, 2.5) {杆 $m$};
+  \node[right] at (0.55, 0) {盘 $M$};
+
+  % Pivot support
+  \draw[thick] (-0.3, 3.1) -- (0.3, 3.1);
+  \fill[black] (0, 3) -- (-0.15, 3.15) -- (0.15, 3.15) -- cycle;
+\end{tikzpicture}

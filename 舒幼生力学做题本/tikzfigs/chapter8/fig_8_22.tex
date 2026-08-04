@@ -1,0 +1,25 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-36: 两飞船A和B
+  % 飞船A
+  \draw[thick, fill=orange!30] (0,2.2) rectangle (0.6,2.8);
+  \node at (0.3,3.1) {$A$};
+  \draw[->, thick, blue] (0.3,2.8) -- (0.3,3.5) node[above] {$\beta c$};
+
+  % 飞船B
+  \draw[thick, fill=cyan!30] (0,-2.2) rectangle (0.6,-2.8);
+  \node at (0.3,-3.1) {$B$};
+  \draw[->, thick, red] (0.3,-2.8) -- (0.3,-3.5) node[below] {$\beta c$};
+
+  % 航线间距 d
+  \draw[<->] (1.2,-2.5) -- (1.2,2.5) node[midway, right] {$d$};
+
+  % 无线电波
+  \draw[thick, green!60!black, dashed, ->] (0.3,2.2) -- (0.3,-2.2);
+  \node[right] at (0.6,0) {信号};
+
+  % x轴方向
+  \draw[->, gray] (-1,3.5) -- (2,3.5) node[right] {$x$};
+
+  % 最近时刻
+  \node at (3,1.5) {最近时发出信号};
+\end{tikzpicture}

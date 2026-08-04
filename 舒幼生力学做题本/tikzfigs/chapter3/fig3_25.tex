@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\small]
+  % 小球从H高处自由下落到运动平板上反弹
+  % 运动平板
+  \draw[thick] (-2,0) -- (4,0);
+  \foreach \x in {-1.8,-1.5,...,3.9}
+    \draw (\x,0) -- (\x-0.12,-0.15);
+  \draw[->, thick] (2,0.3) -- (3.5,0.3) node[midway, above] {$v_0$};
+  % 下落轨迹
+  \draw[thick, dashed, ->] (0,3) -- (0,0);
+  \node at (-0.4,1.5) {$H$};
+  \draw[<->] (-0.7,0) -- (-0.7,3) node[midway, left] {$H$};
+  % 碰撞点
+  \filldraw (0,0) circle (2pt);
+  % 小球初始位置
+  \filldraw (0,3) circle (2pt) node[above] {$m$};
+  % 反弹轨迹（抛物线）
+  \draw[thick, ->] (0,0) .. controls (0.8,2) and (1.5,1.5) .. (2.2,0);
+  % 反弹角度
+  \draw (0.4,0) arc[start angle=0, end angle=65, radius=0.4];
+  \node at (0.6,0.5) {$\phi$};
+  % 标注
+  \node at (2.5,-0.5) {平板};
+\end{tikzpicture}

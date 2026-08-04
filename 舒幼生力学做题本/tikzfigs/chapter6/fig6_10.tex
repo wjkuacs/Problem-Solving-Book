@@ -1,0 +1,28 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 火车与地面水槽
+  % 地面
+  \draw[thick] (-1,-0.5) -- (7,-0.5);
+
+  % 水槽
+  \fill[cyan!20] (0,-0.5) rectangle (5,0.3);
+  \draw[thick] (0,-0.5) -- (0,0.3) -- (5,0.3) -- (5,-0.5);
+  \node at (2.5,-0.2) {水槽};
+
+  % 火车车厢（简化为矩形）
+  \fill[gray!20] (0.5,0.8) rectangle (4.5,2.5);
+  \draw[thick] (0.5,0.8) rectangle (4.5,2.5);
+  \node at (2.5,1.65) {火车水箱};
+
+  % 弯水管
+  \draw[thick, red] (2.5,0.3) -- (2.5,0.8);
+  \draw[thick, red] (2.5,0.3) arc[start angle=90, end angle=0, radius=0.3cm];
+  \draw[thick, red] (2.8,0.3) -- (2.8,0.8);
+
+  % 火车速度
+  \draw[->, thick, blue] (3,3) -- (5,3) node[right] {$v$};
+
+  % 高度差 h
+  \draw[<->] (5.5,0.3) -- (5.5,2.5) node[midway, right] {$h$};
+  \draw[dashed] (5,0.3) -- (5.5,0.3);
+  \draw[dashed] (5,2.5) -- (5.5,2.5);
+\end{tikzpicture}

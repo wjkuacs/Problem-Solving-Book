@@ -1,0 +1,34 @@
+\begin{tikzpicture}[scale=1, font=\small]
+  % Problem 5-5: Two blocks with spring, compressed by l
+  % Ground
+  \draw[thick] (-2.5, 0) -- (2.5, 0);
+
+  % Block M1 (left)
+  \draw[thick, fill=blue!15] (-2, 0) rectangle (-1.3, 0.6);
+  \node at (-1.65, 0.3) {$M_1$};
+
+  % Block M2 (right)
+  \draw[thick, fill=red!15] (0.3, 0) rectangle (1.0, 0.6);
+  \node at (0.65, 0.3) {$M_2$};
+
+  % Spring between blocks
+  \draw[thick, decorate, decoration={coil, aspect=0.4, segment length=6mm, amplitude=2.5mm}]
+    (-1.3, 0.3) -- (0.3, 0.3);
+
+  % Compression label
+  \draw[<->] (-1.3, -0.25) -- (0.3, -0.25);
+  \node[below] at (-0.5, -0.25) {$l$};
+
+  % Right side wall
+  \draw[thick] (1.5, 0) -- (1.5, 0.8);
+
+  % Force arrow
+  \draw[->, thick, red] (2.0, 0.3) -- (1.1, 0.3);
+  \node[above] at (1.55, 0.5) {$F$};
+  \node at (1.5, 0.15) {\footnotesize 外力};
+
+  % Ground hash marks
+  \foreach \x in {-2.4,-2.0,...,2.4} {
+    \draw (\x, 0) -- (\x-0.1, -0.1);
+  }
+\end{tikzpicture}

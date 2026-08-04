@@ -1,0 +1,25 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-18: 玻璃板中光传播
+  % A点光源
+  \fill[red] (0,1) circle(3pt) node[above] {$A$};
+
+  % 玻璃板（运动中）
+  \draw[thick, fill=cyan!15] (3,-0.5) rectangle (4,2.5);
+  \node at (3.5,1) {玻璃板};
+  \node at (3.5,-0.8) {$D$ (静止厚度)};
+
+  % 光路
+  \draw[thick, yellow!70!orange, ->] (0,1) -- (3,1) -- (4,1) -- (7,1);
+
+  % B点
+  \fill[blue] (7,1) circle(3pt) node[above] {$B$};
+
+  % 距离 L
+  \draw[<->] (0,-1.2) -- (7,-1.2) node[midway, below] {$L$};
+
+  % 玻璃板速度
+  \draw[->, thick, blue] (3.5,2.8) -- (5,2.8) node[right] {$v$};
+
+  % 折射率
+  \node[right] at (4.2,2.2) {$n$};
+\end{tikzpicture}

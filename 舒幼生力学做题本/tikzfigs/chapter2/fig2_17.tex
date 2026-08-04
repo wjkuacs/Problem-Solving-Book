@@ -1,0 +1,36 @@
+\begin{tikzpicture}[font=\small]
+  % 悬挂点
+  \draw[thick] (0,4) -- (-3,4);
+  \draw[thick] (0,4) -- (3,4);
+  % 固定支座
+  \draw[thick, fill=gray!30] (-0.3,4) rectangle (0.3,4.3);
+  \node[above] at (0,4.3) {悬挂点};
+
+  % 软绳（初始状态：两端悬挂，B端已下落 x）
+  % A 端仍在悬挂点
+  \coordinate (A) at (0,4);
+  % B 端下落了 x
+  \coordinate (B) at (-1,1.5);
+
+  % 绳：从 A 向左沿天花板到左端，再垂下到 B
+  \draw[thick] (-2.5,4) -- (-2.5,2.5);
+  \draw[thick] (-2.5,2.5) .. controls (-2.5,1.5) and (-2,1.2) .. (B);
+
+  % 另一侧也挂
+  \draw[thick] (0,4) -- (0,3.0);
+
+  % 标注 A 和 B 端
+  \node[above right] at (0.1,4) {$A$};
+  \node[below] at (B) {$B$};
+
+  % x 标注（B 端下落高度）
+  \draw[<->] (-3.0,4) -- (-3.0,1.5);
+  \node[left] at (-3.0,2.75) {$x$};
+
+  % 总长 l
+  \node[below right] at (-1.5,3.5) {绳长 $l$};
+
+  % 拉力 T 标注
+  \node[above] at (0,3.5) {$T$};
+  \draw[->, thick] (0,3.8) -- (0,4.1);
+\end{tikzpicture}

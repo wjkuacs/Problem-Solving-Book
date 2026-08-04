@@ -1,0 +1,21 @@
+% fig_7_18.tex — 7-20: U形管水银振动
+\begin{tikzpicture}[font=\small,>=stealth]
+  % U形管轮廓
+  \draw[thick] (-1.2,2) -- (-1.2,-0.5) arc[start angle=180,end angle=360,x radius=0.7,y radius=0.5] -- (0.5,-0.5) -- (0.5,2);
+  % 水银（灰色填充）
+  \fill[gray!50] (-1.2,0.8) -- (-1.2,-0.5) arc[start angle=180,end angle=360,x radius=0.7,y radius=0.5] -- (0.5,-0.5) -- (0.5,0.6) -- cycle;
+  % 水银面标记
+  \draw[thick] (-1.2,0.8) -- (-0.5,0.8);
+  \draw[thick] (0.5,0.6) -- (0.5,0.6);
+  % 平衡位置虚线
+  \draw[dashed] (-1.5,0.7) -- (0.7,0.7) node[right] {平衡面};
+  % 液面差标注
+  \draw[<->] (-1.45,0.8) -- (-1.45,0.7) node[midway,left,font=\footnotesize] {};
+  % 开口标注
+  \node[above] at (-1.2,2.1) {开口};
+  \node[above] at (0.5,2.1) {开口};
+  % 截面积 S 标注
+  \node[left] at (-1.2,1.5) {$S$};
+  % 质量标注
+  \node at (0,-0.1) {$m$};
+\end{tikzpicture}

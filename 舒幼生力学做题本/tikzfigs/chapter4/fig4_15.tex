@@ -1,0 +1,23 @@
+% 4-18 题 图4_15：彗星绕木星的椭圆轨道
+\begin{tikzpicture}[font=\small]
+  % 椭圆轨道
+  \draw[thick, blue!70!black] (0,0) ellipse (3.2 and 1.8);
+  % 木星（在焦点上）
+  \filldraw (1.5,0) circle (0.4);
+  \node at (1.5,0) {\small 木星};
+  \filldraw (1.5,0) circle (1.5pt);
+  % 焦点标注
+  \node[below] at (1.5,-0.5) {$O$};
+  % 彗星当前位置
+  \filldraw (-1.7,1.0) circle (2pt) node[above] {彗星};
+  % 速度方向（切线方向）
+  \draw[->, thick, red!70!black] (-1.7,1.0) -- (-2.6,1.3) node[left] {$\boldsymbol{v}$};
+  % 椭圆中心标记
+  \draw[dashed] (0,-2) -- (0,2);
+  \node at (0,-2.2) {$C$};
+  % 半长轴a标注
+  \draw[<->] (0,2.2) -- (3.2,2.2) node[midway, above] {$a$};
+  % 近木点和远木点标注
+  \node[below] at (4.7,0) {远木点};
+  \node[below] at (-3.2,0) {近木点};
+\end{tikzpicture}

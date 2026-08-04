@@ -1,0 +1,23 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 长方形容器，水平加速 a = g/√3 向右
+  \draw[thick] (0,0) rectangle (3,3);
+
+  % 初始液面 (虚线)
+  \draw[dashed, blue] (0,3) -- (3,3);
+  \node[above] at (1.5,3) {初始液面};
+
+  % 倾斜液面
+  \draw[thick, red] (0,1.8) -- (3,4.2);
+  \fill[cyan!20] (0,0) -- (0,1.8) -- (3,4.2) -- (3,0) -- cycle;
+
+  % 标注
+  \node[above] at (1.5,4.4) {稳定液面};
+  \draw[->, thick, red] (3.3,1.5) -- (4.3,1.5) node[right] {$a = g/\!\sqrt{3}$};
+  \node[left] at (-0.3,1.5) {$L$};
+  \node[below] at (1.5,-0.3) {$L$};
+
+  % 角度标注
+  \draw[<->] (0.5,1.8) arc[start angle=0, end angle=30, radius=1.5cm];
+  \node at (1.5,2.6) {$\theta$};
+  \node at (4.3,0.8) {$\tan\theta = \dfrac{a}{g} = \dfrac{1}{\sqrt{3}}$};
+\end{tikzpicture}

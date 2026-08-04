@@ -1,0 +1,24 @@
+\begin{tikzpicture}[font=\small]
+  % 圆环管，小球在底部，绳从上方缺口引出
+  % 圆环管
+  \draw[thick] (0,0) circle (1.5);
+  \draw[thick] (0,0) circle (1.3);
+  % 上方缺口
+  \draw[thick, fill=white] (-0.15,1.45) rectangle (0.15,1.55);
+  % 小球在底部
+  \filldraw (0,-1.5) circle (3pt) node[below] {$m$};
+  % 绳子从球经过环内到缺口
+  \draw[thick] (0,-1.5) -- (0,1.5);
+  % 绳子从缺口水平引出
+  \draw[thick] (0,1.5) -- (2,1.5);
+  \draw[->, thick] (2,1.5) -- (3,1.5) node[midway, above] {$F$};
+  % 圆心
+  \filldraw (0,0) circle (1pt);
+  % 半径标注
+  \draw (0,0) -- (1.5,0) node[midway, below] {$R$};
+  % 角度标注（当前位位置θ）
+  \draw (0,1) arc[start angle=90, end angle=270, radius=1];
+  \node at (1.6,0) {$\theta$};
+  % 速率标注
+  \node at (0.6,-0.6) {$v_0$};
+\end{tikzpicture}

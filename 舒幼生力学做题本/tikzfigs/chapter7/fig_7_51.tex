@@ -1,0 +1,34 @@
+% fig_7_51.tex — 7-63: 旋转圆环 + 细杆（L=√2 R），杆两端在环上滑动
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 圆环（竖直平面内，绕铅垂直径旋转）
+  \draw[thick] (0,0) circle (2.2);
+  \node[above right] at (2,1.5) {$R$, $\omega$};
+  % 圆心 O
+  \fill (0,0) circle (1.5pt);
+  \node[below right] at (0.1,-0.1) {$O$};
+  % 铅垂直径（旋转轴）
+  \draw[thick,->] (0,2.5) -- (0,-2.5);
+  \node[above] at (0,2.6) {铅垂轴};
+  % 细杆（长L=√2 R，两端在环上）
+  % 杆中心C，OC与铅垂轴夹角θ
+  % 两端在环上：杆长=√2 R，从圆心到杆中心的距离 = √(R²-(L/2)²) = √(R²-R²/2) = R/√2
+  % 杆的两个端点在环上
+  % 设θ=30°，杆倾斜
+  \def\ang{30}
+  \pgfmathsetmacro{\d}{2.2/sqrt(2)}
+  \pgfmathsetmacro{\cx}{\d*sin(\ang)}
+  \pgfmathsetmacro{\cy}{-\d*cos(\ang)}
+  \pgfmathsetmacro{\dx}{cos(\ang)*2.2/sqrt(2)}
+  \pgfmathsetmacro{\dy}{sin(\ang)*2.2/sqrt(2)}
+  \draw[thick,brown!70!black] ({\cx-\dx},{\cy+\dy}) -- ({\cx+\dx},{\cy-\dy});
+  \node[right,font=\footnotesize] at ({\cx+\dx},{\cy-\dy}) {杆 $L=\sqrt{2}R$};
+  % 杆端点标记
+  \fill ({\cx-\dx},{\cy+\dy}) circle (1.5pt);
+  \fill ({\cx+\dx},{\cy-\dy}) circle (1.5pt);
+  % 杆中心C
+  \fill ({\cx},{\cy}) circle (1pt) node[below left,font=\footnotesize] {$C$};
+  % θ 标注（OC与铅垂轴的夹角）
+  \draw[dashed,gray] (0,0) -- ({\cx},{\cy});
+  \draw[->] (0,-0.8) arc[start angle=270, end angle={270+\ang}, radius=0.8];
+  \node[left,font=\footnotesize] at ({-0.5*sin(\ang/2)},{-0.5*cos(\ang/2)}) {$\theta$};
+\end{tikzpicture}

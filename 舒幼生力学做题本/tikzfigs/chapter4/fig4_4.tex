@@ -1,0 +1,21 @@
+% 4-6 题 图4_4：倒立固定圆锥面内壁上小球作水平圆周运动
+\begin{tikzpicture}[font=\small]
+  % 圆锥面（倒立，顶点在上方）
+  \draw[thick] (-2.8,-3.5) -- (0,0) -- (2.8,-3.5);
+  % 锥顶标注
+  \node[above] at (0,0) {锥顶};
+  % 水平圆周运动轨迹（用椭圆表示透视效果）
+  \draw[dashed] (-1.8,-2.4) -- (1.8,-2.4);
+  \draw (1.8,-2.4) arc[start angle=0, end angle=360, x radius=1.8, y radius=0.5];
+  % 小球
+  \filldraw (1.8,-2.4) circle (2pt) node[right] {$m$};
+  % 高度标注 h0
+  \draw[<->] (-0.5,-3.5) -- (-0.5,0) node[midway, left] {$h_0$};
+  % 半顶角 φ
+  \draw (0,-0.8) arc[start angle=270, end angle=251.6, radius=0.8];
+  \node at (0.35,-1.05) {$\phi$};
+  % 辅助竖直线
+  \draw[dashed] (0,0) -- (0,-3.5);
+  % 圆周运动半径标注
+  \draw[<->] (0,-2.4) -- (1.8,-2.4) node[midway, below] {$r$};
+\end{tikzpicture}

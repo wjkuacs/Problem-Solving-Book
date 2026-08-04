@@ -1,0 +1,16 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-7: 正方形面板沿对角线运动 (学生的错误结论)
+  \node[above] at (1.5,3.2) {学生认为的形状（错误）};
+
+  % 学生画的缩小正方形
+  \draw[thick, dashed, red] (0,0) -- (0,2) -- (2,2) -- (2,0) -- cycle;
+  \node[above right] at (1,1) {$a' = \sqrt{1-\beta'^2}\,a$};
+
+  % 速度方向（对角线）
+  \draw[->, thick, blue] (1,1) -- (2.5,2.5) node[above] {$\pmb{v}$};
+  \node at (1.8,2.2) {$v$};
+  \node at (2,1.5) {$45°$};
+
+  % 标注
+  \node[below] at (1,-0.5) {$v' = v/\sqrt{2}$};
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-31: 圆环与质点运动
+  % S系坐标轴
+  \draw[->, thick] (-4,0) -- (5,0) node[right] {$x$};
+  \draw[->, thick] (0,-3) -- (0,4) node[above] {$y$};
+  \node at (0,0) [below left] {$O$};
+
+  % S'系（投影，椭圆）
+  \draw[thick, blue] (0,0) ellipse[x radius=2.5, y radius=1.5];
+  \node at (2.8,0) {$x$};
+  \node at (0,1.8) {$y$};
+
+  % 标注
+  \node[above] at (0,1.5) {$R$ (S'中的圆)};
+  \node[below right] at (2.5,0) {投影为椭圆};
+
+  % 质点 P1, P2
+  \fill[red] (-2.5,0) circle(2pt) node[below] {$P_1$};
+  \fill[green!60!black] (2.5,0) circle(2pt) node[below] {$P_2$};
+
+  % 运动方向
+  \draw[->, thick, red] (-2.5,0.3) -- (-2.5,0.8) node[above] {};
+  \draw[->, thick, green!60!black] (2.5,-0.3) -- (2.5,-0.8) node[below] {};
+  \node at (-2.8,0.5) {$u$};
+  \node at (2.8,-0.5) {$u$};
+
+  % S'速度
+  \draw[->, thick, blue, dashed] (-3.5,3.5) -- (-2,3.5) node[above] {$v$};
+  \node at (-2.75,3.5) [below] {$S'$};
+\end{tikzpicture}

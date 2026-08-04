@@ -1,0 +1,25 @@
+\begin{tikzpicture}[font=\small]
+  % 小球从高度h自由下落到光滑斜面上
+  % 斜面体（放在光滑地面上）
+  \draw[thick] (0,0) -- (4,0) -- (0,2.5) -- cycle;
+  \node at (2,0.8) {$M$};
+  % 斜面倾角
+  \draw (0.6,0) arc[start angle=0, end angle=32, radius=0.6];
+  \node at (0.9,0.35) {$\theta$};
+  % 碰撞点
+  \filldraw (1.2,1.6) circle (2pt) node[above] {碰撞点};
+  % 下落高度
+  \draw[<->] (1.2,4) -- (1.2,1.6) node[midway, right] {$h$};
+  % 小球
+  \filldraw (1.2,4) circle (2pt) node[above] {$m$};
+  % 下落轨迹
+  \draw[thick, dashed, ->] (1.2,4) -- (1.2,1.6);
+  % 碰撞点到地面高度
+  \draw[<->] (1.5,0) -- (1.5,1.6) node[midway, right] {$H$};
+  % 光滑地面
+  \draw[thick] (-1,0) -- (5,0);
+  \foreach \x in {-0.9,-0.6,...,4.9}
+    \draw (\x,0) -- (\x-0.12,-0.15);
+  % 地面标注
+  \node at (2.5,-0.5) {光滑地面};
+\end{tikzpicture}

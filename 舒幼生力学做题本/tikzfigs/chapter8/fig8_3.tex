@@ -1,0 +1,22 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-5: 两把直尺AB和A'B'相向而行
+  % 尺AB（静止参考系）
+  \draw[thick, fill=orange!30] (-3,0.8) rectangle (1,1.2);
+  \node at (-1,1.5) {$AB$};
+  \node at (-3,0.5) {$A$};
+  \node at (1,0.5) {$B$};
+
+  % 尺A'B'（向左运动）
+  \draw[thick, fill=cyan!30] (-1,-1.2) rectangle (3,-0.8);
+  \node at (1,-1.5) {$A'B'$};
+  \node at (-1,-1.5) {$B'$};
+  \node at (3,-1.5) {$A'$};
+
+  % 速度标注
+  \draw[->, thick, blue] (1.5,1.8) -- (0.5,1.8) node[above] {$v$};
+  \draw[->, thick, red] (0.5,-2) -- (1.5,-2) node[below] {$v$};
+
+  % 静长标注
+  \node[above] at (-1,1.8) {静长 $L_0$};
+  \node[below] at (1,-2.3) {静长 $L_0$};
+\end{tikzpicture}

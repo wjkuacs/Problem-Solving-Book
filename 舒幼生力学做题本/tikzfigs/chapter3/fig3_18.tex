@@ -1,0 +1,21 @@
+\begin{tikzpicture}[font=\small]
+  % 两根轻杆用铰链连接，两端各连小球
+  % 铰链球在上方
+  \filldraw (0,3) circle (3pt) node[above] {$m$};
+  % 左杆连球m
+  \draw[thick] (0,3) -- (-1.5,0);
+  \filldraw (-1.5,0) circle (3pt) node[below left] {$m$};
+  % 右杆连球2m
+  \draw[thick] (0,3) -- (1.5,0);
+  \filldraw (1.5,0) circle (3pt) node[below right] {$2m$};
+  % 杆长标注
+  \node at (-1,1.7) {$l$};
+  \node at (1,1.7) {$l$};
+  % 光滑地面
+  \draw[thick] (-2.5,0) -- (2.5,0);
+  \foreach \x in {-2.4,-2.1,...,2.4}
+    \draw (\x,0) -- (\x-0.12,-0.15);
+  % 夹角标注
+  \draw (0,2.5) arc[start angle=90, end angle=210, radius=0.5];
+  \node at (-0.3,2.3) {$\theta$};
+\end{tikzpicture}

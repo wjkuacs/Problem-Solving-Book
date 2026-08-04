@@ -1,0 +1,22 @@
+\begin{tikzpicture}[font=\small]
+  % 大三角形木块
+  \draw[thick, fill=gray!20] (0,0) -- (4,0) -- (0,3) -- cycle;
+  \node[below right] at (2,0) {大三角形木块};
+
+  % 小长方木块（在斜面上）
+  \coordinate (A) at (0.8,2.4);
+  \draw[thick, fill=yellow!50, rotate around={-36.87:(0,0)}] (0.8,2.2) rectangle ++(0.8,0.4);
+  \node[above left] at (A) {小物块};
+
+  % 斜面角标注
+  \draw[thin, <->] (3.5,0) arc[start angle=0, end angle=53.13, radius=0.8];
+  \node[right] at (3.8,0.3) {$\alpha$};
+
+  % 光滑地面标注
+  \draw[thick] (-0.5,0) -- (5,0);
+  \node[below] at (2.5,-0.15) {光滑水平面};
+
+  % 坐标轴
+  \draw[->] (-0.8,0) -- (5.5,0) node[right] {$x$};
+  \draw[->] (0,-0.3) -- (0,3.5) node[above] {$y$};
+\end{tikzpicture}

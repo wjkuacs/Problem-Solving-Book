@@ -1,0 +1,28 @@
+\begin{tikzpicture}[font=\small, >=stealth]
+  % 8-4: 火车与隧道，长度收缩
+  % 隧道（地面系）
+  \draw[thick, fill=gray!15] (-1,0) -- (-1,2) -- (3,2) -- (3,0) -- cycle;
+  \node at (1,1) {隧道 $AB$};
+  \node[above] at (1,2) {$L_0$};
+
+  % 火车（地面系中收缩后）
+  \draw[thick, fill=cyan!20] (0,2.5) rectangle (3.5,3.5);
+  \node at (1.75,3) {火车 $A'B'$};
+
+  % 标注
+  \draw[<->] (-1,2.3) -- (3,2.3) node[midway, above] {$L_0$};
+  \draw[<->] (0,3.8) -- (3.5,3.8) node[midway, above] {$L = \gamma L_0$};
+
+  % 端点标注
+  \node[below] at (-1,0) {$A$};
+  \node[below] at (3,0) {$B$};
+  \node[above] at (0,3.5) {$A'$};
+  \node[above] at (3.5,3.5) {$B'$};
+
+  % 相遇标注
+  \draw[->, red, thick] (0,2.8) -- (-0.5,2.8) node[left] {A'与A相遇};
+  \draw[->, red, thick] (3.5,2.8) -- (4,2.8) node[right] {B'与B相遇};
+
+  % 地面系速度
+  \draw[->, thick, blue] (3.8,1) -- (5.3,1) node[right] {$v$};
+\end{tikzpicture}
