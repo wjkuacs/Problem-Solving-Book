@@ -80,13 +80,13 @@ function renderProblemText(text, images) {
   const out = noTag.split('\n');
   // 图片统一渲染在题目末尾（含图注）
   // width=0.3\linewidth 常规宽度；height=0.6\textheight+keepaspectratio 约束超高图适配页面
-  // 图注用 \captionof{figure}{...}（caption 宏包提供）
+  // 图注用 \captionof*{figure}{...}（caption 宏包提供，星号版不自动编号）
   for (const img of images) {
     out.push('\\begin{center}');
     out.push('    \\includegraphics[width=0.3\\linewidth,height=0.6\\textheight,keepaspectratio]{' + img.figPath + '}');
     out.push('\\end{center}');
     if (img.caption) {
-      out.push('\\captionof{figure}{' + escapeLatex(img.caption) + '}');
+      out.push('\\captionof*{figure}{' + escapeLatex(img.caption) + '}');
     }
     out.push('');
   }
