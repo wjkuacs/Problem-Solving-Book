@@ -1,22 +1,37 @@
-\begin{tikzpicture}[font=\small]
-  % 弹簧组：左墙 + 弹簧2 + 弹簧1 + 挡板
-  \draw[thick] (-2,-0.5) -- (-2,0.5); % 左墙
-  \foreach \y in {-0.4,-0.2,...,0.4}
-    \draw (-2,\y) -- (-2.15,\y-0.08);
-  % 弹簧2 (自由长度较长)
-  \draw[thick, decorate, decoration={zigzag, amplitude=2.5pt, segment length=5pt}]
-    (-2,0) -- (0,0);
-  \node at (-1,0.35) {$k_2$};
-  % 弹簧1 (自由长度较短)
-  \draw[thick, decorate, decoration={zigzag, amplitude=2.5pt, segment length=5pt}]
-    (0,0) -- (1.5,0);
-  \node at (0.75,0.35) {$k_1$};
-  % 挡板
-  \draw[thick, fill=gray!30] (1.5,-0.6) rectangle (1.7,0.6);
-  \node at (2.1,0) {$x$};
-  % x轴
-  \draw[->] (-2.3,-1) -- (2.5,-1) node[right] {$x$};
-  \filldraw (0,-1) circle (1pt) node[below] {$0$};
-  % 自由长度标注
-  \draw[<->, dashed] (0,-0.5) -- (1.5,-0.5) node[midway, below] {自由长度$l$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 竖直墙面及阴影
+    \draw (0, 0) -- (0, 2.8);
+    \foreach \y in {0.4, 0.8, ..., 2.8} {
+        \draw (0, \y) -- (-0.2, \y-0.2);
+    }
+    
+    % 水平地面及阴影
+    \draw (0, 0) -- (5.5, 0);
+    \foreach \x in {0.4, 0.8, ..., 5.2} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 挡板 (空心矩形)
+    \draw[fill=white, thick] (4.4, 0) rectangle (4.6, 2.3);
+    
+    % 弹簧 1 (使用 coil 装饰器自动生成弹簧圈，设置前后平直长度为5mm)
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3.5mm, amplitude=1.5mm, pre length=5mm, post length=5mm}] 
+        (0, 1.8) -- (4.4, 1.8);
+    \node[above] at (2.2, 2.0) {1};
+    
+    % 弹簧 2
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3.5mm, amplitude=1.5mm, pre length=5mm, post length=5mm}] 
+        (0, 0.8) -- (3.4, 0.8);
+    \node[below] at (1.8, 0.6) {2};
+    
+    % 下方的 x 坐标轴及标记
+    \draw[->] (-0.5, -0.8) -- (6.0, -0.8) node[right] {$x$};
+    
+    % 原点 O 标记
+    \draw (2.8, -0.8) -- (2.8, -0.6);
+    \node[below] at (2.8, -0.8) {$O$};
+    
+    % 挡板位置 l 标记
+    \draw (4.5, -0.8) -- (4.5, -0.6);
+    \node[below] at (4.5, -0.8) {$l$};
 \end{tikzpicture}

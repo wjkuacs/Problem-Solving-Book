@@ -1,20 +1,35 @@
 % 1-26 题 图1-20：直角三角形管道 + 阶梯形折线轨道
 % 直角在 B（AB 竖直, BC 水平），AC 斜边
-\begin{tikzpicture}[scale=0.85, font=\small]
-  \coordinate (A) at (0,3.5);
-  \coordinate (B) at (0,0);
-  \coordinate (C) at (4.5,0);
-  % 直角三角形
-  \draw[thick] (A) -- (B) -- (C) -- cycle;
-  \node[above left] at (A) {$A$};
-  \node[below left] at (B) {$B$};
-  \node[below right] at (C) {$C$};
-  % 直角标记
-  \draw (0,0.35) -- (0.35,0.35) -- (0.35,0);
-  % 阶梯形折线轨道
-  \draw[thick, blue!60!black, dashed] (A) -- (1.5,3.5) -- (1.5,1.5) -- (3,1.5) -- (3,0) -- (C);
-  % 边标注
-  \node[left] at ($(A)!0.5!(B)$) {$L_1$};
-  \node[below] at ($(B)!0.5!(C)$) {$L_2$};
-  \node[above right] at ($(A)!0.5!(C)$) {$L_3$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 外部粗体三角形
+    \coordinate (A) at (0,4);
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (5,0);
+    
+    \draw[ultra thick] (A) -- (B) -- (C) -- cycle;
+    
+    % 内部细线三角形框 (模拟中空边框)
+    \draw (0.2, 0.2) -- (4.6, 0.2) -- (0.2, 3.65) -- cycle;
+
+    % 标注顶点字母
+    \node[left] at (A) {$A$};
+    \node[left] at (B) {$B$};
+    \node[right] at (C) {$C$};
+
+    % 绘制内部的阶梯形虚线
+    % 上层较长的阶梯线
+    \draw[dashed] (0.4, 3.3) 
+               -- (0.4, 2.2) 
+               -- (1.8, 2.2) 
+               -- (1.8, 1.1) 
+               -- (3.2, 1.1) 
+               -- (3.2, 0.4) 
+               -- (4.3, 0.4);
+               
+    % 下层较短的阶梯线
+    \draw[dashed] (0.4, 1.6) 
+               -- (1.2, 1.6) 
+               -- (1.2, 0.7) 
+               -- (2.3, 0.7) 
+               -- (2.3, 0.4);
 \end{tikzpicture}

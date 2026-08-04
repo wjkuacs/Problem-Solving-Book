@@ -1,36 +1,34 @@
-\begin{tikzpicture}[font=\small]
-  % 悬挂点
-  \draw[thick] (0,4) -- (-3,4);
-  \draw[thick] (0,4) -- (3,4);
-  % 固定支座
-  \draw[thick, fill=gray!30] (-0.3,4) rectangle (0.3,4.3);
-  \node[above] at (0,4.3) {悬挂点};
-
-  % 软绳（初始状态：两端悬挂，B端已下落 x）
-  % A 端仍在悬挂点
-  \coordinate (A) at (0,4);
-  % B 端下落了 x
-  \coordinate (B) at (-1,1.5);
-
-  % 绳：从 A 向左沿天花板到左端，再垂下到 B
-  \draw[thick] (-2.5,4) -- (-2.5,2.5);
-  \draw[thick] (-2.5,2.5) .. controls (-2.5,1.5) and (-2,1.2) .. (B);
-
-  % 另一侧也挂
-  \draw[thick] (0,4) -- (0,3.0);
-
-  % 标注 A 和 B 端
-  \node[above right] at (0.1,4) {$A$};
-  \node[below] at (B) {$B$};
-
-  % x 标注（B 端下落高度）
-  \draw[<->] (-3.0,4) -- (-3.0,1.5);
-  \node[left] at (-3.0,2.75) {$x$};
-
-  % 总长 l
-  \node[below right] at (-1.5,3.5) {绳长 $l$};
-
-  % 拉力 T 标注
-  \node[above] at (0,3.5) {$T$};
-  \draw[->, thick] (0,3.8) -- (0,4.1);
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling
+    \draw (-0.5, 4) -- (1.5, 4);
+    \foreach \x in {-0.3, 0.1, 0.5, 0.9, 1.3} \draw (\x, 4) -- (\x-0.2, 4.2);
+    
+    \node[left] at (0, 3.7) {$A$};
+    \node[above] at (1, 1.5) {$B$};
+    
+    % Chain drawing using small ellipses
+    \def\chainy{
+        \foreach \i in {0,...,25} {
+            \draw[rotate around={90:(0, 3.8 - \i*0.15)}] (0, 3.8 - \i*0.15) ellipse (0.05 and 0.1);
+        }
+        % Bottom loop
+        \foreach \i in {0,...,8} {
+            \draw[rotate around={180-\i*22.5:(0.5, 0.05)}] ({0.5 + 0.5*cos(180-\i*22.5)}, {0.05 + 0.5*sin(180-\i*22.5)}) ellipse (0.05 and 0.1);
+        }
+        % Right side going up to B
+        \foreach \i in {0,...,9} {
+            \draw[rotate around={90:(1, 0.05 + \i*0.15)}] (1, 0.05 + \i*0.15) ellipse (0.05 and 0.1);
+        }
+    }
+    % A simpler approach: a thick wobbly line
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3mm, amplitude=1mm}, thick] 
+        (0,4) -- (0,0.5) arc(180:360:0.5) -- (1,1.5);
+    
+    % Dimension lines
+    \draw (1.5, 4) -- (2.5, 4);
+    \draw (1.5, 1.5) -- (2.5, 1.5);
+    \draw (1.5, 0) -- (2.5, 0);
+    
+    \draw[<->] (2, 4) -- (2, 1.5) node[midway, fill=white] {$x$};
+    \draw[<->] (2, 1.5) -- (2, 0) node[midway, right] {$\frac{1}{2}(l-x)$};
 \end{tikzpicture}

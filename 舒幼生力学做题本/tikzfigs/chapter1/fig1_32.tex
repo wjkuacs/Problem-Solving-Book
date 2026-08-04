@@ -1,19 +1,33 @@
 % 1-37 题 图1_32：惠更斯等时摆——上滚轮线和下滚轮线
 % 轮半径 R=1，上滚轮线 P 点轨迹；下滚轮线关于 MN 翻转
-\begin{tikzpicture}[scale=1.0, font=\small]
-  \def\R{1.0}
-  % MN 水平线
-  \draw[thick, gray!70] (-0.5,\R) -- (7.5,\R) node[right] {MN};
-  % 上滚轮线（圆心在 (t, R)，P 起点在 (0, 2R)→滚动后 P 轨迹）
-  \draw[thick, blue!70!black] plot[domain=0:6.28, samples=80]
-    ({(\x)*\R/(pi) + \R*sin(\x r)}, {\R + \R*(1-cos(\x r))}) ;
-  % 下滚轮线（关于 MN 对称）
-  \draw[thick, red!60!black, dashed] plot[domain=0:6.28, samples=80]
-    ({(\x)*\R/(pi) + \R*sin(\x r)}, {\R - \R*(1-cos(\x r))}) ;
-  % 小球在下滚轮线上
-  \fill[red!60!black] ({3.14*\R/pi + \R*sin(3.14 r)}, {\R - \R*(1-cos(3.14 r))}) circle (2pt) node[below right] {小球};
-  % P 标注（上滚轮线最低点=切点）
-  \fill[blue!70!black] ({0}, {2*\R}) circle (1.8pt) node[above right] {$P$};
-  % R 标注
-  \draw[<->, >=Stealth] ({3.14*\R/pi}, {\R}) -- ({3.14*\R/pi}, {2*\R}) node[midway,right] {$R$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 中心水平线 MN
+    \draw (-2.5, 0) -- (7, 0);
+    \node[left] at (-2.5, 0) {$M$};
+    \node[right] at (7, 0) {$N$};
+
+    % 上下两个圆 (半径设为 1.2)
+    \coordinate (O1) at (0, 1.2);
+    \coordinate (O2) at (0, -1.2);
+    \draw (O1) circle (1.2);
+    \draw (O2) circle (1.2);
+
+    % 中心点 P
+    \node[below left] at (0, 0) {$P$};
+    \node[above left] at (0, 0) {$P$}; % 原图似乎上下都标了 P 或有点模糊，放在左侧居中
+
+    % 绘制椭圆 (中心偏右，穿过两圆)
+    \draw (2.5, 0) ellipse (4.2 and 1.8);
+
+    % 虚线水平切线
+    \draw[dashed] (0, 2.4) -- (3, 2.4);
+    \draw[dashed] (0, -2.4) -- (3, -2.4);
+
+    % 圆的半径箭头 R
+    \draw[->] (O1) -- (-0.85, 2.05) node[midway, right, xshift=-2pt, yshift=2pt] {$R$};
+    \draw[->] (O2) -- (-0.85, -2.05) node[midway, right, xshift=-2pt, yshift=-2pt] {$R$};
+
+    % 旋转方向的弧形箭头
+    \draw[->] (0.8, 2.6) arc[start angle=60, end angle=120, radius=1.6];
+    \draw[->] (-0.8, -2.6) arc[start angle=240, end angle=300, radius=1.6];
 \end{tikzpicture}

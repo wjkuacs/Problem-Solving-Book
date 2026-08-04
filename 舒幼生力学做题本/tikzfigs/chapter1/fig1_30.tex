@@ -1,34 +1,30 @@
 % 1-36 题 图1_30：轰炸机 A 水平飞行高度 H，炸弹击中 B；高射炮 C 距 B 为 D
-\begin{tikzpicture}[scale=0.85, font=\small]
-  \coordinate (A) at (0,3.5);   % 轰炸机
-  \coordinate (B) at (4.5,0);   % 目标
-  \coordinate (C) at (6.5,0);   % 高射炮
-  \coordinate (G) at (0,0);
-  % 地面
-  \draw[thick, gray!70] (-0.5,0) -- (7.5,0);
-  \fill[pattern=north east lines, pattern color=gray!30] (-0.5,-0.12) rectangle (7.5,0);
-  % 飞行高度 H（虚线）
-  \draw[dashed, gray] (-0.5,3.5) -- (7.5,3.5);
-  % H 标注
-  \draw[<->, >=Stealth] (-0.3,0) -- (-0.3,3.5) node[midway,left] {$H$};
-  % 轰炸机
-  \node[above] at (A) {轰炸机 $A$};
-  \draw[thick, blue!70!black] (A) circle (0.15);
-  % v1 速度箭头
-  \draw[->, >=Stealth, thick, blue!70!black] (A) -- (1.8,3.5) node[above] {$v_1$};
-  % 炸弹抛物线（虚线示意）
-  \draw[thick, dashed, red!70!black] plot[domain=0.5:4.5, samples=40]
-    ({0.5+(\x-0.5)*4/4}, {3.5-3.5*((\x-0.5)/4)^2});
-  % L 水平距离
-  \draw[<->, >=Stealth] (0,-0.25) -- (B) node[midway,below] {$L$};
-  % 目标 B
-  \fill[red!70!black] (B) circle (2pt) node[above] {$B$};
-  % 高射炮 C
-  \fill (C) circle (2pt) node[above] {$C$};
-  \draw[thick] (C) -- ++(0,0.4) -- ++(0.15,0);
-  % D 距离
-  \draw[<->, >=Stealth] (B) -- (C) node[midway,below] {$D$};
-  % v2 炮弹弹道（示意）
-  \draw[thick, dashed, orange!70!black] plot[domain=0:0.85, samples=30]
-    ({6.5+(\x-0.85)*(0-6.5)*0.55}, {0+\x*(3.5)*0.9});
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影
+    \draw (0, 0) -- (6, 0);
+    \foreach \x in {0.2, 0.6, 1.0, 1.4, 1.8, 2.2, 2.6, 3.0, 3.4, 3.8, 4.2, 4.6, 5.0, 5.4, 5.8} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+
+    % 点 A 和平抛虚线
+    \coordinate (A) at (0, 3.5);
+    \fill (A) circle (1.5pt) node[above left] {$A$};
+    \draw[dashed, thick] (A) -- (5.5, 3.5);
+
+    % 速度向量 v1
+    \draw[->, thick] (A) -- (1.5, 3.5) node[midway, above] {$v_1$};
+
+    % 高度 H 标注
+    \draw[<->] (5.2, 0) -- (5.2, 3.5) node[midway, fill=white, inner sep=2pt] {$H$};
+
+    % 地面上的点 C 和 B
+    \coordinate (C) at (3, 0);
+    \coordinate (B) at (4.5, 0);
+    \fill (C) circle (1.5pt) node[above] {$C$};
+    \fill (B) circle (1.5pt) node[above] {$B$};
+
+    % 距离 D 标注
+    \draw (3, -0.2) -- (3, -0.8);
+    \draw (4.5, -0.2) -- (4.5, -0.8);
+    \draw[<->] (3, -0.5) -- (4.5, -0.5) node[midway, fill=white, inner sep=2pt] {$D$};
 \end{tikzpicture}

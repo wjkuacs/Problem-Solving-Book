@@ -1,30 +1,23 @@
-\begin{tikzpicture}[font=\small]
-  % 圆锥筒（倒置）
-  \draw[thick] (-2.5,0) -- (0,4) -- (2.5,0);
-  \draw[thick, dashed] (0,4) -- (0,0); % 中央轴
-
-  % 底部开口弧
-  \draw[thick] (-2.5,0) arc[start angle=180, end angle=360, x radius=2.5, y radius=0.4];
-
-  % 筒顶标记
-  \node[above] at (0,4) {筒顶};
-
-  % 小物块
-  \coordinate (block) at (-1.5,2.0);
-  \draw[thick, fill=red!50] (block) rectangle ++(0.3,0.3);
-
-  % 距离 l 标注（沿母线从顶到物块）
-  \draw[<->] (-0.3,3.8) -- (-1.1,2.4);
-  \node[above left] at (-0.7,3.2) {$l$};
-
-  % 半顶角 θ
-  \draw[thin, <->] (0,3.5) arc[start angle=90, end angle=135, radius=0.6];
-  \node[left] at (0.0,3.8) {$\theta$};
-
-  % 旋转角速度
-  \draw[->, thick] (1.5,0.2) arc[start angle=0, end angle=150, radius=0.5];
-  \node[right] at (2.0,0.3) {$\omega$};
-
-  % 竖直轴箭头
-  \draw[->, thick] (0,0) -- (0,4.5);
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (V) at (0, -3); % Vertex
+    \coordinate (TL) at (-2, 2);
+    \coordinate (TR) at (2, 2);
+    
+    \draw (TL) -- (TR) -- (V) -- cycle;
+    \draw[dashed] (0, 3) -- (V);
+    
+    % Omega arrow
+    \draw[->] (-0.5, 2.5) arc[start angle=180, end angle=360, x radius=0.5, y radius=0.15] node[right] {$\omega$};
+    \draw[dashed] (0.5, 2.5) arc[start angle=0, end angle=180, x radius=0.5, y radius=0.15];
+    
+    % Angles
+    \draw (0, -2.2) arc[start angle=90, end angle=124, radius=0.8];
+    \node at (-0.3, -2.0) {$\theta$};
+    \draw (0, -2.2) arc[start angle=90, end angle=56, radius=0.8];
+    \node at (0.3, -2.0) {$\theta$};
+    
+    % Mass
+    \coordinate (M) at (1, -0.5);
+    \fill (M) circle (2.5pt);
+    \draw (V) -- (M) node[midway, right, xshift=2pt] {$l$};
 \end{tikzpicture}

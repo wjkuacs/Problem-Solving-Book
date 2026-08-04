@@ -1,16 +1,20 @@
-\begin{tikzpicture}[font=\small]
-  % 两球用绳连接，绳中点受力F
-  \filldraw (0,0) circle (2pt) node[below left] {$m$};
-  \filldraw (4,0) circle (2pt) node[below right] {$m$};
-  \draw[thick] (0,0) -- (4,0);
-  % 绳中点
-  \filldraw (2,0) circle (1.5pt);
-  \draw[->, thick] (2,0) -- (2,1.8) node[above] {$F$};
-  % 绳长标注
-  \draw[<->] (0,0.3) -- (2,0.3) node[midway, above] {$l$};
-  \draw[<->] (2,0.3) -- (4,0.3) node[midway, above] {$l$};
-  % 光滑水平面
-  \draw[thick] (-0.5,-0.4) -- (4.5,-0.4);
-  \foreach \x in {-0.4,-0.1,...,4.4}
-    \draw (\x,-0.4) -- (\x-0.15,-0.6);
+\begin{tikzpicture}[>=Stealth, thick]
+    % 杆的上下端点及中心
+    \coordinate (Top) at (0, 2);
+    \coordinate (Bot) at (0, -2);
+    \coordinate (Mid) at (0, 0);
+    
+    % 绘制细杆
+    \draw (Top) -- (Bot);
+    
+    % 绘制两端的质点并标注 m
+    \fill (Top) circle (2.5pt) node[left=4pt] {$m$};
+    \fill (Bot) circle (2.5pt) node[left=4pt] {$m$};
+    
+    % 标注长度 l
+    \node[left=2pt] at (0, 1) {$l$};
+    \node[left=2pt] at (0, -1) {$l$};
+    
+    % 中间的受力箭头 F
+    \draw[->, thick] (Mid) -- (1.5, 0) node[above] {$F$};
 \end{tikzpicture}

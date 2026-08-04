@@ -1,38 +1,33 @@
-\begin{tikzpicture}[font=\small]
-  % 地球（简化为圆）
-  \draw[thick, fill=blue!10] (0,0) circle (1.0);
-  \node[below] at (0,-1.0) {地球};
-  \node[below] at (0,-1.2) {$R$};
-
-  % 地心
-  \draw[fill=black] (0,0) circle (1.5pt);
-  \node[below left] at (-0.1,-0.15) {地心};
-
-  % 圆形轨道
-  \draw[dashed, gray] (0,0) circle (2.8);
-
-  % 航天飞机 A（在轨道上）
-  \coordinate (A) at (90:2.8);
-  \draw[thick, fill=yellow!50] (A) ++(-0.2,-0.15) rectangle ++(0.4,0.3);
-  \node[above right] at (A) {$A$（航天飞机）};
-
-  % 杆（长 L）
-  \draw[thick] (A) -- ++(60:1.2);
-  \node[right] at ($(A)+(0.7,0.8)$) {$L$};
-
-  % 卫星 S
-  \coordinate (S) at ($(A)+(60:1.2)$);
-  \draw[fill=red] (S) circle (0.1);
-  \node[above right] at (S) {$S$（卫星）};
-
-  % 角度 α
-  \draw[thin, <->] ($(A)+(0.3,0)$) arc[start angle=0, end angle=60, radius=0.6];
-  \node[above left] at ($(A)+(0.5,0.5)$) {$\alpha$};
-
-  % 轨道半径
-  \draw[thin, dashed] (0,0) -- (A);
-  \node[left] at (0,1.4) {$R$};
-
-  % 虚线：地球到 A
-  \draw[thin, gray] (0,0) -- ($(A)+(0.5,0)$);
+\begin{tikzpicture}[>=Stealth, thick]
+    % Earth surface arc
+    \draw (-3.0, -3.5) to[out=15, in=165] (3.0, -3.5);
+    
+    % Mass A
+    \coordinate (A) at (0, 0);
+    \draw[pattern=north east lines] (A) circle (0.2);
+    \draw (A) circle (0.2);
+    \node[above] at (A) {$A$};
+    \node[right] at (0.2, 0) {$m_1$};
+    
+    % Horizontal line and velocity v
+    \draw (-0.2, 0) -- (-2.0, 0);
+    \draw[->] (-0.2, 0) -- (-1.2, 0) node[above] {$v$};
+    
+    % Vertical R arrow
+    \draw[->] (-1.6, 0) -- (-1.6, -4.0) node[midway, right] {$R$};
+    \draw (-1.8, 0) -- (-1.4, 0); % Top tick mark for R
+    
+    % Vertical dashed line to earth center
+    \draw[dashed, ->] (0, -0.2) -- (0, -4.5) node[below] {至地心};
+    
+    % Mass S and Rod L
+    \coordinate (S) at (1.2, -2.0);
+    \draw (0.1, -0.17) -- (S) node[midway, right] {$L$}; % start slightly offset from edge of A
+    \fill (S) circle (1.5pt);
+    \node[below] at (S) {$S$};
+    \node[right] at (1.3, -2.0) {$m_2$};
+    
+    % Angle \alpha
+    \draw (0, -0.8) arc[start angle=270, end angle=300.96, radius=0.8]; % arctan(1.2/2) = 30.96 deg
+    \node at (0.25, -1.0) {$\alpha$};
 \end{tikzpicture}
