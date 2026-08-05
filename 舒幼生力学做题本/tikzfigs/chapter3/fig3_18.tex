@@ -1,21 +1,25 @@
-\begin{tikzpicture}[font=\small]
-  % 两根轻杆用铰链连接，两端各连小球
-  % 铰链球在上方
-  \filldraw (0,3) circle (3pt) node[above] {$m$};
-  % 左杆连球m
-  \draw[thick] (0,3) -- (-1.5,0);
-  \filldraw (-1.5,0) circle (3pt) node[below left] {$m$};
-  % 右杆连球2m
-  \draw[thick] (0,3) -- (1.5,0);
-  \filldraw (1.5,0) circle (3pt) node[below right] {$2m$};
-  % 杆长标注
-  \node at (-1,1.7) {$l$};
-  \node at (1,1.7) {$l$};
-  % 光滑地面
-  \draw[thick] (-2.5,0) -- (2.5,0);
-  \foreach \x in {-2.4,-2.1,...,2.4}
-    \draw (\x,0) -- (\x-0.12,-0.15);
-  % 夹角标注
-  \draw (0,2.5) arc[start angle=90, end angle=210, radius=0.5];
-  \node at (-0.3,2.3) {$\theta$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影线
+    \draw (-1, 0) -- (5, 0);
+    \foreach \x in {-0.8, -0.4, ..., 4.8} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 定义三个顶点 (等腰三角形结构)
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (4, 0);
+    \coordinate (C) at (2, 3.464); % 4 * sin(60) ≈ 3.464
+    
+    % 绘制连杆
+    \draw (A) -- (C) node[midway, left=2pt] {$l$};
+    \draw (B) -- (C) node[midway, right=2pt] {$l$};
+    
+    % 绘制质点空心圆及标注
+    \fill[white] (A) circle (2.5pt); \draw (A) circle (2.5pt);
+    \fill[white] (B) circle (2.5pt); \draw (B) circle (2.5pt);
+    \fill[white] (C) circle (2.5pt); \draw (C) circle (2.5pt);
+    
+    \node[left] at (-0.1, 0.2) {$m$};
+    \node[right] at (4.1, 0.2) {$2m$};
+    \node[above=2pt] at (C) {$m$};
 \end{tikzpicture}

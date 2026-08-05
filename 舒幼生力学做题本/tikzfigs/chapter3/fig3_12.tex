@@ -1,18 +1,30 @@
-\begin{tikzpicture}[font=\small]
-  % 圆环用绳悬挂，环上两颗串珠
-  % 悬绳
-  \draw[thick] (0,3) -- (0,1.5);
-  % 圆环
-  \draw[thick] (0,0) circle (1.5);
-  \node at (0,1.7) {环};
-  \filldraw (0,1.5) circle (2pt); % 环顶
-  % 两颗串珠（从顶部左右两侧滑下）
-  \filldraw[fill=gray!50] (-1.06,1.06) circle (3pt) node[above left] {$m$};
-  \filldraw[fill=gray!50] (1.06,1.06) circle (3pt) node[above right] {$m$};
-  % 标注环质量
-  \node at (2,0) {$\gamma m$};
-  % 重力标注
-  \draw[->] (-1.06,1.06) -- (-1.06,0.3) node[midway, left] {$mg$};
-  \draw[->] (1.06,1.06) -- (1.06,0.3) node[midway, right] {$mg$};
-  \draw[->] (0,0) -- (0,-0.8) node[below] {$\gamma mg$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义椭圆环
+    \draw (0, 0) ellipse (2cm and 0.8cm);
+    
+    % 中心交点
+    \fill (0, 0) circle (1.5pt);
+    
+    % 定义圆环上的三个附着点 (约 90°, 210°, 330°)
+    \coordinate (P1) at (0, 0.8);
+    \coordinate (P2) at (-1.732, -0.4);
+    \coordinate (P3) at (1.732, -0.4);
+    
+    % 从中心到附着点的径向连线
+    \draw (0, 0) -- (P1);
+    \draw (0, 0) -- (P2);
+    \draw (0, 0) -- (P3);
+    
+    % 竖直悬挂线
+    \draw (P1) -- ++(0, 2.8) coordinate (C1);
+    \draw (P2) -- ++(0, 2.8) coordinate (C2);
+    \draw (P3) -- ++(0, 2.8) coordinate (C3);
+    
+    % 绘制天花板固定端及其阴影线
+    \foreach \P in {C1, C2, C3} {
+        \draw (\P) +(-0.4, 0) -- +(0.4, 0);
+        \foreach \x in {-0.3, -0.1, 0.1, 0.3} {
+            \draw (\P) +(\x, 0) -- +(\x+0.15, 0.2);
+        }
+    }
 \end{tikzpicture}

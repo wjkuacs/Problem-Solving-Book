@@ -1,17 +1,24 @@
-\begin{tikzpicture}[font=\small]
-  % 车厢内有半圆柱面，小球在顶部
-  % 车厢
-  \draw[thick] (-1.5,-2.5) rectangle (4.5,2.5);
-  % 半圆柱面
-  \draw[thick] (1.5,0) arc[start angle=180, end angle=360, radius=1.5];
-  \draw[thick] (0,0) -- (3,0);
-  \node at (1.5,-0.4) {$R$};
-  % 小球在顶部
-  \filldraw (0,1.5) circle (3pt) node[above] {$m$};
-  % 速度标注
-  \draw[->, thick] (1.5,2.8) -- (2.5,2.8) node[above] {$v_0$};
-  % 车厢速度
-  \draw[->, thick] (1.5,-2.8) -- (3,-2.8) node[midway, below] {$v_0$};
-  % 圆弧中心
-  \filldraw (1.5,0) circle (1pt) node[below right] {};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影线
+    \draw (-3.2, 0) -- (3.2, 0);
+    \foreach \x in {-3.0, -2.6, ..., 3.0} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 外部方块
+    \draw (-2.2, 0) -- (-2.2, 2.5) -- (2.2, 2.5) -- (2.2, 0);
+    
+    % 半圆形凹槽
+    \draw (1.8, 0) arc[start angle=0, end angle=180, radius=1.8];
+    
+    % 顶部的质点 m
+    \fill (0, 1.8) circle (3pt);
+    \node[above] at (0, 1.9) {$m$};
+    
+    % 半径 R 及虚线
+    \draw[dashed] (0, 0) -- (0, 1.8);
+    \node[right] at (0, 0.9) {$R$};
+    
+    % 整体向右的速度 v_0
+    \draw[->] (2.8, 1.25) -- (3.8, 1.25) node[midway, above] {$v_0$};
 \end{tikzpicture}

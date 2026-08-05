@@ -1,20 +1,15 @@
-\begin{tikzpicture}[font=\small]
-  % 圆环形光滑管道（俯视图），两球A、B在直径两端
-  \draw[thick] (0,0) circle (1.5);
-  % A球（右侧）
-  \filldraw[fill=gray!50] (1.5,0) circle (3pt) node[right] {$A$};
-  % B球（左侧）
-  \filldraw[fill=gray!50] (-1.5,0) circle (3pt) node[left] {$B$};
-  % 速度标注（切线方向）
-  \draw[->, thick] (1.5,0) -- (1.5,0.8) node[midway, right] {$v_0$};
-  \draw[->, thick] (-1.5,0) -- (-1.5,-0.8) node[midway, left] {$v_0$};
-  % 管道标记
-  \draw[dashed] (0,0) circle (1.2);
-  % 圆心
-  \filldraw (0,0) circle (1pt);
-  % 标注
-  \node at (0,0.4) {$m$};
-  \node at (0,-0.4) {管质量 $m$};
-  % 直径线
-  \draw[dashed] (-1.5,0) -- (1.5,0);
+\begin{tikzpicture}[>=Stealth, thick]
+    % 环形轨道
+    \draw (0, 0) circle (2.2);
+    \draw (0, 0) circle (1.8);
+    
+    % 质点 A 与速度
+    \fill (0, 2.0) circle (2.5pt);
+    \node[above=2pt] at (0, 2.2) {$A$};
+    \draw[->] (0, 2.0) -- (1.8, 2.0) node[above] {$v_0$};
+    
+    % 质点 B 与速度
+    \fill (0, -2.0) circle (2.5pt);
+    \node[above=2pt] at (0, -1.8) {$B$};
+    \draw[->] (0, -2.0) -- (1.8, -2.0) node[above] {$v_0$};
 \end{tikzpicture}

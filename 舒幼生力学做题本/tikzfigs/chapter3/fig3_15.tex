@@ -1,33 +1,32 @@
-\begin{tikzpicture}[font=\small]
-  % 两个等高定滑轮，绳连接A、B，中点挂C
-  % 天花板/支架
-  \draw[thick] (-2,3.5) -- (2,3.5);
-  \foreach \x in {-1.9,-1.6,...,1.9}
-    \draw (\x,3.5) -- (\x-0.1,3.65);
-  % 左滑轮
-  \draw[thick] (-1.5,3.5) circle (0.2);
-  \filldraw (-1.5,3.5) circle (1pt);
-  % 右滑轮
-  \draw[thick] (1.5,3.5) circle (0.2);
-  \filldraw (1.5,3.5) circle (1pt);
-  % 两滑轮间距
-  \draw[<->] (-1.5,3.1) -- (1.5,3.1) node[midway, below] {$2\,\mathrm{m}$};
-  % 物块A（左滑轮下方）
-  \draw[thick, fill=gray!30] (-1.7,2.2) rectangle (-1.3,2.6);
-  \node at (-1.5,1.9) {$A$};
-  \draw[thick] (-1.5,3.3) -- (-1.5,2.6);
-  % 物块B（右滑轮下方）
-  \draw[thick, fill=gray!30] (1.3,2.2) rectangle (1.7,2.6);
-  \node at (1.5,1.9) {$B$};
-  \draw[thick] (1.5,3.3) -- (1.5,2.6);
-  % 绳子中点下垂挂C
-  \draw[thick] (-1.5,3.3) -- (0,1.5);
-  \draw[thick] (1.5,3.3) -- (0,1.5);
-  % 物块C
-  \draw[thick, fill=gray!50] (-0.2,1.1) rectangle (0.2,1.5);
-  \node at (0,0.8) {$C$};
-  % 标注质量
-  \node at (-2.2,2.4) {1\,kg};
-  \node at (2.2,2.4) {1\,kg};
-  \node at (0.6,0.8) {1.9\,kg};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 天花板
+    \draw (-3.5, 3.5) -- (3.5, 3.5);
+    \foreach \x in {-3.3, -2.9, ..., 3.3} {
+        \draw (\x, 3.5) -- (\x+0.2, 3.7);
+    }
+    
+    % 左右定滑轮
+    \coordinate (P1) at (-2, 2.5);
+    \coordinate (P2) at (2, 2.5);
+    \draw (P1) circle (0.6);
+    \draw (P2) circle (0.6);
+    \fill (P1) circle (1.5pt);
+    \fill (P2) circle (1.5pt);
+    
+    % 悬挂支架
+    \draw (-2, 3.5) -- (P1);
+    \draw (2, 3.5) -- (P2);
+    
+    % 连接三个物块的绳索
+    \draw (-2.6, 2.5) -- (-2.6, -1); % 左垂线
+    \draw (-2, 3.1) -- (2, 3.1);     % 滑轮间水平线 (与两圆顶部相切)
+    \draw (2.6, 2.5) -- (2.6, -1);   % 右垂线
+    
+    % 中央悬挂绳
+    \draw (0, 3.1) -- (0, 2.5);
+    
+    % 绘制物块 A, B, C
+    \draw[thick, fill=white] (-3.0, -1.6) rectangle (-2.2, -1.0) node[midway] {$A$};
+    \draw[thick, fill=white] (2.2, -1.6) rectangle (3.0, -1.0) node[midway] {$B$};
+    \draw[thick, fill=white] (-0.6, 1.9) rectangle (0.6, 2.5) node[midway] {$C$};
 \end{tikzpicture}

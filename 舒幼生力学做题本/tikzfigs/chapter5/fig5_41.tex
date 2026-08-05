@@ -1,0 +1,54 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 1. 天花板及斜线阴影
+    \draw (-1.5, 4) -- (1.5, 4);
+    \foreach \x in {-1.2, -0.7, -0.2, 0.3, 0.8, 1.2} {
+        \draw (\x, 4) -- (\x+0.25, 4.25);
+    }
+
+    % 2. 悬挂点 O 及垂直虚线轴 (向下延伸到圆盘下方)
+    \coordinate (O) at (0, 4);
+    \node[below left=1pt] at (O) {$O$};
+    \draw[dashed] (O) -- (0, -1.0);
+
+    % 3. 底部绕垂直轴旋转的公转箭头
+    \draw[->] (-0.35, -0.7) arc (160:380:0.4 and 0.15);
+
+    % 4. 摆线 L 及其连接的下端点 (Pivot)
+    \coordinate (Pivot) at (0.6, 1.0);
+    \draw (O) -- (Pivot) node[midway, right=1pt] {$L$};
+
+    % 5. 偏转角 \beta
+    % (0.6, 1.0) 相对于 (0,4) 的夹角约为 11.3 度 (270 -> 281.3)
+    \draw (0, 2.5) arc (270:281.3:1.5);
+    \node at (0.2, 2.2) {$\beta$};
+
+    % 6. 圆盘几何参数定义
+    \coordinate (Center) at (2.4, 1.0); % 圆盘前表面中心
+    \def\t{0.2}   % 圆盘厚度，向左侧偏移
+    \def\rx{0.35} % 椭圆水平半径
+    \def\ry{1.2}  % 椭圆竖直半径
+
+    % 7. 水平连杆 l
+    % (连杆画在圆盘前面层级的下方，只连接到圆盘的后表面 -\t 处)
+    \draw (Pivot) ++(0, 0.05) -- ($(Center) + (-\t, 0.05)$);
+    \draw (Pivot) ++(0, -0.05) -- ($(Center) + (-\t, -0.05)$);
+    \draw (Pivot) ++(0, 0.05) arc (90:270:0.05); % 连杆左端圆角封口
+    \node[above] at (1.5, 1.05) {$l$};
+
+    % 8. 绘制真实的 3D 圆盘 (厚度在左侧，符合原图透视)
+    % (1) 画出后表面左侧可见的半椭圆边缘
+    \draw ($(Center) + (-\t, \ry)$) arc [start angle=90, end angle=270, x radius=\rx, y radius=\ry];
+    % (2) 绘制连接前后表面的上下厚度线
+    \draw ($(Center) + (-\t, \ry)$) -- ($(Center) + (0, \ry)$);
+    \draw ($(Center) + (-\t, -\ry)$) -- ($(Center) + (0, -\ry)$);
+    % (3) 绘制前表面的完整椭圆 (用纯白填充，完美遮挡背后的连杆线条)
+    \draw[fill=white] (Center) ellipse ({\rx} and {\ry});
+    % (4) 前表面的中心黑点
+    \fill (Center) circle (1.5pt);
+
+    % 9. 圆盘前表面上的自旋角速度 \omega_s 箭头
+    % (完美贴合内侧椭圆弧线，从左向右下弯曲)
+    \draw[->] (Center) ++(190:0.25 and 0.9) arc (190:300:0.25 and 0.9);
+    \node at ($(Center) + (0.25, -0.7)$) {$\omega_s$};
+
+\end{tikzpicture}

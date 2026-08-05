@@ -1,25 +1,12 @@
-\begin{tikzpicture}[scale=1, font=\small]
-  % Problem 5-10: Two balls A, B on rope of length 2a, B below A by distance a
-  % Ball A
-  \filldraw[fill=blue!30] (0, 2) circle (0.12);
-  \node[above left] at (0, 2.1) {$A$};
-
-  % Velocity arrow
-  \draw[->, thick] (0.2, 2) -- (0.7, 2);
-  \node[above] at (0.45, 2.1) {$\pmb{v}_0$};
-
-  % Rope
-  \draw[thick] (0, 2) -- (0, 0.5);
-
-  % Ball B (distance a below A)
-  \filldraw[fill=red!30] (0, 0.5) circle (0.12);
-  \node[below right] at (0, 0.4) {$B$};
-
-  % Distance a between A and B
-  \draw[<->] (0.25, 0.5) -- (0.25, 2);
-  \node[right] at (0.3, 1.25) {$a$};
-
-  % Rope length 2a
-  \draw[<->, dashed] (-0.3, 0.5) -- (-0.3, -1.5);
-  \node[left] at (-0.35, -0.5) {$2a$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 质点 A 和 B
+    \fill (0, 3) circle (2pt) node[left] {$A$};
+    \fill (0, 0) circle (2pt) node[left] {$B$};
+    
+    % 弯曲的细绳
+    \draw[decorate, decoration={snake, amplitude=0.5mm, segment length=4mm}] (0, 3) -- (0, 0);
+    \node[left] at (-0.2, 1.5) {$a$};
+    
+    % A 质点的初速度 v0
+    \draw[->] (0, 3) -- (1.5, 3) node[below] {$v_0$};
 \end{tikzpicture}

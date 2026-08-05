@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 桌面
+    \draw (-2, 0) node[below] {$A$} -- (2, 0);
+    
+    % 边缘点 B
+    \node[right] at (2, 0) {$B$};
+    
+    % 悬垂的虚线部分
+    \draw[dashed] (2, 0) -- (2, -2);
+    
+    % 悬垂底部的质点 P 与向上的箭头
+    \fill (2, -2.5) circle (2pt) node[right] {$P$};
+    \draw[->] (2, -2.5) -- (2, -1.5);
+\end{tikzpicture}

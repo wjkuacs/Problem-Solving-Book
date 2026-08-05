@@ -1,25 +1,21 @@
-\begin{tikzpicture}[scale=1, font=\small]
-  % Problem 5-6: Square frame with hole P, ball approaching
-  % Square frame
-  \draw[thick] (-1, 0) -- (-1, 2) -- (1, 2) -- (1, 0) -- cycle;
-
-  % Small hole P at right side midpoint
-  \draw[thick, fill=white] (1, 1) circle (0.05);
-  \node[above right] at (1.05, 1.05) {$P$};
-
-  % Ball approaching from right
-  \filldraw[fill=red!30] (1.8, 1) circle (0.1);
-  \node at (1.8, 1) {$m$};
-
-  % Velocity arrow
-  \draw[->, thick] (1.5, 1) -- (1.2, 1);
-  \node[above] at (1.35, 1.1) {$\pmb{v}_0$};
-
-  % Angle indication
-  \draw[dashed] (1, 1) -- (1.5, 1);
-
-  % Square label
-  \node at (0, 1) {$M$};
-  \node[above] at (0, 2.15) {$a$};
-  \node[right] at (1.05, 1) {};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 边长为 a 的正方形线框
+    \draw (0, 0) rectangle (4, 4);
+    
+    % 边长标记与框标记 M
+    \node[above] at (2, 4) {$a$};
+    \node[below] at (2, 0) {$a$};
+    \node[left] at (0, 2) {$a$};
+    \node[right] at (0.1, 2) {$M$};
+    
+    % 质点 P, m 及其速度方向
+    \coordinate (P) at (4, 1.5);
+    \fill (P) circle (2pt) node[below left] {$P$} node[right] {$m$};
+    
+    % 速度 v0
+    \draw[->] (P) -- (2.5, 3) node[left] {$v_0$};
+    
+    % 角度标注
+    \draw (4, 2.3) arc (90:135:0.8);
+    \node at (3.5, 2.5) {$45^\circ$};
 \end{tikzpicture}

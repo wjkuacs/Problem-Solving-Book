@@ -1,20 +1,26 @@
-% 4-2 题 图4_2：质点m绕固定质点m0作圆轨道运动，P为圆周上参考点
-\begin{tikzpicture}[font=\small]
-  % 圆轨道
-  \draw[thick] (0,0) circle (2.2);
-  % 固定质点 m0（在圆心）
-  \filldraw (0,0) circle (2.5pt) node[below left] {$m_0$};
-  % 质点 m 在点1（右侧）
-  \filldraw (2.2,0) circle (2pt) node[below right] {$m$\,(1)};
-  % 质点 m 在点2（上方）
-  \filldraw (0,2.2) circle (2pt) node[above left] {$m$\,(2)};
-  % 参考点P在圆周上（右下角45°位置）
-  \coordinate (P) at ({2.2*cos(-45)},{2.2*sin(-45)});
-  \filldraw (P) circle (2pt) node[below right] {$P$};
-  % 引力方向（从点1指向圆心）
-  \draw[->, thick, gray] (1.8,0) -- (0.4,0) node[midway, below] {$F$};
-  % 从点2指向圆心
-  \draw[->, thick, gray] (0,1.8) -- (0,0.4) node[midway, left] {$F$};
-  % 距离R标注（从圆心到点1）
-  \draw[<->] (0,-0.3) -- (2.2,-0.3) node[midway, below] {$R$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 绘制外圆
+    \draw (0, 0) circle (2);
+    
+    % 中心质点 m_0
+    \fill (0, 0) circle (2pt) node[below] {$m_0$};
+    
+    % 虚线坐标轴
+    \draw[dashed] (-2.5, 0) -- (2.5, 0);
+    \draw[dashed] (0, 0) -- (0, 2.5);
+    
+    % 坐标轴端点标签
+    \node[left] at (-2, 0) {$P$};
+    \node[right] at (2, 0) {$1$};
+    \node[above] at (0, 2) {$2$};
+    
+    % 半径 R 标注
+    \node[left] at (0, 1) {$R$};
+    
+    % 90度角标注
+    \draw (0.4, 0) arc (0:90:0.4);
+    \node at (0.8, 0.4) {$90^\circ$};
+    
+    % 圆周上的质点 m
+    \fill (30:2) circle (2pt) node[right] {$m$};
 \end{tikzpicture}

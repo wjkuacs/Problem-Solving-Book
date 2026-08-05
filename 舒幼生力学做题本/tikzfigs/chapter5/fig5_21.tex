@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (O) at (0, 0);
+    
+    % 半圆槽 (下半部实线)
+    \draw (2, 0) arc (0:-180:2);
+    
+    % 顶部虚线直径
+    \draw[dashed] (-2.5, 0) -- (2.5, 0);
+    \fill (O) circle (1.5pt);
+    
+    % 半径 R 的标注
+    \node[above] at (-1, 0) {$R$};
+    
+    % 重力加速度 g
+    \draw[->] (-0.5, -0.2) -- (-0.5, -1.2) node[midway, left] {$g$};
+    \draw[dashed] (O) -- (0, -2.2); % 竖直中心轴辅助线
+    
+    % 半圆内倾斜的杆 (一端在右边缘，另一端在圆弧上)
+    % 端点坐标: (2,0) 到圆弧上 -60度位置
+    \draw (2, 0) -- (1, -1.732);
+    \node[right] at (1.0, -0.8) {$m, R$};
+\end{tikzpicture}

@@ -1,28 +1,34 @@
-\begin{tikzpicture}[font=\small]
-  % 滑块A1、A2由轻杆连接，滑块B在中间有弹簧
-  % 光滑水平面
-  \draw[thick] (-1,-1.5) -- (7,-1.5);
-  \foreach \x in {-0.9,-0.6,...,6.9}
-    \draw (\x,-1.5) -- (\x-0.12,-1.65);
-  % A1
-  \draw[thick, fill=gray!20] (-0.5,-1.2) rectangle (0.5,-0.2);
-  \node at (0,-0.7) {$A_1$};
-  % A2
-  \draw[thick, fill=gray!20] (5.5,-1.2) rectangle (6.5,-0.2);
-  \node at (6,-0.7) {$A_2$};
-  % 轻杆
-  \draw[thick] (0.5,-0.7) -- (5.5,-0.7);
-  \node at (3,-0.5) {轻杆 $L$};
-  % 总质量M
-  \node at (3,-1.8) {$A_1$+$A_2$: $M$};
-  % B滑块
-  \draw[thick, fill=gray!40] (0.7,-1.2) rectangle (1.7,-0.2);
-  \node at (1.2,-0.7) {$B$};
-  % B的长度标注
-  \draw[<->] (0.7,-1.4) -- (1.7,-1.4) node[midway, below] {$L/2$};
-  % 弹簧
-  \draw[thick, decorate, decoration={zigzag, amplitude=1.5pt, segment length=3pt}]
-    (0.5,-0.7) -- (0.7,-0.7);
-  % 质量标注
-  \node at (1.2,0) {$m$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影线
+    \draw (-0.5, 0) -- (6.5, 0);
+    \foreach \x in {-0.3, 0.1, ..., 6.3} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 左侧壁 A1
+    \draw[pattern=north east lines] (0, 0) rectangle (0.5, 3);
+    \draw (0, 0) rectangle (0.5, 3);
+    \node[right] at (0, 1.5) {$A_1$};
+    
+    % 右侧壁 A2
+    \draw[pattern=north east lines] (5.5, 0) rectangle (6, 3);
+    \draw (5.5, 0) rectangle (6, 3);
+    \node[left] at (6, 1.5) {$A_2$};
+    
+    % 滑块 B
+    \draw (0.5, 0) rectangle (3, 1.5);
+    \node[right] at (3, 0.75) {$B$};
+    
+    % 滑块内部的弹簧与虚线框
+    \draw[dashed] (0.5, 0.3) rectangle (2.5, 1.2);
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3mm, amplitude=1.5mm}] (0.5, 0.75) -- (2.5, 0.75);
+    
+    % 顶部宽度标注 L
+    \draw (0.5, 3) -- (5.5, 3) node[midway, fill=white] {};
+    \draw[<->] (0.5, 2.5) -- (5.5, 2.5) node[midway, fill=white] {$L$};
+    
+    % 底部宽度标注 L/2
+    \draw (0.5, -0.2) -- (0.5, -1);
+    \draw (3, -0.2) -- (3, -1);
+    \draw[<->] (0.5, -0.6) -- (3, -0.6) node[midway, fill=white] {$\dfrac{L}{2}$};
 \end{tikzpicture}

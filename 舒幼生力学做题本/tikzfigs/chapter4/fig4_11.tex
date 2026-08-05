@@ -1,25 +1,33 @@
-% 4-13 题 图4_11：无动力航天器飞向行星，瞄准距离b
-\begin{tikzpicture}[font=\small]
-  % 行星
-  \filldraw (0,0) circle (0.6) node[below] {行星};
-  \draw[thick] (0,0) circle (0.6);
-  % 行星中心O
-  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
-  % 行星半径R标注
-  \draw[<->] (0,0) -- (0.6,0) node[midway, above] {$R$};
-  % 入射轨迹（从左侧远处飞来，被引力偏转后落向行星表面）
-  \draw[->, thick, blue!70!black] (-4.5,1.2) -- (-2.5,1.2)
-    .. controls (-1,1.2) and (0.2,0.8) .. (0.35,0.35);
-  % 初速度标注
-  \node at (-3.5,1.6) {$\boldsymbol{v}_0$};
-  % 瞄准距离b（从O到v₀方向线的垂直距离）
-  \draw[dashed] (-4.5,1.2) -- (-4.5,0);
-  \draw[<->] (-4.8,0) -- (-4.8,1.2) node[midway, left] {$b$};
-  % 中心O到轨迹的垂直距离线
-  \draw[dashed] (0,0) -- (0,1.2);
-  \draw[<->] (0,1.2) node[above] {} ;
-  % 更清晰的b标注
-  \draw[<->] (0.3,0) -- (0.3,1.2) node[midway, right] {$b$};
-  % 碰撞区域标注
-  \node[below right] at (0.35,0.35) {碰撞};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 圆心 O 
+    \coordinate (O) at (4, -2);
+    
+    % 画出表示天体的空心圆 (缩小半径)
+    \draw (O) circle (0.8);
+    
+    % 圆心点及标号 O
+    \fill (O) circle (1.5pt);
+    \node[right=2pt] at (O) {$O$};
+    
+    % 半径 R 箭头
+    \draw[->] (O) -- ++(-50:0.8) node[midway, below left=-2pt] {$R$};
+    
+    % 天体质量 M (放在圆内左上方)
+    \node at (3.55, -1.45) {$M$};
+    
+    % 虚线：初始速度方向延长线 与 过圆心的水平辅助线
+    \draw[dashed] (0, 0) -- (5, 0);
+    \draw[dashed] (0, -2) -- (4, -2);
+    
+    % 碰撞参数 b
+    \draw[<->] (0, -2) -- (0, 0) node[midway, fill=white] {$b$};
+    
+    % 质点及初速度 v0
+    \coordinate (P) at (0, 0);
+    \fill (P) circle (2pt);
+    \draw[->] (P) -- (1.2, 0) node[midway, above] {$v_0$};
+    
+    % 引力偏转轨迹曲线 (重新计算端点以贴合缩小的圆面)
+    \draw[decoration={markings, mark=at position 0.6 with {\arrow{>}}}, postaction={decorate}] 
+        (P) .. controls (2.5, -0.1) and (3.0, -0.5) .. (3.35, -1.53); 
 \end{tikzpicture}

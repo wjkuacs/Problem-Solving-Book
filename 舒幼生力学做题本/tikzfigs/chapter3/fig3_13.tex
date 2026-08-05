@@ -1,24 +1,18 @@
-\begin{tikzpicture}[font=\small]
-  % 两球A、B用轻杆连接，靠竖直墙和水平地面
-  % 竖直墙
-  \draw[thick] (0,-0.5) -- (0,3.5);
-  \foreach \y in {3.4,3.1,...,-0.3}
-    \draw (0,\y) -- (-0.15,\y+0.12);
-  % 水平地面
-  \draw[thick] (-0.5,0) -- (4,0);
-  \foreach \x in {0,0.3,...,3.9}
-    \draw (\x,0) -- (\x-0.12,-0.15);
-  % 杆（初始竖直θ=0，画一个中间状态）
-  \draw[thick] (0,3) -- (3,0);
-  \node at (1.5,1.7) {$L$};
-  % 球A（墙上）
-  \filldraw (0,3) circle (3pt) node[above right] {$A$};
-  % 球B（地面上）
-  \filldraw (3,0) circle (3pt) node[below right] {$B$};
-  % 角度θ
-  \draw (0,2.5) arc[start angle=90, end angle=33.7, radius=0.5];
-  \node at (0.15,2.7) {$\theta$};
-  % 标注质量相同
-  \node at (0,3.5) {质量 $m$};
-  \node at (3,0.5) {质量 $m$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 竖直墙面和水平地面
+    \draw (0, 4) -- (0, 0) -- (4.5, 0);
+    
+    % 杆 AB
+    \coordinate (A) at (0, 3.5);
+    \coordinate (B) at (2.8, 0);
+    \draw (A) -- (B);
+    
+    % 端点 A 和 B
+    \fill (A) circle (2pt) node[right, xshift=2pt] {$A$};
+    \fill (B) circle (2pt) node[above right] {$B$};
+    
+    % 夹角 \theta
+    % arctan(2.8/3.5) ≈ 38.66° -> 取相对垂直方向的圆弧
+    \draw (0, 2.5) arc[start angle=270, end angle=308.6, radius=1];
+    \node at (0.3, 2.1) {$\theta$};
 \end{tikzpicture}

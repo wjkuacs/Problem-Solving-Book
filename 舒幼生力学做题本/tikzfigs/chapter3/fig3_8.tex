@@ -1,21 +1,18 @@
-\begin{tikzpicture}[font=\small]
-  % 扭摆：三根绳悬挂圆环，中心固定小物块
-  % 天花板
-  \draw[thick] (-2.5,3) -- (2.5,3);
-  % 三根悬绳
-  \draw[thick] (-1.5,3) -- (-1.5,1.5);
-  \draw[thick] (1.5,3) -- (1.5,1.5);
-  \draw[thick] (0,3) -- (0,1.5);
-  % 圆环
-  \draw[thick] (0,0) circle (1.5);
-  % 中心小物块
-  \filldraw[fill=gray!40] (-0.15,-0.15) rectangle (0.15,0.15);
-  % 辐条（虚线）
-  \draw[dashed] (0,0) -- (1.5,0);
-  \draw[dashed] (0,0) -- (-1.5,0);
-  \draw[dashed] (0,0) -- (0,1.5);
-  \draw[dashed] (0,0) -- (0,-1.5);
-  % 标注
-  \node at (0,0.5) {$m$};
-  \node at (0,-2) {环质量 $m$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 天花板
+    \draw (-1.5, 3) -- (1.5, 3);
+    \foreach \x in {-1.3, -0.9, ..., 1.3} {
+        \draw (\x, 3) -- (\x+0.2, 3.2);
+    }
+    
+    % 竖直悬挂线及底部小横杆
+    \draw (0, 3) -- (0, 2.5);
+    \draw (-0.15, 2.5) -- (0.15, 2.5);
+    
+    % 大圆环
+    \draw (0, 0.5) circle (2cm);
+    
+    % 顶部的两个空心小珠子 (位于连接点两侧)
+    \draw[fill=white, thick] (-0.3, 2.477) circle (2.5pt);
+    \draw[fill=white, thick] (0.3, 2.477) circle (2.5pt);
 \end{tikzpicture}

@@ -1,28 +1,22 @@
-\begin{tikzpicture}[scale=1, font=\small]
-  % Problem 5-9: Ring with two balls at diameter ends, force F
-  % Ring
-  \draw[thick] (0, 0) circle (1.2);
-
-  % Two small balls at diameter endpoints (horizontal)
-  \filldraw[fill=blue!30] (-1.2, 0) circle (0.1);
-  \node[below left] at (-1.2, -0.1) {$m$};
-
-  \filldraw[fill=blue!30] (1.2, 0) circle (0.1);
-  \node[below right] at (1.2, -0.1) {$m$};
-
-  % Force F perpendicular to diameter (vertical)
-  \draw[->, very thick] (0, 1.2) -- (0, 2.0);
-  \node[above] at (0, 2.05) {$\pmb{F}$};
-
-  % Center mark
-  \fill (0, 0) circle (1.5pt);
-
-  % Ring label
-  \node at (0, -1.5) {质量 $M$};
-
-  % Diameter line (dashed)
-  \draw[dashed, gray] (-1.2, 0) -- (1.2, 0);
-
-  % Radius label
-  \draw[<->] (0, 0) -- (0, 1.2) node[midway, left] {$R$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 具有一定厚度的圆环 M
+    \draw[double, double distance=2pt] (0, 0) circle (2);
+    \node[left] at (-2.1, 0) {$M$};
+    
+    % 上下质点 m
+    \fill (-0.15, 1.9) rectangle (0.15, 2.15);
+    \fill (-0.15, -1.9) rectangle (0.15, -2.15);
+    \node[above] at (0, 2.15) {$m$};
+    \node[below] at (0, -2.15) {$m$};
+    
+    % 辅助虚线与半径 R 标记
+    \draw[dashed] (0, 0) -- (0, 1.9);
+    \draw[dashed] (0, 0) -- (0, -1.9);
+    \draw[dashed] (0, 0) -- (2, 0);
+    
+    \node[left] at (0, 1) {$R$};
+    \node[left] at (0, -1) {$R$};
+    
+    % 径向拉力 F
+    \draw[->] (2.1, 0) -- (3.5, 0) node[below] {$F$};
 \end{tikzpicture}

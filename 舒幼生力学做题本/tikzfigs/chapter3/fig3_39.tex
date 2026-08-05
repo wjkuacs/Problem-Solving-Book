@@ -1,24 +1,30 @@
-\begin{tikzpicture}[font=\small]
-  % 气缸内分子往返运动，活塞推进
-  % 气缸壁（左侧固定）
-  \draw[thick] (0,-0.8) -- (0,0.8);
-  \foreach \y in {0.7,0.4,...,-0.7}
-    \draw (0,\y) -- (-0.15,\y-0.1);
-  % 气缸上下壁
-  \draw[thick] (0,0.8) -- (4,0.8);
-  \draw[thick] (0,-0.8) -- (4,-0.8);
-  % 活塞
-  \draw[thick, fill=gray!30] (3.5,-0.8) rectangle (3.7,0.8);
-  \node at (3.6,1.1) {活塞};
-  % 活塞推进方向
-  \draw[->, thick] (4,0) -- (3.8,0) node[midway, above] {$u$};
-  % 分子
-  \filldraw (2,0.2) circle (2pt) node[above] {分子};
-  % 分子速度
-  \draw[->, thick] (2,0.2) -- (1.2,0.2) node[midway, above] {$v_0$};
-  % 气缸长度
-  \draw[<->] (0,-1.2) -- (3.5,-1.2) node[midway, below] {$l_0$};
-  % 标注
-  \node at (-0.5,0) {左壁};
-  \node at (4.3,0) {活塞};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 气缸外壁 (左侧封闭，右侧开口)
+    \draw (0, 0) -- (4, 0);
+    \draw (0, 2) -- (4, 2);
+    \draw (0, 0) -- (0, 2);
+    
+    % 活塞主体 (填充剖面线)
+    \fill[pattern=north east lines] (2.5, 0) rectangle (3, 2);
+    \draw (2.5, 0) rectangle (3, 2);
+    
+    % 活塞外部连杆
+    \fill[pattern=north east lines] (3, 0.8) rectangle (4.2, 1.2);
+    \draw (3, 0.8) -- (4.2, 0.8);
+    \draw (3, 1.2) -- (4.2, 1.2);
+    \draw (4.2, 0.8) -- (4.2, 1.2);
+    
+    % 活塞向左运动速度 u
+    \draw[->] (5.2, 1) -- (4.4, 1) node[midway, above] {$u$};
+    
+    % 气缸内部质点及向左速度 v0
+    \fill (2.2, 1) circle (2pt);
+    \draw[->] (2.0, 1) -- (1.2, 1) node[midway, above] {$v_0$};
+    
+    % 初始长度 l0 标注
+    \draw[<->] (0, 2.3) -- (2.5, 2.3) node[midway, fill=white] {$l_0$};
+    
+    % l0 的上下辅助线
+    \draw (0, 2) -- (0, 2.6);
+    \draw (2.5, 2) -- (2.5, 2.6);
 \end{tikzpicture}

@@ -1,29 +1,29 @@
-% 4-25 题 图4_22：细线穿过水平面小孔，m₁桌面圆运动，m₂下方静止
-\begin{tikzpicture}[font=\small]
-  % 水平面（用透视椭圆表示）
-  \draw[thick] (-3,2) -- (3,2);
-  \draw[thick] (3,2) -- (3,1);
-  \draw[thick] (3,1) -- (-3,1);
-  \draw[thick] (-3,1) -- (-3,2);
-  % 水平面标签
-  \node at (-2.5,1.5) {光滑水平面};
-  % 小孔O
-  \filldraw (0,2) circle (1.5pt) node[above] {$O$};
-  % m₁的圆轨道（在水平面上，用虚线椭圆表示）
-  \draw[dashed] (0,2) ellipse (2 and 0.6);
-  % m₁小球
-  \filldraw (2,2) circle (2pt) node[above right] {$m_1$};
-  % 细线从m₁到O
-  \draw[thick] (2,2) -- (0,2);
-  % 细线从O向下穿过小孔到m₂
-  \draw[thick] (0,2) -- (0,-0.8);
-  % m₂小球
-  \filldraw (0,-0.8) circle (2pt) node[right] {$m_2$};
-  % 半径标注 r₀
-  \draw[<->] (0,1.5) -- (2,1.5) node[midway, above] {$r_0$};
-  % 角速度标注
-  \draw[->, thick] (1.4,2.5) arc[start angle=50, end angle=110, radius=0.7];
-  \node at (0.6,2.7) {$\omega_0$};
-  % 地面
-  \draw[dashed] (-1,-1.5) -- (1,-1.5);
+\begin{tikzpicture}[>=Stealth, thick]
+    % 桌面大平面 (透视平行四边形)
+    \draw (-2.5, 1.5) -- (2.5, 1.5) -- (3.5, -1) -- (-1.5, -1) -- cycle;
+
+    % 桌面中心孔
+    \coordinate (O) at (0.5, 0);
+    
+    % 质点 m1 运动轨迹 (虚线椭圆)
+    \draw[dashed] (O) ellipse (2 and 0.8);
+
+    % 圆周上的质点 m1 及拉绳
+    \coordinate (M1) at (2.43, 0.2); % 位于椭圆边上
+    \draw (O) -- (M1) node[midway, below] {$r_0$};
+    
+    % 挖空中心孔并加深边缘
+    \fill[white] (O) circle (2pt); 
+    \draw (O) circle (2pt);
+
+    % 画出质点 m1
+    \fill (M1) circle (2pt) node[right=2pt] {$m_1$};
+
+    % 角速度曲线箭头
+    \draw[->] (2.4, 0.45) arc (15:60:2 and 0.8) node[midway, right] {$\omega_0$};
+
+    % 垂直悬挂的质点 m2 与绳
+    \coordinate (M2) at (0.3, -3);
+    \draw (O) ++(0,-0.08) -- (M2);
+    \fill (M2) circle (2pt) node[right] {$m_2$};
 \end{tikzpicture}

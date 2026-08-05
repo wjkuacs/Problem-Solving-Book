@@ -1,29 +1,40 @@
-% 4-28 题 图4_27：两球固连在轻杆两端，绕水平轴x旋转
-\begin{tikzpicture}[font=\small]
-  % x轴（轻轴）
-  \draw[->, thick] (-2,0) -- (4,0) node[right] {$x$};
-  % 中心O
-  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
-  % 轻杆（倾斜一定角度，两端球在不同竖直面内运动）
-  % 球A1（在左上方竖直面内圆运动）
-  \coordinate (A1) at (-1.2,1.5);
-  \coordinate (A2) at (1.2,-1.5);
-  \draw[thick] (A1) -- (A2);  % 轻杆
-  \filldraw (A1) circle (2pt) node[above left] {$A_1$};
-  \filldraw (A2) circle (2pt) node[below right] {$A_2$};
-  % A1的圆周运动轨迹（虚线竖直圆）
-  \draw[dashed] (-1.2,0) circle (1.5);
-  % A2的圆周运动轨迹
-  \draw[dashed] (1.2,0) circle (1.5);
-  % 两个竖直平面的标注
-  \node at (-1.2,-1.8) {平面1};
-  \node at (1.2,1.8) {平面2};
-  % 角速度标注
-  \draw[->, thick] (-0.3,1.2) arc[start angle=100, end angle=155, radius=1.3];
-  \node at (-1.5,1.2) {$\omega$};
-  % 轴承标注
-  \draw[thick, gray] (-0.8,-0.3) rectangle (-0.3,0.3);
-  \node[below] at (-0.55,-0.35) {轴承};
-  \draw[thick, gray] (0.3,-0.3) rectangle (0.8,0.3);
-  \node[below] at (0.55,-0.35) {轴承};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义可复用的轴承符号 (带有外翻曲线的线条)
+    \def\bearing#1{
+        \begin{scope}[shift={(#1, 0)}]
+            \draw (-0.3, 0.2) -- (0.3, 0.2);
+            \draw (-0.3, -0.2) -- (0.3, -0.2);
+            \draw (-0.3, 0.2) to[out=180, in=-45] (-0.4, 0.3);
+            \draw (-0.3, -0.2) to[out=180, in=45] (-0.4, -0.3);
+            \draw (0.3, 0.2) to[out=0, in=225] (0.4, 0.3);
+            \draw (0.3, -0.2) to[out=0, in=135] (0.4, -0.3);
+        \end{scope}
+    }
+
+    % 三维坐标轴
+    \coordinate (O) at (0, 0);
+    \draw[->] (-4, 0) -- (4, 0) node[below] {$x$};
+    \draw[->] (0, -0.5) -- (0, 2.5) node[right] {$y$};
+    \draw[->] (0, 0) -- (-1.5, -2) node[below left] {$z$};
+    \node[below right] at (O) {$O$};
+
+    % 绘制左右两端的轴承图样
+    \bearing{-3.2}
+    \bearing{3.2}
+
+    % 左侧线圈 (A1在底部)
+    \draw[dashed] (-1.5, 1) arc (90:270:0.3 and 1); % 后半部虚线
+    % 前半部实线并在位置 0.2 处添加方向箭头
+    \draw[decoration={markings, mark=at position 0.2 with {\arrow{>}}}, postaction={decorate}] 
+        (-1.5, -1) arc (-90:90:0.3 and 1); 
+    \fill (-1.5, -1) circle (1.5pt) node[below] {$A_1$};
+
+    % 右侧线圈 (A2在顶部)
+    \draw[dashed] (1.5, 1) arc (90:270:0.3 and 1);
+    \draw[decoration={markings, mark=at position 0.2 with {\arrow{>}}}, postaction={decorate}] 
+        (1.5, -1) arc (-90:90:0.3 and 1);
+    \fill (1.5, 1) circle (1.5pt) node[above] {$A_2$};
+
+    % 连接 A1 和 A2 的中心线
+    \draw (-1.5, -1) -- (1.5, 1);
 \end{tikzpicture}

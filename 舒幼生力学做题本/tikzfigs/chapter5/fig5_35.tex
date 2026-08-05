@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 墙面和地面 (带阴影)
+    \draw (0, 4) -- (0, 0) -- (4, 0);
+    \foreach \y in {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5} {
+        \draw (0, \y) -- (-0.2, \y+0.2);
+    }
+    \foreach \x in {0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 杆 AB
+    \coordinate (A) at (0, 3);
+    \coordinate (B) at (2.5, 0);
+    \draw (A) node[right=2pt] {$A$} -- (B) node[above right=-1pt] {$B$};
+    
+    % 角度 \phi
+    \draw (0, 2.2) arc (-90:-50:0.8);
+    \node at (0.3, 2.5) {$\phi$};
+    
+    % 运动方向箭头
+    \draw[->] (-0.5, 2.5) -- (-0.5, 1.5);
+    \draw[->] (2.5, -0.5) -- (3.5, -0.5);
+\end{tikzpicture}

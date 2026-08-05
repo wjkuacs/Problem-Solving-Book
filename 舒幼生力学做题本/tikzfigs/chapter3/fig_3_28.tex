@@ -1,25 +1,23 @@
-\begin{tikzpicture}[font=\small]
-  % 三个立方块1,2,3和圆柱块碰撞（俯视图）
-  % 光滑水平面
-  \draw[dashed] (-2,-2.5) -- (4,-2.5);
-  \draw[dashed] (-2,2.5) -- (4,2.5);
-  % 立方块1（左上）
-  \draw[thick, fill=gray!20] (0.5,0.5) rectangle (1.5,1.5);
-  \node at (1,1) {1};
-  % 立方块2（右上）
-  \draw[thick, fill=gray!20] (2,0.5) rectangle (3,1.5);
-  \node at (2.5,1) {2};
-  % 立方块3（下方中间）
-  \draw[thick, fill=gray!20] (1.25,-1.5) rectangle (2.25,-0.5);
-  \node at (1.75,-1) {3};
-  % 圆柱块（沿对称方向运动）
-  \filldraw[fill=yellow!50] (-1,0) circle (0.4);
-  \node at (-1,0) {$u$};
-  \draw[->, thick] (-0.6,0) -- (-0.1,0) node[above] {$u_0$};
-  % 对称轴（虚线）
-  \draw[dashed, thin] (-1.5,0) -- (3.5,0);
-  % 标注
-  \node at (-1,0.7) {圆柱};
-  \node at (-1,-0.7) {$2m$};
-  \node at (4,1) {各 $m$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 左侧三个拼接的正方形方块 (以45度角放置)
+    % Block 3 (最左侧)
+    \draw (-1.414, 0) -- (-0.707, 0.707) -- (0, 0) -- (-0.707, -0.707) -- cycle;
+    \node at (-0.707, 0) {$3$};
+    
+    % Block 1 (右上)
+    \draw (-0.707, 0.707) -- (0, 1.414) -- (0.707, 0.707) -- (0, 0) -- cycle;
+    \node at (0, 0.707) {$1$};
+    
+    % Block 2 (右下)
+    \draw (-0.707, -0.707) -- (0, 0) -- (0.707, -0.707) -- (0, -1.414) -- cycle;
+    \node at (0, -0.707) {$2$};
+    
+    % 虚线轴心
+    \draw[dashed] (0, 0) -- (1.5, 0);
+    
+    % 速度矢量 u_0
+    \draw[->] (3.0, 0.2) -- (2.0, 0.2) node[above] {$u_0$};
+    
+    % 右侧圆环
+    \draw (4.2, 0) circle (0.7);
 \end{tikzpicture}

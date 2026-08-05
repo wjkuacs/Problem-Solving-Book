@@ -1,23 +1,20 @@
-\begin{tikzpicture}[scale=1, font=\small]
-  % Problem 5-16: Uniform square plate, axis MN through center O
-  % Square plate
-  \draw[thick, fill=blue!10] (-1, -1) rectangle (1, 1);
-
-  % Center O
-  \fill (0, 0) circle (2pt);
-  \node[below left] at (-0.1, -0.1) {$O$};
-
-  % Axis MN (diagonal at angle ~30 degrees)
-  \draw[thick, dashed, red] ({-1.5*cos(30)}, {-1.5*sin(30)}) -- ({1.5*cos(30)}, {1.5*sin(30)});
-  \node[above right] at ({1.5*cos(30)}, {1.5*sin(30)}) {$M$};
-  \node[below left] at ({-1.5*cos(30)}, {-1.5*sin(30)}) {$N$};
-
-  % Side length
-  \node[below] at (0, -1.15) {$a$};
-
-  % Mass
-  \node at (0.5, 0.5) {$m$};
-
-  % Axis symbol at O
-  \draw[thick, red] (0, 0) circle (0.05);
+\begin{tikzpicture}[>=Stealth, thick]
+    % 绘制正方形
+    \draw (0, 0) rectangle (3, 3);
+    
+    % 正方形四边边长标记
+    \node[above] at (1.5, 3) {$a$};
+    \node[below] at (1.5, 0) {$a$};
+    \node[left]  at (0, 1.5) {$a$};
+    \node[right] at (3, 1.5) {$a$};
+    
+    % 几何中心 O
+    \coordinate (O) at (1.5, 1.5);
+    \fill (O) circle (2pt) node[left=2pt] {$O$};
+    
+    % 穿越中心的虚线 MN
+    \draw[dashed] (0.5, 3.5) node[above] {$M$} -- (2.5, -0.5) node[below] {$N$};
+    
+    % 标注 m
+    \node at (2.2, 2.2) {$m$};
 \end{tikzpicture}

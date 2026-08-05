@@ -1,35 +1,47 @@
-% 4-32 题 图4_32：飞船绕月球圆轨道，两种登月方式
-\begin{tikzpicture}[font=\small]
-  % 月球
-  \filldraw (0,0) circle (1.2);
-  \node at (0,0) {月球};
-  \draw[thick] (0,0) circle (1.2);
-  % 月球中心
-  \filldraw (0,0) circle (1.5pt);
-  % 月球半径R
-  \draw[<->] (0,0) -- (1.2,0) node[midway, below] {$R$};
-  % 圆轨道（半径R+h）
-  \draw[thick, dashed] (0,0) circle (2.5);
-  % 高度h标注
-  \draw[<->] (1.2,0) -- (2.5,0) node[midway, below] {$h$};
-  % A点（圆轨道上，顶部）
-  \coordinate (A) at (0,2.5);
-  \filldraw (A) circle (2pt) node[above] {$A$};
-  % B点（月球表面左下，方式1到达点）
-  \coordinate (B) at ({-1.2*cos(30)},{-1.2*sin(30)});
-  \filldraw (B) circle (2pt) node[below left] {$B$};
-  % C点（月球表面右侧，方式2到达点）
-  \coordinate (C) at ({1.2*cos(30)},{-1.2*sin(30)});
-  \filldraw (C) circle (2pt) node[below right] {$C$};
-  % 方式1轨道（A到B，椭圆转移轨道，与月球表面相切于B）
-  \draw[thick, blue!70!black] (A) .. controls (-1.5,1.5) and (-2.5,0.5) .. (B);
-  \node[left] at (-1.8,1.2) {(1)};
-  % 方式2轨道（A到C，向外侧喷气）
-  \draw[thick, red!70!black] (A) .. controls (1.5,1.5) and (2.8,0.3) .. (C);
-  \node[right] at (1.8,1.2) {(2)};
-  % 喷气方向标注
-  \draw[->, thick, blue!70!black] (A) -- (-0.5,2.5) node[above] {向前喷};
-  \draw[->, thick, red!70!black] (A) -- (0,3.2) node[above] {向外侧喷};
-  % 圆轨道上的速度方向
-  \draw[->, thick] (2.5,0) -- (2.5,0.5) node[right] {$v_0$};
+% Ensure required TikZ libraries are loaded for decorations
+\usetikzlibrary{decorations.pathreplacing,decorations.markings}
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义内外圆的半径参数
+    \def\R{1.8}
+    \def\h{1.2}
+    
+    % 定义关键点坐标
+    \coordinate (O) at (0, 0);
+    \coordinate (A) at (\R+\h, 0);
+    \coordinate (B) at (-\R, 0);
+    \coordinate (C) at (0, \R);
+    
+    % 画内外同心圆
+    \draw (O) circle (\R);
+    \draw (O) circle (\R+\h);
+    
+    % 画水平和竖直的虚线辅助线
+    \draw[dashed] (B) -- (A);
+    \draw[dashed] (O) -- (C);
+    
+    % 标出中心点及圆上的交点位置
+    \fill (O) circle (1.5pt) node[below left=1pt] {$O$};
+    \fill (A) circle (1.5pt) node[right=2pt] {$A$};
+    \node[left=2pt] at (B) {$B$};
+    \node[below left=2pt] at (C) {$C$};
+    
+    % 标出 90° 角及弧线
+    \draw (0.35, 0) arc (0:90:0.35);
+    \node at (0.7, 0.4) {$90^\circ$};
+    
+    % 底部花括号标注 R 和 h (使用 decorations.pathreplacing)
+    \draw[decorate, decoration={brace, amplitude=5pt, mirror}] 
+        (0, -0.15) -- (\R, -0.15) node[midway, below=5pt] {$R$};
+    \draw[decorate, decoration={brace, amplitude=5pt, mirror}] 
+        (\R, -0.15) -- (\R+\h, -0.15) node[midway, below=5pt] {$h$};
+        
+    % 绘制内部较低的转移轨道 (从 C 相切出发到 A)
+    \draw[decoration={markings, mark=at position 0.65 with {\arrow{<}}}, postaction={decorate}] 
+        (C) to[out=0, in=120] (A);
+        
+    % 绘制外部较高的转移轨道 (从内圆左上方相切出发到 A)
+    % 假设起点在 135° 位置，则顺时针切线方向为 45°
+    \coordinate (P_start) at (135:\R);
+    \draw[decoration={markings, mark=at position 0.65 with {\arrow{<}}}, postaction={decorate}] 
+        (P_start) to[out=45, in=90] (A);
 \end{tikzpicture}

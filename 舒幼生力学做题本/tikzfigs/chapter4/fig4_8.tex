@@ -1,19 +1,16 @@
-% 4-10 题 图4_8：两球系于弹簧两端，等值反向初速度
-\begin{tikzpicture}[font=\small]
-  % 弹簧（用锯齿线表示）
-  \draw[thick] (-2,0) -- (-1.5,0)
-    -- (-1.4,0.15) -- (-1.2,-0.15) -- (-1,0.15) -- (-0.8,-0.15)
-    -- (-0.6,0.15) -- (-0.4,-0.15) -- (-0.2,0.15) -- (0,-0.15)
-    -- (0.2,0.15) -- (0.4,-0.15) -- (0.6,0.15) -- (0.8,-0.15)
-    -- (1,0.15) -- (1.2,-0.15) -- (1.4,0.15) -- (1.5,0) -- (2,0);
-  % 两球
-  \filldraw (-2,0) circle (2pt) node[below] {$m$};
-  \filldraw (2,0) circle (2pt) node[below] {$m$};
-  % 弹簧自由长度标注
-  \draw[<->] (-2,-0.6) -- (2,-0.6) node[midway, below] {$a$};
-  % 初速度箭头（等值反向，垂直于连线）
-  \draw[->, thick] (-2,0) -- (-2,1.2) node[above] {$v_0$};
-  \draw[->, thick] (2,0) -- (2,-1.2) node[below] {$v_0$};
-  % 劲度系数标注
-  \node at (0,0.5) {$k$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 左侧质点及速度 v_0
+    \fill (0, 0) circle (2pt) node[below=2pt] {$m$};
+    \draw[->] (0, 0.2) -- (0, 1.2) node[right] {$v_0$};
+    
+    % 右侧质点及速度 v'_0
+    \fill (4, 0) circle (2pt) node[above=2pt] {$m$};
+    \draw[->] (4, -0.2) -- (4, -1.2) node[right] {$v'_0$};
+    
+    % 中间连接弹簧 (需要 decorations.pathmorphing 库)
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3mm, amplitude=1.5mm}] (0.2, 0) -- (3.8, 0);
+    
+    % 弹簧参数 a 和 k 标注
+    \node[above] at (2, 0.2) {$a$};
+    \node[below] at (2, -0.2) {$k$};
 \end{tikzpicture}

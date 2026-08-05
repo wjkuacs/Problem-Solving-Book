@@ -1,25 +1,22 @@
-% 4-24 题 图_4_20：两球用长4a线相连，线上距球1为a处遇钉
-\begin{tikzpicture}[font=\small]
-  % 小球1
-  \coordinate (B1) at (-2.5,0);
-  \filldraw (B1) circle (2pt) node[below] {$m$\,(1)};
-  % 小球2
-  \coordinate (B2) at (1.5,0);
-  \filldraw (B2) circle (2pt) node[below] {$m$\,(2)};
-  % 细线（从球1到钉再到球2）
-  \coordinate (N) at (-0.5,0);  % 钉的位置
-  \draw[thick] (B1) -- (N) -- (B2);
-  % 竖直光滑钉
-  \filldraw (N) circle (2pt) node[above] {钉};
-  \draw[thick, gray] (N) -- (N |- 0,1.2);
-  % 线段标注
-  \node[above] at (-1.5,0.1) {$a$};
-  \node[above] at (0.5,0.1) {$3a$};
-  % 总线长
-  \draw[<->] (-2.5,-0.8) -- (1.5,-0.8) node[midway, below] {$4a$};
-  % 初速度（垂直于线方向）
-  \draw[->, thick] (B1) -- (-2.5,0.8) node[above] {$v$};
-  \draw[->, thick] (B2) -- (1.5,-0.8) node[below] {$v$};
-  % 光滑水平面
-  \draw[dashed] (-3,0) -- (2.5,0);
+\begin{tikzpicture}[>=Stealth, thick]
+    % 杆的两端点与钉子
+    \coordinate (P1) at (0, 0);
+    \coordinate (P2) at (5, 0);
+    \coordinate (Nail) at (1.25, -0.2);
+
+    % 画杆
+    \draw (P1) -- (P2);
+    \fill (P1) circle (2pt) node[above] {$1$};
+    \fill (P2) circle (2pt) node[above] {$2$};
+
+    % 画钉子
+    \fill (Nail) circle (2pt) node[right=1pt] {钉};
+
+    % 长度标注
+    \node[above] at (0.6, 0) {$a$};
+    \node[above] at (3.1, 0) {$3a$};
+
+    % 端点向下的速度/受力箭头
+    \draw[->] (P1) -- ++(0, -1.2) node[right] {$v$};
+    \draw[->] (P2) -- ++(0, -1.2) node[right] {$v'$};
 \end{tikzpicture}

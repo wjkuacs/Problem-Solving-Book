@@ -1,31 +1,16 @@
-\begin{tikzpicture}[scale=1, font=\small]
-  % Problem 5-13: Wire bent into two tangent semicircles of radius R
-  % Left semicircle (center at origin, right half = arc from bottom to top)
-  \draw[thick] (0, -1.2) arc (-90:90:1.2);
-
-  % Right semicircle (center at (2.4, 0), left half = arc from top to bottom)
-  \draw[thick] (2.4, 1.2) arc (90:270:1.2);
-
-  % Tangent point
-  \fill (1.2, 0) circle (2pt);
-  \node[below] at (1.2, -0.1) {切点};
-
-  % Center of left semicircle
-  \fill (0, 0) circle (1.5pt);
-  \node[below left] at (0, -0.1) {$O_1$};
-
-  % Center of right semicircle
-  \fill (2.4, 0) circle (1.5pt);
-  \node[below right] at (2.4, -0.1) {$O_2$};
-
-  % Point A (midpoint of left semicircle's arc = leftmost point)
-  \fill (-1.2, 0) circle (2pt);
-  \node[above left] at (-1.2, 0.1) {$A$};
-
-  % Radius labels
-  \draw[<->] (0, 0) -- (1.2, 0) node[midway, above] {$R$};
-  \draw[<->] (1.2, 0) -- (2.4, 0) node[midway, above] {$R$};
-
-  % Rotation axis at A (dot)
-  \draw[->, thick] (-1.2, 0) -- (-1.8, 0) node[left] {\tiny $\otimes$轴};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 绘制 S 形双半圆，直径均为 2R
+    \draw (-4, 0) arc (180:0:2);
+    \draw (0, 0) arc (180:360:2);
+    
+    % 中心轴辅助虚线
+    \draw[dashed] (-4, 0) -- (4, 0);
+    
+    % 直径 2R 标记
+    \node[below] at (-2, 0) {$2R$};
+    \node[above] at (2, 0) {$2R$};
+    
+    % 顶点 A 及其与拐点连线
+    \node[above] at (-2, 2) {$A$};
+    \draw[dashed] (-2, 2) -- (0, 0) node[midway, above left] {$\sqrt{2}R$};
 \end{tikzpicture}

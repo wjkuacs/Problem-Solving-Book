@@ -1,35 +1,23 @@
-\begin{tikzpicture}[font=\small]
-  % 切半立方体，上表面为三角形AB₁CB₂，四根管道
-  % 立方体（对半切后的梯形截面）
-  \draw[thick] (0,0) -- (3,0) -- (3,2) -- (1.5,2) -- (0,2) -- cycle;
-  \node at (1.5,1) {质量 $2m$};
-  % 顶点标注
-  \node at (0,2.3) {$A$};
-  \node at (3,2.3) {$C$};
-  \node at (1.5,2.3) {$B_1$};  % 左侧管道拐点
-  \node at (1.5,1.6) {$B_2$};  % 右侧管道拐点
-  % 管道AB₁（从A到B₁）
-  \draw[thick, dashed] (0,2) -- (0.75,2);
-  % 管道AB₂（从A到拐点再向下）
-  \draw[thick, dashed] (0,2) -- (0,1);
-  % 管道B₁C
-  \draw[thick, dashed] (0.75,2) -- (3,2);
-  % 管道B₂C
-  \draw[thick, dashed] (0,1) -- (3,1);
-  % 更清晰的管道路径
-  \draw[thick, gray] (0,2) -- (0.75,2) -- (3,2);  % AB₁C上路径
-  \draw[thick, gray] (0,2) -- (0,1) -- (3,1) -- (3,2);  % AB₂C下路径
-  % 标注管道
-  \node at (0.3,1.5) {管道};
-  \node at (2.3,1.5) {管道};
-  % 两球从A释放
-  \filldraw[fill=gray!50] (0.3,2) circle (2pt) node[above] {$m$};
-  \filldraw[fill=gray!50] (0,1.7) circle (2pt) node[left] {$m$};
-  % 高度标注
-  \draw[<->] (-0.5,0) -- (-0.5,2) node[midway, left] {$l$};
-  \draw[<->] (0,-0.3) -- (3,-0.3) node[midway, below] {$l$};
-  % 地面
-  \draw[thick] (-0.5,0) -- (3.5,0);
-  \foreach \x in {-0.4,-0.1,...,3.4}
-    \draw (\x,0) -- (\x-0.12,-0.15);
+\begin{tikzpicture}[>=Stealth, thick, line join=round]
+    % 底部支撑面
+    \draw (-1.5, -0.8) -- (2.5, -0.8) -- (3.5, 0.6) -- (-0.5, 0.6) -- cycle;
+    
+    % 立方体可见边
+    \draw (0, 0) node[left] {$C$} -- (2, 0) node[right] {$B_1$} -- (2.8, 0.8) -- (2.8, 2.8) node[right] {$A$} -- (0.8, 2.8) node[left] {$B_2$} -- (0, 2) -- cycle;
+    \draw (2, 0) -- (2, 2) -- (2.8, 2.8);
+    \draw (0, 2) -- (2, 2);
+    
+    % 立方体不可见边 (背面虚线)
+    \draw[dashed] (0, 0) -- (0.8, 0.8) -- (2.8, 0.8);
+    \draw[dashed] (0.8, 0.8) -- (0.8, 2.8);
+    
+    % 内部与表面对角线
+    \draw (0, 0) -- (2.8, 2.8);
+    \draw (0, 0) -- (2, 0) -- (2.8, 2.8) -- cycle;
+    \draw[dashed] (0, 0) -- (0.8, 2.8) -- (2.8, 2.8);
+    
+    % 边长 l 标注
+    \node[left] at (0, 1) {$l$};
+    \node[above left] at (0.4, 2.4) {$l$};
+    \node[above] at (1.8, 2.8) {$l$};
 \end{tikzpicture}

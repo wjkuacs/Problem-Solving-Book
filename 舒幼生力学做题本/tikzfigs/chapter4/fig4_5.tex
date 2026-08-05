@@ -1,21 +1,23 @@
-% 4-7 题 图4_5：匀质圆环绕水平轴转动，轴下移至地面
-\begin{tikzpicture}[font=\small]
-  % 圆环
-  \draw[thick] (0,0) circle (2);
-  % 辐条（十字形）
-  \draw[thin] (-2,0) -- (2,0);
-  \draw[thin] (0,-2) -- (0,2);
-  % 中心轴标注
-  \filldraw (0,0) circle (1.5pt) node[below left] {$O$};
-  % 角速度箭头（圆弧箭头）
-  \draw[->, thick] (0.5,1.8) arc[start angle=80, end angle=140, radius=1.8];
-  \node at (-1.2,1.6) {$\omega_0$};
-  % 水平地面线
-  \draw[thick] (-3,-2) -- (3,-2);
-  % 地面阴影
-  \foreach \x in {-2.8,-2.4,...,2.8} {
-      \draw (\x,-2) -- (\x-0.15,-2.2);
-  }
-  % 标注 R
-  \draw[<->] (0,-2) -- (0,0) node[midway, right] {$R$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影
+    \draw (-2.5, -1.5) -- (2.5, -1.5);
+    \foreach \x in {-2.3, -1.9, ..., 2.3} {
+        \draw (\x, -1.5) -- (\x-0.2, -1.7);
+    }
+    
+    % 圆形轮廓与中心点
+    \draw (0, 0) circle (1.5);
+    \fill (0, 0) circle (2pt);
+    
+    % 三根辐条 (Y字形)
+    \draw (0, 0) -- (90:1.5);
+    \draw (0, 0) -- (210:1.5);
+    \draw (0, 0) -- (330:1.5);
+    
+    % 顶部角速度 \omega_0
+    \draw[->] (-0.6, 1.8) arc (135:45:0.8) node[midway, above] {$\omega_0$};
+    
+    % 两侧向下的平动箭头
+    \draw[->] (-2, 0.5) -- (-2, -1);
+    \draw[->] (2, 0.5) -- (2, -1);
 \end{tikzpicture}

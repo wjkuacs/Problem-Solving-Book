@@ -1,21 +1,26 @@
-% 4-6 题 图4_4：倒立固定圆锥面内壁上小球作水平圆周运动
-\begin{tikzpicture}[font=\small]
-  % 圆锥面（倒立，顶点在上方）
-  \draw[thick] (-2.8,-3.5) -- (0,0) -- (2.8,-3.5);
-  % 锥顶标注
-  \node[above] at (0,0) {锥顶};
-  % 水平圆周运动轨迹（用椭圆表示透视效果）
-  \draw[dashed] (-1.8,-2.4) -- (1.8,-2.4);
-  \draw (1.8,-2.4) arc[start angle=0, end angle=360, x radius=1.8, y radius=0.5];
-  % 小球
-  \filldraw (1.8,-2.4) circle (2pt) node[right] {$m$};
-  % 高度标注 h0
-  \draw[<->] (-0.5,-3.5) -- (-0.5,0) node[midway, left] {$h_0$};
-  % 半顶角 φ
-  \draw (0,-0.8) arc[start angle=270, end angle=251.6, radius=0.8];
-  \node at (0.35,-1.05) {$\phi$};
-  % 辅助竖直线
-  \draw[dashed] (0,0) -- (0,-3.5);
-  % 圆周运动半径标注
-  \draw[<->] (0,-2.4) -- (1.8,-2.4) node[midway, below] {$r$};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 倒锥形轮廓
+    \draw (-2, 4) -- (0, 0) -- (2, 4);
+    
+    % 中心竖直虚线轴
+    \draw[dashed] (0, -0.5) -- (0, 4.5);
+    
+    % 锥角 \phi
+    \draw (0, 0.8) arc (90:63.4:0.8); % arctan(2/4) = 26.6度, 90-26.6=63.4
+    \node at (0.35, 1.2) {$\phi$};
+    
+    % 水平圆周运动轨迹 (虚线椭圆)
+    \draw[dashed] (0, 3) ellipse (1.5 and 0.4);
+    
+    % 运动方向箭头
+    \draw[->] (-1.5, 3) arc (180:240:1.5 and 0.4);
+    \draw[->] (1.06, 3.28) arc (45:135:1.5 and 0.4);
+    
+    % 质点
+    \fill (1.5, 3) circle (2pt);
+    
+    % 辅助线与高度 h_0 标注
+    \draw[dashed] (0, 0) -- (2.7, 0);
+    \draw[dashed] (1.5, 3) -- (2.7, 3);
+    \draw[<->] (2.4, 0) -- (2.4, 3) node[midway, right] {$h_0$};
 \end{tikzpicture}

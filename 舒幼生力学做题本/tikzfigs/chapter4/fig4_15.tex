@@ -1,23 +1,44 @@
-% 4-18 题 图4_15：彗星绕木星的椭圆轨道
-\begin{tikzpicture}[font=\small]
-  % 椭圆轨道
-  \draw[thick, blue!70!black] (0,0) ellipse (3.2 and 1.8);
-  % 木星（在焦点上）
-  \filldraw (1.5,0) circle (0.4);
-  \node at (1.5,0) {\small 木星};
-  \filldraw (1.5,0) circle (1.5pt);
-  % 焦点标注
-  \node[below] at (1.5,-0.5) {$O$};
-  % 彗星当前位置
-  \filldraw (-1.7,1.0) circle (2pt) node[above] {彗星};
-  % 速度方向（切线方向）
-  \draw[->, thick, red!70!black] (-1.7,1.0) -- (-2.6,1.3) node[left] {$\boldsymbol{v}$};
-  % 椭圆中心标记
-  \draw[dashed] (0,-2) -- (0,2);
-  \node at (0,-2.2) {$C$};
-  % 半长轴a标注
-  \draw[<->] (0,2.2) -- (3.2,2.2) node[midway, above] {$a$};
-  % 近木点和远木点标注
-  \node[below] at (4.7,0) {远木点};
-  \node[below] at (-3.2,0) {近木点};
+\begin{tikzpicture}[>=Stealth, thick]
+    % 轨道椭圆 (整体逆时针旋转以匹配倾斜角)
+    \begin{scope}[rotate=-35]
+        \draw (0, 0) ellipse (4.5 and 0.8);
+        
+        % 焦点：木星中心
+        \coordinate (Jupiter) at (-3.5, 0);
+        \fill (Jupiter) circle (2pt);
+        
+        % 轨道上的各个日期节点 (局部坐标)
+        \coordinate (P1) at (-3.2, -0.5);
+        \coordinate (P2) at (-2.5, -0.65);
+        \coordinate (P3) at (-1.5, -0.75);
+        \coordinate (P4) at (-0.5, -0.79);
+        \coordinate (P5) at (0.8, -0.78);
+        \coordinate (P6) at (2.2, -0.65);
+        \coordinate (P7) at (4.0, -0.35);
+        \coordinate (P8) at (4.2, 0.25); 
+        
+        % 绘制所有轨迹点
+        \foreach \p in {P1, P2, P3, P4, P5, P6, P7, P8} {
+            \fill (\p) circle (1.5pt);
+        }
+    \end{scope}
+
+    % 标注文字 (在全局坐标系下保证水平)
+    \node[above right=1pt] at (Jupiter) {木星中心};
+    \node[left=2pt] at (P1) {7月15日};
+    \node[left=2pt] at (P2) {7月1日};
+    \node[left=2pt] at (P3) {6月15日};
+    \node[left=2pt] at (P4) {5月15日};
+    \node[left=2pt] at (P5) {3月30日};
+    \node[left=2pt] at (P6) {1994年1月27日};
+    \node[right=2pt] at (P7) {7月1日};
+    \node[above right=1pt] at (P8) {1993年3月25日};
+
+    % 底部比例尺
+    \draw (-2, -3.5) -- (3, -3.5);
+    \foreach \x/\val in {-1.5/0, -0.5/10, 0.5/20, 1.5/30} {
+        \draw (\x, -3.5) -- (\x, -3.3);
+        \node[below] at (\x, -3.5) {\val};
+    }
+    \node[below] at (0.5, -4.0) {距离 / $10^6\text{ km}$};
 \end{tikzpicture}
