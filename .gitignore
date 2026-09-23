@@ -4,6 +4,7 @@
 *.out
 *.toc
 *.synctex.gz
+*.synctex(busy)
 *.pdf
 *.fls
 *.fdb_latexmk
@@ -16,3 +17,6 @@ __pycache__/
 
 # VS Code
 .vscode/
+
+# 校对/临时中间产物（下划线前缀：_pages/ _figpng/ _ch5_tikz_png/ _t48.tex 等）
+_*
