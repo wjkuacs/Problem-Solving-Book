@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义边缘直角点
+    \coordinate (Corner) at (0,0);
+
+    % 绘制水平桌面和竖直墙面
+    \draw (-3, 0) -- (Corner) -- (0, -3);
+
+    % 定义杆的两端点 (角度为 145 度与 -35 度)
+    \coordinate (A) at (145:3);
+    \coordinate (B) at (-35:3);
+    
+    % 绘制杆 AB
+    \draw (A) -- (B);
+
+    % 绘制端点 A, B 并标注
+    \fill (A) circle (2pt) node[above left] {$A$};
+    \fill (B) circle (2pt) node[below right] {$B$};
+
+    % 绘制倾角 \phi
+    \draw (-1, 0) arc (180:145:1);
+    \node at (162.5:1.25) {$\phi$};
+\end{tikzpicture}

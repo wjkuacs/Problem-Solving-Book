@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 圆周轨道（水平面上的椭圆透视）
+  \coordinate (C) at (1.6,-0.15);
+  \coordinate (Rend) at (4.6,-0.15);
+  \draw[dashed] (C) ellipse (3.0 and 1.55);
+  % 半径 R
+  \draw (C) -- (Rend);
+  \fill (C) circle (1.5pt);
+  \node[below=1pt] at ($(C)+(0.9,-0.45)$) {$R$};
+  \node[below right] at (C) {};
+  % 水平线（虚线，指向硬币）
+  \coordinate (H) at (-1.35,0.85);
+  \draw[dashed] (H) -- (1.4,0.55);
+  \node[above] at (0.3,0.95) {水平线};
+  % 硬币（侧视椭圆 + 半径 r）
+  \coordinate (Coin) at (-2.55,1.55);
+  \draw[thick] (Coin) ellipse (0.28 and 0.72);
+  \draw[->] (Coin) -- ++(0,0.45) node[midway, left] {$r$};
+  % 倾角 \phi（硬币轴与水平线夹角）
+  \draw (Coin) ++(0.55,0.15) arc (20:-35:0.55);
+  \node[right] at ($(Coin)+(0.7,-0.05)$) {$\phi$};
+  % 速度 v
+  \draw[->] ($(Coin)+(-0.45,-0.55)$) -- ++(-0.55,-0.35) node[below left] {$v$};
+  % 自转示意箭头
+  \draw[->] ($(Coin)+(-0.35,0.85)$) -- ++(-0.35,0.15);
+\end{tikzpicture}

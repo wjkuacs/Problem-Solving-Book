@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 两匀质圆盘外切，绕各自中心竖直轴顺时针旋转
+  \def\R{1.15}
+  \coordinate (O1) at (0,0);
+  \coordinate (O2) at (2.3,0);
+  \draw (O1) circle (\R);
+  \draw (O2) circle ({\R*0.92});
+  \fill (O1) circle (1.5pt);
+  \fill (O2) circle (1.5pt);
+  \node[above=4pt] at ($(O1)+(0,0.35)$) {$m_1$};
+  \node[above=4pt] at ($(O2)+(0,0.3)$) {$m_2$};
+  % 半径
+  \draw[->] (O1) -- ++(-0.55,-0.75) node[midway, below left=-1pt] {$R_1$};
+  \draw[->] (O2) -- ++(0.5,-0.7) node[midway, below right=-1pt] {$R_2$};
+  % 角速度（顺时针）
+  \draw[->] ($(O1)+(-1.35,0.55)$) arc (150:280:0.45);
+  \node[left] at ($(O1)+(-1.55,0.75)$) {$\omega_1$};
+  \draw[->] ($(O2)+(1.35,0.55)$) arc (30:140:0.45);
+  \node[right] at ($(O2)+(1.5,0.75)$) {$\omega_2$};
+\end{tikzpicture}

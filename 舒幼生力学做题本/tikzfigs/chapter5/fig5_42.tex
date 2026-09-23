@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义角度和切线距离
+    \def\ang{25}
+    \def\dist{3.5}
+    
+    % 中心点 P
+    \coordinate (P) at (0, 0);
+    
+    % 切点 T1 和 T2
+    \coordinate (T1) at (\ang:\dist);
+    \coordinate (T2) at (-\ang:\dist);
+    
+    % 计算圆心 O (使得 PT1O 为直角三角形)
+    \pgfmathsetmacro{\po}{\dist / cos(\ang)}
+    \coordinate (O) at (\po, 0);
+    
+    % 计算半径 R
+    \pgfmathsetmacro{\R}{\dist * tan(\ang)}
+
+    % 绘制圆
+    \draw (O) circle (\R);
+
+    % 绘制切线 (向外稍微延伸)
+    \draw (P) -- ($(P)!1.25!(T1)$);
+    \draw (P) -- ($(P)!1.25!(T2)$);
+    \fill (P) circle (2pt);
+
+    % 绘制半径 R 及箭头
+    \draw[->] (O) -- ++(\R, 0) node[midway, below] {$R$};
+
+    % 上方切线的长度标注 l
+    \coordinate (P_top) at ($(P) + (90+\ang:0.4)$);
+    \coordinate (T1_top) at ($(T1) + (90+\ang:0.4)$);
+    \draw[<->] (P_top) -- (T1_top) node[midway, fill=white, inner sep=1pt] {$l$};
+    % 上方辅助线及 \mu 标注
+    \draw ($(P) + (90+\ang:0.1)$) -- ($(P) + (90+\ang:0.6)$);
+    \draw ($(T1) + (90+\ang:0.1)$) -- ($(T1) + (90+\ang:0.6)$);
+    \node[right=2pt] at ($(T1) + (90+\ang:0.35)$) {$\mu$};
+
+    % 下方切线的长度标注 l
+    \coordinate (P_bot) at ($(P) + (-90-\ang:0.4)$);
+    \coordinate (T2_bot) at ($(T2) + (-90-\ang:0.4)$);
+    \draw[<->] (P_bot) -- (T2_bot) node[midway, fill=white, inner sep=1pt] {$l$};
+    % 下方辅助线及 \mu 标注
+    \draw ($(P) + (-90-\ang:0.1)$) -- ($(P) + (-90-\ang:0.6)$);
+    \draw ($(T2) + (-90-\ang:0.1)$) -- ($(T2) + (-90-\ang:0.6)$);
+    \node[right=2pt] at ($(T2) + (-90-\ang:0.35)$) {$\mu$};
+\end{tikzpicture}

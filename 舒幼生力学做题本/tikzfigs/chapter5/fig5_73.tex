@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 匀质细杆 AB，B 端弹出小球
+  \coordinate (A) at (-3.2,0);
+  \coordinate (M) at (0,0);
+  \coordinate (B) at (2.8,0);
+  \draw[thick] (A) -- (B);
+  \fill (A) circle (1.5pt) node[below left] {$A$};
+  \fill (M) circle (1.5pt) node[below] {$M$};
+  \fill (B) circle (1.5pt) node[below right] {$B$};
+  % 小球与速度方向（与杆夹角 \phi）
+  \coordinate (Ball) at ($(B)+(1.35,1.15)$);
+  \draw[->] (B) -- (Ball) node[midway, above left] {$v$};
+  \fill (Ball) circle (2pt);
+  \node[above right] at (Ball) {$m$};
+  % 夹角 \phi
+  \draw (B) ++(0.7,0) arc (0:40:0.7);
+  \node[below right] at ($(B)+(0.55,0.28)$) {$\phi$};
+\end{tikzpicture}

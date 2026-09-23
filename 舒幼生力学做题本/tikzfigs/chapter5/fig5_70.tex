@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 两圆盘 A、B，连心线沿 x 轴，接触时连心线与 v 成 45°
+  \def\R{1.15}
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.3,0);
+  \draw (A) circle (\R);
+  \draw (B) circle (\R);
+  % 坐标轴
+  \draw[->] (A) -- (0,2.1) node[above] {$y$};
+  \draw[->] (A) -- (4.3,0) node[right] {$x$};
+  \draw (A) -- (B) node[midway, below=2pt] {};
+  % z 轴（垂直纸面向外）
+  \draw (A) circle (0.12);
+  \fill (A) circle (1.5pt);
+  \node[below left] at (A) {$z$};
+  % 速度 v 与 x 轴成 45°
+  \draw[->] (A) -- ($(A)+(1.55,1.55)$) node[above right] {$v$};
+  \draw (A) ++(0.55,0) arc (0:45:0.55);
+  \node[below right] at ($(A)+(0.45,0.28)$) {$45^{\circ}$};
+  \node[below] at (A) {$A$};
+  \node[below] at (B) {$B$};
+\end{tikzpicture}
