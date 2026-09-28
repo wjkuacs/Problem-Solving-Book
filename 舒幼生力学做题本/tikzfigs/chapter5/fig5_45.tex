@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及原点
+    \coordinate (Origin) at (0,0);
+    \draw (Origin) -- (5.5,0);
+    
+    % 绘制斜面 (前半段虚线，后半段实线)
+    \draw[dashed] (Origin) -- (30:1.5);
+    \draw (30:1.5) -- (30:6.5);
+
+    % 绘制倾角 \phi
+    \draw (1,0) arc (0:30:1);
+    \node at (15:1.3) {$\phi$};
+
+    % 使用 scope 旋转环境绘制斜面上的物体
+    \begin{scope}[shift={(30:2.5)}, rotate=30]
+        % U型盒 A (外部轮廓)
+        \draw (0, 1.2) -- (0,0) -- (3,0) -- (3, 1.2);
+        % U型盒 A (内部轮廓)
+        \draw (0.15, 1.2) -- (0.15, 0.15) -- (2.85, 0.15) -- (2.85, 1.2);
+        % 封口 (顶端两条短横线)
+        \draw (0, 1.2) -- (0.15, 1.2);
+        \draw (3, 1.2) -- (2.85, 1.2);
+
+        % 物块 B
+        \draw (1.2, 0.15) rectangle (2.0, 0.7);
+        \node at (0.8, 0.45) {$B$};
+
+        % 标签 A
+        \node[left] at (-0.1, 0.6) {$A$};
+
+        % 内部长度标注 L
+        \draw (0.15, 1.3) -- (0.15, 1.7);
+        \draw (2.85, 1.3) -- (2.85, 1.7);
+        \draw[<->] (0.15, 1.5) -- (2.85, 1.5) node[midway, fill=white, inner sep=1pt] {$L$};
+    \end{scope}
+\end{tikzpicture}

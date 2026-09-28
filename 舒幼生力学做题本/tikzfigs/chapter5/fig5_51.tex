@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 匀质圆柱：截面半径 R，长 2R；轴过中心与一底面边缘
+  \def\R{0.7}
+  \def\L{2.2}
+  % 圆柱侧视（水平放置）
+  \pgfmathsetmacro{\xl}{-\L/2}
+  \pgfmathsetmacro{\xr}{\L/2}
+  % 上下母线
+  \draw (\xl,\R) -- (\xr,\R);
+  \draw (\xl,-\R) -- (\xr,-\R);
+  % 左端椭圆底面
+  \draw (\xl,0) ellipse ({0.28} and {\R});
+  % 右端（可见弧）
+  \draw (\xr,\R) arc (90:270:{0.28} and {\R});
+  % 右端虚线（被遮挡）
+  \draw[dashed] (\xr,-\R) arc (-90:90:{0.28} and {\R});
+  % 中心 O
+  \coordinate (C) at (0,0);
+  \fill (C) circle (1.5pt) node[below left=-1pt] {$O$};
+  % 长度 2R 标注
+  \draw[<->] (\xl,-\R-0.35) -- (\xr,-\R-0.35)
+    node[midway, below=1pt] {$2R$};
+  % 半径 R（左端面）
+  \draw[->] (\xl,0) -- ({\xl+0.22},{0.55*\R})
+    node[midway, above left=-1pt] {$R$};
+  % 转轴：过中心与右底面边缘点
+  \pgfmathsetmacro{\xe}{\xr+0.28}
+  \draw[->] (-1.6,0.9) -- (\xe,-\R)
+    node[pos=0.55, above right=-2pt] {};
+  \fill (\xe,-\R) circle (1.5pt);
+  \node[below right=-2pt] at (\xe,-\R) {轴};
+  % 质量 m
+  \node[above] at (0,\R+0.15) {$m$};
+\end{tikzpicture}

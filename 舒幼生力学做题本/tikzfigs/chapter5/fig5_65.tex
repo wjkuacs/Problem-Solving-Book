@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 匀质圆环置于地面，水平直径右端连结小物体 P
+  \def\R{1.4}
+  \coordinate (O) at (0,\R);
+  % 地面
+  \draw (-2.0,0) -- (2.0,0);
+  \foreach \x in {-1.8,-1.4,...,1.8} {
+    \draw (\x,0) -- ++(-0.12,-0.18);
+  }
+  % 圆环
+  \draw (O) circle (\R);
+  \fill (O) circle (1.5pt);
+  % 水平直径（虚线）
+  \draw[dashed] ($(O)+(-\R,0)$) -- ($(O)+(\R,0)$);
+  \node[below left=-1pt] at (O) {};
+  \node[left=1pt] at ($(O)+(-0.45,0)$) {$R$};
+  % 中心
+  \fill (O) circle (1.5pt);
+  % 右端点 P
+  \coordinate (P) at ($(O)+(\R,0)$);
+  \fill (P) circle (2.5pt) node[right=2pt] {$P$};
+  % 转角示意
+  \draw[->] ($(O)+(-0.55,-\R+0.25)$) arc (-100:-40:0.55);
+  \node[below] at ($(O)+(0,-\R-0.05)$) {};
+\end{tikzpicture}

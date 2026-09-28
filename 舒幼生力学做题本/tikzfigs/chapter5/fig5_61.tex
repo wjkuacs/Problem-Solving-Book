@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 光滑地面：匀质圆盘 M,R，边缘质点小车 m
+  \def\R{1.35}
+  \coordinate (O) at (0,\R);
+  \draw (-2.2,0) -- (2.2,0);
+  \foreach \x in {-2.0,-1.6,...,2.0} {
+    \draw (\x,0) -- ++(-0.12,-0.18);
+  }
+  \draw (O) circle (\R);
+  \fill (O) circle (1.5pt);
+  \draw[->] (O) -- ($(O)+(0,-\R)$) node[midway, left=1pt] {$R$};
+  \node[below=2pt] at ($(O)+(-0.85,-0.05)$) {$M$};
+  \coordinate (P) at ($(O)+(\R*0.707,\R*0.707)$);
+  \fill (P) circle (3pt) node[above right=1pt] {$m$};
+  \draw[dashed] (O) -- (P);
+  \draw[->] ($(O)+(-0.15,\R+0.35)$) arc (100:180:0.45);
+\end{tikzpicture}
