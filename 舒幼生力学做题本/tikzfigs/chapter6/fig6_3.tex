@@ -1,23 +1,40 @@
-\begin{tikzpicture}[font=\small, >=stealth]
-  % 长方形容器，水平加速 a = g/√3 向右
-  \draw[thick] (0,0) rectangle (3,3);
+\begin{tikzpicture}[>=Stealth, thick]
+  % ===== 左：等效重力矢量三角形 =====
+  \coordinate (P) at (-3.9,2.3);
+  \coordinate (Q) at (-2.745,2.3);
+  \coordinate (R) at (-3.9,0.3);
+  \draw[dashed] (-3.9,3.0) -- (-3.9,-0.35);
+  \draw[->] (P) -- (Q) node[midway, above] {$g/\sqrt{3}$};
+  \draw[->] (P) -- (R) node[midway, left] {$g$};
+  \draw[->] (Q) -- (R) node[midway, below right] {$g'$};
+  \draw (R) ++(60:0.55) arc(60:90:0.55);
+  \node at (-3.62,1.15) {$30^\circ$};
 
-  % 初始液面 (虚线)
-  \draw[dashed, blue] (0,3) -- (3,3);
-  \node[above] at (1.5,3) {初始液面};
-
-  % 倾斜液面
-  \draw[thick, red] (0,1.8) -- (3,4.2);
-  \fill[cyan!20] (0,0) -- (0,1.8) -- (3,4.2) -- (3,0) -- cycle;
-
-  % 标注
-  \node[above] at (1.5,4.4) {稳定液面};
-  \draw[->, thick, red] (3.3,1.5) -- (4.3,1.5) node[right] {$a = g/\!\sqrt{3}$};
-  \node[left] at (-0.3,1.5) {$L$};
-  \node[below] at (1.5,-0.3) {$L$};
-
-  % 角度标注
-  \draw[<->] (0.5,1.8) arc[start angle=0, end angle=30, radius=1.5cm];
-  \node at (1.5,2.6) {$\theta$};
-  \node at (4.3,0.8) {$\tan\theta = \dfrac{a}{g} = \dfrac{1}{\sqrt{3}}$};
+  % ===== 右：匀加速容器 =====
+  \draw (0.6,0.5) rectangle (3.6,3.5);
+  % 液体（网格阴影），液面倾斜 30°（左高右低）
+  \fill[pattern=grid] (0.6,0.5) -- (3.6,0.5) -- (3.6,1.468) -- (0.6,3.2) -- cycle;
+  \draw (0.6,3.2) -- (3.6,1.468);
+  % 液面最高点水平虚线
+  \draw[dashed] (0.6,3.2) -- (3.6,3.2);
+  % 30° 角（液面与水平虚线）
+  \draw (1.35,3.2) arc(0:-30:0.75);
+  \node at (1.72,2.95) {$30^\circ$};
+  % 中心竖直虚线（h_max 从容器底到液面最高点）
+  \draw[dashed] (2.1,0.5) -- (2.1,3.95);
+  \node[right] at (2.1,1.85) {$h_{\max}$};
+  % L（左侧竖直尺寸，容器高度）
+  \draw (0.25,0.5) -- (0.25,3.5);
+  \draw (0.1,0.5) -- (0.4,0.5);
+  \draw (0.1,3.5) -- (0.4,3.5);
+  \node[left] at (0.25,2.0) {$L$};
+  % L/2（顶部水平尺寸，中心线到右壁）
+  \draw (2.1,3.95) -- (3.6,3.95);
+  \draw (2.1,3.8) -- (2.1,4.1);
+  \draw (3.6,3.8) -- (3.6,4.1);
+  \node at (2.85,4.25) {$L/2$};
+  % A 点（容器左下角）
+  \fill (0.6,0.5) circle (1.5pt) node[below left] {$A$};
+  % 加速度
+  \draw[->] (3.95,1.7) -- (5.15,1.7) node[midway, above] {$a=g/\sqrt{3}$};
 \end{tikzpicture}

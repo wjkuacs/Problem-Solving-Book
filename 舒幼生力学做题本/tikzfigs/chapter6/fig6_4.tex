@@ -1,25 +1,17 @@
-\begin{tikzpicture}[font=\small, >=stealth]
-  % 容器 S2，上方细管 S1
-  % 细管
-  \draw[thick] (-0.3,6) -- (-0.3,4);
-  \draw[thick] (0.3,6) -- (0.3,4);
-  \fill[cyan!20] (-0.25,4) rectangle (0.25,6);
-
-  % 容器
-  \draw[thick] (-2,4) -- (-2,0) -- (2,0) -- (2,4) -- (0.3,4);
-  \draw[thick] (-0.3,4) -- (-2,4);
-  \fill[cyan!20] (-1.95,0.05) rectangle (1.95,3.95);
-
-  % 水充满
-  \fill[cyan!20] (-0.25,4) rectangle (0.25,6);
-
+\begin{tikzpicture}[>=Stealth, thick]
+  % 底部横向宽扁容器（S2）
+  \draw (-2.6,0) rectangle (2.6,1.0);
+  % 上部竖直细管（S1）
+  \draw (-0.35,1.0) -- (-0.35,4.2) -- (0.35,4.2) -- (0.35,1.0);
+  % 液体：断续虚线（容器一条，细管多条）
+  \draw[dashed] (-2.5,0.5) -- (2.5,0.5);
+  \foreach \y in {1.35,1.75,2.15,2.55,2.95,3.35,3.75} {
+    \draw[dashed] (-0.3,\y) -- (0.3,\y);
+  }
   % 标注
-  \draw[<->] (-2.5,0) -- (-2.5,4) node[midway, left] {$h_2$};
-  \draw[<->] (-2.5,4) -- (-2.5,6) node[midway, left] {$h_1$};
-  \node at (0,2) {$S_2$};
-  \node at (0,5) {$S_1$};
-  \node[below] at (0,-0.3) {容器底部};
-
-  % 力标注
-  \draw[->, thick, red] (0,-0.5) -- (0,-1.2) node[below] {$F$ (水对底压力)};
+  \node at (0,4.55) {$S_1$};
+  \node at (0,-0.35) {$S_2$};
+  % 尺寸线（右侧）
+  \draw[<->] (3.1,1.0) -- (3.1,4.2) node[midway, right] {$h_1$};
+  \draw[<->] (3.1,0) -- (3.1,1.0) node[midway, right] {$h_2$};
 \end{tikzpicture}

@@ -1,30 +1,20 @@
-\begin{tikzpicture}[font=\small, >=stealth]
-  % 直立容器，上窄下宽，A处窄、B处宽
-  % 容器壁
-  \draw[thick] (-0.5,7) -- (-0.5,4) -- (-2,4) -- (-2,0) -- (2,0) -- (2,4) -- (0.5,4) -- (0.5,7);
-
-  % 水填充
-  \fill[cyan!20] (-0.45,0.05) rectangle (0.45,3.95);
-  \fill[cyan!20] (-1.95,0.05) rectangle (1.95,3.95);
-  \fill[cyan!20] (-0.45,4) rectangle (0.45,6.95);
-
-  % 液面
-  \draw[thick, blue] (-0.45,7) -- (0.45,7);
-
-  % 标注 H
-  \draw[<->] (-2.8,0) -- (-2.8,7) node[midway, left] {$H$};
-
-  % 标注 A, B 截面
-  \draw[dashed, red] (-0.8,5.5) -- (0.8,5.5) node[right] {截面 $A$, $S_A$};
-  \draw[dashed, red] (-2.3,2) -- (2.3,2) node[right] {截面 $B$, $S_B$};
-
-  % 底部出水口 C
-  \draw[thick] (-0.2,0) -- (-0.2,-0.5);
-  \draw[thick] (0.2,0) -- (0.2,-0.5);
-  \draw[->, thick, blue] (0,-0.5) -- (0,-1.2) node[below] {出水};
-  \node[below right] at (0.2,-0.3) {$C$};
-
-  % 标注
-  \node at (0,5.5) {$A$};
-  \node at (0,2) {$B$};
+\begin{tikzpicture}[>=Stealth, thick]
+  % 阶梯容器：上段 A（宽）→ 中段 B（窄）→ 下段 C（更窄，出口）
+  \draw (-2.0,4.2) -- (-2.0,2.6) -- (-1.1,2.6) -- (-1.1,1.2) -- (-0.35,1.2)
+        -- (-0.35,0) -- (0.35,0) -- (0.35,1.2) -- (1.1,1.2) -- (1.1,2.6)
+        -- (2.0,2.6) -- (2.0,4.2) -- cycle;
+  % 液体：断续虚线（A、B 段），液面在 A 段顶部
+  \draw[dashed] (-1.9,4.05) -- (1.9,4.05);
+  \foreach \y in {3.0,3.4,3.8} { \draw[dashed] (-1.9,\y) -- (1.9,\y); }
+  \foreach \y in {1.5,1.9,2.3} { \draw[dashed] (-1.0,\y) -- (1.0,\y); }
+  % 标注 A、B、C
+  \node at (0,3.45) {$A$};
+  \node at (0,1.95) {$B$};
+  \node at (0,0.55) {$C$};
+  % 出水箭头
+  \draw[->] (0,-0.25) -- (0,-1.0);
+  % 右侧竖直尺寸：H、h_A、h_B（下端均对齐容器底）
+  \draw[<->] (3.5,0) -- (3.5,4.2) node[midway, right] {$H$};
+  \draw[<->] (2.9,0) -- (2.9,2.6) node[midway, right] {$h_A$};
+  \draw[<->] (2.35,0) -- (2.35,1.2) node[midway, right] {$h_B$};
 \end{tikzpicture}

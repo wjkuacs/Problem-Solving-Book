@@ -1,34 +1,29 @@
-\begin{tikzpicture}[font=\small, >=stealth]
-  % 两平行平板间的层流
-  % 上板
-  \draw[thick, fill=gray!30] (-1,3) rectangle (7,3.3);
-  \node at (3,3.5) {上板};
-  % 下板
-  \draw[thick, fill=gray!30] (-1,-0.3) rectangle (7,0);
-  \node at (3,-0.5) {下板};
-
-  % x轴 (中央)
-  \draw[->, thick] (-1,1.5) -- (7,1.5) node[right] {$x$};
-  \node[below] at (-0.8,1.5) {$x=0$};
-
-  % 间距标注
-  \draw[<->] (7.3,0) -- (7.3,3) node[midway, right] {$2H$};
-
-  % y方向标注
-  \draw[<->] (7.3,1.5) -- (7.3,3) node[midway, right] {$H$};
-  \draw[<->] (7.3,0) -- (7.3,1.5) node[midway, right] {$H$};
-
-  % 速度分布 (抛物线)
-  \draw[thick, blue, ->] (0,1.5) .. controls (1,1.5) and (2,2.8) .. (4,2.8)
-    node[above] {$v(x)$};
-  \draw[thick, blue, ->] (0,1.5) .. controls (1,1.5) and (2,0.2) .. (4,0.2);
-
-  % 压强标注
-  \node[left] at (-1,2.5) {$p_1$};
-  \node[left] at (-1,0.5) {$p_2$};
-  \draw[->, thick] (-0.8,2.5) -- (-0.2,2.5);
-  \draw[->, thick] (6.2,2.5) -- (6.8,2.5);
-
-  % 宽度标注
-  \node[below] at (3,1.5) {$L$ (宽)};
+\begin{tikzpicture}[>=Stealth, thick]
+  % 上下两平行板（空心矩形）
+  \draw (-3.0,1.05) rectangle (3.0,1.5);
+  \draw (-3.0,-1.5) rectangle (3.0,-1.05);
+  % x 轴（竖直向上），原点 O 在两板正中
+  \draw (0,-1.75) -- (0,-1.5);
+  \draw (0,-1.05) -- (0,1.05);
+  \draw[->] (0,1.5) -- (0,2.3) node[above] {$x$};
+  \fill (0,0) circle (1.5pt) node[below left] {$O$};
+  % H、-H（对齐板的内表面）
+  \node[left] at (0,1.05) {$H$};
+  \node[left] at (0,-1.05) {$-H$};
+  % L（板长，水平尺寸，两端短竖线）
+  \draw (-3.0,1.95) -- (3.0,1.95);
+  \draw (-3.0,1.8) -- (-3.0,2.1);
+  \draw (3.0,1.8) -- (3.0,2.1);
+  \node at (0,2.2) {$L$};
+  % 两压强：P1 向右、P2 向左
+  \draw[->] (-4.4,0) -- (-3.3,0);
+  \node[above] at (-3.85,0) {$P_1$};
+  \node[below] at (-3.85,0) {$1$};
+  \draw[->] (4.4,0) -- (3.3,0);
+  \node[above] at (3.85,0) {$P_2$};
+  \node[below] at (3.85,0) {$2$};
+  % 流动虚线箭头（向右）
+  \foreach \y in {-0.55,0,0.55} {
+    \draw[dashed, ->] (-2.6,\y) -- (2.6,\y);
+  }
 \end{tikzpicture}
