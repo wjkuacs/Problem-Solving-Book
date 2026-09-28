@@ -18,5 +18,10 @@ __pycache__/
 # VS Code
 .vscode/
 
+# Agent/tooling state（不属于做题本内容）
+.reasonix/
+reasonix.toml
+IDEA.md
+
 # 校对/临时中间产物（下划线前缀：_pages/ _figpng/ _ch5_tikz_png/ _t48.tex 等）
 _*
