@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Circle
+    \draw (0, 0) circle (2);
+    
+    % Center O
+    \fill (0, 0) circle (1.5pt);
+    \node[left] at (-0.1, 0) {$O$};
+    
+    % Arrow right
+    \draw[->] (0.2, 0) -- (1.5, 0);
+    
+    % Curved arrow top
+    \draw[->] (0.5, 2.5) arc[start angle=60, end angle=120, radius=1.0];
+\end{tikzpicture}

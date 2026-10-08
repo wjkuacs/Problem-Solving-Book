@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (O1) at (0, 0);
+    \coordinate (O2) at (4, 0);
+    \def\R{1.2}
+    
+    % Pulleys
+    \draw (O1) circle (\R);
+    \draw (O2) circle (\R);
+    \fill (O1) circle (1.5pt);
+    \fill (O2) circle (1.5pt);
+    
+    % Belt
+    \draw (0, \R) -- (4, \R);
+    \draw (0, -\R) -- (4, -\R);
+    
+    % Rotation arrows
+    \draw[->] (-0.8, 0) arc[start angle=180, end angle=110, radius=0.8];
+    \draw[->] (4.8, 0) arc[start angle=0, end angle=-70, radius=0.8];
+    
+    % Belt movement arrows
+    \draw[->] (1.5, 0.8) -- (2.5, 0.8);
+    \draw[->] (2.5, -0.8) -- (1.5, -0.8);
+    \node at (2, 0) {$v_0$};
+    
+    % Block
+    \draw[pattern=north east lines] (-0.3, \R) rectangle (0.5, \R+0.5);
+    \draw[thick] (-0.3, \R) rectangle (0.5, \R+0.5);
+    
+    % Dimensions
+    \draw (0, -\R-0.2) -- (0, -\R-0.8);
+    \draw (4, -\R-0.2) -- (4, -\R-0.8);
+    \draw[<->] (0, -\R-0.5) -- (4, -\R-0.5) node[midway, fill=white] {$l$};
+\end{tikzpicture}

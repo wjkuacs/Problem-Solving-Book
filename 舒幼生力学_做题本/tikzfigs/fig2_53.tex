@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Origin
+    \coordinate (O) at (0, 0);
+    \node[left] at (-0.1, -0.1) {$O$};
+    
+    % Axes
+    \draw[->] (O) -- (4, 0) node[below] {$x$};
+    \draw[->] (O) -- (2.5, 2.5) node[right] {$y$};
+    \draw[->] (O) -- (0, 3) node[right] {$z$};
+    
+    % Vector E
+    \draw[->, very thick] (O) -- (-1.2, 2.5) node[left] {$\boldsymbol{E}$};
+    
+    % Angle \theta
+    \draw (0, 1) arc[start angle=90, end angle=115.6, radius=1]; % arctan(1.2/2.5) = 25.6, so 90 to 115.6
+    \node at (-0.3, 1.4) {$\theta$};
+    
+    % Point A
+    \fill (3, 0) circle (2pt) node[above] {$A$} node[below] {$x_0$};
+    
+    % Point B
+    \draw (O) -- (0, -2) node[right] {$B$};
+\end{tikzpicture}

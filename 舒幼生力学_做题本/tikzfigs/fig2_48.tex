@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影线
+    \draw (-1, 0) -- (5, 0);
+    \foreach \x in {-0.8, -0.4, ..., 4.8} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 斜面及其质量标注 M
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (4, 0);
+    \coordinate (C) at (4, 2.5);
+    \draw (A) -- (B) -- (C) -- cycle;
+    \node at (3, 0.8) {$M$};
+    
+    % 高度 H
+    \node[right] at (4, 1.25) {$H$};
+    
+    % 坡角 \phi
+    \draw (0.8, 0) arc (0:32:0.8);
+    \node at (1.1, 0.25) {$\phi$};
+    
+    % 斜面上的物块 m
+    \begin{scope}[shift={(2, 1.25)}, rotate=32]
+        \draw[thick] (-0.5, 0) rectangle (0.5, 0.7) node[midway] {$m$};
+    \end{scope}
+\end{tikzpicture}

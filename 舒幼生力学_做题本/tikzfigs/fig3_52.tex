@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 环形轨道
+    \draw (0, 0) circle (2.2);
+    \draw (0, 0) circle (1.8);
+    
+    % 质点 A 与速度
+    \fill (0, 2.0) circle (2.5pt);
+    \node[above=2pt] at (0, 2.2) {$A$};
+    \draw[->] (0, 2.0) -- (1.8, 2.0) node[above] {$v_0$};
+    
+    % 质点 B 与速度
+    \fill (0, -2.0) circle (2.5pt);
+    \node[above=2pt] at (0, -1.8) {$B$};
+    \draw[->] (0, -2.0) -- (1.8, -2.0) node[above] {$v_0$};
+\end{tikzpicture}

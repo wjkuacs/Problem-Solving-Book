@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Earth surface arc
+    \draw (-3.0, -3.5) to[out=15, in=165] (3.0, -3.5);
+    
+    % Mass A
+    \coordinate (A) at (0, 0);
+    \draw[pattern=north east lines] (A) circle (0.2);
+    \draw (A) circle (0.2);
+    \node[above] at (A) {$A$};
+    \node[right] at (0.2, 0) {$m_1$};
+    
+    % Horizontal line and velocity v
+    \draw (-0.2, 0) -- (-2.0, 0);
+    \draw[->] (-0.2, 0) -- (-1.2, 0) node[above] {$v$};
+    
+    % Vertical R arrow
+    \draw[->] (-1.6, 0) -- (-1.6, -4.0) node[midway, right] {$R$};
+    \draw (-1.8, 0) -- (-1.4, 0); % Top tick mark for R
+    
+    % Vertical dashed line to earth center
+    \draw[dashed, ->] (0, -0.2) -- (0, -4.5) node[below] {至地心};
+    
+    % Mass S and Rod L
+    \coordinate (S) at (1.2, -2.0);
+    \draw (0.1, -0.17) -- (S) node[midway, right] {$L$}; % start slightly offset from edge of A
+    \fill (S) circle (1.5pt);
+    \node[below] at (S) {$S$};
+    \node[right] at (1.3, -2.0) {$m_2$};
+    
+    % Angle \alpha
+    \draw (0, -0.8) arc[start angle=270, end angle=300.96, radius=0.8]; % arctan(1.2/2) = 30.96 deg
+    \node at (0.25, -1.0) {$\alpha$};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Origin O
+    \coordinate (O) at (0, 0);
+    \fill (O) circle (1.5pt) node[left] {$O$};
+    
+    % Dashed axis
+    \draw[dashed] (O) -- (1.5, 0);
+    
+    % Rod (Rectangle)
+    \draw (1.5, -0.25) rectangle (4.5, 0.25);
+    
+    % Solid axis through rod
+    \draw (1.5, 0) -- (4.5, 0);
+    
+    % Extending x-axis
+    \draw[->] (4.5, 0) -- (6.5, 0) node[below] {$x$};
+    
+    % Labels
+    \node[below] at (1.5, -0.25) {$x_1$};
+    \node[below] at (4.5, -0.25) {$x_2$};
+    \node[above] at (1.5, 0.25) {$S$};
+    \node[above] at (4.5, 0.25) {$S$};
+    \node[above] at (3.0, 0.25) {$\rho_0$};
+    
+    % Rotation arrow
+    \draw[->] (6.0, -0.4) arc[start angle=-45, end angle=45, x radius=0.4, y radius=0.6] node[midway, right] {$\omega$};
+\end{tikzpicture}

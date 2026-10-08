@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling
+    \draw (-2.5, 4) -- (2.5, 4);
+    \foreach \x in {-2.3, -1.9, ..., 2.3} \draw (\x, 4) -- (\x+0.2, 4.2);
+    
+    % Hanger & Point P
+    \draw (0, 4) -- (0, 3.5);
+    \draw (0, 3.25) ellipse (0.1 and 0.25);
+    \node[left] at (-0.1, 3.25) {$P$};
+    \coordinate (P) at (0, 3);
+    
+    % Vertical dashed line
+    \draw[dashed] (P) -- (0, -0.5);
+    
+    % Masses
+    \coordinate (M1) at (1.5, 0.5);
+    \coordinate (M2) at (-2.2, 0.2);
+    
+    \draw (P) -- (M1) node[midway, right] {$l_1$};
+    \draw (P) -- (M2) node[midway, left] {$l_2$};
+    \fill (M1) circle (2pt) node[right] {$m_1$};
+    \fill (M2) circle (2pt) node[left] {$m_2$};
+    
+    % Ellipses
+    \draw[dashed] (0, 0.5) ellipse (1.5 and 0.4);
+    \draw[dashed] (0, 0.2) ellipse (2.2 and 0.6);
+    
+    % Angles
+    % phi1 and phi2 arcs (fixed arc syntax)
+    \draw (0,1.8) arc[start angle=270, end angle=300, radius=1.2] node[pos=0.5, below right, yshift=2pt] {$\phi_1$};
+    \draw (0,2.0) arc[start angle=270, end angle=234, radius=1.2] node[pos=0.5, below left, yshift=2pt] {$\phi_2$};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 垂直旋转轴 MN
+    \draw (0, -1.5) node[left] {$M$} -- (0, 2.5) node[left] {$N$};
+    
+    % 旋转角速度 \omega
+    \draw[->] (0.2, 1.8) arc (-90:90:0.3 and 0.15);
+    \node[right] at (0.5, 1.95) {$\omega$};
+    
+    % 中心水平虚线
+    \draw[dashed] (0, 0) -- (5.5, 0);
+    
+    % 金属杆 P
+    \draw (1.5, -0.2) rectangle (4.5, 0.2);
+    \draw[dashed] (1.5, 0) -- (4.5, 0);
+    \fill (3, 0) circle (2pt) node[above=2pt] {$P$};
+    
+    % 下方距离 d 与 l 的标注
+    \draw[<->] (0, -0.8) -- (1.5, -0.8) node[midway, fill=white] {$d$};
+    \draw[<->] (1.5, -0.8) -- (4.5, -0.8) node[midway, fill=white] {$l$};
+    
+    % 距离辅助短线
+    \draw (0, -0.6) -- (0, -1);
+    \draw (1.5, -0.6) -- (1.5, -1);
+    \draw (4.5, -0.6) -- (4.5, -1);
+\end{tikzpicture}

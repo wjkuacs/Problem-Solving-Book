@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 天花板
+    \draw (-1.5, 3.5) -- (1.5, 3.5);
+    \foreach \x in {-1.3, -0.9, ..., 1.3} {
+        \draw (\x, 3.5) -- (\x+0.2, 3.7);
+    }
+    
+    % 滑轮支架及滑轮
+    \draw (0, 3.5) -- (0, 2);
+    \draw (0, 2) circle (1.2cm);
+    
+    % 半径 R 标注 (已修复：添加了 ++ 相对坐标前缀)
+    \draw[->] (0, 2) -- ++(220:1.2) node[midway, right, xshift=-1pt, yshift=-4pt] {$R$};
+    
+    % 地面
+    \draw (-2, -1.5) -- (2, -1.5);
+    \foreach \x in {-1.8, -1.4, ..., 1.8} {
+        \draw (\x, -1.5) -- (\x-0.2, -1.7);
+    }
+    
+    % 左侧链条(直线)与参数
+    \draw (-1.2, 2) -- (-1.2, -1.5);
+    \node[left] at (-1.2, -0.5) {$\lambda, H$};
+    \draw[->] (-0.8, -1.0) -- (-0.8, 0.0) node[midway, right] {$v_0$};
+    
+    % 右侧线及质点
+    \draw (1.2, 2) -- (1.2, 1.2);
+    \fill (1.2, 1.2) circle (3.5pt);
+    \draw[->] (1.6, 1.0) -- (1.6, 0.0) node[midway, right] {$v_0$};
+\end{tikzpicture}

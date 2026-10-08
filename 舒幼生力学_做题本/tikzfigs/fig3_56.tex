@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 上下平行轨道
+    \draw (0, 2) node[left] {$M_1$} -- (5, 2) node[right] {$N_1$};
+    \draw (0, 0) node[left] {$M_2$} -- (5, 0) node[right] {$N_2$};
+    
+    % 滑块 1 及其标签
+    \draw (2.1, 1.85) rectangle (2.7, 2.15);
+    \node[above] at (2.4, 2.15) {$P_1 \quad m_1$};
+    
+    % 滑块 2 及其标签
+    \draw (2.1, -0.15) rectangle (2.7, 0.15);
+    \node[below] at (2.4, -0.15) {$P_2 \quad m_2$};
+    
+    % 轻绳 (使用波浪线)
+    \draw[decorate, decoration={snake, amplitude=1mm, segment length=4mm}] (2.4, 0.15) -- (2.4, 1.85);
+    \node[left] at (2.3, 1) {轻绳};
+    
+    % 速度 v0 箭头
+    \draw[->] (3.2, 1.5) -- (4.2, 1.5) node[midway, below] {$v_0$};
+\end{tikzpicture}

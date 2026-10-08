@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 平台及边缘
+    \draw (-2.5, 0) -- (1.5, 0) -- (1.5, -2.5);
+    
+    % 质点 A
+    \fill (0, 0.15) circle (0.15);
+    \node[above] at (0, 0.3) {$A$};
+    
+    % 质点 B
+    \fill (1.2, 0.15) circle (0.15);
+    \node[above] at (1.2, 0.3) {$B$};
+    
+    % 弹簧 (连接 A 和 B)
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=3mm, amplitude=1.2mm}] (0.15, 0.15) -- (1.05, 0.15);
+    
+    % 速度 v0 箭头
+    \draw[->] (1.8, 0.15) -- (2.8, 0.15) node[midway, below] {$v_0$};
+\end{tikzpicture}

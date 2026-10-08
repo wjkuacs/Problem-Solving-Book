@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 内外双层圆环
+    \draw (0, 0) circle (1.5);
+    \draw (0, 0) circle (1.7);
+    
+    % 半径 R 及中心辅助线
+    \draw[dashed] (0, 0) -- (0, -1.5);
+    \draw[->] (0, 0) -- (1.06, -1.06) node[midway, above right] {$R$};
+    
+    % 底部质点 m 及速度 v0
+    \fill (0, -1.6) circle (2pt) node[below] {$m$};
+    \draw[->] (0, -1.8) -- (-1.2, -1.8) node[left] {$v_0$};
+    
+    % 绕绳及水平拉力 F
+    \draw (-0.2, 1.8) arc (100:270:1.8);
+    \draw (-0.2, 1.8) -- (2, 1.8);
+    \fill (2, 1.8) circle (1.5pt);
+    \draw[->] (2.2, 1.8) -- (3.2, 1.8) node[below] {$F$};
+\end{tikzpicture}

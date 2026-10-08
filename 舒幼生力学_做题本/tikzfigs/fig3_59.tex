@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick, line join=round]
+    % 底部支撑面
+    \draw (-1.5, -0.8) -- (2.5, -0.8) -- (3.5, 0.6) -- (-0.5, 0.6) -- cycle;
+    
+    % 立方体可见边
+    \draw (0, 0) node[left] {$C$} -- (2, 0) node[right] {$B_1$} -- (2.8, 0.8) -- (2.8, 2.8) node[right] {$A$} -- (0.8, 2.8) node[left] {$B_2$} -- (0, 2) -- cycle;
+    \draw (2, 0) -- (2, 2) -- (2.8, 2.8);
+    \draw (0, 2) -- (2, 2);
+    
+    % 立方体不可见边 (背面虚线)
+    \draw[dashed] (0, 0) -- (0.8, 0.8) -- (2.8, 0.8);
+    \draw[dashed] (0.8, 0.8) -- (0.8, 2.8);
+    
+    % 内部与表面对角线
+    \draw (0, 0) -- (2.8, 2.8);
+    \draw (0, 0) -- (2, 0) -- (2.8, 2.8) -- cycle;
+    \draw[dashed] (0, 0) -- (0.8, 2.8) -- (2.8, 2.8);
+    
+    % 边长 l 标注
+    \node[left] at (0, 1) {$l$};
+    \node[above left] at (0.4, 2.4) {$l$};
+    \node[above] at (1.8, 2.8) {$l$};
+\end{tikzpicture}

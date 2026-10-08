@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (A) at (-2.5, 0);
+    \coordinate (B) at (0, -1.8);
+    \coordinate (C) at (2.5, 0);
+    \coordinate (D) at (0, 1.8);
+
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw[dashed] (A) -- (C);
+
+    \fill (A) circle (1.5pt) node[left] {$A$};
+    \fill (B) circle (1.5pt) node[below] {$B$};
+    \fill (C) circle (1.5pt) node[right] {$C$};
+    \fill (D) circle (1.5pt) node[above] {$D$};
+
+    % Angle \alpha
+    % arctan(1.8/2.5) = 35.75 deg
+    \draw (-1.8, 0) arc[start angle=0, end angle=35.75, radius=0.7];
+    \node at (-1.55, 0.25) {$\alpha$};
+    
+    \draw (-1.8, 0) arc[start angle=0, end angle=-35.75, radius=0.7];
+    \node at (-1.55, -0.25) {$\alpha$};
+\end{tikzpicture}

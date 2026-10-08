@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影线
+    \draw (-1, 0) -- (5, 0);
+    \foreach \x in {-0.8, -0.4, ..., 4.8} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    
+    % 定义三个顶点 (等腰三角形结构)
+    \coordinate (A) at (0, 0);
+    \coordinate (B) at (4, 0);
+    \coordinate (C) at (2, 3.464); % 4 * sin(60) ≈ 3.464
+    
+    % 绘制连杆
+    \draw (A) -- (C) node[midway, left=2pt] {$l$};
+    \draw (B) -- (C) node[midway, right=2pt] {$l$};
+    
+    % 绘制质点空心圆及标注
+    \fill[white] (A) circle (2.5pt); \draw (A) circle (2.5pt);
+    \fill[white] (B) circle (2.5pt); \draw (B) circle (2.5pt);
+    \fill[white] (C) circle (2.5pt); \draw (C) circle (2.5pt);
+    
+    \node[left] at (-0.1, 0.2) {$m$};
+    \node[right] at (4.1, 0.2) {$2m$};
+    \node[above=2pt] at (C) {$m$};
+\end{tikzpicture}

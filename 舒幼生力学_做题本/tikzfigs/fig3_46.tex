@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 竖直墙面和水平地面
+    \draw (0, 4) -- (0, 0) -- (4.5, 0);
+    
+    % 杆 AB
+    \coordinate (A) at (0, 3.5);
+    \coordinate (B) at (2.8, 0);
+    \draw (A) -- (B);
+    
+    % 端点 A 和 B
+    \fill (A) circle (2pt) node[right, xshift=2pt] {$A$};
+    \fill (B) circle (2pt) node[above right] {$B$};
+    
+    % 夹角 \theta
+    % arctan(2.8/3.5) ≈ 38.66° -> 取相对垂直方向的圆弧
+    \draw (0, 2.5) arc[start angle=270, end angle=308.6, radius=1];
+    \node at (0.3, 2.1) {$\theta$};
+\end{tikzpicture}

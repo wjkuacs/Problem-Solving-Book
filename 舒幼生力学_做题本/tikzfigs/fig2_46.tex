@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (V) at (0, -3); % Vertex
+    \coordinate (TL) at (-2, 2);
+    \coordinate (TR) at (2, 2);
+    
+    \draw (TL) -- (TR) -- (V) -- cycle;
+    \draw[dashed] (0, 3) -- (V);
+    
+    % Omega arrow
+    \draw[->] (-0.5, 2.5) arc[start angle=180, end angle=360, x radius=0.5, y radius=0.15] node[right] {$\omega$};
+    \draw[dashed] (0.5, 2.5) arc[start angle=0, end angle=180, x radius=0.5, y radius=0.15];
+    
+    % Angles
+    \draw (0, -2.2) arc[start angle=90, end angle=124, radius=0.8];
+    \node at (-0.3, -2.0) {$\theta$};
+    \draw (0, -2.2) arc[start angle=90, end angle=56, radius=0.8];
+    \node at (0.3, -2.0) {$\theta$};
+    
+    % Mass
+    \coordinate (M) at (1, -0.5);
+    \fill (M) circle (2.5pt);
+    \draw (V) -- (M) node[midway, right, xshift=2pt] {$l$};
+\end{tikzpicture}
