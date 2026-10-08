@@ -1,0 +1,29 @@
+% fig7_42.tex — 7-57: 水平桌面小孔O + 弹性绳 + 小球
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 桌面（俯视图）
+  \draw[thick,fill=gray!5] (-2.5,-2.5) rectangle (2.5,2.5);
+  \node[above right] at (2.3,2.3) {桌面};
+  % 小孔O
+  \fill (0,0) circle (2pt);
+  \node[below right] at (0.1,-0.1) {$O$};
+  % A点（O正下方，不可见，用虚线标记）
+  \node[below] at (0,-2.7) {$A$（$O$正下方）};
+  \draw[dashed] (0,0) -- (0,-2.5);
+  % 弹性绳：从O到小球当前位置B
+  % 自由长度=OA
+  \draw[thick,blue!70] (0,0) -- ++(0.1,0)
+    foreach \i in {1,...,5}{
+      -- ++(0.12,{(-1)^\i*0.15})
+    } -- (1.8,0);
+  % 小球P在B处
+  \draw[thick,fill=red!40] (2,0) circle (0.15);
+  \node[below right] at (2,0) {$P$, $m$};
+  % OB = l
+  \draw[<->] (0,-0.4) -- (2,-0.4) node[midway,below] {$l$};
+  % 初速度方向（垂直于OB）
+  \draw[->,thick] (2,0.15) -- (2,0.7) node[midway,right] {$v_0$};
+  % 标注弹性绳
+  \node[above,font=\footnotesize] at (1,0.2) {弹性绳 $k$};
+  % 虚线圆（未来运动轨迹示意）
+  \draw[dashed,gray] (2,0) arc[start angle=0, end angle=360, radius=2];
+\end{tikzpicture}

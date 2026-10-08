@@ -1,0 +1,32 @@
+% fig7_107.tex — 图 7-107（题 7-41）干涉法测声频：声源 T、固定弯管 A、可移弯管 B、C 处助听器 M
+\begin{tikzpicture}[font=\small,>=Stealth,thick,line cap=round]
+  % 声源 T
+  \draw[thick] (0.00,2.95) rectangle (0.90,3.65);
+  \node[font=\footnotesize] at (0.45,3.30) {$T$};
+  % 主管与左右结点
+  \draw[thick] (0.90,3.30) -- (2.60,3.30);
+  \draw[thick] (2.60,3.30) -- (2.60,4.70);
+  \draw[thick] (2.60,3.30) -- (2.60,2.00);
+  % 上支路：固定弯管 A
+  \draw[thick] (2.60,4.70) -- (7.40,4.70);
+  \draw[thick] (7.40,4.70) -- (7.40,3.30);
+  % 下支路：可移 U 形弯管 B
+  \draw[thick] (2.60,2.00) -- (4.20,2.00);
+  \draw[thick] (4.20,2.00) -- (4.20,1.10);
+  \draw[thick] (4.20,1.10) -- (5.40,1.10);
+  \draw[thick] (5.40,1.10) -- (5.40,2.00);
+  \draw[thick] (5.40,2.00) -- (7.40,2.00);
+  \draw[thick] (7.40,2.00) -- (7.40,3.30);
+  % 结点 C 与助听器 M
+  \draw[thick] (7.40,3.30) -- (8.20,3.30);
+  \draw[thick] (8.20,2.95) rectangle (9.10,3.65);
+  \node[font=\footnotesize] at (8.65,3.30) {$M$};
+  \node[font=\footnotesize] at (7.10,3.30) {$C$};
+  % 标注 A、B
+  \node[font=\footnotesize] at (3.70,4.98) {$A$};
+  \node[font=\footnotesize] at (4.80,0.80) {$B$};
+  % 弯管 B 可移动
+  \draw[<->,thick] (3.20,2.35) -- (4.20,2.35);
+  \node[fill=white,inner sep=1pt,font=\footnotesize] at (3.70,2.35) {$l$};
+  \node[font=\footnotesize,right] at (5.50,1.10) {可移};
+\end{tikzpicture}

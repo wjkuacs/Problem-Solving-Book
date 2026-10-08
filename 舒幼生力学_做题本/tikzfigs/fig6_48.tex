@@ -1,0 +1,38 @@
+% fig6_3 重画：加速容器中液面倾斜（a=g/√3，液面 30°）
+% 左=矢量三角形（g、g/√3、g′），右=容器、h_max、L、L/2、A
+\begin{tikzpicture}[>=Stealth, thick]
+  \draw[thick, dashed] (4.3,1.1) -- (7.3,1.1);
+  \draw[thick, dashed] (4.3,1.9) -- (7.3,1.9);
+  \draw[thick, dashed] (4.3,2.7) -- (7.3,2.7);
+  \draw[thick, dashed] (4.3,3.5) -- (6.9,3.5);
+  \draw[thick, dashed] (4.3,4.3) -- (5.5,4.3);
+  \draw[->, thick] (2.08,4.18) -- (0.76,4.18);
+  \draw[->, thick] (2.08,4.18) -- (2.08,1.88);
+  \draw[->, thick] (2.08,4.18) -- (0.76,1.88);
+  \draw[thick, dashed] (0.76,4.18) -- (0.76,1.88);
+  \draw[thick, dashed] (0.76,1.88) -- (2.08,1.88);
+  \draw[thick] (2.08,3.28) arc (-89.9:-120.0:0.90);
+  \node[font=\footnotesize] at (1.40,4.52) {$g/\sqrt{3}$};
+  \node[font=\footnotesize] at (2.36,3.04) {$g$};
+  \node[font=\footnotesize] at (1.00,2.92) {$g'$};
+  \node[font=\footnotesize] at (1.76,3.72) {$30^\circ$};
+  \draw[thick] (4.00,5.68) -- (4.00,0.58);
+  \draw[thick] (7.60,5.68) -- (7.60,0.58);
+  \draw[thick] (4.00,0.58) -- (7.60,0.58);
+  \draw[thick] (4.00,5.26) -- (7.60,3.18);
+  \draw[thick, dashed] (4.00,4.22) -- (7.60,4.22);
+  \draw[thick] (3.52,4.22) -- (3.52,0.58);
+  \draw[thick] (4.00,4.72) -- (7.60,4.72);
+  \draw[thick, dashed] (5.80,0.58) -- (5.80,5.38);
+  \draw[thick, dashed] (4.00,0.58) -- (7.60,2.66);
+  \draw[thick] (5.24,4.22) arc (179.3:150.3:0.58);
+  \draw[thick] (4.56,0.58) arc (0.7:29.7:0.58);
+  \draw[->, thick] (7.82,2.66) -- (8.82,2.66);
+  \node[font=\footnotesize] at (5.80,5.04) {$L/2$};
+  \node[font=\footnotesize] at (3.00,2.40) {$L$};
+  \node[font=\footnotesize] at (4.62,2.30) {$h_{\max}$};
+  \node[font=\footnotesize] at (3.70,0.26) {$A$};
+  \node[font=\footnotesize] at (5.00,4.48) {$30^\circ$};
+  \node[font=\footnotesize] at (4.64,1.16) {$30^\circ$};
+  \node[font=\footnotesize] at (9.04,3.12) {$a=g/\sqrt{3}$};
+\end{tikzpicture}

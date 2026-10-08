@@ -1,0 +1,15 @@
+% fig6_7 重画：水平管右下弯至 60 度斜管，入口/出口箭头，上方水平虚线与 75 度斜虚线
+% 标注 1/2/75°，按原图 368x212 实测；管壁用 arc 精确连接（外半径1.544 内1.064 cm）
+\begin{tikzpicture}[>=Stealth, thick]
+  \draw[thick, dashed] (1.32,3.90) -- (7.12,3.90);
+  \draw[thick, dashed] (5.42,3.90) -- (6.16,1.14);
+  \draw[thick] (5.86,3.90) arc (0.4:-75.5:0.43);
+  \node[font=\footnotesize] at (1.02,3.38) {$1$};
+  \node[font=\footnotesize] at (6.72,1.36) {$2$};
+  \node[font=\footnotesize] at (6.34,3.56) {$75^{\circ}$};
+\draw[->,thick] (0.16,3.52) -- (1.24,3.52);
+\draw[thick] (1.24,3.74) -- (4.4,3.74) arc[start angle=90, end angle=30, radius=1.544] -- (6.644,1.40);
+\draw[thick] (1.26,3.26) -- (4.4,3.26) arc[start angle=90, end angle=30, radius=1.064] -- (6.228,1.16);
+\draw[thick] (6.228,1.16) arc[start angle=210, end angle=390, radius=0.24];
+\draw[->,thick] (6.6,1.0) -- (7.1,0.08);
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+% fig7_9.tex — 7-12: 动滑轮弹簧系统
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 天花板
+  \draw[thick] (-1.5,3) -- (1.5,3);
+  \foreach \x in {-1.3,-1.1,...,1.3}
+    \draw (\x,3) -- (\x-0.15,3.25);
+  % 弹簧（从天花板到滑轮轴）
+  \draw[thick] (0,3) -- ++(0,-0.2)
+    foreach \i in {1,...,5}{
+      -- ++(0.07,{(-1)^\i*0.18})
+    } -- (0,1.6);
+  % 细绳：从天花板固定点到滑轮再向上
+  \draw[thick] (-0.8,3) -- (-0.8,1.1) arc[start angle=180,end angle=360,x radius=0.25,y radius=0.25] -- (-0.3,3);
+  % 动滑轮
+  \draw[thick] (0,1.1) circle (0.25);
+  \fill (0,1.1) circle (1pt);
+  % 悬挂物
+  \draw[thick] (0,0.85) -- (0,0.2);
+  \draw[thick,fill=white] (-0.25,0.2) rectangle (0.25,-0.15);
+  \node at (0,0.025) {$m$};
+  % 标注
+  \node[right] at (0.15,2.4) {$k$};
+  \node[above] at (-0.8,3.1) {固定};
+  \node[above] at (-0.3,3.1) {固定};
+\end{tikzpicture}

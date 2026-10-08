@@ -1,0 +1,29 @@
+% fig7_11.tex — 7-14: 弹簧 + 滑轮 + 悬挂物系统
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 天花板
+  \draw[thick] (-1.5,3.5) -- (1.5,3.5);
+  \foreach \x in {-1.3,-1.1,...,1.3}
+    \draw (\x,3.5) -- (\x-0.15,3.75);
+  % 左侧：弹簧固定在天花板
+  \draw[thick] (-0.8,3.5) -- ++(0,-0.2)
+    foreach \i in {1,...,5}{
+      -- ++(0.07,{(-1)^\i*0.18})
+    } -- (-0.8,2.3);
+  % 绳从弹簧底端到滑轮
+  \draw[thick] (-0.8,2.3) -- (-0.8,1.5);
+  % 滑轮（固定在支架上）
+  \draw[thick] (0.5,1.5) circle (0.3);
+  \fill (0.5,1.5) circle (1pt);
+  % 绳绕过滑轮向下
+  \draw[thick] (-0.8,1.5) -- (0.5,1.5);
+  \draw[thick] (0.5,1.2) -- (0.5,0.5);
+  % 悬挂物
+  \draw[thick,fill=white] (0.2,0.5) rectangle (0.8,0.1);
+  \node at (0.5,0.3) {$m$};
+  % 标注
+  \node[right] at (-0.6,2.9) {$k$};
+  \node[right] at (0.55,0.9) {细绳};
+  \node[above] at (-0.8,3.6) {固定};
+  % 地面
+  \draw[thick] (-1.5,0.1) -- (2,0.1);
+\end{tikzpicture}

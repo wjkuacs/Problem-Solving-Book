@@ -1,0 +1,29 @@
+% fig7_55.tex — 7-67: 弦线上固定质点m（x=0处）+ 入射波 + 反射波 + 透射波
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 弦线（水平）
+  \draw[thick] (-3.5,0) -- (4,0);
+  % x 轴
+  \draw[->] (-3.5,0) -- (4.2,0) node[below] {$x$};
+  % 原点（质点位置）
+  \fill (0,0) circle (2pt);
+  \node[below right] at (0.1,-0.1) {$m$};
+  % 入射波（从右向左，x>0区域）
+  \draw[->,thick,blue] (3.5,0.8) -- (0.5,0.8) node[midway,above] {入射波 $\xi_i$};
+  % 反射波（从左向右，x<0区域，但实际反射波也在x>0）
+  % 实际上：入射波从右来(x>0区域向-x方向传播)，反射波向+x方向，透射波向-x方向(x<0)
+  % 修正：题目说入射波沿x方向传播，在x=0处有质点
+  % 入射波在x>0区域向x正方向传播？不，"沿x方向"意味着沿+x
+  % 重新看题：入射波 ξ_i = A cos(ωt - 2πx/λ)，这表示沿+x方向传播
+  % 在x=0处有质点m
+  % 反射波在x<0区域向-x方向传播
+  % 透射波在x>0区域继续向+x方向传播
+  % 简化：展示x=0两侧的波
+  \draw[->,thick,blue!60] (-0.5,0.8) -- (-3,0.8) node[midway,above] {反射波 $\xi_r$};
+  \draw[->,thick,red!60] (0.5,-0.8) -- (3,-0.8) node[midway,below] {透射波 $\xi_t$};
+  % 标注弦线参数
+  \node[above,font=\footnotesize] at (-1.5,0.1) {弦线 $\lambda_m$};
+  \node[above,font=\footnotesize] at (2,0.1) {张力 $T$};
+  % 波形示意（小振幅正弦）
+  \draw[blue!40,domain=-3:-0.2,samples=40] plot (\x,{0.3*sin(deg(2*pi*\x/2))});
+  \draw[red!40,domain=0.2:3,samples=40] plot (\x,{0.3*sin(deg(2*pi*\x/2))});
+\end{tikzpicture}

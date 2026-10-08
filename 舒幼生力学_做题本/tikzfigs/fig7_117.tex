@@ -1,0 +1,21 @@
+% fig7_46.tex — 7-59: 湖震（容器内水面倾斜振动）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 容器
+  \draw[thick] (-2.5,-0.5) -- (-2.5,2) -- (2.5,2) -- (2.5,-0.5) -- cycle;
+  % 水（初始倾斜水面）
+  \fill[blue!15] (-2.5,0.2) -- (2.5,1.2) -- (2.5,-0.5) -- (-2.5,-0.5) -- cycle;
+  % 当前水面
+  \draw[thick,blue!60] (-2.5,0.2) -- (2.5,1.2);
+  % 平衡水面（虚线）
+  \draw[dashed,blue!40] (-2.5,0.7) -- (2.5,0.7);
+  \node[right,font=\footnotesize,blue!60] at (2.5,0.7) {平衡水面};
+  % ξ 标注（偏离量）
+  \draw[<->] (2.7,0.7) -- (2.7,1.2) node[midway,right,font=\footnotesize] {$\xi$};
+  % h 标注（水深）
+  \draw[<->] (-2.7,-0.5) -- (-2.7,0.7) node[midway,left] {$h$};
+  % L 标注
+  \draw[<->] (-2.5,-0.8) -- (2.5,-0.8) node[midway,below] {$L$};
+  % 振动轴（容器中心）
+  \draw[dashed,gray] (0,-0.5) -- (0,2.2);
+  \node[above,font=\footnotesize] at (0,2.2) {振动轴};
+\end{tikzpicture}

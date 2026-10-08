@@ -1,0 +1,22 @@
+% fig7_24.tex — 7-40: x=0 处的振动曲线 ξ-t
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 坐标轴
+  \draw[->] (-0.5,0) -- (7,0) node[below] {$t$};
+  \draw[->] (0,-2.2) -- (0,2.2) node[left] {$\xi$};
+  % 余弦振动曲线
+  \draw[thick,blue!70] plot[domain=0:6.28,samples=80] (\x,{1.8*cos(deg(2*pi*\x/6.28))});
+  % 振幅标注
+  \draw[dashed] (0,1.8) -- (1,1.8);
+  \node[left] at (0,1.8) {$A$};
+  % 周期标注
+  \draw[<->] (0,-2.5) -- (6.28,-2.5) node[midway,below] {$T$};
+  % 关键时刻标注
+  \node[below,font=\footnotesize] at (1.57,0) {$T/4$};
+  \node[below,font=\footnotesize] at (3.14,0) {$T/2$};
+  \node[below,font=\footnotesize] at (4.71,0) {$3T/4$};
+  \node[below,font=\footnotesize] at (6.28,0) {$T$};
+  % 原点
+  \node[below left] at (0,0) {$O$};
+  % 标题
+  \node[above] at (3.14,2.5) {振动曲线（$x=0$处）};
+\end{tikzpicture}

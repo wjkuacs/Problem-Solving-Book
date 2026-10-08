@@ -1,0 +1,26 @@
+% fig7_31.tex — 7-46: 音叉 + 弦线 + 定滑轮 + 重物（弦上驻波）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 音叉（左侧）
+  \draw[thick] (-2,0.8) -- (-2,0.2);
+  \draw[thick] (-2.15,0.8) -- (-2.15,0.2) -- (-2.15,0.2) arc[start angle=180,end angle=0,x radius=0.15,y radius=0.15];
+  \draw[thick] (-1.85,0.8) -- (-1.85,0.2) -- (-1.85,0.2) arc[start angle=180,end angle=0,x radius=0.15,y radius=0.15];
+  \draw[thick] (-2.15,0.2) -- (-1.85,0.2);
+  \node[above] at (-2,0.9) {音叉 $\nu$};
+  % 弦线
+  \draw[thick] (-2,0) -- (5,0);
+  \node[above,font=\footnotesize] at (1.5,0.1) {弦线 $\lambda_m$};
+  % 定滑轮（右端）
+  \draw[thick] (5,0) circle (0.25);
+  \fill (5,0) circle (1pt);
+  \node[right,font=\footnotesize] at (5.3,0) {定滑轮};
+  % 绳从滑轮向下悬挂重物
+  \draw[thick] (5,-0.25) -- (5,-1.3);
+  % 重物
+  \draw[thick,fill=white] (4.7,-1.3) rectangle (5.3,-1.7);
+  \node at (5,-1.5) {$m$};
+  % 标注距离 l
+  \draw[<->] (-2,-0.5) -- (5,-0.5) node[midway,below] {$l$};
+  % 驻波示意（波腹）
+  \draw[blue!50,thick,domain=-2:5,samples=80] plot (\x,{0.15*sin(deg(pi*(\x+2)/3.5))});
+  \draw[blue!50,thick,domain=-2:5,samples=80] plot (\x,{-0.15*sin(deg(pi*(\x+2)/3.5))});
+\end{tikzpicture}

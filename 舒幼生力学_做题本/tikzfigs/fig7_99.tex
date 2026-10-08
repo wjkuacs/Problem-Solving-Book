@@ -1,0 +1,28 @@
+% fig7_99.tex — 图 7-99（题 7-19）吊车用长 l 的绳索将重物 M 由 A 移到 B（水平距离 L）
+\begin{tikzpicture}[font=\small,>=Stealth,thick,line cap=round]
+  % 吊车轨道（横梁）
+  \draw[thick] (-0.3,4.50) -- (9.9,4.50);
+  \fill[pattern=north east lines] (-0.3,4.50) rectangle (9.9,4.78);
+  \draw[thick] (-0.3,4.50) -- (9.9,4.50);
+  % 吊车 A（实线）
+  \draw[thick] (0.90,4.50) rectangle (1.70,5.15);
+  \node[above,font=\footnotesize] at (1.30,5.15) {$A$};
+  \fill (1.30,4.50) circle (1.3pt);
+  % 吊车 B（虚线，终点位置）
+  \draw[thick,dashed] (7.30,4.50) rectangle (8.10,5.15);
+  \node[above,font=\footnotesize] at (7.70,5.15) {$B$};
+  \fill (7.70,4.50) circle (1.3pt);
+  % 绳索与重物 M
+  \draw[thick] (1.30,4.50) -- (2.20,1.95);
+  \draw[thick,fill=blue!10] (2.20,1.95) rectangle (2.62,1.53);
+  \node[right,font=\footnotesize] at (2.66,1.74) {$M$};
+  \node[font=\footnotesize] at (1.70,3.38) {$l$};
+  % 铅垂参考线与摆角 theta
+  \draw[thick,dashed] (1.30,4.50) -- (1.30,1.60);
+  \draw[thick] (1.80,3.09) arc (-70.6:-90.0:1.50);
+  \node[font=\footnotesize] at (1.63,2.79) {$\theta$};
+  % A、B 之间的水平距离 L
+  \draw[thick,dashed] (1.30,3.95) -- (7.70,3.95);
+  \draw[<->,thick] (1.30,3.62) -- (7.70,3.62);
+  \node[fill=white,inner sep=1pt,font=\footnotesize] at (4.50,3.62) {$L$};
+\end{tikzpicture}

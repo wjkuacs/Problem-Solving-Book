@@ -1,0 +1,27 @@
+% fig7_7.tex — 7-10: 斜面弹簧振子
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 斜面
+  \draw[thick] (0,0) -- (5,0) -- (0,3) -- cycle;
+  \node[below] at (2.5,0) {地面};
+  % 斜面角度
+  \draw (1.2,0) arc[start angle=0, end angle=31, radius=1.2];
+  \node at (1.6,0.35) {$\theta$};
+  % 弹簧（沿斜面方向）
+  \coordinate (A) at (0,3);
+  \coordinate (B) at (3.2,1.08); % 斜面上的位置
+  \draw[thick] (A) -- ++(0.3,-0.1)
+    foreach \i in {1,...,6}{
+      -- ++(0.12,{(-1)^\i*0.18})
+    } -- (B);
+  % 物块
+  \node[draw,thick,minimum size=0.6cm,rotate=31,anchor=south] (m) at (3.8,0.72) {$m$};
+  % x轴标注
+  \draw[->] (1.5,2.05) -- (3.0,1.15) node[midway,above] {$x$};
+  % 标注弹簧
+  \node[above left] at (1.5,2.3) {$k$};
+  % 平衡位置标记
+  \draw[dashed] (2.4,1.56) -- (2.4,1.06);
+  \node[below,font=\footnotesize] at (2.4,1.06) {平衡位置};
+  % l 标注
+  \draw[<->] (2.4,1.26) -- (3.7,0.56) node[midway,below right,font=\footnotesize] {$l$};
+\end{tikzpicture}

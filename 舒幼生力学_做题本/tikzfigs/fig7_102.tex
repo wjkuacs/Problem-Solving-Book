@@ -1,0 +1,32 @@
+% fig7_20.tex — 7-22: 轻绳 + 实心滑轮 + 悬挂物系统
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 天花板
+  \draw[thick] (-1,3.5) -- (2,3.5);
+  \foreach \x in {-0.8,-0.6,...,1.8}
+    \draw (\x,3.5) -- (\x-0.1,3.7);
+  % 弹簧（从天花板到滑轮）
+  \draw[thick] (0.5,3.5) -- ++(0,-0.2)
+    foreach \i in {1,...,5}{
+      -- ++(0.07,{(-1)^\i*0.18})
+    } -- (0.5,2.3);
+  % 弹簧连接到滑轮轴
+  \draw[thick] (0.5,2.3) -- (0.5,1.8);
+  % 滑轮（实心匀质）
+  \draw[thick] (0.5,1.5) circle (0.3);
+  \fill (0.5,1.5) circle (1pt);
+  \node at (0.5,1.5) {$\bullet$};
+  \node[above right,font=\footnotesize] at (0.8,1.5) {滑轮};
+  % 绳绕过滑轮
+  \draw[thick] (0.5,1.8) -- (0.5,1.8);  % 到滑轮顶
+  \draw[thick] (0.2,1.5) -- (-0.8,1.5) -- (-0.8,3.5); % 左端固定
+  \draw[thick] (0.8,1.5) -- (0.8,0.5); % 右端悬挂物
+  % 悬挂物
+  \draw[thick,fill=white] (0.55,0.5) rectangle (1.05,0.1);
+  \node at (0.8,0.3) {$m$};
+  % 标注
+  \node[left] at (0.3,2.9) {$k$};
+  \node[left] at (-0.8,3.6) {固定};
+  \node[font=\footnotesize] at (0.8,1.1) {轻绳};
+  % 滑轮质量 M
+  \node[below right,font=\footnotesize] at (0.5,1.2) {$M$, $R$};
+\end{tikzpicture}

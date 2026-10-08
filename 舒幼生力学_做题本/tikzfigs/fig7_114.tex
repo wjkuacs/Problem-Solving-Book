@@ -1,0 +1,25 @@
+% fig7_41.tex — 7-56: 水平直角槽 + 两物块A、B + 刚性细杆铰接
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 直角槽（x方向和y方向）
+  \draw[thick,fill=gray!10] (-0.3,-0.15) rectangle (4,0.15);
+  \draw[thick,fill=gray!10] (-0.15,-0.3) rectangle (0.15,3.5);
+  % 槽标注
+  \node[above] at (4,0) {$x$};
+  \node[left] at (0,3.5) {$y$};
+  % 原点 O
+  \fill (0,0) circle (1.5pt) node[below left] {$O$};
+  % 物块A（在x轴上）
+  \draw[thick,fill=blue!20] (2.2,-0.25) rectangle (2.7,0.25);
+  \node at (2.45,0) {$A$};
+  % 物块B（在y轴上）
+  \draw[thick,fill=red!20] (-0.25,1.6) rectangle (0.25,2.1);
+  \node at (0,1.85) {$B$};
+  % 刚性细杆（连接A和B，长度l，角度θ0）
+  \draw[thick] (2.45,0.15) -- (0,1.95);
+  \node[above right,font=\footnotesize] at (1.2,1) {杆 $l$};
+  % θ0 标注
+  \draw[->] (1,0) arc[start angle=0,end angle=50.2,radius=1];
+  \node[right,font=\footnotesize] at (1.1,0.35) {$\theta_0$};
+  % 冲量方向
+  \draw[->,thick,red] (2.7,0) -- (3.3,0) node[midway,above] {$x_0$方向};
+\end{tikzpicture}

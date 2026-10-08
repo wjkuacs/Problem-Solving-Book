@@ -1,0 +1,26 @@
+% fig7_32.tex — 7-50: 水平弹簧振子 + 摩擦（弹簧伸长L后释放）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 墙
+  \draw[thick] (-1.5,0.8) -- (-1.5,-0.8);
+  \foreach \y in {-0.7,-0.5,...,0.7}
+    \draw (-1.5,\y) -- (-1.8,{\y+0.15});
+  % 地面
+  \draw[thick] (-1.8,-0.8) -- (4,-0.8);
+  % 弹簧（伸长状态，显示L）
+  \draw[thick] (-1.5,0) -- ++(0.2,0)
+    foreach \i in {1,...,7}{
+      -- ++(0.14,{(-1)^\i*0.22})
+    } -- (0.3,0);
+  % 平衡位置标记
+  \draw[dashed] (0,-0.8) -- (0,0.8);
+  \node[above,font=\footnotesize] at (0,0.85) {平衡位置};
+  % 物块在伸长L处
+  \draw[thick,fill=white] (0.3,-0.5) rectangle (1.1,0.5);
+  \node at (0.7,0) {$m$};
+  % L 标注（从平衡位置到当前位置）
+  \draw[<->] (0,-1.2) -- (0.7,-1.2) node[midway,below] {$L$};
+  % 摩擦力标注
+  \draw[->,thick,red] (0.7,-0.5) -- (-0.1,-0.5) node[midway,below,font=\footnotesize] {$\mu mg$};
+  % 标注弹簧
+  \node[above] at (0,0.15) {$k$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% fig_7_35.tex — 7-53: 天花板悬挂平板 + 小球（小角度摆动）
+\begin{tikzpicture}[font=\small,>=stealth]
+  % 天花板
+  \draw[thick] (-1.5,4) -- (3.5,4);
+  \foreach \x in {-1.3,-1.1,...,3.3}
+    \draw (\x,4) -- (\x-0.1,4.2);
+  % 左绳
+  \draw[thick] (0,4) -- (0,2.5);
+  % 右绳
+  \draw[thick] (2,4) -- (2,2.5);
+  % 平板（水平）
+  \draw[thick,fill=gray!15] (-0.3,2.5) rectangle (2.3,2.3);
+  \node at (1,2.4) {平板 $M$};
+  % 小球（在板中央）
+  \draw[thick,fill=red!30] (1,2.15) circle (0.15);
+  \node[below] at (1,2.0) {$m$};
+  % 绳长标注
+  \draw[<->] (-0.5,4) -- (-0.5,2.5) node[midway,left] {$l$};
+  % 初速度标注
+  \draw[->,thick,blue] (2.3,2.4) -- (2.8,2.4) node[midway,above] {$v_0$};
+  % 铅垂虚线
+  \draw[dashed,gray] (1,4) -- (1,1.8);
+  \node[below,font=\footnotesize] at (1,1.8) {平衡位置};
+\end{tikzpicture}
