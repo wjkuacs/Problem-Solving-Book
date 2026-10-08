@@ -1,0 +1,31 @@
+% 1-17 题 图 1-10：三个动点构成等边三角形，A 朝 B、B 朝 C、C 朝 A
+% 中心 O 为极点，极轴取 O→A；边长 l（示意比例 l=3，外接圆半径 sqrt(3)）
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义坐标
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (3,0);
+    \coordinate (B) at (-1.5, 2.6);
+    \coordinate (C) at (-1.5, -2.6);
+
+    % 绘制极轴
+    \draw[->, thick] (O) -- (4.5,0) node[above] {极轴};
+    
+    % 绘制虚线三角形
+    \draw[dashed] (B) -- (C) node[midway, left] {$l$};
+    \draw[dashed] (C) -- (A) node[midway, below right] {$l$};
+    \draw[dashed] (A) -- (B) node[midway, above right] {$l$};
+
+    % 绘制实线段 OA
+    \draw[thick] (O) -- (A);
+    
+    % 绘制节点
+    \fill (O) circle (1.5pt) node[above left] {$O$};
+    \fill (A) circle (1.5pt) node[below right] {$A$};
+    \fill (B) circle (1.5pt) node[left] {$B$};
+    \fill (C) circle (1.5pt) node[left] {$C$};
+
+    % 绘制速度向量 u (使用粗实线箭头)
+    \draw[->, very thick] (B) -- ($(B)!0.4!(C)$) node[left] {$u$};
+    \draw[->, very thick] (C) -- ($(C)!0.4!(A)$) node[below right] {$u$};
+    \draw[->, very thick] (A) -- ($(A)!0.4!(B)$) node[above left] {$u$};
+\end{tikzpicture}

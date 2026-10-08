@@ -1,0 +1,40 @@
+% 1-15 题 图 1-8：极坐标系中质点沿不过极点的直线以恒速 v0 运动
+% 直线方程 r cos(θ-θ0)=d，取 θ0=30°、d=2.2（示意），直线 0.866x+0.5y=2.2
+\begin{tikzpicture}[>=Stealth, thick]
+
+    % 定义主要坐标点
+    \coordinate (O) at (0,0);       % 原点 O
+    \coordinate (A) at (3,0);       % 右侧竖直线与横轴的交点
+    \coordinate (B) at (3,2.5);     % 斜线与右侧竖直线的交点
+
+    % 1. 绘制坐标轴和直线
+    % 横轴 (带向右的箭头)
+    \draw[->] (-1,0) -- (4.5,0);
+    
+    % 左侧过原点的竖直线
+    \draw (0,-1) -- (0,4.5);
+    
+    % 右侧竖直线
+    \draw (3,-1) -- (3,4.5);
+
+    % 2. 绘制斜线 r
+    \draw (O) -- (B) node[midway, above left, inner sep=2pt] {$r$};
+
+    % 3. 绘制向上的向量 v_0
+    \draw[->, ultra thick] (B) -- (3, 4.2) node[right] {$\boldsymbol{v}_0$};
+
+    % 4. 添加标签 O 和 l
+    \node[below left] at (O) {$O$};
+    \node[below] at (1.5,0) {$l$};
+
+    % 5. 绘制角度 \theta
+    % 半径取 0.8，计算角度大约为 atan(2.5/3) ≈ 39.8°
+    \draw (0.8,0) arc[start angle=0, end angle=39.8, radius=0.8];
+    \node at (1.1, 0.35) {$\theta$};
+
+    % 6. 绘制直角符号和 90^\circ 标签
+    % 在 (3,0) 的右上方画一个边长为 0.2 的直角折线
+    \draw (3,0.2) -- (3.2,0.2) -- (3.2,0);
+    \node[above right] at (3.1, 0.1) {$90^\circ$};
+
+\end{tikzpicture}

@@ -1,0 +1,53 @@
+% 1-16 题 图 1-9：椭圆，右焦点 F 为极点，极轴沿半长轴方向
+% 半长轴 A=3（水平）、半短轴 B=2、焦距 c=sqrt(5)≈2.236（示意比例）
+\begin{tikzpicture}[>=Stealth, thick]
+
+    % 定义椭圆的半长轴(a)和半短轴(b)
+    \def\a{4}
+    \def\b{2.5}
+    
+    % 定义原点 O 和焦点 F
+    \coordinate (O) at (0,0);
+    \coordinate (F) at (2,0);
+    
+    % 定义椭圆上的点 P
+    % 选取坐标 (3.2, 1.5)，该点恰好位于 x^2/16 + y^2/6.25 = 1 椭圆上
+    \coordinate (P) at (3.2, 1.5);
+
+    % 1. 绘制中心坐标轴 (十字交叉线)
+    \draw (-5.5, 0) -- (5.2, 0);
+    \draw (0, -3.2) -- (0, 3.2);
+
+    % 2. 绘制带有运动方向箭头的椭圆
+    % TikZ 默认逆时针绘制，使用 \arrow{>} 即可实现逆时针箭头指向
+    \tikzset{->-/.style={decoration={
+      markings,
+      mark=at position 0.12 with {\arrow{>}}},postaction={decorate}}}
+    \draw[thick, ->-] (O) ellipse ({\a} and {\b});
+
+    % 3. 绘制关键点和位置矢量 r
+    \fill (F) circle (1.5pt) node[below=2pt] {$F$};
+    \fill (P) circle (1.5pt);
+    \node[below left=1pt] at (O) {$O$};
+    
+    % 绘制 r 连线
+    \draw[thick] (F) -- (P) node[midway, above left, inner sep=1pt] {$r$};
+
+    % 4. 绘制角度 \theta
+    % P相对F的向量为 (1.2, 1.5)，对应角度 arctan(1.5/1.2) ≈ 51.3°
+    \draw (2.6, 0) arc[start angle=0, end angle=51.3, radius=0.6];
+    \node at (2.9, 0.28) {$\theta$};
+
+    % 5. 绘制中心到焦点的距离标注 C
+    \draw (2,0) -- (2, 0.7); % F 点上方引出的短竖线
+    \draw[<->] (0, 0.4) -- (2, 0.4) node[midway, fill=white, inner sep=1.5pt] {$C$};
+
+    % 6. 绘制半长轴标注 A
+    \draw[dashed] (\a, 0) -- (\a, -2.2); % 椭圆右边缘向下引出的虚线
+    \draw[<->] (0, -1.8) -- (\a, -1.8) node[midway, fill=white, inner sep=1.5pt] {$A$};
+
+    % 7. 绘制半短轴标注 B
+    \draw (-4.5, \b) -- (-5.2, \b); % 左上角的短横辅助线
+    \draw[<->] (-4.9, 0) -- (-4.9, \b) node[midway, fill=white, inner sep=1.5pt] {$B$};
+
+\end{tikzpicture}

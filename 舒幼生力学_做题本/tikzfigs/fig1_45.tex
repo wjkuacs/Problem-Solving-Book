@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 主坐标系 O-xy
+    \coordinate (O) at (0,0);
+    \draw[->] (-3,0) -- (3,0) node[below] {$x$};
+    \draw[->] (0,-2.5) -- (0,3) node[left] {$y$};
+    \node[below left] at (O) {$O$};
+
+    % 动坐标系 O'-x'y' 参数
+    \coordinate (Oprime) at (1.5, 1.5);
+    \coordinate (SqCenter) at (-2, -2);
+    
+    % 绘制连接虚线 (穿过原点 O)
+    \draw[dashed] (SqCenter) -- (Oprime);
+
+    % 绘制左下角的正方形 (中心在 SqCenter)
+    \draw (-2.3, -1.7) rectangle (-1.7, -2.3);
+
+    % 绘制右上角的三角形 (顶点在 O')
+    \draw (Oprime) -- (1.1, 0.7) -- (1.9, 0.7) -- cycle;
+
+    % 绘制 O'-x'y' 坐标轴
+    \draw[->] (Oprime) -- (2.8, 1.5) node[right] {$x'$};
+    \draw[->] (Oprime) -- (1.5, 2.8) node[right] {$y'$};
+    \node[left] at (Oprime) {$O'$};
+\end{tikzpicture}

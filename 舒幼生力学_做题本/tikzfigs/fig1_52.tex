@@ -1,0 +1,26 @@
+% 1-37 题 图1-52：惠更斯等时摆——上滚轮线与下滚轮线
+% 轮半径 R=1（TikZ 单位）。上滚轮线：摆线 x=R(t-sin t), y=R(1-cos t), t∈[0,2π]，尖点落在 MN 上；
+% 下滚轮线：上滚轮线关于 MN 翻转 180°（图中虚线）。
+\begin{tikzpicture}[>=Stealth, thick, scale=1.0]
+    % 水平直线 MN
+    \draw (-0.6, 0) -- (7.2, 0);
+    \node[left] at (-0.6, 0) {$M$};
+    \node[right] at (7.2, 0) {$N$};
+
+    % 上滚轮线（实线）
+    \draw[thick, domain=0:360, samples=160, variable=\t]
+        plot ({(\t*pi/180) - sin(\t)}, {1 - cos(\t)});
+    % 下滚轮线（关于 MN 翻转，虚线）
+    \draw[thick, dashed, domain=0:360, samples=160, variable=\t]
+        plot ({(\t*pi/180) - sin(\t)}, {-(1 - cos(\t))});
+
+    % 生成圆（轮子位于拱顶处）
+    \draw[thin, dashed] (3.1416, 1) circle (1);
+    \fill (3.1416, 1) circle (1pt) node[right=1pt] {$O$};
+    \fill (3.1416, 2) circle (1.5pt) node[above] {$P$};
+    \draw[->, thin] (3.1416, 1) -- (3.1416, 2) node[midway, right] {$R$};
+
+    % 曲线名称
+    \node[right] at (6.5, 1.7) {\small 上滚轮线};
+    \node[right] at (6.5, -1.7) {\small 下滚轮线};
+\end{tikzpicture}
