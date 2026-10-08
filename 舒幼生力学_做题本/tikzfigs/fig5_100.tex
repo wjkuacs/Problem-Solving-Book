@@ -1,26 +1,21 @@
-\begin{tikzpicture}[>=Stealth, thick]
-  % 斜面
+% fig5_100.tex — 图 5-100（题 5-49）匀质球在倾角 θ 的斜面底端，以角速度 ω0 绕水平轴自转
+\begin{tikzpicture}[>=Stealth, thick, font=\small]
   \def\ang{30}
-  \coordinate (O) at (0,0);
-  \coordinate (E) at (7,0);
-  \draw (O) -- (E);
-  \draw (O) -- ($(O)!6.5!(E)+(-0.5,3.2)$);
-  % 地面短线
-  \foreach \x in {0.2,0.7,...,3.5} {
-    \draw (\x,0) -- ++(-0.15,-0.2);
-  }
-  % 斜面上的角度 \theta
-  \draw (1.2,0) arc (0:\ang:1.2);
-  \node[below right] at (1.05,0.25) {$\theta$};
-  % 球心在斜面上的位置
-  \pgfmathsetmacro{\bx}{2.2}
-  \pgfmathsetmacro{\by}{\bx*tan(\ang)+0.55}
-  \coordinate (C) at (\bx,\by);
-  \draw (C) circle (0.55);
-  \fill (C) circle (1.5pt);
-  \node[left=2pt] at (C) {$m$};
-  \draw[->] (C) -- ++(-0.35,0) node[midway, above] {$r$};
-  % 角速度 \omega_0 (逆时针，上坡方向滚动示意)
-  \draw[->] ($(C)+(-0.15,0.75)$) arc (140:40:0.45);
-  \node[above] at ($(C)+(0.1,0.95)$) {$\omega_0$};
+  \def\rr{0.66}
+  \coordinate (A) at (0,0);                                    % 斜面底端（与地面交点）
+  \coordinate (B) at (7.2,0);                                  % 地面右端
+  \coordinate (T) at ({7.2*cos(\ang)},{7.2*sin(\ang)});         % 斜面顶端
+  \draw (A) -- (B);                                            % 地面
+  \draw (A) -- (T);                                            % 斜面
+  \foreach \x in {0.15,0.6,...,2.4} { \draw (\x,0) -- ++(-0.18,-0.28); }   % 地面阴影
+  \draw (1.5,0) arc (0:\ang:1.5);                              % 倾角 θ
+  \node at (1.95,0.35) {$\theta$};
+  \coordinate (P0) at ({2.1*cos(\ang)},{2.1*sin(\ang)});        % 斜面上的切点
+  \coordinate (C) at ($(P0)+(\ang+90:\rr)$);                    % 球心
+  \draw[fill=white] (C) circle (\rr);
+  \fill (C) circle (1.2pt);
+  \draw[<->] (C) -- (P0) node[midway, below right=-2pt] {$r$};  % 半径
+  \node[left=4pt] at (C) {$m$};
+  \draw[->] ($(C)+(170:\rr+0.28)$) arc (170:20:\rr+0.28);       % ω0（顺时针：受摩擦力沿斜面向上运动）
+  \node[above] at ($(C)+(95:\rr+0.52)$) {$\omega_0$};
 \end{tikzpicture}
