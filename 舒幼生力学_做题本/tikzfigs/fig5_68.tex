@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 水平桌面及边缘
+    \draw (0, 0) -- (3, 0) -- (3, -2);
+    \node[below] at (1.5, 0) {水平桌面};
+
+    % 顶部约束/墙面（带阴影线）
+    \draw (0.5, 0.3) -- (3.5, 0.3);
+    \foreach \x in {0.7, 1.2, 1.7, 2.2, 2.7, 3.2} {
+        \draw (\x, 0.3) -- (\x+0.2, 0.5);
+    }
+    \node[above] at (1.5, 0.4) {$A$};
+
+    % 绳子与质点 A, B
+    \fill (1.5, 0.15) circle (2pt);
+    \draw (1.5, 0.15) -- (5, 0.15);
+    \fill (5, 0.15) circle (2pt) node[right] {$B$};
+\end{tikzpicture}

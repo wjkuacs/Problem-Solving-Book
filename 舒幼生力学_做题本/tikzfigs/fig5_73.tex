@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 悬挂点 A
+    \node[above] at (0, 4) {$A$};
+    
+    % 吊线与中点 m
+    \draw (0, 4) -- (0, 1);
+    \fill (0, 2.5) circle (1.5pt) node[left=2pt] {$m$};
+    \node[right] at (0, 2.5) {$l$};
+    
+    % 大球 M
+    \draw (0, 0) circle (1);
+    \fill (0, 0) circle (1.5pt);
+    \node[left] at (-1.1, 0) {$M$};
+    
+    % 球半径 R
+    \draw[->] (0, 0) -- (-20:1) node[midway, below] {$R$};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 定义节点坐标
+    \coordinate (A) at (0, 3);
+    \coordinate (B) at (0, 0);
+    \coordinate (C) at (2.5, 0);
+    \coordinate (m) at (2.5, 3);
+    
+    % 绘制虚线路径及距离标注
+    \draw[dashed] (A) -- (m) node[midway, above] {$d_1$};
+    \draw[dashed] (B) -- (m) node[midway, left=2pt] {$d_2$};
+    \draw[dashed] (C) -- (m) node[midway, right] {$d_3$};
+    \draw[dashed] (A) -- (B);
+    \draw[dashed] (B) -- (C);
+    
+    % 绘制节点点和标签
+    \fill (A) circle (2pt) node[left] {$A$};
+    \fill (B) circle (2pt) node[left] {$B$};
+    \fill (C) circle (2pt) node[right] {$C$};
+    \fill (m) circle (2pt) node[above right] {$m$};
+    
+    % 绘制向右的速度 v
+    \draw[->] (m) -- (4, 3) node[below] {$v$};
+    
+    % 绘制重力加速度 g (左侧)
+    \draw[->] (-1.5, 2.5) -- (-1.5, 0.5) node[midway, left] {$g$};
+\end{tikzpicture}

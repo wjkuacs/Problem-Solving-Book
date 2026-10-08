@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 虚线：地球圆 R=1.5；实线：潮汐椭圆 a=2.15, b=1.15（相交）
+  \coordinate (O) at (0,0);
+  \draw (O) ellipse [x radius=2.15, y radius=1.15];
+  \draw[dashed] (O) circle (1.5);
+  \draw[->] (O) -- (3.0,0) node[right] {$x$};
+  \draw[->] (O) -- (0,2.3) node[above] {$y$};
+  \fill (O) circle (1.5pt) node[below left] {$O$};
+  \fill (2.15,0) circle (1.5pt) node[above right] {$A$};
+  \fill (0,-1.15) circle (1.5pt) node[below right] {$B$};
+  \draw[->] (O) -- ({1.5*cos(55)},{1.5*sin(55)})
+    node[midway, above left] {$R_{\mathrm{E}}$};
+  \node[font=\small] at (3.1,0.35) {月球方向};
+\end{tikzpicture}

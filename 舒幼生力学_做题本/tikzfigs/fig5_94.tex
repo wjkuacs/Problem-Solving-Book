@@ -1,0 +1,27 @@
+% 图 5-94（题 5-39）匀质立方体，绕对角线轴 MN 的转动惯量
+\begin{tikzpicture}[scale=1.0,line join=round,line cap=round,font=\small,>=Stealth]
+  % 正面（左前）正方形 ABCD
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.3,0);
+  \coordinate (C) at (2.3,2.3);
+  \coordinate (D) at (0,2.3);
+  % 背面（右后）正方形 A'B'C'D'，沿斜二测方向偏移
+  \coordinate (A1) at (1.05,0.95);
+  \coordinate (B1) at (3.35,0.95);
+  \coordinate (C1) at (3.35,3.25);
+  \coordinate (D1) at (1.05,3.25);
+  % 可见棱
+  \draw (A)--(B)--(C)--(D)--cycle;
+  \draw (A1)--(B1)--(C1)--(D1)--cycle;
+  \draw (B)--(B1) (C)--(C1) (D)--(D1);
+  % 唯一不可见棱：A--A'
+  \draw[dashed] (A)--(A1);
+  % 体对角线 MN 即转动轴
+  \draw[dash dot,thick] (A)--(C1);
+  \fill (A) circle (1.1pt) (C1) circle (1.1pt);
+  \node[below left=-1pt] at (A) {$M$};
+  \node[above right=-1pt] at (C1) {$N$};
+  % 棱长标注
+  \draw[<->] ($(A)+(0,-0.45)$) -- ($(B)+(0,-0.45)$) node[midway,below] {$a$};
+  \draw[<->] ($(A)+(-0.45,0)$) -- ($(D)+(-0.45,0)$) node[midway,left] {$a$};
+\end{tikzpicture}

@@ -1,0 +1,47 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 1. 定义圆心位置、半径及圆心距
+    \coordinate (O1) at (0, 0);
+    \coordinate (O2) at (4.5, 0);
+    \def\Rone{1.6}  % 大滑轮半径
+    \def\Rtwo{0.9}  % 小滑轮半径
+    \def\d{4.5}     % 圆心距
+    
+    % 2. 精确计算外公切线的相切角度
+    \pgfmathsetmacro{\ang}{acos((\Rone-\Rtwo)/\d)}
+    
+    % 3. 确定上下四个完美切点的坐标
+    \coordinate (T1) at (\ang:\Rone);
+    \coordinate (T2) at ([shift={(O2)}] \ang:\Rtwo);
+    \coordinate (B1) at (-\ang:\Rone);
+    \coordinate (B2) at ([shift={(O2)}] -\ang:\Rtwo);
+    
+    % 4. 绘制完整的两个圆形
+    \draw (O1) circle (\Rone);
+    \draw (O2) circle (\Rtwo);
+    
+    % 圆心黑点
+    \fill (O1) circle (1.5pt);
+    \fill (O2) circle (1.5pt);
+    
+    % 5. 绘制上下皮带直线，并在中间加入方向箭头
+    \draw[decoration={markings, mark=at position 0.55 with {\arrow{<}}}, postaction={decorate}] 
+        (T1) -- (T2);
+    \draw[decoration={markings, mark=at position 0.55 with {\arrow{>}}}, postaction={decorate}] 
+        (B1) -- (B2);
+    
+    % --- 下方为文字与标注部分 ---
+    % 滑轮质量 m1, m2 (放置在圆内)
+    \node[above] at (0, 0.8) {$m_1$};
+    \node at (4.7, -0.4) {$m_2$};
+    
+    % 半径 R1, R2 指示箭头
+    \draw[->] (O1) -- ++(-30:\Rone) node[midway, below] {$R_1$};
+    \draw[->] (O2) -- ++(140:\Rtwo) node[midway, below right=-2pt] {$R_2$};
+    
+    % 标示旋转角加速度 \beta_1, \beta_2 (逆时针曲线箭头)
+    \draw[->] (180:0.9) arc (180:260:0.9) node[right=1pt] {$\beta_1$};
+    \draw[->] (O2) ++(-45:0.5) arc (-45:45:0.5) node[above left=-2pt] {$\beta_2$};
+    
+    % 外部转矩 M (左侧边缘的曲线箭头)
+    \draw[->] (200:1.9) arc (200:150:1.9) node[midway, left] {$M$};
+\end{tikzpicture}

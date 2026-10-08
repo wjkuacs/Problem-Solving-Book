@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 桌面大平面 (透视平行四边形)
+    \draw (-2.5, 1.5) -- (2.5, 1.5) -- (3.5, -1) -- (-1.5, -1) -- cycle;
+
+    % 桌面中心孔
+    \coordinate (O) at (0.5, 0);
+    
+    % 质点 m1 运动轨迹 (虚线椭圆)
+    \draw[dashed] (O) ellipse (2 and 0.8);
+
+    % 圆周上的质点 m1 及拉绳
+    \coordinate (M1) at (2.43, 0.2); % 位于椭圆边上
+    \draw (O) -- (M1) node[midway, below] {$r_0$};
+    
+    % 挖空中心孔并加深边缘
+    \fill[white] (O) circle (2pt); 
+    \draw (O) circle (2pt);
+
+    % 画出质点 m1
+    \fill (M1) circle (2pt) node[right=2pt] {$m_1$};
+
+    % 角速度曲线箭头
+    \draw[->] (2.4, 0.45) arc (15:60:2 and 0.8) node[midway, right] {$\omega_0$};
+
+    % 垂直悬挂的质点 m2 与绳
+    \coordinate (M2) at (0.3, -3);
+    \draw (O) ++(0,-0.08) -- (M2);
+    \fill (M2) circle (2pt) node[right] {$m_2$};
+\end{tikzpicture}

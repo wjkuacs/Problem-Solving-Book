@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及左侧墙面
+    \draw (0, 2) -- (0, 0) -- (6, 0);
+    \foreach \x in {0.2, 0.7, 1.2, 1.7, 2.2, 2.7, 3.2, 3.7, 4.2, 4.7, 5.2, 5.7} {
+        \draw (\x, 0) -- (\x-0.2, -0.2);
+    }
+    \foreach \y in {0.2, 0.7, 1.2, 1.7} {
+        \draw (0, \y) -- (-0.2, \y-0.2);
+    }
+
+    % 物块 m1
+    \draw (0, 0) rectangle (1.2, 1.2);
+    \node at (0.6, 0.6) {$m_1$};
+
+    % 弹簧 k
+    \draw[decorate, decoration={coil, aspect=0.5, segment length=4mm, amplitude=2mm}] (1.2, 0.6) -- (3.3, 0.6);
+    \node[above] at (2.25, 0.8) {$k$};
+
+    % 物块 m2
+    \draw (3.3, 0) rectangle (4.5, 1.2);
+    \node at (3.9, 0.6) {$m_2$};
+
+    % 外压力箭头
+    \draw[<-] (4.5, 0.6) -- (5.8, 0.6) node[midway, above] {外压力};
+\end{tikzpicture}

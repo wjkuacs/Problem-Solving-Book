@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 绘制正方形
+    \draw (0, 0) rectangle (3, 3);
+    
+    % 正方形四边边长标记
+    \node[above] at (1.5, 3) {$a$};
+    \node[below] at (1.5, 0) {$a$};
+    \node[left]  at (0, 1.5) {$a$};
+    \node[right] at (3, 1.5) {$a$};
+    
+    % 几何中心 O
+    \coordinate (O) at (1.5, 1.5);
+    \fill (O) circle (2pt) node[left=2pt] {$O$};
+    
+    % 穿越中心的虚线 MN
+    \draw[dashed] (0.5, 3.5) node[above] {$M$} -- (2.5, -0.5) node[below] {$N$};
+    
+    % 标注 m
+    \node at (2.2, 2.2) {$m$};
+\end{tikzpicture}

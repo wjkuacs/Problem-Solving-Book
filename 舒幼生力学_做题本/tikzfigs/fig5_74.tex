@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 绘制 S 形双半圆，直径均为 2R
+    \draw (-4, 0) arc (180:0:2);
+    \draw (0, 0) arc (180:360:2);
+    
+    % 中心轴辅助虚线
+    \draw[dashed] (-4, 0) -- (4, 0);
+    
+    % 直径 2R 标记
+    \node[below] at (-2, 0) {$2R$};
+    \node[above] at (2, 0) {$2R$};
+    
+    % 顶点 A 及其与拐点连线
+    \node[above] at (-2, 2) {$A$};
+    \draw[dashed] (-2, 2) -- (0, 0) node[midway, above left] {$\sqrt{2}R$};
+\end{tikzpicture}

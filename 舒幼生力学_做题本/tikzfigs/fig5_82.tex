@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 顶部天花板固定端 (斜线阴影)
+    \draw (-1.5, 3) -- (1.5, 3);
+    \foreach \x in {-1.2, -0.7, -0.2, 0.3, 0.8, 1.3} {
+        \draw (\x, 3) -- (\x+0.2, 3.2);
+    }
+    
+    % 悬挂铰链
+    \draw (0, 3) -- (0, 2.7);
+    
+    % 悬挂杆 (有粗度的细长矩形)
+    \draw (-0.2, 2.7) rectangle (0.2, -1);
+    
+    % 杆的各项标注
+    \node[left] at (-0.2, 2.4) {$A$};
+    \node[left] at (-0.2, 0.8) {$M$};
+    \node[right] at (0.2, 0.8) {$l$};
+    
+    % 子弹形状与标记
+    \draw (-1.5, -0.6) ellipse (0.3 and 0.1);
+    \node[above] at (-1.5, -0.45) {子弹};
+    \draw[->] (-1.8, -1) -- (-1.0, -1);
+\end{tikzpicture}

@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 设定边长
+    \def\a{5}
+    \coordinate (A) at (0, {\a*sqrt(3)/2});
+    \coordinate (B) at ({-\a/2}, 0);
+    \coordinate (C) at ({\a/2}, 0);
+
+    % 绘制最外层三角形及边长标记
+    \draw (A) -- (B) node[midway, left] {$a$} 
+          -- (C) node[midway, below] {$a$} 
+          -- (A) node[midway, right] {$a$};
+
+    % 第一层嵌套
+    \coordinate (M1AB) at (barycentric cs:A=0.5,B=0.5);
+    \coordinate (M1AC) at (barycentric cs:A=0.5,C=0.5);
+    \coordinate (M1BC) at (barycentric cs:B=0.5,C=0.5);
+    \draw (M1AB) -- (M1AC) node[midway, below] {$a/2$};
+    \draw (M1AB) -- (M1BC);
+    \draw (M1AC) -- (M1BC);
+
+    % 第二层嵌套
+    \coordinate (M2AB) at (barycentric cs:A=0.5,M1AB=0.5);
+    \coordinate (M2AC) at (barycentric cs:A=0.5,M1AC=0.5);
+    \coordinate (M2BC) at (barycentric cs:M1AB=0.5,M1AC=0.5);
+    \draw (M2AB) -- (M2AC);
+    \draw (M2AB) -- (M2BC);
+    \draw (M2AC) -- (M2BC);
+
+    % 第三层嵌套
+    \coordinate (M3AB) at (barycentric cs:A=0.5,M2AB=0.5);
+    \coordinate (M3AC) at (barycentric cs:A=0.5,M2AC=0.5);
+    \coordinate (M3BC) at (barycentric cs:M2AB=0.5,M2AC=0.5);
+    \draw (M3AB) -- (M3AC);
+    \draw (M3AB) -- (M3BC);
+    \draw (M3AC) -- (M3BC);
+
+    % 顶点及无穷省略号标注
+    \node[above] at (A) {$A$};
+    \node[left] at (B) {$B$};
+    \node[right] at (C) {$C$};
+    \node at (0, {\a*sqrt(3)/2 - 0.4}) {$\vdots$};
+\end{tikzpicture}

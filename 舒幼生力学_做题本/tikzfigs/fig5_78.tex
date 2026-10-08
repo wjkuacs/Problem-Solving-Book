@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 桌面及边缘
+    \draw (0, 2) -- (3, 2) -- (3, -1.5);
+    
+    % 滑轮支架与滑轮
+    \draw (3, 2) -- (3.3, 2.3);
+    \draw (3.3, 2.3) circle (0.4);
+    \fill (3.3, 2.3) circle (1.5pt);
+    \node[right=2pt] at (3.7, 2.3) {$M, R$};
+    
+    % 桌面上物块 m2
+    \draw (0.8, 2) rectangle (1.8, 3);
+    \node at (1.3, 2.5) {$m_2$};
+    
+    % 悬挂物块 m1
+    \draw (3.3, 0.5) rectangle (4.3, -0.7);
+    \node at (3.8, -0.1) {$m_1$};
+    
+    % 连接物块和滑轮的绳子
+    \draw (1.8, 2.7) -- (3.3, 2.7);
+    \draw (3.7, 2.3) -- (3.7, 0.5);
+    
+    % 运动加速度 a 的箭头
+    \draw[->] (2.0, 3) -- (2.8, 3) node[midway, above] {$a$};
+    \draw[->] (4.5, 0.2) -- (4.5, -0.6) node[midway, right] {$a$};
+\end{tikzpicture}

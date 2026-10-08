@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 质点 A 和 B
+    \fill (0, 3) circle (2pt) node[left] {$A$};
+    \fill (0, 0) circle (2pt) node[left] {$B$};
+    
+    % 弯曲的细绳
+    \draw[decorate, decoration={snake, amplitude=0.5mm, segment length=4mm}] (0, 3) -- (0, 0);
+    \node[left] at (-0.2, 1.5) {$a$};
+    
+    % A 质点的初速度 v0
+    \draw[->] (0, 3) -- (1.5, 3) node[below] {$v_0$};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 圆柱面（大圆弧，圆心 O，半径 R）
+  \coordinate (O) at (0,0);
+  \pgfmathsetmacro{\R}{2.6}
+  \draw (O) circle (\R);
+  % 初始位置：顶端小球
+  \coordinate (Top) at (90:\R+0.35);
+  \draw (Top) circle (0.35);
+  \fill (Top) circle (1pt);
+  \node[above=2pt] at (Top) {$m$};
+  \draw[->] (Top) -- ++(-0.35,0) node[midway, above] {$r$};
+  % 虚线到球心
+  \draw[dashed] (O) -- (Top);
+  \node[left=1pt] at ($(O)!0.55!(Top)$) {$R$};
+  % 中间位置标注 M（弧上）
+  \node at ($(O)+(0.55,2.35)$) {$M$};
+  % 某时刻位置：角度 \phi
+  \pgfmathsetmacro{\phi}{55}
+  \coordinate (P) at (\phi:\R+0.35);
+  \draw (P) circle (0.35);
+  \fill (P) circle (1pt);
+  \draw[dashed] (O) -- (P);
+  % 角度 \phi
+  \draw (O) ++(90:0.7) arc (90:\phi:0.7);
+  \node[left] at ($(O)+(0.35,0.75)$) {$\phi$};
+  \fill (O) circle (1.5pt) node[below left] {$O$};
+  % 受力与运动量
+  \draw[->] (P) -- ($(P)+(0.9,0.85)$) node[above right] {$N$};
+  \draw[->] (P) -- ($(P)+(0.95,-0.15)$) node[right] {$\omega$};
+  \draw[->] (P) -- ($(P)+(1.05,-0.75)$) node[below right] {$v_C$};
+  \draw[->] (P) -- ($(P)+(-0.15,-1.0)$) node[below] {$mg$};
+  \draw[->] (P) -- ($(P)+(-0.85,0.45)$) node[above left] {$f$};
+\end{tikzpicture}

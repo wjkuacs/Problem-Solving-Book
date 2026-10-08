@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 具有一定厚度的圆环 M
+    \draw[double, double distance=2pt] (0, 0) circle (2);
+    \node[left] at (-2.1, 0) {$M$};
+    
+    % 上下质点 m
+    \fill (-0.15, 1.9) rectangle (0.15, 2.15);
+    \fill (-0.15, -1.9) rectangle (0.15, -2.15);
+    \node[above] at (0, 2.15) {$m$};
+    \node[below] at (0, -2.15) {$m$};
+    
+    % 辅助虚线与半径 R 标记
+    \draw[dashed] (0, 0) -- (0, 1.9);
+    \draw[dashed] (0, 0) -- (0, -1.9);
+    \draw[dashed] (0, 0) -- (2, 0);
+    
+    \node[left] at (0, 1) {$R$};
+    \node[left] at (0, -1) {$R$};
+    
+    % 径向拉力 F
+    \draw[->] (2.1, 0) -- (3.5, 0) node[below] {$F$};
+\end{tikzpicture}

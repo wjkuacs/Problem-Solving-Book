@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 圆心
+    \coordinate (O) at (0, 0);
+    \fill (O) circle (1.5pt);
+
+    % 画出完整的圆形 (半径为 2)
+    \draw (O) circle (2);
+
+    % 绘制矩形缺口 (两侧精确连接到圆周上)
+    % 缺口宽度为 1 (x 从 -0.5 到 0.5)
+    % y 坐标通过勾股定理计算：sqrt(2^2 - 0.5^2) = sqrt(3.75)
+    \draw (-0.5, {sqrt(3.75)}) -- (-0.5, 1.6) -- (0.5, 1.6) -- (0.5, {sqrt(3.75)});
+
+    % 标签文字排布 (位于缺口下方)
+    \node at (-0.8, 1.3) {尾};
+    \node at (0, 1.3) {$P$};
+    \node at (0.8, 1.3) {头};
+\end{tikzpicture}

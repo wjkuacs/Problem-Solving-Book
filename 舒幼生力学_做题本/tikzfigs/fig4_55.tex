@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 杆的两端点与钉子
+    \coordinate (P1) at (0, 0);
+    \coordinate (P2) at (5, 0);
+    \coordinate (Nail) at (1.25, -0.2);
+
+    % 画杆
+    \draw (P1) -- (P2);
+    \fill (P1) circle (2pt) node[above] {$1$};
+    \fill (P2) circle (2pt) node[above] {$2$};
+
+    % 画钉子
+    \fill (Nail) circle (2pt) node[right=1pt] {钉};
+
+    % 长度标注
+    \node[above] at (0.6, 0) {$a$};
+    \node[above] at (3.1, 0) {$3a$};
+
+    % 端点向下的速度/受力箭头
+    \draw[->] (P1) -- ++(0, -1.2) node[right] {$v$};
+    \draw[->] (P2) -- ++(0, -1.2) node[right] {$v'$};
+\end{tikzpicture}

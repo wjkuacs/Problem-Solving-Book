@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % 地面及阴影
+    \draw (-1.5, 0) -- (7, 0);
+    \foreach \x in {-1.2, -0.7, ..., 6.8} {
+        \draw (\x, 0) -- (\x-0.25, -0.25);
+    }
+    
+    % 长木板 m
+    \draw (-0.5, 0) rectangle (5.5, 0.4);
+    \node[above] at (-0.2, 0.4) {$m$};
+    
+    % 圆形/圆柱 M, R
+    \coordinate (O) at (1.5, 1.4); % 木板高度 0.4 + 半径 1.0 = 1.4
+    \draw (O) circle (1);
+    \fill (O) circle (1.5pt);
+    \node[above] at (1.5, 2.4) {$M, R$};
+    
+    % 拉力 F
+    \draw[->] (5.8, 0.2) -- (6.8, 0.2) node[right] {$F$};
+    \draw (5.5, 0.2) -- (5.8, 0.2); % 连接木板和箭头的短线
+\end{tikzpicture}
