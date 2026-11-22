@@ -1,0 +1,12 @@
+% 图 7-122（题 7-65）：弹簧上端受驱动上下运动，右侧 x 轴向下，O 为原平衡点。
+\begin{tikzpicture}[>=Stealth,thick]
+  \fill (-1,3.3) circle (1.5pt);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (-1,3.3)--(-1,1.4);
+  \node[left=5pt] at (-1,2.3) {$k$};
+  \draw[fill=white] (-1.3,0.8) rectangle (-0.7,1.4);
+  \node at (-1,1.1) {$m$};
+  \draw[<->] (-1.7,2.9)--(-1.7,3.7);
+  \draw[->] (0,3.4)--(0,0) node[below] {$x$};
+  \fill (0,3.3) circle (1.4pt) node[right=3pt] {$O'$};
+  \fill (0,1.1) circle (1.4pt) node[right=3pt] {$O$};
+\end{tikzpicture}

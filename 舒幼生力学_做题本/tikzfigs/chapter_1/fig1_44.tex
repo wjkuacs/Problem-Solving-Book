@@ -1,0 +1,24 @@
+% 图 1-44：按原书对应习题重绘。
+\begin{tikzpicture}[>=Stealth, thick]
+    \coordinate (O) at (0,0);
+    \coordinate (P) at (-4,0);
+
+    % 绘制坐标轴
+    \draw[->] (-5,0) -- (2,0); % 水平轴
+    \draw (0,-3) -- (0,3); % 竖直轴
+
+    % 绘制心脏线 r = 2(1 - cos\theta)
+    \draw[domain=0:360, samples=100, variable=\t, thick] plot ({\t}: {2*(1-cos(\t))});
+
+    % 绘制 P 和 O 节点
+    \node[below left] at (O) {$O$};
+    \node[below left] at (P) {$P$};
+
+    % 绘制向径 r 
+    \coordinate (R) at (115:{2*(1-cos(115))}); 
+    \draw (O) -- (R) node[midway, left] {$r$};
+    
+    % 绘制 \theta 角度弧
+    \draw[->] (0.8,0) arc[start angle=0, end angle=115, radius=0.8];
+    \node at (55:1.1) {$\theta$};
+\end{tikzpicture}

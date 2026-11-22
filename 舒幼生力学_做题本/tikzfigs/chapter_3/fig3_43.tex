@@ -1,0 +1,9 @@
+% 图 3-43（题 3-8）：竖直圆环及环顶两侧的串珠。
+% 原书图 3-43 与图 3-45 的图像错置；本做题本按题意纠正，保留题干图号。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1.2,3)--(1.2,3);
+  \foreach \x in {-1.1,-0.8,...,1.0} \draw[thin] (\x,3)--(\x+0.17,3.18);
+  \draw (0,3)--(0,2);
+  \draw (0,0) circle (2);
+  \foreach \ang in {84,96} \fill (\ang:2) circle (2.3pt);
+\end{tikzpicture}

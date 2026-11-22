@@ -1,0 +1,15 @@
+% 图 5-97（题 5-44）：圆木同时接触水平地面与台阶侧棱 A。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\rr{1.2}\def\hh{0.55}
+  \coordinate (A) at (0.2,\hh);
+  \coordinate (O) at ({0.2-sqrt(2*\rr*\hh-\hh*\hh)},\rr);
+  \draw (-3,0)--(0.2,0)--(A)--(3,\hh);
+  \foreach \x in {-2.8,-2.4,...,0.0} \draw[thin] (\x,0)--(\x-0.15,-0.16);
+  \draw (O) circle (\rr);
+  \fill (O) circle (1.5pt) node[below left=2pt] {$O$};
+  \fill (A) circle (1.5pt) node[above right=2pt] {$A$};
+  \draw[->] (O)--++(0.9,0) node[above=2pt] {$v_0$};
+  \draw[thin] (O)--++(230:\rr) node[midway,below left=1pt] {$R$};
+  \draw[->] ($(O)+(145:1.43)$) arc[start angle=145,end angle=95,radius=1.43];
+  \draw[<->,thin] (0.8,0)--(0.8,\hh) node[midway,right] {$h$};
+\end{tikzpicture}

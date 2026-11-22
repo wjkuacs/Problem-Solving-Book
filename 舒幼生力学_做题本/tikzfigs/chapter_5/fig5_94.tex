@@ -1,0 +1,10 @@
+% 图 5-94（题 5-39）：绕一对相对顶点的体对角线 MN 转动。
+\begin{tikzpicture}[>=Stealth,thick,line join=round]
+  \coordinate (M) at (0,2.3);
+  \coordinate (N) at (3.35,0.95);
+  \draw (0,0)--(2.3,0)--(2.3,2.3)--(M)--cycle;
+  \draw (M)--(1.05,3.25)--(3.35,3.25)--(N)--(2.3,0);
+  \draw (2.3,2.3)--(3.35,3.25);
+  \draw[dashed,thin] (0,0)--(1.05,0.95)--(N) (1.05,0.95)--(1.05,3.25);
+  \draw[dash dot] ($(M)!-0.2!(N)$) node[left] {$M$}--($(M)!1.2!(N)$) node[right] {$N$};
+\end{tikzpicture}

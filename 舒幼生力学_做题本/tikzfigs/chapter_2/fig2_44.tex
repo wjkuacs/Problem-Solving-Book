@@ -1,0 +1,21 @@
+% 图 2-44（题 2-2）：两球在轴两侧，同一水平面，绕同一竖直轴旋转。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2.6,4)--(2.6,4);
+  \foreach \x in {-2.4,-2.0,...,2.4} \draw[thin] (\x,4)--(\x+0.2,4.2);
+  \draw (0,4)--(0,3.65);
+  \draw (0,3.45) ellipse (0.09 and 0.2);
+  \node[left=3pt] at (0,3.45) {$P$};
+  \coordinate (P) at (0,3.25);
+  \coordinate (Z) at (0,0);
+  \coordinate (M1) at (0.95,0);
+  \coordinate (M2) at (-1.9,0);
+  \draw[dashed] (P)--(0,-0.7);
+  \draw[dashed] (Z) ellipse (0.95 and 0.28);
+  \draw[dashed] (Z) ellipse (1.9 and 0.56);
+  \draw (P)--(M1) node[midway,right=3pt] {$l_1$};
+  \draw (P)--(M2) node[midway,left=3pt] {$l_2$};
+  \fill (M1) circle (2pt) node[right=3pt] {$m_1$};
+  \fill (M2) circle (2pt) node[left=3pt] {$m_2$};
+  \pic[draw,angle radius=13mm,angle eccentricity=1.2,"$\phi_1$"] {angle=Z--P--M1};
+  \pic[draw,angle radius=9mm,angle eccentricity=1.3,"$\phi_2$"] {angle=M2--P--Z};
+\end{tikzpicture}

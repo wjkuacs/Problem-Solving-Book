@@ -1,0 +1,15 @@
+% 图 7-96（题 7-14）：质量 M 的不可转动滑轮轴由弹簧 k 悬挂，绳两端分别接 m1、m2。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1.4,4.1)--(1.4,4.1);
+  \foreach \x in {-1.2,-0.9,...,1.2} \draw[thin] (\x,4.1)--(\x+0.15,4.27);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1.2mm}] (0,4.1)--(0,2.75);
+  \node[left=4pt] at (0,3.4) {$k$};
+  \draw (0,2.75)--(0,1.85);
+  \draw[thin] (0,1.85) circle (0.75);
+  \node[below=3pt] at (0,1.85) {$M$};
+  \draw (-0.75,-0.6)--(-0.75,1.85) arc[start angle=180,end angle=0,radius=0.75]--(0.75,-0.6);
+  \foreach \x/\i in {-0.75/1,0.75/2} {
+    \draw[fill=white] ({\x-0.3},-1.2) rectangle ({\x+0.3},-0.6);
+    \node at (\x,-0.9) {$m_\i$};
+  }
+\end{tikzpicture}

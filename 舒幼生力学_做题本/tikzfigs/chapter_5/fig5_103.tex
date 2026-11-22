@@ -1,0 +1,14 @@
+% 图 5-103（题 5-52）：小球从 B 向左上方弹出，phi 为初速度与 BA 方向的锐角。
+\begin{tikzpicture}[>=Stealth,thick]
+  \coordinate (A) at (-3,0);
+  \coordinate (B) at (3,0);
+  \draw (A)--(B);
+  \node[below=3pt] at (A) {$A$};
+  \node[below=3pt] at (B) {$B$};
+  \node[below=3pt] at (0,0) {$M$};
+  \coordinate (P) at (1.7,1.1);
+  \draw[->] (B)--(P) node[above left=2pt] {$v$};
+  \fill (2.35,0.55) circle (2pt) node[right=3pt] {$m$};
+  \draw (2.2,0) arc[start angle=180,end angle={180-atan(1.1/1.3)},radius=0.8];
+  \node at ($(B)+(160:1.1)$) {$\phi$};
+\end{tikzpicture}

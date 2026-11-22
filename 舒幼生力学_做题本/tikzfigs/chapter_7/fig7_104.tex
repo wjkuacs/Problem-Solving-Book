@@ -1,0 +1,11 @@
+% 图 7-104（题 7-38）：原点处波形向下穿过零点；0.1 m 为相邻零点间距（半波长）。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw[->] (-2.2,0)--(5.8,0) node[below] {$x$};
+  \draw[->] (0,-1.3)--(0,1.7) node[left] {$\xi$};
+  \draw[domain=-2:4.65,samples=140,variable=\q] plot (\q,{-0.85*sin(90*\q)});
+  \node[below left=2pt] at (0,0) {$O$};
+  \draw[<->,thin] (0,0.5)--(2,0.5) node[midway,above] {$0.1\,\mathrm m$};
+  \draw[thin] (2,0)--(2,0.65) (3.6,0.85)--(5.4,0.85);
+  \draw[<->,thin] (5.1,0)--(5.1,0.85) node[midway,right] {$0.001\,\mathrm m$};
+  \draw[->] (3.7,1.5)--(2.7,1.5) node[midway,above] {$u$};
+\end{tikzpicture}

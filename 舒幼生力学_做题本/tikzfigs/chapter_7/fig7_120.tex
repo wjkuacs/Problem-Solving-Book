@@ -1,0 +1,19 @@
+% 图 7-120（题 7-63）：OC 垂直于杆，长度 L=sqrt(2)R 的杆两端准确落在圆环上。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\rr{2.2}\def\ang{30}
+  \pgfmathsetmacro{\dist}{\rr/sqrt(2)}
+  \coordinate (C) at ({\dist*sin(\ang)},{-\dist*cos(\ang)});
+  \coordinate (P) at ($(C)+({\ang+180}:\dist)$);
+  \coordinate (Q) at ($(C)+(\ang:\dist)$);
+  \draw (0,0) circle (\rr);
+  \draw[dashed,thin] (0,-2.5)--(0,2.5);
+  \draw (P)--(Q) node[pos=0.75,below right=3pt] {$L=\sqrt2R$};
+  \fill (P) circle (1.4pt) (Q) circle (1.4pt);
+  \fill (C) circle (1.4pt) node[below left=3pt] {$C$};
+  \fill (0,0) circle (1.4pt) node[left=3pt] {$O$};
+  \draw[dashed,thin] (0,0)--(C);
+  \draw[thin] (0,0)--(25:\rr) node[midway,above] {$R$};
+  \draw (0,-0.7) arc[start angle=270,end angle={270+\ang},radius=0.7];
+  \node at (285:1.0) {$\theta$};
+  \draw[->] (-0.3,2.6) arc[start angle=180,end angle=360,x radius=0.3,y radius=0.1] node[right] {$\omega$};
+\end{tikzpicture}

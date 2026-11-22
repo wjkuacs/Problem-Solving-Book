@@ -1,0 +1,14 @@
+% 图 2-50（题 2-21）：U 形软绳，左右两段在底部连续连接。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-0.6,4)--(0.8,4);
+  \foreach \x in {-0.5,-0.2,...,0.7} \draw[thin] (\x,4)--(\x+0.16,4.18);
+  \draw (0,4)--(0,0.3) arc[start angle=180,end angle=360,radius=0.3]--(0.6,2.15);
+  % 交替链环，中心线连续，不使用会产生弹簧外观的 coil 装饰。
+  \foreach \y in {0.4,0.6,...,3.8} \draw[thin] (0,\y) ellipse (0.055 and 0.10);
+  \foreach \y in {0.4,0.6,...,2.0} \draw[thin] (0.6,\y) ellipse (0.055 and 0.10);
+  \node[left] at (0,3.9) {$A$};
+  \node[above] at (0.6,2.15) {$B$};
+  \foreach \y in {0,2.15,4} \draw[thin] (1.1,\y)--(2.1,\y);
+  \draw[<->,thin] (1.65,2.15)--(1.65,4) node[midway,fill=white,inner sep=2pt] {$x$};
+  \draw[<->,thin] (1.65,0)--(1.65,2.15) node[midway,right] {$\frac12(l-x)$};
+\end{tikzpicture}

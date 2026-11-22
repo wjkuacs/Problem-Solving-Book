@@ -1,0 +1,12 @@
+% 图 3-57（题 3-27）：轻绳从底部小球沿管内左半周连续延伸，由顶部缺口引出。
+\begin{tikzpicture}[>=Stealth,thick]
+  \foreach \r in {1.5,1.7}
+    \draw ({\r*cos(95)},{\r*sin(95)}) arc[start angle=95,end angle=445,radius=\r];
+  \draw (0,-1.6) arc[start angle=270,end angle=90,radius=1.6]--(2,1.6);
+  \draw[dashed,thin] (0,0)--(0,-1.6);
+  \draw[thin] (0,0)--(-45:1.6) node[midway,above right=1pt] {$R$};
+  \fill (0,-1.6) circle (2.3pt) node[below right=3pt] {$m$};
+  \draw[->] (-0.2,-1.95)--(-1.2,-1.95) node[left] {$v_0$};
+  \fill (2,1.6) circle (1.4pt);
+  \draw[->] (2.15,1.6)--(3.1,1.6) node[midway,below] {$F$};
+\end{tikzpicture}

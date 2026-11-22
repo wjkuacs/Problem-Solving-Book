@@ -1,0 +1,25 @@
+% 图 3-59（题 3-32）：斜截面通过体对角线 AC 及另两竖棱的中点 B1、B2。
+% 原立方体的细轮廓仅作构造参照；四条管道位于截面 AB1CB2 上。
+\begin{tikzpicture}[>=Stealth,thick,line join=round]
+  \coordinate (C) at (0,0);
+  \coordinate (A) at (2.8,2.8);
+  \coordinate (B1) at (2,1);
+  \coordinate (B2) at (0.8,1.8);
+  \draw[thin] (-0.9,-0.6)--(3,-0.6)--(4,1)--(3,1);
+  \draw[thin] (-0.9,-0.6)--(-0.25,0.45);
+  \draw[thin] (C)--(2,0)--(2.8,0.8)--(A)--(0.8,2.8)--(0,2)--cycle;
+  \draw[thin] (2,0)--(2,2)--(A);
+  \draw[thin] (0,2)--(2,2);
+  \draw[dashed,thin] (C)--(0.8,0.8)--(2.8,0.8);
+  \draw[dashed,thin] (0.8,0.8)--(0.8,2.8);
+  \draw (A)--(B1)--(C);
+  \draw[dashed] (C)--(B2)--(A);
+  \draw[dashed,thin] (C)--(A);
+  \fill (C) circle (1.2pt) node[below left] {$C$};
+  \fill (A) circle (1.2pt) node[above right] {$A$};
+  \fill (B1) circle (1.2pt) node[right=3pt] {$B_1$};
+  \fill (B2) circle (1.2pt) node[left=3pt] {$B_2$};
+  \node[left=3pt] at (0,1) {$l$};
+  \node[above left=2pt] at (0.4,2.4) {$l$};
+  \node[above=3pt] at (1.8,2.8) {$l$};
+\end{tikzpicture}

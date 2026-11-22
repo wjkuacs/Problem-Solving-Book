@@ -1,0 +1,15 @@
+% 图 7-102（题 7-22）：滑轮轴固定；左端弹簧固定于地面，右端悬挂物块。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1.4,4)--(1.4,4);
+  \foreach \x in {-1.2,-0.9,...,1.2} \draw[thin] (\x,4)--(\x+0.15,4.17);
+  \draw (0,4)--(0,2.7);
+  \draw[thin] (0,2.7) circle (0.7);
+  \draw (-0.7,1.3)--(-0.7,2.7) arc[start angle=180,end angle=0,radius=0.7]--(0.7,0.8);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1.2mm}] (-0.7,0)--(-0.7,1.3);
+  \node[left=4pt] at (-0.7,0.7) {$k$};
+  \draw[thin] (0,2.7)--++(230:0.7) node[midway,below right=1pt] {$R$};
+  \node[above right=2pt] at (0.55,3.15) {$M$};
+  \draw[fill=white] (0.4,0.2) rectangle (1,0.8);
+  \node at (0.7,0.5) {$m$};
+  \draw (-1.3,0)--(1.5,0);
+\end{tikzpicture}

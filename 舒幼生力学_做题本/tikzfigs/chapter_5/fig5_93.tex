@@ -1,0 +1,17 @@
+% 图 5-93（题 5-38）：地心平动参考系；月球引力与惯性力分别标注。
+\begin{tikzpicture}[>=Stealth,thick]
+  \coordinate (O) at (0,0);
+  \draw (O) circle (1.5);
+  \draw[dashed] (O) ellipse (2.15 and 1.15);
+  \draw[->] (-2.5,0)--(3.2,0) node[right] {$x$};
+  \draw[->] (0,-1.8)--(0,2.1) node[above] {$y$};
+  \fill (O) circle (1.5pt) node[below left] {$O$};
+  \fill (2.15,0) circle (1.5pt) node[below right=2pt] {$A$};
+  \fill (0,-1.15) circle (1.5pt) node[below right=2pt] {$B$};
+  \draw[thin] (O)--(-55:1.5) node[pos=0.7,right=2pt] {$R_{\mathrm E}$};
+  \coordinate (P) at ({2.15*cos(45)},{1.15*sin(45)});
+  \fill (P) circle (1.5pt) node[above right=2pt] {$(x,y)$};
+  \draw[->] (P)--++(1.3,-0.12) node[right=1pt] {$\boldsymbol f_{\text{引}}$};
+  \draw[->] (P)--++(-1.2,0) node[midway,below=3pt] {$\boldsymbol f_{\text{惯}}$};
+  \draw[->] (0.12,-0.35)--(1.08,-0.35) node[midway,above=2pt] {$a_0$};
+\end{tikzpicture}

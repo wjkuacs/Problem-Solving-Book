@@ -1,0 +1,12 @@
+% 图 6-48（题 6-3）：图示为开始加速前的水平液面，不加入待求的稳态结果。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,4)--(0,0)--(3,0)--(3,4);
+  \draw (0,3)--(3,3);
+  \foreach \y in {0.4,0.8,...,2.8} \draw[dashed,thin] (0.15,\y)--(2.85,\y);
+  \node[fill=white,inner sep=2pt] at (1.5,1.3) {$\rho$};
+  \draw (-0.5,0)--(3.5,0);
+  \foreach \x in {-0.3,0.1,...,3.3} \draw[thin] (\x,0)--(\x-0.15,-0.15);
+  \draw[<->,thin] (-0.35,0)--(-0.35,3) node[midway,left] {$L$};
+  \node[above=3pt] at (1.5,3) {$L$};
+  \draw[->] (3.6,1.5)--(4.8,1.5) node[midway,above] {$a=\dfrac{g}{\sqrt3}$};
+\end{tikzpicture}

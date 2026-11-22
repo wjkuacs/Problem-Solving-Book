@@ -1,0 +1,15 @@
+% 图 6-55（题 6-30）：x 为横跨板间隙的竖直坐标，流动方向为屏幕水平方向。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,1.2) rectangle (4,1.32);
+  \draw (0,-1.32) rectangle (4,-1.2);
+  \draw[->] (0,-1.75)--(0,2.2) node[left] {$x$};
+  \node[left=3pt] at (0,0) {$O$};
+  \node[left=3pt] at (0,1.2) {$H$};
+  \node[left=3pt] at (0,-1.2) {$-H$};
+  \foreach \y in {-0.65,0,0.65} \draw[->,thin] (0.3,\y)--(3.7,\y);
+  \draw[<->,thin] (0,1.75)--(4,1.75) node[midway,above] {$L$};
+  \draw[->] (-1.7,0)--(-0.65,0) node[midway,above] {$p_1$};
+  \draw[->] (5.7,0)--(4.65,0) node[midway,above] {$p_2$};
+  \node[below=5pt] at (-0.8,0) {$1$};
+  \node[below=5pt] at (4.8,0) {$2$};
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+% 图 1-42（题 1-16）：焦距 C=sqrt(A^2-B^2)，F 为右焦点。
+\begin{tikzpicture}[>=Stealth,thick]
+  \pgfmathsetmacro{\a}{3.2}
+  \pgfmathsetmacro{\b}{1.9}
+  \pgfmathsetmacro{\c}{sqrt(\a*\a-\b*\b)}
+  \coordinate (O) at (0,0);
+  \coordinate (F) at (\c,0);
+  \coordinate (P) at ({\a*cos(28)},{\b*sin(28)});
+  \draw[->] (-3.8,0)--(3.9,0);
+  \draw (0,-2.7)--(0,2.4);
+  \draw[decoration={markings,mark=at position 0.08 with {\arrow{<}}},postaction={decorate}]
+    (O) ellipse ({\a} and {\b});
+  \fill (F) circle (1.5pt) node[below right=2pt] {$F$};
+  \fill (P) circle (1.5pt);
+  \node[below left] at (O) {$O$};
+  \draw (F)--(P) node[pos=0.72,left=3pt] {$r$};
+  \coordinate (X) at (3.8,0);
+  \pic[draw,angle radius=7mm,angle eccentricity=1.4,"$\theta$"] {angle=X--F--P};
+  \draw[thin] (\c,-0.12)--(\c,-0.65);
+  \draw[<->,thin] (0,-0.5)--(\c,-0.5) node[midway,fill=white,inner sep=1pt] {$C$};
+  \draw[dashed,thin] (\a,0)--(\a,-2.6);
+  \draw[<->,thin] (0,-2.35)--(\a,-2.35) node[midway,fill=white,inner sep=1pt] {$A$};
+  \draw[thin] (-3.3,\b)--(-3.9,\b);
+  \draw[<->,thin] (-3.6,0)--(-3.6,\b) node[midway,fill=white,inner sep=1pt] {$B$};
+\end{tikzpicture}

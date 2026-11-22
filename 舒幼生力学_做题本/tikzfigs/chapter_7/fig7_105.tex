@@ -1,0 +1,10 @@
+% 图 7-105（题 7-39）：沿正 x 方向传播，A 位于下降的波形支上；与题给位移、速度相容。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw[->] (-0.4,0)--(4,0) node[below] {$x$};
+  \draw[->] (0,-1.9)--(0,2.1) node[left] {$\xi$};
+  \draw[domain=10:65,samples=100,variable=\q]
+    plot ({0.055*\q},{1.5*cos(3.6*(\q-20)+acos(0.8))});
+  \fill (1.1,1.2) circle (2pt) node[above right=3pt] {$A$};
+  \draw[->] (2,2)--(3.2,2) node[midway,above] {$u$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

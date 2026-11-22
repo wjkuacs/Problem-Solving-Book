@@ -1,0 +1,26 @@
+% 图 5-105（题 5-54）：N 沿径向，f 沿上坡切向，v_C 沿下坡切向，omega 表示自转。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\rr{2.6}\def\smallr{0.35}\def\ang{50}
+  \coordinate (O) at (0,0);
+  \coordinate (Top) at (0,{\rr+\smallr});
+  \coordinate (P) at (\ang:{\rr+\smallr});
+  \draw (20:\rr) arc[start angle=20,end angle=160,radius=\rr];
+  \node at (0.65,2.3) {$M$};
+  \draw (Top) circle (\smallr);
+  \fill (Top) circle (1pt) node[above=9pt] {$m$};
+  \draw[thin] (Top)--++(0,-\smallr) node[midway,left=2pt] {$r$};
+  \draw[dashed,thin] (O)--(0,\rr);
+  \node[left=2pt] at (0,1.6) {$R$};
+  \draw[dashed,thin] (O)--(P);
+  \draw (O) ++(90:0.75) arc[start angle=90,end angle=\ang,radius=0.75];
+  \node at (70:1) {$\phi$};
+  \fill (O) circle (1.4pt) node[below left] {$O$};
+  \draw[fill=white] (P) circle (\smallr);
+  \fill (P) circle (1pt);
+  \draw[->] (P)--++(\ang:1.1) node[above right=1pt] {$N$};
+  \draw[->] (P)--++(-90:1.15) node[below=1pt] {$mg$};
+  \draw[->] (P)--++({\ang+90}:1) node[above left=1pt] {$f$};
+  \draw[->] (P)--++({\ang-90}:1.3) node[below right=1pt] {$v_C$};
+  \draw[->] ($(P)+(15:0.55)$) arc[start angle=15,end angle=-80,radius=0.55];
+  \node at ($(P)+(0.95,0.15)$) {$\omega$};
+\end{tikzpicture}

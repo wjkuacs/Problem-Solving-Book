@@ -1,0 +1,17 @@
+% 图 7-121（题 7-64）：两振子质量均为 m，外弹簧均为 k，耦合弹簧为 k'。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-3,1.3)--(-3,0)--(4.3,0)--(4.3,1.3);
+  \draw[fill=white] (-1.15,0) rectangle (-0.45,0.8);
+  \draw[fill=white] (1.65,0) rectangle (2.35,0.8);
+  \node at (-0.8,0.4) {$m$};
+  \node at (2,0.4) {$m$};
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (-3,0.4)--(-1.15,0.4);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (-0.45,0.4)--(1.65,0.4);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (2.35,0.4)--(4.3,0.4);
+  \node[above] at (-2,0.65) {$k$};
+  \node[above] at (0.6,0.65) {$k'$};
+  \node[above] at (3.3,0.65) {$k$};
+  \draw[->,thin] (-1.1,-0.5)--(-0.3,-0.5) node[midway,below] {$x_1$};
+  \draw[->,thin] (1.7,-0.5)--(2.5,-0.5) node[midway,below] {$x_2$};
+  \draw[->,thin] (4.3,0)--(4.8,0) node[right] {$x$};
+\end{tikzpicture}

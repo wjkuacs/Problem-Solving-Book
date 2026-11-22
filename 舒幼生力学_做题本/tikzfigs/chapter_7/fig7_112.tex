@@ -1,0 +1,14 @@
+% 图 7-112（题 7-51）：静止时两球及轻弹簧共用同一竖直线。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1,3.5)--(1.7,3.5);
+  \draw (0.3,3.5)--(0.3,2.55);
+  \fill (0.3,2.4) circle (2pt) node[right=4pt] {$A$};
+  \draw (0.3,2.55)--(0.3,2.4);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1.2mm}] (0.3,2.3)--(0.3,1.2);
+  \fill (0.3,1.1) circle (2pt) node[right=4pt] {$B$};
+  \draw (0.3,1.2)--(0.3,1.1);
+  \draw (-1,0)--(1.7,0);
+  \draw[fill=gray!15] (-0.2,0) rectangle (0.8,0.12);
+  \node[right=3pt] at (0.8,0.08) {橡皮泥};
+  \draw[<->,thin] (-0.7,0)--(-0.7,3.5) node[midway,left] {$1\,\mathrm m$};
+\end{tikzpicture}

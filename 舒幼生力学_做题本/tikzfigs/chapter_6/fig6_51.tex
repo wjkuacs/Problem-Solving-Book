@@ -1,0 +1,14 @@
+% 图 6-51（题 6-8）：两端轴线严格偏转 75 度，管壁沿圆弧相切连接。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2,1.8)--(0,1.8) arc[start angle=90,end angle=15,radius=1.4]--++(-75:1.7);
+  \draw (-2,1.4)--(0,1.4) arc[start angle=90,end angle=15,radius=1.0]--++(-75:1.7);
+  \draw[->] (-2.9,1.6)--(-2.1,1.6);
+  \node[below=4pt] at (-2,1.4) {$1$};
+  \coordinate (V) at ({1.2*cos(15)-(1.6-(0.4+1.2*sin(15)))/tan(75)},1.6);
+  \draw[dashed,thin] (0,1.6)--(3,1.6);
+  \draw[dashed,thin] (V)--++(-75:2.9);
+  \draw (V) ++(0.55,0) arc[start angle=0,end angle=-75,radius=0.55];
+  \node at ($(V)+(-37.5:0.95)$) {$75^\circ$};
+  \draw[->] (1.7,-1.25)--++(-75:0.85);
+  \node[right=3pt] at (1.8,-0.9) {$2$};
+\end{tikzpicture}

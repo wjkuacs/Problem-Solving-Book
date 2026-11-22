@@ -1,0 +1,16 @@
+% 图 3-41（题 3-4）：小木块初始位于斜面顶端，相对劈形物块静止。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-0.6,0)--(6.2,0);
+  \foreach \x in {-0.4,0,...,6.0} \draw[thin] (\x,0)--(\x-0.18,-0.18);
+  \coordinate (O) at (0,0);
+  \coordinate (T) at (4.5,3);
+  \draw (O)--(4.5,0)--(T)--cycle;
+  \begin{scope}[shift={(T)},rotate={atan(3/4.5)}]
+    \draw[fill=white] (-0.8,0) rectangle (0,0.5);
+    \node at (-0.4,0.25) {$m$};
+  \end{scope}
+  \draw (0.8,0) arc[start angle=0,end angle={atan(3/4.5)},radius=0.8];
+  \node at (16:1.1) {$\phi$};
+  \node[left=3pt] at (4.5,1.4) {$h$};
+  \draw[->] (5,1.5)--(6.1,1.5) node[midway,above] {$u$};
+\end{tikzpicture}

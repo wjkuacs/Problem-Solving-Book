@@ -1,0 +1,18 @@
+% 图 3-54（题 3-23）：碰撞处距地面 H，球在其上方 h 处；斜面倾角为 15 度。
+\begin{tikzpicture}[>=Stealth,thick]
+  \pgfmathsetmacro{\toe}{1.2+1/tan(15)}
+  \pgfmathsetmacro{\top}{1+0.9*tan(15)}
+  \draw (-0.9,0)--(5.5,0);
+  \foreach \x in {-0.7,-0.3,...,5.3} \draw[thin] (\x,0)--(\x-0.16,-0.16);
+  \draw (0.3,0)--(\toe,0)--(0.3,\top)--cycle;
+  \node at (1.4,0.4) {$M$};
+  \coordinate (Q) at (1.2,1);
+  \fill (1.2,2.6) circle (2pt) node[right=2pt] {$m$};
+  \draw[dashed,thin] (1.2,2.6)--(Q);
+  \draw[dashed,thin] (-0.55,2.6)--(1.2,2.6);
+  \draw[dashed,thin] (-0.55,1)--(Q);
+  \draw[<->,thin] (-0.35,1)--(-0.35,2.6) node[midway,left=2pt] {$h$};
+  \draw[<->,thin] (-0.35,0)--(-0.35,1) node[midway,left=2pt] {$H$};
+  \draw ({\toe-0.9},0) arc[start angle=180,end angle=165,radius=0.9];
+  \node at ({\toe-1.15},0.16) {$\theta$};
+\end{tikzpicture}

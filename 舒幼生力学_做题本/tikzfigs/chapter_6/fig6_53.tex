@@ -1,0 +1,14 @@
+% 图 6-53（题 6-12）：下端迎水取水，上端进入车载水箱；h 为两处水面的高度差。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1,3.6)--(-1,2.4)--(3.6,2.4)--(4,3.6);
+  \draw[dashed,thin] (-0.9,3)--(3.8,3);
+  \draw (-1.1,0)--(4.1,0);
+  \foreach \x in {-0.9,-0.5,...,3.9} \draw[thin] (\x,0)--(\x-0.15,-0.15);
+  \foreach \y in {0.3,0.55,0.8} \draw[dashed,thin] (-1,\y)--(4,\y);
+  \foreach \col/\wid in {black/5pt,white/3pt} {
+    \draw[draw=\col,line width=\wid,line cap=butt] (0,0.5)
+      .. controls (0.3,0.5) and (0.4,0.9) .. (0.6,1.3)
+      --(1.6,3.3) .. controls (1.9,3.8) and (2.3,3.3) .. (2,2.8);
+  }
+  \draw[<->,thin] (-1.5,0.8)--(-1.5,3) node[midway,left] {$h$};
+\end{tikzpicture}

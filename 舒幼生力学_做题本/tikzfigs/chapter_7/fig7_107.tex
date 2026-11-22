@@ -1,0 +1,18 @@
+% 图 7-107（题 7-41）：固定弯管 A 与可平移弯管 B 构成两条连通声路。
+\begin{tikzpicture}[>=Stealth,thick]
+  \foreach \col/\wid in {black/5pt,white/3pt} {
+    \draw[draw=\col,line width=\wid,line cap=butt] (0,0.8)--(-1.6,0.8)
+      arc[start angle=90,end angle=270,radius=0.8]--(0,-0.8);
+    \draw[draw=\col,line width=\wid,line cap=butt] (1,0.8)--(2.2,0.8)
+      arc[start angle=90,end angle=-90,radius=0.8]--(1,-0.8);
+    \draw[draw=\col,line width=\wid] (0,0.8)--(1,0.8) (0,-0.8)--(1,-0.8);
+    \draw[draw=\col,line width=\wid] (-1,0.8)--(-1,1.4) (-1,-0.8)--(-1,-1.2);
+  }
+  \node[left=5pt] at (-2.4,0) {$A$};
+  \node[right=5pt] at (3,0) {$B$};
+  \node[above=3pt] at (-1,1.4) {$T$};
+  \node[above right=3pt] at (-1,-0.8) {$C$};
+  \draw (-1,-1.2)--(-1.15,-1.45)--(-0.85,-1.45)--cycle;
+  \node[below=3pt] at (-1,-1.45) {$M$};
+  \draw[<->,thin] (1.3,-1.55)--(2.3,-1.55) node[midway,below] {$l$};
+\end{tikzpicture}

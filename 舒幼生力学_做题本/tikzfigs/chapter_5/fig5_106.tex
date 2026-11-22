@@ -1,0 +1,19 @@
+% 图 5-106（题 5-56）：硬币接触轨道，轴向内倾斜 phi；轨道用水平椭圆透视表示。
+\begin{tikzpicture}[>=Stealth,thick]
+  \coordinate (O) at (2.5,0);
+  \draw[dashed] (O) ellipse (3 and 1.2);
+  \coordinate (Q) at ({2.5+3*cos(150)},{1.2*sin(150)});
+  \coordinate (C) at ($(Q)+({0.75*sin(12)},{0.75*cos(12)})$);
+  \draw[thin] (O)--(5.5,0) node[midway,below] {$R$};
+  \fill (O) circle (1.4pt);
+  \begin{scope}[shift={(C)},rotate=-12]
+    \draw[fill=white] (0,0) ellipse (0.2 and 0.75);
+    \draw[thin] (0,0)--(0,0.75) node[midway,left=2pt] {$r$};
+  \end{scope}
+  \draw[dashed,thin] (C)--++(2,0) node[above right=3pt] {水平线};
+  \draw[dashed,thin] (C)--++(-12:2);
+  \draw (C) ++(1.3,0) arc[start angle=0,end angle=-12,radius=1.3];
+  \draw[thin] ($(C)+(-6:1.3)$)--($(C)+(1.45,-0.48)$);
+  \node[below=1pt] at ($(C)+(1.45,-0.48)$) {$\phi$};
+  \draw[->] ($(Q)+(-0.3,-0.1)$)--++(-0.65,-0.45) node[below left] {$v$};
+\end{tikzpicture}

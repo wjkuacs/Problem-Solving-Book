@@ -1,0 +1,18 @@
+% 图 7-92（题 7-10）：x 轴沿斜面向下，O 为平衡位置，初始物块在 O 下方 l 处。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,0)--(6,0);
+  \draw (0,0)--(25:6.2);
+  \draw (1,0) arc[start angle=0,end angle=25,radius=1];
+  \node at (12.5:1.35) {$\theta$};
+  \begin{scope}[rotate=25]
+    \draw[fill=white] (2.1,0) rectangle (2.7,0.5);
+    \node at (2.4,0.25) {$m$};
+    \draw (4.8,0)--(4.8,0.8);
+    \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.4mm}] (2.7,0.25)--(4.8,0.25);
+    \node[above] at (3.9,0.45) {$k$};
+    \draw[dashed,thin] (3.7,0)--(3.7,0.65);
+    \draw[->] (4.2,-0.45)--(0.8,-0.45) node[left] {$x$};
+    \node[below] at (3.7,-0.45) {$O$};
+    \draw[<->,thin] (2.4,0.85)--(3.7,0.85) node[midway,above] {$l$};
+  \end{scope}
+\end{tikzpicture}

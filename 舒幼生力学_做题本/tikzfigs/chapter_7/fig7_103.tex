@@ -1,0 +1,16 @@
+% 图 7-103（题 7-23）：两弹簧沿圆盘外侧上半圆连接，P 位于 AP 张角 60 度处。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,0) circle (2);
+  \draw[dashed,thin] (-2,0)--(2,0) node[pos=0.75,above] {$R$};
+  \draw[dashed,thin] (0,0)--(120:2);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1mm}]
+    (-2,0) arc[start angle=180,end angle=120,radius=2];
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1mm}]
+    (120:2) arc[start angle=120,end angle=0,radius=2];
+  \fill (120:2) circle (2pt) node[above left=3pt] {$P$};
+  \fill (0,0) circle (1.5pt) node[below=3pt] {$O$};
+  \node[left=3pt] at (-2,0) {$A$};
+  \node[right=3pt] at (2,0) {$B$};
+  \draw (-0.65,0) arc[start angle=180,end angle=120,radius=0.65];
+  \node at (150:0.98) {$60^\circ$};
+\end{tikzpicture}

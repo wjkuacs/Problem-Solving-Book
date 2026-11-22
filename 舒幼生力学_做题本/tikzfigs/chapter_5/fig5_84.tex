@@ -1,0 +1,20 @@
+% 图 5-84（题 5-26）：圆柱与定滑轮半径同为 r，绳在上侧与斜面平行。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\ang{20}\def\rr{0.8}
+  \draw (-0.5,0)--(7,0);
+  \foreach \x in {-0.3,0.1,...,6.9} \draw[thin] (\x,0)--(\x-0.17,-0.17);
+  \coordinate (Fixed) at ({6*cos(\ang)-\rr*sin(\ang)},{6*sin(\ang)+\rr*cos(\ang)});
+  \draw (Fixed)--({6*cos(\ang)-\rr*sin(\ang)-0.5},0);
+  \begin{scope}[rotate=\ang]
+    \draw (0,0)--(6.7,0);
+    \draw (1.7,\rr) circle (\rr);
+    \draw (6,\rr) circle (\rr);
+    \fill (1.7,\rr) circle (1.4pt);
+    \fill (6,\rr) circle (1.4pt);
+    \draw (1.7,{2*\rr})--(6,{2*\rr});
+  \end{scope}
+  \node[left=4pt] at ({1.7*cos(\ang)-\rr*sin(\ang)-\rr},{1.7*sin(\ang)+\rr*cos(\ang)}) {$m,r$};
+  \node[right=4pt] at ($(Fixed)+(0.8,0)$) {$M,r$};
+  \draw (0.9,0) arc[start angle=0,end angle=\ang,radius=0.9];
+  \node at (10:1.25) {$\theta$};
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+% 图 7-98（题 7-17）：杆与圆盘通过盘心固连，杆的长度 l 自支点量至盘心。
+\begin{tikzpicture}[>=Stealth,thick]
+  \coordinate (O) at (0,3.5);
+  \coordinate (C) at (1.2,0.4);
+  \draw (-0.8,3.5)--(0.8,3.5);
+  \foreach \x in {-0.7,-0.4,...,0.7} \draw[thin] (\x,3.5)--(\x+0.15,3.67);
+  \draw (C) circle (0.65);
+  \draw[double,double distance=1.5pt] (O)--(C) node[midway,left=3pt] {$m$} node[midway,right=4pt] {$l$};
+  \fill (O) circle (1.5pt) node[left=3pt] {$O$};
+  \fill (C) circle (1pt);
+  \node[right=2pt] at (C) {$m_0$};
+  \draw[thin] (C)--++(-70:0.65) node[midway,left=2pt] {$R$};
+\end{tikzpicture}

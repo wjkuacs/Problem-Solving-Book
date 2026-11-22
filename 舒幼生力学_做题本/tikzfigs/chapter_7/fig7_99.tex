@@ -1,0 +1,14 @@
+% 图 7-99（题 7-19）：A、B 为起止静止位置，两个状态的绳均竖直。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-0.5,3.4)--(4.5,3.4);
+  \draw (-0.25,3.4) rectangle (0.25,3.6);
+  \draw[dashed] (3.75,3.4) rectangle (4.25,3.6);
+  \draw (0,3.4)--(0,0.3) node[midway,left] {$l$};
+  \draw[dashed] (4,3.4)--(4,0.3);
+  \draw[fill=white] (-0.25,-0.2) rectangle (0.25,0.3);
+  \draw[dashed] (3.75,-0.2) rectangle (4.25,0.3);
+  \node[below=4pt] at (0,-0.2) {$A$};
+  \node[below=4pt] at (4,-0.2) {$B$};
+  \node[left=3pt] at (-0.25,0.05) {$M$};
+  \draw[<->,thin] (0,2.2)--(4,2.2) node[midway,above] {$L$};
+\end{tikzpicture}

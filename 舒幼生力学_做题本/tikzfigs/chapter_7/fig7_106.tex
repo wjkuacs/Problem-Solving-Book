@@ -1,0 +1,11 @@
+% 图 7-106（题 7-40）：横轴为 omega t，原点处向上过零，原图给的是正弦而非余弦。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw[->] (-0.6,0)--(7.2,0) node[right] {$\omega t$};
+  \draw[->] (0,-1.5)--(0,1.6) node[left] {$\xi$};
+  \draw[domain=-0.55:10.8,samples=180,variable=\q] plot ({0.65*\q},{1.1*sin(deg(\q))});
+  \draw[dashed,thin] (0,1.1)--(7,1.1) (0,-1.1)--(7,-1.1);
+  \node[left] at (0,1.1) {$A$};
+  \node[left] at (0,-1.1) {$-A$};
+  \foreach \n/\lab in {1/\pi,2/2\pi,3/3\pi} \node[below=3pt] at ({0.65*\n*pi},0) {$\lab$};
+  \node[below left] at (0,0) {$O$};
+\end{tikzpicture}

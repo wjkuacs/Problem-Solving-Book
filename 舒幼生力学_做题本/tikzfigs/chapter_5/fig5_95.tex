@@ -1,0 +1,11 @@
+% 图 5-95（题 5-41）：圆柱长 2R，虚线转轴通过中心及两个底面相对的边缘点。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\rr{0.9}\def\ee{0.25}
+  \draw (-\rr,\rr)--(\rr,\rr) (-\rr,-\rr)--(\rr,-\rr);
+  \draw (-\rr,0) ellipse ({\ee} and {\rr});
+  \draw (\rr,-\rr) arc[start angle=-90,end angle=90,x radius=\ee,y radius=\rr];
+  \draw[dashed,thin] (\rr,\rr) arc[start angle=90,end angle=270,x radius=\ee,y radius=\rr];
+  \draw[dashed] (-1.3,1.3)--(1.3,-1.3);
+  \draw[thin] (-\rr,0)--(-\rr,-\rr) node[midway,left=2pt] {$R$};
+  \node[above=4pt] at (0,\rr) {$2R$};
+\end{tikzpicture}

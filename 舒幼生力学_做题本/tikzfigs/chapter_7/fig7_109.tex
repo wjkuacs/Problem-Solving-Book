@@ -1,0 +1,11 @@
+% 图 7-109（题 7-43）：警车 S 朝右趋近峭壁，骑车者 B 朝左离开峭壁。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-3.3,0)--(4,0)--(4,2.3);
+  \foreach \x in {-3.1,-2.7,...,3.7} \draw[thin] (\x,0)--(\x-0.15,-0.15);
+  \foreach \y in {0.3,0.6,...,2.1} \draw[thin] (4,\y)--(4.16,\y+0.13);
+  \node[above=4pt] at (-2,0.1) {$B$};
+  \node[above=4pt] at (0,0.1) {$S$};
+  \draw[->] (-2,0.15)--(-3,0.15) node[midway,above=6pt] {$v_B$};
+  \draw[->] (0,0.15)--(1,0.15) node[midway,above=6pt] {$v_S$};
+  \node[right=4pt] at (4,1.3) {峭壁};
+\end{tikzpicture}

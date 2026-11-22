@@ -1,0 +1,12 @@
+% 图 7-113（题 7-53）：小球在平板上方且与平板接触，两绳长度均为 l。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2,3.1)--(2,3.1);
+  \foreach \x in {-1.8,-1.5,...,1.8} \draw[thin] (\x,3.1)--(\x+0.15,3.27);
+  \draw (-1.5,3.1)--(-1.5,0.2) node[midway,left] {$l$};
+  \draw (1.5,3.1)--(1.5,0.2) node[midway,right] {$l$};
+  \draw[fill=white] (-1.7,0) rectangle (1.7,0.2);
+  \node[below=4pt] at (0,0) {$M$};
+  \draw[fill=white] (0,0.35) circle (0.15);
+  \node[above=3pt] at (0,0.5) {$m$};
+  \draw[->] (1.8,0.1)--(2.9,0.1) node[midway,above] {$v_0$};
+\end{tikzpicture}

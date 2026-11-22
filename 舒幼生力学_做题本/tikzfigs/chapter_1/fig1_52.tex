@@ -1,0 +1,17 @@
+% 图 1-52（题 1-37）：同一接触点 P 处的上下生成圆及互为镜像的摆线。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-0.8,0)--(7,0);
+  \node[left] at (-0.8,0) {$M$};
+  \node[right] at (7,0) {$N$};
+  \draw[domain=0:360,samples=181,variable=\t]
+    plot ({\t*pi/180-sin(\t)},{1-cos(\t)});
+  \draw[domain=0:360,samples=181,variable=\t]
+    plot ({\t*pi/180-sin(\t)},{cos(\t)-1});
+  \draw (0,1) circle (1);
+  \draw (0,-1) circle (1);
+  \fill (0,0) circle (1.5pt) node[above left] {$P$} node[below left] {$P'$};
+  \draw[thin] (0,1)--({cos(140)},{1+sin(140)}) node[midway,below left=1pt] {$R$};
+  \draw[thin] (0,-1)--({cos(220)},{-1+sin(220)}) node[midway,above left=1pt] {$R$};
+  \draw[->] (-0.8,2.3)--(0.5,2.3);
+  \draw[->] (-0.8,-2.3)--(0.5,-2.3);
+\end{tikzpicture}

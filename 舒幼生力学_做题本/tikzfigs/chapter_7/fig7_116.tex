@@ -1,0 +1,12 @@
+% 图 7-116（题 7-58）：子弹从木块左侧向右入射；d 是木块沿射入方向的宽度。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,1.9)--(0,0)--(4.2,0);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (0,0.5)--(2.5,0.5);
+  \node[below=3pt] at (1,0.4) {$k$};
+  \draw[fill=white] (2.5,0) rectangle (3.5,1.4);
+  \node at (3,0.7) {$M$};
+  \fill (1.5,1.1) ellipse (0.12 and 0.055);
+  \node[below=2pt] at (1.5,1.1) {$m$};
+  \draw[->] (1.55,1.1)--(2.2,1.1) node[midway,above] {$v_0$};
+  \draw[<->,thin] (2.5,1.7)--(3.5,1.7) node[midway,above] {$d$};
+\end{tikzpicture}

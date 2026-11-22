@@ -1,0 +1,12 @@
+% 图 6-50（题 6-7）：细杆由竖直轻绳悬挂，d 为杆上端至水平液面的高度。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (1.2,3.1)--(3.2,3.1);
+  \foreach \x in {1.3,1.6,...,3.1} \draw[thin] (\x,3.1)--(\x+0.15,3.27);
+  \draw (2.2,3.1)--(2.2,0.8);
+  \draw (-2.7,0)--(3.2,0);
+  \foreach \y in {-0.35,-0.7,-1.05} \draw[dashed,thin] (-2.6,\y)--(3,\y);
+  \draw[<->,thin] (2.65,0)--(2.65,0.8) node[midway,right] {$d$};
+  \draw[double,double distance=2pt] (-2,-0.8)--(2.2,0.8);
+  \draw (-0.5,0) arc[start angle=180,end angle={180+atan(1.6/4.2)},radius=0.6];
+  \node at (-0.73,-0.16) {$\theta$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+% 图 1-50（题 1-33）：水平绳经岸边定滑轮转向，斜绳接船。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1,3)--(2.6,3)--(2.6,0)--(8,0);
+  \node[below] at (5.4,0) {河水};
+  \coordinate (Q) at (2.35,3.15);
+  \draw (Q) circle (0.15);
+  \draw (2.35,3.15)--(2.35,3);
+  \draw (0.35,3.3)--(2.35,3.3);
+  % 斜段起点为滑轮切点，避免把绳画成岸坡。
+  \draw (2.44,3.27)--(7,0);
+  \draw[fill=white] (6.55,0)--(6.75,-0.2)--(7.35,-0.2)--(7.55,0);
+  \draw (0,3.75) circle (0.14);
+  \draw (0,3.61)--(0,3.28)--(-0.16,3);
+  \draw (0,3.28)--(0.16,3);
+  \draw (0,3.48)--(0.35,3.3);
+  \draw[->] (0.65,4.05)--(-0.65,4.05) node[midway,above] {$v_0,a_0$};
+  \draw[thin] (1.4,0)--(2.2,0);
+  \draw[thin] (1.4,3)--(2.2,3);
+  \draw[<->,thin] (1.7,0)--(1.7,3) node[midway,fill=white,inner sep=2pt] {$h$};
+  \coordinate (W) at (5.5,0);
+  \coordinate (S) at (7,0);
+  \coordinate (T) at (2.44,3.27);
+  \pic[draw,angle radius=8mm,angle eccentricity=1.45,"$\theta$"] {angle=T--S--W};
+\end{tikzpicture}

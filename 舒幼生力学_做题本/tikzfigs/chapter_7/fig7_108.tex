@@ -1,0 +1,9 @@
+% 图 7-108（题 7-42）：只保留题给的固定端及原点距离，不预先画出待求驻波。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2.5,-1.1)--(-2.5,1.4);
+  \foreach \y in {-1,-0.7,...,1.4} \draw[thin] (-2.5,\y)--(-2.68,\y-0.15);
+  \draw[->] (-2.5,0)--(3.5,0) node[right] {$x$};
+  \fill (0,0) circle (1.4pt) node[below=4pt] {$O$};
+  \draw[<->,thin] (-2.5,0.8)--(0,0.8) node[midway,above] {$\dfrac54\lambda$};
+  \draw[thin] (0,0.65)--(0,1);
+\end{tikzpicture}

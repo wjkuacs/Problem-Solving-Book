@@ -1,0 +1,11 @@
+% 图 7-111（题 7-50）：实线为自由长度位置，虚线为向右拉开 L 后的释放位置。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (0,1.4)--(0,0)--(6,0);
+  \foreach \x in {0.2,0.6,...,5.8} \draw[thin] (\x,0)--(\x-0.15,-0.15);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=3mm,amplitude=1.3mm}] (0,0.4)--(2.1,0.4);
+  \draw[fill=white] (2.1,0) rectangle (2.9,0.8);
+  \node at (2.5,0.4) {$m$};
+  \node[above] at (0.8,0.65) {$k$};
+  \draw[dashed] (4.1,0) rectangle (4.9,0.8);
+  \draw[<->,thin] (2.5,-0.45)--(4.5,-0.45) node[midway,below] {$L$};
+\end{tikzpicture}

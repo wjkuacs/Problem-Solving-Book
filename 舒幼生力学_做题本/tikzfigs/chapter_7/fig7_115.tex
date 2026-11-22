@@ -1,0 +1,17 @@
+% 图 7-115（题 7-57）：O 下方固定于 A；B 为初始位置，C 为转过 90 度的位置。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-1.5,-0.8)--(2.5,-0.8)--(3.3,1.8)--(-0.7,1.8)--cycle;
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (2,0);
+  \coordinate (C) at (0.5,1.5);
+  \draw[dashed] (O)--(0,-0.8);
+  \draw (0,-0.8)--(0,-2);
+  \draw (-0.8,-2)--(0.8,-2);
+  \node[below=3pt] at (0,-2) {$A$};
+  \draw (O)--(B) node[midway,below] {$l$};
+  \draw[dashed,thin] (O)--(C);
+  \draw[fill=white] (O) circle (1.7pt) node[left=3pt] {$O$};
+  \fill (B) circle (2pt) node[right=3pt] {$B$};
+  \fill (C) circle (1.4pt) node[above=3pt] {$C$};
+  \draw[->] (B)--++(0.3,1) node[above] {$v_0$};
+\end{tikzpicture}

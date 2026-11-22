@@ -1,0 +1,20 @@
+% 图 6-54（题 6-16）：虹吸主管与开口 U 形支管在 B 连通；所有高度使用桶底作为参考。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2,2.4)--(-2,0)--(0,0)--(0,2.4);
+  \draw (-2,2)--(0,2);
+  \foreach \y in {0.3,0.7,1.1,1.5,1.8} \draw[dashed,thin] (-1.9,\y)--(-0.1,\y);
+  \foreach \col/\wid in {black/5pt,white/3pt} {
+    \draw[draw=\col,line width=\wid,rounded corners=3mm,line cap=butt]
+      (-1,0.3)--(-1,3.3)--(1,3.3)--(1,-1.6);
+    \draw[draw=\col,line width=\wid,rounded corners=2mm,line cap=butt]
+      (1,0.5)--(2,0.5)--(2,-1.6) arc[start angle=180,end angle=360,radius=0.5]--(3,2.7);
+  }
+  \draw[dashed,thin] (0,0)--(0.65,0) (0,2)--(0.65,2) (0.25,-1.6)--(0.65,-1.6);
+  \draw[<->,thin] (0.45,0)--(0.45,2) node[midway,fill=white,inner sep=1pt] {$h_1$};
+  \draw[<->,thin] (0.45,-1.6)--(0.45,0) node[midway,fill=white,inner sep=1pt] {$h_2$};
+  \node[below=4pt] at (1,-1.6) {$C$};
+  \node[above=3pt] at (1.5,0.5) {$B$};
+  \draw[dashed,thin] (2.8,2)--(3.2,2) node[right] {$Q_0$};
+  \draw[thin] (2.94,-1.6)--(3.06,-1.6);
+  \node[right=5pt] at (3,-1.6) {$Q$};
+\end{tikzpicture}

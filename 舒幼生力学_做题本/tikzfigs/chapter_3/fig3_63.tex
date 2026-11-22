@@ -1,0 +1,10 @@
+% 图 3-63（题 3-38）：A、B 之间为松弛轻绳，不是弹簧；B 初始位于桌边。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2.2,0)--(1.4,0)--(1.4,-2.4);
+  \fill (0.15,0.13) circle (0.13) node[above=3pt] {$A$};
+  \fill (1.27,0.13) circle (0.13) node[above=3pt] {$B$};
+  \draw[thin] (0.28,0.13)
+    .. controls (0.45,0.34) and (0.53,-0.03) .. (0.66,0.13)
+    .. controls (0.78,0.29) and (0.95,-0.02) .. (1.14,0.13);
+  \draw[->] (1.7,0.13)--(2.9,0.13) node[midway,below] {$v_0$};
+\end{tikzpicture}

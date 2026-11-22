@@ -1,0 +1,14 @@
+% 图 1-45（题 1-20）：等边三角形和正方形的边长均为 0.8。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw[->] (-2.5,0)--(3,0) node[below] {$x$};
+  \draw[->] (0,-2.5)--(0,3) node[left] {$y$};
+  \node[below left] at (0,0) {$O$};
+  \coordinate (Op) at (1.5,1.5);
+  \draw[dashed] (-2,-2)--(Op);
+  \draw[fill=white] (-2.4,-2.4) rectangle (-1.6,-1.6);
+  \draw[fill=white] (Op)--({1.5-0.4},{1.5-sqrt(3)*0.4})
+    --({1.5+0.4},{1.5-sqrt(3)*0.4})--cycle;
+  \draw[->] (Op)--(2.8,1.5) node[right] {$x'$};
+  \draw[->] (Op)--(1.5,2.8) node[right] {$y'$};
+  \node[above left] at (Op) {$O'$};
+\end{tikzpicture}

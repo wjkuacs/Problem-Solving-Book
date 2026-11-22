@@ -1,0 +1,14 @@
+% 图 7-101（题 7-21）：两个圆柱同时与地面和上方平板接触。
+\begin{tikzpicture}[>=Stealth,thick]
+  \draw (-2.7,1.4)--(-2.7,0)--(2.7,0)--(2.7,1.4);
+  \foreach \x in {-0.75,0.75} {
+    \draw (\x,0.35) circle (0.35);
+    \node[font=\small] at (\x,0.35) {$m$};
+  }
+  \draw[fill=white] (-1.4,0.7) rectangle (1.4,1);
+  \node[above=2pt] at (0,1) {$M$};
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1.2mm}] (-2.7,0.85)--(-1.4,0.85);
+  \draw[decorate,decoration={coil,aspect=0.5,segment length=2.5mm,amplitude=1.2mm}] (1.4,0.85)--(2.7,0.85);
+  \node[above] at (-2.1,1.05) {$k$};
+  \node[above] at (2.1,1.05) {$k$};
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+% 图 5-96（题 5-43）：两盘准确外切，初始自转均为顺时针。
+\begin{tikzpicture}[>=Stealth,thick]
+  \def\rone{1.15}\def\rtwo{1.05}
+  \coordinate (O1) at (0,0);
+  \coordinate (O2) at ({\rone+\rtwo},0);
+  \draw (O1) circle (\rone);
+  \draw (O2) circle (\rtwo);
+  \fill (O1) circle (1.4pt) (O2) circle (1.4pt);
+  \node at (0,0.55) {$m_1$};
+  \node at ({\rone+\rtwo},0.55) {$m_2$};
+  \draw[thin] (O1)--++(230:\rone) node[midway,below left=1pt] {$R_1$};
+  \draw[thin] (O2)--++(315:\rtwo) node[midway,below right=1pt] {$R_2$};
+  \draw[->] (210:1.4) arc[start angle=210,end angle=140,radius=1.4] node[midway,left=3pt] {$\omega_1$};
+  \draw[->] ($(O2)+(50:1.3)$) arc[start angle=50,end angle=-20,radius=1.3] node[midway,right=3pt] {$\omega_2$};
+\end{tikzpicture}
