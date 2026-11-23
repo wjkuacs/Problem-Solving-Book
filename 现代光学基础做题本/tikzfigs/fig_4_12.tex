@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[glass](-2,-.35)rectangle(2,0);
+\draw[fill=gray!15](-1.7,0)rectangle(-1.2,1.8);
+\draw[fill=gray!15](1.2,0)rectangle(1.7,1.8);
+\draw[fill=gray!28](-.4,0)--(.4,0)--(.4,1.69)--(-.4,1.80)--cycle;
+\draw[glass](-2,1.86)rectangle(2,2.15);
+\node at(-1.45,.9){$G$};\node at(1.45,.9){$G$};\node at(0,.9){$C$};
+\node[right]at(2,2.01){$T_1$};\node[right]at(2,-.17){$T_2$};
+\foreach \x in {-1.6,-.8,0,.8,1.6}{\draw[->](\x,3.3)--(\x,2.5);}
+\foreach \x in {-1.5,-.5,.5,1.5}{\draw(\x,1.98)--++(.1,.1) (\x,-.2)--++(.1,.1);}
+\end{tikzpicture}

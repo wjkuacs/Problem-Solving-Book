@@ -1,0 +1,16 @@
+\begin{tikzpicture}
+\begin{scope}
+\clip (0,1.8) circle(1.05);
+\fill[white] (-1.1,.7) rectangle(1.1,2.9);
+\foreach \x in {-.96,-.72,...,.96}{\draw (\x,.7)--(\x,2.9);}
+\end{scope}
+\draw (0,1.8) circle(1.05);
+\draw[line width=2pt] (.98,1.45)--(.98,2.15);
+\node[right] at(1.12,2.3){细丝};\draw(1.12,2.15)--(1,1.95);
+\draw[dashed](-1.05,1.8)--(-1.05,-1.45) (1.05,1.8)--(1.05,-1.45);
+\foreach \x in {-.9,-.45,0,.45,.9}{\draw[->](\x,.6)--(\x,.1);}
+\draw[glass](-1.05,-.5)--(1.05,-.37)--(1.05,-.65)--(-1.05,-.78)--cycle;
+\draw[glass](-1.05,-.82)rectangle(1.05,-1.12);
+\draw[line width=1.8pt](.98,-.66)--(.98,-.82);
+\draw[<->](1.4,-.65)--(1.4,-.82);\node[right]at(1.4,-.73){$d$};
+\end{tikzpicture}

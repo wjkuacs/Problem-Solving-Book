@@ -1,0 +1,154 @@
+\clearpage
+\setcounter{chapter}{5}
+\chaptermark{多元多维结构衍射与分形光学}
+\pdfbookmark[0]{第五章 多元多维结构衍射与分形光学}{chapter5}
+\problem{5-1}{
+如图所示，有三个不同字符的孔型衍射屏，试分别导出其夫琅禾衍射场 $\widetilde U_a(\theta_1,\theta_2)$、$\widetilde U_b(\theta_1,\theta_2)$ 和 $\widetilde U_c(\theta_1,\theta_2)$。设入射光为正入射，其振幅为 $A$，波长为 $\lambda$；字符尺寸已标在图上。
+
+提示：字符（a）和（c）可以看为一个大方孔减去若干个小方孔，这也许能简化推导。
+\tikzfig{fig_5_1}{5-1}
+}
+\problem{5-2}{
+有 $5$ 个正方孔斜向排列如图所示，试求其夫琅禾衍射场 $\widetilde U(\theta_1,\theta_2)$ 及其强度分布 $I(\theta_1,\theta_2)$，并要求在坐标纸上粗略地描绘出衍射花样，注意到它与正方孔衍射图样的主要区别。
+\tikzfig{fig_5_2}{5-2}
+}
+\problem{5-3}{
+如图所示，有三条平行狭缝，宽度均为 $a$，缝距分别为 $d$ 和 $2d$。试证明，平行光正入射时其夫琅禾衍射强度公式为
+\[
+I(\theta)=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2
+\left(3+2(\cos2\beta+\cos4\beta+\cos6\beta)\right),
+\]
+\[
+\alpha=\frac{\pi a\sin\theta}{\lambda},\qquad
+\beta=\frac{\pi d\sin\theta}{\lambda}.
+\]
+\tikzfig{fig_5_3}{5-3}
+}
+\problem{5-4}{
+如图所示，有两个宽度分别为 $a$ 和 $2a$ 的狭缝，其缝距为 $d=3a$。试导出，平行光正入射时其夫琅禾衍射强度公式为
+\[
+I(\theta)=I_0\left(\frac{\sin\alpha}{\alpha}\right)^2
+\left(3+2(\cos2\alpha+\cos5\alpha+\cos7\alpha)\right),
+\qquad \alpha=\frac{\pi a\sin\theta}{\lambda}.
+\]
+$I_0$ 为宽度 $a$ 的单缝衍射零级斑中心强度。
+\tikzfig{fig_5_4}{5-4}
+}
+\problem{5-5}{
+如图所示，有 $2N$ 条狭缝且缝宽均为 $a$，而缝间不透明部位的宽度作周期性变化，$a,3a,a,3a,\ldots$。试导出，平行光正入射时其夫琅禾衍射强度公式为
+\[
+I(\theta)=4I_0(\cos2\alpha)^2
+\left(\frac{\sin\alpha}{\alpha}\frac{\sin6N\alpha}{\sin6\alpha}\right)^2,
+\qquad \alpha=\frac{\pi a\sin\theta}{\lambda}.
+\]
+$I_0$ 为单缝衍射零级斑中心强度。
+\tikzfig{fig_5_5}{5-5}
+}
+\problem{5-6}{
+试导出，平行光斜入射时多缝夫琅禾衍射强度公式为
+\[
+I(\theta)=i_0\left(\frac{\sin\alpha}{\alpha}\right)^2
+\left(\frac{\sin N\beta}{\sin\beta}\right)^2,
+\]
+\[
+\alpha=\frac{\pi a}{\lambda}(\sin\theta-\sin\theta_0),\qquad
+\beta=\frac{\pi d}{\lambda}(\sin\theta-\sin\theta_0),
+\]
+这里，$\theta_0$ 为入射光束与多缝平面法线之夹角。并据此给出：
+\begin{enumerate}
+\item 斜入射时多缝衍射主极强位置公式。
+\item 第 $k$ 级主极强半角宽度公式，且与正入射时相比较。
+\end{enumerate}
+}
+\problem{5-7}{
+如果要求一个 $50$ 条/$\mathrm{mm}$ 的低频光栅在其第 $2$ 级光谱中，能分辨钠黄光双线 $5890\,\text{\AA}$ 和 $5896\,\text{\AA}$，问光栅的有效宽度 $D$ 至少为多少？
+}
+\problem{5-8}{
+某光源发射波长为 $650\,\mathrm{nm}$ 的红光谱线，经观测发现它是双线。如果在 $10^5$ 条刻线光栅的第 $3$ 级光谱中刚好能分辨开此双线，求其波长差 $\delta\lambda$。
+}
+\problem{5-9}{
+用一光栅常数 $d$ 为 $2.5\times10^{-3}\,\mathrm{mm}$、宽度 $D$ 为 $30\,\mathrm{mm}$ 的光栅，试图分析绿光 $500\,\mathrm{nm}$ 附近的光谱。
+\begin{enumerate}
+\item 求其第 $1$ 级光谱的角色散 $D_\theta$。
+\item 求其第 $1$ 级光谱的线色散 $D_l$，设聚光镜的焦距为 $50\,\mathrm{cm}$。
+\item 求其第 $1$ 级光谱中能分辨的最小波长差 $\delta\lambda$。
+\item 若将此光栅当作一单色仪使用，问：在紫光谱区该单色仪输出的准单色光其线宽 $\Delta\lambda$ 为多少？设出射狭缝宽度 $\delta s$ 被调节为 $0.1\,\mathrm{mm}$ 为最佳。
+\end{enumerate}
+}
+\problem{5-10}{
+一束白光（$380$--$760\,\mathrm{nm}$）正入射于一块 $600$ 线/$\mathrm{mm}$ 的多缝透射光栅上。试求其第 $1$ 序光谱末端与其第 $2$ 序光谱始端之间角隔 $\Delta\theta$。
+}
+\problem{5-11}{
+一光栅摄谱仪的说明书中所列数据如下：
+
+物镜焦距 $1050\,\mathrm{mm}$，刻划面积 $60\,\mathrm{mm}\times40\,\mathrm{mm}$，闪耀波长 $3650\,\text{\AA}$（$1$ 级），刻线密度 $1200$ 线/$\mathrm{mm}$，色散 $8\,\text{\AA}/\mathrm{mm}$，理论分辨率 $7.2\times10^4$（$1$ 级）。试从以上所给数据，求出：
+\begin{enumerate}
+\item 该摄谱仪能分辨的最小波长间隔 $\delta\lambda_{\mathrm m}$ 为多少？
+\item 该摄谱仪的角色散率 $D_\theta$ 为多少？
+\item 该光栅的闪耀角 $\theta_{\mathrm b}$ 为多少？闪耀方向与光栅平面法线之夹角 $\Delta\theta$ 为多少？
+\item 与该摄谱仪匹配的记录介质的空间分辨率 $N$ 至少为多少（线/$\mathrm{mm}$）？
+\end{enumerate}
+}
+\problem{5-12}{
+一光栅摄谱仪用以分析波段在 $600\,\mathrm{nm}$、相隔约 $5\times10^{-2}\,\mathrm{nm}$ 的若干谱线。设此光栅刻痕密度为 $300$ 线/$\mathrm{mm}$，而摄谱仪的焦距为 $30\,\mathrm{cm}$。
+\begin{enumerate}
+\item 要求其 $1$ 序光谱可被分辨，该光栅的有效宽度 $D$ 至少为多少？
+\item 与之匹配的记录介质的空间分辨率 $N$ 应至少取多大（线/$\mathrm{mm}$）？
+\end{enumerate}
+}
+\problem{5-13}{
+关于光栅的最小偏向角。如图所示，当光束以倾角 $\theta_0$ 斜入射于光栅时，在倾斜向下的衍射方向上出现的第一个主极强角方位 $\theta$ 应满足条件
+\[
+d(\sin\theta+\sin\theta_0)=k\lambda,
+\]
+于是出现了一个偏向角 $\delta=\theta+\theta_0$；上式可转化为
+\[
+d\left(\sin(\delta-\theta_0)+\sin\theta_0\right)=k\lambda.
+\]
+试证明，当入射角 $\theta_0$ 为一特定值 $\theta_{\mathrm m}$ 时，出现的偏向角 $\delta_{\mathrm m}$ 为最小，两者由下式给出：
+\[
+2d\sin\theta_{\mathrm m}=k\lambda,\qquad \delta_{\mathrm m}=2\theta_{\mathrm m}.
+\]
+\tikzfig{fig_5_13}{5-13}
+}
+\problem{5-14}{
+二维晶片的共面衍射，参见正文图 5.21。单色光沿 $z$ 轴方向入射于二维晶片，试确定与晶片共面的 $(xz)$ 平面内，可能出现的夫琅禾衍射主峰的数目 $N$ 及其方位角，设
+\begin{enumerate}
+\item $d_1=5\lambda$，$d_2=10\lambda$；
+\item $d_1=8\lambda$，$d_2=6\lambda$。
+\end{enumerate}
+}
+\problem{5-15}{
+利用二元光学蚀刻技术，获得一长条沟槽形薄膜样品如图所示，现将其作为衍射屏置于一透镜前方，在后焦面上接收其夫琅禾衍射场。设样品沟槽深度 $h=5\lambda/2$，沟槽宽度分别为 $a,3a,a$，样品长度 $b\gg a$，以至于它可以近似地看作一维衍射；膜层用胶的折射率 $n$ 为 $1.5$。
+\begin{enumerate}
+\item 从图中虚线所显示的衍射物平面看，作为次波源的中间宽条与上下两个窄条的相位差 $\delta_0$ 为多少？
+\item 导出该样品的夫琅禾衍射场 $\widetilde U(\theta)$。
+\end{enumerate}
+\tikzfig{fig_5_15}{5-15}
+}
+\problem{5-16}{
+{\small
+讨论题——光栅光谱中的鬼线（Rowland ghosts）。它源于刻划光栅过程中机械位移装置出现的不可避免的周期性误差。现以多缝透射光栅为对象，考量这周期性误差对光栅光谱的影响。如图所示，一块大光栅被分断为 $M$ 个小光栅。每个小光栅内部保持了严格的周期性，其单元数目为 $N$、周期为 $d$；两个相邻小光栅的间隔均为 $\Delta$。它是由机械位移的误差所带来的，倒也是有周期性，一般说 $\Delta$ 值与 $d$ 同量级，比如 $\Delta\approx1.6d$ 或 $2.3d$；如果以小光栅为一个衍射单元，则这一块大光栅所包含的单元总数为 $M$，周期为 $d'=(Nd+\Delta)$。兹展开讨论如下。
+\begin{enumerate}[itemsep=.2em,topsep=.3em]
+\item 试导出这块光栅的夫琅禾衍射场为
+\[
+\widetilde U(\theta)=\widetilde u_0(\theta)\,\widetilde S_N(\theta)\,\widetilde S_M(\theta)
+=\widetilde u_0\,\frac{\sin N\beta}{\sin\beta}\,\frac{\sin M\beta'}{\sin\beta'},
+\]
+\[
+\beta=\frac{\pi d\sin\theta}{\lambda},\qquad
+\beta'=\frac{\pi d'\sin\theta}{\lambda}
+=\frac{\pi(Nd+\Delta)\sin\theta}{\lambda}.
+\]
+这里，$\widetilde u_0(\theta)$ 为单元即单缝之衍射场。
+\item 试给出由结构因子 $\widetilde S_N(\theta)$ 所决定的 $k$ 级主峰方位角 $\theta_k$ 公式和半角宽度 $\Delta\theta_k$ 公式；试给出由结构因子 $\widetilde S_M(\theta)$ 所决定的 $k'$ 级主峰方位角 $\theta'_{k'}$ 公式和半角宽度 $\Delta\theta'_{k'}$ 公式；并注意到 $\Delta\theta_k\gg\delta\theta'$，$\delta\theta'$ 是由 $\widetilde S_M$ 决定的主峰角间隔。
+\item 用一张坐标纸分别绘制 $\widetilde S_N(\theta)$ 曲线、$\widetilde S_M(\theta)$ 曲线以及 $\widetilde S_N\cdot\widetilde S_M$ 乘积曲线，横坐标表示 $\sin\theta$。可取用典型数据如下：$1/d\approx600$ 线/$\mathrm{mm}$，$N\approx2\,\mathrm{mm}\times600/\mathrm{mm}=1200$，$M=5\,\mathrm{cm}/2\,\mathrm{mm}=25$。
+\item 分别就 $\Delta=1.5d$、$2.0d$、$3.3d$ 三种情况，回答：
+\begin{enumerate}[label=\roman*.,itemsep=.1em,topsep=.2em]
+\item 小光栅衍射而出现的主峰是否最终被保留下来？
+\item 在小光栅所产生的主（峰）谱线两侧是否可能出现较弱的伴线（鬼线）？
+\end{enumerate}
+\end{enumerate}
+\tikzfig{fig_5_16}{5-16}
+}
+}

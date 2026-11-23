@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.8]
+\foreach \j/\lab in {0/负晶体,1/负晶体,2/正晶体,3/正晶体}{
+\begin{scope}[shift={({3.3*\j},0)}]
+\draw[glass](0,-1.5)rectangle(1,1.5);
+\foreach \y in {-1,0,1}{
+\draw[ray](-1.15,\y)--(0,\y);
+\ifodd\j
+\draw[dashed](0,{\y-.24})--(1,{\y+.24});
+\else
+\draw[dashed](0,{\y+.24})--(1,{\y-.24});
+\fi}
+\draw[<->](-.75,-.2)--(-.75,.2);\fill(-.75,0)circle(1pt);
+\node[below]at(.5,-1.65){\lab};
+\end{scope}}
+\end{tikzpicture}

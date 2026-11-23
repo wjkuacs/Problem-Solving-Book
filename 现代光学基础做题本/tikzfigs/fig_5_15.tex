@@ -1,0 +1,11 @@
+\begin{tikzpicture}[x=.8cm,y=.65cm]
+\draw[fill=gray!6](0,0)--(1.1,0)--(1.1,1)--(.35,1)--(.35,4)--(1.1,4)--(1.1,5)--(0,5)--cycle;
+\draw[dashed](-.18,-.2)--(-.18,5.2);
+\node at(.6,4.55){$n$};
+\foreach \y in {.4,1.2,2,2.8,3.6,4.4}{\draw[ray](-2.5,\y)--(-.6,\y);}
+\foreach \lo/\hi/\lab in {0/1/a,1/4/3a,4/5/a}{\draw[|<->|](-.5,\lo)--(-.5,\hi)node[midway,left]{$\lab$};}
+\draw[|<->|](.35,-.4)--(1.1,-.4)node[midway,below]{$h$};
+\draw(1.1,2.2)--(3.6,2.2);
+\draw[ray](1.1,2.2)--(3.5,3.7);
+\draw(2,2.2)arc(0:32:.9);\node at(2.35,2.65){$\theta$};
+\end{tikzpicture}

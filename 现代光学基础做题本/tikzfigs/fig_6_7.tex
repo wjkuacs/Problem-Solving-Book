@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\coordinate(Q)at(-3.2,.65);
+\draw[axis](-3.7,0)--(2,0)node[right]{$z$};
+\draw(0,-1.8)--(0,2.1)node[above]{$(xy)$};
+\draw[glass](-.14,-1.5)rectangle(0,1.5);
+\foreach \y in {-1.5,0,1.5}{\draw[ray](Q)--(0,\y);}
+\fill(Q)circle(1.5pt);\node[above left]at(Q){$Q$};
+\draw[|<->|](-3.55,0)--(-3.55,.65)node[midway,left]{$x_0$};
+\draw[|<->|](-3.2,-1.9)--(0,-1.9)node[midway,fill=white]{$s$};
+\end{tikzpicture}

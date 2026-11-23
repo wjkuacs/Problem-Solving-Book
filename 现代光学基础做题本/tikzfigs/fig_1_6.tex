@@ -1,0 +1,15 @@
+\begin{tikzpicture}
+\draw[axis](-.7,0)--(3.7,0) node[right]{$x$};
+\draw[axis](0,-.4)--(0,3.5) node[above]{$y$};
+\draw[glass](0,0)rectangle(1.8,2.5);
+\draw[ray](-.7,0)--(0,0);
+\draw[ray,domain=0:1.8,samples=70]plot(\x,{3.6-sqrt(3.6*3.6-\x*\x)});
+\coordinate(A)at(1.8,.4823);
+\draw[ray](A)--(3,1.1751);
+\draw[dashed](A)--(3,.4823);
+\draw (2.5,.4823) arc(0:30:.7);
+\node at(2.73,.72){$\alpha$};\node[below right]at(A){$A$};
+\node[below left]at(0,0){$O$};
+\draw[<->](0,-.35)--(1.8,-.35)node[midway,fill=white]{$d$};
+\foreach \x/\y in {.35/2,.9/2,1.4/1.1,.5/1.1}{\draw(\x,\y)--++(.12,.16) (\x+.08,\y)--++(.12,.16);}
+\end{tikzpicture}

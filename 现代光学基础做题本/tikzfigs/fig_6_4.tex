@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\foreach \x in {-1.8,-.9,0,.9,1.8}{\draw[ray](\x,2)--(\x,.65);}
+\draw(-1.8,0)rectangle(1.8,.45);
+\draw(-1.8,-.4)rectangle(1.8,0);
+\draw[domain=-1.8:1.8,samples=100]plot(\x,{.25+.04*sin(1200*\x)});
+\node[right]at(1.9,.25){$G$};
+\node[right]at(1.9,-.2){$H$};
+\end{tikzpicture}

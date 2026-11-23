@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=.85]
+\draw(-2.6,-2.6)rectangle(2.6,2.6);
+\draw[axis](-2.1,0)--(2.2,0)node[right]{$x$};
+\draw[axis](0,-2.1)--(0,2.2)node[above]{$y$};
+\foreach \s in {-2,-1,0,1,2}{
+\draw[fill=white]({.65*\s-.325},{-.65*\s-.325})rectangle({.65*\s+.325},{-.65*\s+.325});
+\fill({.65*\s},{-.65*\s})circle(1pt);}
+\draw[|<->|](.975,-1.95)--(1.625,-1.95)node[midway,below]{$a$};
+\end{tikzpicture}

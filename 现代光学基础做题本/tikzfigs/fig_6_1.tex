@@ -1,0 +1,9 @@
+\begin{tikzpicture}
+\draw[axis](-2.2,0)--(3,0)node[right]{$z$};
+\draw[axis](0,-2.1)--(0,2.2)node[above]{$r$};
+\draw[glass](0,-1.5)rectangle(.28,1.5);
+\foreach \y in {-1.5,-.5,.5,1.5}{\draw[ray](-2,\y)--(-.4,\y);}
+\node[below left]at(0,0){$O$};
+\node[left]at(0,1.5){$a$};\node[left]at(0,-1.5){$a$};
+\foreach \y in {-1.2,-.7,.3,.9}{\draw(.07,\y)--++(.1,.12);}
+\end{tikzpicture}

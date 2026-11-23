@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw(-3.2,0)--(4.7,0);
+\draw(-2.5,-1.6)--(-2.5,2)node[above]{$(x_0y_0)$};
+\draw(0,-1.6)--(0,2)node[above]{$(xy)$};
+\draw(3.7,-1.6)--(3.7,2)node[above]{$(x'y')$};
+\draw[glass](.25,-1.5)..controls(-.12,-.5)and(-.12,.5)..(.25,1.5)..controls(.62,.5)and(.62,-.5)..cycle;
+\foreach \y in {-1.1,-.55,0,.55,1.1}{\draw[ray](-4,\y)--(-3,\y);}
+\fill(-2.5,0)circle(1.5pt);\fill(-2.5,.7)circle(1.5pt);
+\node[below left]at(-2.5,0){$O$};\node[left]at(-2.5,.7){$Q$};
+\draw[<->](-1.95,0)--(-1.95,.7)node[midway,right]{$a$};
+\draw[<->](-2.5,-1.35)--(.25,-1.35)node[midway,fill=white]{$F$};
+\draw[<->](.25,-1.35)--(3.7,-1.35)node[midway,fill=white]{$F$};
+\end{tikzpicture}

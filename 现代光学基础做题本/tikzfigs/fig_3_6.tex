@@ -1,0 +1,10 @@
+\begin{tikzpicture}[scale=1]
+\fill[gray!9] (-2,-.85) rectangle (2,0);
+\draw (-2,0)--(2,0) (-2,-.85)--(2,-.85);
+\draw[ray] (-1.8,1.15) node[left]{$I_0$}--(0,0);
+\draw[ray] (0,0)--(1.8,1.15) node[right]{$1$};
+\draw[ray] (0,0)--(.8,-.85) node[pos=.55,left]{$2$};
+\draw[ray] (.8,-.85)--(1.6,0) node[pos=.55,left]{$3$};
+\draw[ray] (.8,-.85)--(1.8,-1.55) node[right]{$4$};
+\foreach \x in {-1.6,-.9,.3,1.7}{\draw (\x,-.3)--++(.12,.12) (\x+.07,-.33)--++(.12,.12);}
+\end{tikzpicture}

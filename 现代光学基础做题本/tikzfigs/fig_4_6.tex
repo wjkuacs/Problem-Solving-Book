@@ -1,0 +1,15 @@
+\begin{tikzpicture}[scale=.88]
+\coordinate(S) at(-3,0);\coordinate(P) at(5,0);
+\draw[glass] (-1,-1.5) .. controls (-1.55,-.7) and (-1.55,.7) .. (-1,1.5) .. controls (-.45,.7) and (-.45,-.7) .. cycle;
+\draw[glass] (3,-1.5) .. controls (2.45,-.7) and (2.45,.7) .. (3,1.5) .. controls (3.55,.7) and (3.55,-.7) .. cycle;
+\draw (-.35,-1.45)--(-.35,-.78) (-.35,-.52)--(-.35,.52) (-.35,.78)--(-.35,1.45);
+\foreach \y in {-.65,.65}{
+\draw[ray] (S)--(-1,\y);
+\draw[ray] (-1,\y)--(3,\y);
+\draw[ray] (3,\y)--(P);}
+\draw[glass] (0,.45) rectangle (2.5,.85);
+\draw[draw,pattern=dots,pattern color=gray] (0,-.85) rectangle(2.5,-.45);
+\node[above] at(1.25,.85){$T_1$};\node[below] at(1.25,-.85){$T_2$};
+\fill(S)circle(1.6pt);\fill(P)circle(1.6pt);
+\node[left]at(S){$S$};\node[right]at(P){$P$};
+\end{tikzpicture}

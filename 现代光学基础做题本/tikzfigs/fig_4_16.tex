@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\draw[fill=gray!7](-2.05,0)arc(180:0:2.05)--cycle;
+\draw(-1.93,0)arc(180:0:1.93);
+\draw[fill=white](-.4,0)--(-.4,.07)arc(160:20:.426)--(.4,0)--cycle;
+\node[below]at(0,0){发光区};\node at(1.15,.35){GaAs};
+\foreach \a in {27,65,100,135,155}{
+\draw[ray]({.5*cos(\a)},{.5*sin(\a)})--({2.8*cos(\a)},{2.8*sin(\a)});}
+\node[left]at(-2.15,1.15){空气};
+\draw(1.7,1.65)--(1.35,1.42);\node[right]at(1.7,1.65){增透膜};
+\end{tikzpicture}

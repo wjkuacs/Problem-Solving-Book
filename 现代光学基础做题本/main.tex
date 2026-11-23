@@ -1,0 +1,31 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany]{ctexbook}
+\usepackage{amsmath,amssymb,graphicx,enumitem,geometry,fancyhdr}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.markings}
+\tikzset{ray/.style={thin,postaction={decorate},decoration={markings,mark=at position .57 with {\arrow{Stealth}}}},axis/.style={thin,-{Stealth[length=1.5mm]}},glass/.style={draw,fill=gray!7},every node/.style={font=\small}}
+\usepackage[unicode,hidelinks]{hyperref}
+\geometry{left=24mm,right=24mm,top=23mm,bottom=22mm,headheight=16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{现代光学基础做题本}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.16}
+\setlist[enumerate]{label=（\arabic*）,leftmargin=2.6em,itemsep=0.4em,topsep=0.5em}
+\newcommand{\problem}[2]{\clearpage\phantomsection\pdfbookmark[1]{习题 #1}{p#1}\noindent{\large\bfseries 习题 #1}\par\medskip #2}
+\newcommand{\tikzfig}[2]{\begin{center}\input{tikzfigs/#1.tex}\par\smallskip{\small 习题 #2 图}\end{center}}
+\begin{document}
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\input{chapters/chapter8.tex}
+\input{chapters/chapter9.tex}
+\end{document}

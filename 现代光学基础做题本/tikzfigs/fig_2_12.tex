@@ -1,0 +1,13 @@
+\begin{tikzpicture}
+\draw[axis](-2.7,0)--(2.8,0)node[right]{$z$};
+\draw(0,-1.9)--(0,1.95)node[above]{$(xy)$};
+\foreach \y in {-.55,0,.55}{
+\draw[ray](-2.5,{1.6+\y})--(-1.4,{.85+\y});
+\draw[ray](-2.5,{-1.6+\y})--(-1.4,{-.85+\y});
+\draw[ray](-2.5,\y)--(-1.4,\y);}
+\draw[axis](0,0)--(1.25,.85)node[right]{$\boldsymbol k_1$};
+\draw[axis](0,0)--(1.25,-.85)node[right]{$\boldsymbol k_2$};
+\node[below]at(1.3,0){$\boldsymbol k_0$};
+\draw(.7,0)arc(0:34.2:.7) (.7,0)arc(0:-34.2:.7);
+\node at(.91,.27){$\theta$};\node at(.91,-.27){$\theta$};
+\end{tikzpicture}

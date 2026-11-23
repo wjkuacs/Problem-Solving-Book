@@ -1,0 +1,15 @@
+# Build outputs
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+*.fls
+*.fdb_latexmk
+*.xdv
+
+# Publish the compiled workbook despite the repository-wide PDF ignore.
+!main.pdf
+
+# Earlier raster backups are not required by the TikZ project.
+figures/

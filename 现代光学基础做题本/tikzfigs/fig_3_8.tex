@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\draw[fill=gray!6] (-2,0) arc[start angle=180,end angle=0,radius=2]--cycle;
+\draw[fill=white] (-.55,0) rectangle (.55,.11);
+\node[below left] at (-.55,0){$A$};
+\node[below right] at (.55,0){$B$};
+\draw[<->] (-.55,-.55)--(.55,-.55) node[midway,fill=white]{$d$};
+\draw[ray] (0,.15)--(0,1.4);
+\draw[ray] (-.45,.15)--(-1.2,.9);
+\draw[ray] (.45,.15)--(1.2,.9);
+\node at (.65,1.45){GaAs};
+\node at (0,2.35){空气};
+\end{tikzpicture}

@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\coordinate(S) at (-3,0);\coordinate(A) at (-1.6,.65);\coordinate(B) at (-1.6,-.65);\coordinate(P) at (2.8,.65);
+\draw (-1.6,-1.4)--(-1.6,-.78) (-1.6,-.52)--(-1.6,.52) (-1.6,.78)--(-1.6,1.4);
+\draw (2.8,-1.5)--(2.8,1.6);
+\draw[ray] (S)--(A);\draw[ray] (S)--(B);\draw[ray] (A)--(P);\draw[ray] (B)--(P);
+\draw[glass] (-1.2,.43) rectangle (.15,.87);
+\draw[->] (-.85,.65)--(-.25,.65);
+\draw[<->] (-1.2,1.15)--(.15,1.15) node[midway,above]{$l$};
+\fill (S) circle(1.5pt);\fill (P) circle(1.5pt);
+\node[left] at(S){$S$};\node[left] at(A){$S_1$};\node[left] at(B){$S_2$};\node[right] at(P){$P$};
+\end{tikzpicture}

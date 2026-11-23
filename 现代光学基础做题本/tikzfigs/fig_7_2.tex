@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=.68]
+\foreach \j/\lab in {0/a,1/b,2/c}{
+\begin{scope}[shift={({5.3*\j},0)}]
+\draw[axis](-3.2,0)--(1.6,0)node[right]{$z$};
+\draw[axis](0,-1.8)--(0,2)node[above]{$x$};
+\draw[glass](0,-1.45)rectangle(.12,1.45);
+\node[below right]at(.12,-1.45){$H$};
+\ifnum\j=0
+\coordinate(Q)at(-2.9,-1.05);
+\foreach \y in {-1,0,1}{\draw[ray](Q)--(0,\y);}
+\foreach \y in {0,1}{\draw[ray](-3.1,\y)--(-1.6,\y);}
+\fill(Q)circle(1.5pt);\node[below left]at(Q){$\widetilde O$};
+\node at(-2.3,1.45){$\widetilde R$};
+\draw[|<->|](-3.3,-1.05)--(-3.3,0)node[midway,left]{$x_0$};
+\draw[|<->|](-2.9,-1.65)--(0,-1.65)node[midway,fill=white]{$z_0$};
+\else\ifnum\j=1
+\foreach \y in {-1,0,1}{\draw[ray](-3.1,\y)--(0,\y);}
+\node at(-2.4,1.45){$\widetilde R'$};
+\else
+\foreach \y in {-1,0,1}{\draw[ray](-3.1,0)--(0,\y);}
+\draw[|<->|](-3.1,-1.65)--(0,-1.65)node[midway,fill=white]{$z'$};
+\fi\fi
+\node at(-.8,-2.3){(\lab)};
+\end{scope}}
+\end{tikzpicture}

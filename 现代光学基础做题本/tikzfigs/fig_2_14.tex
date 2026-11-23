@@ -1,0 +1,7 @@
+\begin{tikzpicture}[x=.9cm,y=.65cm]
+\draw[axis](0,0)--(8.7,0)node[right]{$x$};
+\draw[axis](0,0)--(0,4.7)node[above]{$I(x)$};
+\draw(-.1,2)--(8.3,2);
+\draw[domain=0:8.2,samples=450,smooth]plot(\x,{2+2*exp(-.38*\x)*cos(360*\x)});
+\node[left]at(0,0){$O$};\node[left]at(0,2){$2I_0$};\node[left]at(0,4){$4I_0$};
+\end{tikzpicture}

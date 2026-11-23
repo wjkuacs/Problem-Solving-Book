@@ -1,0 +1,240 @@
+\clearpage
+\setcounter{chapter}{6}
+\chaptermark{傅里叶变换光学与相因子分析方法}
+\pdfbookmark[0]{第六章 傅里叶变换光学与相因子分析方法}{chapter6}
+\problem{6-1}{
+用变折射率材料制成一微透镜如图所示，其折射率变化呈抛物线型，
+\[
+n(r)=n_0\left(1-\frac12\alpha r^2\right),\qquad r^2=x^2+y^2.
+\]
+\begin{enumerate}
+\item 试给出其屏函数 $\widetilde t(x,y)$，设其厚度为 $d$，孔径为 $a$，且 $a\gg d\gg\lambda$。
+\item 试由相因子分析法导出该透镜的焦距公式为
+\[
+F=\frac{1}{\alpha n_0d},\qquad \text{或}\qquad F=\frac{a^2}{2(n_0-n_a)d}.
+\]
+\item 若要求 $F\approx1\,\mathrm{mm}$，问变折射率系数 $\alpha$ 值应为多少？设 $d\approx10\,\mu\mathrm m$，$a\approx100\,\mu\mathrm m$，$n_0\approx1.68$。
+\end{enumerate}
+\tikzfig{fig_6_1}{6-1}
+}
+\problem{6-2}{
+一块余弦光栅，其栅条密度 $1/d_0$ 为 $300$ 线/$\mathrm{mm}$，现将其作为衍射屏被一平行光照射，而在后焦面 $(x'y')$ 上接收其夫琅禾衍射场。设焦距 $F$ 为 $200\,\mathrm{mm}$，光波长 $\lambda$ 为 $0.6\,\mu\mathrm m$。
+\begin{enumerate}
+\item 当栅条沿平行于 $x$ 轴方向时，试写出其屏函数 $\widetilde t(x,y)$，空间频率 $(f_x,f_y)$ 值，及其在后焦面上三个衍射斑中心坐标 $(x',y')$ 值。要求图示。
+\item 当栅条逆时针转过 $45^\circ$ 而处于 $(xy)$ 平面的一、三象限时，试给出相应的 $\widetilde t(x,y)$、$(f_x,f_y)$ 值和 $(x',y')$ 值，要求图示。
+\item 当栅条顺时针转过 $30^\circ$ 而处于 $(xy)$ 平面的二、四象限时，试给出相应的 $\widetilde t(x,y)$、$(f_x,f_y)$ 值和 $(x',y')$ 值，要求图示。
+\end{enumerate}
+}
+\problem{6-3}{
+如图所示为两个颇为相似的相位型衍射屏。其中图（a）是在一块较大的玻璃板上有一透明小液滴，其半径为 $r_0$，厚度近似均匀为 $h$，液体折射率为 $n_0$；图（b）是在一块玻璃板内部存在一个小气泡，其半径为 $r_0$，厚度近似均匀为 $h$。
+\begin{enumerate}
+\item 试给出（a）的屏函数 $\widetilde t_a(r)$，设入射光波长为 $\lambda$。
+\item 试给出（b）的屏函数 $\widetilde t_b(r)$。
+\item 思考 $\widetilde t_a(r)$、$\widetilde t_b(r)$ 与先前熟悉的圆孔或圆屏的屏函数有何联系和区别？
+\item 若如实地考虑到液滴厚度的非均匀从而使它更像一个小透镜，同样地那气泡也更像一个小透镜，则其屏函数 $\widetilde t'_a(r)$、$\widetilde t'_b(r)$ 应该改写成什么样子？
+\end{enumerate}
+\tikzfig{fig_6_3}{6-3}
+}
+\problem{6-4}{
+如图所示，一余弦光栅 $G$ 覆盖在一记录胶片 $H$ 之上，用一束平行光照射，然后对曝光了的胶片进行线性洗印。试问如此获得的这块新光栅 $H$ 是否为一张单频余弦光栅？其复振幅透过率即屏函数包含有几个空间频率？设 $G$ 的复振幅透过率函数为
+\[
+\widetilde t_G(x,y)=t_0+t_1\cos(2\pi f_1x+\varphi_0).
+\]
+\tikzfig{fig_6_4}{6-4}
+}
+\problem{6-5}{
+一余弦光栅的屏函数为
+\[
+\widetilde t(x,y)=t_0+t_1\cos2\pi fx,
+\]
+现将它沿 $x$ 方向平移 $\Delta x=d/6$、$d/4$、$d/2$、$3d/4$，这里 $d=1/f$。试写出平移后这光栅的屏函数表达式。
+
+提示：新的屏函数只是添加一个相移量 $\delta$，而写成
+\[
+\widetilde t'(x,y)=t_0+t_1\cos(2\pi fx+\delta).
+\]
+}
+\problem{6-6}{
+一余弦光栅的屏函数为
+\[
+\widetilde t(x,y)=t_0+t_1\cos(2\pi f_xx+2\pi f_yy),
+\]
+现将它沿斜方向平移 $\boldsymbol\Delta r(\Delta x,\Delta y)$，试写出平移后这光栅的屏函数表达式。
+}
+\problem{6-7}{
+凭借一平面波和一球面波的干涉，并经线性冲洗，便可获得一全息透镜（参见习题 2-13）。全息透镜的屏函数具有轴对称性，
+\[
+\widetilde t(r)=t_0+t_1\cos\left(k_0\frac{r^2}{2a}\right),\qquad r^2=x^2+y^2,
+\]
+其中，$t_0,t_1,k_0,a$ 均为特定的常数。现有一轴外点源 $Q$ 发射一傍轴球面波而照射这张全息透镜，如图所示，设其波数为 $k_0$。
+\begin{enumerate}
+\item 试用波前函数的相因子分析法，给出透射场的主要特征——聚散性，像点 $Q'$ 的纵距 $s'$ 和横距 $x'$。设物点 $Q$ 的纵距为 $s$，横距为 $x_0$。
+\item 导出横向线放大率 $V=x'/x_0$ 公式。
+\item 若用一平面波正入射于这张全息透镜，结果如何？
+\end{enumerate}
+\tikzfig{fig_6_7}{6-7}
+}
+\problem{6-8}{
+如图，一波长为 $\lambda$ 的平行光束斜入射于一余弦光栅，
+\[
+\widetilde t(x,y)=t_0+t_1\cos2\pi fx,
+\]
+试用波前相因子分析法讨论其透射场的主要特征。证明其 $\pm1$ 级平面衍射波的方位角 $\theta_{\pm1}$ 由下式给出，
+\[
+\sin\theta_{+1}=\sin\theta_0+f\lambda,\qquad
+\sin\theta_{-1}=\sin\theta_0-f\lambda.
+\]
+\tikzfig{fig_6_8}{6-8}
+}
+\problem{6-9}{
+一光栅的屏函数为
+\[
+\widetilde t(x,y)=t_0+t_1\cos2\pi fx+
+t_1\cos\left(2\pi fx+\frac{\pi}{4}\right),
+\]
+当波长为 $\lambda$ 的平行光正入射于这光栅时，其夫琅禾衍射场中将出现几个衍射斑？各衍射斑中心强度与 $0$ 级斑中心之比值为多少？
+}
+\problem{6-10}{
+如图所示，一会聚球面波照射一余弦光栅，其屏函数为
+\[
+\widetilde t(x,y)=t_0+t_1\cos(2\pi fx),
+\]
+试用波前相因子分析法给出傍轴条件下其衍射场的主要特征——有几个衍射斑及其位置坐标 $(x,y,z)$。
+\tikzfig{fig_6_10}{6-10}
+}
+\problem{6-11}{
+有两张余弦光栅 $G_1$ 和 $G_2$ 叠合一起，其屏函数分别为
+\[
+\widetilde t_1(x,y)=0.5+0.4\cos2\pi f_1x,\qquad f_1=100/\mathrm{mm};
+\]
+\[
+\widetilde t_2(x,y)=0.5+0.4\cos2\pi f_2x,\qquad f_2=300/\mathrm{mm}.
+\]
+\begin{enumerate}
+\item 试给出这组合光栅的屏函数 $\widetilde t(x,y)$。
+\item 现用波长为 $630\,\mathrm{nm}$ 的平行光束正入射于这组合光栅，试问在接收透镜后焦面 $\mathcal F'$ 上出现几个衍射斑，以及它们的位置坐标 $(x',y')$，要求将结果描在坐标纸上。设透镜焦距为 $150\,\mathrm{mm}$。
+\end{enumerate}
+}
+\problem{6-12}{
+有两张余弦光栅 $G_1$ 和 $G_2$ 叠合在一起，其屏函数分别为
+\[
+\widetilde t_1(x,y)=0.5+0.4\cos2\pi f_1x,\qquad f_1=100/\mathrm{mm};
+\]
+\[
+\widetilde t_2(x,y)=0.5+0.4\cos2\pi f_2y,\qquad f_2=200/\mathrm{mm}.
+\]
+\begin{enumerate}
+\item 试给出这组合光栅的屏函数 $\widetilde t(x,y)$。
+\item 现用波长为 $630\,\mathrm{nm}$ 的平行光束正入射于这组合光栅，试问在接收透镜后焦面 $\mathcal F'$ 上出现几个衍射斑，以及它们的位置坐标 $(x',y')$，要求将结果描在坐标纸上。设透镜焦距为 $150\,\mathrm{mm}$。
+\end{enumerate}
+}
+\problem{6-13}{
+讨论相干成像镜头的截止频率 $f_{\mathrm M}$。如图所示，由于物镜孔径 $D$ 有限，使得物结构中一定高频成分所产生的衍射波无法进入镜头而丢失。截止频率 $f_{\mathrm M}$ 定义为物结构中可以使其衍射波进入镜头的最高空间频率。
+\begin{enumerate}
+\item 试证明截止频率由下式给出
+\[
+f_{\mathrm M}\approx\frac{D-\Delta x}{2F\lambda}.
+\]
+这里，$D$ 和 $F$ 分别为镜头的孔径和焦距，$\Delta x$ 为物的尺寸。
+\item 设镜头相对孔径 $D/F=1/2$，焦距 $F\approx200\,\mathrm{mm}$，$\Delta x\approx40\,\mathrm{mm}$，$\lambda\approx630\,\mathrm{nm}$，问此情形下截止频率为多少？
+\end{enumerate}
+\tikzfig{fig_6_13}{6-13}
+}
+\problem{6-14}{
+讨论相干成像镜头的通频道数 $N$，参见习题 6-13 题图。
+\begin{enumerate}
+\item 即使物结构为一单频信息即一个余弦光栅，由于物尺寸 $\Delta x$ 的限制，使其衍射波有一定的发散角 $\delta\theta$，这反映到频谱面上就占有一定的频宽 $\delta f$，它被称为单频线宽。试证明，
+\[
+\delta f=\frac1{\Delta x}.
+\]
+\item 镜头的截止频率 $f_{\mathrm M}$ 实际上给出了镜头的通频带宽度 $\Delta f$，从零频到截止频率，即 $\Delta f=f_{\mathrm M}$。从信息科学的眼光看，相干成像镜头的信息容量或通频道数 $N$ 是受限的，
+\[
+N\equiv\frac{\Delta f}{\delta f}=\Delta x\cdot\Delta f,
+\]
+故亦称 $N$ 为空间带宽积。在镜头 $D,F$ 给定条件下，为使 $N$ 取最大值，则待分析的物尺寸 $\Delta x$ 要适中。试证明，当 $\Delta x=D/2$ 时，通频道数 $N$ 达到最大 $N_{\mathrm M}$，且
+\[
+N_{\mathrm M}=\frac{F}{8\lambda}\left(\frac DF\right)^2,\qquad
+\text{当 }\Delta x=\frac D2\text{ 时}.
+\]
+\item 设一傅里叶透镜的相对孔径 $D/F=1/2$，焦距 $F=200\,\mathrm{mm}$，波长 $\lambda$ 为 $633\,\mathrm{nm}$，试给出其通频道数的最大值。
+\end{enumerate}
+\tikzfig{fig_6_13}{6-13}
+}
+\problem{6-15}{
+以单缝为衍射屏，采取无透镜远场装置而直接观测其夫琅禾衍射场，参见正文图 6.47（b）。设缝宽约为 $10^2\,\mu\mathrm m$ 量级，光波长为 $633\,\mathrm{nm}$，问：
+\begin{enumerate}
+\item 接收屏幕距离单缝 $z_{\mathrm F}$ 至少需要多远？
+\item 可允许的横向傍轴观测范围 $\rho'$ 为多少？
+\item 其零级衍射斑的半角宽度 $\Delta\theta_0$ 为多少？
+\item 接收屏上其零级斑的线宽度 $\Delta l_0$ 为多少？
+\end{enumerate}
+}
+\problem{6-16}{
+以单缝为衍射屏，采取像面接收装置观测其夫琅禾衍射场，设缝宽约为 $250\,\mu\mathrm m$，光波长为 $633\,\mathrm{nm}$；点光源距离镜头为 $40\,\mathrm{cm}$，其像平面距离为 $80\,\mathrm{cm}$。
+\begin{enumerate}
+\item 若单缝置于镜头后方即右侧，要求在像面横向 $6\,\mathrm{cm}$ 范围内可以接收到夫琅禾衍射场，问单缝离像面的距离 $z$ 至少多远？
+\item 若单缝紧贴透镜右侧，其零级衍射斑的线宽度 $\Delta l_0$ 为多少？
+\item 若单缝置于镜头前方即左侧，距离点光源为 $20\,\mathrm{cm}$，则其零级衍射斑的线宽度 $\Delta l'_0$ 为多少？
+\end{enumerate}
+}
+\problem{6-17}{
+在相干光学信息处理 $4F$ 系统中，试作以下空间滤波实验。设输入图片的透过率函数为
+\[
+\widetilde t_{\mathrm{ob}}(x)=t_0+t_1\cos2\pi fx,
+\]
+且 $t_0=0.6$，$t_1=0.3$，$f=400/\mathrm{mm}$；傅里叶透镜的焦距 $F=200\,\mathrm{mm}$，照明光波长为 $633\,\mathrm{nm}$。
+\begin{enumerate}
+\item 若变换平面上不设置任何滤波器，试给出输出像面 $(x'y')$ 上的像场函数 $\widetilde U_1(x',y')$ 及其光强分布 $I(x',y')$。
+\item 若用一张黑纸作为空间滤波器而遮挡住 $0$ 级谱斑，试给出像场函数 $\widetilde U_1(x',y')$ 及其光强分布 $I(x',y')$，并给出相应的空间频率数值。
+\item 若用一张黑纸遮挡住上半部非零级衍射谱斑，试给出像场函数 $\widetilde U_1(x',y')$ 及其光强分布 $I(x',y')$ 和相应的空间频率数值。
+\end{enumerate}
+}
+\problem{6-18}{
+在相干光学信息处理 $4F$ 系统中，试作以下空间滤波实验，设输入图像的透过率函数为
+\[
+t_{\mathrm{ob}}(x,y)=t_0+t_1\cos2\pi f_1x+t_2\cos2\pi f_2x,\qquad f_2=3f_1,
+\]
+其中 $t_0=0.6$，$t_1=t_2=0.5$，$f_1=200/\mathrm{mm}$；傅里叶透镜焦距 $F$ 为 $150\,\mathrm{mm}$，入射光波长为 $633\,\mathrm{nm}$。
+\begin{enumerate}
+\item 如何获得这一复合光栅，试简述其摄制光路和步骤。
+\item 在变换平面即频谱面上将出现几个谱斑？并给出它们的中心位置 $(u,v)$。
+\item 若要求输出的像场函数为
+\[
+\widetilde U_1(x',y')\propto
+\left(t_1\mathrm e^{\mathrm i2\pi f_1x'}+
+t_2\mathrm e^{\mathrm i2\pi f_2x'}\right),
+\]
+则应当选择怎样的空间滤波器？要求作图示意。
+\end{enumerate}
+}
+\problem{6-19}{
+用一复合光栅作为滤波器，在 $4F$ 系统中实现图像微分操作。复合光栅的滤波函数具有以下形式，
+\[
+\widetilde H(u,v)=t_0+t_1\cos2\pi f_1u+t_2\cos2\pi f_2u,\qquad
+\Delta f=(f_2-f_1)<f_1,f_2.
+\]
+设 $4F$ 系统中傅里叶透镜的焦距 $F$ 为 $150\,\mathrm{mm}$，光波长 $\lambda$ 为 $633\,\mathrm{nm}$。
+\begin{enumerate}
+\item 若待处理的图像其尺寸 $a_0$ 在 $20\,\mathrm{mm}$ 左右，问，复合光栅滤波器其低频 $f_1$ 至少应当为多少？
+\item 若要求微分位移量 $\delta x'\ll a_0$，比如取 $\delta x'\approx1\,\mathrm{mm}$，则复合光栅滤波器的差频 $\Delta f$ 应当选择为多少？
+\item 根据以上所得数据，试给出控制滤波器位移的机械精度 $\delta u$。
+\end{enumerate}
+}
+\problem{6-20}{
+如图（a）所示，它是一张振幅型滤波器，且其透过率函数 $t_a(u,v)$ 的取值为 $0$ 或 $1$；若在其黑区开一圆孔而成为图（b）所示的图片，设其透过率函数为 $t_b(u,v)$；若在其白区涂上一墨点而成为图（c）所示的图片，设其透过率函数为 $t_c(u,v)$。现设圆孔、圆屏的透过率函数分别为 $t_h(u,v)$ 和 $t_d(u,v)$。
+\begin{enumerate}
+\item 试问 $t_b$ 和 $t_a,t_h$ 的关系。
+\item 试问 $t_c$ 和 $t_a,t_d$ 的关系。
+\end{enumerate}
+\tikzfig{fig_6_20}{6-20}
+}
+\problem{6-21}{
+设法释放一笼中犬。一张透明图片系笼中一只犬如图所示，这犬之形貌被一排栅条所分隔。
+\begin{enumerate}
+\item 试问这图像函数是犬函数与栅函数两者之和、还是两者之积？
+\item 在 $4F$ 系统中采用怎样的一个空间滤波器，可以选择那一排栅条而让犬之形貌纯净地呈现于输出像面？
+\item 有人认为，可用一排黑点来滤掉栅条频谱，只要那些黑点对准纯栅条所产生的那些离散谱斑位置。这方法可行吗？若如此操作，将在输出像面上出现怎样的情景？
+\end{enumerate}
+提示：乘积之频谱等于频谱之卷积，栅条之频谱近似为若干离散的 $\delta$ 函数；一图函数与 $\delta$ 函数之卷积将再现这函数自身。
+\tikzfig{fig_6_21}{6-21}
+}

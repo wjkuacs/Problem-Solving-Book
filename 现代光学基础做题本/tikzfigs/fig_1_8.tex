@@ -1,0 +1,11 @@
+\begin{tikzpicture}
+\draw[axis](-2.2,0)--(4.8,0)node[right]{$z$};
+\draw[axis](0,-2)--(0,2.2)node[above]{$r$};
+\draw[glass](0,-1.65)rectangle(.3,1.65);
+\coordinate(F)at(4.2,0);
+\foreach \y in {-1.1,0,1.1}{\draw[ray](-2,\y)--(0,\y);\draw[ray](.3,\y)--(F);}
+\node[above]at(0,1.1){$M$};\node[above right]at(.3,1.1){$M'$};
+\node[below left]at(0,0){$O$};\node[below right]at(.3,0){$O'$};\node[above]at(F){$F$};
+\draw[<->](0,-1.9)--(.3,-1.9)node[midway,below]{$d$};
+\draw[<->](.3,-1.4)--(4.2,-1.4)node[midway,fill=white]{$f$};
+\end{tikzpicture}

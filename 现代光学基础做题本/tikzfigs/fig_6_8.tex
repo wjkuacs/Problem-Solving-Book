@@ -1,0 +1,8 @@
+\begin{tikzpicture}
+\draw[axis](-2.8,0)--(1.9,0)node[right]{$z$};
+\draw(0,-1.8)--(0,2.1)node[above]{$(xy)$};
+\draw[pattern=north east lines](-.15,-1.7)rectangle(0,1.7);
+\foreach \y in {-1,0,1}{\draw[ray](-2.7,{\y-1.35})--(0,\y);}
+\draw[dashed](0,0)--(1.5,.75);
+\draw(.8,0)arc(0:26.565:.8);\node at(1.05,.28){$\theta_0$};
+\end{tikzpicture}

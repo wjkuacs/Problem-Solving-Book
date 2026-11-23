@@ -1,0 +1,10 @@
+\begin{tikzpicture}
+\fill[gray!12](-2,-.8)rectangle(2,-.32);
+\draw(-2,-.8)rectangle(2,-.32);
+\draw[line width=1.5pt](-2,-.32)--(2,-.32) (-2,.32)--(2,.32);
+\draw(-2,-.32)--(-2,.32) (2,-.32)--(2,.32);
+\node at(-1.55,0){$n$};\node at(-1.55,-.56){$n_{\mathrm g}$};
+\foreach \x in {-1.4,0,1.4}{\draw[->](\x,1.8)--(\x,.65);}
+\draw[<->](2.35,-.32)--(2.35,.32) node[midway,right]{$h$};
+\foreach \x in {-1,-.4,.4,1}{\draw(\x,-.65)--++(.1,.13);}
+\end{tikzpicture}

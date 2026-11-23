@@ -1,0 +1,51 @@
+\begin{tikzpicture}[scale=.84]
+\begin{scope}[shift={(0,0)}]
+\fill[black](-1.15,-1.15)rectangle(1.15,1.15);
+\fill[white](0,0)circle(.48);
+\draw[white,line width=2.2pt](0,0)circle(.83);
+\draw[gray](.51,.64)--(1.35,1.05)node[right,black]{$b+\lambda$};
+\draw[gray](.74,.36)--(1.35,.65)node[right,black]{$b+3\lambda/2$};
+\draw[gray](.46,.12)--(1.35,.25)node[right,black]{$b+\lambda/2$};
+\node at(0,-1.5){(a)};
+\end{scope}
+\begin{scope}[shift={(5.2,0)}]
+\fill[black](-1.15,-1.15)rectangle(1.15,1.15);
+\draw[white,line width=2.5pt](0,0)circle(.86);
+\draw[gray](.69,.54)--(1.35,.9)node[right,black]{$b+5\lambda/4$};
+\draw[gray](.81,.16)--(1.35,.3)node[right,black]{$b+\lambda$};
+\node at(0,-1.5){(b)};
+\end{scope}
+\begin{scope}[shift={(10.4,0)}]
+\draw[fill=white](-1.15,-1.15)rectangle(1.15,1.15);
+\draw(0,0)circle(.8);\draw(0,0)circle(.58);
+\fill[black](-1.15,-1.15)rectangle(0,1.15);
+\draw(.68,.4)--(1.35,.9)node[right]{$b+\lambda$};
+\draw(.55,.16)--(1.35,.3)node[right]{$b+\lambda/2$};
+\node at(0,-1.5){(c)};
+\end{scope}
+\begin{scope}[shift={(0,-3.7)}]
+\fill[black](-1.15,-1.15)rectangle(1.15,1.15);
+\fill[white](0,0)--(0,.82)arc(90:-90:.82)--cycle;
+\fill[white](0,0)circle(.48);
+\draw[gray](.69,.43)--(1.35,.9)node[right,black]{$b+\lambda$};
+\draw[gray](.46,.16)--(1.35,.3)node[right,black]{$b+\lambda/2$};
+\node at(0,-1.5){(d)};
+\end{scope}
+\begin{scope}[shift={(5.2,-3.7)}]
+\draw[fill=white](-1.15,-1.15)rectangle(1.15,1.15);
+\fill[black](0,0)circle(.72);\fill[white](0,0)circle(.48);
+\draw(.62,.35)--(1.35,.9)node[right]{$b+3\lambda/4$};
+\draw(.46,.12)--(1.35,.3)node[right]{$b+\lambda/2$};
+\node at(0,-1.5){(e)};
+\end{scope}
+\begin{scope}[shift={(10.4,-3.7)}]
+\draw[fill=white](-1.15,-1.15)rectangle(1.15,1.15);
+\fill[black](-1.15,-1.15)rectangle(0,0);
+\fill[white](0,0)--(-.82,0)arc(180:270:.82)--cycle;
+\fill[black](0,0)--(-.58,0)arc(180:270:.58)--cycle;
+\draw(0,0)circle(.82);\draw(0,0)circle(.58);
+\draw(.69,.43)--(1.35,.9)node[right]{$b+\lambda$};
+\draw(.56,.16)--(1.35,.3)node[right]{$b+\lambda/2$};
+\node at(0,-1.5){(f)};
+\end{scope}
+\end{tikzpicture}

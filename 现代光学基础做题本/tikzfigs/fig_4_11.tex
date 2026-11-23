@@ -1,0 +1,12 @@
+\begin{tikzpicture}
+\draw[fill=gray!5](-2,-.45)rectangle(2,0);
+\node[below]at(0,-.45){钢质平台};
+\draw[fill=gray!22](-1.55,0)rectangle(-.8,1.85);
+\draw[fill=gray!22](.8,0)rectangle(1.55,1.98);
+\node at(-1.17,.9){$G_1$};\node at(1.17,.9){$G_2$};
+\draw[glass](-2,1.98)--(2,2.16)--(2,2.48)--(-2,2.30)--cycle;
+\node[right]at(2,2.32){$T$};
+\foreach \x in {-1.6,-.8,0,.8,1.6}{\draw[->](\x,3.5)--(\x,2.7);}
+\draw[<->](-1.17,-.15)--(1.17,-.15) node[midway,fill=white]{$l$};
+\foreach \x in {-1.5,-.5,.5,1.5}{\draw(\x,2.18)--++(.1,.12);}
+\end{tikzpicture}
