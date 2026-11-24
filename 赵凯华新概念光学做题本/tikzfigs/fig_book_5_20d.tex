@@ -1,0 +1,15 @@
+% TikZ redraw for exercise book-5_20d
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\draw(-4,0)--(7,0);\fill(-3.5,0)circle(1.4pt)node[left]{$S$};
+\draw[<->,line width=.9pt](-1.2,-1.2)--(-1.2,1.2)node[above]{$L$};
+\foreach\h in {-.9,-.45,.45,.9}{\draw[ray](-3.5,0)--(-1.2,\h);\draw[thin](-1.2,\h)--(6.5,0);}
+\draw[line width=1.8pt](0,.35)--(0,1.1) (0,-.3)--(0,-1.1);
+\node[above left]at(0,1.1){$x$};\node[above left]at(0,.35){$Q$};\node[below left]at(0,0){$O$};
+\draw[thick](6.5,-1.4)--(6.5,1.7)node[above]{$x'$};
+\draw[ray](0,.35)--(6.5,1.1)node[right]{$P_\theta$};\draw[ray](0,0)--(6.5,1.1);
+\fill(6.5,0)circle(1pt)node[right]{$S'$};\node at(3,.9){$r$};\node at(3,.37){$r_0$};
+\draw(0:1.3)arc[start angle=0,end angle=9.6,radius=1.3];\node at(1.6,.16){$\theta'$};
+\draw[<->](0,-.85)--node[fill=white]{$z$}(6.5,-.85);\node[right]at(6.5,-.7){像面};
+
+\end{tikzpicture}

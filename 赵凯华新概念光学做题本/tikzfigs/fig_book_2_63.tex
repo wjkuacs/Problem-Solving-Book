@@ -1,0 +1,52 @@
+% TikZ redraw for exercise book-2_63
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\foreach\xx/\pan/\dd/\ff/\qq in {0/a/4/4/.12,11/b/3.2/5/-1.15}{
+\begin{scope}[xshift=\xx cm,font=\normalsize]
+ \draw[line width=.6pt](-3.1,0)--(7,0);
+ \draw[fill=gray!5](0,-1.3)--(0,1.3)to[bend left=18](0,-1.3);
+ \draw[fill=gray!5](\dd,-1.3)--(\dd,1.3)to[bend right=18](\dd,-1.3);
+ \node[below left]at(0,-1.3){$L_1$};\node[below right]at(\dd,-1.3){$L_2$};
+ \node[anchor=west]at(-2.7,-.85){\textbf{(\pan)}};
+ \ifdim\dd pt=4pt
+  \def\hf{4}\def\hb{0}\def\front{0}\def\back{4}
+  \def\ha{.88}\def\hm{.9}\def\hc{.92}
+ \else
+  \pgfmathsetmacro{\ef}{\ff*\ff/(2*\ff-\dd)}
+  \pgfmathsetmacro{\hf}{\dd*\ff/(2*\ff-\dd)}
+  \pgfmathsetmacro{\hb}{\dd-\hf}
+  \pgfmathsetmacro{\front}{\hf-\ef}
+  \pgfmathsetmacro{\back}{\hb+\ef}
+  \def\ha{.75}\def\hm{.9}\def\hc{1.05}
+ \fi
+ \draw[thin](\hf,-1.7)--(\hf,1.8)node[above]{$\mathcal H$};
+ \draw[thin](\hb,-1.7)--(\hb,1.8)node[above]{$\mathcal H'$};
+ \foreach\h in {\ha,\hm,\hc}{
+  \pgfmathsetmacro{\sIn}{(\h-.9)/(-\qq)}
+  \pgfmathsetmacro{\sMid}{\sIn-\h/\ff}
+  \pgfmathsetmacro{\heightTwo}{\h+\dd*\sMid}
+  \pgfmathsetmacro{\sOut}{\sMid-\heightTwo/\ff}
+  \draw[ray](-3,{\h-3*\sIn})--(0,\h);
+  \draw[ray](0,\h)--(\dd,\heightTwo);
+  \draw[ray](\dd,\heightTwo)--(6.7,{\heightTwo+(6.7-\dd)*\sOut});
+  \draw[densely dashed,gray](\dd,\heightTwo)--(-3,{\heightTwo+(-3-\dd)*\sOut});
+ }
+ \draw[->,line width=.8pt](\qq,0)--(\qq,.9);
+ \ifdim\dd pt=4pt
+  \node[above left]at(0,.9){$P$};\node[above right]at(.12,.9){$P_1$};
+  \node[above left]at(0,0){$Q$};\node[above right]at(.12,0){$Q_1$};
+  \node[below left]at(0,0){$H'$};\node[below right,yshift=-3pt]at(0,0){$F,F_2$};
+  \node[above right]at(4,0){$F'_1$};\node[below left]at(4,0){$F'$};\node[below right]at(4,0){$H$};
+ \else
+  \fill(\front,0)circle(1.2pt)node[below]{$F$};
+  \fill(\back,0)circle(1.2pt)node[below left]{$F'$};
+  \fill({\dd-\ff},0)circle(1pt)node[below]{$F_2$};
+  \fill(\ff,0)circle(1pt)node[below right]{$F'_1$};
+  \node[below right]at(\hf,0){$H$};\node[below right]at(\hb,0){$H'$};
+  \node[above left]at(\qq,.9){$P_1$};\node[below right]at(\qq,.9){$P$};
+  \node[above left]at(\qq,0){$Q_1$};\node[above right]at(\qq,0){$Q$};
+ \fi
+ \node[above left]at(-3,1.75){$P'$};
+\end{scope}}
+
+\end{tikzpicture}

@@ -1,0 +1,22 @@
+% TikZ redraw for exercise book-2_29
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\draw[line width=.6pt](-4.3,0)--(8,0);
+\draw[<->,line width=.9pt](0,-1.55)--(0,1.55)node[above]{$L_1$};
+\draw[<->,line width=.9pt](4,-1.55)--(4,1.55)node[above]{$L_2$};
+\draw[thin](2,-1.6)--(2,1.65)node[above]{$\mathcal H'$};
+\draw[thin](6,-1.6)--(6,1.65)node[above]{$\mathcal H$};
+\draw[ray](-3,.6)--(0,.6)--(4,.2)--(7.5,-.5);
+\draw[ray](-3,-1.2)--(0,-.6)--(4,.6)--(7.5,.6);
+\draw[densely dashed](-4,.6)--(6,.6) (2,.6)--(5,0) (3,0)--(6,.6);
+\draw[thin](-4,.6)--(6,.05);
+\draw[->,line width=.7pt](-4,0)node[below]{$Q''$}--(-4,.6)node[above]{$P''$};
+\foreach\x/\lab in {3/F,5/F'}\fill(\x,0)circle(1pt)node[below]{$\lab$};
+\node[below left]at(2,0){$H'$};\node[below right]at(6,0){$H$};
+\node[above right]at(2,.6){$R'$};\node[above left]at(6,.6){$R$};
+\node[above left]at(2,.25){$M'$};\node[above left]at(6,.25){$M$};
+\node[above left]at(4,.38){$P$};
+\node[above]at(-2,.6){1};\node[below]at(-2,-1){2};
+\node[above]at(7.4,.6){$r'$};\node[below]at(7.4,-.48){$r$};
+
+\end{tikzpicture}

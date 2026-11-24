@@ -1,0 +1,5 @@
+% TikZ redraw for exercise 5-13
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\begin{scope}\draw[->](0,-1.4)--(0,1.2)node[above]{$y$};\draw[->](-2.3,0)--(.4,0)node[right]{$z$};\draw[very thick](.05,-1)--(.05,.9);\foreach\y in {-.4,.3,.8}{\draw[ray](-2,\y)--(0,\y);\draw[ray](-2,-1.1)--(0,\y);}\node[left]at(-2,.8){$R$};\node[left]at(-2,-1.1){$O$};\draw[<->](-2,-1.45)--node[below]{$z_0$}(0,-1.45);\node at(-1.8,-.55){$y_0$};\node[right]at(0,-1){$\Sigma$};\node at(-1,-1.9){(a)};\end{scope}
+\begin{scope}[xshift=4cm]\draw[->](0,-1.4)--(0,1.2)node[above]{$y$};\draw[->](-2.3,0)--(.4,0)node[right]{$z$};\draw[very thick](.05,-1)--(.05,.9);\foreach\y in {-.7,0,.7}\draw[ray](-2,0)--(0,\y);\node[left]at(-2,0){$R'$};\draw[<->](-2,-1.45)--node[below]{$z_c$}(0,-1.45);\node[right]at(0,-1){$\Sigma$};\node at(-1,-1.9){(b)};\end{scope}
+\end{tikzpicture}

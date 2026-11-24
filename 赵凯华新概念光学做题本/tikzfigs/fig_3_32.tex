@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 3-32
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\filldraw[fill=gray!5](0,-1)rectangle(4,0);\filldraw[fill=gray!15](0,0)rectangle(4,.45);\draw[line width=1.4pt](0,0)--(4,0) (0,.45)--(4,.45);\foreach\x in {.3,1.1,1.9,2.7,3.5}\draw[ray](\x,1.5)--(\x,.65);\draw[<->](4.3,0)--node[right]{$h$}(4.3,.45);\node at(2,-.5){玻璃};\node at(2,.23){透明膜};\node[right]at(4,.8){银膜};
+\end{tikzpicture}

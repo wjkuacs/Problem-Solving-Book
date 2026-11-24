@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 4-23
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\draw[thick](0,-2)--(0,2)node[above]{衍射屏};\draw(-2,0)--(2,0);\foreach\y in {-1,0,1}\draw[ray](-2,{\y-1})--(0,\y)--(2,{\y+.8});\node at(-.7,-.25){$\theta_0$};\node at(.8,.2){$\theta$};
+\end{tikzpicture}

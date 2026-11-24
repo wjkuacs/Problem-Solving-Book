@@ -1,0 +1,24 @@
+% TikZ redraw for exercise book-6_31b
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\filldraw[fill=gray!14,line width=.7pt](-1.1,-1.8)rectangle(2.9,0);
+\coordinate(A)at(0,0);\coordinate(B)at(1.1,1.1);\coordinate(Bp)at(2.2,0);
+\draw[ray,line width=.6pt](-1.7,1.7)--(A);\draw[ray,line width=.6pt](.5,1.7)--(Bp);
+\draw[thin](A)--(B);\draw[densely dashed](0,0)--(0,1.1);
+\node[above left]at(A){$A$};\node[above right]at(B){$B$};\node[above right]at(Bp){$B'$};
+\node at(2.1,1.1){空气};\node at(2.25,-1.55){晶体};
+\begin{scope}\clip(-1.1,-1.8)rectangle(2.9,0);
+\draw[thin](0,0)circle(.95);
+\draw[thin,rotate=-30](0,0)ellipse(.95 and 1.08);
+\end{scope}
+\draw[densely dashed,gray](0,0)--(2.65,-1.53)node[pos=.73,above,sloped]{光轴};
+\draw[shift={(0,0)}](-30:.6)arc[start angle=-30,end angle=0,radius=.6];\node at(.82,-.17){$30^\circ$};
+\coordinate(Ao)at(0.41023,-0.85686);
+\coordinate(Ae)at(0.33725,-0.93964);
+
+\draw[thin](Bp)--(Ao);\draw[thin](Bp)--(Ae);
+\fill(Ao)circle(.9pt)node[below left]{$A'_o$};\fill(Ae)circle(.9pt)node[below right]{$A'_e$};
+\draw[ray](A)--(0.73841,-1.54235)node[below left]{o光};
+\draw[ray](A)--(0.60704,-1.69136)node[below right]{e光};
+
+\end{tikzpicture}

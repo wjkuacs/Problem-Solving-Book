@@ -1,0 +1,15 @@
+% TikZ redraw for exercise book-6_46
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\pgfmathsetmacro{\w}{3.6*tan(15)}
+\filldraw[fill=gray!8](0,-1.8)--(0,1.8)--(\w,1.8)--(\w,-1.8)--cycle;
+\begin{scope}\clip(0,1.8)--(\w,1.8)--(\w,-1.8)--cycle;\fill[pattern=dots,pattern color=gray!50](0,-1.8)rectangle(\w,1.8);\end{scope}
+\draw[line width=.7pt](0,1.8)--(\w,-1.8);
+\node at(.22,-.95){$\updownarrow$};\node at(.73,.95){$\odot$};
+\draw[ray,line width=.65pt](-1.4,0)--({\w/2},0);
+\draw[ray]({\w/2},0)--(\w,.2)--(2.3,.85)node[right]{1};
+\draw[ray]({\w/2},0)--(\w,-.2)--(2.3,-.85)node[right]{2};
+\draw[shift={(0,1.8)}](-90:.65)arc[start angle=-90,end angle=-75,radius=.65];
+\node at(.15,.93){$\alpha$};
+
+\end{tikzpicture}

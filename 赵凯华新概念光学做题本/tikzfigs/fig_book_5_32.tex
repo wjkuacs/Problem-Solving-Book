@@ -1,0 +1,33 @@
+% TikZ redraw for exercise book-5_32
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\begin{scope}
+ \draw[very thick](0,-1.25)--(0,1.25)node[above]{$\Sigma$};
+ \foreach\x in {-2,-1.6,-1.2,-.8,-.4}\draw[gray!65](\x,-.9)--(\x,.9);
+ \foreach\y in {-.8,.8}\draw[ray](-2.15,\y)--(0,\y);
+ \node at(-1.85,1.15){$R$};\fill(-1.5,0)circle(1.4pt)node[left]{$O$};
+ \draw[ray](-1.5,0)--(0,.9);\draw[ray](-1.5,0)--(0,-.9);
+ \begin{scope}\clip(-1.5,0)--(0,.9)--(0,-.9)--cycle;
+ \foreach\r in {.3,.6,.9,1.2,1.5}\draw[thin](-1.5,0)circle(\r);\end{scope}
+ \node at(-.9,-1.65){(a)\ 记录};
+\end{scope}
+\begin{scope}[xshift=2cm]
+ \draw(-1.25,-1.25)rectangle(1.25,1.25);
+ \foreach\k in {24,23,...,1}{\pgfmathsetmacro{\r}{1.18*sqrt(\k/24)}\ifodd\k\fill[white](0,0)circle(\r);\else\fill[black!75](0,0)circle(\r);\fi}
+ \node at(0,-1.65){(b)\ 全息条纹};
+\end{scope}
+\begin{scope}[xshift=5.8cm]
+ \draw[very thick](0,-1.25)--(0,1.25)node[above]{$\Sigma$};
+ \foreach\x in {-2,-1.6,-1.2,-.8,-.4}\draw[gray!65](\x,-.9)--(\x,.9);
+ \foreach\y in {-.8,.8}\draw[ray](-2.15,\y)--(0,\y);
+ \node at(-1.85,1.15){$R'$};\fill(-1.5,0)circle(1.3pt)node[left]{$O$};
+ \foreach\y in {-.75,.75}{\draw[ray](0,\y)--(1.6,0);\draw[ray](0,\y)--(2.5,{\y*2.667});\draw[densely dashed](-1.5,0)--(0,\y);}
+ \begin{scope}\clip(0,-.75)--(2.5,-2)--(2.5,2)--(0,.75)--cycle;
+ \foreach\r in {1.8,2.2,2.6,3,3.4,3.8,4.2}\draw[gray](-1.5,0)circle(\r);\end{scope}
+ \begin{scope}\clip(0,-.75)--(1.6,0)--(0,.75)--cycle;
+ \foreach\r in {.35,.65,.95,1.25,1.55}\draw[thin](1.6,0)circle(\r);\end{scope}
+ \fill(1.6,0)circle(1.4pt)node[right]{$O'$};
+ \node at(.4,-2.35){(c)\ 再现};
+\end{scope}
+
+\end{tikzpicture}

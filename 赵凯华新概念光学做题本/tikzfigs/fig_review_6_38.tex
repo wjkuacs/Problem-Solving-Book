@@ -1,0 +1,16 @@
+% TikZ redraw for exercise review-6_38
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\filldraw[fill=gray!5,line width=.7pt](0,0)rectangle(6,1.2);
+\begin{scope}\clip(0,1.2)--(6,1.2)--(6,0)--cycle;
+\foreach\y in {.15,.35,.55,.75,.95,1.15}\draw[gray!70,line width=.5pt](0,\y)--(6,\y);
+\end{scope}
+\begin{scope}\clip(0,0)--(0,1.2)--(6,0)--cycle;
+\fill[pattern=dots,pattern color=gray!80](0,0)rectangle(6,1.2);
+\end{scope}
+\draw[line width=.9pt](0,1.2)--(6,0);
+\foreach\x in {.8,2.25,3.7,5.15}\draw[-{Stealth[length=2.3mm]},line width=.7pt](\x,3)--(\x,1.65);
+\draw[shift={(0,1.2)}](0:1.15)arc[start angle=0,end angle=-11.31,radius=1.15];
+\node[above]at(1.25,1.23){$\alpha$};
+
+\end{tikzpicture}

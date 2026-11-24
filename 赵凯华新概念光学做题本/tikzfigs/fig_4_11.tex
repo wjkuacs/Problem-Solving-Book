@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 4-11
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\draw[dashed](-3,0)--(5,0);\draw(-1,-1.7)to[bend left=12](-1,1.7)to[bend left=12]cycle;\draw(2,-1.7)to[bend left=12](2,1.7)to[bend left=12]cycle;\draw[line width=2pt](.5,.7)--(.5,1.8) (.5,-.7)--(.5,-1.8);\draw[thick](4.5,-2)--(4.5,2);\fill(-2.7,-.5)circle(1.3pt)node[left]{$S$};\foreach\y in {-1.2,-.6,0,.6,1.2}{\draw[ray](-2.7,-.5)--(-1,\y);\draw[ray](-1,\y)--(2,{\y+.6});\draw[ray](2,{\y+.6})--(4.5,.5);}\node[right]at(4.5,.5){$P_0$};\node[right]at(4.5,.85){$P_\theta$};\draw[dashed](.5,0)--(4.5,.85);\node at(-.2,.1){$\theta_0$};\node at(1.2,.15){$\theta$};\draw[<->](.8,-.7)--node[right]{$a$}(.8,.7);
+\end{tikzpicture}

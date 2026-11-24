@@ -1,0 +1,24 @@
+% TikZ redraw for exercise book-2_19
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\coordinate(P)at(-2,.5);\coordinate(Pp)at(9,-1.125);
+\draw[line width=.7pt](-3,0)--(10,0);
+\draw[<->,line width=1pt](0,-1.05)--(0,1.1);
+\draw[<->,line width=1.1pt](6,-2.2)--(6,2.2);
+\node[above]at(0,1.1){$L_1$};\node[above]at(6,2.2){$L_2$};
+\draw[->,line width=.9pt](-2,0)node[below left]{$Q$}--(P)node[above left]{$P$};
+\draw[densely dashed](9,-2.1)--(9,1.7)node[above]{$\mathcal P'_2$};
+\draw[->,line width=.9pt](9,0)node[above right]{$Q'$}--(Pp)node[below right]{$P'$};
+\foreach\h in {.9,.5,0,-.9}{
+ \pgfmathsetmacro{\outy}{2*\h/3-1.5}
+ \draw[ray](P)--(0,\h);
+ \draw[ray](0,\h)--(6,\outy);
+ \draw[ray](6,\outy)--(Pp);
+}
+\draw[densely dashed](6,-2.1)--(7,-2.3);
+\node[above right]at(0,0){$O_1$};\node[above right]at(6,0){$O_2$};
+\fill(-1.8,0)circle(1pt)node[below right]{$F_1$};
+\fill(1.8,0)circle(1pt)node[below]{$F'_1$};
+\fill(2,0)circle(1pt)node[above right]{$F_2$};
+
+\end{tikzpicture}

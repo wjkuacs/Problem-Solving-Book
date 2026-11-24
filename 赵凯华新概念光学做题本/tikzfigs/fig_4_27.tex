@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 4-27
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\fill[black!85](-.4,-1)rectangle(6.1,1);\foreach\x in {0,1.2,2.4,3.6,4.8}\foreach\dx in {0,.4}\fill[white]({\x+\dx},-.8)rectangle({\x+\dx+.2},.8);\draw[<->](0,-1.3)--node[below]{$a$}(.2,-1.3);\draw[<->](.2,-1.3)--node[below]{$a$}(.4,-1.3);\draw[<->](.6,-1.3)--node[below]{$3a$}(1.2,-1.3);
+\end{tikzpicture}

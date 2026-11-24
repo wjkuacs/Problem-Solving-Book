@@ -1,0 +1,469 @@
+{
+  "chapters": [
+    {
+      "chapter": 1,
+      "count": 26,
+      "first": "1-1",
+      "last": "1-26"
+    },
+    {
+      "chapter": 2,
+      "count": 59,
+      "first": "2-1",
+      "last": "2-59"
+    },
+    {
+      "chapter": 3,
+      "count": 32,
+      "first": "3-1",
+      "last": "3-32"
+    },
+    {
+      "chapter": 4,
+      "count": 34,
+      "first": "4-1",
+      "last": "4-34"
+    },
+    {
+      "chapter": 5,
+      "count": 14,
+      "first": "5-1",
+      "last": "5-14"
+    },
+    {
+      "chapter": 6,
+      "count": 49,
+      "first": "6-1",
+      "last": "6-49"
+    },
+    {
+      "chapter": 7,
+      "count": 13,
+      "first": "7-1",
+      "last": "7-13"
+    }
+  ],
+  "figures": 59,
+  "duplicate_removed": [
+    "2-56"
+  ],
+  "source": "User-provided screenshots, 2026-11-24",
+  "notes": [
+    {
+      "exercise": "2-1",
+      "note": "题干引用的第一章第1节例题2正文；图2-6及补充图2-19已补入。"
+    },
+    {
+      "exercise": "2-26",
+      "note": "例题4的完整题干与已知参数；图2-29已补入。"
+    },
+    {
+      "exercise": "2-49",
+      "note": "原截图脚注的“2-56”疑指本批2-53，保留原引用待核。"
+    },
+    {
+      "exercise": "6-22",
+      "note": "水晶对该波长的主折射率数据表未提供。"
+    },
+    {
+      "exercise": "6-26",
+      "note": "水晶对钠黄光的主折射率数据表未提供。"
+    },
+    {
+      "exercise": "6-28",
+      "note": "方解石对钠黄光的主折射率数据；图6-31b已补入。"
+    },
+    {
+      "exercise": "6-45",
+      "note": "原书表6-5。"
+    },
+    {
+      "exercise": "6-49",
+      "note": "原书本章折射率、旋光率数据表。"
+    },
+    {
+      "exercise": "7-4",
+      "note": "原书表1-3。"
+    },
+    {
+      "exercise": "7-9",
+      "note": "原书表1-3。"
+    }
+  ],
+  "total": 227,
+  "editorial_notes": [
+    {
+      "exercise": "3-19",
+      "note": "按题意将自引用第（2）问改为第（1）问。"
+    },
+    {
+      "exercise": "4-11",
+      "note": "两份材料分母均印为 a sin(theta0)，按同题展开校为 a cos(theta0)。"
+    },
+    {
+      "exercise": "5-10",
+      "note": "按补充清晰截图核对，第五项仅印为 (-sqrt(2)/2)，保留并标坐标缺项；下一项为 (0.5,2)。坐标列表改为独立两行显示。"
+    },
+    {
+      "exercise": "5-11",
+      "note": "原材料标为习题5-12的题图由5-11与5-12共用。"
+    },
+    {
+      "exercise": "6-17",
+      "note": "原题(6.34)为误引，应为全反射相移公式(6.35)，已据原书页面更正。"
+    }
+  ],
+  "reference_pdf": "赵凯华 光学 做题本.pdf",
+  "reference_pages_checked": [
+    18,
+    28,
+    32,
+    33,
+    38,
+    39,
+    40,
+    49,
+    52,
+    53,
+    57,
+    66,
+    67,
+    73,
+    74,
+    77,
+    82,
+    83,
+    84,
+    85,
+    87,
+    88,
+    89,
+    92,
+    93,
+    96,
+    104,
+    107,
+    108,
+    110,
+    114,
+    116,
+    117
+  ],
+  "corrections": [
+    {
+      "exercise": "2-50",
+      "before": "d=5a",
+      "after": "d=6a",
+      "reference_pdf_page": 39
+    },
+    {
+      "exercise": "5-10",
+      "before": "(0,5.2)",
+      "after": "(0.5,2)",
+      "reference_pdf_page": 83
+    },
+    {
+      "exercise": "5-10",
+      "before": "(1,-sqrt(2)/2)",
+      "after": "(-sqrt(2)/2, missing component)",
+      "reference_pdf_page": 83
+    },
+    {
+      "exercise": "3-16",
+      "before": "腐蚀、电介质",
+      "after": "磨角、染色；硅片",
+      "reference_pdf_page": 52
+    },
+    {
+      "exercise": "3-10",
+      "action": "Confirmed 20 m as printed in reference; removed uncertainty annotation",
+      "reference_pdf_page": 49
+    },
+    {
+      "exercise": "5-8",
+      "before": "物点 P′",
+      "after": "场点 P′",
+      "source": "Supplementary figure 5-20e and original hint"
+    },
+    {
+      "exercise": "6-30",
+      "before": "angle CA'C'; SM parallel A'A",
+      "after": "angle CA''C''; SM parallel A''A",
+      "reference_pdf_page": 101,
+      "note": "Confirmed double primes from original question."
+    }
+  ],
+  "layout_revision": {
+    "side_by_side_exercises": [
+      "1-2",
+      "1-3",
+      "1-11",
+      "1-22",
+      "2-10",
+      "2-11",
+      "2-17",
+      "2-24",
+      "2-35",
+      "2-36",
+      "2-51",
+      "3-4",
+      "3-6",
+      "3-9",
+      "3-10",
+      "3-13",
+      "3-14",
+      "3-32",
+      "4-23",
+      "4-27",
+      "5-9",
+      "6-8",
+      "6-14",
+      "6-15",
+      "6-21"
+    ],
+    "pdf_pages": 129,
+    "verified_exercise_bookmarks": 227,
+    "overfull_boxes": 0,
+    "missing_glyphs": 0,
+    "dedicated_pages_after_supplement": [
+      "2-2",
+      "2-14"
+    ],
+    "final_figure_sizing": {
+      "width_scale": 0.9,
+      "standard_height_mm": 38,
+      "detailed_height_mm": 48,
+      "detailed_figures": [
+        "1_18",
+        "2_10",
+        "3_16",
+        "4_5",
+        "book_3_33",
+        "book_7_9"
+      ],
+      "ramsden_panels": "side by side",
+      "duplicate_answerarea_removed": true
+    }
+  },
+  "supplemented_textbook_figures": [
+    {
+      "figure": "1-18",
+      "file": "tikzfigs/fig_1_18.tex",
+      "exercises": [
+        "1-20",
+        "1-21"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ with computed wavefront intersections and tangent Huygens wavelets"
+    },
+    {
+      "figure": "2-6",
+      "file": "tikzfigs/fig_book_2_6.tex",
+      "exercises": [
+        "2-1"
+      ],
+      "source": "User-provided figure"
+    },
+    {
+      "figure": "2-19",
+      "file": "tikzfigs/fig_book_2_19.tex",
+      "exercises": [
+        "2-1"
+      ],
+      "source": "User-provided supplementary successive-imaging diagram"
+    },
+    {
+      "figure": "2-63a,b",
+      "file": "tikzfigs/fig_book_2_63.tex",
+      "exercises": [
+        "2-31"
+      ],
+      "source": "User-provided figure and accompanying text",
+      "note": "Panel (a): f1:f2:d = 1:1:1. Panel (b): reduced-spacing schematic; no numerical spacing claimed."
+    },
+    {
+      "figure": "3-27",
+      "file": "tikzfigs/fig_book_3_27.tex",
+      "exercises": [
+        "3-15"
+      ],
+      "source": "User-provided figure and accompanying description",
+      "note": "Standard quartz ring G, cylindrical specimen C, upper quartz plate Pi1 and lower support plate Pi2; wedge-shaped air gap retained."
+    },
+    {
+      "figure": "3-33",
+      "file": "tikzfigs/fig_book_3_33.tex",
+      "exercises": [
+        "3-21"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "5-20b",
+      "file": "tikzfigs/fig_book_5_20b.tex",
+      "exercises": [
+        "5-6"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "5-20d",
+      "file": "tikzfigs/fig_book_5_20d.tex",
+      "exercises": [
+        "5-7"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "5-20e",
+      "file": "tikzfigs/fig_book_5_20e.tex",
+      "exercises": [
+        "5-7",
+        "5-8"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "5-32a,b,c",
+      "file": "tikzfigs/fig_book_5_32.tex",
+      "exercises": [
+        "5-14"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "6-31b",
+      "file": "tikzfigs/fig_book_6_31b.tex",
+      "exercises": [
+        "6-28"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "6-46",
+      "file": "tikzfigs/fig_book_6_46.tex",
+      "exercises": [
+        "6-29"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "6-47b",
+      "file": "tikzfigs/fig_book_6_47b.tex",
+      "exercises": [
+        "6-30"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "思考题6-38",
+      "file": "tikzfigs/fig_review_6_38.tex",
+      "exercises": [
+        "6-41",
+        "6-42"
+      ],
+      "source": "User-provided correct Babinet compensator diagram",
+      "method": "TikZ redraw; crossed optical-axis textures and incident rays retained"
+    },
+    {
+      "figure": "2-29",
+      "file": "tikzfigs/fig_book_2_29.tex",
+      "exercises": [
+        "2-26"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    },
+    {
+      "figure": "7-9a,b",
+      "file": "tikzfigs/fig_book_7_9.tex",
+      "exercises": [
+        "7-6"
+      ],
+      "source": "User-provided figure",
+      "method": "TikZ redraw"
+    }
+  ],
+  "pending_figure_confirmation": {
+    "exercise": "6-41",
+    "status": "resolved",
+    "rejected_reference": "Figure 6-38 Example 4: ADP crystal plate",
+    "resolution": "Correct review-question 6-38 Babinet compensator figure supplied and added to 6-41 and 6-42; missing-figure note removed."
+  },
+  "supplemented_formulas": [
+    {
+      "exercise": "1-8",
+      "formulas": [
+        "1.23"
+      ],
+      "source": "User-provided screenshot",
+      "note": "Minimum-deviation refractive-index formula; alpha and delta_min defined."
+    },
+    {
+      "exercise": "2-2",
+      "formulas": [
+        "2.4"
+      ],
+      "figures": [
+        "2-6"
+      ],
+      "source": "User-provided screenshots",
+      "note": "Sine ratio, geometric distances and angle definitions."
+    },
+    {
+      "exercise": "2-14",
+      "formulas": [
+        "2.15",
+        "2.16",
+        "2.4"
+      ],
+      "figures": [
+        "2-6"
+      ],
+      "source": "User-provided screenshots",
+      "note": "Coupled equations with original row numbers, signed-distance symbols and aplanatic-point terminology."
+    },
+    {
+      "exercise": "5-3",
+      "formulas": [
+        "5.27"
+      ],
+      "source": "User-provided screenshot",
+      "note": "Complex phase transmission function of a wedge."
+    },
+    {
+      "exercise": "7-6",
+      "formulas": [
+        "7.25"
+      ],
+      "figures": [
+        "7-9a,b"
+      ],
+      "source": "User-provided screenshots",
+      "note": "Absorption expression with damping parameters and qualitative resonance curves."
+    },
+    {
+      "exercise": "6-17",
+      "formulas": [
+        "6.35"
+      ],
+      "source": "User-provided original textbook page",
+      "note": "p and s phase shifts; n1>n2 and incidence beyond the critical angle. Corrected cross-reference 6.34 to 6.35."
+    }
+  ],
+  "pending_formula_confirmation": {
+    "exercise": "6-17",
+    "status": "resolved",
+    "original_reference": "6.34 (Brewster angle)",
+    "correct_reference": "6.35 (total-internal-reflection phase shifts)",
+    "source": "User-provided original textbook page showing both phase shifts under equation 6.35."
+  }
+}

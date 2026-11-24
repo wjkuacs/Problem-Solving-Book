@@ -1,0 +1,16 @@
+% TikZ redraw for exercise book-5_20b
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\draw(-4,0)--(7.5,0);\fill(-3.5,0)circle(1.4pt)node[left]{$S$};
+\draw[<->,line width=.9pt](-1.8,-1.2)--(-1.8,1.2);
+\foreach\h in {-.9,-.45,0,.45,.9}{\draw[ray](-3.5,0)--(-1.8,\h);\draw[ray](-1.8,\h)--(0,\h);}
+\draw[line width=1.8pt](0,.35)--(0,1.2) (0,-.3)--(0,-1.2);
+\node[above left]at(0,1.2){$x$};\node[above left]at(0,.35){$Q$};\node[below left]at(0,0){$O$};
+\draw[thick](7,-1.4)--(7,1.7)node[above]{$x'$};
+\draw[ray](0,.35)--(7,1.2)node[right]{$P_\theta$};\draw[ray](0,0)--(7,1.2);
+\node at(3.5,.95){$r$};\node at(3.5,.47){$r_0$};
+\draw(0:1.5)arc[start angle=0,end angle=9.73,radius=1.5];\node at(1.8,.18){$\theta$};
+\draw[<->](0,-.8)--node[fill=white]{$z$}(7,-.8);
+\node[right]at(7,-.65){远场};
+
+\end{tikzpicture}

@@ -1,0 +1,50 @@
+% TikZ redraw for exercise 1-18
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\def\ii{25}\def\tt{18}\def\L{6}
+\draw[line width=.8pt](-3,0)--(7.8,0);
+\node[anchor=south west]at(6.85,.04){介质1};
+\node[anchor=north west]at(6.85,-.04){介质2};
+\draw[thin](0,-2.5)--(0,2.2);
+\draw[densely dashed,gray](6,-1)--(6,1);
+% Each secondary wavelet is tangent to its corresponding outgoing wavefront.
+\foreach\b in {0,1.5,3,4.5}{
+ \pgfmathsetmacro{\rr}{(\L-\b)*sin(\ii)}
+ \pgfmathsetmacro{\rt}{(\L-\b)*sin(\tt)}
+ \draw[densely dashed,gray!70]({\b+\rr},0)arc[start angle=0,end angle=180,radius=\rr];
+ \draw[densely dashed,gray!70]({\b-\rt},0)arc[start angle=180,end angle=360,radius=\rt];
+}
+\foreach\b/\lab in {0/1,1.5/2,3/3,4.5/{\cdots},6/n}{
+ \draw[ray]({\b-3.2*tan(\ii)},3.2)--(\b,0);
+ \draw[ray](\b,0)--({\b+3.2*tan(\ii)},3.2);
+ \draw[ray](\b,0)--({\b+2.6*tan(\tt)},-2.6);
+ \node[above left]at({\b-3.2*tan(\ii)},3.2){$\lab$};
+}
+% Incident wavefront A_1 A_n, reflected front C_1 B_n, transmitted front D_1 B_n.
+\draw[line width=1pt](0,0)--({\L*cos(\ii)^2},{\L*sin(\ii)*cos(\ii)});
+\draw[line width=1pt]({\L*sin(\ii)^2},{\L*sin(\ii)*cos(\ii)})--(\L,0);
+\draw[line width=1pt]({\L*sin(\tt)^2},{-\L*sin(\tt)*cos(\tt)})--(\L,0);
+\foreach\b/\k in {1.5/2,3/3,6/n}{
+ \coordinate(A\k)at({\b*cos(\ii)^2},{\b*sin(\ii)*cos(\ii)});
+ \fill(A\k)circle(.9pt);\node[above left,xshift=-1pt]at(A\k){$A_{\k}$};
+}
+\foreach\b/\k in {0/1,1.5/2,3/3}{
+ \coordinate(C\k)at({\b+(\L-\b)*sin(\ii)^2},{(\L-\b)*sin(\ii)*cos(\ii)});
+ \coordinate(D\k)at({\b+(\L-\b)*sin(\tt)^2},{-(\L-\b)*sin(\tt)*cos(\tt)});
+ \fill(C\k)circle(.9pt);\fill(D\k)circle(.9pt);
+ \node[above left,xshift=-1pt]at(C\k){$C_{\k}$};
+ \node[below right,xshift=1pt]at(D\k){$D_{\k}$};
+}
+\fill(0,0)circle(1.2pt)node[below left]{$A_1$};
+\foreach\b/\k in {1.5/2,3/3,6/n}{\fill(\b,0)circle(1pt)node[below left]{$B_{\k}$};}
+\fill(4.5,0)circle(1pt);\node[below]at(4.5,-.02){$\cdots$};
+% Angle labels refer to the normal at A_1 and to the interface at B_n.
+\draw(90:.7)arc[start angle=90,end angle=115,radius=.7];
+\draw(65:.9)arc[start angle=65,end angle=90,radius=.9];
+\draw(-90:.85)arc[start angle=-90,end angle=-72,radius=.85];
+\node at(-.24,1.02){$i_1$};\node at(.28,1.1){$i'_1$};\node at(.2,-1.15){$i_2$};
+\draw[shift={(6,0)}](155:.95)arc[start angle=155,end angle=180,radius=.95];
+\draw[shift={(6,0)}](180:1.15)arc[start angle=180,end angle=198,radius=1.15];
+\node at(4.7,.22){$i'_1$};\node at(4.65,-.2){$i_2$};
+
+\end{tikzpicture}

@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 2-29
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\draw(-1.8,0)--(5.5,0);\foreach\x/\lab in {0/H'_1,.4/H_1,3/H_2,3.4/H'_2}\draw(\x,-.9)--(\x,.9)node[above]{$\lab$};\foreach\x/\lab in {-1/F_1,1/F'_1,1.8/F'_2,4.8/F_2}\fill(\x,0)circle(1pt)node[below]{$\lab$};
+\end{tikzpicture}

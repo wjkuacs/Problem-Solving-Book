@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 2-10
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\filldraw[fill=gray!10](-2,0)rectangle(2,-.8);\draw[dashed](0,-3)--(0,3);\coordinate(Q)at(-.7,1.9);\draw[ray](Q)--(.45,0)--(1.7,1.9);\draw[ray](.45,0)--(.8,-.8)--(1.15,0)--(2.3,1.9);\draw[dashed](.45,0)--(-.7,-1.9) (1.15,0)--(-.7,-2.8);\fill(Q)circle(1.2pt)node[above]{$Q$};\node[left]at(-.7,-1.9){$Q'_1$};\node[left]at(-.7,-2.8){$Q'_2$};\node at(1.5,-.4){$n$};\node at(-1.5,.4){$n'=1$};\draw[<->](-1.6,0)--node[left]{$h$}(-1.6,-.8);\node at(1.65,2.6){1};\node at(2.4,2.6){2};
+\end{tikzpicture}

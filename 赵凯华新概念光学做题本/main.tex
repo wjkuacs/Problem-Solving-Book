@@ -1,0 +1,47 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany,fontset=fandol]{ctexbook}
+\usepackage{amsmath,amssymb,graphicx,geometry,fancyhdr,enumitem,array}
+\usepackage{empheq}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,patterns,decorations.markings}
+\tikzset{ray/.style={thin,postaction={decorate},decoration={markings,mark=at position .6 with {\arrow{Stealth}}}}}
+\usepackage[unicode,hidelinks]{hyperref}
+\geometry{left=23mm,right=23mm,top=22mm,bottom=22mm,headheight=16pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small 赵凯华新概念光学做题本}
+\fancyhead[R]{\small\nouppercase{\leftmark}}\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+\setlength{\parindent}{2em}\setlength{\emergencystretch}{3em}
+\linespread{1.12}
+\ctexset{chapter={beforeskip=10pt,afterskip=20pt}}
+\setlist[enumerate]{label=（\arabic*）,leftmargin=2.5em,itemsep=2pt,topsep=3pt}
+\newcommand{\problem}[2]{\par\phantomsection\pdfbookmark[1]{习题 #1}{problem-#1}\noindent\textbf{习题 #1}\quad #2\par}
+\newsavebox{\figbox}
+% Compact diagrams reserve space for handwritten work. Dense multi-part
+% diagrams have a separate height cap so their labels remain readable.
+\newlength{\maxfigheight}
+\foreach\figid in {1_18,2_10,3_16,4_5,book_3_33,book_7_9}{\expandafter\gdef\csname detailedfig@\figid\endcsname{1}}
+\newcommand{\drawfig}[2]{\begingroup\setlength{\maxfigheight}{38mm}\ifcsname detailedfig@#2\endcsname\setlength{\maxfigheight}{48mm}\fi\sbox{\figbox}{\resizebox{#1\linewidth}{!}{\input{tikzfigs/fig_#2.tex}}}\sbox{\figbox}{\scalebox{0.9}{\usebox{\figbox}}}\ifdim\ht\figbox>\maxfigheight\resizebox{!}{\maxfigheight}{\usebox{\figbox}}\else\usebox{\figbox}\fi\endgroup}
+\def\figlabel#1_#2\relax{#1-#2}
+\newcommand{\fig}[2][0.46]{\par\addvspace{4pt}{\centering\drawfig{#1}{#2}\par\vspace{2pt}{\footnotesize 习题\figlabel#2\relax\ 图}\par}\addvspace{3pt}}
+\newcommand{\bookfig}[3][0.8]{\par\addvspace{4pt}{\centering\drawfig{#1}{#2}\par\vspace{2pt}{\footnotesize #3}\par}\addvspace{3pt}}
+% A short question and its diagram form one aligned, non-floating block.
+\newcommand{\problemfig}[4][0.35]{\par\phantomsection\pdfbookmark[1]{习题 #2}{problem-#2}\noindent\begin{minipage}[t]{\dimexpr\linewidth-#1\linewidth-6mm\relax}\vspace{0pt}\textbf{习题 #2}\quad #3\end{minipage}\hfill\begin{minipage}[t]{#1\linewidth}\vspace{0pt}\centering\drawfig{1}{#4}\par\vspace{3pt}{\footnotesize 习题\figlabel#4\relax\ 图}\end{minipage}\par}
+\newcommand{\lenstable}{\begin{center}\small\renewcommand{\arraystretch}{1.6}\begin{tabular}{|c|*{7}{p{1cm}|}}\hline 物距 $s/\mathrm{cm}$&$-24$&$-12$&$-6.0$&0&12&24&36\\\hline 像距 $s'/\mathrm{cm}$&&&&&&&\\\hline 横向放大率 $V$&&&&&&&\\\hline 像的虚实&&&&&&&\\\hline 像的正倒&&&&&&&\\\hline\end{tabular}\end{center}}
+\newcommand{\missing}[1]{\par{\small\itshape〔待补资料：#1〕}\par}
+\newcommand{\editorial}[1]{\par\smallskip{\small〔校注：#1〕}\par}
+\newcommand{\answerarea}{\par\vfill}
+\begin{document}
+\begin{titlepage}\centering\vspace*{.24\textheight}
+{\Huge\bfseries 赵凯华新概念光学\\[1em]做题本\par}
+\vspace{2cm}{\Large 习题整理与作答空间\par}\vfill
+{\large 姓名：\underline{\hspace{4cm}}\quad 日期：\underline{\hspace{3cm}}\par}
+\end{titlepage}
+\tableofcontents\clearpage
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\end{document}

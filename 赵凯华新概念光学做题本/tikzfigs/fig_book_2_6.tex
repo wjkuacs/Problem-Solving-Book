@@ -1,0 +1,23 @@
+% TikZ redraw for exercise book-2_6
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\coordinate(C)at(0,0);\coordinate(Q)at(-.7,0);
+\coordinate(M)at(.6,1.2);\coordinate(H)at(.6,0);
+\coordinate(Qp)at(-2.55,0);\coordinate(A)at(1.342,0);
+\draw[line width=.8pt](C)circle(1.342);
+\draw[densely dashed](-2.8,0)--(1.75,0);
+\draw[densely dashed](Qp)--(M);
+\draw[ray,line width=.6pt](Q)--(M);
+\draw[ray,line width=.6pt](M)--(1.8,1.657);
+\draw[thin](C)--(M);\draw[densely dashed](M)--(H);
+\foreach\p in {C,Q,M,H,A}\fill(\p)circle(1pt);
+\node[below]at(C){$C$};\node[below]at(Q){$Q$};
+\node[below]at(Qp){$Q'$};\node[above]at(M){$M$};
+\node[below]at(H){$H$};\node[below right]at(A){$A$};
+\node at(.45,.7){$r$};\node at(-1.8,-1.1){$n'$};\node at(0,-.9){$n$};
+\draw[shift={(-.7,0)}](0:.42)arc[start angle=0,end angle=42.7,radius=.42];
+\node at(-.13,.2){$u$};
+\draw[shift={(-2.55,0)}](0:.68)arc[start angle=0,end angle=20.85,radius=.68];
+\node at(-1.78,.19){$u'$};
+
+\end{tikzpicture}

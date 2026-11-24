@@ -1,0 +1,19 @@
+% TikZ redraw for exercise book-7_9
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\begin{scope}
+\draw[->](0,-1.85)--(0,2.1)node[above]{$n$};\draw[->](0,0)--(3.6,0)node[right]{$\lambda$};
+\draw[densely dashed,gray](1.8,-1.65)--(1.8,1.65);
+\draw[thick,domain=.2:1.65,samples=70]plot(\x,{.25/(\x-1.8)});
+\draw[thick,domain=1.95:3.35,samples=70]plot(\x,{.25/(\x-1.8)});
+\node[below right]at(1.8,0){$\lambda_0$};\node at(1.8,-2.3){(a)\ 色散曲线};
+\end{scope}
+\begin{scope}[xshift=5.1cm,yshift=-1.6cm]
+\draw[->](0,0)--(0,3.7)node[above]{$n\kappa$};\draw[->](0,0)--(3.6,0)node[right]{$\lambda$};
+\draw[thick,domain=.2:3.4,samples=160]plot(\x,{3.3/(1+((\x-1.8)/.22)^2)});
+\draw[densely dashed](1.8,0)--(1.8,3.3) (1.58,0)--(1.58,1.65) (2.02,0)--(2.02,1.65);
+\draw[<->](1.58,1.65)--(2.02,1.65);\node[fill=white,inner sep=1pt]at(1.8,1.22){$\Delta\lambda$};
+\node[below]at(1.8,0){$\lambda_0$};\node at(1.8,-.7){(b)\ 吸收峰};
+\end{scope}
+
+\end{tikzpicture}

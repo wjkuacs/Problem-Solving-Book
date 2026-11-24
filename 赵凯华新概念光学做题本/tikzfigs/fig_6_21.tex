@@ -1,0 +1,4 @@
+% TikZ redraw for exercise 6-21
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+\foreach\x/\name/\ang in {0/A/30,2.4/B/50}{\filldraw[fill=gray!10](\x,-.8)--({\x+.9},-.25)--({\x+.9},1.45)--(\x,.9)--cycle;\draw[->]({\x+.25},.15)--++(\ang:.7);\node at({\x+.55},1.1){$\name$};}\draw[ray](-1,0)--(0,0);\draw[ray](.9,0)--(2.4,0);\draw[ray](3.3,0)--(4.2,0);\draw[->](4,-.5)arc(-90:45:.45);\node[right]at(4.4,-.05){$\alpha$};
+\end{tikzpicture}

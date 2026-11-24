@@ -1,0 +1,24 @@
+% TikZ redraw for exercise book-6_47b
+\begin{tikzpicture}[font=\small,line cap=round,line join=round]
+
+\coordinate(C)at(0,2);\coordinate(A)at(0,0);\coordinate(Axx)at(.8,0);
+\coordinate(Cxx)at(5.8,2);\coordinate(Cp)at(6.6,2);\coordinate(Ap)at(6.6,0);
+\coordinate(M)at(.4,1);\coordinate(J)at(3.25,.98);
+\filldraw[fill=gray!14,line width=.7pt](C)--(Cxx)--(Ap)--(Axx)--cycle;
+\draw[densely dashed,gray](C)--(A)--(Axx) (Cxx)--(Cp)--(Ap);
+\draw[line width=2pt,gray!70](Axx)--(Cxx);
+\draw[line width=.55pt](Axx)--(Cxx);
+\draw(.7294,.1764)--(.9058,.2470)--(.9764,.0706);
+\node[above left]at(C){$C$};\node[below left]at(A){$A$};\node[below]at(Axx){$A''$};
+\node[above left]at(Cxx){$C''$};\node[above right]at(Cp){$C'$};\node[below right]at(Ap){$A'$};
+\fill(M)circle(1.3pt)node[below left]{$M$};
+\draw[ray,line width=.65pt](-1.8,1)node[left]{$S$}--(M);
+\draw[densely dashed](-1.8,1.55)node[left]{$S_0$}--(M)--(5.8,2);
+\draw[densely dashed](-1.8,.45)node[left]{$S_2$}--(M)--(5.8,.35);
+\draw[ray](M)--(J);\draw[ray](J)--(6.2,1)--(7.5,1)node[right]{e光};
+\draw[ray](J)--(4.321,2)--(5,2.7)node[above right]{o光};
+\draw[shift={(.4,1)}](166:.85)arc[start angle=166,end angle=194,radius=.85];
+\node at(-.75,1.23){$14^\circ$};\node at(-.75,.77){$14^\circ$};
+\draw[thin](3.1,.6)--(2.85,.82);\node[below]at(3.5,.55){加拿大树胶};
+
+\end{tikzpicture}
