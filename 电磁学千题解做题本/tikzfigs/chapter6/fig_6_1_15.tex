@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% 3D coordinate axes
+\coordinate (O) at (0,0);
+\draw[vec] (O)--(-1.35,-1.05) node[below left] {$x$};
+\draw[vec] (O)--(2.35,0) node[right] {$y$};
+\draw[vec] (O)--(0,2.25) node[above] {$z$};
+\EMpoint{O}{below right}{O}
+% Magnetic field B along +z
+\draw[vec,line width=.8pt] (O)--(0,1.55) node[right=2pt] {$\vec{B}$};
+% Velocity v in x-z plane (up-left)
+\draw[vec] (O)--(-1.05,0.95) node[midway,above left=-1pt] {$\vec{v}$};
+\end{tikzpicture}%

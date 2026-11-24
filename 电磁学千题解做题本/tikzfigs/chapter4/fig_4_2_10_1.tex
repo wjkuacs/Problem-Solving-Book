@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,-.86)--(0,1.32)--(5.10,1.32)--(5.10,-.86);
+\EMmeter{2.55,1.32}{G}
+\foreach \i in {0,1,2} {
+  \pgfmathtruncatemacro{\index}{\i+1}
+  \EMres{1.70*\i,0}{1.70*\index,0}{R_{\index}}
+}
+\draw (1.70,0)--(1.70,-.86) (3.40,0)--(3.40,-.86);
+\foreach \x/\lab in {0/+,1.70/{10\,\mathrm A},3.40/{1.0\,\mathrm A},5.10/{0.10\,\mathrm A}} {
+  \EMdot{\x,0}
+  \EMterm{\x,-.86}{below}{\lab}
+}
+\end{tikzpicture}%

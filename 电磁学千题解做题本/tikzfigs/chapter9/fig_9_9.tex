@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+\def\L{4.80}
+\def\rb{1.05}
+\def\ryb{1.05}
+\def\rxb{0.35}
+\def\ra{0.36}
+\def\rya{0.36}
+\def\rxa{0.12}
+% Outer cylinder body
+\draw (0,0) ellipse[x radius=\rxb,y radius=\ryb];
+\draw (0,\rb)--(\L,\rb) (0,-\rb)--(\L,-\rb);
+\draw (\L,-\rb) arc[start angle=-90,end angle=90,x radius=\rxb,y radius=\ryb];
+\draw[aux] (\L,\rb) arc[start angle=90,end angle=270,x radius=\rxb,y radius=\ryb];
+% Inner wire (left hatched face, dashed cylinder, right dashed ellipse)
+\draw[pattern=north east lines,pattern color=black!62] (0,0) ellipse[x radius=\rxa,y radius=\rya];
+\draw[aux] (0,\ra)--(\L,\ra) (0,-\ra)--(\L,-\ra);
+\draw[aux] (\L,0) ellipse[x radius=\rxa,y radius=\rya];
+% Diameter dimensions 2b and 2a
+\draw[dim] (1.95,-\rb)--(1.95,\rb) node[midway,fill=white,inner sep=1pt] {$2b$};
+\draw[dim] (2.75,-\ra)--(2.75,\ra) node[midway,fill=white,inner sep=1pt] {$2a$};
+% Left power source (+ top, - bottom)
+\draw (0,0)--(-0.85,0)--(-0.85,-\rb)--(0,-\rb);
+\EMcell[-90]{-0.85,-0.525}
+\node[right=3pt] at (-0.85,-0.38) {$+$};
+\node[right=3pt] at (-0.85,-0.67) {$-$};
+% Right load resistor R
+\draw[aux] (\L,0)--(\L+\rxb,0);
+\draw (\L+\rxb,0)--(\L+1.10,0);
+\draw (\L+1.10,-\rb)--(\L,-\rb);
+\draw (\L+1.10,0)--node[midway,sloped,em resistor]{} (\L+1.10,-\rb);
+\node[left=4pt] at (\L+1.10,-0.525) {$R$};
+\end{tikzpicture}%

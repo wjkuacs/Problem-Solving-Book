@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.40)--(1.65,1.40) (2.77,1.40)--(4.10,1.40)--(4.10,0)--(0,0);
+\EMres{.55,1.40}{1.45,1.40}{R}
+\foreach \i in {0,1,2,3}
+  \draw (1.65+.28*\i,1.40) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.21,1.40) {$L$};
+\draw[white,line width=2.2pt] (3.34,1.40)--(3.52,1.40);
+\draw (3.34,1.14)--(3.34,1.66) (3.52,1.14)--(3.52,1.66);
+\node[above=4pt] at (3.43,1.66) {$C$};
+\EMswitch{2.05,0}
+\node[above=5pt] at (2.05,.16) {$K$};
+\end{tikzpicture}%

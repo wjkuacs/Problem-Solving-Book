@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Squirrel-cage rotor in perspective
+\def\rx{.32}
+\def\ry{.78}
+\def\L{2.30}
+\draw (-\L/2,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (\L/2,\ry) arc[start angle=90,end angle=-90,x radius=\rx,y radius=\ry];
+\draw (-\L/2,\ry)--(\L/2,\ry) (-\L/2,-\ry)--(\L/2,-\ry);
+% Rotor bars along front
+\foreach \ang in {-65,-38,-12,14,40,65} {
+  \draw ({-\L/2+\rx*cos(\ang)},{\ry*sin(\ang)})--({\L/2+\rx*cos(\ang)},{\ry*sin(\ang)});
+}
+% Axis OO'
+\draw[axis] (-\L/2-\rx-.45,0)--(-\L/2,0);
+\draw[axis] (\L/2+\rx,0)--(\L/2+\rx+.45,0);
+\node[left] at (-\L/2-\rx-.45,0) {$O$};
+\node[right] at (\L/2+\rx+.45,0) {$O'$};
+\end{tikzpicture}%

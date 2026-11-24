@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.45)--(0,2.1)--(2.9,2.1)--(2.9,1.8)
+      (0,.65)--(0,0)--(2.9,0)--(2.9,.3);
+\draw (2.2,.3) rectangle (3.6,1.8);
+\EMterm{0,1.45}{}{} \EMterm{0,.65}{}{}
+\node[left=2pt] at (0,1.05) {$u(t)$};
+\EMdot{1.2,2.1} \node[above=2pt] at (1.2,2.1) {$i(t)$};
+\EMres[below=4pt]{2.2,.3}{2.2,1.8}{R}
+\begin{scope}[shift={(3.6,1.05)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.26,-.13)--(.26,-.13) (-.26,.13)--(.26,.13);
+  \node[right] at (.28,0) {$C$};
+\end{scope}
+\EMdot{2.9,1.8} \EMdot{2.9,.3}
+\end{tikzpicture}%

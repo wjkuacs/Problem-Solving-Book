@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\fill[pattern=north east lines,pattern color=black!64] (150:.49)--(150:1.95)
+  arc[start angle=150,end angle=330,radius=1.95]--(330:.49)
+  arc[start angle=330,end angle=150,radius=.49]--cycle;
+\draw (150:.49)--(150:1.95) arc[start angle=150,end angle=360,radius=1.95]--(.49,0)
+  arc[start angle=0,end angle=-210,radius=.49];
+\draw (330:.49)--(330:1.95);
+\draw[aux] (-.49,0)--(-1.95,0);
+\draw[dim] (180:1.02) arc[start angle=180,end angle=330,radius=1.02];
+\node[fill=white,inner sep=1pt] at (255:1.04) {$\theta$};
+\draw[vec] (0,0)--(40:.49) node[above] {$r_1$};
+\draw[vec] (0,0)--(26:1.95) node[pos=.68,above] {$r_2$};
+\draw[guide] (12:1.95) arc[start angle=12,end angle=33,radius=1.95];
+\end{tikzpicture}%

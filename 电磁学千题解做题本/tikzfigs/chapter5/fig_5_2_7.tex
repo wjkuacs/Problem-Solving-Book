@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Radial spreading arrows in the oblique x-y plane
+\foreach \ang in {10,30,...,350} {
+  \draw[vec] (0,0)--({1.55*cos(\ang)},{0.82*sin(\ang)});
+}
+% Coordinate axes x, y, z
+\draw[vec] (0,0)--(-136:2.25) node[below left] {$x$};
+\draw[vec] (0,0)--(2.35,0) node[right] {$y$};
+\draw[vec] (0,0)--(0,2.25) node[left] {$z$};
+% Downward current arrow I on z axis
+\draw[vec] (0,1.65)--(0,1.15);
+\node[right] at (0,1.42) {$I$};
+\end{tikzpicture}%

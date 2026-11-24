@@ -1,0 +1,37 @@
+\begin{tikzpicture}[em diagram,
+  declare function={
+    chargeX=1.05;
+    xi(\eta,\k)=((1-(\eta)^2)+sqrt((1-(\eta)^2)^2+4*\k^2*(\eta)^2))/(2*\k);
+  }]
+\draw[guide,vec] (-2.92,0)--(2.94,0) node[right] {$x$};
+\draw[guide,vec] (0,0)--(0,2.76) node[above] {$y$};
+
+% For eta = (r_- - r_+)/l, the field-line equation fixes xi = (r_- + r_+)/l.
+% The seven contours are reflected about the x-axis. The outer tails are schematic.
+\foreach \halfFlux in {.40,.53,.65,.77,.86,.93,.975} {
+  \foreach \sign in {1,-1} {
+    \draw[field] plot[domain=0:180,samples=55,variable=\t]
+      ({chargeX*xi(cos(\t),\halfFlux)*cos(\t)},
+       {\sign*chargeX*sqrt(max(0,(xi(cos(\t),\halfFlux)^2-1)*(1-cos(\t)^2)))});
+  }
+}
+\foreach \sign in {1,-1} {
+  \begin{scope}[yscale=\sign]
+    \foreach \ax/\ay/\bx/\by/\cx/\cy in {
+      1.36/.61/1.47/1.62/1.49/2.42,
+      1.66/.60/1.91/1.40/2.17/2.20,
+      1.76/.51/2.35/1.03/2.68/1.63,
+      1.72/.28/2.50/.65/2.90/1.03
+    } {
+      \draw[field] (1.05,0) .. controls (\ax,\ay) and (\bx,\by) .. (\cx,\cy);
+      \draw[field] (-\cx,\cy) .. controls (-\bx,\by) and (-\ax,\ay) .. (-1.05,0);
+    }
+  \end{scope}
+}
+\draw[field] (1.05,0)--(-1.05,0);
+\draw[field] (-2.87,0)--(-1.05,0);
+\draw[field] (1.05,0)--(2.88,0);
+\EMcharge{-1.05,0}{}{}{-}
+\EMcharge{1.05,0}{}{}{+}
+\EMdim{-1.05}{1.05}{-.74}{-.17}{l}
+\end{tikzpicture}%

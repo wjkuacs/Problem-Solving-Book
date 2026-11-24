@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+\def\a{1.15}
+% Outer wire edges and centerline
+\draw (-\a,-1.25)--(-\a,1.45) (\a,-1.25)--(\a,1.45);
+\draw[axis] (-\a,1.45)--(-\a,1.85) (\a,1.45)--(\a,1.85)
+  (-\a,-1.25)--(-\a,-1.65) (\a,-1.25)--(\a,-1.65);
+\draw (0,-1.45)--(0,1.65);
+% Upward current arrows
+\draw[vec] (-0.45,-1.25)--(-0.45,1.45);
+\draw[vec] (0,-1.25)--(0,1.45) node[above=2pt] {$I$};
+% Rectangle ABCD
+\draw (0,-0.55) rectangle (\a,0.75);
+\node[above left] at (0,0.75) {$A$};
+\node[below left] at (0,-0.55) {$B$};
+\node[below right] at (\a,-0.55) {$C$};
+\node[above right] at (\a,0.75) {$D$};
+\node[right] at (\a,0.10) {$l$};
+% Dimension a at bottom
+\draw[dim] (0,-1.05)--(\a,-1.05) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

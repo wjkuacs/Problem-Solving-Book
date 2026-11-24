@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\begin{scope}[x=1.04cm,y=1.04cm]
+  \foreach \y in {0,...,4} {
+    \draw[aux] (-.48,\y)--(0,\y) (5,\y)--(5.48,\y);
+    \foreach \x in {0,...,4} { \EMres{\x,\y}{\x+1,\y}{r} }
+  }
+  \foreach \x in {0,...,5} {
+    \draw[aux] (\x,-.48)--(\x,0) (\x,4)--(\x,4.48);
+    \foreach \y in {0,...,3} { \EMres[above=4pt]{\x,\y}{\x,\y+1}{r} }
+    \foreach \y in {0,...,4} { \EMdot{\x,\y} }
+  }
+  \node[above right,inner sep=1pt] at (2,2) {$a$};
+  \node[above left,inner sep=1pt] at (3,2) {$b$};
+\end{scope}
+\end{tikzpicture}%

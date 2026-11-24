@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (BL) at (-0.60,-1.05);
+\coordinate (TL) at (-0.60,0.65);
+\coordinate (TR) at (0.60,1.05);
+\coordinate (BR) at (0.60,-0.65);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (BL)--(TL);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (TL)--(TR) node[midway,above=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (TR)--(BR);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (BR)--(BL);
+\EMpoint{0,0}{below left}{O}
+\draw[axis] (0,0)--(3.85,0);
+\EMpoint{3.25,0}{below}{$P$}
+\draw[guide] (0,0)--(0,0.62) (3.25,0)--(3.25,0.62);
+\draw[dim] (0,0.46)--(3.25,0.46) node[midway,fill=white,inner sep=1pt] {$r$};
+\draw[guide] (BL)--++(-0.42,-0.14) (TL)--++(-0.42,-0.14);
+\draw[dim] (-0.90,-1.15)--(-0.90,0.55) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[guide] (BL)--++(0,-0.42) (BR)--++(0,-0.42);
+\draw[dim] (-0.60,-1.35)--(0.60,-0.95) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw[metal] (0,0) circle[radius=1.72];
+\draw[fill=white] (0,0) circle[radius=1.23];
+\draw[metal] (0,0) circle[radius=.62];
+\foreach \angle/\radius/\i in {-42/.62/1,-19/1.23/2,7/1.72/3}
+  \draw[vec] (0,0)--(\angle:\radius) node[pos=.84,fill=white,inner sep=1pt,below right] {$R_{\i}$};
+\node[fill=white,inner sep=1pt] at (-.33,.19) {$A$};
+\node[fill=white,inner sep=1pt] at (142:1.48) {$B$};
+\node[above] at (0,.62) {$q$};
+\node[above] at (0,1.72) {$Q$};
+\end{tikzpicture}%

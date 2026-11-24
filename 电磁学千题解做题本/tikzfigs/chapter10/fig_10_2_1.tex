@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.35,0)--(-.35,1.95)--(0,1.95) (0,1.45)--(0,2.45)--(.68,2.45) (1.80,2.45)--(2.48,2.45)--(2.48,1.45)--(0,1.45);
+\draw (2.48,1.95)--(4.25,1.95)--(4.25,0)--(-.35,0);
+% Inductor L with iron core
+\foreach \i in {0,1,2,3}
+  \draw (.68+.28*\i,2.45) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\draw (.70,2.22)--(1.78,2.22) (.70,2.15)--(1.78,2.15);
+\node[above=2pt] at (1.24,2.45) {$L$};
+% Bulbs A_1, A_2
+\begin{scope}[shift={(1.24,1.45)}]
+  \draw[fill=white] (0,0) circle[radius=.24];
+  \draw (-.17,-.17)--(.17,.17) (-.17,.17)--(.17,-.17);
+  \node[below=3pt] at (0,-.22) {$A_1$};
+\end{scope}
+\begin{scope}[shift={(3.36,1.95)}]
+  \draw[fill=white] (0,0) circle[radius=.24];
+  \draw (-.17,-.17)--(.17,.17) (-.17,.17)--(.17,-.17);
+  \node[above=4pt] at (0,.22) {$A_2$};
+\end{scope}
+% Cell (- left, + right) and switch K
+\EMcell[180]{1.25,0}
+\node[above=4pt] at (1.02,.14) {$-$};
+\node[above=4pt] at (1.48,.14) {$+$};
+\EMswitch{2.75,0}
+\node[above=5pt] at (2.75,.16) {$K$};
+\EMdot{0,1.95}
+\EMdot{2.48,1.95}
+\end{tikzpicture}%

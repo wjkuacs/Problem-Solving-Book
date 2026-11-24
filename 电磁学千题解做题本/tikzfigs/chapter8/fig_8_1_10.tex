@@ -1,0 +1,35 @@
+\begin{tikzpicture}[em diagram]
+% Iron ring
+\draw (0,0) circle[radius=.92];
+\draw (0,0) circle[radius=.62];
+% Left circuit with cell and switch K -> coil A
+\draw (-2.10,.15)--(-2.10,.98)--(-1.82,.98);
+\draw (-1.32,.98)--(-.78,.98)--(-.78,.60);
+\draw (-2.10,-.15)--(-2.10,-.82)--(-.78,-.82)--(-.78,-.45);
+% Battery cell (+ top, - bottom)
+\draw (-2.34,.15)--(-1.86,.15) (-2.23,-.15)--(-1.97,-.15);
+\node[left] at (-2.30,.24) {$+$};
+\node[left] at (-2.30,-.24) {$-$};
+% Switch K
+\EMswitch[0]{-1.57,.98}
+\node[above=4pt] at (-1.57,.98) {$K$};
+% Coil A turns on left limb
+\foreach \y in {.48,.24,0,-.24,-.48} {
+  \draw (-.96,\y+.06) .. controls (-1.03,\y+.02) and (-1.03,\y-.04) .. (-.92,\y-.06)
+    --(-.62,\y-.06) .. controls (-.56,\y-.04) and (-.56,\y+.02) .. (-.62,\y+.06);
+}
+\node[right=1pt] at (-.55,0) {$A$};
+% Coil B turns on right limb and loop over compass
+\foreach \y in {.48,.24,0,-.24,-.48} {
+  \draw (.62,\y+.06) .. controls (.56,\y+.02) and (.56,\y-.04) .. (.64,\y-.06)
+    --(.92,\y-.06) .. controls (1.02,\y-.04) and (1.02,\y+.02) .. (.95,\y+.06);
+}
+\node[left=1pt] at (.55,0) {$B$};
+\draw (.80,.54)--(.80,.92)--(3.05,.92)--(3.05,-.58)--(.80,-.58)--(.80,-.48);
+% Compass needle below bottom wire (actually below top wire in loop)
+\draw (2.15,-.58) -- (2.15,-.22);
+\draw[fill=black!25] (1.60,-.18)--(2.15,-.13)--(2.70,-.18)--(2.15,-.23)--cycle;
+\draw (1.92,-.36)--(2.38,-.36) (1.98,-.36) arc[start angle=180,end angle=360,x radius=.17,y radius=.09];
+\node[left] at (1.58,-.18) {$S$};
+\node[right] at (2.72,-.18) {$N$};
+\end{tikzpicture}%

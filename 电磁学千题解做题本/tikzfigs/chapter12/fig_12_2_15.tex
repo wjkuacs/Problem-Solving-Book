@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+\def\rb{1.24}
+\def\xb{.58}
+\def\ra{.58}
+\def\xa{.27}
+\def\L{5.10}
+% Left concentric end faces
+\draw (0,0) ellipse[x radius=\xb,y radius=\rb];
+\draw (0,0) ellipse[x radius=\xa,y radius=\ra];
+% Outer cylinder and right end arc
+\draw (0,\rb)--(\L,\rb) arc[start angle=90,end angle=-90,x radius=\xb,y radius=\rb]--(0,-\rb);
+% Inner cylinder (hidden dashed)
+\draw[dashed] (0,\ra)--(\L,\ra) arc[start angle=90,end angle=-90,x radius=\xa,y radius=\ra]--(0,-\ra);
+% Radial dimensions a and b
+\draw[guide] (-1.42,0)--(0,0) (-.96,\ra)--(0,\ra) (-1.42,\rb)--(0,\rb);
+\draw[dim] (-.82,0)--(-.82,\ra) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (-1.26,0)--(-1.26,\rb) node[midway,fill=white,inner sep=1pt] {$b$};
+% Left voltage terminals
+\draw (0,-\ra)--(-1.22,-\ra) (0,-\rb)--(-1.22,-\rb);
+\draw[fill=white] (-1.22,-\ra) circle[radius=1.5pt] node[above=2pt] {$+$};
+\draw[fill=white] (-1.22,-\rb) circle[radius=1.5pt] node[below=2pt] {$-$};
+\node at (-1.22,{(-\ra-\rb)/2}) {$U$};
+% Right load resistor R
+\draw (\L,-\ra)--(\L+.92,-\ra)--(\L+.92,-\rb)--(\L,-\rb);
+\draw[fill=white] (\L+.84,{-\ra-.12}) rectangle (\L+1.00,{-\rb+.12});
+\node[right=2pt] at (\L+1.00,{(-\ra-\rb)/2}) {$R$};
+\end{tikzpicture}%

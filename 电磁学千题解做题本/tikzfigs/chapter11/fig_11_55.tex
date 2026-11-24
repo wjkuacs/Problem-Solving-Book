@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,3.8)--(2.0,3.8)--(2.0,1.8)
+      (0,0)--(2.0,0)--(2.0,.25);
+\draw (1.35,.25) rectangle (2.65,1.8);
+\EMres[below=4pt]{2.0,2.6}{2.0,3.8}{R}
+\begin{scope}[shift={(2.0,2.25)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.25,-.13)--(.25,-.13) (-.25,.13)--(.25,.13);
+  \node[left] at (-.26,0) {$C$};
+\end{scope}
+\EMres[below=4pt]{1.35,.25}{1.35,1.8}{R}
+\begin{scope}[shift={(2.65,1.025)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.25,-.13)--(.25,-.13) (-.25,.13)--(.25,.13);
+  \node[right] at (.26,0) {$C$};
+\end{scope}
+\EMdot{2.0,1.8} \EMdot{2.0,.25}
+
+% Voltage arrows
+\draw[dim] (.25,0)--(.25,3.8) node[midway,fill=white,inner sep=1.5pt] {$u(t)$};
+\draw[guide] (2.4,3.8)--(3.75,3.8) (2.4,1.8)--(3.75,1.8) (2.4,0)--(3.75,0);
+\draw[dim] (3.45,1.8)--(3.45,3.8) node[midway,fill=white,inner sep=1.5pt] {$u_1(t)$};
+\draw[dim] (3.45,0)--(3.45,1.8) node[midway,fill=white,inner sep=1.5pt] {$u_2(t)$};
+\end{tikzpicture}%

@@ -1,0 +1,36 @@
+\begin{tikzpicture}[em diagram]
+\def\L{1.90}
+\def\R{0.78}
+\def\rx{0.34}
+% Left face (S pole)
+\draw (-\L,0) ellipse[x radius=\rx,y radius=\R];
+\foreach \px/\py in {
+  -1.92/0.52, -1.80/0.34, -2.02/0.24, -1.88/0.12, -1.72/0.04,
+  -2.06/-0.12, -1.88/-0.22, -1.74/-0.36, -1.94/-0.52
+} {
+  \node[font=\tiny,inner sep=0pt] at (\px,\py) {$-$};
+}
+% Cylinder walls and right face front arc (N pole)
+\draw (-\L,\R)--(\L,\R) (-\L,-\R)--(\L,-\R);
+\draw (\L,-\R) arc[start angle=-90,end angle=90,x radius=\rx,y radius=\R];
+\foreach \ang in {-72,-48,-24,0,24,48,72} {
+  \node[font=\tiny,inner sep=0pt] at ({\L+\rx*cos(\ang)+0.09},{\R*sin(\ang)}) {$+$};
+}
+% Axes
+\draw[axis] (-2.75,0)--(-1.56,0) (\L,0)--(3.65,0);
+% Labels S, N, -sigma_m, sigma_m
+\node[left=2pt] at ({-\L-\rx},0.26) {$-\sigma_{\mathrm{m}}$};
+\node[below left=1pt] at ({-\L-\rx+0.08},-0.08) {$\mathrm{S}$};
+\node[right=1pt] at ({\L+\rx+0.02},0.34) {$\sigma_{\mathrm{m}}$};
+\node[below right=1pt] at ({\L+\rx+0.02},-0.26) {$\mathrm{N}$};
+% Length l
+\draw[guide] (-\L,\R)--(-\L,1.25) (\L,\R)--(\L,1.25);
+\draw[dim] (-\L,1.08)--(\L,1.08) node[midway,fill=white,inner sep=1.5pt] {$l$};
+% Radius R
+\draw[guide] (\L,\R)--(3.42,\R);
+\draw[dim] (3.22,0)--(3.22,\R) node[midway,fill=white,inner sep=1.5pt] {$R$};
+% Distances x_1 and x_2 from center
+\draw[guide] (0,-\R)--(0,-1.88) (1.15,-\R)--(1.15,-1.40) (2.75,-0.16)--(2.75,-1.88);
+\draw[dim] (0,-1.22)--(1.15,-1.22) node[midway,fill=white,inner sep=1pt] {$x_1$};
+\draw[dim] (0,-1.70)--(2.75,-1.70) node[midway,fill=white,inner sep=1pt] {$x_2$};
+\end{tikzpicture}%

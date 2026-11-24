@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (T) at (0,1.22);
+\coordinate (L) at (-1.66,0);
+\coordinate (D) at (0,-1.22);
+\coordinate (R) at (1.66,0);
+\EMres{L}{T}{r}
+\EMres{T}{R}{r}
+\EMres[below=4pt]{L}{D}{r}
+\EMres[below=4pt]{D}{R}{r}
+\EMres{D}{T}{r}
+\draw (-2.32,0)--(L) (R)--(2.32,0);
+\foreach \p in {T,L,D,R} { \EMdot{\p} }
+\EMterm{-2.32,0}{left}{a}
+\EMterm{2.32,0}{right}{b}
+\end{tikzpicture}%

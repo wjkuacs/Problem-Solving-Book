@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Long straight wire I on left
+\draw[axis] (-1.25,-1.15)--(-1.25,-.85);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.25,-.85)--(-1.25,.85);
+\draw[axis] (-1.25,.85)--(-1.25,1.15);
+\node[left] at (-1.25,0) {$I$};
+% Airplane flying right (away from wire), wings a (top) and b (bottom)
+\coordinate (P) at (.25,0);
+% Fuselage
+\draw[fill=black!80] (-.35,-.04)--(.52,-.04)--(.72,0)--(.52,.04)--(-.35,.04)--cycle;
+% Wings (a top, b bottom)
+\draw[fill=black!80] (.02,.04)--(.18,.78)--(.28,.78)--(.24,.04)--cycle;
+\draw[fill=black!80] (.02,-.04)--(.18,-.78)--(.28,-.78)--(.24,-.04)--cycle;
+% Tail
+\draw[fill=black!80] (-.32,.04)--(-.25,.24)--(-.18,.24)--(-.20,.04)--cycle;
+\draw[fill=black!80] (-.32,-.04)--(-.25,-.24)--(-.18,-.24)--(-.20,-.04)--cycle;
+\node[above] at (.22,.80) {$a$};
+\node[below] at (.22,-.80) {$b$};
+% Velocity arrow v and distance r
+\draw[vec] (.72,0)--(1.35,0) node[right] {$\vec{v}$};
+\draw[guide] (.23,-.35)--(.23,-.55);
+\draw[dim] (-1.25,-.45)--(.23,-.45) node[midway,fill=white,inner sep=1pt] {$r$};
+\end{tikzpicture}%

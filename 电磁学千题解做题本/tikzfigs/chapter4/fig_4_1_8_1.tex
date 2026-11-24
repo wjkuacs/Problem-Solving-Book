@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (A) at (0,2.80);
+\coordinate (B) at (-2.08,0);
+\coordinate (C) at (2.08,0);
+\EMres{B}{A}{r_2}
+\EMres{A}{C}{r_3}
+\EMres[below=4pt]{B}{C}{r_1}
+\draw (A)--(0,2.16);
+\EMres{0,2.16}{0,.72}{}
+\node[right] at (.14,1.44) {$r_4$};
+\draw[vec] (0,.72)--(-.35,.45)--(-.35,.11);
+\EMpoint{A}{above}{A}
+\EMpoint{B}{below left}{B}
+\EMpoint{C}{below right}{C}
+\node[above left] at (-.35,.15) {$D$};
+\end{tikzpicture}%

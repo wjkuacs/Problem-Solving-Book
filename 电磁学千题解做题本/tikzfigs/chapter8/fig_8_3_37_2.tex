@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal core with L1 and L2 in series-opposing (2-4 connected)
+\draw (-2.15,.32)--(2.15,.32) (-2.15,-.32)--(2.15,-.32);
+\foreach \x in {-1.55,-1.35,-1.15} {
+  \draw (\x,.32)--(\x-.05,-.32);
+  \draw (\x,.32) arc[start angle=0,end angle=180,x radius=.04,y radius=.05];
+  \draw (\x-.05,-.32) arc[start angle=180,end angle=360,x radius=.04,y radius=.05];
+}
+\node[above] at (-1.35,.42) {$L_1$};
+\foreach \x in {.05,.25,.45,.65,.85,1.05,1.25} {
+  \draw (\x,.32)--(\x-.05,-.32);
+  \draw (\x,.32) arc[start angle=0,end angle=180,x radius=.04,y radius=.05];
+  \draw (\x-.05,-.32) arc[start angle=180,end angle=360,x radius=.04,y radius=.05];
+}
+\node[above] at (.65,.42) {$L_2$};
+\node[above] at (-.55,.38) {$M$};
+% Leads and terminals 1, 2, 3, 4 (2 connected to 4)
+\draw (-1.60,-.32)--(-1.60,-.95);
+\draw (-1.15,-.32)--(-1.15,-1.18)--(1.20,-1.18)--(1.20,-.32);
+\draw (.00,-.32)--(.00,-.95);
+\EMterm{-1.60,-.95}{left}{1}
+\EMterm{-1.15,-.95}{left}{2}
+\EMterm{.00,-.95}{left}{3}
+\EMterm{1.20,-.95}{left}{4}
+\end{tikzpicture}%

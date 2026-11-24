@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.32}
+\draw (0,0) circle[radius=\R];
+\EMpoint{0,0}{below left}{$O$}
+\draw[vec] (0,0)--(34:\R) node[midway,above left=-1pt] {$R$};
+% Chord ab near bottom
+\draw[line width=.75pt] (-1.05,-.80)--(1.05,-.80);
+\node[left] at (-1.05,-.80) {$a$};
+\node[right] at (1.05,-.80) {$b$};
+\node[above] at (0,-.80) {$l$};
+% Out-of-page B dots
+\foreach \x/\y in {-.72/.62, 0/.88, .72/.62, -.85/-.12, .85/-.12} {
+  \fill (\x,\y) circle[radius=1.1pt];
+}
+\node[align=center] at (-.52,.15) {$\vec{B}$\\向\\外};
+\end{tikzpicture}%

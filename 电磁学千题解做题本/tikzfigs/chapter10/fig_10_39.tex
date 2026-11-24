@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Vertical rotation axis with arrow omega
+\draw[vec] (0,-1.45)--(0,1.85);
+\node[right=3pt] at (0,1.55) {$\omega$};
+% Dashed circular trajectories (perspective ellipses)
+\draw[aux] (0,.75) ellipse[x radius=1.05,y radius=.30];
+\draw[aux] (0,-.55) ellipse[x radius=1.55,y radius=.44];
+% Planar arbitrary closed loop touching the two circles on the left
+\draw[line width=.70pt] plot[smooth cycle,tension=.72] coordinates {
+  (-1.05,.75) (-1.85,1.05) (-2.55,.40) (-2.68,-.48) (-2.05,-.85) (-1.55,-.55) (-1.45,.12)
+};
+\node at (-1.98,.15) {$R,L$};
+\end{tikzpicture}%

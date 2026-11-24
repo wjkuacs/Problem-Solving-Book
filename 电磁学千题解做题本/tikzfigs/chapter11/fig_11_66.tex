@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\draw[line width=.7pt] (0,0) rectangle (4.8,2.30);
+\draw[line width=.7pt] (.48,.38) rectangle (4.32,1.92);
+
+% Continuous coil on top horizontal limb
+\foreach \k in {0,...,14} {
+  \pgfmathsetmacro{\x}{.95+.215*\k}
+  \draw (\x,2.34) to[bend left=14] (\x-.06,1.88);
+  \fill (\x,2.30) circle[radius=.8pt] (\x-.06,1.92) circle[radius=.8pt];
+}
+
+% Taps a, b, c, d, e
+\foreach \x/\lbl in {0.82/a, 1.38/b, 2.025/c, 2.885/d, 3.96/e} {
+  \draw (\x,2.30)--(\x,2.95);
+  \EMterm{\x,2.95}{above}{\lbl}
+}
+\end{tikzpicture}%

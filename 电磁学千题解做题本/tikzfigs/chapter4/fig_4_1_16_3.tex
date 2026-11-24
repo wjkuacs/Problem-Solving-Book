@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \i in {0,1,2} { \EMres[below=4pt]{1.40*\i,0}{1.40*\i+1.40,0}{r} }
+\draw (0,0)--(0,.92) (2.80,0)--(2.80,.92)
+ (1.40,0)--(1.40,-.92) (4.20,0)--(4.20,-.92)
+ (-.62,0)--(0,0) (4.20,0)--(4.82,0);
+\EMres{0,.92}{2.80,.92}{r}
+\EMres[below=4pt]{1.40,-.92}{4.20,-.92}{r}
+\foreach \x in {0,1.4,2.8,4.2} { \EMdot{\x,0} }
+\EMterm{-.62,0}{left}{a}
+\EMterm{4.82,0}{right}{b}
+\end{tikzpicture}%

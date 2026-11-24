@@ -1,0 +1,33 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (-1.85,-1.85)--(-1.85,-1.35) (-1.85,1.45)--(-1.85,1.85);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.85,-1.35)--(-1.85,1.45) node[midway,left=2pt] {$I_1$};
+% Coplanar circular loop of radius R, center O, clockwise current I2
+\def\R{1.15}
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .20 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}},]
+  (0,0) circle[radius=\R];
+\node[above right=1pt] at (55:\R) {$I_2$};
+\EMpoint{0,0}{below right}{O}
+% Horizontal line l from wire to O with right angle
+\draw (-1.85,0)--(0,0) node[midway,below=1pt] {$l$};
+\draw[guide] (-1.85,0.16)--(-1.69,0.16)--(-1.69,0);
+% Current element I2 dl at angle 142 deg from +x (i.e., theta=38 deg above -x)
+\coordinate (Q) at (142:\R);
+\draw[aux] (0,0)--(Q) node[midway,above right=-1pt] {$R$};
+\EMangle{0,0}{142}{180}{0.52}{\theta}
+\draw[vec,line width=.9pt] (Q)--++(52:0.55);
+\node[above right=1pt] at (128:1.25) {$I_2\mathrm{d}\vec{l}$};
+% Force dF pointing radially outward/up-left along O->Q
+\draw[vec] (Q)--(142:2.05) node[above left=-1pt] {$\mathrm{d}\vec{F}$};
+% Unit vector triad e1 (into page), e2 (up), e3 (right)
+\begin{scope}[shift={(-1.15,-1.58)}]
+  \draw[vec] (0,0)--(0,0.52) node[above=1pt] {$\vec{e}_2$};
+  \draw[vec] (0,0)--(0.52,0) node[right=1pt] {$\vec{e}_3$};
+  \draw[fill=white] (0,0) circle[radius=3.5pt];
+  \draw[guide] (-2.4pt,-2.4pt)--(2.4pt,2.4pt) (-2.4pt,2.4pt)--(2.4pt,-2.4pt);
+  \node[below left=1pt] at (0,0) {$\vec{e}_1$};
+\end{scope}
+\end{tikzpicture}%

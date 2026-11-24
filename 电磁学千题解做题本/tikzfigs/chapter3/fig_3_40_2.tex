@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Two opposing 90-degree sectors in each group, viewed along the shaft.
+\foreach \turn in {0,180} {
+  \begin{scope}[rotate=\turn]
+    \draw[metal] (27:.56)--(27:1.69)
+      arc[start angle=27,end angle=117,radius=1.69]--(117:.56)
+      arc[start angle=117,end angle=27,radius=.56]--cycle;
+    \draw[dielectric] (54:.56)--(54:1.69)
+      arc[start angle=54,end angle=144,radius=1.69]--(144:.56)
+      arc[start angle=144,end angle=54,radius=.56]--cycle;
+    \draw[guide] (54:.56)--(54:1.69);
+  \end{scope}
+}
+\draw[fill=black!10] (0,0) circle[radius=.16];
+\draw (0,0)--(72:.56) (0,0)--(252:.56);
+\draw[guide] (27:1.74)--(27:2.12) (54:1.74)--(54:2.12);
+\draw[dim] (27:2.02) arc[start angle=27,end angle=54,radius=2.02];
+\node at (41:2.37) {$\theta$};
+\draw[guide,vec] (-1.91,1.41)--(124:1.63) node[pos=0,left] {定片};
+\draw[guide,vec] (-1.96,-.59)--(210:1.60) node[pos=0,left] {动片};
+\end{tikzpicture}%

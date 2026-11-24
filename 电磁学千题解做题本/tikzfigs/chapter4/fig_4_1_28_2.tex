@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\EMhexagon
+\EMres[below=4pt]{hex1}{0,0}{\frac{r}{n}}
+\EMres{0,0}{hex4}{\frac{r}{n}}
+\foreach \sign/\leftNode/\rightNode in {1/2/3,-1/6/5} {
+  \EMres{hex\leftNode}{-.29,.55*\sign}{\frac{r}{n}}
+  \EMres{.29,.55*\sign}{hex\rightNode}{\frac{r}{n}}
+  \draw (-.29,.55*\sign) .. controls (-.12,.26*\sign) and (.12,.26*\sign) .. (.29,.55*\sign);
+}
+\end{tikzpicture}%

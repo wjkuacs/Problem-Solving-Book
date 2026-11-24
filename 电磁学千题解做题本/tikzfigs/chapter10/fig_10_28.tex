@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+% Bridge on left: x=0 and x=2.20, middle y=1.15
+\draw (0,0)--(0,2.30)--(2.20,2.30)--(2.20,0)--(0,0);
+\draw (0,1.15)--(2.20,1.15);
+\draw (1.10,2.30)--(1.10,2.62)--(4.25,2.62)--(4.25,0)--(1.10,0);
+% Top capacitors C_1, C_2 (vertical in branches)
+\draw[white,line width=2.2pt] (0,1.64)--(0,1.82);
+\draw (-.26,1.64)--(.26,1.64) (-.26,1.82)--(.26,1.82);
+\node[left=4pt] at (-.26,1.73) {$C_1$};
+\draw[white,line width=2.2pt] (2.20,1.64)--(2.20,1.82);
+\draw (1.94,1.64)--(2.46,1.64) (1.94,1.82)--(2.46,1.82);
+\node[right=4pt] at (2.46,1.73) {$C_2$};
+% Bottom resistors R_1, R_2
+\EMres{0,.18}{0,.96}{}
+\node[left=5pt] at (0,.57) {$R_1$};
+\EMres{2.20,.18}{2.20,.96}{}
+\node[right=5pt] at (2.20,.57) {$R_2$};
+% Galvanometer G
+\EMmeter{1.10,1.15}{G}
+% Right leg: switch K (vertical, opens right from bottom terminal) and cell (+ top, - bottom)
+\begin{scope}[shift={(4.25,1.78)}]
+  \draw[white,line width=2pt] (0,-.25)--(0,.25);
+  \draw (0,-.25)--(.26,.17);
+  \EMterm{0,-.25}{}{}
+  \EMterm{0,.25}{}{}
+\end{scope}
+\node[right=6pt] at (4.41,1.78) {$K$};
+\EMcell[270]{4.25,.76}
+\node[left=4pt] at (4.11,.98) {$+$};
+\node[left=4pt] at (4.11,.54) {$-$};
+\node[right=5pt] at (4.51,.76) {$\varepsilon$};
+\end{tikzpicture}%

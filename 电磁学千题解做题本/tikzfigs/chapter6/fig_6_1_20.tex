@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Magnetic field crosses (into page)
+\foreach \x in {-2.1,-1.05,0,1.05,2.1} {
+  \foreach \y in {-0.5,0.25,1.0,1.75} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide] (-2.4pt,-2.4pt)--(2.4pt,2.4pt) (-2.4pt,2.4pt)--(2.4pt,-2.4pt);
+    \end{scope}
+  }
+}
+\node[fill=white,inner sep=1.5pt] at (0,2.08) {$\vec{B}$向内};
+% Two semicircular trajectories starting at P=(1.65,0)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .62 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (1.65,0) arc[start angle=0,end angle=180,radius=1.12] node[below=2pt] {$S$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (1.65,0) arc[start angle=0,end angle=180,radius=1.60];
+\node[below=2pt] at (1.65,0) {$P$};
+\end{tikzpicture}%

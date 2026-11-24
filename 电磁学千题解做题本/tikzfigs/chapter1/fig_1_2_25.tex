@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=1.75];
+\draw (-1.75,0)--(1.75,0);
+\draw (-1.01,1.429) arc[start angle=90,end angle=270,x radius=.34,y radius=1.429];
+\draw[aux] (-1.01,-1.429) arc[start angle=-90,end angle=90,x radius=.34,y radius=1.429];
+\draw (-1.01,1.429)--(0,0) node[pos=.47,right] {$R$};
+\draw (-1.01,1.429)--(.89,0) node[pos=.47,above right] {$r$};
+\EMangle{0,0}{125.25}{180}{.35}{\theta}
+\EMangle{.89,0}{143.05}{180}{.41}{\alpha}
+\EMpoint{0,0}{below}{O}
+\EMpoint{.89,0}{above right}{P}
+\node[above] at (0,1.75) {$\sigma$};
+\EMdim{0}{.89}{-.74}{-.50}{a}
+\end{tikzpicture}%

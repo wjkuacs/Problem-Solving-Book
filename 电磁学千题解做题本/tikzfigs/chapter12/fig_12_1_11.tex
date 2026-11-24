@@ -1,0 +1,30 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{.96}
+\def\ry{.32}
+\def\H{2.80}
+% Cylinder body and top face
+\draw (0,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (-\rx,0)--(-\rx,-\H) arc[start angle=180,end angle=360,x radius=\rx,y radius=\ry]--(\rx,0);
+% Radius R inside top ellipse
+\draw[vec] (0,0)--({-\rx*.76},{-\ry*.65}) node[midway,above left=-2pt] {$R$};
+% Geometric axis and centered rotation omega
+\draw[guide] (0,0)--(0,.92);
+\draw[guide,dash pattern=on 6pt off 2pt on 1.5pt off 2pt] (0,{-\H-\ry})--(0,{-\H-.68});
+\draw[vec] ({.26*cos(135)},{.56+.10*sin(135)}) arc[start angle=135,end angle=405,x radius=.26,y radius=.10];
+\node[right] at (.30,.56) {$\omega$};
+% Positive surface charges and sigma label
+\foreach \x/\y in {
+  -.68/-.52, -.14/-.50, .40/-.52,
+  -.48/-.94, .10/-.94, .68/-.94,
+  -.70/-1.38, .30/-1.38, .72/-1.38,
+  -.50/-1.82, .10/-1.82, .64/-1.82,
+  -.68/-2.26, -.10/-2.26, .48/-2.26,
+  -.36/-2.66, .28/-2.66
+} {
+  \node[font=\footnotesize,inner sep=0pt] at (\x,\y) {$+$};
+}
+\node[fill=white,inner sep=1.5pt] at (-.22,-1.38) {$\sigma$};
+% Length dimension l
+\draw[guide] (\rx+.14,0)--(\rx+.52,0) (\rx+.14,-\H)--(\rx+.52,-\H);
+\draw[dim] (\rx+.36,-\H)--(\rx+.36,0) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

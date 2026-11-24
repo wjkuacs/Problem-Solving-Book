@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\def\R{0.96}
+\def\rx{0.42}
+\def\L{4.50}
+% Axis extending left and right
+\draw[axis] (-\rx-0.45,0)--(0,0);
+\draw[axis] ({\L+\rx},0)--({\L+\rx+0.65},0);
+% Cylinder body
+\draw (0,0) ellipse[x radius=\rx,y radius=\R];
+\draw (0,\R)--(\L,\R) arc[start angle=90,end angle=-90,x radius=\rx,y radius=\R]--(0,-\R);
+% Dimension R on left
+\draw[guide] (0,\R)--(-\rx-0.44,\R);
+\draw[dim] (-\rx-0.28,0)--(-\rx-0.28,\R) node[midway,fill=white,inner sep=1pt] {$R$};
+% Azimuthal current bands on front face
+\foreach \x/\lbl in {0.65/0, 1.35/0, 2.05/1, 2.75/0, 3.45/0, 4.15/0} {
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .52 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+    (\x,\R) arc[start angle=90,end angle=-90,x radius=\rx,y radius=\R];
+  \ifnum\lbl=1
+    \node[right=1pt] at ({\x+\rx},-0.12) {$\vec{k}$};
+  \fi
+}
+\end{tikzpicture}%

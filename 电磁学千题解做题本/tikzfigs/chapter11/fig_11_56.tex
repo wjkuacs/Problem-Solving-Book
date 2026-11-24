@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.8)--(4.8,.8);
+\draw (.8,0) rectangle (4.0,1.6);
+\begin{scope}[shift={(1.7,1.6)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[above=4pt] at (0,.18) {$C$};
+\end{scope}
+\EMres[above=4pt]{2.2,1.6}{3.6,1.6}{R_1}
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (2.52,1.25)--(3.28,1.95);
+\EMres[below=4pt]{1.5,0}{3.3,0}{R_2}
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (2.02,-.35)--(2.78,.35);
+\EMdot{1.25,1.6} \node[below=2pt] at (1.25,1.6) {$I_1$};
+\EMdot{1.25,0} \node[above=2pt] at (1.25,0) {$I_2$};
+\EMdot{.8,.8} \EMdot{4.0,.8}
+\EMterm{0,.8}{left}{a}
+\EMterm{4.8,.8}{right}{b}
+\end{tikzpicture}%

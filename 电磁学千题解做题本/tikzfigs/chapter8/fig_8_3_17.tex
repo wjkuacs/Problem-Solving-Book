@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Toroidal iron ring of average radius R
+\draw (0,0) circle[radius=1.22];
+\draw (0,0) circle[radius=.92];
+\draw[vec] (0,0)--(135:1.07) node[midway,above right=-1pt] {$R$};
+% Dense turns all around ring
+\foreach \ang in {0,12,...,348} {
+  \draw (\ang:.90)--(\ang:1.24);
+  \fill (\ang:.90) circle[radius=.65pt];
+  \fill (\ang:1.24) circle[radius=.65pt];
+}
+% Top point c and bottom leads a, b
+\node[above=3pt] at (0,1.25) {$c$};
+\draw (264:.92)--(264:1.62);
+\draw (276:.92)--(276:1.62);
+\EMterm{-.11,-1.62}{left}{a}
+\EMterm{.11,-1.62}{right}{b}
+\end{tikzpicture}%

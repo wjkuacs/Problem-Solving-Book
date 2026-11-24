@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\draw (0,0) circle[radius=\R];
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) circle[radius=2.6pt];
+  \fill (0,0) circle[radius=.85pt];
+  \node[above=3pt] at (0,0) {$\vec{B}$};
+\end{scope}
+% Curved wire passing through a and b
+\draw (-.78,-.56) .. controls (0,-.54) and (.52,-.04) .. (.86,.76);
+\EMpoint{-.54,-.54}{below}{$a$}
+\EMpoint{.66,.46}{above left}{$b$}
+\end{tikzpicture}%

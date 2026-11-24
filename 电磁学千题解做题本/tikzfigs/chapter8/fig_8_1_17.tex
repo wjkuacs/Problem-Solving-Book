@@ -1,0 +1,46 @@
+\begin{tikzpicture}[em diagram]
+% 3D rectangular transformer core
+\coordinate (D) at (0,1.65);
+\coordinate (C) at (2.35,1.65);
+\coordinate (G) at (2.35,0);
+\coordinate (E) at (0,0);
+\coordinate (A) at (-.55,.50+1.65);
+\coordinate (B) at (1.80,.50+1.65);
+\coordinate (F) at (-.55,.50);
+% Outer frame
+\draw (D)--(C)--(G)--(E)--cycle;
+\draw (A)--(B)--(C) (A)--(D) (A)--(F)--(E);
+% Inner window
+\draw (.52,.42) rectangle (1.83,1.23);
+\draw (.52,.42)--(.72,.58)--(1.83,.58) (.72,.58)--(.72,1.23);
+% Vertex labels
+\node[above left] at (A) {$A$};
+\node[above right] at (B) {$B$};
+\node[above right] at (C) {$C$};
+\node[above right] at (D) {$D$};
+\node[below left] at (E) {$E$};
+\node[below left] at (F) {$F$};
+\node[below right] at (G) {$G$};
+% Primary coil on left limb (3 turns)
+\draw (-1.15,1.68)--(-.55,1.28)--(0,1.15)--(.52,1.15);
+\draw (0,1.02)--(.52,1.02) (-.55,1.15)--(0,.96)--(.52,.96);
+\draw (-.55,.96)--(0,.76)--(.52,.76);
+\draw (-1.15,1.10)--(-.55,.68);
+\foreach \y in {1.28,1.15,.96} {
+  \draw (-.55,\y) arc[start angle=90,end angle=270,x radius=.05,y radius=.04];
+}
+\foreach \y in {1.15,.96,.76} {
+  \draw (.52,\y) arc[start angle=90,end angle=-90,x radius=.05,y radius=.04];
+}
+\EMterm{-1.15,1.68}{}{}
+\EMterm{-1.15,1.10}{}{}
+% Secondary coil on right limb (3 turns)
+\foreach \y in {1.12,.94,.76} {
+  \draw (1.83,\y)--(2.35,\y-.08);
+  \draw (1.83,\y) arc[start angle=90,end angle=270,x radius=.05,y radius=.04];
+  \draw (2.35,\y-.08) arc[start angle=-90,end angle=90,x radius=.05,y radius=.04];
+}
+\draw (2.35,1.04)--(3.00,1.04) (2.35,.68)--(3.00,.68);
+\EMterm{3.00,1.04}{}{}
+\EMterm{3.00,.68}{}{}
+\end{tikzpicture}%

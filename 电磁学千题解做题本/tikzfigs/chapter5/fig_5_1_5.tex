@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+\def\ra{1.05}
+\def\rb{0.85}
+\def\rc{1.02}
+\def\ya{0.38}
+\def\yb{0.68}
+% Vertical wire and axis
+\draw[axis] (0,-0.55)--(0,0.40);
+\draw (0,0.40)--(0,{\rc+\yb});
+\draw[vec] (0,0.40)--(0,0.88) node[right] {$I$};
+\draw[axis] (0,{\rc+\yb})--(0,{\rc+\yb+0.55});
+% Half-ring body
+\draw (-\ra-\rb,0) rectangle (-\ra,\rc);
+\draw (\ra,0) rectangle (\ra+\rb,\rc);
+\draw (-\ra,0) arc[start angle=180,end angle=0,x radius=\ra,y radius=\ya];
+\draw (-\ra,\rc) arc[start angle=180,end angle=0,x radius=\ra,y radius=\ya];
+\draw (-\ra-\rb,\rc) arc[start angle=180,end angle=0,x radius={\ra+\rb},y radius=\yb];
+% Vertical dimension c
+\draw[guide] (-\ra-\rb,0)--(-\ra-\rb-0.48,0) (-\ra-\rb,\rc)--(-\ra-\rb-0.48,\rc);
+\draw[dim] (-\ra-\rb-0.34,0)--(-\ra-\rb-0.34,\rc) node[midway,fill=white,inner sep=1pt] {$c$};
+% Horizontal dimensions b, a, a
+\draw[guide] (-\ra-\rb,0)--(-\ra-\rb,-0.58) (-\ra,0)--(-\ra,-0.58) (0,0)--(0,-0.58) (\ra,0)--(\ra,-0.58);
+\draw[dim] (-\ra-\rb,-0.42)--(-\ra,-0.42) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[dim] (-\ra,-0.42)--(0,-0.42) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0,-0.42)--(\ra,-0.42) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

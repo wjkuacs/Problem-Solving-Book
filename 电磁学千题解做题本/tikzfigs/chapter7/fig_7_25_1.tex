@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw[vec] (-1.95,0)--(1.95,0) node[right=2pt] {$H$};
+\draw[vec] (0,-1.95)--(0,1.95) node[above=2pt] {$B$};
+\node[below right=1.5pt] at (0,0) {$O$};
+% Rectangular hysteresis loop
+\draw (1.28,1.36)--(0,1.32)
+  .. controls (-0.85,1.30) and (-1.05,1.22) .. (-1.05,0.92)
+  --(-1.05,-1.28)
+  .. controls (-1.05,-1.33) and (-1.12,-1.35) .. (-1.28,-1.36)
+  --(0,-1.32)
+  .. controls (0.85,-1.30) and (1.05,-1.22) .. (1.05,-0.92)
+  --(1.05,1.28)
+  .. controls (1.05,1.33) and (1.12,1.35) .. (1.28,1.36);
+\node[above right=1pt] at (0,1.32) {$B_r$};
+\node[below right=1pt] at (0,-1.32) {$-B_r$};
+\node[below right=1pt] at (1.05,0) {$H_c$};
+\node[above left=1pt] at (-1.05,0) {$-H_c$};
+\end{tikzpicture}%

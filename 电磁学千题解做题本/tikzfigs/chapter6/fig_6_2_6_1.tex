@@ -1,0 +1,34 @@
+\begin{tikzpicture}[em diagram]
+% Inclined plane in oblique view
+\draw (-2.45,0.62)--(-2.15,-0.92)--(2.05,-0.92)--(2.45,0.68);
+\draw (2.05,-0.92)--(3.05,0.22);
+\EMangle{2.05,-0.92}{48}{78}{0.75}{\theta}
+% Horizontal cylinder of length l and radius R
+\def\rx{0.24}
+\def\ry{0.44}
+\draw (-1.45,0.32) arc[start angle=90,end angle=270,x radius=\rx,y radius=\ry];
+\draw (-1.45,0.32)--(1.35,0.32) (-1.45,-0.56)--(1.35,-0.56);
+\draw (1.35,-0.12) ellipse[x radius=\rx,y radius=\ry];
+% Winding line NI along front of cylinder and across end face at angle phi
+\draw[line width=.85pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (1.13,-0.02)--(-1.68,-0.02);
+\draw[line width=.85pt] (1.13,-0.02)--(1.57,-0.22);
+\node[below=2pt] at (-0.15,-0.02) {$NI$};
+% Dashed normal/slope line at right face for angle phi
+\draw[aux] (1.13,-0.02)--(1.58,0.85);
+\EMangle{1.13,-0.02}{-24}{62}{0.38}{\varphi}
+% Dimensions R (left) and l (bottom)
+\draw[guide] (-1.45,0.32)--(-2.12,0.32) (-1.69,-0.12)--(-2.12,-0.12);
+\draw[vec] (-1.96,0.72)--(-1.96,0.32);
+\draw[vec] (-1.96,-0.52)--(-1.96,-0.12);
+\node[left=1pt,fill=white,inner sep=0.8pt] at (-1.96,0.10) {$R$};
+\draw[guide] (-1.45,-0.56)--(-1.45,-0.92) (1.35,-0.56)--(1.35,-0.92);
+\draw[dim] (-1.45,-0.78)--(1.35,-0.78) node[midway,fill=white,inner sep=1pt] {$l$};
+% Upward vertical magnetic field arrows B
+\foreach \x in {-1.25,0,1.25} {
+  \draw[vec] (\x,0.52)--(\x,0.98);
+  \draw[vec] (\x,-1.48)--(\x,-1.02);
+}
+\node[above=1pt] at (0,0.98) {$\vec{B}$};
+\end{tikzpicture}%

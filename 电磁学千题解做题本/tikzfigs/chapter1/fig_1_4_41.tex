@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+\draw[vec] (-2.28,0)--(3.46,0) node[right] {$x$};
+\draw[vec] (0,0)--(0,2.84) node[above] {$y$};
+\draw[vec] (0,0)--(-1.93,-1.73) node[below left] {$z$};
+\draw (-2.52,-1.34)--(-1.02,0)--(.50,1.36);
+\draw (-.52,-1.34)--(.98,0)--(2.50,1.36);
+\draw[aux] (-2.52,-1.34)--(-2.81,-1.60) (.50,1.36)--(.76,1.59);
+\draw[aux] (-.52,-1.34)--(-.81,-1.60) (2.50,1.36)--(2.76,1.59);
+\node[above left] at (-1.18,-.15) {$-\lambda$};
+\node[below right] at (.43,-.49) {$\lambda$};
+\node[above left] at (0,0) {$O$};
+\draw[aux] (0,2.07)--(1.94,.84)--(1.94,-.92)--(-1.03,-.92);
+\draw[aux] (1.94,-.92)--(2.97,0);
+\EMpoint{1.94,.84}{above right}{P(x,y,z)}
+\node[right] at (1.94,.49) {$y$};
+\node[below] at (.45,-.92) {$x$};
+\node[right] at (2.41,-.48) {$z$};
+\EMdim{-1.02}{0}{-.37}{-.12}{a}
+\EMdim{0}{.98}{-.37}{-.12}{a}
+\end{tikzpicture}%

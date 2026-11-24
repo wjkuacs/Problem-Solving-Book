@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.8)--(1.6,1.8) (2.4,1.8)--(4.0,1.8)--(4.0,0)--(0,0)--(0,1.8);
+\begin{scope}[shift={(1.0,0)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.26)--(-.13,.26) (.13,-.26)--(.13,.26);
+  \node[above=4pt] at (0,.16) {$C$};
+\end{scope}
+\node[draw,fill=white,minimum width=1.05cm,minimum height=.40cm,inner sep=0pt] at (2.8,0) {$Z$};
+\draw (1.84,1.8) .. controls (1.92,1.92) and (2.00,1.92) .. (2.00,1.8)
+  .. controls (2.00,1.68) and (2.08,1.68) .. (2.16,1.8);
+\EMterm{1.6,1.8}{}{} \EMterm{2.4,1.8}{}{}
+\node[above=5pt] at (2.0,1.85) {$110\mathrm{V},\,50\mathrm{Hz}$};
+\EMdot{0,.9} \EMdot{4.0,.9} \EMdot{1.85,0}
+\end{tikzpicture}%

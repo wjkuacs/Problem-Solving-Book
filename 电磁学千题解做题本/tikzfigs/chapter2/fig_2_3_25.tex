@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\EMcylinder{1.21}{5.22}
+\draw (0,0) ellipse[x radius=.57,y radius=.86];
+\draw (0,0) ellipse[x radius=.30,y radius=.49];
+\EMdim{0}{5.22}{1.55}{1.21}{l}
+\draw[guide] (0,1.21)--(-1.60,1.21) (0,.86)--(-1.26,.86) (0,.49)--(-.93,.49) (0,0)--(-1.60,0);
+\draw[dim] (-1.52,0)--(-1.52,1.21) node[midway,left] {$c$};
+\draw[dim] (-1.15,0)--(-1.15,.86) node[midway,right,inner sep=1pt] {$b$};
+\draw[dim] (-.76,0)--(-.76,.49) node[midway,right,inner sep=1pt] {$a$};
+\end{tikzpicture}%

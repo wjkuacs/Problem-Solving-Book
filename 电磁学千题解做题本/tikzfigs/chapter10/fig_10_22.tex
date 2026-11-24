@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.45)--(3.60,1.45)--(3.60,0)--(0,0);
+% Top: C and R
+\draw[white,line width=2.2pt] (.96,1.45)--(1.14,1.45);
+\draw (.96,1.19)--(.96,1.71) (1.14,1.19)--(1.14,1.71);
+\node[above left=2pt] at (.96,1.57) {$C$};
+\EMres{2.00,1.45}{2.90,1.45}{R}
+% Bottom: K and cell (+ left, - right)
+\EMswitch{.95,0}
+\node[above=5pt] at (.95,.16) {$K$};
+\EMcell[0]{2.45,0}
+\node[left=3pt] at (2.34,.14) {$+$};
+\node[right=3pt] at (2.56,.14) {$-$};
+\node[above=6pt] at (2.45,.24) {$\varepsilon$};
+\end{tikzpicture}%

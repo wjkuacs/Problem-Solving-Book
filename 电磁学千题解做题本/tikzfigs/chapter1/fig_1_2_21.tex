@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) ellipse[x radius=.98,y radius=1.53];
+\draw (0,0) ellipse[x radius=.61,y radius=.98];
+\coordinate (A) at (-.445,.67);
+\draw (0,0)--(A) node[pos=.56,left] {$y$};
+\draw (A)--(3.60,0) node[pos=.58,above,sloped] {$\sqrt{r^2+y^2}$};
+\draw (0,0)--(3.60,0) node[pos=.56,below] {$r$} node[right] {$P$};
+\EMangle{3.60,0}{170.59}{180}{1.23}{\theta}
+\node[below left] at (0,0) {$O$};
+\node at (.13,1.24) {$\sigma$};
+\draw[guide] (-1.69,0)--(-1.27,0) (-1.69,1.53)--(-.23,1.53);
+\draw[dim] (-1.47,0)--(-1.47,1.53) node[midway,left] {$R$};
+\end{tikzpicture}%

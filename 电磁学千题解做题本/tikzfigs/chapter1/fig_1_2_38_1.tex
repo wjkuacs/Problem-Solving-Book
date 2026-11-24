@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw[vec] (0,0)--(0,3.04) node[above] {$z$};
+\draw[vec] (0,0)--(1.88,1.82) node[midway,below right] {$\vec{r}$};
+\draw[vec] (1.55,1.90)--(2.48,1.69) node[below right] {$\vec{p}$};
+\draw[aux] (1.88,1.82)--++(.56,.54);
+\draw[guide] (1.88,1.82) ++(-12.72:.39) arc[start angle=-12.72,end angle=44.07,radius=.39];
+\node at (2.45,2.03) {$\alpha$};
+\EMangle{0,0}{44.07}{90}{.44}{\theta}
+\EMcharge{0,0}{left}{Q}{+}
+\node[below] at (0,0) {$O$};
+\end{tikzpicture}%

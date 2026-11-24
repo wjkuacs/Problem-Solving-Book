@@ -1,0 +1,37 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal solenoid (perspective)
+\draw (-1.75,.55)--(1.55,.55) (-1.75,-.55)--(1.55,-.55);
+\draw (-1.75,0) ellipse[x radius=.18,y radius=.55];
+\draw (1.55,.55) arc[start angle=90,end angle=-90,x radius=.18,y radius=.55];
+\foreach \x in {-1.50,-1.25,-1.00,-.75,-.50,-.25,0,.25,.50,.75,1.00,1.25} {
+  \draw (\x,.55) .. controls (\x+.10,.30) and (\x+.10,-.30) .. (\x,-.55);
+}
+% Small pickup coil inside solenoid connected to G
+\draw[line width=.75pt] (-.18,0) ellipse[x radius=.05,y radius=.15];
+\draw[line width=.75pt] (-.07,0) ellipse[x radius=.05,y radius=.15];
+\draw[line width=.75pt] (.04,0) ellipse[x radius=.05,y radius=.15];
+\draw (.04,.15)--(2.65,.15)--(2.65,.02);
+\draw (.04,-.15)--(2.65,-.15)--(2.65,-.02);
+\draw (2.65,.15)--(2.65,-.15);
+% Wait: place G cleanly on right with upper and lower horizontal leads:
+\draw[white,line width=3pt] (2.65,.15)--(2.65,-.15);
+\draw (2.45,.15)--(2.65,.15)--(2.65,.31) (2.45,-.15)--(2.65,-.15)--(2.65,-.31);
+\EMmeter{2.65,0}{G}
+% Bottom reversing switch K and battery
+\draw (-1.35,-.55)--(-1.35,-1.08)--(-.48,-1.08);
+\draw (1.15,-.55)--(1.15,-1.08)--(.28,-1.08);
+% DPDT reversing switch K
+\EMterm{-.48,-1.08}{}{}
+\EMterm{.28,-1.08}{}{}
+\EMterm{-.48,-1.52}{}{}
+\EMterm{.28,-1.52}{}{}
+\draw (-.48,-1.08)--(.28,-1.52) (.28,-1.08)--(-.48,-1.52);
+\draw[aux] (-.48,-1.30)--(.28,-1.30);
+\node[left=4pt] at (-.48,-1.30) {$K$};
+% Battery at very bottom
+\draw (-.48,-1.52)--(-.48,-1.88)--(-.12,-1.88);
+\draw (.28,-1.52)--(.28,-1.88)--(.12,-1.88);
+\draw (-.12,-1.68)--(-.12,-2.08) (.12,-1.76)--(.12,-2.00);
+\node[above left=1pt] at (-.12,-1.74) {$+$};
+\node[above right=1pt] at (.12,-1.74) {$-$};
+\end{tikzpicture}%

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Left N and right S magnet poles (hatched)
+\draw (-2.05,1.25)--(-1.15,1.25)--(-1.15,-1.25)--(-2.05,-1.25);
+\foreach \y in {-1.15,-0.80,...,1.05} {
+  \draw[guide] (-2.05,\y)--(-1.15,{\y+0.35});
+}
+\node[fill=white,inner sep=1.5pt] at (-1.60,0) {$\mathrm{N}$};
+\draw (2.05,1.25)--(1.15,1.25)--(1.15,-1.25)--(2.05,-1.25);
+\foreach \y in {-1.15,-0.80,...,1.05} {
+  \draw[guide] (1.15,\y)--(2.05,{\y+0.35});
+}
+\node[fill=white,inner sep=1.5pt] at (1.60,0) {$\mathrm{S}$};
+% Outer rectangular coil (dimensions a, b)
+\draw[line width=1.1pt] (-0.78,-1.05) rectangle (0.78,1.05);
+\node[below=2pt] at (0,-1.05) {线圈};
+% Inner hatched soft iron core
+\draw[pattern=north east lines,pattern color=black!50] (-0.64,-0.91) rectangle (0.64,0.91);
+\node[fill=white,inner sep=1.5pt,align=center] at (0,0) {铁\\心};
+% Dimensions a (height) and b (width)
+\draw[guide] (-0.78,1.05)--(-0.78,1.52) (0.78,1.05)--(0.78,1.52);
+\draw[dim] (-0.78,1.36)--(0.78,1.36) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (-0.78,1.05)--(-1.05,1.05) (-0.78,-1.05)--(-1.05,-1.05);
+\draw[dim] (-0.96,-1.05)--(-0.96,1.05) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

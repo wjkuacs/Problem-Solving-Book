@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\def\xa{-1.50}
+\def\xb{1.50}
+\foreach \xc/\lbl in {\xa/O_1, \xb/O_2} {
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .20 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\xc,0) ellipse[x radius=.58,y radius=1.22];
+  \node[above right] at ({\xc+.35},.92) {$I$};
+  \draw[vec] (\xc,0)--({\xc-.46},-.74) node[pos=.66,above left=-1pt] {$R$};
+  \EMpoint{\xc,0}{below}{\lbl}
+}
+\draw (-2.45,0)--(2.45,0);
+\node[below] at (0,-.06) {$O$};
+\draw[guide] (\xa,0)--(\xa,-1.68) (\xb,0)--(\xb,-1.68);
+\draw[dim] (\xa,-1.52)--(\xb,-1.52) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

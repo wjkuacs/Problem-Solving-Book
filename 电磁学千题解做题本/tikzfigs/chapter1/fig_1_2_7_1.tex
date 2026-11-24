@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (.84,2.25);
+\draw[vec] (-1.75,0)--(2.04,0) node[right] {$x$};
+\draw[vec] (0,-.95)--(0,2.72) node[above] {$y$};
+\draw (-1,0)--(P)--(1,0);
+\EMpoint{.84,2.25}{right}{P(x,y)}
+\EMpoint{0,0}{above right}{O}
+\EMcharge{-1,0}{above left}{-q}{-}
+\EMcharge{1,0}{above right}{q}{+}
+\EMdim{-1}{0}{-.55}{-.13}{l/2}
+\EMdim{0}{1}{-.55}{-.13}{l/2}
+\end{tikzpicture}%

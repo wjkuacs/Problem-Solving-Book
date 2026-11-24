@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+% Bar magnet S-N on left
+\draw[fill=white] (-1.95,-.08) rectangle (-1.45,.08);
+\draw (-1.70,-.08)--(-1.70,.08);
+\node[below] at (-1.85,-.10) {$S$};
+\node[below] at (-1.55,-.10) {$N$};
+% Axis
+\draw[axis] (-1.45,0)--(2.15,0);
+% Radial line r to P at angle theta
+\draw (-1.70,0)--(1.25,1.45) node[midway,above left] {$r$};
+\EMpoint{1.25,1.45}{right}{$P$}
+\draw[guide] (-1.05,0) arc[start angle=0,end angle=26.2,radius=.65];
+\node at (-.85,.20) {$\theta$};
+% Small conducting loop of radius a at distance b
+\draw[line width=.75pt] (1.65,0) ellipse[x radius=.08,y radius=.22];
+\draw[vec] (1.65,0)--(1.65,.22);
+\node[above] at (1.65,.25) {$a$};
+\draw[vec] (1.73,0)--(2.42,0) node[right] {$\vec{v}$};
+% Dimension b
+\draw[guide] (-1.70,-.25)--(-1.70,-.68) (1.65,-.25)--(1.65,-.68);
+\draw[dim] (-1.70,-.52)--(1.65,-.52) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

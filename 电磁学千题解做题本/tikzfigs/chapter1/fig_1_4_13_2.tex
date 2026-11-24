@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=1.50];
+\foreach \y in {-1.91,-.97,.97,1.91} \draw[vec] (-1.82,\y)--(2.17,\y);
+\draw[vec] (-1.81,0)--(2.17,0) node[right] {$\boldsymbol E$};
+\draw (0,0)--(130:1.50) node[midway,above right] {$R$};
+\draw[vec] (-1.40,0)--(-.86,0) node[above right] {$N$};
+\draw[vec] (1.50,.14)--(1.50,.79) node[pos=.72,right] {$v_0$};
+\draw[vec] (-1.50,-.10)--(-1.50,-.88) node[pos=.66,left] {$v$};
+\EMpoint{0,0}{below}{O}
+\EMpoint{1.50,0}{below right}{P_1}
+\EMpoint{-1.50,0}{below right}{P_2}
+\end{tikzpicture}%

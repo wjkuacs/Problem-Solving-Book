@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Spiral turns from r=0.55 to r=1.35 (4.5 turns starting at 90 deg)
+\draw[smooth,samples=240,domain=0:28.274] plot
+  ({(0.55 + 0.80*\x/28.274)*cos(deg(\x)+90)}, {(0.55 + 0.80*\x/28.274)*sin(deg(\x)+90)});
+% Top lead wires with open terminals and current arrows
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .78 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (0,0.55)--(0,2.30);
+\node[left=1pt] at (0,1.92) {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .78 with {\arrowreversed{Stealth[length=3.0pt,width=2.4pt]}}}] (0,1.35)--(0.30,1.35)--(0.30,2.30);
+\node[right=1pt] at (0.30,1.92) {$I$};
+\EMterm{0,2.30}{}{}
+\EMterm{0.30,2.30}{}{}
+% Center O and inner radius a
+\draw[guide] (0,0)--(-0.55,0) node[midway,fill=white,inner sep=1pt] {$a$};
+\node[right] at (0.04,0) {$O$};
+% Outer radius b below
+\draw[guide] (-1.35,0)--(-1.35,-1.78) (0,0)--(0,-1.78);
+\draw[dim] (-1.35,-1.62)--(0,-1.62) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

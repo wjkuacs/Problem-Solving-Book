@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Rectangular coil with clockwise current I
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .15 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .40 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .65 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .90 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (-0.68,-1.05)--(-0.68,1.05)--(0.68,1.05)--(0.68,-1.05)--cycle;
+\node[right=2pt] at (0.68,0.18) {$I$};
+% Horizontal magnetic field lines pointing left
+\foreach \y in {-0.75,-0.25,0.25,0.75} {
+  \draw[field] (1.35,\y)--(-1.35,\y);
+}
+\node[left=2pt] at (-1.35,-0.25) {$\vec{B}$};
+\end{tikzpicture}%

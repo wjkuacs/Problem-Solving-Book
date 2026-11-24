@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) rectangle (4.0,2.1);
+\draw (2.1,0)--(2.1,2.1);
+\draw[fill=white] (0,1.05) circle[radius=.30];
+\draw (-.15,1.05) .. controls (-.075,1.19) and (0,1.19) .. (0,1.05)
+  .. controls (0,.91) and (.075,.91) .. (.15,1.05);
+\node[left=2pt] at (-.30,1.05) {$u(t)$};
+\EMres[below=4pt]{2.1,0}{2.1,2.1}{R}
+\begin{scope}[shift={(4.0,1.05)},rotate=90]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+\end{scope}
+\node[right=3pt] at (4.0,1.05) {$L$};
+\EMdot{1.2,2.1} \node[below=2pt] at (1.2,2.1) {$i(t)$};
+\EMdot{2.1,1.72} \node[right=2pt] at (2.1,1.72) {$i_R(t)$};
+\node[right=2pt] at (4.0,1.82) {$i_L(t)$};
+\EMdot{2.1,2.1} \EMdot{2.1,0}
+\end{tikzpicture}%

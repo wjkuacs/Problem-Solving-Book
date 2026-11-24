@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\foreach \y in {1.52,0,-1.52} {
+ \EMres{0,\y}{4.40,\y}{R}
+ \EMterm{0,\y}{left}{a}
+ \EMterm{4.40,\y}{right}{b}
+}
+\draw (1.46,0)--(1.46,-.54)--(2.94,-.54)--(2.94,0);
+\draw[white,line width=2pt] (3.52,-1.52)--(3.94,-1.52);
+
+\node[left] at (-.58,0) {(i)};
+\node[left] at (-.58,-1.52) {(ii)};
+\end{tikzpicture}%

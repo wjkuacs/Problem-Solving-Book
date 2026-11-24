@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+% Vertical helix with radius R and pitch h
+\def\rx{1.45}
+\def\ry{0.20}
+\def\pitch{0.58}
+% Vertical axis reference at top center
+\draw[guide] (0,0.48)--(0,-0.32);
+% 4 turns of helix (going down from y=0)
+\foreach \k in {0,1,2,3} {
+  \pgfmathsetmacro{\ya}{-\k*\pitch}
+  \pgfmathsetmacro{\yb}{-(\k+0.5)*\pitch}
+  \pgfmathsetmacro{\yc}{-(\k+1)*\pitch}
+  % Back half (right to left)
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=2.8pt,width=2.3pt]}}}]
+    (\rx,\ya) .. controls (\rx,{\ya+\ry}) and (-\rx,{\ya+\ry}) .. (-\rx,{\ya-0.5*\ry})
+    .. controls (-\rx,{\ya-1.2*\ry}) and (-0.85*\rx,{\yb+0.2*\ry}) .. (0,\yb-0.10);
+  % Front half (left-center to right)
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=2.8pt,width=2.3pt]}}}]
+    (0,\yb-0.10) .. controls (0.85*\rx,{\yb-0.16}) and (\rx,{\yc+0.12}) .. (\rx,\yc);
+}
+% Top entry & bottom exit tails
+\draw (0.95,0.28) .. controls (1.30,0.22) and (\rx,0.12) .. (\rx,0);
+\draw[vec] (\rx,{-4*\pitch}) .. controls (\rx,{-4*\pitch-0.18}) and (0.95,{-4*\pitch-0.25}) .. (0.35,{-4*\pitch-0.30});
+% Radius dimension R
+\draw[guide] (\rx,0.32)--(\rx,0);
+\draw[dim] (0,0.22)--(\rx,0.22) node[midway,fill=white,inner sep=1pt] {$R$};
+% Pitch dimension h between two turns on the right
+\draw[guide] (\rx,-\pitch)--({\rx+0.42},-\pitch) (\rx,{-2*\pitch})--({\rx+0.42},{-2*\pitch});
+\draw[dim] ({\rx+0.26},-\pitch)--({\rx+0.26},{-2*\pitch}) node[midway,fill=white,inner sep=1pt] {$h$};
+\end{tikzpicture}%

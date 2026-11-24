@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.8)--(1.8,3.6)--(3.6,1.8)--(1.8,0)--cycle;
+\draw (1.8,0)--(1.8,3.6);
+\draw (0,1.8)--(0,-.85)--(3.6,-.85)--(3.6,1.8);
+
+\EMres{0,1.8}{1.8,3.6}{}
+\node[above left] at (.85,2.75) {$\widetilde{Z}_1$};
+\EMres{1.8,3.6}{3.6,1.8}{}
+\node[above right] at (2.75,2.75) {$\widetilde{Z}_2$};
+\EMres{0,1.8}{1.8,0}{}
+\node[below left] at (.85,.85) {$\widetilde{Z}_3$};
+\EMres{1.8,0}{3.6,1.8}{}
+\node[below right] at (2.75,.85) {$\widetilde{Z}_4$};
+
+\EMmeter{1.8,1.8}{\mathrm{G}}
+\draw[fill=white] (1.8,-.85) circle[radius=.30];
+\draw (1.65,-.85) .. controls (1.725,-.71) and (1.80,-.71) .. (1.80,-.85)
+  .. controls (1.80,-.99) and (1.875,-.99) .. (1.95,-.85);
+
+\EMpoint{0,1.8}{left}{A}
+\EMpoint{3.6,1.8}{right}{B}
+\EMpoint{1.8,3.6}{above}{C}
+\EMpoint{1.8,0}{below}{D}
+\end{tikzpicture}%

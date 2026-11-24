@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.22}
+\draw (0,0) circle[radius=\R];
+\EMpoint{0,0}{right}{$O$}
+\draw[vec] (0,0)--(210:\R) node[midway,above left=-1pt] {$R$};
+% Chord ac inside top + cb outside to right
+\coordinate (a) at (120:\R);
+\coordinate (c) at (60:\R);
+\coordinate (b) at ({\R/2+\R},{\R*0.866});
+\draw[line width=.8pt] (a)--(b);
+\fill (a) circle[radius=1.2pt] node[below left=1pt] {$a$};
+\fill (c) circle[radius=1.2pt] node[below right=1pt] {$c$};
+\fill (b) circle[radius=1.2pt] node[below] {$b$};
+% Dimensions R above ac and cb
+\draw[guide] (a)--(-.61,1.48) (c)--(.61,1.48) (b)--({\R*1.5},1.48);
+\draw[dim] (-.61,1.35)--(.61,1.35) node[midway,fill=white,inner sep=1pt] {$R$};
+\draw[dim] (.61,1.35)--({\R*1.5},1.35) node[midway,fill=white,inner sep=1pt] {$R$};
+% Crosses for B into page
+\node at (-.35,.32) {$\times$};
+\node at (.42,.15) {$\times$};
+\node at (0,-.52) {$\times\;\vec{B}$ 向内};
+\end{tikzpicture}%

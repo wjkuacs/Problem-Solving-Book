@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.30,0);
+\coordinate (C) at (1.65,1.65);
+\coordinate (D) at (3.30,3.30);
+\coordinate (E) at (0,3.30);
+\foreach \from/\to in {A/B,B/D,E/D,A/E,A/C,B/C,C/D,E/C} { \EMres{\from}{\to}{r} }
+\EMpoint{A}{below left}{a}
+\EMpoint{B}{below right}{b}
+\EMpoint{C}{below}{c}
+\EMpoint{D}{above right}{d}
+\EMpoint{E}{above left}{e}
+\end{tikzpicture}%

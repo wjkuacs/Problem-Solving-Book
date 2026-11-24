@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\def\th{48}
+\pgfmathsetmacro{\xc}{\R*sin(\th)}
+\pgfmathsetmacro{\yc}{\R*cos(\th)}
+% Top chord going right, major arc going clockwise around bottom
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-\xc,\yc)--(\xc,\yc) node[midway,above=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .18 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .82 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\xc,\yc) arc[start angle={90-\th},end angle={-270+\th},radius=\R];
+\node[below right] at (-30:\R) {$I$};
+\node[below left] at (-150:\R) {$I$};
+% Center O, dashed radii, angle 2\theta, radius R
+\EMpoint{0,0}{below}{O}
+\draw[aux] (-\xc,\yc)--(0,0)--(\xc,\yc);
+\draw[guide] ({90-\th}:.45) arc[start angle={90-\th},end angle={90+\th},radius=.45];
+\node at (0,.68) {$2\theta$};
+\draw[vec] (0,0)--(-138:\R) node[midway,above left=-1pt] {$R$};
+\end{tikzpicture}%

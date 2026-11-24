@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+\def\s{1.20}
+% Square of side a
+\draw (-\s,-\s) rectangle (\s,\s);
+\node[above] at (0,\s) {$a$};
+\node[below] at (0,-\s) {$a$};
+\node[left] at (-\s,0) {$a$};
+\node[right] at (\s,0) {$a$};
+% Center O
+\EMpoint{0,0}{below right}{O}
+% Top corners: I (into page)
+\foreach \sx/\anch/\pos in {-1/left/-\s, 1/right/\s} {
+  \begin{scope}[shift={(\pos,\s)}]
+    \draw[fill=white] (0,0) circle[radius=4.2pt];
+    \draw (-3.0pt,-3.0pt)--(3.0pt,3.0pt) (-3.0pt,3.0pt)--(3.0pt,-3.0pt);
+  \end{scope}
+  \node[\anch=4pt] at (\pos,\s) {$I(\text{向内})$};
+}
+% Bottom corners: I (out of page)
+\foreach \sx/\anch/\pos in {-1/left/-\s, 1/right/\s} {
+  \draw[fill=white] (\pos,-\s) circle[radius=4.2pt];
+  \fill (\pos,-\s) circle[radius=1.3pt];
+  \node[\anch=4pt] at (\pos,-\s) {$I(\text{向外})$};
+}
+\end{tikzpicture}%

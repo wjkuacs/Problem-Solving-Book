@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+% 3D rectangular semiconductor slab along x-axis
+% Back/top/side edges of oblique prism
+\draw[aux] (0,0)--(1.15,0) (0,0)--(-2.15,-1.55);
+\draw (0,0)--(0,0.28)--(1.15,0.28)--(1.15,0)--(1.15,0.28);
+\draw (0,0.28)--(-2.15,-1.27)--(-1.00,-1.27)--(1.15,0.28);
+\draw (-2.15,-1.27)--(-2.15,-1.55)--(-1.00,-1.55)--(-1.00,-1.27);
+\draw (-1.00,-1.55)--(1.15,0);
+% Coordinate axes: z(H) up, y right, x(I) down-left
+\draw[vec] (0,0.28)--(0,1.45) node[right=1pt] {$z(\vec{H})$};
+\draw[vec] (1.15,0)--(2.25,0) node[right] {$y$};
+\draw[vec] (-2.15,-1.55)--(-2.75,-1.98) node[below left=-1pt] {$x(I)$};
+% Dimensions a, b, c
+\draw[guide] (0,0.28)--(0,0.72) (1.15,0.28)--(1.15,0.72);
+\draw[dim] (0,0.56)--(1.15,0.56) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (1.15,0.28)--(1.75,0.28) (1.15,0)--(1.75,0);
+\draw[vec] (1.58,0.62)--(1.58,0.28);
+\draw[vec] (1.58,-0.34)--(1.58,0);
+\node[right=1pt] at (1.58,0.14) {$a$};
+\draw[guide] (-0.90,-1.55)--(-0.45,-1.88) (1.25,0)--(1.70,-0.33);
+\draw[dim] (-0.58,-1.78)--(1.56,-0.23) node[midway,fill=white,inner sep=1pt] {$c$};
+% Labels A and B on opposite sides
+\node[below right=1pt] at (-0.65,-0.75) {$A$};
+\node[above left=1pt] at (-1.35,-0.75) {$B$};
+\end{tikzpicture}%

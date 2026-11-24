@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+% Vertical iron core
+\draw (-.55,-1.35)--(-.55,1.25) (.55,-1.35)--(.55,1.25);
+\draw (-.55,-1.35) arc[start angle=180,end angle=360,x radius=.55,y radius=.16];
+\draw (0,1.25) ellipse[x radius=.55,y radius=.16];
+\node at (0,.92) {铁心};
+% Aluminum ring around core
+\draw[fill=white] (-.82,.58)--(-.82,.25) arc[start angle=180,end angle=360,x radius=.82,y radius=.22]--(.82,.58);
+\draw (.82,.58) arc[start angle=0,end angle=180,x radius=.82,y radius=.22];
+\draw (-.55,.52) arc[start angle=195,end angle=345,x radius=.57,y radius=.15];
+\node[right] at (.88,.62) {铝环};
+% Solenoid coil below ring
+\draw[fill=white] (-.78,.20)--(-.78,-.92) arc[start angle=180,end angle=360,x radius=.78,y radius=.22]--(.78,.20);
+\foreach \y in {.08,-.05,-.18,-.31,-.44,-.57,-.70,-.83} {
+  \draw (-.78,\y) arc[start angle=180,end angle=360,x radius=.78,y radius=.22];
+}
+% Leads a and b
+\draw (-.78,.08)--(-1.35,.48);
+\EMterm{-1.35,.48}{left}{a}
+\draw (-.78,-.83)--(-1.35,-.92);
+\EMterm{-1.35,-.92}{left}{b}
+\node[right] at (.85,-.35) {线圈};
+\end{tikzpicture}%

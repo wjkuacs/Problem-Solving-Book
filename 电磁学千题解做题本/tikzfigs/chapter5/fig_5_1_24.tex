@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\def\xa{-1.65}
+\def\xb{1.65}
+% Left loop: current down on left/front
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\xa,0) ellipse[x radius=.60,y radius=1.25];
+\node[below left] at ({\xa-.52},-.62) {$I_1$};
+\draw[vec] (\xa,0)--({\xa-.48},.75) node[midway,below left=-1pt] {$R_1$};
+\EMpoint{\xa,0}{below}{O_1}
+% Right loop: opposite current (up on left/front)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrowreversed{Stealth[length=3.2pt,width=2.6pt]}}}] (\xb,0) ellipse[x radius=.44,y radius=.92];
+\node[below left] at ({\xb-.36},-.52) {$I_2$};
+\draw[vec] (\xb,0)--({\xb-.32},.63) node[midway,left=0pt] {$R_2$};
+\EMpoint{\xb,0}{below}{O_2}
+% Axis and O
+\draw (-2.65,0)--(2.55,0);
+\EMpoint{0,0}{below}{O}
+% Dimensions a and a on top
+\draw[guide] (\xa,0)--(\xa,1.72) (0,0)--(0,1.72) (\xb,0)--(\xb,1.72);
+\draw[dim] (\xa,1.56)--(0,1.56) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0,1.56)--(\xb,1.56) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

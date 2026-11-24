@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw[metal] (-.95,0) rectangle (-.63,2.77);
+\draw[metal] (.63,0) rectangle (.95,2.77);
+\foreach \y in {.14,.50,...,2.67} {
+  \node[right,inner sep=0] at (-.63,\y) {$+$};
+  \node[left,inner sep=0] at (.63,\y) {$-$};
+}
+\node[above] at (-.79,2.77) {$\sigma$};
+\node[above] at (.79,2.77) {$-\sigma$};
+\node[left] at (-.95,1.40) {$A$};
+\node[right] at (.95,1.40) {$B$};
+\EMpoint{0,1.43}{right}{P}
+\end{tikzpicture}%

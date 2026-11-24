@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,2.10)--(3.55,2.10)--(3.55,0)--(0,0);
+\draw (2.20,2.10)--(2.20,1.61) (2.20,.49)--(2.20,0);
+% Cell on left (+ top, - bottom)
+\EMcell[270]{0,1.05}
+\node[right=4pt] at (.14,1.27) {$+$};
+\node[right=4pt] at (.14,.83) {$-$};
+\node[left=5pt] at (-.26,1.05) {$\varepsilon$};
+% Switch K on top, r on bottom
+\EMswitch{1.15,2.10}
+\node[above=5pt] at (1.15,2.26) {$K$};
+\EMres[below=4pt]{.70,0}{1.60,0}{r}
+% Vertical inductor L in middle (loops bulge left)
+\foreach \i in {0,1,2,3}
+  \draw (2.20,.49+.28*\i+.28) arc[start angle=90,end angle=270,x radius=.15,y radius=.14];
+\node[right=3pt] at (2.22,1.05) {$L$};
+% Vertical resistor R on right
+\EMres{3.55,.55}{3.55,1.55}{}
+\node[right=5pt] at (3.55,1.05) {$R$};
+\EMdot{2.20,2.10}
+\EMdot{2.20,0}
+\end{tikzpicture}%

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% 3D coordinate axes
+\coordinate (O) at (0,0);
+\draw[vec] (O)--(-1.35,-1.05) node[below left] {$x$};
+\draw[vec] (O)--(2.45,0) node[right] {$y$};
+\draw[vec] (O)--(0,2.25) node[above] {$z$};
+\EMpoint{O}{below right}{O}
+% Field and initial velocity vectors along axes
+\draw[vec,line width=.8pt] (O)--(-0.88,-0.68) node[midway,below right=0pt] {$\vec{B}$};
+\draw[vec,line width=.8pt] (O)--(0,1.40) node[right=2pt] {$\vec{E}$};
+\draw[vec,line width=.8pt] (O)--(1.40,0) node[above=2pt] {$\vec{v}_0$};
+\end{tikzpicture}%

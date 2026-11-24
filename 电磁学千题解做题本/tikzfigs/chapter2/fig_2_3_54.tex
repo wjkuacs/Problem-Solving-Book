@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.12)--(0,1.60)--(2.80,1.60)--(2.80,.81)
+  (0,-.12)--(0,-1.60)--(2.80,-1.60)--(2.80,-.91)
+  (2.80,.55)--(2.80,-.65);
+\EMbattery{0}{0}
+\node[left] at (-.31,0) {$U$};
+\draw[dielectric] (2.53,.55) rectangle (3.07,.81);
+\EMcapV{2.80}{.68}{\varepsilon}
+\EMcapV{2.80}{-.78}{\varepsilon_0}
+\node at (2.52,-.05) {$a$};
+\draw (0,-1.60)--(0,-1.91);
+\EMground{0,-1.91}
+\end{tikzpicture}%

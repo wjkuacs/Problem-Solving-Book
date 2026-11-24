@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\draw[aux] (-2.05,0)--(-1.27,0);
+\draw (-.35,0) ++(0,1.50) arc[start angle=90,end angle=270,x radius=.92,y radius=1.50];
+\draw[aux] (-.35,0) ++(0,-1.50) arc[start angle=-90,end angle=90,x radius=.92,y radius=1.50];
+\draw (.02,0) ellipse[x radius=.92,y radius=1.50];
+\draw[vec] (-.165,0)--(3.65,0) node[right] {$x$};
+\EMpoint{-.165,0}{below left}{O}
+\node[above left] at (-.55,1.49) {$-q$};
+\node[above right] at (.20,1.49) {$q$};
+\draw[guide] (1.15,0)--(1.61,0) (1.15,1.50)--(1.61,1.50);
+\draw[dim] (1.38,0)--(1.38,1.50) node[midway,right] {$R$};
+\draw[guide] (-.35,-1.52)--(-.35,-1.91) (.02,-1.52)--(.02,-1.91);
+\draw[vec] (-.89,-1.76)--(-.37,-1.76);
+\draw[vec] (.55,-1.76)--(.04,-1.76);
+\node at (-.165,-1.76) {$l$};
+\end{tikzpicture}%

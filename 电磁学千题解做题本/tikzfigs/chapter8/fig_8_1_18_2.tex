@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\node[above] at (0,1.25) {$\vec{B}$ 向内};
+\foreach \x in {-.75,.75} {
+  \foreach \y in {-.95,.95} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+\foreach \x in {-.85,0,.85} {
+  \node at (\x,0) {$\times$};
+}
+% Rectangular loop
+\draw (-.52,-.82) rectangle (.52,.82);
+% Horizontal rotation axis
+\draw[axis] (-1.15,0)--(1.35,0);
+\draw[vec] (1.12,.22) arc[start angle=110,end angle=-135,x radius=.09,y radius=.22];
+\end{tikzpicture}%

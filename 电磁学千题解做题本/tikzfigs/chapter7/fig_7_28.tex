@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.80}
+\draw (0,0) circle[radius=\R];
+% Vertical magnetic axis with downward arrows
+\draw[axis] (0,-2.35)--(0,2.35);
+\draw[vec] (0,2.32)--(0,1.90);
+\draw[vec] (0,-1.86)--(0,-2.28);
+\node[above=2pt] at (0,2.35) {磁北极};
+% Magnetic equator dashed line
+\draw[aux] (0.12,0)--(2.18,0) node[right=2pt] {磁赤道};
+% Small dipole magnet at center (S on top, N on bottom)
+\draw[fill=white] (-0.09,-0.24) rectangle (0.09,0.24);
+\node[left=1.5pt] at (-0.09,0.16) {$\mathrm{S}$};
+\node[left=1.5pt] at (-0.09,-0.16) {$\mathrm{N}$};
+% Dipole field lines (symmetric left/right, upper/lower)
+\draw[field] (1.35,1.88) .. controls (1.15,1.35) and (0.35,0.65) .. (0.04,0.24);
+\draw[field] (-1.35,1.88) .. controls (-1.15,1.35) and (-0.35,0.65) .. (-0.04,0.24);
+\draw[field] (0.04,-0.24) .. controls (0.35,-0.65) and (1.15,-1.35) .. (1.35,-1.88);
+\draw[field] (-0.04,-0.24) .. controls (-0.35,-0.65) and (-1.15,-1.35) .. (-1.35,-1.88);
+% Latitude point at 48 deg: radius vector, local horizontal tangent, and field tangent
+\draw[aux] (0,0)--(48:\R);
+\EMangle{0,0}{0}{48}{0.66}{\varphi}
+% Point P_lat = (1.204, 1.338)
+% Local horizontal tangent direction = 138 deg: (-0.743, 0.669)
+\draw[aux] ({1.204+0.48*0.743},{1.338-0.48*0.669})--({1.204-0.95*0.743},{1.338+0.95*0.669});
+% Field tangent at intersection (approx 196 deg): (-0.961, -0.276)
+\draw[aux] ({1.204+0.42*0.961},{1.338+0.42*0.276})--({1.204-1.05*0.961},{1.338-1.05*0.276});
+\EMangle{1.204,1.338}{138}{196}{0.58}{i}
+\end{tikzpicture}%

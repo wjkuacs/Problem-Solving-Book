@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.90)--(2.54,1.90) (3.66,1.90)--(4.25,1.90)--(4.25,0)--(0,0);
+% Top: K, R, L
+\EMswitch{.80,1.90}
+\node[above=5pt] at (.80,2.06) {$K$};
+\EMres[below=4pt]{1.42,1.90}{2.32,1.90}{R}
+\foreach \i in {0,1,2,3}
+  \draw (2.54+.28*\i,1.90) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[below=5pt] at (3.10,1.74) {$L$};
+% Left capacitor C_1
+\draw[white,line width=2.2pt] (0,.86)--(0,1.04);
+\draw (-.26,.86)--(.26,.86) (-.26,1.04)--(.26,1.04);
+\node[left=4pt] at (-.26,.95) {$C_1$};
+\node[above right=2pt] at (.22,1.04) {$Q_0$};
+\node[below right=2pt] at (.22,.86) {$-Q_0$};
+% Right capacitor C_2
+\draw[white,line width=2.2pt] (4.25,.86)--(4.25,1.04);
+\draw (3.99,.86)--(4.51,.86) (3.99,1.04)--(4.51,1.04);
+\node[right=4pt] at (4.51,.95) {$C_2$};
+% Ground at bottom center
+\draw (2.12,0)--(2.12,-.24)
+  (1.86,-.24)--(2.38,-.24)
+  (1.95,-.32)--(2.29,-.32)
+  (2.04,-.40)--(2.20,-.40);
+\end{tikzpicture}%

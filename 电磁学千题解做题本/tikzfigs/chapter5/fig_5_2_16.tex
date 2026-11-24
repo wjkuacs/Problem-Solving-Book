@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+\def\ra{0.42}
+\def\rb{0.76}
+\def\rc{1.15}
+\def\ya{0.15}
+\def\yb{0.27}
+\def\yc{0.41}
+\def\H{2.85}
+\def\dz{0.32}
+% Outer pipe body and hatched top annulus
+\draw[pattern=north east lines,pattern color=black!62,even odd rule]
+  (0,0) ellipse[x radius=\rc,y radius=\yc]
+  (0,0) ellipse[x radius=\rb,y radius=\yb];
+\draw (-\rc,0)--(-\rc,-\H) arc[start angle=180,end angle=360,x radius=\rc,y radius=\yc]--(\rc,0);
+% Inner solid cylinder protruding upward by dz
+\draw[fill=white] (-\ra,\dz)--(-\ra,0) arc[start angle=180,end angle=360,x radius=\ra,y radius=\ya]--(\ra,\dz);
+\draw[pattern=north east lines,pattern color=black!62] (0,\dz) ellipse[x radius=\ra,y radius=\ya];
+% Downward current arrows on outer front face
+\foreach \x/\yaoff in {-0.82/0.26, -0.42/0.36, 0/0.40, 0.42/0.36, 0.82/0.26} {
+  \draw[vec] (\x,{-0.45-\yaoff})--(\x,{-\H+0.25-\yaoff});
+}
+\node[fill=white,inner sep=1pt] at (0,{-1.65}) {$I$};
+% Axis and radial dimensions r_1, r_2, r_3
+\draw[axis] (0,\dz)--(0,{\dz+1.25});
+\draw[guide] (-\ra,\dz)--(-\ra,{\dz+0.42}) (-\rb,0)--(-\rb,{\dz+0.78}) (-\rc,0)--(-\rc,{\dz+1.14});
+\draw[dim] (-\ra,{\dz+0.30})--(0,{\dz+0.30}) node[midway,fill=white,inner sep=1pt] {$r_1$};
+\draw[dim] (-\rb,{\dz+0.66})--(0,{\dz+0.66}) node[midway,fill=white,inner sep=1pt] {$r_2$};
+\draw[dim] (-\rc,{\dz+1.02})--(0,{\dz+1.02}) node[midway,fill=white,inner sep=1pt] {$r_3$};
+\end{tikzpicture}%

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\foreach \k in {0,...,3} {
+  \EMres{1.25*\k,1.56}{1.25*\k+1.25,1.56}{r_1}
+  \EMres[below=4pt]{1.25*\k,0}{1.25*\k+1.25,0}{r_3}
+  \EMres{1.25*\k+1.25,0}{1.25*\k+1.25,1.56}{r_2}
+  \EMdot{1.25*\k+1.25,1.56}
+  \EMdot{1.25*\k+1.25,0}
+}
+\draw[aux] (5,1.56)--(5.73,1.56) (5,0)--(5.73,0);
+\EMterm{0,1.56}{left}{a}
+\EMterm{0,0}{left}{b}
+\end{tikzpicture}%

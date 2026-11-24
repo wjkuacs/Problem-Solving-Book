@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+% Rotating U-magnet at bottom
+\draw (-.65,-.45)--(-.65,-.95) .. controls (-.65,-1.25) and (.65,-1.25) .. (.65,-.95)--(.65,-.45);
+\draw (-.42,-.45)--(-.42,-.92) .. controls (-.42,-1.06) and (.42,-1.06) .. (.42,-.92)--(.42,-.45);
+\draw (-.65,-.45)--(-.42,-.45) (.42,-.45)--(.65,-.45);
+\draw (-.06,-1.18)--(-.06,-1.42) (.06,-1.18)--(.06,-1.42);
+\node[left] at (-.68,-.55) {$N$};
+\node[right] at (.68,-.55) {$S$};
+% Aluminum disk A
+\draw[fill=white] (-.95,0)--(-.95,-.10) arc[start angle=180,end angle=360,x radius=.95,y radius=.24]--(.95,0);
+\draw[fill=white] (0,0) ellipse[x radius=.95,y radius=.24];
+\node[below right=1pt] at (.25,-.04) {$A$};
+% Vertical spindle, spiral spring S, and pointer P
+\draw (0,0)--(0,1.25);
+\draw[line width=.65pt] (0,.58) .. controls (.16,.58) and (.16,.76) .. (0,.76)
+  .. controls (-.18,.76) and (-.18,.48) .. (0,.48)
+  .. controls (.24,.48) and (.24,.82) .. (.15,.84);
+\node[right=3pt] at (.15,.64) {$S$};
+% Pointer P and dial arc
+\draw[vec] (0,1.05)--(1.05,1.05);
+\node[above] at (0,1.28) {$P$};
+\draw (1.22,.55) arc[start angle=-32,end angle=42,radius=.85];
+\foreach \ang in {-25,-10,5,20,35} {
+  \draw ({.42+.78*cos(\ang)},{.85+.78*sin(\ang)})--({.42+.86*cos(\ang)},{.85+.86*sin(\ang)});
+}
+\end{tikzpicture}%

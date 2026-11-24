@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Tilted semiconductor slab with current I and perpendicular field B
+% Front face tilted slightly
+\draw[fill=white] (-1.45,0.45)--(0.85,-0.25)--(0.85,-1.05)--(-1.45,-0.35)--cycle;
+% Thickness side (right and top)
+\draw (-1.45,0.45)--(-1.12,0.68)--(1.18,-0.02)--(0.85,-0.25);
+\draw (1.18,-0.02)--(1.18,-0.82)--(0.85,-1.05);
+% Labels A (top) and A' (bottom)
+\node[above=1pt] at (-0.28,0.34) {$A$};
+\node[below left=1pt] at (-0.65,-0.78) {$A'$};
+% Current line I passing through slab
+\draw[guide] (-2.15,0.22)--(-1.45,0.02);
+\draw[vec] (0.85,-0.65)--(1.75,-0.92) node[right] {$I$};
+% Magnetic field B passing through front face upward-right
+\draw[guide] (-0.95,-1.18)--(-0.55,-0.78);
+\draw[vec] (-0.15,-0.30)--(0.95,1.02) node[right] {$\vec{B}$};
+% Dimensions b and d
+\draw[guide] (1.18,-0.02)--(1.55,-0.02) (1.18,-0.82)--(1.55,-0.82);
+\draw[dim] (1.42,-0.82)--(1.42,-0.02) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (0.85,-1.05)--(1.15,-1.35) (1.18,-0.82)--(1.48,-1.12);
+\draw[vec] (0.72,-1.48)--(0.98,-1.22);
+\draw[vec] (1.62,-0.72)--(1.36,-0.98);
+\node[below right=-1pt] at (1.35,-1.15) {$d$};
+\end{tikzpicture}%

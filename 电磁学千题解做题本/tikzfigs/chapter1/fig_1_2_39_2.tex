@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.93,0)--(.93,0) (3.09,0)--(4.95,0);
+\draw[aux] (.93,0)--(3.09,0);
+\EMcharge{-.93,0}{above}{-q_1}{-}
+\EMcharge{.93,0}{above}{q_1}{+}
+\EMcharge{3.09,0}{above}{-q_2}{-}
+\EMcharge{4.95,0}{above}{q_2}{+}
+\node[above] at (0,0) {$l_1$};
+\node[above] at (4.02,0) {$l_2$};
+\EMdim{-.93}{0}{-.56}{-.16}{l_1/2}
+\EMdim{0}{.93}{-.56}{-.16}{l_1/2}
+\EMdim{3.09}{4.02}{-.56}{-.16}{l_2/2}
+\EMdim{4.02}{4.95}{-.56}{-.16}{l_2/2}
+\EMdim{0}{4.02}{-1.15}{-.66}{r}
+\end{tikzpicture}%

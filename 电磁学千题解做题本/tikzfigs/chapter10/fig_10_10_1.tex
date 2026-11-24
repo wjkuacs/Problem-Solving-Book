@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.32)--(.65,1.32) (0.65,.85)--(.65,1.78)--(3.55,1.78)--(3.55,.85)--(.65,.85);
+\draw (3.55,1.32)--(4.20,1.32)--(4.20,0)--(2.66,0) (1.54,0)--(0,0);
+% Cell on left leg (+ top, - bottom)
+\EMcell[270]{0,.62}
+\node[right=4pt] at (.14,.84) {$+$};
+\node[right=4pt] at (.14,.40) {$-$};
+\node[left=5pt] at (-.26,.62) {$\varepsilon$};
+% Inductor L on bottom wire
+\foreach \i in {0,1,2,3}
+  \draw (1.54+.28*\i,0) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[below=5pt] at (2.10,-.16) {$L$};
+% Top branch: r and K
+\EMres{1.05,1.78}{1.95,1.78}{r}
+\EMswitch{2.80,1.78}
+\node[above=5pt] at (2.80,1.94) {$K$};
+% Middle branch: R
+\EMres{1.65,.85}{2.55,.85}{R}
+% Nodes a and b
+\EMdot{.65,1.32}
+\node[above left=2pt] at (.65,1.32) {$a$};
+\EMdot{3.55,1.32}
+\node[above right=2pt] at (3.55,1.32) {$b$};
+\end{tikzpicture}%

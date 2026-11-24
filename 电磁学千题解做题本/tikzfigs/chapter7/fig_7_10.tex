@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) ellipse[x radius=0.09,y radius=0.62];
+\begin{scope}[shift={(0,0.62)}]
+  \draw[fill=white] (0,0) circle[radius=2.6pt];
+  \fill (0,0) circle[radius=0.85pt];
+  \node[above=3pt] at (0,0) {$I$};
+\end{scope}
+\begin{scope}[shift={(0,-0.62)}]
+  \draw[fill=white] (0,0) circle[radius=2.6pt];
+  \draw[guide] (-1.8pt,-1.8pt)--(1.8pt,1.8pt) (-1.8pt,1.8pt)--(1.8pt,-1.8pt);
+\end{scope}
+\draw[guide] (0,0)--(3.35,0);
+\draw[vec] (0,0)--(3.50,1.65) node[midway,above left=1pt] {$\vec{r}$} node[above right] {$P$};
+\EMangle{0,0}{0}{25.2}{1.15}{\theta}
+\end{tikzpicture}%

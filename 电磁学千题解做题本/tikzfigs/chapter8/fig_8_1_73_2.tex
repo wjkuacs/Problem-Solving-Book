@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Concentric circles: outer chamber, electron orbit, inner chamber
+\draw[line width=.75pt] (0,0) circle[radius=1.22];
+\draw[line width=.75pt] (0,0) circle[radius=.72];
+\draw[line width=.75pt] (0,0) circle[radius=.30];
+% B out of page dots scattered inside and around
+\foreach \ang in {15,65,115,165,215,265,315} {
+  \fill (\ang:1.45) circle[radius=.95pt];
+  \fill (\ang:1.02) circle[radius=.95pt];
+  \fill (\ang:.52) circle[radius=.95pt];
+}
+\fill (.05,.05) circle[radius=.95pt];
+% Labels
+\node[left,align=left] at (-1.35,0) {$\vec{B}$ 垂直纸\\面向外};
+\draw[vec] (1.35,0)--(.74,0);
+\node[right,align=left] at (1.35,0) {电子\\轨道};
+\end{tikzpicture}%

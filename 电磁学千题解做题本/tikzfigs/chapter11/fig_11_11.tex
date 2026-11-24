@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) rectangle (3.6,1.65);
+\begin{scope}[shift={(1.8,1.65)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[below=4pt] at (0,-.15) {$C$};
+\end{scope}
+\begin{scope}[shift={(1.8,0)}]
+  \draw[white,line width=2pt] (-.55,0)--(.55,0);
+  \draw (-.55,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[above=4pt] at (0,.10) {$L$};
+\end{scope}
+\EMdot{0,.825} \EMdot{3.6,.825}
+\end{tikzpicture}%

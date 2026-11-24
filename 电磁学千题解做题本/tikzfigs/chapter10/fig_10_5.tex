@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.40)--(.65,1.40) (1.77,1.40)--(2.55,1.40) (3.45,1.40)--(4.25,1.40)--(4.25,0)--(0,0);
+\foreach \i in {0,1,2,3}
+  \draw (.65+.28*\i,1.40) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (1.21,1.40) {$L$};
+\EMdot{2.18,1.40}
+\node[below=3pt] at (2.18,1.40) {$a$};
+\EMres{2.55,1.40}{3.45,1.40}{R}
+\EMdot{3.82,1.40}
+\node[below=3pt] at (3.82,1.40) {$b$};
+\EMswitch{1.25,0}
+\node[above=5pt] at (1.25,.16) {$K$};
+\EMcell[0]{2.85,0}
+\node[above=4pt] at (2.62,.14) {$+$};
+\node[above=4pt] at (3.08,.14) {$-$};
+\node[below=4pt] at (2.85,-.26) {$\varepsilon,r$};
+\end{tikzpicture}%

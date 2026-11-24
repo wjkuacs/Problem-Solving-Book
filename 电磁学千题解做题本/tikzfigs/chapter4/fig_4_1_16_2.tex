@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \y in {0,1.08,2.16} { \EMres{0,\y}{1.95,\y}{r} }
+\foreach \x in {0,1.95} {
+ \EMres{\x,0}{\x,1.08}{r}
+ \EMres{\x,1.08}{\x,2.16}{r}
+ \EMdot{\x,1.08}
+}
+\draw (-.62,0)--(0,0) (1.95,2.16)--(2.57,2.16);
+\EMterm{-.62,0}{left}{a}
+\EMterm{2.57,2.16}{right}{b}
+\end{tikzpicture}%

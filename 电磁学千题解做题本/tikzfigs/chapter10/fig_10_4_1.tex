@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.35,0)--(-.35,1.82)--(0,1.82) (0,1.30)--(0,2.34)--(3.80,2.34)--(3.80,1.30)--(3.35,1.30) (0,1.30)--(.40,1.30) (1.52,1.30)--(2.45,1.30);
+\EMres{2.45,1.30}{3.35,1.30}{R_2}
+\draw (3.80,1.82)--(4.15,1.82)--(4.15,0)--(-.35,0);
+% Bulb S with R_1 above and S below
+\begin{scope}[shift={(1.90,2.34)}]
+  \draw[fill=white] (0,0) circle[radius=.24];
+  \draw (-.17,-.17)--(.17,.17) (-.17,.17)--(.17,-.17);
+  \node[above=4pt] at (0,.22) {$R_1$};
+  \node[below=4pt] at (0,-.22) {$S$};
+\end{scope}
+% Inductor L with iron core
+\foreach \i in {0,1,2,3}
+  \draw (.40+.28*\i,1.30) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\draw (.42,1.07)--(1.50,1.07) (.42,1.00)--(1.50,1.00);
+\node[above=2pt] at (.96,1.32) {$L$};
+% Switch K and cell (+ left, - right)
+\EMswitch{1.10,0}
+\node[above=5pt] at (1.10,.16) {$K$};
+\EMcell[0]{2.65,0}
+\node[above=4pt] at (2.42,.14) {$+$};
+\node[above=4pt] at (2.88,.14) {$-$};
+\node[below=4pt] at (2.65,-.26) {$\varepsilon,r$};
+\end{tikzpicture}%

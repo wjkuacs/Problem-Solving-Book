@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.20}
+\draw[axis] (0,{\R+0.85})--(0,{\R+0.45});
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,{\R+0.45})--(0,\R) node[midway,left=1pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,\R) arc[start angle=90,end angle=270,radius=\R] node[midway,left=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .45 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,-\R)--(0,{-\R-0.45}) node[midway,left=1pt] {$I$};
+\draw[axis] (0,{-\R-0.45})--(0,{-\R-0.85});
+\draw[aux] (0,\R)--(0,-\R);
+\draw[guide] (-.12,0)--(.12,0);
+\node[left] at (0,0) {$O$};
+\node[right] at (0,{\R/2}) {$R$};
+\node[right] at (0,{-\R/2}) {$R$};
+\end{tikzpicture}%

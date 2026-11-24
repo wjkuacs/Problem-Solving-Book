@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\EMcylinder{1.30}{5.22}
+\draw (0,0) ellipse[x radius=.55,y radius=.79];
+\draw[metal] (0,0) ellipse[x radius=.17,y radius=.25];
+\node at (0,-.52) {$\varepsilon_1$};
+\node at (0,-1.07) {$\varepsilon_2$};
+\EMdim{0}{5.22}{1.60}{1.30}{l}
+\draw[guide] (0,1.30)--(-1.52,1.30) (0,.79)--(-1.25,.79) (0,.25)--(-.98,.25) (0,0)--(-1.52,0);
+\draw[dim] (-1.43,0)--(-1.43,1.30) node[midway,left] {$b$};
+\draw[dim] (-1.06,0)--(-1.06,.79) node[midway,right] {$r$};
+\draw[vec] (-.75,-.49)--(-.75,-.02);
+\draw[vec] (-.75,.70)--(-.75,.27);
+\node[left] at (-.75,-.25) {$a$};
+\end{tikzpicture}%

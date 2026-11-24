@@ -1,0 +1,46 @@
+\begin{tikzpicture}[em diagram]
+% Left square core
+\draw (0,-1.05) rectangle (1.65,1.05);
+\draw (.42,-.65) rectangle (1.23,.65);
+% Right square core
+\draw (2.55,-1.05) rectangle (4.20,1.05);
+\draw (2.97,-.65) rectangle (3.78,.65);
+% Coil A on left limb of core 1 (front slanting \)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.05,.55)--(0,.55);
+\node[above] at (-.55,.58) {$I$};
+\EMterm{-1.05,.55}{left}{a}
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (.42,-.55)--(-1.05,-.55);
+\node[below] at (-.55,-.58) {$I$};
+\EMterm{-1.05,-.55}{left}{b}
+\foreach \y in {.55,.30,.05,-.20,-.45} {
+  \draw (0,\y)--(.42,\y-.10);
+  \draw (0,\y) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+  \draw (.42,\y-.10) arc[start angle=-90,end angle=90,x radius=.06,y radius=.05];
+}
+\node[left=3pt] at (0,0) {$A$};
+% Coupling coil on right limb of core 1 (front slanting /)
+\foreach \y in {.42,.16,-.10,-.36} {
+  \draw (1.65,\y)--(1.23,\y-.12);
+  \draw (1.65,\y) arc[start angle=90,end angle=-90,x radius=.06,y radius=.05];
+  \draw (1.23,\y-.12) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+}
+\draw (1.65,.42)--(2.55,.42) (1.65,-.48)--(2.55,-.48);
+% Coupling coil on left limb of core 2 (front slanting /)
+\foreach \y in {.42,.16,-.10,-.36} {
+  \draw (2.97,\y)--(2.55,\y-.12);
+  \draw (2.97,\y) arc[start angle=90,end angle=-90,x radius=.06,y radius=.05];
+  \draw (2.55,\y-.12) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+}
+% Coil B on right limb of core 2 (front slanting /)
+\foreach \y in {.45,.18,-.09,-.36} {
+  \draw (4.20,\y)--(3.78,\y-.12);
+  \draw (4.20,\y) arc[start angle=90,end angle=-90,x radius=.06,y radius=.05];
+  \draw (3.78,\y-.12) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+}
+\draw (4.20,.45)--(5.15,.45) (4.20,-.48)--(5.15,-.48);
+\EMterm{5.15,.45}{right}{c}
+\EMterm{5.15,-.48}{right}{d}
+\node[right=3pt] at (4.20,0) {$B$};
+\end{tikzpicture}%

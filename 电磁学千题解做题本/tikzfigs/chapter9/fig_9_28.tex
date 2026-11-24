@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\def\R{0.92}
+% Charged spherical shell
+\draw (0,0) circle[radius=\R];
+\foreach \ang in {14,56,72,110,136,194,222,250,280,310,342} {
+  \node at (\ang:1.10) {$+$};
+}
+% Center O
+\node[below right=1pt] at (0,0) {$O$};
+% Radius vector R
+\draw[vec] (0,0)--(162:\R);
+\node[below=2pt] at (162:0.46) {$R$};
+% Velocity vector v
+\draw[vec] (0,0)--(0,2.25) node[above] {$\vec{v}$};
+% Position vector r
+\draw[vec] (0,0)--(34:2.95);
+\node[below right=1pt] at (34:2.05) {$\vec{r}$};
+\end{tikzpicture}%

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.35,0)--(-.35,2.02)--(0,2.02) (0,1.52)--(0,2.52)--(2.65,2.52)--(2.65,1.52)--(2.45,1.52) (0,1.52)--(.24,1.52);
+\draw (1.36,1.52)--(1.55,1.52);
+\EMres[below=4pt]{1.55,1.52}{2.45,1.52}{R}
+\draw (2.65,2.02)--(3.20,2.02) (3.20,1.52)--(3.20,2.52)--(5.30,2.52)--(5.30,1.52)--(4.70,1.52) (3.20,1.52)--(3.80,1.52);
+\EMres[below=4pt]{3.80,1.52}{4.70,1.52}{R}
+\draw (5.30,2.02)--(5.65,2.02)--(5.65,0)--(-.35,0);
+% Inductor L on left lower branch
+\foreach \i in {0,1,2,3}
+  \draw (.24+.28*\i,1.52) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[below=5pt] at (.80,1.36) {$L$};
+% Bulbs S_1, S_2
+\begin{scope}[shift={(1.32,2.52)}]
+  \draw[fill=white] (0,0) circle[radius=.24];
+  \draw (-.17,-.17)--(.17,.17) (-.17,.17)--(.17,-.17);
+  \node[above=4pt] at (0,.22) {$S_1$};
+\end{scope}
+\begin{scope}[shift={(4.25,2.52)}]
+  \draw[fill=white] (0,0) circle[radius=.24];
+  \draw (-.17,-.17)--(.17,.17) (-.17,.17)--(.17,-.17);
+  \node[above=4pt] at (0,.22) {$S_2$};
+\end{scope}
+% Switch K and cell (+ left, - right)
+\EMswitch{1.85,0}
+\node[above=5pt] at (1.85,.16) {$K$};
+\EMcell[0]{3.35,0}
+\node[above=4pt] at (3.12,.14) {$+$};
+\node[above=4pt] at (3.58,.14) {$-$};
+\node[below=4pt] at (3.35,-.26) {$\varepsilon$};
+\end{tikzpicture}%

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{2.15}
+\def\ry{0.78}
+\def\h{0.28}
+\draw (0,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (-\rx,0)--(-\rx,-\h)
+  arc[start angle=180,end angle=360,x radius=\rx,y radius=\ry]--(\rx,0);
+\foreach \ang in {195,215,235,255,275,295,315,335,350} {
+  \draw[vec] ({\rx*cos(\ang)},{\ry*sin(\ang)-\h})--({\rx*cos(\ang)},{\ry*sin(\ang)});
+}
+\node at (0,0) {$\vec{M}$};
+\end{tikzpicture}%

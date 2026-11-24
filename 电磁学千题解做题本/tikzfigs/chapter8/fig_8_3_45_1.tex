@@ -1,0 +1,41 @@
+\begin{tikzpicture}[em diagram]
+% Five-inductor bridge L1..L5 between terminals a and b
+\draw (-2.35,0)--(-1.85,0) (1.85,0)--(2.35,0);
+\EMterm{-2.35,0}{above}{a}
+\EMterm{2.35,0}{above}{b}
+\EMdot{-1.85,0}
+\EMdot{1.85,0}
+\draw (-1.85,-.95)--(-1.85,.95) (1.85,-.95)--(1.85,.95);
+% Top branch: L1 and L2
+\draw (-1.85,.95)--(-1.25,.95);
+\foreach \x in {-1.25,-1.05,-.85,-.65} {
+  \draw (\x,.95) arc[start angle=180,end angle=0,x radius=.10,y radius=.11];
+}
+\node[above] at (-.85,1.10) {$L_1$};
+\draw (-.45,.95)--(.45,.95);
+\foreach \x in {.45,.65,.85,1.05} {
+  \draw (\x,.95) arc[start angle=180,end angle=0,x radius=.10,y radius=.11];
+}
+\node[above] at (.85,1.10) {$L_2$};
+\draw (1.25,.95)--(1.85,.95);
+% Bottom branch: L3 and L4
+\draw (-1.85,-.95)--(-1.25,-.95);
+\foreach \x in {-1.25,-1.05,-.85,-.65} {
+  \draw (\x,-.95) arc[start angle=180,end angle=0,x radius=.10,y radius=.11];
+}
+\node[above] at (-.85,-.80) {$L_3$};
+\draw (-.45,-.95)--(.45,-.95);
+\foreach \x in {.45,.65,.85,1.05} {
+  \draw (\x,-.95) arc[start angle=180,end angle=0,x radius=.10,y radius=.11];
+}
+\node[above] at (.85,-.80) {$L_4$};
+\draw (1.25,-.95)--(1.85,-.95);
+% Center branch: L5
+\EMdot{0,.95}
+\EMdot{0,-.95}
+\draw (0,.95)--(0,.40) (0,-.40)--(0,-.95);
+\foreach \y in {.40,.20,0,-.20} {
+  \draw (0,\y) arc[start angle=90,end angle=-90,x radius=.11,y radius=.10];
+}
+\node[right=2pt] at (.12,0) {$L_5$};
+\end{tikzpicture}%

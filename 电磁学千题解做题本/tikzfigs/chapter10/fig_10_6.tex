@@ -1,0 +1,40 @@
+\begin{tikzpicture}[em diagram]
+% Left control circuit with ground, switch K, cell \varepsilon_1, electromagnet R, L
+\draw (0,0)--(0,1.25)--(2.95,1.25)--(2.95,0);
+% Ground left
+\draw (-.22,0)--(.22,0) (-.14,-.08)--(.14,-.08) (-.06,-.16)--(.06,-.16);
+% Ground under solenoid
+\draw (2.73,0)--(3.17,0) (2.81,-.08)--(3.09,-.08) (2.89,-.16)--(3.01,-.16);
+% Downward current arrow I on left lead
+\draw[vec] (0,.90)--(0,.35) node[midway,right=2pt] {$I$};
+% Switch K and cell \varepsilon_1
+\EMswitch{.62,1.25}
+\node[above=5pt] at (.62,1.41) {$K$};
+\EMcell[0]{1.62,1.25}
+\node[below=3pt] at (1.40,1.08) {$+$};
+\node[below=3pt] at (1.84,1.08) {$-$};
+\node[above=6pt] at (1.62,1.45) {$\varepsilon_1$};
+% Current I_1 arrow into solenoid
+\draw[vec] (2.05,1.25)--(2.58,1.25) node[midway,above=2pt] {$I_1$};
+% Electromagnet core and coil windings
+\draw[fill=white] (2.81,.38) rectangle (3.09,1.38);
+\foreach \y in {.58,.76,.94,1.12} {
+  \draw (2.81,\y+.06) .. controls (2.73,\y+.03) and (2.73,\y-.03) .. (2.83,\y-.06)
+    --(3.07,\y-.06) .. controls (3.15,\y-.03) and (3.15,\y+.03) .. (3.09,\y+.06);
+}
+\node[right=3pt] at (3.13,1.02) {$R$};
+\node[right=3pt] at (3.13,.66) {$L$};
+% Relay P above solenoid
+\draw[pattern=north east lines] (2.60,1.78) rectangle (2.98,2.04);
+\draw[pattern=north east lines] (3.76,1.78) rectangle (4.14,2.04);
+\draw (2.79,2.04)--(2.79,2.20)--(3.95,2.20)--(3.95,2.04);
+\node[above=2pt] at (3.37,2.20) {$P$};
+% Right circuit: \varepsilon_2 and instrument A
+\draw (4.14,1.91)--(6.15,1.91)--(6.15,.25)--(3.95,.25)--(3.95,1.78);
+\EMcell[0]{5.10,1.91}
+\node[below=3pt] at (4.88,1.74) {$+$};
+\node[below=3pt] at (5.32,1.74) {$-$};
+\node[above=6pt] at (5.10,2.11) {$\varepsilon_2$};
+\draw[fill=white] (5.83,.74) rectangle (6.47,1.38);
+\node at (6.15,1.06) {$A$};
+\end{tikzpicture}%

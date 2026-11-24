@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Vertical long wire I
+\draw[axis] (-1.35,-1.35)--(-1.35,-1.05);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.35,-1.05)--(-1.35,1.05);
+\draw[axis] (-1.35,1.05)--(-1.35,1.35);
+\node[left] at (-1.35,0) {$I$};
+% Rectangular coil
+\draw[line width=.75pt] (-.35,-.82) rectangle (.55,.82);
+\node[right] at (-.32,0) {$l$};
+% Dimensions a and b
+\draw[guide] (-.35,-.82)--(-.35,-.92) (.55,-.82)--(.55,-1.25);
+\draw[dim] (-1.35,-.35)--(-.35,-.35) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (-1.35,-1.08)--(.55,-1.08) node[midway,fill=white,inner sep=1pt] {$b$};
+% Velocity arrow v
+\draw[vec] (.55,0)--(1.38,0) node[right] {$\vec{v}$};
+\end{tikzpicture}%

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% Left ring A rotating CW
+\draw (-1.35,0) circle[radius=1.02];
+\node[above] at (-1.35,1.05) {$A$};
+\draw[vec] (-1.35,0) ++(72:1.18) arc[start angle=72,end angle=18,radius=1.18];
+\node[above right=1pt] at (-1.35+.85,.82) {$\omega$};
+% Right ring B with CCW current I
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .08 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (1.35,0) circle[radius=1.02];
+\node[above] at (1.35,1.05) {$B$};
+\node[right=1pt] at (2.28,.45) {$I$};
+\end{tikzpicture}%

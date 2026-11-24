@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+% Top view of radial-field moving-coil galvanometer
+\draw (-2.05,0.75)--(-1.12,0.75) arc[start angle=142,end angle=218,radius=1.22]--(-2.05,-0.75);
+\node at (-1.62,0) {$\mathrm{N}$};
+\draw (2.05,0.75)--(1.12,0.75) arc[start angle=38,end angle=-38,radius=1.22]--(2.05,-0.75);
+\node at (1.62,0) {$\mathrm{S}$};
+% Radial field arrows from N into core and from core out to S
+\foreach \ang in {148,164,180,196,212} {
+  \draw[vec] (\ang:1.18)--(\ang:0.78);
+}
+\foreach \ang in {-32,-16,0,16,32} {
+  \draw[vec] (\ang:0.78)--(\ang:1.18);
+}
+% Circular iron core
+\draw[fill=white] (0,0) circle[radius=0.75];
+% Inner spiral hairspring
+\draw[guide,domain=0:2.6*360,samples=70,variable=\t]
+  plot ({\t/936*0.36*cos(\t)},{\t/936*0.36*sin(\t)});
+\fill ({0.36*cos(2.6*360)},{0.36*sin(2.6*360)}) circle[radius=1.4pt];
+% Thick tilted coil bar
+\draw[line width=2.8pt] (208:0.80)--(28:0.80);
+\end{tikzpicture}%

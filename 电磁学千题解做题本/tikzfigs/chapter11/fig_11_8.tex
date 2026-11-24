@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(4.6,0);
+\EMres[below=4pt]{.4,0}{2.4,0}{R}
+\begin{scope}[shift={(3.3,0)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.26)--(-.13,.26) (.13,-.26)--(.13,.26);
+  \node[below=4pt] at (0,-.16) {$C$};
+\end{scope}
+\EMterm{0,0}{}{}
+\EMterm{4.6,0}{}{}
+\draw[guide] (0,.22)--(0,.72) (4.6,.22)--(4.6,.72);
+\draw[dim] (0,.52)--(4.6,.52) node[midway,fill=white,inner sep=2pt] {$220\mathrm{V},\,50\mathrm{Hz}$};
+\end{tikzpicture}%

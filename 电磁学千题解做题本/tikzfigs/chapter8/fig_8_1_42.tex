@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.35}
+\draw[aux] (0,0) circle[radius=\R];
+% Crosses for B into page
+\foreach \x/\y in {-.68/1.05, .35/1.08,
+                   -1.08/.45, -.18/.52, 1.48/-.18,
+                   -.45/-.22, .45/-.28, 1.18/-.52,
+                   -.85/-.88, .12/-.95, .95/-.95} {
+  \node at (\x,\y) {$\times$};
+}
+\node[align=center] at (-1.02,-.28) {$\vec{B}$\\向内};
+% Rotating rod OA
+\begin{scope}[rotate=22]
+  \draw[fill=white] (0,-.04) rectangle (\R,.04);
+  \node[above=2pt] at ({\R/2},.05) {$l$};
+\end{scope}
+\node[below] at (0,-.04) {$O$};
+\node[below right] at (22:\R) {$A$};
+% Rotation arrow omega
+\draw[vec] (14:{\R+.26}) arc[start angle=14,end angle=34,radius={\R+.26}];
+\node[right=2pt] at (32:{\R+.26}) {$\omega$};
+\end{tikzpicture}%

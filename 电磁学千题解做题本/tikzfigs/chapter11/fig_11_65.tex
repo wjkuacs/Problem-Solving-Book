@@ -1,0 +1,41 @@
+\begin{tikzpicture}[em diagram]
+% Core
+\draw[line width=.7pt] (.75,0) rectangle (4.35,2.70);
+\draw[line width=.7pt] (1.10,.32) rectangle (4.00,2.38);
+
+% Primary upper coil (1-2)
+\draw (0,2.22)--(.75,2.22) (0,1.62)--(.75,1.62);
+\foreach \y in {2.14,1.98,1.82,1.66} {
+  \draw (.71,\y)--(.92,\y+.06)--(1.14,\y-.08);
+  \fill (.75,\y) circle[radius=.8pt] (1.10,\y-.08) circle[radius=.8pt];
+}
+\EMterm{0,2.22}{left}{1}
+\EMterm{0,1.62}{left}{2}
+
+% Primary lower coil (3-4)
+\draw (0,1.12)--(.75,1.12) (0,.52)--(.75,.52);
+\foreach \y in {1.04,.88,.72,.56} {
+  \draw (.71,\y)--(.92,\y+.06)--(1.14,\y-.08);
+  \fill (.75,\y) circle[radius=.8pt] (1.10,\y-.08) circle[radius=.8pt];
+}
+\EMterm{0,1.12}{left}{3}
+\EMterm{0,.52}{left}{4}
+
+% Secondary upper coil (280V)
+\draw (4.00,2.22)--(5.10,2.22) (4.35,1.34)--(5.10,1.34);
+\foreach \y in {2.18,2.00,1.82,1.64,1.46} {
+  \draw (3.96,\y)--(4.18,\y-.07)--(4.39,\y+.07);
+  \fill (4.00,\y) circle[radius=.8pt] (4.35,\y+.07) circle[radius=.8pt];
+}
+\EMterm{5.10,2.22}{}{} \EMterm{5.10,1.34}{}{}
+\node[right] at (4.45,1.78) {$280\mathrm{V}$};
+
+% Secondary lower coil (6.3V)
+\draw (4.00,1.00)--(5.10,1.00) (4.35,.48)--(5.10,.48);
+\foreach \y in {.94,.76,.58} {
+  \draw (3.96,\y)--(4.18,\y-.07)--(4.39,\y+.07);
+  \fill (4.00,\y) circle[radius=.8pt] (4.35,\y+.07) circle[radius=.8pt];
+}
+\EMterm{5.10,1.00}{}{} \EMterm{5.10,.48}{}{}
+\node[right] at (5.15,.74) {$6.3\mathrm{V}$};
+\end{tikzpicture}%

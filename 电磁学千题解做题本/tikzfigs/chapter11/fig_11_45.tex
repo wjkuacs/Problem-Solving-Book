@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.9)--(4.8,.9);
+\draw (.85,0) rectangle (3.95,1.8);
+\EMres[above=4pt]{1.7,1.8}{3.3,1.8}{R}
+\begin{scope}[shift={(2.5,.9)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[above=4pt] at (0,.11) {$L$};
+\end{scope}
+\begin{scope}[shift={(2.5,0)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[below=4pt] at (0,-.16) {$C$};
+\end{scope}
+\EMdot{.42,.9} \node[above=2pt] at (.42,.9) {$I$};
+\EMdot{4.38,.9} \node[above=2pt] at (4.38,.9) {$I$};
+\EMdot{1.35,1.8} \node[above=2pt] at (1.35,1.8) {$I_R$};
+\EMdot{1.35,.9} \node[above=2pt] at (1.35,.9) {$I_L$};
+\EMdot{1.35,0} \node[above=2pt] at (1.35,0) {$I_C$};
+\EMdot{.85,.9} \EMdot{3.95,.9}
+\EMterm{0,.9}{left}{a}
+\EMterm{4.8,.9}{right}{b}
+\end{tikzpicture}%

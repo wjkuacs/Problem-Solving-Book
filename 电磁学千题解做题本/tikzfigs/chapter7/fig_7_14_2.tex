@@ -1,0 +1,34 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{0.62}
+\def\ry{1.35}
+\def\dx{0.12}
+\draw[fill=white] (\dx,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (-\dx,\ry) arc[start angle=90,end angle=270,x radius=\rx,y radius=\ry];
+\draw (-\dx,\ry)--(\dx,\ry) (-\dx,-\ry)--(\dx,-\ry);
+% Plus signs on front face
+\foreach \px/\py in {
+  0.02/0.98, 0.24/0.92, -0.14/0.62, 0.14/0.64, 0.42/0.58,
+  -0.28/0.24, 0.00/0.28, 0.28/0.22, 0.54/0.20,
+  -0.32/-0.18, -0.02/-0.14, 0.28/-0.20, 0.52/-0.22,
+  -0.22/-0.58, 0.08/-0.56, 0.36/-0.60,
+  0.02/-0.96, 0.26/-0.92
+} {
+  \node[font=\tiny,inner sep=0pt] at (\px,\py) {$+$};
+}
+% Minus signs along back left rim
+\foreach \ang in {115,135,155,175,195,215,235,250} {
+  \node[font=\tiny,inner sep=0pt] at ({-\dx+\rx*cos(\ang)-0.08},{\ry*sin(\ang)}) {$-$};
+}
+\draw[axis] (-1.35,0)--({-\dx-\rx},0) (\dx,0)--(1.98,0);
+% Thickness delta
+\draw[guide] (-\dx,\ry)--(-\dx,1.82) (\dx,\ry)--(\dx,1.82);
+\draw[vec] (-0.52,1.66)--(-\dx,1.66);
+\draw[vec] (0.52,1.66)--(\dx,1.66);
+\node[right=2pt] at (0.52,1.66) {$\delta$};
+% Radius R
+\draw[guide] (\dx,\ry)--(1.88,\ry);
+\draw[dim] (1.68,0)--(1.68,\ry) node[midway,fill=white,inner sep=1.5pt] {$R$};
+% Labels
+\node[left=2pt] at ({-\dx-\rx-0.06},0.55) {$-\sigma_{\mathrm{m}}$};
+\node[right=2pt] at ({\dx+\rx-0.06},0.55) {$\sigma_{\mathrm{m}}$};
+\end{tikzpicture}%

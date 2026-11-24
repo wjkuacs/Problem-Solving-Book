@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\def\yR{0.52}
+\def\H{2.85}
+\def\hx{0.58}
+\def\hy{0.08}
+\def\r{0.42}
+\def\yr{0.16}
+% Top hatched cross section with eccentric hole
+\draw[pattern=north east lines,pattern color=black!62,even odd rule]
+  (0,0) ellipse[x radius=\R,y radius=\yR]
+  (\hx,\hy) ellipse[x radius=\r,y radius=\yr];
+% Outer walls and bottom ellipse (front solid, back dashed)
+\draw (-\R,0)--(-\R,-\H) arc[start angle=180,end angle=360,x radius=\R,y radius=\yR]--(\R,0);
+\draw[aux] (-\R,-\H) arc[start angle=180,end angle=0,x radius=\R,y radius=\yR];
+% Dashed eccentric cylindrical hole extending down
+\draw[aux] ({\hx-\r},\hy)--({\hx-\r},{-\H+\hy})
+  ({\hx+\r},\hy)--({\hx+\r},{-\H+\hy});
+\draw[aux] (\hx,{-\H+\hy}) ellipse[x radius=\r,y radius=\yr];
+% Radius vectors R, a, r on top face
+\draw[vec,line width=.75pt] (0,0)--(156:\R) node[above left] {$R$};
+\draw[vec,line width=.75pt] (0,0)--(\hx,\hy) node[midway,below right=-1pt,fill=white,inner sep=1pt] {$a$};
+\draw[vec,line width=.75pt] (\hx,\hy)--({\hx-0.25},{\hy+0.13}) node[above=2pt,fill=white,inner sep=1pt] {$r$};
+\end{tikzpicture}%

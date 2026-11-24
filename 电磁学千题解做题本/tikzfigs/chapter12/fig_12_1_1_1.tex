@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+% Top and bottom plates
+\draw[pattern=north east lines,pattern color=black!62] (-2.25,1.05) rectangle (2.25,1.25);
+\draw[pattern=north east lines,pattern color=black!62] (-2.25,-1.25) rectangle (2.25,-1.05);
+% Uniform field lines and plate charges
+\foreach \x in {-2.10,-1.50,-0.90,-0.30,0.30,0.90,1.50,2.10} {
+  \node[font=\footnotesize,inner sep=0pt] at (\x,.91) {$+$};
+  \node[font=\footnotesize,inner sep=0pt] at (\x,-.91) {$-$};
+  \draw[vec] (\x,.76)--(\x,-.76);
+}
+\end{tikzpicture}%

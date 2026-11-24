@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+% Top branch: resistor R and inductor L
+\EMres{0,2.00}{2.15,2.00}{R}
+\draw (2.15,2.00)--(2.35,2.00);
+\foreach \x in {2.35,2.65,2.95,3.25,3.55} {
+  \draw (\x,2.00) arc[start angle=180,end angle=360,x radius=.15,y radius=.12];
+}
+\draw (3.85,2.00)--(4.25,2.00);
+\node[above] at (3.10,2.10) {$L$};
+% Vertical sides and corner dots
+\draw (0,0)--(0,2.00) (4.25,0)--(4.25,2.00);
+\EMdot{0,0}\EMdot{0,2.00}\EMdot{4.25,0}\EMdot{4.25,2.00}
+% Bottom branch: switch S (pivoted on right, pointing up-left) and cell (+ left, - right)
+\draw (0,0)--(0.72,0) (1.22,0)--(4.25,0);
+\draw (1.22,0)--(0.80,0.26);
+\EMterm{0.72,0}{}{}
+\EMterm{1.22,0}{}{}
+\node[above] at (0.97,0.32) {$S$};
+\EMcell[0]{2.85,0}
+\node[above left=1pt] at (2.74,0.16) {$+$};
+\node[above right=1pt] at (2.96,0.16) {$-$};
+\node[below=4pt] at (2.85,-0.24) {$\varepsilon, r$};
+\end{tikzpicture}%

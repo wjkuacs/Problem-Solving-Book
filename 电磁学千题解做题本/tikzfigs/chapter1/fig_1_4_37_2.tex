@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw[vec] (-2.95,0)--(3.68,0) node[right] {$x$};
+\draw[line width=.85pt] (-1.84,0)--(1.84,0) node[pos=.70,above] {$q$};
+\draw[aux] (0,0)--(0,1.87) node[above] {$P_1$};
+\draw[aux] (1.84,0)--(1.84,1.53) node[above] {$P_3$};
+\draw[aux] (2.95,0)--(3.91,0) node[below right] {$P_2$};
+\draw[dim] (-.61,0)--(-.61,1.87) node[midway,left] {$r_1$};
+\draw[dim] (1.44,0)--(1.44,1.53) node[midway,left] {$r_3$};
+\draw[guide] (-.76,1.87)--(-.46,1.87) (1.29,1.53)--(1.59,1.53);
+\node[above right] at (0,0) {$O$};
+\EMdim{-1.84}{0}{-.49}{-.14}{l}
+\EMdim{0}{1.84}{-.49}{-.14}{l}
+\EMdim{0}{3.91}{-1.04}{-.62}{r_2}
+\end{tikzpicture}%

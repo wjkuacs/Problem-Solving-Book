@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal long wire I
+\draw[axis] (-1.65,.95)--(-1.25,.95);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.25,.95)--(1.55,.95);
+\draw[axis] (1.55,.95)--(1.95,.95);
+\node[above] at (.15,.98) {$I$};
+% Vertical rod AB
+\draw[line width=.8pt] (.25,.42)--(.25,-1.15);
+\node[right] at (.25,.42) {$A$};
+\node[right] at (.25,-1.15) {$B$};
+% Dimensions a and b
+\draw[guide] (-.45,.42)--(.25,.42) (-.95,-1.15)--(.25,-1.15);
+\draw[dim] (-.30,.42)--(-.30,.95) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (-.78,-1.15)--(-.78,.95) node[midway,fill=white,inner sep=1pt] {$b$};
+% Velocity arrow v
+\draw[vec] (.25,-.38)--(1.15,-.38) node[right] {$\vec{v}$};
+\end{tikzpicture}%

@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x in {-.75,.75} {
+  \foreach \y in {-1.20,-.40,.40,1.20} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+% Vertical thin rod rotating about horizontal axis
+\draw[fill=white] (-.06,-1.05) rectangle (.06,1.05);
+\draw[axis] (-.72,0)--(.72,0);
+\draw[vec] (-.42,.18) arc[start angle=110,end angle=345,x radius=.09,y radius=.20];
+\end{tikzpicture}%

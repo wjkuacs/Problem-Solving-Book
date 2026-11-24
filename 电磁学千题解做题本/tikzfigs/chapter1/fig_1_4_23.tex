@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\draw[aux] (-1.22,0)--(2.44,0);
+\draw (2.44,0) arc[start angle=0,end angle=180,radius=1.22];
+\draw (2.44,0)--(3.75,0);
+\draw[aux] (3.75,0)--(4.12,0);
+\EMpoint{-1.22,0}{below}{A}
+\EMpoint{1.22,0}{below}{B}
+\node[above] at (-1.22,0) {$q$};
+\node[above] at (1.22,0) {$-q$};
+\node[below] at (0,0) {$O$};
+\node[below] at (2.44,0) {$D$};
+\node[above] at (1.22,1.22) {$C$};
+\foreach \start/\finish in {-1.22/0,0/1.22,1.22/2.44} {
+  \EMdim{\start}{\finish}{-.72}{-.37}{l}
+}
+\end{tikzpicture}%

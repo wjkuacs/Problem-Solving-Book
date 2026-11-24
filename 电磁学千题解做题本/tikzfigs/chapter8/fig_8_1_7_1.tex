@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\draw (0,0) circle[radius=\R];
+% Center B out of page
+\begin{scope}[shift={(0,0)}]
+  \draw (0,0) circle[radius=2.6pt];
+  \fill (0,0) circle[radius=.85pt];
+  \node[above=3pt] at (0,0) {$\vec{B}$};
+\end{scope}
+\EMpoint{-.52,-.48}{below left}{$a$}
+\EMpoint{.56,.58}{left}{$b$}
+\end{tikzpicture}%

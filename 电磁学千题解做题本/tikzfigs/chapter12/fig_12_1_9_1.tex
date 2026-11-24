@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+% Cylindrical cross section in xy plane
+\draw (0,0) ellipse[x radius=1.65,y radius=.72];
+% Coordinate axes
+\draw[vec] (0,0)--(0,2.30) node[above] {$z$};
+\draw[vec] (0,0)--(2.85,0) node[right] {$y,\vec{j}$};
+\draw[vec] (0,0)--(-1.88,-1.22) node[below left] {$x$};
+\node[below right] at (-1.45,-.94) {$\vec{i}$};
+\node[below right] at (.02,-.02) {$O$};
+% Uniform upward B field arrows (clear of O and z axis)
+\foreach \x/\ya/\yb in {
+  -1.08/.06/1.30,
+  -.62/.34/1.58,
+  -.62/-.32/.92,
+  -.30/.18/1.44,
+  .38/.34/1.60,
+  .46/-.30/.96,
+  .98/.08/1.34
+} {
+  \draw[vec] (\x,\ya)--(\x,\yb);
+}
+\node[right] at (.58,1.62) {$\vec{B}$};
+\end{tikzpicture}%

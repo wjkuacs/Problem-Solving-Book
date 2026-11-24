@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\foreach \k in {0,...,5} {
+ \EMres{\k,1.40}{\k+1,1.40}{2\Omega}
+ \EMres[below=4pt]{\k,0}{\k+1,0}{2\Omega}
+}
+\foreach \x/\v in {1/6,3/6,5/4} {
+ \EMres{\x,0}{\x,1.40}{\v\Omega}
+ \EMdot{\x,0}
+ \EMdot{\x,1.40}
+}
+\EMterm{0,1.40}{left}{a}
+\EMterm{0,0}{left}{b}
+\EMterm{6,1.40}{}{}
+\EMterm{6,0}{}{}
+\end{tikzpicture}%

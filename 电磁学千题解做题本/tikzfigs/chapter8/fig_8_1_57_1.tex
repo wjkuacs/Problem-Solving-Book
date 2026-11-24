@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Perspective ferrite toroid ring
+\draw[fill=white] (0,0) ellipse[x radius=1.05,y radius=.42];
+\draw (-.98,-.20) arc[start angle=185,end angle=355,x radius=.98,y radius=.42];
+\draw (-1.05,0)--(-1.05,-.18) (1.05,0)--(1.05,-.18);
+\draw (0,0) ellipse[x radius=.55,y radius=.20];
+% B_r arrow on top rim
+\draw[vec] (.48,.28) arc[start angle=50,end angle=130,radius=.72];
+\node[above] at (0,.55) {$B_r$};
+% Loop 1 on left (1 turn)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-2.05,.25)--(-.75,.25);
+\node[above] at (-1.45,.28) {$I$};
+\draw (-.75,.25)--(-.45,.05) (-.75,-.35)--(-2.05,-.35);
+\node[left] at (-2.05,-.05) {$1$};
+% Loop 2 on right (2 turns)
+\draw (.55,.05)--(.85,.25)--(2.05,.25);
+\draw (.45,-.05)--(.75,.15) (.75,-.35)--(2.05,-.35);
+\draw (.75,.15) arc[start angle=90,end angle=-90,x radius=.08,y radius=.25];
+\node[right] at (2.05,-.05) {$2$};
+\end{tikzpicture}%

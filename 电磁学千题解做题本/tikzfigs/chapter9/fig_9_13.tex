@@ -1,0 +1,30 @@
+\begin{tikzpicture}[em diagram]
+% Iron block (3D rectangular slab) at the bottom
+\draw[fill=white] (1.35,-0.56)--(1.70,-0.20)--(1.70,0.16)--(1.35,-0.20)--cycle;
+\draw[fill=white] (-1.65,-0.20)--(-1.30,0.16)--(1.70,0.16)--(1.35,-0.20)--cycle;
+\draw[fill=white] (-1.65,-0.56) rectangle (1.35,-0.20);
+% Downward load arrow below iron block
+\draw[vec] (-0.15,-0.56)--(-0.15,-1.18);
+% Inverted U-shaped electromagnet yoke (drawn over block back edge)
+\draw[fill=white] (-1.03,-0.02)--(-1.03,1.65)
+  arc[start angle=180,end angle=0,radius=1.03]
+  --(1.03,-0.02)
+  arc[start angle=360,end angle=180,x radius=0.21,y radius=0.07]
+  --(0.61,1.65)
+  arc[start angle=0,end angle=180,radius=0.61]
+  --(-0.61,-0.02)
+  arc[start angle=360,end angle=180,x radius=0.21,y radius=0.07]--cycle;
+% Coil windings around the curved arch
+\begin{scope}[shift={(0,1.65)}]
+  \foreach \ang in {148,131,114,97,80,63,46} {
+    \draw ({\ang}:0.61)--({\ang-11}:1.03);
+    \fill ({\ang}:0.60) circle[radius=1.35pt];
+    \fill ({\ang-11}:1.04) circle[radius=1.35pt];
+  }
+  % Left and right coil leads up to open terminals
+  \draw (154:1.03) .. controls (-1.10,0.92) and (-1.15,1.25) .. (-1.10,1.52);
+  \draw (26:1.03) .. controls (1.10,0.92) and (1.15,1.25) .. (1.10,1.52);
+  \EMterm{-1.10,1.52}{}{}
+  \EMterm{1.10,1.52}{}{}
+\end{scope}
+\end{tikzpicture}%

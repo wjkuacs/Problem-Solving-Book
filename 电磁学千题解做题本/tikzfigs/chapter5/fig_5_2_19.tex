@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Oblique toroid: outer ellipse (2.65, 1.45), inner ellipse (1.85, 0.78)
+\def\ax{2.65}
+\def\ay{1.45}
+\def\bx{1.85}
+\def\by{0.78}
+\draw (0,0) ellipse[x radius=\ax,y radius=\ay];
+\draw (0,0) ellipse[x radius=\bx,y radius=\by];
+% Dense winding turns around the toroid
+\foreach \ang in {0,7,...,353} {
+  \draw ({\bx*cos(\ang)},{\by*sin(\ang)})--({\ax*cos(\ang)},{\ay*sin(\ang)});
+}
+% Center O and mean radius R
+\draw[guide] (0,-0.25)--(0,0.25);
+\node[below] at (0,-0.25) {$O$};
+\draw[dim] (0,0)--({(\ax+\bx)/2},0) node[midway,fill=white,inner sep=1pt] {$R$};
+% Cross-section diameter 2r on left
+\draw[vec] (-\ax-0.55,0)--(-\ax,0);
+\draw[vec] (-\bx+0.55,0)--(-\bx,0);
+\node[above=2pt] at (-\ax-0.28,0) {$2r$};
+\end{tikzpicture}%

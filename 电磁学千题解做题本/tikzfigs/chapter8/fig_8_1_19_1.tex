@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x in {-.65,.65} {
+  \foreach \y in {-1.20,-.40,.40,1.20} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+% Vertical thin rod rotating in plane
+\draw[fill=white] (-.06,-1.05) rectangle (.06,1.05);
+\draw[vec] (-.06,1.08) .. controls (.16,1.12) and (.32,.98) .. (.40,.80);
+\draw[vec] (.06,-1.08) .. controls (-.16,-1.12) and (-.32,-.98) .. (-.40,-.80);
+\end{tikzpicture}%

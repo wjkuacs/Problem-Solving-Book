@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (3.77,2.24);
+\draw (-1.24,-1.24) rectangle (1.24,1.24);
+\draw (-1.24,1.24)--(P) node[pos=.56,above] {$r_1$};
+\draw (1.24,1.24)--(P);
+\node at (1.70,1.19) {$r_2$};
+\draw (1.24,-1.24)--(P) node[pos=.49,below right] {$r_3$};
+\draw (-1.24,-1.24)--(P) node[pos=.46,below left,fill=white,inner sep=.95pt] {$r_4$};
+\draw (0,0)--(P) node[pos=.33,above left] {$r$};
+\draw (0,0)--(1.78,0);
+\draw[aux] (-1.24,1.24)--(0,0)--(0,1.24);
+\draw[guide] (0,1.09)--(-.15,1.09)--(-.15,1.24);
+\EMangle{0,0}{90}{135}{.57}{45^\circ}
+\draw[guide] (1.54,0) arc[start angle=0,end angle=30.71,radius=1.54];
+\node[fill=white,inner sep=.9pt] at (1.70,.24) {$\theta$};
+\EMcharge{-1.24,1.24}{above left}{q}{+}
+\EMcharge{1.24,1.24}{above}{-q}{-}
+\EMcharge{-1.24,-1.24}{below left}{-q}{-}
+\EMcharge{1.24,-1.24}{below right}{q}{+}
+\EMpoint{0,0}{below}{O}
+\node[right] at (P) {$P(r,\theta)$};
+\node[left] at (-1.24,0) {$l$};
+\node[below] at (0,-1.24) {$l$};
+\end{tikzpicture}%

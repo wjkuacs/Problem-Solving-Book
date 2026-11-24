@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.68,-1.26)--(-.84,.73) .. controls (-.90,1.22) and (-.36,1.52) .. (0,1.52)
+  .. controls (.45,1.52) and (.90,1.22) .. (.84,.73) -- (.68,-1.26)--cycle;
+\draw[fill=black!10] (-.63,-1.65) rectangle (.63,-1.26);
+\foreach \x in {-.53,-.36,...,.53} \draw[guide] (\x,-1.65)--(\x,-1.26);
+\draw (-.32,-1.65)--(-.32,-2.00) (.31,-1.65)--(.31,-2.00);
+\draw (-.34,-.58)--(-.34,.72) arc[start angle=180,end angle=360,x radius=.34,y radius=.15] -- (.34,-.58)
+  arc[start angle=0,end angle=-180,x radius=.34,y radius=.15];
+\draw (0,.72) ellipse[x radius=.34,y radius=.15];
+\draw (0,.69) ellipse[x radius=.10,y radius=.055];
+\draw[aux] (0,.63)--(0,-.62);
+\draw (-.09,.69)--(-.09,-.47) (.09,.69)--(.09,-.47);
+\draw (0,-.70)--(0,-1.26) (.31,-.59)--(.31,-1.26);
+\node[above] at (0,.87) {$K$};
+\node[right] at (.36,.14) {$A$};
+\node[below] at (-.32,-2) {$K$};
+\node[below] at (.31,-2) {$A$};
+\end{tikzpicture}%

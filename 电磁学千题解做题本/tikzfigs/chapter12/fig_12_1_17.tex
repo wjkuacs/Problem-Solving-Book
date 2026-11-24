@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal interface between two media
+\draw (-3.45,0)--(3.45,0);
+\node at (0,.30) {$\varepsilon_1,\mu_1$};
+\node at (0,-.32) {$\varepsilon_2,\mu_2$};
+% Left normal and E1, E2 vectors
+\draw[guide] (-1.65,-1.22)--(-1.65,1.22);
+\draw[vec] ({-1.65-1.45*sin(56)},{1.45*cos(56)})--(-1.65,0);
+\node[above left] at ({-1.65-1.45*sin(56)},{1.45*cos(56)}) {$\vec{E}_1$};
+\draw[vec] (-1.65,0)--({-1.65+1.45*sin(38)},{-1.45*cos(38)}) node[below right] {$\vec{E}_2$};
+\EMangle{-1.65,0}{90}{146}{.45}{\theta_1}
+\EMangle{-1.65,0}{-90}{-52}{.48}{\theta_2}
+% Right normal and H1, H2 vectors
+\draw[guide] (1.65,-1.22)--(1.65,1.22);
+\draw[vec] ({1.65-1.45*sin(38)},{1.45*cos(38)})--(1.65,0);
+\node[above left] at ({1.65-1.45*sin(38)},{1.45*cos(38)}) {$\vec{H}_1$};
+\draw[vec] (1.65,0)--({1.65+1.45*sin(60)},{-1.45*cos(60)}) node[below right] {$\vec{H}_2$};
+\EMangle{1.65,0}{90}{128}{.48}{\varphi_1}
+\EMangle{1.65,0}{-90}{-30}{.44}{\varphi_2}
+\end{tikzpicture}%

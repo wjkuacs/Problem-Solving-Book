@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+% (1) Wire at distance b to the left of b x a rectangular coil
+\begin{scope}[shift={(-2.15,0)}]
+  \draw[axis] (-.78,-1.20)--(-.78,1.20);
+  \draw[line width=.75pt] (0,-.75) rectangle (.78,.75);
+  \draw[dim] (-.78,0)--(0,0) node[midway,fill=white,inner sep=1pt] {$b$};
+  \draw[dim] (0,0)--(.78,0) node[midway,fill=white,inner sep=1pt] {$b$};
+  \draw[guide] (.78,.75)--(1.20,.75) (.78,-.75)--(1.20,-.75);
+  \draw[dim] (1.05,-.75)--(1.05,.75) node[midway,fill=white,inner sep=1pt] {$a$};
+  \node[below] at (.15,-1.78) {(1)};
+\end{scope}
+% (2) Wire bisecting the b x a rectangular coil
+\begin{scope}[shift={(1.65,0)}]
+  \draw[axis] (0,-1.20)--(0,1.20);
+  \draw[line width=.75pt] (-.42,-.75) rectangle (.42,.75);
+  \draw[guide] (-.42,.75)--(-.42,1.18);
+  \draw[vec] (-.85,1.02)--(-.42,1.02);
+  \draw[vec] (.45,1.02)--(0,1.02);
+  \node[above] at (-.21,1.08) {$\frac{b}{2}$};
+  \draw[guide] (-.42,-.75)--(-.42,-1.18);
+  \draw[vec] (-.85,-1.02)--(-.42,-1.02);
+  \draw[vec] (.45,-1.02)--(0,-1.02);
+  \node[below] at (-.21,-1.08) {$\frac{b}{2}$};
+  \draw[guide] (.42,.75)--(.85,.75) (.42,-.75)--(.85,-.75);
+  \draw[dim] (.70,-.75)--(.70,.75) node[midway,fill=white,inner sep=1pt] {$a$};
+  \node[below] at (0,-1.78) {(2)};
+\end{scope}
+\end{tikzpicture}%

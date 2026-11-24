@@ -1,0 +1,31 @@
+\begin{tikzpicture}[em diagram]
+% Vertical hatched parallel plates separated by d
+\draw (-1.25,-1.35)--(-1.25,1.35) (1.25,-1.35)--(1.25,1.35);
+% Hatching on outer sides and - / + signs on inner sides
+\foreach \y in {-1.20,-0.90,-0.60,-0.30,0,0.30,0.60,0.90,1.20} {
+  \draw[guide] (-1.25,\y)--(-1.42,{\y-0.14});
+  \draw[guide] (1.25,\y)--(1.42,{\y+0.14});
+}
+\foreach \y in {-1.05,-0.75,-0.45,-0.15,0.15,0.45,0.75,1.05} {
+  \node[right=1pt,font=\footnotesize] at (-1.25,\y) {$-$};
+  \node[left=1pt,font=\footnotesize] at (1.25,\y) {$+$};
+}
+% Top dimension d
+\draw[guide] (-1.25,1.35)--(-1.25,1.82) (1.25,1.35)--(1.25,1.82);
+\draw[dim] (-1.25,1.66)--(1.25,1.66) node[midway,fill=white,inner sep=1pt] {$d$};
+% Magnetic field symbols (out of page: circle with dot)
+\foreach \x in {-0.62,0.0,0.62} {
+  \foreach \y in {-0.85,0.0,0.85} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide,fill=white] (0,0) circle[radius=3.0pt];
+      \fill (0,0) circle[radius=1.0pt];
+    \end{scope}
+  }
+}
+\node[fill=white,inner sep=1.5pt,align=center] at (0,0) {$\vec{B}$\\[-2pt]向\\[-2pt]外};
+% Electron (e, m) near left plate moving right
+\fill (-1.05,0) circle[radius=1.8pt];
+\draw[vec] (-1.05,0)--(-0.55,0);
+\node[above right=1pt] at (-1.05,0) {$e$};
+\node[below right=1pt] at (-1.05,0) {$m$};
+\end{tikzpicture}%

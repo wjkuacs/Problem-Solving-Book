@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+% Vertical axis and small bar magnet (S top, N bottom)
+\draw[axis] (-1.85,-1.55)--(-1.85,1.55);
+\draw[fill=white] (-1.94,-0.42) rectangle (-1.76,0.42);
+\node[above right=1pt] at (-1.76,0.40) {$\mathrm{S}$};
+\node[left=2pt] at (-1.94,0.40) {$-q_{\mathrm{m}}$};
+\node[below right=1pt] at (-1.76,-0.40) {$\mathrm{N}$};
+\node[left=2pt] at (-1.94,-0.40) {$q_{\mathrm{m}}$};
+% Closed current loop passing through A(0.32,0.72) and B(1.62,-0.32)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .28 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0.32,0.72) .. controls (0.12,1.32) and (0.95,1.55) .. (1.55,1.32)
+  .. controls (2.25,1.05) and (2.85,1.52) .. (3.25,0.65)
+  .. controls (3.55,0.00) and (2.85,-0.55) .. (2.15,-0.45)
+  .. controls (1.92,-0.42) and (1.78,-0.36) .. (1.62,-0.32)
+  .. controls (1.15,-0.20) and (0.55,0.08) .. (0.32,0.72);
+\node[above right=1pt] at (3.20,0.72) {$I$};
+\EMpoint{0.32,0.72}{above right=1pt}{A}
+\EMpoint{1.62,-0.32}{above right=1pt}{B}
+% Dashed rays from S and N to A and B
+\draw[aux] (-1.85,0.42)--(0.32,0.72) (-1.85,-0.42)--(0.32,0.72)
+  (-1.85,0.42)--(1.62,-0.32) (-1.85,-0.42)--(1.62,-0.32);
+\end{tikzpicture}%

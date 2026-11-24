@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Two parallel long wires with opposite currents I
+\draw[axis] (-1.45,-1.35)--(-1.45,-1.05);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.45,-1.05)--(-1.45,1.05);
+\draw[axis] (-1.45,1.05)--(-1.45,1.35);
+\node[left] at (-1.45,0) {$I$};
+\draw[axis] (-.55,-1.35)--(-.55,-1.05);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrowreversed{Stealth[length=3.2pt,width=2.6pt]}}}] (-.55,-1.05)--(-.55,1.05);
+\draw[axis] (-.55,1.05)--(-.55,1.35);
+\node[left] at (-.55,0) {$I$};
+% Rectangular coil
+\draw[line width=.75pt] (.25,-.75) rectangle (1.15,.75);
+% Dimensions l, d, b, a
+\draw[dim] (-1.45,-.48)--(-.55,-.48) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[dim] (-.55,-.48)--(.25,-.48) node[midway,fill=white,inner sep=1pt] {$d$};
+\draw[dim] (.25,0)--(1.15,0) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (1.15,.75)--(1.55,.75) (1.15,-.75)--(1.55,-.75);
+\draw[dim] (1.40,-.75)--(1.40,.75) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

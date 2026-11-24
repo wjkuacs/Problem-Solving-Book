@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Left ring B
+\draw (-2.45,0) circle[radius=.86];
+\node[above] at (-2.45,.90) {$B$};
+% Middle ring A with negative charges and CW omega
+\draw (0,0) circle[radius=.86];
+\node[above] at (0,1.06) {$A$};
+\foreach \ang in {0,45,90,135,180,225,270,315} {
+  \node at (\ang:1.01) {$-$};
+}
+\draw[vec] (140:.58) arc[start angle=140,end angle=40,radius=.58];
+\node[below=1pt] at (0,.55) {$\omega$};
+% Right ring C
+\draw (2.45,0) circle[radius=.86];
+\node[above] at (2.45,.90) {$C$};
+\end{tikzpicture}%

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\def\Rx{1.05}
+\def\Ry{0.40}
+\def\rx{0.72}
+\def\ry{0.26}
+\def\H{0.36}
+% Wire below ring
+\draw (0,-0.74)--(0,-1.18);
+% Ring outer walls and bottom
+\draw (-\Rx,0)--(-\Rx,-\H)
+  arc[start angle=180,end angle=360,x radius=\Rx,y radius=\Ry]--(\Rx,0);
+% Top face outer and inner ellipses
+\draw[fill=white] (0,0) ellipse[x radius=\Rx,y radius=\Ry];
+\draw (0,0) ellipse[x radius=\rx,y radius=\ry];
+% Inner back wall inside hole
+\begin{scope}
+  \clip (0,0) ellipse[x radius=\rx,y radius=\ry];
+  \draw (0,-\H) ellipse[x radius=\rx,y radius=\ry];
+\end{scope}
+% Wire inside hole and above ring
+\draw (0,-0.22)--(0,1.72);
+\draw[vec] (0,0.75)--(0,1.35) node[left=2pt] {$I$};
+% Remanent magnetization arrow on front wall (CCW viewed from above)
+\draw[vec] (0.58,-0.51) arc[start angle=-56,end angle=-124,x radius=\Rx,y radius=\Ry];
+% Outer diameter 0.8 mm
+\draw[guide] (-\Rx,-\H)--(-\Rx,-1.28) (\Rx,-\H)--(\Rx,-1.28);
+\draw[dim] (-\Rx,-1.10)--(\Rx,-1.10) node[midway,fill=white,inner sep=1.5pt] {$0.8\,\mathrm{mm}$};
+\end{tikzpicture}%

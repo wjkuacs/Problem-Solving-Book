@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+% Axes
+\draw (0,0)--(0,1.95);
+\draw[vec] (0,0)--(2.15,0) node[right=2pt] {$y$};
+\draw[vec] (0,0)--(-1.35,-1.15) node[below left=1pt] {$x$};
+% Small dipole magnet at origin
+\draw[fill=white] (-0.09,-0.22) rectangle (0.09,0.22);
+\node[above left=1pt] at (-0.04,0.20) {$\mathrm{N}$};
+\node[right=2pt] at (0.09,-0.13) {$\mathrm{S}$};
+\node[below right=1pt] at (0.02,-0.25) {$\vec{m}$};
+% Current loop at (0, 1.95)
+\draw[fill=white,postaction={decorate},decoration={markings,
+  mark=at position .75 with {\arrow{Stealth[length=3.1pt,width=2.5pt]}}}]
+  (0,1.95) ellipse[x radius=0.42,y radius=0.14];
+\draw[vec] (0,1.95)--(0,2.85) node[above=2pt] {$z$};
+\node[below right=1pt] at (0.14,1.82) {$I$};
+% Radius a
+\draw[guide] (0,2.22)--(0,2.62) (0.42,1.95)--(0.42,2.62);
+\draw[vec] (-0.36,2.48)--(0,2.48);
+\draw[vec] (0.78,2.48)--(0.42,2.48);
+\node[right=2pt] at (0.78,2.48) {$a$};
+% Height b
+\draw[guide] (0,1.95)--(-0.85,1.95) (0,0)--(-0.85,0);
+\draw[dim] (-0.68,0)--(-0.68,1.95) node[midway,fill=white,inner sep=1.5pt] {$b$};
+% Position vector r to P
+\draw[vec] (0,0)--(1.68,1.95) node[midway,right=2pt] {$\vec{r}$} node[above right] {$P$};
+\end{tikzpicture}%

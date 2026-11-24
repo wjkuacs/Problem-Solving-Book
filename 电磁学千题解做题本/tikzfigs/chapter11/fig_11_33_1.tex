@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(1.6,0) (2.4,0)--(4.0,0)--(4.0,2.2)--(0,2.2)--(0,0);
+\draw (0,1.0)--(4.0,1.0);
+\EMres[above=4pt]{.5,2.2}{1.9,2.2}{r}
+\begin{scope}[shift={(2.8,2.2)}]
+  \draw[white,line width=2pt] (-.48,0)--(.48,0);
+  \draw (-.48,0) arc[start angle=180,end angle=0,radius=.12]
+    arc[start angle=180,end angle=0,radius=.12]
+    arc[start angle=180,end angle=0,radius=.12]
+    arc[start angle=180,end angle=0,radius=.12];
+  \node[above=4pt] at (0,.12) {$L$};
+\end{scope}
+\EMres[above=4pt]{1.2,1.0}{3.2,1.0}{R}
+\draw (1.84,0) .. controls (1.92,.12) and (2.00,.12) .. (2.00,0)
+  .. controls (2.00,-.12) and (2.08,-.12) .. (2.16,0);
+\EMterm{1.6,0}{}{} \EMterm{2.4,0}{}{}
+\EMdot{0,1.6} \node[left=2pt] at (0,1.6) {$I_L$};
+\EMdot{.75,1.0} \node[below=2pt] at (.75,1.0) {$I_R$};
+\EMdot{0,.50} \node[left=2pt] at (0,.50) {$I$};
+\EMdot{0,1.0} \EMdot{4.0,1.0}
+\end{tikzpicture}%

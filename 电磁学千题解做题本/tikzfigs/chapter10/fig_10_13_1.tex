@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.95)--(4.85,1.95)--(4.85,1.51) (4.85,.39)--(4.85,0)--(0,0);
+\draw (2.95,0)--(2.95,1.95);
+% Cell on left (+ top, - bottom)
+\EMcell[270]{0,.97}
+\node[right=4pt] at (.14,1.19) {$+$};
+\node[right=4pt] at (.14,.75) {$-$};
+\node[left=5pt] at (-.26,.97) {$\varepsilon$};
+% Top: K, R_1, R_3
+\EMswitch{.90,1.95}
+\node[above=5pt] at (.90,2.11) {$K$};
+\EMres{1.75,1.95}{2.65,1.95}{R_1}
+\EMres{3.45,1.95}{4.35,1.95}{R_3}
+% Middle vertical R_2
+\EMres{2.95,.50}{2.95,1.45}{}
+\node[left=5pt] at (2.95,.97) {$R_2$};
+% Right vertical L (loops bulge left)
+\foreach \i in {0,1,2,3}
+  \draw (4.85,.39+.28*\i+.28) arc[start angle=90,end angle=270,x radius=.15,y radius=.14];
+\node[left=5pt] at (4.70,.95) {$L$};
+\EMdot{2.95,1.95}
+\EMdot{2.95,0}
+\end{tikzpicture}%

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[em diagram]
+% Primary circuit
+\draw (0,0)--(1.6,0)--(1.6,.55) (0,0)--(0,1.9)--(1.6,1.9)--(1.6,1.35);
+\draw[fill=white] (0,.95) circle[radius=.30];
+\draw (-.15,.95) .. controls (-.075,1.09) and (0,1.09) .. (0,.95)
+  .. controls (0,.81) and (.075,.81) .. (.15,.95);
+\node[left=2pt] at (-.30,.95) {$\mathcal{E},\,r$};
+
+\begin{scope}[shift={(1.6,.95)},rotate=-90]
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+\end{scope}
+\node[left=2pt] at (1.50,.95) {$N_1$};
+
+% Core
+\draw (1.82,.45)--(1.82,1.45) (1.94,.45)--(1.94,1.45);
+
+% Secondary circuit
+\draw (2.16,1.35)--(2.16,1.9)--(3.7,1.9)--(3.7,0)--(2.16,0)--(2.16,.55);
+\begin{scope}[shift={(2.16,.95)},rotate=90]
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+\end{scope}
+\node[right=2pt] at (2.26,.95) {$N_2$};
+
+\draw[fill=white] (3.45,.55) rectangle (3.95,1.35);
+\node at (3.7,.95) {$R$};
+\draw (3.95,1.35)--(4.75,1.65)--(4.75,.25)--(3.95,.55);
+\end{tikzpicture}%

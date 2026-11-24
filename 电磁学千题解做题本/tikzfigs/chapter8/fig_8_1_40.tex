@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Large coil on left
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.55,0) ellipse[x radius=.38,y radius=1.02];
+\node[left=2pt] at (-1.95,.18) {$I$};
+\draw[vec] (-1.55,0)--(-1.55,1.02) node[midway,right=1pt] {$R$};
+% Common axis
+\draw (-1.55,0)--(1.65,0);
+% Small coil on right
+\draw (1.50,0) ellipse[x radius=.13,y radius=.32];
+\draw[vec] (1.50,0)--(1.50,.32);
+\node[above left=-1pt] at (1.50,.32) {$r$};
+% Velocity v
+\draw[vec] (1.63,0)--(2.28,0) node[right] {$\vec{v}$};
+% Dimension x
+\draw[guide] (-1.55,0)--(-1.55,-.72) (1.50,0)--(1.50,-.72);
+\draw[dim] (-1.55,-.56)--(1.50,-.56) node[midway,fill=white,inner sep=1pt] {$x$};
+\end{tikzpicture}%

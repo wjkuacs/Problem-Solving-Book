@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\draw[pattern=north east lines] (0,0) rectangle (.15,3.22);
+\draw[pattern=north east lines] (1.65,0) rectangle (1.80,3.22);
+\node[right] at (.15,1.52) {$A$};
+\node[left] at (1.65,1.52) {$B$};
+\draw[vec] (.35,3.18)--(.35,2.40) node[below] {$\vec{v}_0$};
+\EMcharge{.35,3.22}{}{}{+}
+\draw[guide] (-.57,0)--(-.13,0) (-.57,3.22)--(-.13,3.22);
+\draw[dim] (-.35,0)--(-.35,3.22) node[midway,left] {$l$};
+\end{tikzpicture}%

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Left thin sheet carrying I1 into page (crosses)
+\draw (-1.65,-1.15)--(-1.65,1.15);
+\foreach \y in {-1.0,-0.75,-0.50,-0.25,0,0.25,0.50,0.75,1.0} {
+  \begin{scope}[shift={(-1.65,\y)}]
+    \draw[guide] (-2.0pt,-2.0pt)--(2.0pt,2.0pt) (-2.0pt,2.0pt)--(2.0pt,-2.0pt);
+  \end{scope}
+}
+\node[right=4pt,align=center] at (-1.65,0.18) {$I_1$\\[-1pt](向内)};
+% Right thin sheet carrying I2 out of page (dots)
+\draw (1.65,-1.15)--(1.65,1.15);
+\foreach \y in {-1.0,-0.75,-0.50,-0.25,0,0.25,0.50,0.75,1.0} {
+  \fill (1.65,\y) circle[radius=1.5pt];
+}
+\node[left=4pt,align=center] at (1.65,0.18) {$I_2$\\[-1pt](向外)};
+% Width dimensions b on both sides
+\draw[guide] (-2.25,1.15)--(-1.65,1.15) (-2.25,-1.15)--(-1.65,-1.15);
+\draw[dim] (-2.08,-1.15)--(-2.08,1.15) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (1.65,1.15)--(2.25,1.15) (1.65,-1.15)--(2.25,-1.15);
+\draw[dim] (2.08,-1.15)--(2.08,1.15) node[midway,fill=white,inner sep=1pt] {$b$};
+% Separation dimension a at bottom
+\draw[guide] (-1.65,-1.15)--(-1.65,-1.65) (1.65,-1.15)--(1.65,-1.65);
+\draw[dim] (-1.65,-1.48)--(1.65,-1.48) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

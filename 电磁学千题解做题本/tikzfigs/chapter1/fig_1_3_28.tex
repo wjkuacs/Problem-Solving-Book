@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x/\index in {0/1,2.75/2} {
+  \draw (\x,-1.03)--(\x,1.03);
+  \draw[aux] (\x,-1.03)--(\x,-2.02) (\x,1.03)--(\x,2.02);
+  \node[above] at (\x,2.02) {$\sigma_{\index}$};
+}
+\draw[vec] (.75,.80)--(1.95,.80) node[midway,above] {$\boldsymbol e_x$};
+\EMpoint{-.85,-.45}{below}{P_1}
+\EMpoint{1.35,-.45}{below}{P_2}
+\EMpoint{3.60,-.45}{below}{P_3}
+\end{tikzpicture}%

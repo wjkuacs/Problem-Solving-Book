@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.75}
+\draw (0,0) circle[radius=\R];
+\node[below left=-1pt] at (0,-.02) {$O$};
+\draw[vec] (0,0)--(24:\R) node[midway,above left=-1pt] {$R$};
+\draw[vec] (0,0)--(154:1.10) node[midway,above right=-1pt] {$r$};
+% Four B-into-page marks
+\foreach \ang in {90,180,270,0} {
+  \begin{scope}[shift={(\ang:1.22)}]
+    \draw (0,0) circle[radius=2.9pt];
+    \draw (-2.05pt,-2.05pt)--(2.05pt,2.05pt) (-2.05pt,2.05pt)--(2.05pt,-2.05pt);
+  \end{scope}
+}
+\node at (.58,-.58) {$\vec{B}$ 向内};
+\end{tikzpicture}%

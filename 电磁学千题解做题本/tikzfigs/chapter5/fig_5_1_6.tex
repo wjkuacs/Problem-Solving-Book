@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal extension dashed to P, solid wire coming from right to corner (0,0), then up
+\draw[aux] (-2.25,0)--(0,0);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (2.00,0)--(0,0) node[midway,above=2pt] {$I$};
+\draw[axis] (2.00,0)--(2.65,0);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .52 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0)--(0,1.55) node[midway,right=2pt] {$I$};
+\draw[axis] (0,1.55)--(0,2.15);
+% Right angle mark
+\draw (0,.18)--(.18,.18)--(.18,0);
+% Point P and distance a
+\node[left] at (-2.25,0) {$P$};
+\draw[guide] (-2.25,0)--(-2.25,0.68);
+\draw[dim] (-2.25,0.52)--(0,0.52) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

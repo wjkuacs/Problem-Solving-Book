@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Axis
+\draw[axis] (-2.15,0)--(2.15,0);
+% Inner solenoid radius a1, N1
+\draw (-1.65,.35)--(1.65,.35) (-1.65,-.35)--(1.65,-.35);
+\foreach \x in {-1.50,-1.25,...,1.50} {
+  \draw (\x,.35)--(\x+.12,-.35);
+}
+\node[right] at (1.72,.35) {$N_1$};
+% Outer solenoid radius a2, N2
+\draw (-1.65,.78)--(1.65,.78) (-1.65,-.78)--(1.65,-.78);
+\foreach \x in {-1.55,-1.20,...,1.55} {
+  \draw (\x,.78)--(\x+.10,.35) (\x+.15,-.35)--(\x+.20,-.78);
+}
+\node[above] at (0,.85) {$N_2$};
+% Dimensions a1, a2 on left and l at bottom
+\draw[dim] (-1.85,0)--(-1.85,.35) node[midway,right=1pt,inner sep=1pt] {$a_1$};
+\draw[dim] (-2.25,0)--(-2.25,.78) node[midway,fill=white,inner sep=1pt] {$a_2$};
+\draw[guide] (-1.65,-.78)--(-1.65,-1.22) (1.65,-.78)--(1.65,-1.22);
+\draw[dim] (-1.65,-1.08)--(1.65,-1.08) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

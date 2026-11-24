@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+% Upper and lower magnet poles
+\draw (-1.05,1.55)--(-1.05,.52) .. controls (-.45,.32) and (.45,.32) .. (1.05,.52)--(1.05,1.55);
+\draw (-1.05,-1.55)--(-1.05,-.52) .. controls (-.45,-.32) and (.45,-.32) .. (1.05,-.52)--(1.05,-1.55);
+% Coils around upper and lower poles
+\foreach \y in {1.22,1.02,.82} {
+  \draw (-1.05,\y)--(1.05,\y);
+  \draw (-1.05,\y) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+  \draw (1.05,\y) arc[start angle=90,end angle=-90,x radius=.06,y radius=.05];
+}
+\foreach \y in {-.82,-1.02,-1.22} {
+  \draw (-1.05,\y)--(1.05,\y);
+  \draw (-1.05,\y) arc[start angle=90,end angle=270,x radius=.06,y radius=.05];
+  \draw (1.05,\y) arc[start angle=90,end angle=-90,x radius=.06,y radius=.05];
+}
+% Current leads I
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.05,1.22)--(-2.15,1.22);
+\node[below] at (-1.75,1.20) {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.05,-1.22)--(-2.15,-1.22);
+\node[above] at (-1.75,-1.20) {$I$};
+% Toroidal vacuum chamber cross sections (two teardrop ovals)
+\draw[line width=.75pt] (-.58,0) ellipse[x radius=.40,y radius=.26];
+\draw[line width=.75pt] (.58,0) ellipse[x radius=.40,y radius=.26];
+\draw[vec] (1.65,0)--(1.05,0);
+\node[right,align=left] at (1.65,0) {环形真空室\\的横截面};
+\end{tikzpicture}%

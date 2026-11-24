@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (.78,2.17);
+\draw[vec] (-1.70,0)--(1.95,0) node[right] {$x$};
+\draw[vec] (0,-.87)--(0,2.80) node[above] {$y$};
+\draw (-1,0)--(P) node[pos=.31,above left] {$r_-$};
+\draw (1,0)--(P) node[pos=.50,right] {$r_+$};
+\draw[vec] (P)--++(-.09,.92) node[above] {$E_+$};
+\draw[vec] (P)--++(-.69,-.84) node[pos=.54,above left] {$E_-$};
+\EMpoint{.78,2.17}{right}{P}
+\EMangle{-1,0}{0}{50.64}{.30}{\theta_-}
+\EMangle{1,0}{0}{95.79}{.30}{\theta_+}
+\EMpoint{0,0}{above right}{O}
+\EMcharge{-1,0}{below left}{-q}{-}
+\EMcharge{1,0}{below right}{q}{+}
+\EMdim{-1}{0}{-.63}{-.13}{l/2}
+\EMdim{0}{1}{-.63}{-.13}{l/2}
+\end{tikzpicture}%

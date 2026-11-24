@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x/\labelPlate in {0/C,1.20/A,3.60/B} {
+  \draw[metal] (\x,0) rectangle ++(.18,2.48);
+  \node[above] at (\x+.09,2.48) {$\labelPlate$};
+}
+\draw[dim] (.21,1.58)--(1.18,1.58) node[midway,above,inner sep=1pt] {$2.0$} node[midway,below,inner sep=1pt] {$\mathrm{mm}$};
+\draw[dim] (1.40,1.58)--(3.58,1.58) node[midway,fill=white,inner sep=1pt] {$4.0\,\mathrm{mm}$};
+\draw (0,.27)--(-.36,.27)--(-.36,-.20) (3.78,.27)--(4.14,.27)--(4.14,-.20);
+\EMground{-.36,-.20}
+\EMground{4.14,-.20}
+\end{tikzpicture}%

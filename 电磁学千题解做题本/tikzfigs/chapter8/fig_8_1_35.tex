@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% U-shaped rails
+\draw (2.15,.85)--(0,.85)--(0,-.85)--(2.15,-.85);
+\node[above left] at (0,.85) {$d$};
+\node[below left] at (0,-.85) {$c$};
+% Sliding rod ab
+\draw[line width=.8pt] (1.25,-.85)--(1.25,.85);
+\node[above] at (1.25,.85) {$a$};
+\node[below] at (1.25,-.85) {$b$};
+\draw[vec] (1.25,0)--(2.15,0) node[right] {$\vec{v}$};
+% Out-of-page B field mark
+\begin{scope}[shift={(.62,.15)}]
+  \draw (0,0) circle[radius=2.6pt];
+  \fill (0,0) circle[radius=.85pt];
+\end{scope}
+\node at (.62,-.25) {$\vec{B}$ 向外};
+\end{tikzpicture}%

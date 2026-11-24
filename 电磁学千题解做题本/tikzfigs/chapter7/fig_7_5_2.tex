@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+\def\R{2.80}
+\def\hh{0.16}
+\draw (-\R,-\hh) rectangle (\R,\hh);
+\foreach \x in {-2.72,-2.58,-2.35,-2.00,-1.45,-0.75,0.75,1.45,2.00,2.35,2.58,2.72} {
+  \draw[vec] (\x,-\hh)--(\x,\hh);
+}
+\EMpoint{0,0}{left=1.5pt}{1}
+\EMpoint{0,0.34}{left=1.5pt}{2}
+\EMpoint{0,-0.34}{left=1.5pt}{3}
+% Radius R
+\draw[guide] (0,0.42)--(0,0.80) (\R,\hh)--(\R,0.80);
+\draw[dim] (0,0.64)--(\R,0.64) node[midway,fill=white,inner sep=1.5pt] {$R$};
+% Thickness delta
+\draw[guide] (-\R,\hh)--({-\R-0.55},\hh) (-\R,-\hh)--({-\R-0.55},-\hh);
+\draw[vec] ({-\R-0.35},0.58)--({-\R-0.35},\hh);
+\draw[vec] ({-\R-0.35},-0.58)--({-\R-0.35},-\hh);
+\node[left=2pt] at ({-\R-0.35},0) {$\delta$};
+\end{tikzpicture}%

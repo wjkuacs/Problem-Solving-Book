@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .48 with {\arrowreversed{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0) ellipse[x radius=.66,y radius=1.35];
+\node[left] at (-.68,.06) {$I$};
+\node[below] at (0,-.04) {$O$};
+% Vector a from O to loop
+\draw[vec] (0,0)--(-.47,.95) node[midway,below left=-1pt] {$\vec{a}$};
+% Axis line
+\draw (0,0)--(4.10,0) node[below=2pt,pos=.88] {轴线};
+% Position vector r to P
+\draw[vec] (0,0)--(3.75,1.42) node[midway,above left=1pt] {$\vec{r}$};
+\node[right] at (3.75,1.42) {$P$};
+\EMangle{0,0}{0}{20.7}{.95}{\theta}
+\end{tikzpicture}%

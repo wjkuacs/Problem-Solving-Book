@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+\def\w{0.62}
+% Strip edges and dashdot centerline
+\draw[axis] (0,2.25)--(0,2.65) node[above] {中线};
+\draw[axis] (0,-1.45)--(0,2.25);
+\draw (-\w,-1.25)--(-\w,2.15) (\w,-1.25)--(\w,2.15);
+\draw[axis] (-\w,2.15)--(-\w,2.50) (\w,2.15)--(\w,2.50)
+  (-\w,-1.25)--(-\w,-1.60) (\w,-1.25)--(\w,-1.60);
+% Current arrow I upward along strip
+\draw[vec] (0,-1.05)--(0,-0.45) node[midway,right=1pt] {$I$};
+% Dimensions a/2 and a/2
+\draw[dim] (-\w,1.45)--(0,1.45) node[midway,above=1pt] {$\frac{a}{2}$};
+\draw[dim] (0,1.45)--(\w,1.45) node[midway,above=1pt] {$\frac{a}{2}$};
+% Cross-sectional plane box and point P
+\draw (-1.05,-0.25) rectangle (1.75,0.65);
+\draw[fill=white] (-\w,0.20)--(\w,0.20);
+\draw (0,0.20)--(1.38,0.20) node[midway,fill=white,inner sep=1pt] {$r$};
+\EMpoint{1.38,0.20}{above}{P}
+\end{tikzpicture}%

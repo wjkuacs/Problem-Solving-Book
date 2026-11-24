@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+% Stepped Z-shaped wire A -> B
+\draw (-1.85,.78)--(.30,.78)--(.30,-.78)--(2.45,-.78);
+\node[left] at (-1.85,.78) {$A$};
+\node[below] at (2.45,-.80) {$B$};
+% Left vertical wire ab
+\draw[line width=.75pt] (-1.15,-.95)--(-1.15,.95);
+\node[above] at (-1.15,.95) {$b$};
+\node[below] at (-1.15,-.95) {$a$};
+\draw[vec] (-1.15,0)--(-.60,0) node[right] {$\vec{v}$};
+% Right vertical wire cd
+\draw[line width=.75pt] (1.75,-.95)--(1.75,.95);
+\node[above] at (1.75,.95) {$d$};
+\node[below] at (1.75,-.95) {$c$};
+\draw[vec] (1.75,0)--(2.45,0) node[right] {$\vec{v}$};
+% Dimensions l
+\draw[guide] (-1.75,.95)--(-1.15,.95) (-1.75,-.95)--(-1.15,-.95);
+\draw[dim] (-1.58,-.95)--(-1.58,.95) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[guide] (1.75,.95)--(2.85,.95) (1.75,-.95)--(2.85,-.95);
+\draw[dim] (2.68,-.95)--(2.68,.95) node[midway,fill=white,inner sep=1pt] {$l$};
+% Into-page B field marks
+\foreach \x/\y in {-.75/.45, -.75/-.45, .95/.45, .95/-.45, 2.22/.45, 2.22/-.45} {
+  \begin{scope}[shift={(\x,\y)}]
+    \draw (0,0) circle[radius=2.3pt];
+    \draw (-1.6pt,-1.6pt)--(1.6pt,1.6pt) (-1.6pt,1.6pt)--(1.6pt,-1.6pt);
+  \end{scope}
+}
+\node[align=center] at (.12,-.35) {$\vec{B}$\\向内};
+\end{tikzpicture}%

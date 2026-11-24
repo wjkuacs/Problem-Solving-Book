@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(.55,0) (2.05,0)--(4.35,0) (5.85,0)--(6.40,0);
+\EMres{.55,0}{2.05,0}{R_1}
+\EMres{4.35,0}{5.85,0}{R_2}
+\EMcell{3.00,0}
+\node[above] at (3.00,.34) {$\varepsilon,r$};
+\draw[vec] (2.12,0)--(2.69,0) node[midway,above] {$I_1$};
+\draw[vec] (3.98,-.94)--(3.98,0) node[pos=.40,right] {$I_2$};
+\EMdot{3.98,0}
+\EMterm{0,0}{left}{a}
+\EMterm{6.40,0}{right}{b}
+\end{tikzpicture}%

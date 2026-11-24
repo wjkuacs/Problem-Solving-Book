@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Vertical rod ab
+\draw[line width=.8pt] (0,-1.10)--(0,1.10);
+\node[above] at (0,1.10) {$a$};
+\node[below] at (0,-1.10) {$b$};
+\draw[guide] (.15,1.10)--(.58,1.10) (.15,-1.10)--(.58,-1.10);
+\draw[dim] (.42,-1.10)--(.42,1.10) node[midway,fill=white,inner sep=1pt] {$l$};
+% Horizontal velocity v pointing left
+\draw[vec] (0,0)--(-1.55,0) node[left] {$\vec{v}$};
+% Tilted magnetic field arrows B
+\foreach \y in {0.80, 0.40, 0.0, -0.40, -0.80} {
+  \draw[vec] (0,\y)--(-1.05,\y-.52);
+}
+\node[below left] at (-.98,-.45) {$\vec{B}$};
+\draw[guide] (-.46,0) arc[start angle=180,end angle=206.6,radius=.46];
+\node at (-.62,-.14) {$\theta$};
+% Right angle indicator at bottom
+\draw[guide] (0,-.62)--(-.18,-.71)--(-.18,-.89);
+\end{tikzpicture}%

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire L1 carrying upward current I1
+\draw[aux] (0,-1.25)--(0,-0.85) (0,0.95)--(0,1.35);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0,-0.85)--(0,0.95) node[midway,left=2pt] {$I_1$};
+\node[right=2pt] at (0,0.58) {$L_1$};
+% Perpendicular segment L2 of length l carrying I2 to the right
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (1.25,0)--(2.55,0) node[pos=.68,above=2pt] {$I_2$};
+\node[above=2pt] at (1.38,0) {$L_2$};
+% Horizontal dimensions l and l below
+\draw[guide] (1.25,0)--(1.25,-0.55) (2.55,0)--(2.55,-0.55);
+\draw[dim] (0,-0.38)--(1.25,-0.38) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[dim] (1.25,-0.38)--(2.55,-0.38) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

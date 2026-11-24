@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (-1.75,-1.65)--(-1.75,-1.25) (-1.75,1.25)--(-1.75,1.65);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.75,-1.25)--(-1.75,1.25) node[midway,left=2pt] {$I_1$};
+% Square loop ABCD of side a, center O, clockwise current I2
+\def\s{0.82}
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .125 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .375 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .625 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .875 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (-\s,-\s)--(-\s,\s)--(\s,\s)--(\s,-\s)--cycle;
+\node[above left=0pt] at (-\s,\s) {$A$};
+\node[above right=0pt] at (\s,\s) {$B$};
+\node[below right=0pt] at (\s,-\s) {$C$};
+\node[below left=0pt] at (-\s,-\s) {$D$};
+\node[above=2pt] at (0,\s) {$I_2$};
+% Center O and distance d from wire
+\EMpoint{0,0}{above}{O}
+\draw[guide] (0,0)--(0,-0.32);
+\draw[dim] (-1.75,-0.18)--(0,-0.18) node[midway,fill=white,inner sep=1pt] {$d$};
+% Side dimensions a on right and bottom
+\draw[guide] (\s,\s)--(\s+0.42,\s) (\s,-\s)--(\s+0.42,-\s);
+\draw[dim] (\s+0.26,-\s)--(\s+0.26,\s) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[guide] (-\s,-\s)--(-\s,-\s-0.42) (\s,-\s)--(\s,-\s-0.42);
+\draw[dim] (-\s,-\s-0.26)--(\s,-\s-0.26) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

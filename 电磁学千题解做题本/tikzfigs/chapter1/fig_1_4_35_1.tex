@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\draw (-1.21,-1.21) rectangle (1.21,1.21);
+\EMcharge{-1.21,1.21}{above left}{q}{+}
+\EMcharge{1.21,1.21}{above right}{-q}{-}
+\EMcharge{-1.21,-1.21}{below left}{-q}{-}
+\EMcharge{1.21,-1.21}{below right}{q}{+}
+\node[above] at (0,1.21) {$l$};
+\node[left] at (-1.21,0) {$l$};
+\node[right] at (1.21,-.47) {$l$};
+\node[below] at (0,-1.21) {$l$};
+\draw (0,0)--(2.24,0);
+\draw (0,0)--(3.89,2.23) node[above right] {$P(r,\theta)$};
+\node[below right] at (2.28,1.30) {$r\gg l$};
+\EMangle{0,0}{0}{29.83}{.55}{\theta}
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}%

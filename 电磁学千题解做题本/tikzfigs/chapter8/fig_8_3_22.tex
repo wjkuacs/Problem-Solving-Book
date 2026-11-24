@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Vertical coaxial coils: large bottom (a1, N1) and small top (a2, N2)
+\draw (0,0) ellipse[x radius=1.25,y radius=.38];
+\node[right] at (1.28,-.15) {$N_1$};
+\draw[vec] (0,0)--(-1.25,0) node[midway,above] {$a_1$};
+% Vertical axis
+\draw[axis] (0,0)--(0,1.72);
+% Small top coil
+\draw (0,1.72) ellipse[x radius=.26,y radius=.09];
+\node[right] at (.30,1.72) {$N_2$};
+\draw[guide] (-.26,1.72)--(-.26,2.15) (.26,1.72)--(.26,2.15);
+\draw[vec] (-.62,1.98)--(-.26,1.98);
+\draw[vec] (.62,1.98)--(.26,1.98);
+\node[above] at (0,2.02) {$a_2$};
+% Height dimension l on left
+\draw[guide] (-1.68,0)--(0,0) (-1.68,1.72)--(0,1.72);
+\draw[dim] (-1.52,0)--(-1.52,1.72) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

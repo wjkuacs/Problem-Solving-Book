@@ -1,0 +1,36 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.8)--(6.2,.8);
+\draw (1.55,.8)--(1.55,1.6)--(2.95,1.6)--(2.95,.8);
+\draw (2.95,1.6)--(4.45,1.6)--(4.45,.8);
+\draw (4.45,1.6)--(5.65,1.6)--(5.65,.8);
+\draw (2.95,1.6)--(2.95,2.45)--(5.65,2.45)--(5.65,1.6);
+\draw (1.55,.8)--(1.55,-.22)--(5.65,-.22)--(5.65,.8);
+
+\EMmeter{.85,.8}{\mathrm{A}}
+\EMres[below=4pt]{1.55,.8}{2.95,.8}{R}
+\begin{scope}[shift={(3.70,.8)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[below=4pt] at (0,0) {$L$};
+\end{scope}
+\begin{scope}[shift={(5.05,.8)}]
+  \draw[white,line width=2pt] (-.12,0)--(.12,0);
+  \draw (-.12,-.25)--(-.12,.25) (.12,-.25)--(.12,.25);
+  \node[below=4pt] at (0,-.18) {$C$};
+\end{scope}
+
+\EMmeter{2.25,1.6}{\mathrm{V}_1}
+\EMmeter{3.70,1.6}{\mathrm{V}_2}
+\EMmeter{5.05,1.6}{\mathrm{V}_3}
+\EMmeter{4.30,2.45}{\mathrm{V}_4}
+\EMmeter{3.60,-.22}{\mathrm{V}}
+
+\foreach \x/\y in {1.55/0.8,2.95/0.8,4.45/0.8,5.65/0.8,2.95/1.6,4.45/1.6,5.65/1.6} {
+  \EMdot{\x,\y}
+}
+\EMterm{0,.8}{left}{a}
+\EMterm{6.2,.8}{right}{b}
+\end{tikzpicture}%

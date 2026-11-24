@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal rod ab
+\draw[fill=white] (-1.45,-.06) rectangle (1.45,.06);
+\node[above] at (-1.45,.08) {$a$};
+\node[above] at (1.45,.08) {$b$};
+% Axis at 1/5 from a (x = -0.87)
+\draw[axis] (-.87,-.58)--(-.87,.85);
+\node[above] at (-.87,.88) {转轴};
+\draw[vec] (-1.08,.56) arc[start angle=160,end angle=380,x radius=.22,y radius=.08];
+% Vertical B_perp arrow
+\draw[vec] (.20,-.45)--(.20,.72) node[right] {$B_\perp$};
+\end{tikzpicture}%

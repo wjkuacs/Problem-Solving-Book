@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+% Oblique copper strip with wavy broken ends, thickness d, edges a and b
+\draw[fill=white] (-1.95,-0.52)
+  .. controls (-1.85,-0.25) and (-2.05,0.12) .. (-1.90,0.45)
+  -- (1.90,0.45)
+  .. controls (1.82,0.12) and (1.98,-0.25) .. (1.88,-0.52) -- cycle;
+% Top thickness strip
+\draw (-1.90,0.45)--(-1.72,0.58)--(2.08,0.58)--(1.90,0.45);
+\draw (2.08,0.58)
+  .. controls (2.00,0.22) and (2.14,-0.15) .. (2.04,-0.38)
+  -- (1.88,-0.52);
+% Labels a and b on top and bottom edges
+\node[above=1pt] at (-0.65,0.58) {$a$};
+\node[below=1pt] at (-0.85,-0.52) {$b$};
+% Thickness dimension d at right top corner
+\draw[vec] (2.08,0.92)--(2.08,0.58);
+\draw[vec] (2.08,0.12)--(2.08,0.45);
+\node[above right=-1pt] at (2.08,0.58) {$d$};
+% Current arrow I to the right
+\draw[vec] (-1.25,-0.04)--(1.45,-0.04) node[right=2pt] {$I$};
+% Three magnetic field lines passing from behind bottom to front top
+\draw[guide] (-1.15,-0.88)--(-0.88,-0.52);
+\draw[vec] (-0.88,-0.52)--(-0.42,1.10);
+\draw[guide] (-0.25,-0.88)--(0.02,-0.52);
+\draw[vec] (0.02,-0.52)--(0.48,1.15) node[right=1pt] {$\vec{B}$};
+\draw[guide] (0.65,-0.88)--(0.92,-0.52);
+\draw[vec] (0.92,-0.52)--(1.38,1.10);
+% Segments of field lines visible on front face before passing behind top edge
+\draw[guide] (-0.88,-0.52)--(-0.62,0.45);
+\draw[guide] (0.02,-0.52)--(0.28,0.45);
+\draw[guide] (0.92,-0.52)--(1.18,0.45);
+\end{tikzpicture}%

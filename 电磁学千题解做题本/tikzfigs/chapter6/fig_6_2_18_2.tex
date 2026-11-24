@@ -1,0 +1,40 @@
+\begin{tikzpicture}[em diagram]
+% Tilted small mirror at origin (0,0)
+\coordinate (M) at (0,0);
+\draw[line width=1.0pt] (-0.32,-0.16)--(0.32,0.16);
+\foreach \t in {-0.26,-0.16,-0.06,0.04,0.14,0.24} {
+  \draw[guide] (\t,{0.5*\t})--({\t-0.06},{0.5*\t+0.13});
+}
+\node[above=5pt] at (0,0.16) {小镜};
+% Horizontal dashed reference and tilt angle theta
+\draw[aux] (M)--(1.65,0) (0.32,0.16)--(1.55,0.775);
+\EMangle{M}{0}{26.5}{0.88}{\theta}
+% Curved graduated scale (arc centered at M, radius R=2.35)
+\def\R{2.35}
+\draw[line width=.8pt] (-132:\R) arc[start angle=-132,end angle=-42,radius=\R];
+\foreach \ang in {-130,-126,...,-44} {
+  \draw[guide] (\ang:\R)--(\ang:{\R+0.10});
+}
+\node[left=4pt] at (-126:\R) {弧尺};
+% Normal line (dashed) at -63.5 deg, radius R
+\draw[aux] (M)--(-63.5:\R);
+\node[right=1pt] at (-63.5:1.52) {$R$};
+% Incident ray from light source (at -37 deg) to mirror M
+\draw (-37:1.85)--(M);
+\draw[fill=white] (-37:2.25) circle[radius=0.10];
+\foreach \a in {0,45,...,315} {
+  \draw[guide] (-37:2.25)++(\a:0.15)--++(\a:0.10);
+}
+\node[above=4pt] at (-37:2.28) {光源};
+% Reflected ray straight down (-90 deg) through arc to observer's eye
+\draw[vec] (M)--(0,-3.05);
+% Angles theta on either side of the normal
+\EMangle{M}{-90}{-63.5}{0.85}{\theta}
+\EMangle{M}{-63.5}{-37}{0.85}{\theta}
+% Observer's eye symbol at bottom (looking upward)
+\begin{scope}[shift={(0,-3.28)}]
+  \draw[guide] (-0.16,0.20)--(0,-0.08)--(0.16,0.20);
+  \draw[guide] (-0.11,0.11) arc[start angle=195,end angle=345,radius=0.114];
+  \node[right=4pt] at (0.14,0.06) {人眼};
+\end{scope}
+\end{tikzpicture}%

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Vertical helix upward with bottom dashed projection circle
+\def\rx{1.05}
+\def\ry{0.34}
+% Bottom dashed circle and center O
+\draw[aux] (0,0) ellipse[x radius=\rx,y radius=\ry];
+\EMpoint{0,0}{right}{O}
+\draw[vec] (0,0)--(0,0.68) node[right=1pt] {$\vec{B}$};
+\draw[vec] (0,0)--({\rx*cos(-145)},{\ry*sin(-145)}) node[midway,above left=-1pt] {$r$};
+% Helix turns
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=2.8pt,width=2.3pt]}}}]
+  (\rx,0) .. controls (\rx,-0.25) and (0.35,-0.36) .. (0,-0.34)
+  .. controls (-0.65,-0.34) and (-\rx,-0.15) .. (-\rx,0.12)
+  .. controls (-\rx,0.42) and (-0.25,0.58) .. (0.25,0.66)
+  .. controls (0.85,0.75) and (\rx,0.92) .. (\rx,1.12)
+  .. controls (\rx,1.34) and (0.35,1.46) .. (-0.20,1.48)
+  .. controls (-0.75,1.50) and (-\rx,1.62) .. (-\rx,1.82)
+  .. controls (-\rx,2.05) and (-0.30,2.24) .. (0.30,2.32)
+  .. controls (0.80,2.38) and (1.02,2.52) .. (0.95,2.70);
+% Pitch dimension p on the left
+\draw[guide] (-\rx,0.12)--(-1.52,0.12) (-\rx,1.82)--(-1.52,1.82);
+\draw[dim] (-1.35,0.12)--(-1.35,1.82) node[midway,fill=white,inner sep=1pt] {$p$};
+\end{tikzpicture}%

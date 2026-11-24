@@ -1,0 +1,42 @@
+\begin{tikzpicture}[em diagram]
+% Toroidal core
+\draw (0,0) circle[radius=1.18];
+\draw (0,0) circle[radius=.82];
+% Primary windings around torus (n turns per cm)
+\foreach \ang in {10,25,...,250} {
+  \draw (\ang:.80)--(\ang:1.20);
+  \fill (\ang:.80) circle[radius=.7pt];
+  \fill (\ang:1.20) circle[radius=.7pt];
+}
+\foreach \ang in {290,305,...,350} {
+  \draw (\ang:.80)--(\ang:1.20);
+  \fill (\ang:.80) circle[radius=.7pt];
+  \fill (\ang:1.20) circle[radius=.7pt];
+}
+\node[above left] at (130:1.22) {$n$};
+% Secondary coil N on right side connected to G
+\foreach \ang in {-18,-6,6,18} {
+  \draw[line width=.75pt] (\ang:.80)--(\ang:1.20);
+}
+\node[left=3pt] at (180:-.76) {$N$};
+\draw (18:1.20)--(2.10,.37)--(2.10,.31);
+\draw (-18:1.20)--(2.10,-.37)--(2.10,-.31);
+\EMmeter{2.10,0}{G}
+% Primary circuit at bottom with sliding resistor R and cell E1
+\draw (260:.82)--(260:1.58)--(-.95,-1.56)--(-.95,-1.95);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.25,-2.15)--(-.75,-2.15);
+\EMres{-1.45,-2.15}{-.45,-2.15}{}
+\node[below=4pt] at (-.95,-2.15) {$R$};
+\draw[vec] (-.95,-1.56)--(-.95,-2.05);
+\draw (-.45,-2.15)--(.95,-2.15)--(.95,-1.92);
+\draw (280:.82)--(280:1.58)--(.95,-1.56)--(.95,-1.72);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (.95,-1.72)--(.95,-1.56);
+\node[left=2pt] at (.95,-1.62) {$i$};
+% Cell E1
+\draw (.74,-1.72)--(1.16,-1.72) (.83,-1.92)--(1.07,-1.92);
+\node[right] at (1.18,-1.70) {$+$};
+\node[right] at (1.18,-1.94) {$-$};
+\node[right=12pt] at (1.05,-1.82) {$\mathcal{E}_1$};
+\end{tikzpicture}%

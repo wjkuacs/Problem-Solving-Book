@@ -1,0 +1,30 @@
+\begin{tikzpicture}[em diagram]
+% Two hatched triangular metal plates C (right) and D (left)
+\draw[pattern=north east lines,pattern color=black!45] (-1.35,-0.95)--(-0.82,0.85)--(-0.25,-0.15)--cycle;
+\draw[pattern=north east lines,pattern color=black!45] (0.55,-0.95)--(1.08,0.85)--(1.65,-0.15)--cycle;
+% Battery connected between top vertices (-0.82,0.85) and (1.08,0.85)
+\draw (-0.82,0.85)--(0.02,0.85) (0.24,0.85)--(1.08,0.85);
+\draw (0.02,0.71)--(0.02,0.99) (0.24,0.61)--(0.24,1.09);
+\node[above=2pt,font=\footnotesize] at (-0.08,0.95) {$-$};
+\node[above=2pt,font=\footnotesize] at (0.34,0.95) {$+$};
+% Angles theta inside plates
+\node[fill=white,inner sep=0.8pt,font=\footnotesize] at (-1.02,-0.50) {$\theta$};
+\node[fill=white,inner sep=0.8pt,font=\footnotesize] at (0.88,-0.50) {$\theta$};
+% Labels D and C
+\node[fill=white,inner sep=1pt] at (-0.78,0.02) {$D$};
+\node[fill=white,inner sep=1pt] at (1.12,0.02) {$C$};
+% Horizontal wire AB resting across plates, carrying current I to the left
+\draw (-1.65,0.22)--(1.95,0.22);
+\draw[vec] (0.55,0.22)--(0.05,0.22);
+\node[below=2pt] at (0.15,0.22) {$I$};
+\node[left=1pt] at (-1.65,0.22) {$B$};
+\node[right=1pt] at (1.95,0.22) {$A$};
+% Dimension l between plates near AB
+\draw[dim] (-0.98,0.42)--(0.95,0.42) node[midway,fill=white,inner sep=1pt] {$l$};
+% Lower infinite straight wire carrying current I_2 to the right
+\draw[aux] (-2.15,-1.55)--(-1.45,-1.55) (1.45,-1.55)--(2.15,-1.55);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.45,-1.55)--(1.45,-1.55) node[midway,below=2pt] {$I_2$};
+% Slanted distance d along slope direction from wire I_2 to AB
+\draw[dim] (-1.62,-1.55)--(-1.02,0.22) node[midway,fill=white,inner sep=1pt] {$d$};
+\end{tikzpicture}%

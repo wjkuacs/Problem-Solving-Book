@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Horizontal rails
+\draw (2.45,.82)--(0,.82)--(0,-.82)--(2.45,-.82);
+% Sliding rod ab
+\draw[line width=.8pt] (1.42,-1.10)--(1.42,1.10);
+\node[above right] at (1.42,.82) {$a$};
+\node[below right] at (1.42,-.82) {$b$};
+\draw[vec] (1.42,0)--(2.32,0) node[right] {$\vec{v}$};
+% Dimensions l and x
+\draw[dim] (1.15,-.82)--(1.15,.82) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[guide] (0,-.82)--(0,-1.28) (1.42,-1.10)--(1.42,-1.28);
+\draw[dim] (0,-1.14)--(1.42,-1.14) node[midway,fill=white,inner sep=1pt] {$x$};
+% Out-of-page B mark
+\begin{scope}[shift={(.55,.15)}]
+  \draw (0,0) circle[radius=2.6pt];
+  \fill (0,0) circle[radius=.85pt];
+  \node[below=3pt] at (0,0) {$\vec{B}$};
+\end{scope}
+\end{tikzpicture}%

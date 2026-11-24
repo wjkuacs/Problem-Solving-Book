@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=.61] circle[radius=1.22] circle[radius=1.83];
+\foreach \ang/\r/\lab in {58/.61/2,92/1.22/4,127/1.83/6}
+  \draw[vec] (0,0)--(\ang:\r) node[pos=.84,right,inner sep=1pt] {$\lab r$};
+\EMcharge{0,0}{left}{Q}{+}
+\EMpoint{0,-.305}{right}{A}
+\path (-50:.915) coordinate (B) (-45:1.525) coordinate (C);
+\EMpoint{B}{below left}{B}
+\EMpoint{C}{below left}{C}
+\end{tikzpicture}%

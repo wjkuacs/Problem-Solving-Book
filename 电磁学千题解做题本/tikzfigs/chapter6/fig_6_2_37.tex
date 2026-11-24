@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% First curved wire with element I1 dl1
+\draw (-1.75,0.65) .. controls (-1.35,-0.05) and (-0.95,-0.55) .. (-0.35,-1.05);
+\coordinate (P1) at (-1.18,-0.18);
+\fill (P1) circle[radius=1.8pt];
+\draw[vec,line width=.8pt] (P1)--(-0.88,-0.55);
+\node[below left=-1pt] at (P1) {$I_1\mathrm{d}\vec{l}_1$};
+% Second curved wire with element I2 dl2
+\draw (0.55,-0.75) .. controls (0.92,0.05) and (1.35,0.62) .. (1.95,1.05);
+\coordinate (P2) at (1.10,0.22);
+\fill (P2) circle[radius=1.8pt];
+\draw[vec,line width=.8pt] (P2)--(1.40,0.58);
+\node[below right=-1pt] at (P2) {$I_2\mathrm{d}\vec{l}_2$};
+% Position vector r12 from P1 to P2
+\draw[vec] (P1)--(P2) node[midway,below right=-1pt] {$\vec{r}_{12}$};
+\end{tikzpicture}%

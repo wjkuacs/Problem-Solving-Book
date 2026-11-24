@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.65}
+\def\b{0.65}
+\def\h{0.42}
+\def\rya{0.78}
+\def\ryb{1.10}
+% Top annular surface and inner cylindrical wall windings
+\foreach \ang in {6,12,...,174} {
+  \draw[guide] ({\R*cos(\ang)},{\h+\rya*sin(\ang)})--({(\R+\b)*cos(\ang)},{\h+\ryb*sin(\ang)});
+  \draw[guide] ({\R*cos(\ang)},{\rya*sin(\ang)})--({\R*cos(\ang)},{\h+\rya*sin(\ang)});
+}
+% Core outlines (drawn over winding lines for crisp edges)
+\draw (\R,0) arc[start angle=0,end angle=180,x radius=\R,y radius=\rya];
+\draw (\R,\h) arc[start angle=0,end angle=180,x radius=\R,y radius=\rya];
+\draw (\R+\b,\h) arc[start angle=0,end angle=180,x radius=\R+\b,y radius=\ryb];
+% Left and right rectangular cut cross-sections
+\draw[fill=white] (-\R-\b,0) rectangle (-\R,\h);
+\draw[fill=white] (\R,0) rectangle (\R+\b,\h);
+% Vertical dimension a on the left (outward-stem inward-arrow style)
+\draw[guide] (-\R-\b,0)--(-\R-\b-0.46,0) (-\R-\b,\h)--(-\R-\b-0.46,\h);
+\draw[vec] (-\R-\b-0.30,\h+0.34)--(-\R-\b-0.30,\h);
+\draw[vec] (-\R-\b-0.30,-0.34)--(-\R-\b-0.30,0);
+\node at (-\R-\b-0.30,{\h/2}) {$a$};
+% Horizontal dimensions b and R below
+\draw[guide] (-\R-\b,0)--(-\R-\b,-0.48) (-\R,0)--(-\R,-0.48) (0,-0.16)--(0,-0.48);
+\draw[dim] (-\R-\b,-0.34)--(-\R,-0.34) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[dim] (-\R,-0.34)--(0,-0.34) node[midway,fill=white,inner sep=1pt] {$R$};
+\end{tikzpicture}%

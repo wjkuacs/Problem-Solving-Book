@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw (-1.2,-1.2) rectangle (1.2,1.2);
+\foreach \x/\y/\lab/\sgn/\pos in {-1.2/1.2/q/+/above left,1.2/1.2/{-q}/-/above right,-1.2/-1.2/{-q}/-/below left,1.2/-1.2/q/+/below right} {
+  \EMcharge{\x,\y}{\pos}{\lab}{\sgn}
+}
+\draw (0,0)--(3.56,0) node[pos=.67,above] {$r$} node[right] {$P$};
+\node[left] at (0,0) {$O$};
+\node[above] at (0,1.2) {$l$};
+\node[below] at (0,-1.2) {$l$};
+\node[left] at (-1.2,0) {$l$};
+\end{tikzpicture}%

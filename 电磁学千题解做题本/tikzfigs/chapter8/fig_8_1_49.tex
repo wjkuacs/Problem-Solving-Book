@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\def\R{.95}
+\draw (0,0) circle[radius=\R];
+% Vertical axis with omega
+\draw[axis] (0,-\R-.35)--(0,\R+.55);
+\draw[vec] (-.22,\R+.35) arc[start angle=160,end angle=380,x radius=.22,y radius=.08];
+\node[right=2pt] at (.22,\R+.38) {$\omega$};
+% Radius arrow a
+\draw[vec] (0,0)--(28:\R) node[midway,below right=-1pt] {$a$};
+% Horizontal B field lines
+\draw[vec] (-1.55,.42)--(1.55,.42);
+\draw[vec] (-1.55,-.42)--(1.55,-.42);
+\node[right] at (1.55,0) {$\vec{B}$};
+\end{tikzpicture}%

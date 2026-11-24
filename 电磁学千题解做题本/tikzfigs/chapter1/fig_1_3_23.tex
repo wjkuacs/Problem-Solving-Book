@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,2.32) circle[radius=.82];
+\fill (0,2.32) circle[radius=.048];
+\draw[aux] (0,2.25)--(0,0) (.82,2.32)--(.82,0);
+\draw[vec] (0,-.04)--(0,1.34) node[left] {$E$};
+\draw[vec] (-.06,0)--(2.26,0) node[right] {$r$};
+\draw (0,0)--(.82,1.04);
+\draw plot[domain=.82:2.17,samples=34] (\x,{.8528/\x});
+\draw[aux] (0,1.04)--(.82,1.04);
+\draw[guide] (-.50,0)--(-.27,0) (-.50,1.04)--(-.27,1.04);
+\draw[dim] (-.38,0)--(-.38,1.04) node[midway,left] {$\dfrac{\rho R}{2\varepsilon_0}$};
+\node[below] at (0,0) {$O$};
+\node[below] at (.82,0) {$R$};
+\end{tikzpicture}%

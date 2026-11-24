@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+% Axes x, y, z
+\draw[vec] (0,0)--(0,1.75) node[left] {$y$};
+\draw[vec] (0,0)--(-1.05,-1.05) node[below left] {$z$};
+\draw[vec] (0,0)--(2.25,0) node[right] {$x$};
+\node[below right] at (0,0) {$O$};
+% B along +z direction
+\draw[vec] (-.20,.72)--(-1.05,-.13) node[left] {$\vec{B}$};
+% Vertical rod ab moving with v along +x
+\draw[fill=white] (.48,.18) rectangle (.58,1.35);
+\node[above] at (.53,1.35) {$a$};
+\node[below] at (.53,.18) {$b$};
+\draw[vec] (.58,.76)--(1.45,.76) node[right] {$\vec{v}$};
+\end{tikzpicture}%

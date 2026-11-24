@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.40)--(.35,1.40) (1.47,1.40)--(4.35,1.40)--(4.35,0)--(0,0);
+% Inductor L
+\foreach \i in {0,1,2,3}
+  \draw (.35+.28*\i,1.40) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[below=5pt] at (.91,1.24) {$L$};
+% Resistors R_2 and R_1
+\EMres[below=4pt]{1.62,1.40}{2.52,1.40}{R_2}
+\EMres[below=4pt]{2.95,1.40}{3.95,1.40}{R_1}
+% Switch K_2 across R_1
+\draw (2.75,1.40)--(2.75,2.02)--(4.12,2.02)--(4.12,1.40);
+\EMdot{2.75,1.40}
+\EMdot{4.12,1.40}
+\EMswitch{3.43,2.02}
+\node[above=5pt] at (3.43,2.18) {$K_2$};
+% Bottom: cell (- left, + right) and K_1
+\EMcell[180]{1.55,0}
+\node[above=4pt] at (1.32,.14) {$-$};
+\node[above=4pt] at (1.78,.14) {$+$};
+\node[below=4pt] at (1.55,-.26) {$\varepsilon$};
+\EMswitch{2.75,0}
+\node[above=5pt] at (2.75,.16) {$K_1$};
+\end{tikzpicture}%

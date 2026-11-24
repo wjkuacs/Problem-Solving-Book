@@ -1,0 +1,35 @@
+\begin{tikzpicture}[em diagram]
+% Hatched top support and suspension wire
+\draw (-0.42,2.45)--(0.42,2.45);
+\foreach \x in {-0.34,-0.16,0.02,0.20,0.34} {
+  \draw[guide] (\x,2.45)--({\x+0.12},2.60);
+}
+\draw[guide] (0,2.45)--(0,1.65);
+\node[right=2pt] at (0,2.15) {悬丝};
+% Small mirror (vertical rectangle + joint)
+\draw[fill=white] (-0.08,1.25) rectangle (0.08,1.65);
+\node[right=2pt] at (0.08,1.45) {小镜};
+\draw[guide] (0,1.25)--(0,1.15);
+\draw[fill=white] (0,1.06) circle[radius=0.09];
+\draw[guide] (0,0.97)--(0,0.75);
+% Concave N and S magnet poles
+\draw (-1.85,0.72)--(-0.88,0.72) .. controls (-1.05,0.52) and (-1.05,0.32) .. (-0.82,0.12)--(-1.85,0.12);
+\draw (-0.82,0.12)--(-0.82,-1.05)--(-1.85,-1.05);
+\node at (-1.35,-0.45) {$\mathrm{N}$};
+\draw (1.85,0.72)--(0.88,0.72) .. controls (1.05,0.52) and (1.05,0.32) .. (0.82,0.12)--(1.85,0.12);
+\draw (0.82,0.12)--(0.82,-1.05)--(1.85,-1.05);
+\node at (1.35,-0.45) {$\mathrm{S}$};
+% Cylindrical core inside coil
+\draw[fill=white] (-0.52,-0.82)--(-0.52,0.48) arc[start angle=180,end angle=0,x radius=0.52,y radius=0.22]--(0.52,-0.82) arc[start angle=0,end angle=-180,x radius=0.52,y radius=0.22];
+\draw (0,0.48) ellipse[x radius=0.52,y radius=0.22];
+% Thick rectangular coil loop around core
+\draw[line width=2.0pt] (-0.60,-0.82)--(-0.60,0.62)--(0.60,0.62)--(0.60,0.32);
+% Lower coiled lead and terminal
+\draw[guide] (0,-1.04)--(0,-1.25);
+\draw[guide] (0,-1.25) .. controls (0.14,-1.30) and (0.14,-1.38) .. (0,-1.43)
+  .. controls (0.14,-1.48) and (0.14,-1.56) .. (0,-1.61)
+  .. controls (0.14,-1.66) and (0.14,-1.74) .. (0,-1.79);
+\draw[guide] (0,-1.79)--(0,-1.98);
+\draw[fill=white] (0,-2.04) circle[radius=0.06];
+\node[left=4pt] at (-0.05,-1.55) {线圈};
+\end{tikzpicture}%

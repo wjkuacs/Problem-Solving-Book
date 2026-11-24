@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x/\index in {0/1,1.52/2} {
+  \draw[metal] (\x,0) rectangle ++(.35,2.75);
+  \node[above] at (\x+.175,2.75) {$Q_{\index}$};
+}
+\foreach \y in {.15,.48,.84,1.16,1.49,1.82,2.15,2.48,2.68} {
+  \node[left,inner sep=0] at (0,\y) {$+$};
+  \node[right,inner sep=0] at (1.87,\y) {$+$};
+}
+\foreach \y in {.15,1.36,2.68} {
+  \node[right,inner sep=0] at (.35,\y) {$+$};
+  \node[left,inner sep=0] at (1.52,\y) {$-$};
+}
+\foreach \x/\i in {-.42/1,.66/2,1.20/3,2.29/4} \node[fill=white,inner sep=1pt] at (\x,1.63) {$\sigma_{\i}$};
+\end{tikzpicture}%

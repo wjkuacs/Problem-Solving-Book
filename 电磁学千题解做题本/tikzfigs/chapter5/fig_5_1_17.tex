@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\def\r{1.35}
+\def\R{1.95}
+% Center O and dashed radial guides
+\EMpoint{0,0}{below left}{O}
+\draw[aux] (0,0)--(0,\r) (0,0)--(\r,0);
+% 3/4 inner arc (90 to 360, counterclockwise)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .22 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .82 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,\r) arc[start angle=90,end angle=360,radius=\r];
+\node[below right] at (-45:\r) {$I$};
+% 1/4 outer arc (0 to 90, counterclockwise)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .58 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\R,0) arc[start angle=0,end angle=90,radius=\R];
+\node[above right] at (55:\R) {$I$};
+% Connecting straight segments
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,\R)--(0,\r);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\r,0)--(\R,0);
+% Radius arrows R and r
+\draw[vec] (0,0)--(44:\R) node[midway,above left=-1pt] {$R$};
+\draw[vec] (0,0)--(-62:\r) node[midway,left=1pt] {$r$};
+\end{tikzpicture}%

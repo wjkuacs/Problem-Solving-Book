@@ -1,0 +1,40 @@
+\begin{tikzpicture}[em diagram]
+\def\a{0.68}
+\def\b{0.96}
+\pgfmathsetmacro{\c}{sqrt(\a*\a+\b*\b)}
+% Axes
+\draw[vec] (-2.25,0)--(2.45,0) node[right] {$x$};
+\draw[vec] (0,-1.85)--(0,1.95) node[above] {$y$};
+\node[below left] at (0,0) {$O$};
+% Asymptotes
+\draw[aux] (-1.45,-1.83)--(1.45,1.83) (-1.45,1.83)--(1.45,-1.83);
+% Right branch: C (top) -> D (vertex) -> E (bottom)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .22 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .78 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (1.44,1.55) .. controls (0.94,0.85) and (\a,0.40) .. (\a,0)
+  .. controls (\a,-0.40) and (0.94,-0.85) .. (1.44,-1.55);
+% Left branch: B (bottom) -> A (vertex) -> G (top)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .22 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .78 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.44,-1.55) .. controls (-0.94,-0.85) and (-\a,-0.40) .. (-\a,0)
+  .. controls (-\a,0.40) and (-0.94,0.85) .. (-1.44,1.55);
+% Labels G, B, C, E, A, D, F', F
+\node[above left] at (-1.42,1.55) {$G$};
+\node[below left] at (-1.42,-1.55) {$B$};
+\node[above right] at (1.42,1.55) {$C$};
+\node[below right] at (1.42,-1.55) {$E$};
+\node[above right] at (-\a,0) {$A$};
+\node[above left] at (\a,0) {$D$};
+\EMpoint{-\c,0}{below}{F'}
+\EMpoint{\c,0}{below}{F}
+\node[left] at (-1.08,1.02) {$I$};
+\node[left] at (-1.08,-1.02) {$I$};
+\node[right] at (1.08,-1.02) {$I$};
+% Focus F to point on upper-right branch
+\draw (\c,0)--(1.12,1.10) node[midway,right=1pt] {$r$};
+\node[above left=1pt] at (1.08,1.12) {$I\mathrm{d}l$};
+\draw[guide] ({\c+0.34},0) arc[start angle=0,end angle=93,radius=0.34];
+\node at ({\c+0.42},0.32) {$\theta$};
+\end{tikzpicture}%

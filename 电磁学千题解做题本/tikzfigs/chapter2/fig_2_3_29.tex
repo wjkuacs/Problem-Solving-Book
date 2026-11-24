@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw[metal] (0,0) circle[radius=1.75];
+\draw[fill=white] (0,0) circle[radius=1.59];
+\draw[dielectric] (0,0) circle[radius=1.21];
+\draw[fill=white] (0,0) circle[radius=.70];
+\draw[metal] (0,0) circle[radius=.34];
+\foreach \ang/\radius/\lab in {41/.34/R_1,163/.70/a,188/1.21/b,208/1.59/R_2}
+  \draw[vec] (0,0)--(\ang:\radius) node[pos=.76,fill=white,inner sep=.65pt,above] {$\lab$};
+\node[above] at (.49,.04) {$\varepsilon_0$};
+\node at (.93,.27) {$\varepsilon$};
+\node at (1.40,-.25) {$\varepsilon_0$};
+\end{tikzpicture}%

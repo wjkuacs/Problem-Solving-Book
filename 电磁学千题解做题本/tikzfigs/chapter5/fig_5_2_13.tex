@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\def\ra{0.82}
+\def\rb{1.22}
+\def\ya{0.28}
+\def\yb{0.44}
+\def\H{2.85}
+% Top annulus with hatching
+\draw[pattern=north east lines,pattern color=black!62,even odd rule]
+  (0,0) ellipse[x radius=\rb,y radius=\yb]
+  (0,0) ellipse[x radius=\ra,y radius=\ya];
+% Outer side walls and bottom arc
+\draw (-\rb,0)--(-\rb,-\H) arc[start angle=180,end angle=360,x radius=\rb,y radius=\yb]--(\rb,0);
+% Upward current arrows on front face
+\foreach \x/\yaoff in {-0.88/0.24, -0.45/0.35, 0/0.38, 0.45/0.35, 0.88/0.24} {
+  \draw[vec] (\x,{-\H+0.25-\yaoff})--(\x,{-0.62-\yaoff});
+}
+\node[above=1pt] at (0,{-0.62-0.38}) {$I$};
+% Axis and radial dimensions a, b
+\draw[axis] (0,-0.25)--(0,1.25);
+\draw[guide] (-\ra,0)--(-\ra,0.82) (-\rb,0)--(-\rb,1.16);
+\draw[dim] (-\ra,0.68)--(0,0.68) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (-\rb,1.04)--(0,1.04) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

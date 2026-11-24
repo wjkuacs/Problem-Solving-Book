@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,-.18)--(1.8,-.18) (2.6,-.18)--(4.7,-.18)--(4.7,1.25)--(4.45,1.25)
+      (0,-.18)--(0,1.25)--(2.3,1.25);
+\draw (2.3,.65) rectangle (4.45,1.85);
+\begin{scope}[shift={(.75,1.25)}]
+  \draw[white,line width=2pt] (-.40,0)--(.40,0);
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+  \node[above=4pt] at (0,.10) {$L$};
+\end{scope}
+\EMres[above=4pt]{1.25,1.25}{2.25,1.25}{r}
+\EMres[below=4pt]{2.95,1.85}{4.25,1.85}{R}
+\begin{scope}[shift={(3.60,.65)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.24)--(-.13,.24) (.13,-.24)--(.13,.24);
+  \node[below=4pt] at (0,-.16) {$C$};
+\end{scope}
+\draw (2.04,-.18) .. controls (2.12,-.06) and (2.20,-.06) .. (2.20,-.18)
+  .. controls (2.20,-.30) and (2.28,-.30) .. (2.36,-.18);
+\EMterm{1.8,-.18}{}{} \EMterm{2.6,-.18}{}{}
+\node[below=4pt] at (2.2,-.18) {$U$};
+\EMdot{2.70,1.85} \node[below=2pt] at (2.70,1.85) {$I_R$};
+\EMdot{2.70,.65} \node[below=2pt] at (2.70,.65) {$I_C$};
+\EMdot{2.3,1.25} \EMdot{4.45,1.25}
+\end{tikzpicture}%

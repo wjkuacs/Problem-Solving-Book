@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{0.62}
+\def\ry{1.35}
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .48 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .98 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0) ellipse[x radius=\rx,y radius=\ry];
+\node[left=2pt] at (-\rx,0.32) {$I$};
+\draw[axis] (-1.45,0)--(-\rx,0) (0,0)--(1.65,0);
+% Radius R
+\draw[guide] (0,\ry)--(1.45,\ry);
+\draw[dim] (1.25,0)--(1.25,\ry) node[midway,fill=white,inner sep=1.5pt] {$R$};
+\end{tikzpicture}%

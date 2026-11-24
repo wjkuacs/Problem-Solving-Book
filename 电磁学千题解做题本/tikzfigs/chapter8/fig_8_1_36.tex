@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+% Crosses for B into page
+\foreach \x in {-.35,.35,1.05,1.75,2.45} {
+  \foreach \y in {-1.05,-.35,.35,1.05} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+% Rails and resistor R
+\draw (2.65,.78)--(0,.78)--(0,.42);
+\EMres{0,.42}{0,-.42}{}
+\node[right=4pt] at (0,0) {$R$};
+\draw (0,-.42)--(0,-.78)--(2.65,-.78);
+% Dimension l on left
+\draw[guide] (-.68,.78)--(0,.78) (-.68,-.78)--(0,-.78);
+\draw[dim] (-.52,-.78)--(-.52,.78) node[midway,fill=white,inner sep=1pt] {$l$};
+% Sliding rod ab
+\draw[line width=.8pt] (1.75,-1.08)--(1.75,1.08);
+\node[above right] at (1.75,.82) {$a$};
+\node[below right] at (1.75,-.82) {$b$};
+\draw[vec] (1.75,0)--(2.55,0) node[right] {$\vec{v}$};
+\node[fill=white,inner sep=1pt] at (1.02,0) {$\vec{B}$ 向内};
+\end{tikzpicture}%

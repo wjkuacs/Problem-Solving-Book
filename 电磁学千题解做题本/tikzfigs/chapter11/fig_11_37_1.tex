@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.4)--(0,2.1)--(3.6,2.1)--(3.6,0)--(0,0)--(0,.7);
+\draw (1.9,0)--(1.9,2.1);
+\draw (0,1.21) .. controls (.12,1.13) and (.12,1.05) .. (0,1.05)
+  .. controls (-.12,1.05) and (-.12,.97) .. (0,.89);
+\EMterm{0,1.4}{}{} \EMterm{0,.7}{}{}
+\begin{scope}[shift={(1.9,1.05)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.26,-.13)--(.26,-.13) (-.26,.13)--(.26,.13);
+  \node[left] at (-.28,0) {$C$};
+\end{scope}
+\EMres[below=4pt]{3.6,0}{3.6,1.7}{R}
+\EMdot{1.0,2.1} \node[above=2pt] at (1.0,2.1) {$I$};
+\EMdot{3.6,1.72} \node[right=2pt] at (3.6,1.72) {$I_R$};
+\EMdot{1.9,2.1} \EMdot{1.9,0}
+\end{tikzpicture}%

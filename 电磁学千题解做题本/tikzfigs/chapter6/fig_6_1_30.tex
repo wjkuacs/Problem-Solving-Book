@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Origin particle
+\coordinate (O) at (0,0);
+% Vectors v (right), B (up), E (up-right), v x B (down-left)
+\draw[vec] (O)--(1.65,0) node[right] {$\vec{v}$};
+\draw[vec] (O)--(0,1.45) node[above] {$\vec{B}$};
+\draw[vec] (O)--(1.22,0.98) node[above right=-1pt] {$\vec{E}$};
+\draw[vec] (O)--(-1.35,-1.08) node[below left=-1pt] {$\vec{v}\times\vec{B}$};
+% Right-angle marks (B perp v, B perp E, E perp v)
+\draw[guide] (0,0.28)--(0.28,0.28)--(0.28,0);
+\draw[guide] (0,0.26)--(0.22,0.44)--(0.22,0.18);
+\draw[guide] (0.28,0)--(0.48,0.16)--(0.20,0.16);
+% Small circle at origin
+\draw[fill=white] (O) circle[radius=2.2pt];
+\end{tikzpicture}%

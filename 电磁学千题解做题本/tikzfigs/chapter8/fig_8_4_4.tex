@@ -1,0 +1,43 @@
+\begin{tikzpicture}[em diagram]
+% 2x2 grid for conductor + p and superconductor + m
+% (1) Conductor, p pointing left
+\begin{scope}[shift={(-1.55,1.25)}]
+  \draw (0,-.65)--(0,.65);
+  \foreach \y in {-.55,-.30,-.05,.20,.45} {
+    \draw[guide] (0,\y)--(-.55,\y-.18);
+  }
+  \node[fill=white,inner sep=1pt,align=center] at (-.28,0) {导\\体};
+  \draw[vec] (1.05,0)--(.32,0) node[midway,above=2pt] {$\vec{p}$};
+  \node[below] at (.15,-.75) {(1)};
+\end{scope}
+% (2) Conductor, p pointing right
+\begin{scope}[shift={(1.55,1.25)}]
+  \draw (0,-.65)--(0,.65);
+  \foreach \y in {-.55,-.30,-.05,.20,.45} {
+    \draw[guide] (0,\y)--(-.55,\y-.18);
+  }
+  \node[fill=white,inner sep=1pt,align=center] at (-.28,0) {导\\体};
+  \draw[vec] (.32,0)--(1.05,0) node[midway,above=2pt] {$\vec{p}$};
+  \node[below] at (.15,-.75) {(2)};
+\end{scope}
+% (3) Superconductor, m pointing left
+\begin{scope}[shift={(-1.55,-1.15)}]
+  \draw (0,-.65)--(0,.65);
+  \foreach \y in {-.55,-.30,-.05,.20,.45} {
+    \draw[guide] (0,\y)--(-.55,\y-.18);
+  }
+  \node[fill=white,inner sep=1pt,align=center] at (-.28,0) {超\\导\\体};
+  \draw[vec] (1.05,0)--(.32,0) node[midway,above=2pt] {$\vec{m}$};
+  \node[below] at (.15,-.75) {(3)};
+\end{scope}
+% (4) Superconductor, m pointing right
+\begin{scope}[shift={(1.55,-1.15)}]
+  \draw (0,-.65)--(0,.65);
+  \foreach \y in {-.55,-.30,-.05,.20,.45} {
+    \draw[guide] (0,\y)--(-.55,\y-.18);
+  }
+  \node[fill=white,inner sep=1pt,align=center] at (-.28,0) {超\\导\\体};
+  \draw[vec] (.32,0)--(1.05,0) node[midway,above=2pt] {$\vec{m}$};
+  \node[below] at (.15,-.75) {(4)};
+\end{scope}
+\end{tikzpicture}%

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+% Left loop
+\draw (0,0)--(0,2.15)--(.56,2.15) (1.96,2.15)--(2.10,2.15)--(2.10,0)--(0,0);
+% Right loop
+\draw (2.50,0)--(2.50,2.15)--(2.64,2.15) (4.04,2.15)--(4.60,2.15)--(4.60,0)--(2.50,0);
+% Left leg: K (vertical, opens left) and cell (+ top, - bottom)
+\EMswitch[90]{0,1.52}
+\node[left=6pt] at (-.16,1.52) {$K$};
+\EMcell[270]{0,.62}
+\node[left=4pt] at (-.14,.84) {$+$};
+\node[left=4pt] at (-.14,.40) {$-$};
+\node[right=4pt] at (.22,.62) {$\varepsilon$};
+% Bottom resistors R_1 and R_2
+\EMres[below=4pt]{.60,0}{1.50,0}{R_1}
+\EMres[below=4pt]{3.10,0}{4.00,0}{R_2}
+% Top inductors L_1 and L_2 (loops bulge UP)
+\foreach \i in {0,1,2,3,4}
+  \draw (.56+.28*\i,2.15) arc[start angle=180,end angle=0,x radius=.14,y radius=.15];
+\node[above=5pt] at (1.26,2.30) {$L_1$};
+\foreach \i in {0,1,2,3,4}
+  \draw (2.64+.28*\i,2.15) arc[start angle=180,end angle=0,x radius=.14,y radius=.15];
+\node[above=5pt] at (3.34,2.30) {$L_2$};
+\node[above=5pt] at (2.30,2.30) {$M$};
+% Galvanometer G on right leg
+\EMmeter{4.60,1.08}{G}
+\node[left=4pt] at (4.29,1.08) {$R_g$};
+\end{tikzpicture}%

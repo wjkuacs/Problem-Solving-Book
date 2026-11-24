@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\def\a{1.05}
+\pgfmathsetmacro{\y}{sqrt(\R*\R-\a*\a)}
+\pgfmathsetmacro{\ang}{atan2(\y,\a)}
+% Left vertical up, top arc right, right vertical down, bottom arc left
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-\a,-\y)--(-\a,\y) node[midway,left=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-\a,\y) arc[start angle={180-\ang},end angle=\ang,radius=\R] node[midway,above=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\a,\y)--(\a,-\y) node[midway,right=2pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\a,-\y) arc[start angle=-\ang,end angle={-180+\ang},radius=\R] node[midway,below=2pt] {$I$};
+% Center O, radial arrows R, horizontal dimensions a
+\EMpoint{0,0}{above left}{O}
+\draw[vec] (0,0)--(65:\R) node[midway,above left=-1pt] {$R$};
+\draw[vec] (0,0)--(-65:\R) node[midway,below left=-1pt] {$R$};
+\draw[guide] (0,0)--(0,-0.45);
+\draw[dim] (-\a,-0.25)--(0,-0.25) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0,-0.25)--(\a,-0.25) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

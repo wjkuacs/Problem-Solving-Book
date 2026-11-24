@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (2.16,2.54);
+\draw (-1.70,0)--(1.65,0);
+\draw (-.84,0)--(P) node[pos=.45,above left] {$r_-$};
+\draw (0,0)--(P) node[pos=.56,right] {$r$};
+\draw (.84,0)--(P) node[pos=.42,right] {$r_+$};
+\node[right] at (P) {$P(r,\theta)$};
+\EMangle{0,0}{0}{49.62}{.45}{\theta}
+\EMpoint{0,0}{below}{O}
+\EMcharge{-.84,0}{below left}{-q}{-}
+\EMcharge{.84,0}{below right}{q}{+}
+\EMdim{-.84}{0}{-.67}{-.30}{l/2}
+\EMdim{0}{.84}{-.67}{-.30}{l/2}
+\end{tikzpicture}%

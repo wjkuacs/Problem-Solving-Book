@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (T) at (0.20,1.35);
+\coordinate (L) at (-0.95,-0.75);
+\coordinate (R) at (1.30,-0.35);
+\coordinate (O) at (0.18,0.08);
+\coordinate (P) at (3.65,0.08);
+% Triangle loop with current arrows (counterclockwise)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (L)--(R);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .48 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (R)--(T);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .52 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (T)--(L) node[midway,below right=1pt] {$I$};
+% Axis O -- P
+\EMpoint{O}{below}{O}
+\draw (O)--(P);
+\draw[axis] (P)--(4.55,0.08);
+\EMpoint{P}{below}{P}
+\draw[guide] (0.18,0.08)--(0.18,0.92) (3.65,0.08)--(3.65,0.92);
+\draw[dim] (0.18,0.76)--(3.65,0.76) node[midway,fill=white,inner sep=1pt] {$r$};
+% Side length dimensions (2a)
+\draw[guide] (0.20,1.35)--(-0.22,1.58) (-0.95,-0.75)--(-1.37,-0.52);
+\draw[dim] (-0.10,1.51)--(-1.25,-0.59) node[midway,fill=white,inner sep=1pt] {$2a$};
+\draw[guide] (0.20,1.35)--(0.62,1.59) (1.30,-0.35)--(1.72,-0.11);
+\draw[dim] (0.50,1.52)--(1.60,-0.18) node[pos=.30,fill=white,inner sep=1pt] {$2a$};
+\draw[guide] (-0.95,-0.75)--(-0.87,-1.21) (1.30,-0.35)--(1.38,-0.81);
+\draw[dim] (-0.89,-1.08)--(1.36,-0.68) node[midway,fill=white,inner sep=1pt] {$2a$};
+\end{tikzpicture}%

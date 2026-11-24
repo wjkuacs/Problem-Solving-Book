@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Ground plane
+\draw (-2.35,0)--(2.35,0);
+\node[above=2pt] at (-0.65,0) {地};
+\node[above=2pt] at (0.65,0) {面};
+% Vertical wire carrying I downward to origin
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,1.75)--(0,0) node[midway,left=2pt] {$I$};
+% Radial spreading arrows into the ground
+\foreach \ang in {180,196,214,234,256,284,306,326,344,360} {
+  \draw[vec] (0,0)--(\ang:1.85);
+}
+\end{tikzpicture}%

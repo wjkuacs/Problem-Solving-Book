@@ -5,6 +5,30 @@
 \usepackage{geometry}
 \geometry{left=2.2cm,right=2.2cm,top=2cm,bottom=2cm}
 \usepackage{graphicx}
+\usepackage{adjustbox}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,decorations.markings,patterns}
+\input{tikzfigs/chapter1/style.tex}
+\input{tikzfigs/chapter2/style.tex}
+\input{tikzfigs/chapter4/style.tex}
+\input{tikzfigs/chapter5/style.tex}
+\input{tikzfigs/chapter6/style.tex}
+\input{tikzfigs/chapter7/style.tex}
+\input{tikzfigs/chapter8/style.tex}
+\input{tikzfigs/chapter9/style.tex}
+\input{tikzfigs/chapter10/style.tex}
+\input{tikzfigs/chapter11/style.tex}
+\input{tikzfigs/chapter12/style.tex}
+\newcommand{\EMthirdDiagram}[1]{%
+  \adjustbox{max totalsize={.82\linewidth}{.23\textheight}}{%
+    \input{tikzfigs/chapter3/fig_#1.tex}%
+  }%
+}
+\newcommand{\EMdiagram}[1]{%
+  \adjustbox{max totalsize={.35\linewidth}{.23\textheight}}{%
+    \input{tikzfigs/chapter1/fig_#1.tex}%
+  }%
+}
 \usepackage{caption}
 \usepackage{fancyhdr}
 \setlength{\headheight}{15pt}

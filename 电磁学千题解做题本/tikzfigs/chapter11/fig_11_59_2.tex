@@ -1,0 +1,36 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.9)--(1.9,3.8)--(3.8,1.9)--(1.9,0)--cycle;
+\draw (1.9,0)--(1.9,3.8);
+\draw (0,1.9)--(0,-.50)--(1.5,-.50) (2.3,-.50)--(3.8,-.50)--(3.8,1.9);
+
+% Top-left arm: C_x and r_x
+\begin{scope}[shift={(.58,2.48)},rotate=45]
+  \draw[white,line width=2pt] (-.12,0)--(.12,0);
+  \draw (-.12,-.24)--(-.12,.24) (.12,-.24)--(.12,.24);
+  \node[above=4pt] at (0,.18) {$C_x$};
+\end{scope}
+\EMres[above=4pt]{.85,2.75}{1.80,3.70}{r_x}
+
+% Top-right arm: R_1
+\EMres[above=4pt]{1.9,3.8}{3.8,1.9}{R_1}
+
+% Bottom-left arm: C and variable r
+\begin{scope}[shift={(.58,1.32)},rotate=-45]
+  \draw[white,line width=2pt] (-.12,0)--(.12,0);
+  \draw (-.12,-.24)--(-.12,.24) (.12,-.24)--(.12,.24);
+  \node[below=4pt] at (0,-.18) {$C$};
+\end{scope}
+\EMres[below=4pt]{.85,1.05}{1.80,.10}{r}
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (.95,.62)--(1.75,.52);
+
+% Bottom-right arm: R_2
+\EMres[below=4pt]{1.9,0}{3.8,1.9}{R_2}
+
+\EMmeter{1.9,1.9}{\mathrm{G}}
+\node[right=2pt] at (1.9,2.85) {$I_g$};
+
+\draw (1.74,-.50) .. controls (1.82,-.38) and (1.90,-.38) .. (1.90,-.50)
+  .. controls (1.90,-.62) and (1.98,-.62) .. (2.06,-.50);
+\EMterm{1.5,-.50}{}{} \EMterm{2.3,-.50}{}{}
+\EMdot{0,1.9} \EMdot{3.8,1.9} \EMdot{1.9,3.8} \EMdot{1.9,0}
+\end{tikzpicture}%

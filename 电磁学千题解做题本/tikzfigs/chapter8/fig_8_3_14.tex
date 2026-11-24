@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Square iron core (outer [-1.05,1.05], inner [-0.72,0.72])
+\draw (-1.05,-1.05) rectangle (1.05,1.05);
+\draw (-.72,-.72) rectangle (.72,.72);
+% Dimension l on left
+\draw[guide] (-1.58,1.05)--(-1.05,1.05) (-1.58,-1.05)--(-1.05,-1.05);
+\draw[dim] (-1.42,-1.05)--(-1.42,1.05) node[midway,fill=white,inner sep=1pt] {$l$};
+% Coil N on right limb with terminals a and b
+\foreach \y in {.65,.43,.21,-.01,-.23,-.45,-.67} {
+  \draw (.72,\y)--(1.05,\y-.08);
+  \draw (.72,\y) arc[start angle=90,end angle=270,x radius=.05,y radius=.04];
+  \draw (1.05,\y-.08) arc[start angle=-90,end angle=90,x radius=.05,y radius=.04];
+}
+\draw (1.05,.65)--(1.55,.65) (1.05,-.75)--(1.55,-.75);
+\EMterm{1.55,.65}{right}{a}
+\EMterm{1.55,-.75}{right}{b}
+\node[right=3pt] at (1.08,-.05) {$N$};
+\end{tikzpicture}%

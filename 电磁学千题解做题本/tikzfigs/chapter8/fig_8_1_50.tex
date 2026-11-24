@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Left magnet pole N
+\draw (-2.35,.85)--(-.95,.85)--(-.95,-.35)--(-2.35,-.35);
+\draw (-2.35,.85)--(-1.85,1.22)--(-.55,1.22)--(-.95,.85);
+\draw (-.55,1.22)--(-.55,.02)--(-.95,-.35);
+\node at (-1.35,.22) {$N$};
+% Right magnet pole S
+\draw (.95,.85)--(2.35,.85) (.95,-.35)--(2.35,-.35) (.95,.85)--(.95,-.35);
+\draw (.95,.85)--(1.35,1.22)--(2.65,1.22);
+\node at (1.65,.22) {$S$};
+% Magnetic field arrows from N to S
+\draw[vec] (-.62,.62)--(.82,.62);
+\draw[vec] (-.62,.36)--(.82,.36);
+\draw[vec] (-.62,.10)--(.82,.10);
+% Rotating rectangular coil on tilted axis OO'
+\draw[axis] (-.75,-1.18)--(1.05,1.28);
+\node[below left] at (-.75,-1.18) {$O$};
+\node[above right] at (1.05,1.28) {$O'$};
+\draw[vec] (.68,1.02) arc[start angle=160,end angle=380,x radius=.18,y radius=.07];
+\node[right=2pt] at (.95,.95) {$\omega$};
+% Coil loop and shaft leads
+\draw[line width=.75pt] (-.18,.15)--(.22,.62)--(.65,.42)--(.28,-.05)--(-.08,-.55);
+\draw[line width=.75pt] (.08,.05)--(-.05,-.08)--(-.42,-.58);
+\end{tikzpicture}%

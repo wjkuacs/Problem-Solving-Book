@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.22}
+\draw (0,0) circle[radius=\R];
+% Vertical rotation axis AB
+\draw[axis] (0,-\R-.35)--(0,\R+.52);
+\node[above left=1pt] at (-.05,\R) {$A$};
+\node[below left=1pt] at (-.05,-\R) {$B$};
+\node[left] at (-\R,0) {$C$};
+% Rotation arrow omega
+\draw[vec] (-.22,\R+.32) arc[start angle=160,end angle=380,x radius=.22,y radius=.08];
+\node[right=2pt] at (.22,\R+.35) {$\omega$};
+% Radius a
+\draw[vec] (0,0)--(34:\R) node[midway,below right=-1pt] {$a$};
+% Small bar magnet at center (N top, S bottom)
+\draw[fill=white] (-.06,-.24) rectangle (.06,.24);
+\draw (0,0) -- (.06,0);
+\node[left=1pt] at (-.06,.16) {$N$};
+\node[left=1pt] at (-.06,-.16) {$S$};
+\end{tikzpicture}%

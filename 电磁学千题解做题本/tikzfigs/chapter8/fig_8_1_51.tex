@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{1.28}
+\def\ry{.42}
+\def\h{.16}
+% Disk body
+\draw (-\rx,0)--(-\rx,-\h) arc[start angle=180,end angle=360,x radius=\rx,y radius=\ry]--(\rx,0);
+\draw[fill=white] (0,0) ellipse[x radius=\rx,y radius=\ry];
+\node[right] at (.02,-.06) {$O$};
+% Vertical axis and omega
+\draw[axis] (0,0)--(0,1.28);
+\draw[axis] (0,-\ry-\h)--(0,-1.05);
+\draw[vec] (-.22,1.08) arc[start angle=160,end angle=380,x radius=.22,y radius=.08];
+\node[right=2pt] at (.22,1.10) {$\omega$};
+% Radius R
+\draw[vec] (0,0)--(-1.05,-.22) node[midway,below right=-2pt] {$R$};
+% Upward B arrows passing through disk
+\foreach \x in {-.85,-.45,.45,.85} {
+  \draw[vec] (\x,-.75)--(\x,-.48);
+  \draw[vec] (\x,.15)--(\x,.82);
+}
+\node[right] at (.85,.58) {$\vec{B}$};
+\end{tikzpicture}%

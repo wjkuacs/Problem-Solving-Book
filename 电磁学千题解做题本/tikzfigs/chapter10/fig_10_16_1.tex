@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,2.25)--(4.35,2.25)--(4.35,0)--(0,0);
+\draw (2.65,2.25)--(2.65,1.68) (2.65,.56)--(2.65,0);
+% Left leg: switch K (vertical, opens left) and cell (+ top, - bottom)
+\EMswitch[90]{0,1.62}
+\node[left=6pt] at (-.16,1.62) {$K$};
+\EMcell[270]{0,.68}
+\node[left=4pt] at (-.14,.90) {$+$};
+\node[left=4pt] at (-.14,.46) {$-$};
+\node[right=4pt] at (.22,.68) {$\varepsilon$};
+% Top R_1
+\EMres{.90,2.25}{1.80,2.25}{R_1}
+% Middle vertical L
+\foreach \i in {0,1,2,3}
+  \draw (2.65,.56+.28*\i+.28) arc[start angle=90,end angle=270,x radius=.15,y radius=.14];
+\node[right=3pt] at (2.68,1.12) {$L$};
+% Right vertical R_2
+\EMres{4.35,.65}{4.35,1.60}{}
+\node[right=5pt] at (4.35,1.12) {$R_2$};
+\end{tikzpicture}%

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Ceiling with hatch
+\draw (-1.45,.95)--(1.45,.95);
+\foreach \x in {-1.25,-.90,-.55,-.20,.15,.50,.85,1.20} {
+  \draw[guide] (\x,.95)--(\x+.22,1.18);
+}
+% Pivot a and swinging rod ab
+\draw[line width=.8pt] (0,.82)--(-.92,-.85);
+\EMterm{0,.82}{right}{a}
+\node[below left] at (-.92,-.85) {$b$};
+% Crosses for B into page
+\foreach \x/\y in {-1.10/.48, 1.05/.48, -1.10/-.48, .25/-.48, 1.05/-.48} {
+  \node at (\x,\y) {$\times$};
+}
+\node at (.55,-.05) {$\vec{B}$ 向内};
+\end{tikzpicture}%

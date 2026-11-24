@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.35}
+% Crosses for B into page
+\foreach \x/\y in {-1.25/.95, -.42/.95, .42/.95, 1.25/.95,
+                   -1.45/.25, -.45/.25, .45/.25, 1.45/.25,
+                   -1.45/-.45, -.45/-.45, .45/-.45, 1.45/-.45} {
+  \node at (\x,\y) {$\times$};
+}
+\node[above] at (-1.05,1.22) {$\vec{B}$ 向内};
+% Semicircle acb
+\draw[line width=.8pt] (\R,0) arc[start angle=0,end angle=180,radius=\R];
+\draw[aux] (-\R,0)--(\R,0);
+\node[below left] at (-\R,0) {$a$};
+\node[below right] at (\R,0) {$b$};
+\node[above] at (0,\R) {$c$};
+% Radius dimension R
+\draw[guide] (-\R,0)--(-\R,-.55) (0,0)--(0,-.55);
+\draw[dim] (-\R,-.42)--(0,-.42) node[midway,fill=white,inner sep=1pt] {$R$};
+% Velocity vector at 45 degrees
+\draw[aux] (0,0)--(45:\R);
+\draw[vec] (45:\R)--(45:{\R+.85}) node[above right] {$\vec{v}$};
+\draw[guide] (.45,0) arc[start angle=0,end angle=45,radius=.45];
+\node at (.68,.25) {$45^\circ$};
+\end{tikzpicture}%

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (-1.55,-1.55)--(-1.55,-1.15) (-1.55,1.15)--(-1.55,1.55);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.55,-1.15)--(-1.55,1.15) node[midway,left=2pt] {$I_1$};
+% Equilateral triangle ABC of side a, center O at distance b from wire
+\coordinate (A) at (-0.28,-1.05);
+\coordinate (B) at (-0.28,1.05);
+\coordinate (C) at (1.54,0);
+\coordinate (O) at (0.33,0);
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (A)--(B) node[midway,right=2pt] {$I_2$};
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (B)--(C) node[midway,above right=-1pt] {$a$};
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (C)--(A) node[midway,below right=-1pt] {$a$};
+\node[below=1pt] at (A) {$A$};
+\node[above=1pt] at (B) {$B$};
+\node[right=1pt] at (C) {$C$};
+% Center O and distance b
+\EMpoint{O}{below right}{O}
+\draw[guide] (O)--(0.33,0.42);
+\draw[dim] (-1.55,0.22)--(0.33,0.22) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

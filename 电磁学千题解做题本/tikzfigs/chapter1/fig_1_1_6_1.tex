@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,3.25) -- (2.65,3.25) -- (2.65,-.27);
+\foreach \x in {.12,.42,...,2.52} \draw[guide] (\x,3.25) -- ++(.18,.18);
+\foreach \y in {0,.3,...,3.0} \draw[guide] (2.65,\y) -- ++(.18,.18);
+\draw (2.65,3.25) -- (2.56,.28) node[midway,left] {$l$};
+\draw (2.65,3.25) -- (.80,.93) node[midway,left] {$l$};
+\EMball{.80,.93}{left}{A}
+\EMball{2.56,.28}{left}{B}
+\begin{scope}[shift={(.80,.93)},rotate=-20.27]
+  \EMdim{0}{1.88}{-.42}{0}{x}
+\end{scope}
+\node[align=center,anchor=west] at (2.80,1.65) {绝\\缘\\墙};
+\end{tikzpicture}%

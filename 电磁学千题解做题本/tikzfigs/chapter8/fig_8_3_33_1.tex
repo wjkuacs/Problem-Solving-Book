@@ -1,0 +1,8 @@
+\begin{tikzpicture}[em diagram]
+% Vertical dashed wire and circular coil of radius a at distance l
+\draw[axis] (-1.55,-1.35)--(-1.55,1.35);
+\draw[line width=.75pt] (.45,0) circle[radius=1.02];
+\draw[vec] (.45,0)--({.45+1.02*cos(35)},{1.02*sin(35)}) node[midway,above left=-1pt] {$a$};
+\draw[guide] (.45,0)--(.45,-1.08);
+\draw[dim] (-1.55,-.72)--(.45,-.72) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

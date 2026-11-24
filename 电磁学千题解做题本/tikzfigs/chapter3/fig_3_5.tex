@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\draw[guide,densely dotted] (-.70,0)--(-.16,0) (6.76,0)--(7.31,0);
+\foreach \x/\lab/\sign in {0/{-q}/-,1.1/q/+,2.2/{-q}/-,3.3/q/+,4.4/{-q}/-,5.5/q/+,6.6/{-q}/-} {
+  \EMcharge{\x,0}{above}{\lab}{\sign}
+}
+\foreach \leftEdge in {0,1.1,2.2,3.3,4.4,5.5} {
+  \pgfmathsetmacro{\rightEdge}{\leftEdge+1.1}
+  \EMdim{\leftEdge}{\rightEdge}{-.60}{-.17}{a}
+}
+\end{tikzpicture}%

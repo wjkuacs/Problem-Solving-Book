@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=1.70];
+\coordinate (A) at (63:1.70);
+\draw (0,0)--(A) node[midway,above left] {$R$} node[above right] {$A$};
+\draw (A)--(1.05,0);
+\draw[aux] (A)--(.772,0);
+\draw[guide] (.772,.14)--(.63,.14)--(.63,0);
+\draw[vec] (0,0)--(2.45,0) node[right] {$\boldsymbol a$};
+\node[below left] at (0,0) {$O$};
+\node[above right] at (1.05,0) {$P$};
+\EMangle{0,0}{0}{63}{.40}{\theta}
+\EMdim{0}{1.05}{-.49}{-.28}{r}
+\node[above] at (0,1.87) {$\sigma=\boldsymbol a\cdot\boldsymbol R$};
+\foreach \ang in {-70,-50,-30,-10,10,30,50,70}
+  \node at (\ang:1.85) {$+$};
+\foreach \ang in {111,132,153,174,195,216,237,258}
+  \node at (\ang:1.85) {$-$};
+\end{tikzpicture}%

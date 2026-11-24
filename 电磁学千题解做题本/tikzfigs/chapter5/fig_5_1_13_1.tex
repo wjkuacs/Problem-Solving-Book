@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\begin{scope}[rotate=42]
+  \def\R{1.05}
+  % Straight wire coming from bottom-left, semicircle bulging up-left, continuing up-right
+  \draw[axis] (-2.55,0)--(-2.05,0);
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-2.05,0)--(-\R,0) node[midway,below right=1pt] {$I$};
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-\R,0) arc[start angle=180,end angle=0,x radius=\R,y radius=0.88] node[midway,above left=2pt] {$I$};
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\R,0)--(2.05,0) node[midway,below right=1pt] {$I$};
+  \draw[axis] (2.05,0)--(2.55,0);
+  % Dashed diameter and radii R
+  \draw[aux] (-\R,0)--(\R,0);
+  \EMpoint{0,0}{above left}{O}
+  \node[below right=0pt] at ({-\R/2},0) {$R$};
+  \node[below right=0pt] at ({\R/2},0) {$R$};
+  % Axis down-right to P
+  \draw[axis] (0,0)--(0,-2.15);
+  \EMpoint{0,-1.75}{below right}{P}
+  \draw[guide] (0,0)--(0.55,0) (0,-1.75)--(0.55,-1.75);
+  \draw[dim] (0.40,0)--(0.40,-1.75) node[midway,fill=white,inner sep=1pt] {$r$};
+\end{scope}
+\end{tikzpicture}%

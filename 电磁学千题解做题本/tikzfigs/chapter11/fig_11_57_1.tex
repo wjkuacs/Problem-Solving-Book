@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+% Back half of conducting ring (behind right limb of toroid)
+\draw (1.55,1.25) arc[start angle=180,end angle=0,x radius=1.35,y radius=.45];
+
+% Toroidal iron core (white-filled annulus)
+\fill[white,even odd rule] (1.9,1.2) circle[radius=.95] (1.9,1.2) circle[radius=.62];
+\draw (1.9,1.2) circle[radius=.95] (1.9,1.2) circle[radius=.62];
+
+% Primary winding on left limb + AC terminals
+\draw (0,1.56)--(1.41,1.56) (0,.75)--(1.05,.75);
+\foreach \a in {152,166,180,194,208} {
+  \draw[line width=.65pt] ({1.9+.95*cos(\a)},{1.2+.95*sin(\a)})
+    to[bend left=18] ({1.9+.62*cos(\a-8)},{1.2+.62*sin(\a-8)});
+}
+\draw (-.15,1.155) .. controls (-.075,1.27) and (0,1.27) .. (0,1.155)
+  .. controls (0,1.04) and (.075,1.04) .. (.15,1.155);
+\EMterm{0,1.56}{}{} \EMterm{0,.75}{}{}
+\node[left=4pt] at (-.10,1.155) {$\mathcal{E}$};
+
+% Front half of conducting ring
+\draw (1.55,1.25) arc[start angle=180,end angle=360,x radius=1.35,y radius=.45];
+
+% Galvanometer G connected in front of toroid
+\draw (1.55,1.25) .. controls (1.47,.60) and (1.85,-.15) .. (2.15,-.35);
+\draw (3.45,.84) .. controls (3.25,.25) and (2.95,-.15) .. (2.75,-.35);
+\EMmeter{2.45,-.35}{\mathrm{G}}
+\EMpoint{1.55,1.25}{right}{a}
+\EMpoint{3.45,.84}{below right}{b}
+\end{tikzpicture}%

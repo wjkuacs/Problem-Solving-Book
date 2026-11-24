@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw[metal] (-.28,0) rectangle (0,2.42);
+\draw[metal] (3.60,0) rectangle (3.88,2.42);
+\draw[dielectric] (1.20,0) rectangle (2.40,2.42);
+\node[above] at (-.14,2.42) {$A$};
+\node[above] at (3.74,2.42) {$B$};
+\node at (.56,1.21) {$-\sigma$};
+\node at (3.10,1.21) {$\sigma$};
+\node at (1.80,1.21) {$\varepsilon_r$};
+\draw[vec] (-.52,-.40)--(4.51,-.40) node[above] {$x$} node[below] {$(\mathrm{cm})$};
+\foreach \i in {0,1,2,3}
+  \draw (1.2*\i,-.16)--(1.2*\i,-.40) node[below] {$\i$};
+\end{tikzpicture}%

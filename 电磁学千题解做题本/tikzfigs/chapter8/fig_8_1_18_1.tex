@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% B into page crosses
+\foreach \x in {-.90,0,.90} {
+  \foreach \y in {-.90,0,.90} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+% Rectangular loop
+\draw (-.52,-.82) rectangle (.52,.82);
+% Vertical rotation axis
+\draw[axis] (0,-1.28)--(0,1.38);
+\draw[vec] (-.22,1.25) arc[start angle=160,end angle=380,x radius=.24,y radius=.09];
+\end{tikzpicture}%

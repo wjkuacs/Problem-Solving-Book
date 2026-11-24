@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+% Curved scale at top
+\draw (142:2.25) arc[start angle=142,end angle=38,radius=2.25];
+\foreach \ang in {40,46,...,140} {
+  \draw[guide] (\ang:2.25)--(\ang:2.13);
+}
+\foreach \ang in {50,70,90,110,130} {
+  \draw (\ang:2.25)--(\ang:2.05);
+}
+% Concave N and S poles
+\draw (-1.95,0.72)--(-1.12,0.72) arc[start angle=140,end angle=220,radius=1.12]--(-1.95,-0.72);
+\node at (-1.52,0) {$\mathrm{N}$};
+\draw (1.95,0.72)--(1.12,0.72) arc[start angle=40,end angle=-40,radius=1.12]--(1.95,-0.72);
+\node at (1.52,0) {$\mathrm{S}$};
+% Radial magnetic field arrows in air gaps
+\foreach \ang in {148,164,180,196,212} {
+  \draw[vec] (\ang:1.08)--(\ang:0.74);
+}
+\foreach \ang in {-32,-16,0,16,32} {
+  \draw[vec] (\ang:0.74)--(\ang:1.08);
+}
+% Circular soft iron core
+\draw[fill=white] (0,0) circle[radius=0.72];
+\node[below=5pt,font=\footnotesize] at (0,-0.06) {铁心};
+% Tilted coil bar across iron core (from 215 deg to 35 deg)
+\draw[line width=2.8pt] (215:0.78)--(35:0.78);
+\draw[guide] (48:0.72)--(65:1.15) node[above right=-1pt] {线圈};
+% Pointer from center toward 125 deg
+\draw[line width=1.1pt] (-55:0.28)--(125:2.05);
+\fill (0,0) circle[radius=2.0pt];
+\node[left=2pt] at (125:1.35) {指针};
+\end{tikzpicture}%

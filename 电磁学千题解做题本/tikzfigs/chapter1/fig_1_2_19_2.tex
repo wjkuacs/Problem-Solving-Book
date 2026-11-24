@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (2.30,0) arc[start angle=0,end angle=180,radius=2.30];
+\draw[aux] (-2.30,0)--(2.30,0);
+\coordinate (B) at (53:2.30);
+\draw (0,0)--(B) node[midway,above left] {$R$} node[above right] {$B$};
+\draw (.91,0)--(B) node[midway,right] {$x$};
+\draw (0,0)--(.91,0) node[midway,below] {$r$};
+\node[above] at (-1.05,2.01) {$\lambda$};
+\node[below left] at (-2.30,0) {$A$};
+\node[below right] at (2.30,0) {$C$};
+\node[below left] at (0,0) {$O$};
+\node[below] at (.91,0) {$D$};
+\EMangle{0,0}{0}{53}{.40}{\theta}
+\EMangle{.91,0}{0}{75.51}{.42}{\alpha}
+\end{tikzpicture}%

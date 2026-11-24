@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+% Ceiling and suspension fiber
+\draw (-.45,1.55)--(.45,1.55);
+\foreach \x in {-.35,-.15,.05,.25} { \draw[guide] (\x,1.55)--(\x+.15,1.72); }
+\draw (0,1.55)--(0,.72);
+\draw[vec] (-.20,1.22) arc[start angle=160,end angle=380,x radius=.20,y radius=.07];
+\node[right=2pt] at (.22,1.24) {$\omega$};
+% Magnet poles S (left) and N (right)
+\draw (-2.05,.82)--(-.92,.82) .. controls (-.78,.45) and (-.78,-.25) .. (-.92,-.55)--(-2.05,-.55);
+\node at (-1.35,.15) {$S$};
+\draw (2.05,.82)--(.92,.82) .. controls (.78,.45) and (.78,-.25) .. (.92,-.55)--(2.05,-.55);
+\node at (1.35,.15) {$N$};
+% Inner cylindrical core and rectangular coil
+\draw (-.42,.52)--(-.42,-.28) arc[start angle=180,end angle=360,x radius=.42,y radius=.14]--(.42,.52);
+\draw (0,.52) ellipse[x radius=.42,y radius=.14];
+\draw[line width=.75pt] (-.55,-.35)--(-.55,.62)--(.55,.72)--(.55,-.25)--(.12,-.30)--(.12,-.95);
+\draw[line width=.75pt] (-.12,-.35)--(-.12,-.95);
+% Current arrows and terminals a, b
+\draw[vec] (-.12,-.52)--(-.12,-.85);
+\draw[vec] (.12,-.85)--(.12,-.52) node[right] {$I$};
+\EMterm{-.12,-1.08}{left}{a}
+\EMterm{.12,-1.08}{right}{b}
+% External circuit with R and battery
+\draw (-.12,-1.08)--(-1.10,-1.08)--(-1.10,-1.55)--(-.92,-1.55);
+\EMres{-.92,-1.55}{-.18,-1.55}{}
+\node[below=4pt] at (-.55,-1.55) {$R$};
+\draw (-.18,-1.55)--(.12,-1.55);
+\draw (.12,-1.44)--(.12,-1.66) (.30,-1.35)--(.30,-1.75);
+\node[above left=1pt] at (.12,-1.42) {$-$};
+\node[above right=1pt] at (.30,-1.35) {$+$};
+\draw (.30,-1.55)--(1.10,-1.55)--(1.10,-1.08)--(.12,-1.08);
+\end{tikzpicture}%

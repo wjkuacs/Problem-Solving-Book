@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Long straight wire I on left
+\draw[axis] (-1.25,-1.15)--(-1.25,-.85);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.25,-.85)--(-1.25,.85);
+\draw[axis] (-1.25,.85)--(-1.25,1.15);
+\node[left] at (-1.25,0) {$I$};
+% Airplane flying left (toward wire), wings b (top) and a (bottom)
+\draw[fill=black!80] (-.25,-.04)--(.62,-.04)--(.62,.04)--(-.25,.04)--(-.45,0)--cycle;
+\draw[fill=black!80] (.03,.04)--(-.01,.78)--(.09,.78)--(.25,.04)--cycle;
+\draw[fill=black!80] (.03,-.04)--(-.01,-.78)--(.09,-.78)--(.25,-.04)--cycle;
+\draw[fill=black!80] (.48,.04)--(.52,.24)--(.59,.24)--(.59,.04)--cycle;
+\draw[fill=black!80] (.48,-.04)--(.52,-.24)--(.59,-.24)--(.59,-.04)--cycle;
+\node[above] at (.04,.80) {$b$};
+\node[below] at (.04,-.80) {$a$};
+% Velocity arrow v left and distance r
+\draw[vec] (-.45,0)--(-1.05,0) node[above] {$\vec{v}$};
+\draw[guide] (.04,-.35)--(.04,-.55);
+\draw[dim] (-1.25,-.45)--(.04,-.45) node[midway,fill=white,inner sep=1pt] {$r$};
+\end{tikzpicture}%

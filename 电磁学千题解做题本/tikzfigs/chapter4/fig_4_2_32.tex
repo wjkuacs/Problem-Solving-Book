@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (T) at (7.01,1.58);
+\coordinate (B) at (7.01,-1.58);
+\coordinate (R) at (9.08,0);
+\draw (0,-.37)--(0,.37)--(4.55,.37)--(T)
+ (0,-.37)--(4.55,-.37) (T)--(B);
+\EMres{T}{R}{R}
+\EMres[below=4pt]{B}{R}{R}
+\EMres[below=4pt]{4.55,-.37}{B}{r}
+\draw[vec] (5.22,-1.23)--(5.86,-.48);
+\EMmeter{7.01,0}{G}
+\draw (R)--(9.72,0)--(9.72,-1.53) (3.02,-.37)--(3.02,-.73);
+\EMcell[270]{9.72,-.75}
+\EMground{9.72,-1.53}
+\EMground{3.02,-.73}
+\node[right] at (9.72,-.75) {$\varepsilon$};
+\EMdim{0}{4.55}{1.01}{.42}{50\,\mathrm{km}}
+\EMdim{3.02}{4.55}{-1.43}{-1.21}{x}
+\node at (2.17,0) {电话线};
+\node[left] at (0,0) {乙站};
+\node[right] at (4.55,0) {甲站};
+\foreach \x in {0,4.55} { \EMterm{\x,.37}{}{} { \EMterm{\x,-.37}{}{} } }
+\end{tikzpicture}%

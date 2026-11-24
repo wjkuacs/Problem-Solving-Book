@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw[dielectric] (0,-.88) rectangle (4.83,.88);
+\draw (0,-.16)--(4.83,-.16);
+\EMplate{0}{4.83}{.98}
+\EMplate{0}{4.83}{-.98}
+\node[above] at (2.42,1.08) {$Q$};
+\node[below] at (2.42,-1.08) {$-Q$};
+\node at (2.42,.41) {$\varepsilon_1$};
+\node at (2.42,-.52) {$\varepsilon_2$};
+\EMdimY{-.43}{-.16}{.88}{d_1}
+\EMdimY{-.43}{-.88}{-.16}{d_2}
+\end{tikzpicture}%

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Long straight wire I
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .68 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.25,-1.25)--(-1.25,1.25);
+\node[left] at (-1.25,.55) {$I$};
+% Rectangular coil ABCD
+\draw[line width=.75pt] (-.45,-.82) rectangle (.55,.82);
+\node[above left] at (-.45,.82) {$A$};
+\node[above right] at (.55,.82) {$B$};
+\node[below right] at (.55,-.82) {$C$};
+\node[below left] at (-.45,-.82) {$D$};
+% Dimensions a, b, l
+\draw[dim] (-1.25,.25)--(-.45,.25) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[guide] (.55,-.82)--(.55,-1.28);
+\draw[dim] (-1.25,-1.14)--(.55,-1.14) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (.55,.82)--(.98,.82) (.55,-.82)--(.98,-.82);
+\draw[dim] (.84,-.82)--(.84,.82) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

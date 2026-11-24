@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Top N pole and bottom S pole
+\fill[pattern=north east lines,pattern color=black!62] (-2.10,1.05) rectangle (2.10,1.68);
+\draw (-2.10,1.68)--(-2.10,1.05)--(2.10,1.05)--(2.10,1.68);
+\node[fill=white,inner sep=2pt] at (0,1.36) {$\mathrm{N}$};
+\fill[pattern=north east lines,pattern color=black!62] (-2.10,-1.68) rectangle (2.10,-1.05);
+\draw (-2.10,-1.68)--(-2.10,-1.05)--(2.10,-1.05)--(2.10,-1.68);
+\node[fill=white,inner sep=2pt] at (0,-1.36) {$\mathrm{S}$};
+% Uniform magnetic field lines
+\foreach \x in {-2.10,-1.50,-0.90,-0.30,0.30,0.90,1.50,2.10} {
+  \draw[vec] (\x,1.05)--(\x,-1.05);
+}
+\end{tikzpicture}%

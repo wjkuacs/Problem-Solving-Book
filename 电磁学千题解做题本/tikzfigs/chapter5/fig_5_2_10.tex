@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\foreach \xs/\lbl in {0/\vec{k}_1, 2.35/\vec{k}_2} {
+  \begin{scope}[shift={(\xs,0)}]
+    \draw (0,0)--(1.40,0.65) (0,2.05)--(1.40,2.70);
+    \foreach \t in {0,0.25,0.5,0.75,1.0} {
+      \draw[vec] ({1.40*\t},{0.65*\t})--({1.40*\t},{2.05+0.65*\t});
+    }
+    \node[above=2pt] at (0.65,2.38) {$\lbl$};
+  \end{scope}
+}
+\end{tikzpicture}%

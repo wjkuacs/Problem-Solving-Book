@@ -1,0 +1,47 @@
+\begin{tikzpicture}[em diagram]
+% (i) I 减小
+\begin{scope}[shift={(-3.95,0)}]
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.45,0)--(-0.75,0);
+  \node[below] at (-1.10,-0.06) {$I$};
+  \foreach \x in {-0.75,-0.45,-0.15,0.15,0.45} {
+    \draw (\x,0) arc[start angle=180,end angle=360,x radius=.15,y radius=.12];
+  }
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (0.75,0)--(1.45,0);
+  \node[below] at (1.10,-0.06) {$I$};
+  \node[above] at (-0.75,0.06) {$-$};
+  \node[above] at (0.75,0.06) {$+$};
+  \node[above] at (0,0.14) {$\varepsilon_L$};
+  \node at (0,-0.70) {(i) $I$ 减小};
+\end{scope}
+% (ii) I 不变
+\begin{scope}[shift={(0,0)}]
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.45,0)--(-0.75,0);
+  \node[below] at (-1.10,-0.06) {$I$};
+  \foreach \x in {-0.75,-0.45,-0.15,0.15,0.45} {
+    \draw (\x,0) arc[start angle=180,end angle=360,x radius=.15,y radius=.12];
+  }
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (0.75,0)--(1.45,0);
+  \node[below] at (1.10,-0.06) {$I$};
+  \node at (0,-0.70) {(ii) $I$ 不变};
+\end{scope}
+% (iii) I 增大
+\begin{scope}[shift={(3.95,0)}]
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.45,0)--(-0.75,0);
+  \node[below] at (-1.10,-0.06) {$I$};
+  \foreach \x in {-0.75,-0.45,-0.15,0.15,0.45} {
+    \draw (\x,0) arc[start angle=180,end angle=360,x radius=.15,y radius=.12];
+  }
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (0.75,0)--(1.45,0);
+  \node[below] at (1.10,-0.06) {$I$};
+  \node[above] at (-0.75,0.06) {$+$};
+  \node[above] at (0.75,0.06) {$-$};
+  \node[above] at (0,0.14) {$\varepsilon_L$};
+  \node at (0,-0.70) {(iii) $I$ 增大};
+\end{scope}
+\end{tikzpicture}%

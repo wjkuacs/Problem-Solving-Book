@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) rectangle (4.20,1.58);
+\draw (2.10,0)--(2.10,1.58);
+\foreach \x/\i/\side/\labelX in {0/1/left/-.30,2.10/2/right/2.40,4.20/3/right/4.50} {
+  \EMcell[270]{\x,.74}
+  \node[\side] at (\labelX,.74) {$\varepsilon_{\i},r_{\i}$};
+}
+\EMdot{2.10,0}
+\EMdot{2.10,1.58}
+\end{tikzpicture}%

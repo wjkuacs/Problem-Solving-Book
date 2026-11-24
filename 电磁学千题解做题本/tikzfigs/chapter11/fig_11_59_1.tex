@@ -1,0 +1,44 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.6)--(2.5,3.1)--(5.0,.6)--cycle;
+\draw (2.5,3.1)--(2.5,1.02);
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (2.5,1.02)--(2.5,.71);
+\draw (0,.6)--(0,-.25)--(2.1,-.25) (2.9,-.25)--(5.0,-.25)--(5.0,.6);
+
+% Left arm: r_x and L_x
+\EMres[above=4pt]{.2,.8}{1.35,1.95}{r_x}
+\begin{scope}[shift={(1.82,2.42)},rotate=45]
+  \draw[white,line width=2pt] (-.40,0)--(.40,0);
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+  \node[above=4pt] at (0,.10) {$L_x$};
+\end{scope}
+
+% Right arm: L and variable r
+\begin{scope}[shift={(3.18,2.42)},rotate=-45]
+  \draw[white,line width=2pt] (-.40,0)--(.40,0);
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+  \node[above=4pt] at (0,.10) {$L$};
+\end{scope}
+\EMres[above=4pt]{3.65,1.95}{4.8,.8}{r}
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (3.92,1.10)--(4.48,1.70);
+
+% Bottom potentiometer resistor R_1 R_2
+\EMres{1.7,.6}{3.3,.6}{}
+\node[below=5pt] at (2.05,.6) {$R_1$};
+\node[below=5pt] at (2.95,.6) {$R_2$};
+
+% Galvanometer G and I_g
+\EMmeter{2.5,1.72}{\mathrm{G}}
+\node[right=3pt] at (2.5,2.35) {$I_g$};
+
+% AC terminals
+\draw (2.34,-.25) .. controls (2.42,-.13) and (2.50,-.13) .. (2.50,-.25)
+  .. controls (2.50,-.37) and (2.58,-.37) .. (2.66,-.25);
+\EMterm{2.1,-.25}{}{} \EMterm{2.9,-.25}{}{}
+\EMdot{0,.6} \EMdot{5.0,.6} \EMdot{2.5,3.1}
+\end{tikzpicture}%

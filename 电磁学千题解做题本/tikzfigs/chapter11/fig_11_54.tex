@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,3.2)--(2.0,3.2)--(2.0,2.85)
+      (0,0)--(4.0,0) (2.0,0)--(2.0,.35) (2.0,1.45)--(2.0,1.75) (2.0,1.60)--(4.0,1.60);
+\draw (1.35,1.75) rectangle (2.65,2.85);
+\draw (1.35,.35) rectangle (2.65,1.45);
+
+\EMres[above=4pt]{1.35,1.75}{1.35,2.85}{R_1}
+\begin{scope}[shift={(2.65,2.30)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.25,-.13)--(.25,-.13) (-.25,.13)--(.25,.13);
+  \node[right] at (.26,0) {$C_1$};
+\end{scope}
+
+\EMres[above=4pt]{1.35,.35}{1.35,1.45}{R_2}
+\begin{scope}[shift={(2.65,.90)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.25,-.13)--(.25,-.13) (-.25,.13)--(.25,.13);
+  \node[right] at (.26,0) {$C_2$};
+\end{scope}
+
+\EMdot{2.0,2.85} \EMdot{2.0,1.75} \EMdot{2.0,1.60} \EMdot{2.0,1.45} \EMdot{2.0,.35} \EMdot{2.0,0}
+\EMterm{0,3.2}{}{} \EMterm{0,0}{}{}
+\EMterm{4.0,1.60}{}{} \EMterm{4.0,0}{}{}
+\node at (0,1.60) {$U_1$};
+\node at (4.0,.80) {$U_2$};
+\end{tikzpicture}%

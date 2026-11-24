@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+\def\a{0.75}
+% Parabola x = y^2 / (4*a), y in [-1.85, 2.10]
+\draw[smooth,samples=120,domain=-1.85:2.10] plot ({\x*\x/(4*\a)},{\x});
+% Current arrows along upper and lower branches
+\draw[vec] (1.35,1.72)--(1.05,1.52);
+\node[above left=-1pt] at (1.18,1.62) {$I\mathrm{d}l$};
+\draw[vec] (1.05,-1.52)--(1.35,-1.72) node[midway,below left=-1pt] {$I$};
+% Axis and focus F=(a,0)
+\draw (-0.55,0)--(2.85,0);
+\node[below right] at (\a,0) {$F$};
+% Segment from F to point Q=(1.35, 1.72) and angle theta
+\draw (\a,0)--(1.35,1.72);
+\draw[aux] (1.35,1.72)--(1.65,1.98);
+\draw[guide] ({\a+0.38},0) arc[start angle=0,end angle=70,radius=0.38];
+\node at ({\a+0.50},0.28) {$\theta$};
+% Angle phi and perpendicular projection I(dl)sin(phi)
+\draw[guide] (1.16,1.59) arc[start angle=214,end angle=250,radius=0.25];
+\node[left=1pt] at (1.04,1.38) {$\varphi$};
+\draw[aux] (1.05,1.52)--(1.24,1.48);
+\node[above right=1pt] at (1.42,1.88) {$I(\mathrm{d}l)\sin\varphi$};
+% Dimension a at bottom
+\draw[guide] (0,0)--(0,-0.78) (\a,0)--(\a,-0.78);
+\draw[dim] (0,-0.62)--(\a,-0.62) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

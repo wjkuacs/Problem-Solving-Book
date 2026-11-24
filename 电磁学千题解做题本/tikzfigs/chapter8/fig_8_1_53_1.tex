@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.32}
+\draw (0,0) circle[radius=\R];
+% Orthogonal radii OP and OQ
+\draw (0,0)--(-\R,0) node[midway,above] {$a$};
+\draw (0,0)--(0,-\R) node[midway,right] {$a$};
+\node[above right] at (0,0) {$O$};
+\node[left] at (-\R,0) {$P$};
+\node[below] at (0,-\R) {$Q$};
+% Crosses for B into page
+\foreach \x/\y in {-.52/.65, .35/.72, -.52/-.52, .45/-.52} {
+  \node at (\x,\y) {$\times$};
+}
+\node[align=center] at (.72,.08) {$\vec{B}$\\向内};
+\end{tikzpicture}%

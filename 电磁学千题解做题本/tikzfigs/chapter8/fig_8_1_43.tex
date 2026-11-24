@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.28}
+\draw (0,0) circle[radius=\R];
+% Center O, spoke, and radius R
+\EMpoint{0,0}{above}{$O$}
+\draw (0,0)--(335:\R) node[midway,above right=-1pt] {$R$};
+\draw[line width=.9pt] (0,0)--(212:\R);
+% Rotation arrow omega (CW)
+\draw[vec] (78:{\R+.18}) arc[start angle=78,end angle=38,radius={\R+.18}];
+\node[above right] at (45:{\R+.18}) {$\omega$};
+% Brushes and leads to terminals a and b
+\draw (0,0)--(-1.52,-.55)--(-1.22,-1.18);
+\draw[fill=black!40] (-.14,-1.28) rectangle (.14,-1.38);
+\draw (0,-1.38)--(0,-1.65)--(-1.22,-1.65)--(-1.22,-1.42);
+\EMterm{-1.22,-1.18}{right}{a}
+\EMterm{-1.22,-1.42}{right}{b}
+% Out-of-page B marks
+\foreach \x/\y in {0/.62, -.55/.12, .35/-.42} {
+  \begin{scope}[shift={(\x,\y)}]
+    \draw (0,0) circle[radius=2.4pt];
+    \fill (0,0) circle[radius=.8pt];
+  \end{scope}
+}
+\node[below right=1pt] at (.38,-.42) {$\vec{B}$ 向外};
+\end{tikzpicture}%

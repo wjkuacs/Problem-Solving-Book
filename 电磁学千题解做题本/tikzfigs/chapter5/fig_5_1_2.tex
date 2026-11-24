@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+% Wire along y axis
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .72 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,-1.65)--(0,1.65);
+\node[right] at (0,0.75) {$I$};
+% Perpendicular distance r to P
+\draw (0,0)--(2.30,0) node[midway,below] {$r$};
+\node[right] at (2.30,0) {$P$};
+\draw (0,.18)--(.18,.18)--(.18,0);
+% Vertical dimensions l/2 and l/2
+\draw[guide] (-.68,1.38)--(0,1.38) (-.68,0)--(0,0) (-.68,-1.38)--(0,-1.38);
+\draw[dim] (-.46,0)--(-.46,1.38) node[midway,fill=white,inner sep=1pt] {$\frac{l}{2}$};
+\draw[dim] (-.46,-1.38)--(-.46,0) node[midway,fill=white,inner sep=1pt] {$\frac{l}{2}$};
+\end{tikzpicture}%

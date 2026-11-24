@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+% Left branch: cell (+ top, - bottom)
+\draw (0,0)--(0,2.00);
+\EMcell[-90]{0,1.00}
+\node[right=3pt] at (0,1.18) {$+$};
+\node[right=3pt] at (0,0.82) {$-$};
+\node[left=7pt] at (0,1.00) {$\varepsilon, r$};
+% Top wire with switch K (pivoted on right, pointing up-left)
+\draw (0,2.00)--(0.75,2.00) (1.25,2.00)--(3.80,2.00);
+\draw (1.25,2.00)--(0.83,2.26);
+\EMterm{0.75,2.00}{}{}
+\EMterm{1.25,2.00}{}{}
+\node[above] at (1.14,2.30) {$K$};
+% Bottom wire
+\draw (0,0)--(3.80,0);
+% Middle branch: resistor R
+\EMres{2.55,2.00}{2.55,0}{}
+\node[right=4pt] at (2.55,1.00) {$R$};
+\EMdot{2.55,2.00}
+\EMdot{2.55,0}
+% Right branch: vertical inductor L (loops bulging right)
+\draw (3.80,2.00)--(3.80,1.60) (3.80,0.40)--(3.80,0);
+\foreach \y in {1.60,1.36,1.12,0.88,0.64} {
+  \draw (3.80,\y) arc[start angle=90,end angle=-90,x radius=.11,y radius=.12];
+}
+\node[right=4pt] at (3.88,1.00) {$L$};
+\end{tikzpicture}%

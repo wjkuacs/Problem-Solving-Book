@@ -1,0 +1,38 @@
+\begin{tikzpicture}[em diagram]
+% Uniform magnetic field (circle with cross, into page)
+\foreach \x in {-2.10,-1.05,0,1.05,2.10} {
+  \foreach \y in {0.55,1.25} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide,fill=white] (0,0) circle[radius=3.0pt];
+      \draw[guide] (-2.1pt,-2.1pt)--(2.1pt,2.1pt) (-2.1pt,2.1pt)--(2.1pt,-2.1pt);
+    \end{scope}
+  }
+}
+\node[fill=white,inner sep=1.5pt] at (0,1.62) {$\vec{B}$向内};
+% Inverted U-shaped wire dipping into two mercury cups
+\draw (-1.35,-0.85)--(-1.35,0.92)--(1.35,0.92)--(1.35,-0.72);
+% Dimension l between vertical legs
+\draw[dim] (-1.35,0.22)--(1.35,0.22) node[midway,fill=white,inner sep=1pt] {$l$};
+% Left and right mercury cups
+\foreach \cx in {-1.55,1.55} {
+  \draw ({\cx-0.52},-0.42) .. controls ({\cx-0.46},-0.45) .. ({\cx-0.44},-0.52)
+    --({\cx-0.44},-0.98)--({\cx+0.44},-0.98)--({\cx+0.44},-0.52)
+    .. controls ({\cx+0.46},-0.45) .. ({\cx+0.52},-0.42);
+  \draw[guide] ({\cx-0.44},-0.58)--({\cx+0.44},-0.58);
+  \draw[aux] ({\cx-0.38},-0.68)--({\cx+0.38},-0.68) ({\cx-0.38},-0.78)--({\cx+0.38},-0.78) ({\cx-0.38},-0.88)--({\cx+0.38},-0.88);
+}
+% Lower circuit with battery (+ left, - right) and switch K
+\draw (-1.80,-0.72)--(-1.80,-0.32)--(-2.28,-0.32)--(-2.28,-1.35)--(-0.46,-1.35);
+\draw (-0.24,-1.35)--(0.35,-1.35);
+\draw (0.85,-1.35)--(2.28,-1.35)--(2.28,-0.32)--(1.80,-0.32)--(1.80,-0.72);
+% Battery at (-0.35,-1.35)
+\draw (-0.46,-1.61)--(-0.46,-1.09) (-0.24,-1.52)--(-0.24,-1.18);
+\node[above left=1pt,font=\footnotesize] at (-0.46,-1.20) {$+$};
+\node[above right=1pt,font=\footnotesize] at (-0.24,-1.20) {$-$};
+% Switch K at (0.60,-1.35)
+\begin{scope}[shift={(0.60,-1.35)}]
+  \draw (-0.25,0)--(0.17,0.24);
+  \draw[fill=white] (-0.25,0) circle[radius=1.5pt] (0.25,0) circle[radius=1.5pt];
+\end{scope}
+\node[above=5pt] at (0.60,-1.35) {$\mathrm{K}$};
+\end{tikzpicture}%

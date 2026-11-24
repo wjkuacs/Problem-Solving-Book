@@ -1,0 +1,31 @@
+\begin{tikzpicture}[em diagram]
+% Stepped rails ABCD (top) and EFGH (bottom)
+\draw (-1.85,.85)--(.85,.85)--(1.55,.42)--(3.35,.42);
+\draw (-1.85,-.85)--(.85,-.85)--(1.55,-.42)--(3.35,-.42);
+\node[left] at (-1.85,.85) {$A$};
+\node[above] at (.85,.85) {$B$};
+\node[above] at (1.55,.42) {$C$};
+\node[right] at (3.35,.42) {$D$};
+\node[left] at (-1.85,-.85) {$E$};
+\node[below] at (.85,-.85) {$F$};
+\node[below] at (1.55,-.42) {$G$};
+\node[right] at (3.35,-.42) {$H$};
+% Sliding rod ab (left) and cd (right)
+\draw[line width=.75pt] (-1.05,-.92)--(-1.05,.92);
+\node[above] at (-1.05,.92) {$a$};
+\node[below] at (-1.05,-.92) {$b$};
+\draw[vec] (-1.05,0)--(-.30,0) node[right] {$\vec{V}$};
+\draw[line width=.75pt] (2.25,-.48)--(2.25,.48);
+\node[above] at (2.25,.48) {$c$};
+\node[below] at (2.25,-.48) {$d$};
+\draw[vec] (2.25,0)--(2.90,0) node[right] {$\vec{v}$};
+% Dimensions L and l
+\draw[dim] (-1.52,-.85)--(-1.52,.85) node[midway,fill=white,inner sep=1pt] {$L$};
+\draw[dim] (3.05,-.42)--(3.05,.42) node[midway,fill=white,inner sep=1pt] {$l$};
+% Magnetic field B into page
+\begin{scope}[shift={(.45,0)}]
+  \draw (0,0) circle[radius=2.6pt];
+  \draw (-1.8pt,-1.8pt)--(1.8pt,1.8pt) (-1.8pt,1.8pt)--(1.8pt,-1.8pt);
+  \node[right=3pt] at (0,0) {$\vec{B}$ 向内};
+\end{scope}
+\end{tikzpicture}%

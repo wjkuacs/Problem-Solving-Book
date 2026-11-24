@@ -1,0 +1,33 @@
+\begin{tikzpicture}[em diagram]
+% Core cylinder (radius r)
+\draw (-1.55,.42)--(1.55,.42) (-1.55,-.42)--(1.55,-.42);
+\draw (-1.55,0) ellipse[x radius=.16,y radius=.42];
+\draw (1.55,.42) arc[start angle=90,end angle=-90,x radius=.16,y radius=.42];
+\draw[dim] (-1.88,0)--(-1.88,.42) node[midway,fill=white,inner sep=1pt] {$r$};
+\draw[guide] (-1.55,.42)--(-1.98,.42) (-1.98,0)--(-1.55,0);
+% Primary thin winding N1 connected to rheostat and battery above
+\foreach \x in {-1.25,-.90,-.55,-.20,.15,.50,.85,1.20} {
+  \draw (\x,.42) .. controls (\x+.08,.20) and (\x+.08,-.20) .. (\x,-.42);
+}
+\node[above] at (.90,.50) {$N_1$};
+\draw[dim] (-1.25,1.08)--(1.20,1.08) node[midway,fill=white,inner sep=1pt] {$l$};
+% Upper primary circuit
+\draw (-1.25,.42)--(-1.25,1.62)--(-.95,1.62);
+\EMres{-1.00,1.62}{-.25,1.62}{}
+\draw (-.25,1.62)--(.42,1.62);
+\draw (-.62,1.85)--(-.62,1.72);
+\draw[vec] (-.62,1.85)--(-.62,1.70);
+\draw (-1.25,1.62)--(-1.25,1.85)--(-.62,1.85);
+\draw (.42,1.44)--(.42,1.80) (.56,1.52)--(.56,1.72);
+\node[below left=1pt] at (.42,1.50) {$+$};
+\node[below right=1pt] at (.56,1.50) {$-$};
+\draw (.56,1.62)--(1.20,1.62)--(1.20,.42);
+% Secondary thick winding N2 with spark gap below
+\foreach \x in {-1.08,-.73,-.38,-.03,.32,.67,1.02} {
+  \draw[line width=1.4pt] (\x,.42) .. controls (\x+.08,.20) and (\x+.08,-.20) .. (\x,-.42);
+}
+\node[below] at (.68,-.48) {$N_2$};
+\draw[line width=1.4pt] (-1.08,-.42)--(-1.08,-.98)--(-.12,-.98);
+\draw[line width=1.4pt] (1.02,-.42)--(1.02,-.98)--(.12,-.98);
+\fill (-.12,-.98) circle[radius=1.3pt] (.12,-.98) circle[radius=1.3pt];
+\end{tikzpicture}%

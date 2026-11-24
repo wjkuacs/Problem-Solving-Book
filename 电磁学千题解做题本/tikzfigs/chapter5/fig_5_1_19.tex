@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\def\R{0.95}
+% Coordinate axes x (down-left), y (right), z (up)
+\draw[vec] (0,0)--(-126:2.65) node[below left] {$x$};
+\draw[vec] (-1.95,0)--(2.25,0) node[right] {$y$};
+\draw[vec] (0,-.55)--(0,1.95) node[above] {$z$};
+\EMpoint{0,0}{below right}{O}
+% Two parallel wires along +x and semicircle in y-z plane
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] ({-\R-1.45},-1.95)--(-\R,0) node[midway,above left=-1pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .35 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-\R,0) arc[start angle=180,end angle=0,radius=\R] node[pos=.35,above right=1pt] {$I$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\R,0)--({\R-1.45},-1.95) node[midway,below right=-1pt] {$I$};
+\node[below] at ({-\R/2},0) {$R$};
+\node[below] at ({\R/2},0) {$R$};
+\end{tikzpicture}%

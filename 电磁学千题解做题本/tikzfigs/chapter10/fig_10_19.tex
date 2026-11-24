@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.35,0)--(-.35,1.58)--(0,1.58) (0,1.10)--(0,2.06)--(2.05,2.06) (3.17,2.06)--(3.65,2.06)--(3.65,1.10)--(3.17,1.10) (0,1.10)--(2.05,1.10);
+\draw (3.65,1.58)--(4.00,1.58)--(4.00,0)--(-.35,0);
+% Top branch: R_1 and L_1
+\EMres{.45,2.06}{1.35,2.06}{R_1}
+\foreach \i in {0,1,2,3}
+  \draw (2.05+.28*\i,2.06) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.61,2.06) {$L_1$};
+% Middle branch: R_2 and L_2
+\EMres{.45,1.10}{1.35,1.10}{R_2}
+\foreach \i in {0,1,2,3}
+  \draw (2.05+.28*\i,1.10) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.61,1.10) {$L_2$};
+% Bottom: K, cell (+ left, - right), r
+\EMswitch{.65,0}
+\node[above=5pt] at (.65,.16) {$K$};
+\EMcell[0]{1.85,0}
+\node[above=4pt] at (1.62,.14) {$+$};
+\node[above=4pt] at (2.08,.14) {$-$};
+\node[below=4pt] at (1.85,-.26) {$\varepsilon$};
+\EMres[below=4pt]{2.65,0}{3.55,0}{r}
+\end{tikzpicture}%

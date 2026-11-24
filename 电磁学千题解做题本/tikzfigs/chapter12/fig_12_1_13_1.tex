@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Cross-sectional dividing surface S' (hatched)
+\fill[pattern=north east lines,pattern color=black!62]
+  (-1.02,.14) .. controls (-.75,-.34) and (.82,-.34) .. (1.06,.08)
+  .. controls (.85,.54) and (-.70,.56) .. (-1.02,.14);
+% Front solid rim and back dashed rim of S'
+\draw[line width=.75pt] (-1.02,.14) .. controls (-.75,-.34) and (.82,-.34) .. (1.06,.08);
+\draw[aux] (-1.02,.14) .. controls (-.70,.56) and (.85,.54) .. (1.06,.08);
+% Outer closed surface S: upper dome S1 and lower part S2
+\draw (-1.02,.14) .. controls (-1.04,.78) and (-.52,1.18) .. (.04,1.20)
+  .. controls (.62,1.20) and (1.04,.76) .. (1.06,.08);
+\draw (-1.02,.14) .. controls (-1.06,-.44) and (-1.02,-.88) .. (-.68,-1.10)
+  .. controls (-.25,-1.34) and (.62,-1.28) .. (.88,-.96)
+  .. controls (1.10,-.66) and (1.08,-.28) .. (1.06,.08);
+% Surface labels
+\node[fill=white,inner sep=1.5pt] at (.02,.12) {$S'$};
+\node at (.04,.82) {$S_1$};
+\node at (.02,-.76) {$S_2$};
+\node[left] at (-1.12,-.25) {$S$};
+\end{tikzpicture}%

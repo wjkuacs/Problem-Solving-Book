@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (Upper) at (0,1.45);
+\coordinate (Lower) at (0,-1.45);
+\begin{scope}[shift={(Upper)}]
+  \draw (0,0)--(3.28,0)--(4.13,.60)--(.85,.60)--cycle;
+  \node at (2.06,.30) {$Q$};
+  \node[above] at (2.49,.60) {$a$};
+  \node[below right] at (3.70,.30) {$b$};
+\end{scope}
+\begin{scope}[shift={(Lower)}]
+  \draw (0,0)--(3.28,0)--(4.13,.60)--(.85,.60)--cycle;
+  \node at (2.06,.30) {$-Q$};
+  \node[above] at (2.49,.60) {$a$};
+  \node[below right] at (3.70,.30) {$b$};
+\end{scope}
+\draw[dielectric] (-1.86,0)--(1.42,0)--(2.27,.60)--(-1.01,.60)--cycle;
+\draw[fill=black!14] (-1.86,0)--(1.42,0)--(1.42,-.22)--(-1.86,-.22)--cycle;
+\draw[fill=black!21] (1.42,0)--(2.27,.60)--(2.27,.38)--(1.42,-.22)--cycle;
+\draw[aux] (Upper)--(Lower) (.85,.60)--(0,0);
+\node at (-.83,.27) {$\varepsilon_r$};
+\draw[dim] (.37,.26)--(1.79,.26) node[midway,fill=black!7,inner sep=1pt] {$x$};
+\draw[guide] (4.14,2.05)--(4.85,2.05) (4.14,-.85)--(4.85,-.85);
+\draw[dim] (4.63,-.85)--(4.63,2.05) node[midway,right] {$d$};
+\draw[guide] (-2.44,0)--(-1.91,0) (-2.44,-.22)--(-1.91,-.22);
+\draw[vec] (-2.24,.52)--(-2.24,.02);
+\draw[vec] (-2.24,-.75)--(-2.24,-.24);
+\node[left] at (-2.24,-.11) {$t$};
+\end{tikzpicture}%

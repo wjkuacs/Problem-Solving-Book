@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Outer frame with gaps for C (top), K (right), L (bottom)
+\draw (0,0)--(0,2.00)--(1.68,2.00) (1.92,2.00)--(3.60,2.00)--(3.60,1.25)
+  (3.60,0.75)--(3.60,0)--(2.55,0) (1.05,0)--(0,0);
+% Top capacitor C with -Q_0 and Q_0
+\draw (1.68,1.72)--(1.68,2.28) (1.92,1.72)--(1.92,2.28);
+\node[above left=1pt] at (1.66,2.30) {$-Q_0$};
+\node[above right=1pt] at (1.94,2.30) {$Q_0$};
+\node[below] at (1.80,1.66) {$C$};
+% Right switch K
+\EMswitch[-90]{3.60,1.00}
+\node[right=4pt] at (3.76,1.00) {$K$};
+% Bottom inductor L
+\foreach \x in {1.05,1.35,1.65,1.95,2.25} {
+  \draw (\x,0) arc[start angle=180,end angle=360,x radius=.15,y radius=.12];
+}
+\node[above] at (1.80,0.10) {$L$};
+\end{tikzpicture}%

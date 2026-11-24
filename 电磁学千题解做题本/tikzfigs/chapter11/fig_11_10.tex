@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.6)--(4.6,1.6) (0,0)--(4.6,0) (3.3,0)--(3.3,1.6);
+\begin{scope}[shift={(1.7,1.6)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[below=3pt] at (0,0) {$L$};
+\end{scope}
+\begin{scope}[shift={(3.3,.80)}]
+  \draw[white,line width=2pt] (0,-.13)--(0,.13);
+  \draw (-.26,-.13)--(.26,-.13) (-.26,.13)--(.26,.13);
+  \node[left] at (-.28,0) {$C$};
+\end{scope}
+\EMdot{3.3,1.6} \EMdot{3.3,0}
+\EMterm{0,1.6}{}{} \EMterm{0,0}{}{}
+\EMterm{4.6,1.6}{}{} \EMterm{4.6,0}{}{}
+\node at (0,.80) {$U_1$};
+\node at (4.6,.80) {$U_2$};
+\end{tikzpicture}%

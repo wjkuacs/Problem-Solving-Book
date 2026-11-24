@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Parallel-plate velocity selector
+\draw (-1.85,0.95)--(1.85,0.95) (-1.85,-0.95)--(1.85,-0.95);
+% Charges on top (+) and bottom (-) plates
+\foreach \x in {-1.55,-1.05,-0.55,0,0.55,1.05,1.55} {
+  \node[font=\footnotesize] at (\x,0.78) {$+$};
+  \node[font=\footnotesize] at (\x,-0.78) {$-$};
+}
+% Magnetic field crosses (into page)
+\foreach \x in {-1.50,-0.90,-0.30,0.30,0.90,1.50} {
+  \foreach \y in {-0.40,0.0,0.40} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide] (-2.2pt,-2.2pt)--(2.2pt,2.2pt) (-2.2pt,2.2pt)--(2.2pt,-2.2pt);
+    \end{scope}
+  }
+}
+\node[fill=white,inner sep=1.5pt] at (0,0) {$\vec{B}$向内};
+% Incoming particle with velocity v
+\draw[fill=white] (-2.65,0) circle[radius=1.7pt];
+\draw[vec] (-2.55,0)--(-1.92,0) node[midway,above] {$\vec{v}$};
+\end{tikzpicture}%

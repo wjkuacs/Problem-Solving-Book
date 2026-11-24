@@ -1,0 +1,37 @@
+\begin{tikzpicture}[em diagram]
+% Magnetic field chamber
+\draw (-0.85,0)--(-0.30,0) (-0.15,0)--(3.35,0)--(3.35,2.45)--(-0.85,2.45)--(-0.85,0);
+% Grid of magnetic field dots (out of page)
+\foreach \x in {-0.30,0.45,1.20,1.95,2.70} {
+  \foreach \y in {0.65,1.20,1.75,2.20} {
+    \fill (\x,\y) circle[radius=1.15pt];
+  }
+}
+\node[fill=white,inner sep=1.5pt] at (1.20,2.08) {$\vec{B}$垂直纸面并向外};
+% Semicircular ion path from entry slit (-0.225,0) to plate P (2.55,0)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .28 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .72 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-0.225,0) arc[start angle=180,end angle=0,radius=1.3875];
+\node[above left=1pt] at (2.55,0) {$P$};
+% Dimension x between entry and P
+\draw[guide] (-0.225,0)--(-0.225,-0.52) (2.55,0)--(2.55,-0.52);
+\draw[dim] (-0.225,-0.38)--(2.55,-0.38) node[midway,fill=white,inner sep=1pt] {$x$};
+% Ion source S and acceleration circuit
+\draw (-0.42,-1.45) rectangle (-0.03,-1.12);
+\node[right=2pt] at (-0.03,-1.285) {$S$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .28 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-0.225,-1.12)--(-0.225,0);
+% Positive charge +q moving upward
+\EMcharge{-0.225,-0.58}{right}{q}{+}
+% Accelerating voltage U connected between chamber bottom and source S
+\draw (-0.85,0)--(-1.12,0)--(-1.12,-1.285)--(-0.42,-1.285);
+\begin{scope}[shift={(-1.12,-0.64)},rotate=-90]
+  \draw[white,line width=2pt] (-.11,0)--(.11,0);
+  \draw (-.11,-.17)--(-.11,.17) (.11,-.26)--(.11,.26);
+\end{scope}
+\node[left=4pt] at (-1.12,-0.50) {$-$};
+\node[left=4pt] at (-1.12,-0.78) {$+$};
+\node[right=4pt] at (-1.12,-0.64) {$U$};
+\end{tikzpicture}%

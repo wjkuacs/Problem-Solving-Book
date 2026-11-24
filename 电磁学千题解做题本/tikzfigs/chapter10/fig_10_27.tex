@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.95)--(3.60,1.95)--(3.60,0)--(0,0);
+\draw (2.15,0)--(2.15,1.95);
+% Cell on left (+ top, - bottom)
+\EMcell[270]{0,.97}
+\node[right=4pt] at (.14,1.19) {$+$};
+\node[right=4pt] at (.14,.75) {$-$};
+\node[left=5pt] at (-.26,.97) {$\varepsilon,r$};
+% Switch K on top
+\EMswitch{1.08,1.95}
+\node[above=5pt] at (1.08,2.11) {$K$};
+% Vertical capacitor C in middle
+\draw[white,line width=2.2pt] (2.15,.88)--(2.15,1.06);
+\draw (1.89,.88)--(2.41,.88) (1.89,1.06)--(2.41,1.06);
+\node[left=4pt] at (1.87,.97) {$C$};
+% Vertical resistor R on right
+\EMres{3.60,.52}{3.60,1.42}{}
+\node[right=5pt] at (3.60,.97) {$R$};
+\end{tikzpicture}%

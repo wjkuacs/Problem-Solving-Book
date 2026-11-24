@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (-1.85,-1.55)--(-1.85,-1.15) (-1.85,1.15)--(-1.85,1.55);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.85,-1.15)--(-1.85,1.15) node[midway,left=2pt] {$I_1$};
+% Coplanar circular loop of radius R, center O, clockwise current I2
+\def\R{1.15}
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .25 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .75 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (0,0) circle[radius=\R];
+\node[above=2pt] at (0,\R) {$I_2$};
+\EMpoint{0,0}{above}{O}
+% Radius R and horizontal distance l from wire to O
+\draw[vec] (0,0)--(-32:\R) node[midway,below left=-1pt] {$R$};
+\draw[dim] (-1.85,0)--(0,0) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

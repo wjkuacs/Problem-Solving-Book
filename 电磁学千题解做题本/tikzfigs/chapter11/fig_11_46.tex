@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,.95)--(4.8,.95);
+\draw (.75,0) rectangle (4.05,1.9);
+\begin{scope}[shift={(2.4,1.9)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[below=4pt] at (0,-.16) {$C$};
+\end{scope}
+\EMres[below=4pt]{1.6,.95}{3.2,.95}{r}
+\begin{scope}[shift={(1.75,0)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[below=4pt] at (0,0) {$L$};
+\end{scope}
+\EMres[below=4pt]{2.55,0}{3.75,0}{R}
+\EMdot{.75,.95} \EMdot{4.05,.95}
+\EMterm{0,.95}{}{} \EMterm{4.8,.95}{}{}
+\end{tikzpicture}%

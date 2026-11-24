@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.35,0)--(-.35,1.58)--(0,1.58) (0,1.10)--(0,2.06)--(2.05,2.06) (3.17,2.06)--(3.65,2.06)--(3.65,1.10)--(3.17,1.10) (0,1.10)--(2.05,1.10);
+\draw (3.65,1.58)--(4.00,1.58)--(4.00,0)--(-.35,0);
+% Top branch: R_1 and L_1
+\EMres{.45,2.06}{1.35,2.06}{R_1}
+\foreach \i in {0,1,2,3}
+  \draw (2.05+.28*\i,2.06) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.61,2.06) {$L_1$};
+% Middle branch: R_2 and L_2
+\EMres{.45,1.10}{1.35,1.10}{R_2}
+\foreach \i in {0,1,2,3}
+  \draw (2.05+.28*\i,1.10) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.61,1.10) {$L_2$};
+\EMdot{0,1.58}
+\EMdot{3.65,1.58}
+% Bottom: capacitor C (- left, + right) and switch K
+\draw[white,line width=2.2pt] (1.16,0)--(1.34,0);
+\draw (1.16,-.26)--(1.16,.26) (1.34,-.26)--(1.34,.26);
+\node[above=4pt] at (1.25,.24) {$C$};
+\node[left=3pt] at (1.14,.08) {$-$};
+\node[right=3pt] at (1.36,.08) {$+$};
+\EMswitch{2.55,0}
+\node[above=5pt] at (2.55,.16) {$K$};
+\end{tikzpicture}%

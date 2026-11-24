@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.51,1.90)--(10.40,1.90) (-.51,-1.63)--(10.40,-1.63);
+\EMball{-.51,1.90}{left}{A}
+\EMball{-.51,-1.63}{left}{B}
+\foreach \i in {0,...,6} {
+  \pgfmathsetmacro{\x}{1.62*\i}
+  \draw (\x,1.90)--(\x,.96) (\x,.73)--(\x,.32);
+  \draw (\x,-1.63)--(\x,-.87);
+  \fill (\x,1.90) circle[radius=1.2pt] (\x,-1.63) circle[radius=1.2pt];
+  \draw (\x+.62,.85)--(\x+.62,-.24)--(\x+.11,.22);
+  \fill (\x+.62,.85) circle[radius=1.2pt];
+  \EMball{\x,.32}{}{}
+  \EMball{\x,-.87}{}{}
+  \EMball{\x+.62,-.24}{}{}
+  \node[left] at (\x,-.24) {$K_{\number\numexpr\i+1\relax}$};
+}
+\foreach \i/\capValue in {0/0.05,1/0.05,2/0.1,3/0.1,4/0.2,5/0.5} {
+  \pgfmathsetmacro{\x}{.62+1.62*\i}
+  \draw (\x,.85)--(\x+.68,.85) (\x+.94,.85)--(\x+1.62,.85);
+  \EMcap{\x+.81}{.85}{}
+  \node[above,inner sep=1pt] at (\x+.57,1.15) {$\capValue$};
+}
+\end{tikzpicture}%

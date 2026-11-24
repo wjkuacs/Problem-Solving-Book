@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw[aux] (0,1.67) -- (4.15,0) node[pos=.40,above,sloped] {$\sqrt{r^2+a^2/3}$};
+\draw[aux] (0,1.67) -- (0,0) -- (4.15,0) node[midway,below] {$a/\sqrt3$};
+\draw[vec] (0,1.51) -- (0,.54);
+\EMcharge{0,1.67}{}{}{-}
+\EMcharge{4.15,0}{}{}{+}
+\node[below left] at (0,0) {$O$};
+\draw[dim] (-.92,0) -- node[left] {$r$} (-.92,1.67);
+\draw[guide] (-1.15,0)--(-.65,0) (-1.15,1.67)--(-.65,1.67);
+\draw[guide] (3.05,0) arc[start angle=180,end angle=158.08,radius=1.10];
+\node at (2.76,.23) {$\theta$};
+\end{tikzpicture}%

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Bent wire abc
+\draw[line width=.8pt] (-1.65,0)--(0,0)--(1.45,.62);
+\node[left] at (-1.65,0) {$a$};
+\node[above] at (0,.04) {$b$};
+\node[above right] at (1.45,.62) {$c$};
+% Horizontal velocity extension and angle alpha
+\draw[aux] (0,0)--(1.35,0);
+\draw[vec] (1.35,0)--(1.95,0) node[right] {$\vec{v}$};
+\draw[guide] (.75,0) arc[start angle=0,end angle=23.1,radius=.75];
+\node at (.95,.18) {$\alpha$};
+% Into-page B field marks
+\foreach \x in {-1.25,0,1.25} {
+  \begin{scope}[shift={(\x,.58)}]
+    \draw (0,0) circle[radius=2.3pt];
+    \draw (-1.6pt,-1.6pt)--(1.6pt,1.6pt) (-1.6pt,1.6pt)--(1.6pt,-1.6pt);
+  \end{scope}
+  \begin{scope}[shift={(\x,-.58)}]
+    \draw (0,0) circle[radius=2.3pt];
+    \draw (-1.6pt,-1.6pt)--(1.6pt,1.6pt) (-1.6pt,1.6pt)--(1.6pt,-1.6pt);
+  \end{scope}
+}
+\node[above] at (0,.76) {$\vec{B}$ 向内};
+\end{tikzpicture}%

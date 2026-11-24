@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+\EMplate{0}{4.45}{.76}
+\EMplate{0}{4.45}{-.76}
+\foreach \x in {.19,.60,...,4.30} {
+  \node[below,inner sep=0] at (\x,.66) {$+$};
+  \node[above,inner sep=0] at (\x,-.66) {$-$};
+  \draw[field] (\x,.48)--(\x,-.48);
+}
+\foreach \x in {.17,.87,3.58,4.28} {
+  \node[above,inner sep=0] at (\x,.86) {$-$};
+  \node[below,inner sep=0] at (\x,-.86) {$+$};
+}
+\draw[field] (4.39,-.86) .. controls (5.62,-1.51) and (5.62,1.51) .. (4.39,.86);
+\node[left] at (0,.76) {$A$};
+\node[left] at (0,-.76) {$B$};
+\end{tikzpicture}%

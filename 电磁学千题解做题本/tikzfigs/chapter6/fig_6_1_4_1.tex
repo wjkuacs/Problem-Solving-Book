@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% 4x4 grid of magnetic field dots (out of page)
+\foreach \x in {-1.2,-0.4,0.4,1.2} {
+  \foreach \y in {-0.9,-0.25,0.4,1.05} {
+    \fill (\x,\y) circle[radius=1.15pt];
+  }
+}
+% Electron at A moving upward
+\EMcharge{0,-0.25}{below}{A}{-}
+\draw[vec] (0,-0.12)--(0,0.82) node[above] {$\vec{v}$};
+% Field direction label
+\node[align=center] at (1.90,0.08) {$\vec{B}$\\[-2pt]向\\[-2pt]外};
+\end{tikzpicture}%

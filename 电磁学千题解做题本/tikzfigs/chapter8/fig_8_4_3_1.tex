@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% Superconducting ring in vertical upward magnetic field B
+% Back vertical field lines
+\foreach \x in {-1.25,-.95,-.65,-.35,0,.35,.65,.95,1.25} {
+  \draw[vec] (\x,-.85)--(\x,1.15);
+}
+\node[above] at (0,1.22) {$\vec{B}$};
+% Perspective ring (white fill between ellipses)
+\draw[fill=white,even odd rule] (0,0) ellipse[x radius=1.10,y radius=.42]
+  (0,0) ellipse[x radius=.96,y radius=.34];
+% Re-draw inner field lines in front of back rim if needed, and front rim clean
+\end{tikzpicture}%

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+% Vertical rails
+\draw (-.82,-1.15)--(-.82,1.15)--(-.12,1.15);
+\draw (.82,-1.15)--(.82,1.15)--(.12,1.15);
+% Battery at top (+ left, - right)
+\draw (-.12,.88)--(-.12,1.42) (.12,.98)--(.12,1.32);
+\node[below left=1pt] at (-.12,.98) {$+$};
+\node[below right=1pt] at (.12,.98) {$-$};
+\node[above=4pt] at (0,1.32) {$\varepsilon, r$};
+% Sliding rod
+\draw[line width=.8pt] (-.82,-.25)--(.82,-.25);
+\draw[fill=white] (-.82,-.25) circle[radius=1.6pt] (.82,-.25) circle[radius=1.6pt];
+\node[below] at (0,-.28) {$m, R$};
+% Dimension l at bottom
+\draw[dim] (-.82,-1.05)--(.82,-1.05) node[midway,fill=white,inner sep=1pt] {$l$};
+% Out-of-page B marks
+\begin{scope}[shift={(0,.42)}]
+  \draw (0,0) circle[radius=2.5pt];
+  \fill (0,0) circle[radius=.8pt];
+  \node[below=3pt] at (0,0) {$\vec{B}$ 向外};
+\end{scope}
+\begin{scope}[shift={(0,-.80)}]
+  \draw (0,0) circle[radius=2.5pt];
+  \fill (0,0) circle[radius=.8pt];
+\end{scope}
+\end{tikzpicture}%

@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Wire with inductor coil L between a and b
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-1.65,0)--(-.75,0);
+\node[below] at (-1.20,-.05) {$I$};
+\foreach \x in {-.75,-.45,-.15,.15,.45} {
+  \draw (\x,0) arc[start angle=180,end angle=0,x radius=.15,y radius=.12];
+}
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (.75,0)--(1.65,0);
+\node[below] at (1.20,-.05) {$I$};
+\node[above] at (-.75,.14) {$a$};
+\node[above] at (.75,.14) {$b$};
+\node[above] at (0,.18) {$L$};
+\node[below] at (0,-.10) {$\varepsilon_L$};
+\end{tikzpicture}%

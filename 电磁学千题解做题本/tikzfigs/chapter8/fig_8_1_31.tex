@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Long straight wire I on left
+\draw[axis] (-1.55,-1.35)--(-1.55,-1.05);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.55,-1.05)--(-1.55,1.05);
+\draw[axis] (-1.55,1.05)--(-1.55,1.35);
+\node[left] at (-1.55,0) {$I$};
+% Semicircular wire ab opening upward
+\def\R{.92}
+\draw[line width=.8pt] (-\R,0) arc[start angle=180,end angle=360,radius=\R];
+\node[left] at (-\R,0) {$a$};
+\node[right] at (\R,0) {$b$};
+\EMpoint{0,0}{below right}{$O$}
+% Dashed radius R and distance l
+\draw[guide] (0,0)--(0,1.02);
+\draw[dim] (-1.55,.86)--(0,.86) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[dim] (-\R,.38)--(0,.38) node[midway,fill=white,inner sep=1pt] {$R$};
+\draw[guide] (-\R,0)--(-\R,.50);
+% Velocity arrow v upward
+\draw[vec] (0,-\R)--(0,-.40) node[midway,left] {$\vec{v}$};
+\end{tikzpicture}%

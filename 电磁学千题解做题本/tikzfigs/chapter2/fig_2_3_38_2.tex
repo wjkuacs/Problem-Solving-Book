@@ -1,0 +1,9 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(.95,0)--(.95,1.02)--(6.09,1.02)--(6.09,0)--(5.15,0);
+\draw (.95,0)--(1.75,0) (2.01,0)--(2.74,0) (3,0)--(3.73,0) (3.99,0)--(4.89,0);
+\foreach \x in {1.88,2.87,3.86,5.02} \EMcap{\x}{0}{C}
+\draw (0,-1)--(3.36,-1)--(3.36,0);
+\fill (.95,0) circle[radius=1.1pt] (3.36,0) circle[radius=1.1pt];
+\EMball{0,0}{left}{A}
+\EMball{0,-1}{left}{B}
+\end{tikzpicture}%

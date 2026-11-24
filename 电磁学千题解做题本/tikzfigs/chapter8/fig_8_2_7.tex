@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Vertical wire I
+\draw[axis] (-1.35,-1.25)--(-1.35,-.95);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.35,-.95)--(-1.35,.95);
+\draw[axis] (-1.35,.95)--(-1.35,1.25);
+\node[left] at (-1.35,0) {$I$};
+% Horizontal rod AB moving upward with v
+\draw[line width=.8pt] (-.45,0)--(1.15,0);
+\node[left] at (-.45,0) {$A$};
+\node[right] at (1.15,0) {$B$};
+\draw[vec] (.35,0)--(.35,.85) node[above] {$\vec{v}$};
+% Dimensions a and b
+\draw[guide] (-.45,0)--(-.45,-.52) (1.15,0)--(1.15,-1.05);
+\draw[dim] (-1.35,-.38)--(-.45,-.38) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (-1.35,-.90)--(1.15,-.90) node[midway,fill=white,inner sep=1pt] {$b$};
+\end{tikzpicture}%

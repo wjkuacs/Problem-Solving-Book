@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\def\rx{0.62}
+\def\ry{1.35}
+\def\dx{0.14}
+\draw (\dx,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (-\dx,\ry) arc[start angle=90,end angle=270,x radius=\rx,y radius=\ry];
+\draw (-\dx,\ry)--(\dx,\ry) (-\dx,-\ry)--(\dx,-\ry);
+\foreach \ang in {108,124,140,156,172,188,204,220,236,252} {
+  \draw[guide] ({-\dx+\rx*cos(\ang)},{\ry*sin(\ang)})--({\dx+\rx*cos(\ang)},{\ry*sin(\ang)});
+}
+\draw[axis] (-1.35,0)--({-\dx-\rx},0) (\dx,0)--(1.80,0);
+% Thickness l
+\draw[guide] (-\dx,\ry)--(-\dx,1.82) (\dx,\ry)--(\dx,1.82);
+\draw[vec] (-0.54,1.66)--(-\dx,1.66);
+\draw[vec] (0.54,1.66)--(\dx,1.66);
+\node[right=2pt] at (0.54,1.66) {$l$};
+% Radius R
+\draw[guide] (\dx,\ry)--(1.55,\ry);
+\draw[dim] (1.35,0)--(1.35,\ry) node[midway,fill=white,inner sep=1.5pt] {$R$};
+% Surface magnetic charge labels
+\node[left=2pt] at ({-\dx-\rx},0.55) {$-\sigma_{\mathrm{m}}$};
+\node at (\dx,0.48) {$\sigma_{\mathrm{m}}$};
+\end{tikzpicture}%

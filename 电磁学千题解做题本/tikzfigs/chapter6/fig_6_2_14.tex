@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+% Square coil of side a
+\def\s{0.85}
+\draw (-\s,-\s) rectangle (\s,\s);
+\draw[vec] (\s,0.30)--(\s,-0.30) node[midway,right=2pt] {$I$};
+% Tilted dashed square outline showing small oscillation
+\draw[aux] (-0.85,-0.74)--(0.85,-0.96)--(0.85,0.96)--(-0.85,0.74)--cycle;
+% Side dimension a on left
+\draw[guide] (-\s-0.55,\s)--(-\s,\s) (-\s-0.55,-\s)--(-\s,-\s);
+\draw[dim] (-\s-0.38,-\s)--(-\s-0.38,\s) node[midway,fill=white,inner sep=1pt] {$a$};
+% Vertical axis OO' arrows at top and bottom
+\draw (-0.07,1.45)--(-0.07,1.12)--(-0.18,1.12)--(0,0.90)--(0.18,1.12)--(0.07,1.12)--(0.07,1.45)--cycle;
+\node[above=1pt] at (0,1.45) {$O$};
+\draw (-0.07,-1.45)--(-0.07,-1.12)--(-0.18,-1.12)--(0,-0.90)--(0.18,-1.12)--(0.07,-1.12)--(0.07,-1.45)--cycle;
+\node[below=1pt] at (0,-1.45) {$O'$};
+% Out-of-page magnetic field B at center
+\begin{scope}[shift={(-0.12,0)}]
+  \draw[fill=white] (0,0) circle[radius=3.5pt];
+  \fill (0,0) circle[radius=1.1pt];
+\end{scope}
+\node[right=4pt] at (-0.12,0) {$\vec{B}$};
+\end{tikzpicture}%

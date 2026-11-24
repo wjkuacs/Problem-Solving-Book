@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+% Left loop at O_1 = (-1.65,0), right loop at O_2 = (1.65,0)
+\def\xa{-1.65}
+\def\xb{1.65}
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\xa,0) ellipse[x radius=.60,y radius=1.25];
+\node[below left] at ({\xa-.52},-.62) {$I_1$};
+\draw[vec] (\xa,0)--({\xa-.48},.75) node[pos=.65,above right=0pt] {$R_1$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .55 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (\xb,0) ellipse[x radius=.44,y radius=.92];
+\node[below right] at ({\xb+.32},-.52) {$I_2$};
+\draw[vec] (\xb,0)--({\xb-.32},.63) node[pos=.65,left=1pt] {$R_2$};
+% Axis and points O_1, O, P_1, O_2, P_2
+\draw (-2.65,0)--(3.35,0);
+\EMpoint{\xa,0}{below}{O_1}
+\draw[guide] (0,-.14)--(0,.14);
+\node[below] at (0,-.08) {$O$};
+\EMpoint{.75,0}{below}{P_1}
+\EMpoint{\xb,0}{below}{O_2}
+\EMpoint{2.65,0}{below}{P_2}
+% Dimensions a, a, r_1, r_2
+\draw[guide] (\xa,0)--(\xa,.62) (0,0)--(0,1.18) (.75,0)--(.75,.62) (2.65,0)--(2.65,1.18);
+\draw[dim] (\xa,.46)--(0,.46) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0,.46)--(.75,.46) node[midway,fill=white,inner sep=1pt] {$r_1$};
+\draw[dim] (0,1.02)--(2.65,1.02) node[midway,fill=white,inner sep=1pt] {$r_2$};
+\draw[guide] (0,-.42)--(0,-.96) (\xb,0)--(\xb,-.96);
+\draw[dim] (0,-.80)--(\xb,-.80) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

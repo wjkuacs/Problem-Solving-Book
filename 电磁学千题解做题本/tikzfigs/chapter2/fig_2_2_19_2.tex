@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=1.40];
+\foreach \sign in {1,-1} {
+  \begin{scope}[yscale=\sign]
+    \foreach \y/\tail in {.36/.34,.73/.67,1.17/1.01} {
+      \pgfmathsetmacro{\edge}{sqrt(1.4^2-\y^2)}
+      \draw[field] (-2.74,\tail) .. controls (-2.02,\tail) and (-\edge-.47,\y) .. (-\edge,\y)
+        -- (\edge,\y) .. controls (\edge+.47,\y) and (2.02,\tail) .. (2.74,\tail);
+    }
+  \end{scope}
+}
+\draw[field] (-2.74,0)--(2.74,0);
+\node[inner sep=1pt,fill=white] at (0,-.54) {$\varepsilon_2$};
+\node[inner sep=1pt,fill=white] at (1.86,-.84) {$\varepsilon_1$};
+\end{tikzpicture}%

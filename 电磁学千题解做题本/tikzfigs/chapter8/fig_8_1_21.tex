@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Perspective rails and moving rod CD
+\draw (2.65,.70)--(-.55,.70)--(-1.35,-.65)--(1.85,-.65);
+\draw[line width=.75pt] (.45,-.65)--(1.25,.70);
+\node[above left] at (-.55,.70) {$A$};
+\node[below left] at (-1.35,-.65) {$B$};
+\node[below] at (.45,-.65) {$C$};
+\node[above] at (1.25,.70) {$D$};
+% Velocity v on CD
+\draw[vec] (.85,.02)--(1.85,.02) node[right] {$\vec{v}$};
+% Normal vector n and B field vector with angle alpha
+\coordinate (P) at (-.10,.02);
+\draw[vec] (P)--(-.25,1.25) node[above] {$\vec{n}$};
+\draw[vec] (P)--(1.15,1.15) node[above right] {$\vec{B}$};
+\draw[guide] (-.17,.62) arc[start angle=97,end angle=42,radius=.60];
+\node at (.10,.45) {$\alpha$};
+\end{tikzpicture}%

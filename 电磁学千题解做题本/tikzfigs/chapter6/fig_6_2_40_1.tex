@@ -1,0 +1,46 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (-1.85,-1.65)--(-1.85,-1.25) (-1.85,1.25)--(-1.85,1.65);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .52 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-1.85,-1.25)--(-1.85,1.25) node[midway,left=2pt] {$I_1$};
+% Tilted square loop ABCD around vertical axis P1-P2 through center O
+\coordinate (O) at (0.35,0);
+\coordinate (P1t) at (0.35,0.92);
+\coordinate (P2b) at (0.35,-0.92);
+\coordinate (B) at (-0.42,0.72);
+\coordinate (C) at (1.12,1.12);
+\coordinate (D) at (1.12,-0.72);
+\coordinate (A) at (-0.42,-1.12);
+% Loop sides with current I2 (A->B->C->D->A)
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (A)--(B);
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .75 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (B)--(C);
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (C)--(D) node[midway,left=2pt] {$I_2$};
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}] (D)--(A);
+\node[below left=-1pt] at (A) {$A$};
+\node[left=1pt] at (B) {$B$};
+\node[above=1pt] at (C) {$C$};
+\node[below right=-1pt] at (D) {$D$};
+% Center O and distance b from wire
+\EMpoint{O}{above}{O}
+\draw[guide] (0.35,0.18)--(0.35,-0.55);
+\draw[dim] (-1.85,-0.32)--(0.35,-0.32) node[midway,fill=white,inner sep=1pt] {$b$};
+% Dashed lines from wire to P1t and B showing tilt angle alpha
+\draw[aux] (-1.85,0.92)--(P1t) (-1.85,0.92)--(B);
+\draw[guide] (-0.95,1.25)--(-0.95,0.92);
+\draw[vec] (-0.95,1.25)--(-0.95,0.92);
+\draw[vec] (-0.95,0.45)--(-0.95,0.78);
+\node[above=1pt] at (-0.95,1.25) {$\alpha$};
+% Side dimension 2a on right
+\draw[guide] (1.12,1.12)--(1.68,1.12) (1.12,-0.72)--(1.68,-0.72);
+\draw[dim] (1.52,-0.72)--(1.52,1.12) node[midway,fill=white,inner sep=1pt] {$2a$};
+% Hollow block arrows for rotation axis P1 and P2
+\draw (0.28,1.52)--(0.28,1.15)--(0.16,1.15)--(0.35,0.94)--(0.54,1.15)--(0.42,1.15)--(0.42,1.52)--cycle;
+\node[above=1pt] at (0.35,1.52) {$P_1$};
+\draw (0.28,-1.52)--(0.28,-1.15)--(0.16,-1.15)--(0.35,-0.94)--(0.54,-1.15)--(0.42,-1.15)--(0.42,-1.52)--cycle;
+\node[below=1pt] at (0.35,-1.52) {$P_2$};
+\end{tikzpicture}%

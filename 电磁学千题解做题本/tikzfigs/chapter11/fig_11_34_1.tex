@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,1.4)--(0,2.1)--(4.0,2.1)--(4.0,0)--(0,0)--(0,.7);
+\draw (2.2,0)--(2.2,2.1);
+\draw (0,1.21) .. controls (.12,1.13) and (.12,1.05) .. (0,1.05)
+  .. controls (-.12,1.05) and (-.12,.97) .. (0,.89);
+\EMterm{0,1.4}{}{} \EMterm{0,.7}{}{}
+\EMres[above=4pt]{2.2,0}{2.2,1.7}{R}
+\node[draw,fill=white,minimum width=.42cm,minimum height=.95cm,inner sep=0pt] at (4.0,.9) {$Z$};
+\EMdot{1.1,2.1} \node[above=2pt] at (1.1,2.1) {$I$};
+\EMdot{2.2,1.72} \node[left=2pt] at (2.2,1.72) {$I_R$};
+\EMdot{4.0,1.72} \node[right=2pt] at (4.0,1.72) {$I_Z$};
+\EMdot{2.2,2.1} \EMdot{2.2,0}
+\end{tikzpicture}%

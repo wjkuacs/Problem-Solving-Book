@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) circle[radius=1.30] (3.53,0) circle[radius=.92];
+\draw[vec] (0,0)--(46:1.30) node[pos=.57,above left] {$R_1$};
+\draw[vec] (3.53,0)--++(46:.92) node[pos=.58,above left] {$R_2$};
+\EMpoint{0,0}{below}{O_1}
+\EMpoint{3.53,0}{below}{O_2}
+\node[above] at (0,1.30) {$q_1$};
+\node[above] at (3.53,.92) {$q_2$};
+\node at (-.77,.39) {$\rho_1(r)$};
+\node at (3.02,.24) {$\rho_2(r)$};
+\EMdim{0}{3.53}{-1.69}{-1.39}{l}
+\end{tikzpicture}%

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x in {-.25,.95} {
+  \foreach \y in {-1.20,-.40,.40,1.20} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+% Left rod moving up along length
+\draw[fill=white] (-.92,-1.05) rectangle (-.80,1.05);
+\draw[vec] (-.86,1.05)--(-.86,1.62) node[left] {$\vec{v}$};
+% Right rod moving right perpendicular to length
+\draw[fill=white] (.42,-1.05) rectangle (.54,1.05);
+\draw[vec] (.54,0)--(1.12,0) node[right] {$\vec{v}$};
+\end{tikzpicture}%

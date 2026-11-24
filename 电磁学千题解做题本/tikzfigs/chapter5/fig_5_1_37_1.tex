@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\def\a{2.15}
+\def\b{1.18}
+\draw[vec] (-2.65,0)--(2.75,0) node[right] {$x$};
+\draw[vec] (0,-1.55)--(0,1.65) node[above] {$y$};
+\node[below right] at (0,0) {$O$};
+\node[below right] at ({\a/2},0) {$a$};
+\node[left] at (0,{\b/2}) {$b$};
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .15 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}},
+  mark=at position .65 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0) ellipse[x radius=\a,y radius=\b];
+\node[above right] at (1.15,0.98) {$I$};
+\node[below left] at (-1.15,-0.98) {$I$};
+\end{tikzpicture}%

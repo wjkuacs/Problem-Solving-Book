@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\draw[metal] (0,0) circle[radius=1.65];
+\foreach \x in {-.81,.81} \draw[fill=white] (\x,0) circle[radius=.52];
+\draw[aux] (-.81,0)--(3.23,0);
+\EMcharge{-.81,0}{above}{q_2}{+}
+\EMcharge{.81,0}{above}{q_1}{+}
+\EMcharge{3.23,0}{above}{q}{+}
+\EMdim{-.81}{.81}{-.80}{-.54}{a}
+\EMdim{.81}{3.23}{-.80}{-.46}{b}
+\end{tikzpicture}%

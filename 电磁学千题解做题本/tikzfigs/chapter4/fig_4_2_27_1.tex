@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,3.97)--(4.18,3.97)--(4.18,3.33)
+ (0,0)--(4.18,0)--(4.18,.64);
+\draw (2.74,.64) rectangle (5.63,3.33);
+\EMres[above=4pt]{0,1.62}{0,3.85}{R_1}
+\EMres{2.74,1.51}{2.74,3.18}{R_2}
+\EMres{5.63,.79}{5.63,2.24}{R_3}
+\EMcell[270]{0,1.09}
+\EMcell[270]{2.74,1.21}
+\EMcell[90]{5.63,2.71}
+\node[left] at (-.29,1.09) {$\varepsilon_1$};
+\node[left] at (2.45,1.20) {$\varepsilon_2$};
+\node[right] at (5.92,2.71) {$\varepsilon_3$};
+\EMpoint{2.00,0}{below}{a}
+\EMpoint{2.00,3.97}{above}{b}
+\EMdot{4.18,.64}
+\EMdot{4.18,3.33}
+\end{tikzpicture}%

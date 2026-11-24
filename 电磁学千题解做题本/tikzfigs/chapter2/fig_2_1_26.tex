@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\EMplate{0}{4.38}{1.15}
+\EMplate{0}{4.38}{-1.15}
+\draw (0,0)--(4.38,0);
+\foreach \y/\lab/\rhs in {1.15/A/U,0/C/q,-1.15/B/0} {
+  \node[left] at (0,\y) {$\lab$};
+  \node[right] at (4.38,\y) {$\rhs$};
+}
+\node[above] at (2.19,1.25) {$S$};
+\draw[dim] (2.19,.025)--(2.19,1.04) node[midway,right] {$d/2$};
+\draw[dim] (2.19,-.025)--(2.19,-1.04) node[midway,right] {$d/2$};
+\end{tikzpicture}%

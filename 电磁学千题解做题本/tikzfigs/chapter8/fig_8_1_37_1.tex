@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Two-square frame abcf and fcde
+\draw (0,0) rectangle (2.10,1.05);
+\draw (1.05,0)--(1.05,1.05);
+\node[above left] at (0,1.05) {$a$};
+\node[below left] at (0,0) {$b$};
+\node[below] at (1.05,0) {$c$};
+\node[above] at (1.05,1.05) {$f$};
+\node[above right] at (2.10,1.05) {$e$};
+\node[below right] at (2.10,0) {$d$};
+% Magnetic field boundary dashed line
+\draw[aux] (2.42,-.38)--(2.42,1.42);
+% Crosses to left of boundary
+\foreach \x in {-.35,.52,1.58,2.22} {
+  \foreach \y in {-.25,1.28} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+\node at (.52,.52) {$\times$};
+\node at (1.58,.52) {$\times$};
+\node[align=center] at (-.55,.52) {$\vec{B}$\\向内};
+% Velocity arrow v
+\draw[vec] (2.10,.52)--(2.92,.52) node[right] {$\vec{v}$};
+\end{tikzpicture}%

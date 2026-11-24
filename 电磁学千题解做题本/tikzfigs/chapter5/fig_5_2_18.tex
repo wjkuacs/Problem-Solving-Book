@@ -1,0 +1,30 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.08}
+\def\rx{0.48}
+\def\L{4.60}
+% Left end face and cylinder body
+\draw (0,0) ellipse[x radius=\rx,y radius=\R];
+\draw (0,\R)--(\L,\R) arc[start angle=90,end angle=-90,x radius=\rx,y radius=\R]--(0,-\R);
+% Dimension R on left
+\draw[guide] (0,0)--(-\rx-0.44,0) (0,\R)--(-\rx-0.44,\R);
+\draw[dim] (-\rx-0.28,0)--(-\rx-0.28,\R) node[midway,fill=white,inner sep=1pt] {$R$};
+% Three helical current curves on front surface (curving down-right)
+\foreach \xs/\lbl in {0.62/1, 2.02/0, 3.42/1} {
+  \draw[postaction={decorate},decoration={markings,
+    mark=at position .55 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+    (\xs,\R) .. controls ({\xs+0.55},0.39) and ({\xs+0.62},-0.39) .. ({\xs+0.88},-\R);
+  \ifnum\lbl=1
+    \node[below left=1pt] at ({\xs+0.52},-0.08) {$\vec{k}$};
+  \fi
+}
+% Angle theta ticks on the middle helix (x=2.02)
+\draw[guide] (2.36,0.55)--(2.92,0.55);
+\draw[guide] (2.58,0.55) arc[start angle=0,end angle=-62,radius=.22];
+\node[right] at (2.56,0.40) {$\theta$};
+\draw[guide] (2.57,0.00)--(3.13,0.00);
+\draw[guide] (2.79,0.00) arc[start angle=0,end angle=-72,radius=.22];
+\node[right] at (2.77,-0.15) {$\theta$};
+\draw[guide] (2.73,-0.55)--(3.29,-0.55);
+\draw[guide] (2.95,-0.55) arc[start angle=0,end angle=-62,radius=.22];
+\node[right] at (2.93,-0.70) {$\theta$};
+\end{tikzpicture}%

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.63)--(5.55,1.63)--(5.55,0)
+ (0,0)--(0,-1.25)--(3.34,-1.25);
+\EMcell[180]{2.68,1.63}
+\node[above] at (2.68,1.98) {$\varepsilon$};
+\draw (0,0)--(.12,0) (5.43,0)--(5.55,0);
+% The potentiometer wire is uniform along its full length.
+\draw[fill=white] (.12,-.11) rectangle (5.43,.11);
+\node[above] at (3.36,.12) {$R$};
+\EMcell[180]{1.16,-1.25}
+\node[below] at (1.16,-1.55) {$\varepsilon_x$};
+\EMres[below=4pt]{1.75,-1.25}{3.08,-1.25}{r}
+\draw[vec] (3.34,-1.25)--(3.34,-.13);
+\node[right] at (3.34,-.35) {$c$};
+\node[left] at (0,0) {$a$};
+\node[right] at (5.55,0) {$b$};
+\end{tikzpicture}%

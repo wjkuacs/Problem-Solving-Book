@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\def\Rin{1.08}
+\def\Rout{1.66}
+\def\Rmid{1.37}
+\draw (95:\Rout) arc[start angle=95,end angle=445,radius=\Rout]
+  --(85:\Rin) arc[start angle=445,end angle=95,radius=\Rin]--cycle;
+\fill (90:\Rmid) circle[radius=1.15pt];
+\node[above=2pt] at (90:\Rout) {$1$};
+\fill (100:\Rmid) circle[radius=1.15pt];
+\node[left=1.5pt] at (100:\Rmid) {$2$};
+\fill (80:\Rmid) circle[radius=1.15pt];
+\node[right=1.5pt] at (80:\Rmid) {$3$};
+\draw[vec] (274:\Rmid) arc[start angle=274,end angle=238,radius=\Rmid];
+\node at (292:\Rmid) {$\vec{M}$};
+\end{tikzpicture}%

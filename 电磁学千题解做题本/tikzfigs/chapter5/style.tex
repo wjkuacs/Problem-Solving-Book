@@ -1,0 +1,10 @@
+% Drawing styles for Chapter 5 (magnetic field of currents).
+\tikzset{
+  axis/.style={guide,dash pattern=on 6pt off 2pt on 1.5pt off 2pt},
+}
+
+\newcommand{\EMfifthDiagram}[1]{%
+  \adjustbox{max totalsize={.82\linewidth}{.23\textheight}}{%
+    \input{tikzfigs/chapter5/fig_#1.tex}%
+  }%
+}

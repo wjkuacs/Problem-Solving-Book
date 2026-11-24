@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\foreach \x in {-.90,.90} {
+  \foreach \y in {-.90,0,.90} {
+    \node at (\x,\y) {$\times$};
+  }
+}
+\node at (0,0) {$\times$};
+% Rectangular loop
+\draw (-.52,-.82) rectangle (.52,.82);
+% CW rotation arrows outside top-right and bottom-left
+\draw[vec] (.48,1.06) arc[start angle=78,end angle=25,radius=.95];
+\draw[vec] (-.48,-1.06) arc[start angle=258,end angle=205,radius=.95];
+\end{tikzpicture}%

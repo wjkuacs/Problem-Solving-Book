@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+% Half toroid with rectangular cross section (a, b, h)
+\def\ax{.85}
+\def\ay{.42}
+\def\bx{1.65}
+\def\by{.82}
+\def\h{.32}
+% Top outer and inner arcs (half ring, 0 to 180)
+\draw (\bx,0) arc[start angle=0,end angle=180,x radius=\bx,y radius=\by];
+\draw (\ax,0) arc[start angle=0,end angle=180,x radius=\ax,y radius=\ay];
+% Cut ends and thickness h
+\draw (-\bx,0)--(-\ax,0)--(-\ax,-\h)--(-\bx,-\h)--cycle;
+\draw (\ax,0)--(\bx,0)--(\bx,-\h)--(\ax,-\h)--cycle;
+\draw (-\ax,-\h) arc[start angle=180,end angle=0,x radius=\ax,y radius=\ay];
+% Winding lines across top and front edge
+\foreach \ang in {8,18,...,172} {
+  \draw ({\ax*cos(\ang)},{\ay*sin(\ang)})--({\bx*cos(\ang)},{\by*sin(\ang)});
+}
+% Dimensions a, b, h
+\draw[axis] (0,-.75)--(0,1.05);
+\draw[dim] (0,-.35)--(\ax,-.35) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0,-.70)--(\bx,-.70) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] (\bx,0)--(\bx+.45,0) (\bx,-\h)--(\bx+.45,-\h);
+\draw[dim] (\bx+.32,-\h)--(\bx+.32,0) node[midway,fill=white,inner sep=1pt] {$h$};
+\end{tikzpicture}%

@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+% Planar loop S1 (smaller, left) and S2 (larger, right, S2 = 2 S1)
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .48 with {\arrowreversed{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.25,0) ellipse[x radius=.58,y radius=.88];
+\node at (-1.25,0) {$S_1$};
+\node[left=2pt] at (-1.85,.10) {$I_1$};
+% Loop S2 on right
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .48 with {\arrowreversed{Stealth[length=3.2pt,width=2.6pt]}}}] (1.15,0) ellipse[x radius=.82,y radius=1.24];
+\node at (1.15,0) {$S_2$};
+\node[left=2pt] at (.31,.10) {$I_2$};
+\end{tikzpicture}%

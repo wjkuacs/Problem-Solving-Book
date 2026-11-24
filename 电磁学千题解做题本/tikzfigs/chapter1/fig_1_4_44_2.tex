@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) ellipse[x radius=.91,y radius=1.60];
+\coordinate (A) at (-.82,.69);
+\coordinate (D) at (0,1.17);
+\coordinate (P) at (3.22,1.17);
+\draw (0,0)--(A) node[midway,below left] {$R$};
+\draw (A)--(P) (D)--(P) (A)--(D)--(0,0);
+\draw (0,0)--(P) node[pos=.67,below] {$r$};
+\draw (0,0)--(4.05,0);
+\draw (P)--(3.22,0) node[midway,right] {$r\sin\theta$};
+\EMangle{0,0}{0}{19.97}{1.19}{\theta}
+\EMangle{0,0}{90}{139.92}{.46}{\phi}
+\node[above left] at (A) {$A$};
+\node[above right] at (D) {$D$};
+\node[above right] at (P) {$P$};
+\node[below left] at (0,0) {$O$};
+\end{tikzpicture}%

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\begin{scope}
+  \EMbridge{R_1}{R_2}{R_3}{R_4}
+  \EMterm{-.64,0}{left}{a}
+  \EMterm{4.64,0}{right}{b}
+  \node[below] at (2,-1.33) {(1)};
+\end{scope}
+\begin{scope}[xshift=5.6cm]
+  \EMbridge{R_1}{R_2}{R_3}{R_4}
+  \draw (2,-.88)--(2,.88);
+  \EMdot{2,.88}
+  \EMdot{2,-.88}
+  \EMterm{-.64,0}{left}{c}
+  \EMterm{4.64,0}{right}{d}
+  \node[below] at (2,-1.33) {(2)};
+\end{scope}
+\end{tikzpicture}%

@@ -1,0 +1,35 @@
+\begin{tikzpicture}[em diagram]
+% Three parallel wires AB, CD, EF
+\draw (0,.95)--(2.95,.95) node[right] {$B$};
+\node[above left] at (0,.95) {$A$};
+\draw (.65,0)--(2.95,0) node[right] {$D$};
+\node[left] at (.65,0) {$C$};
+\draw (0,-.95)--(2.95,-.95) node[right] {$F$};
+\node[below left] at (0,-.95) {$E$};
+% Resistors R (between A and E) and r (between B and D)
+\draw (0,.95)--(0,.45);
+\EMres{0,.45}{0,-.45}{}
+\node[left=4pt] at (0,0) {$R$};
+\draw (0,-.45)--(0,-.95);
+\draw (2.95,.95)--(2.95,.72);
+\EMres{2.95,.72}{2.95,.23}{}
+\node[right=4pt] at (2.95,.48) {$r$};
+\draw (2.95,.23)--(2.95,0);
+% Sliding rod ab
+\draw[line width=.75pt] (1.95,-1.25)--(1.95,1.25);
+\node[above] at (1.95,1.25) {$a$};
+\node[below] at (1.95,-1.25) {$b$};
+\draw[vec] (1.95,-.45)--(2.65,-.45) node[right] {$\vec{v}$};
+% Dimensions l1 and l2
+\draw[guide] (3.40,.95)--(3.70,.95) (3.40,0)--(3.70,0) (3.40,-.95)--(3.70,-.95);
+\draw[dim] (3.56,0)--(3.56,.95) node[midway,fill=white,inner sep=1pt] {$l_1$};
+\draw[dim] (3.56,-.95)--(3.56,0) node[midway,fill=white,inner sep=1pt] {$l_2$};
+% Out-of-page B field marks
+\foreach \x/\y in {.55/.48, 1.32/.48, 2.38/.48, .55/-.48} {
+  \begin{scope}[shift={(\x,\y)}]
+    \draw (0,0) circle[radius=2.4pt];
+    \fill (0,0) circle[radius=.8pt];
+  \end{scope}
+}
+\node at (1.28,-.48) {$\vec{B}$ 向外};
+\end{tikzpicture}%

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (a) at (0,0);
+\coordinate (b) at (2.67,0);
+\coordinate (c) at (0,2.67);
+\coordinate (g) at (2.67,2.67);
+\coordinate (f) at (.90,.90);
+\coordinate (e) at (3.57,.90);
+\coordinate (h) at (.90,3.57);
+\coordinate (d) at (3.57,3.57);
+\foreach \from/\to in {a/b,a/c,c/g,c/h,g/d,h/d,a/f,b/e,f/e,f/h,e/d} {
+  \EMres{\from}{\to}{r} }
+% Break the rear wires at the two projected crossings. These points are not junctions.
+\EMres[below=4pt]{b}{g}{r}
+\draw[white,line width=1.6pt] (.83,2.67)--(.97,2.67) (2.67,.82)--(2.67,.98);
+\draw (.78,2.67)--(1.02,2.67) (2.67,.77)--(2.67,1.03);
+\foreach \p/\side in {a/below left,b/below right,c/left,d/above right,e/below right,f/below right,g/below left,h/above left}
+  \node[\side] at (\p) {$\p$};
+\end{tikzpicture}%

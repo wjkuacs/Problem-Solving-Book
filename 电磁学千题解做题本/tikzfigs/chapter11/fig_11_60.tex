@@ -1,0 +1,41 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,2.0)--(2.0,4.0)--(4.0,2.0)--(2.0,0)--cycle;
+\draw (2.0,0)--(2.0,4.0);
+\draw (0,2.0)--(0,-.60)--(4.0,-.60)--(4.0,2.0);
+
+% Top-left: R_1 and L
+\EMres[above=4pt]{.1,2.1}{1.15,3.15}{R_1}
+\begin{scope}[shift={(1.52,3.52)},rotate=45]
+  \draw[white,line width=2pt] (-.40,0)--(.40,0);
+  \draw (-.40,0) arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10]
+    arc[start angle=180,end angle=0,radius=.10];
+  \node[above=4pt] at (0,.10) {$L$};
+\end{scope}
+
+% Top-right: R_2
+\EMres[above=4pt]{2.0,4.0}{4.0,2.0}{R_2}
+
+% Bottom-left: R_3
+\EMres[below=4pt]{0,2.0}{2.0,0}{R_3}
+
+% Bottom-right: parallel variable C and variable R_4
+\draw (2.40,.40)--(2.02,.78)--(3.22,1.98)--(3.60,1.60);
+\EMdot{2.40,.40} \EMdot{3.60,1.60}
+\begin{scope}[shift={(2.62,1.38)},rotate=45]
+  \draw[white,line width=2pt] (-.12,0)--(.12,0);
+  \draw (-.12,-.24)--(-.12,.24) (.12,-.24)--(.12,.24);
+  \node[above=3pt] at (.02,.28) {$C$};
+  \draw[-{Stealth[length=2.8pt,width=2.3pt]}] (-.22,-.32)--(.22,.32);
+\end{scope}
+\EMres[below=4pt]{2.40,.40}{3.60,1.60}{R_4}
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (2.75,.55)--(3.25,1.45);
+
+\EMmeter{2.0,2.0}{\mathrm{G}}
+\draw[fill=white] (2.0,-.60) circle[radius=.30];
+\draw (1.85,-.60) .. controls (1.925,-.46) and (2.00,-.46) .. (2.00,-.60)
+  .. controls (2.00,-.74) and (2.075,-.74) .. (2.15,-.60);
+
+\EMdot{0,2.0} \EMdot{4.0,2.0} \EMdot{2.0,4.0} \EMdot{2.0,0}
+\end{tikzpicture}%

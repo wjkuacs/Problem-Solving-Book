@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Cylindrical core
+\draw (-1.75,.48)--(1.65,.48) (-1.75,-.48)--(1.65,-.48);
+\draw (-1.75,0) ellipse[x radius=.18,y radius=.48];
+\draw (1.65,.48) arc[start angle=90,end angle=-90,x radius=.18,y radius=.48];
+\node at (-1.75,0) {$S$};
+% Thin primary turns N1 with top leads
+\foreach \x in {-1.25,-.85,-.45,-.05,.35,.75,1.15} {
+  \draw (\x,.48) .. controls (\x+.10,.25) and (\x+.10,-.25) .. (\x,-.48);
+}
+\draw (-1.25,.48)--(-1.25,1.05) (1.15,.48)--(1.15,1.05);
+\EMterm{-1.25,1.05}{}{}
+\EMterm{1.15,1.05}{}{}
+\node[above] at (-.05,.82) {$N_1$};
+% Thick secondary turns N2 with bottom leads
+\foreach \x in {-1.05,-.65,-.25,.15,.55,.95} {
+  \draw[line width=1.4pt] (\x,.48) .. controls (\x+.10,.25) and (\x+.10,-.25) .. (\x,-.48);
+}
+\draw[line width=1.4pt] (-1.05,-.48)--(-1.05,-1.05) (.95,-.48)--(.95,-1.05);
+\node[below] at (-.05,-.82) {$N_2$};
+\end{tikzpicture}%

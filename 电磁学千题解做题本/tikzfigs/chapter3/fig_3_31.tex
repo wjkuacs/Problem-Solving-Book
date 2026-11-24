@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\node[draw,minimum width=2.88cm,minimum height=.65cm] (lamp) at (2.57,1.50) {激光闪光灯};
+\node[draw,minimum width=.90cm,minimum height=.35cm] (resistor) at (1.30,-1.55) {};
+\node[above] at (resistor.north) {$R$};
+\draw (0,.94)--(0,1.50)--(lamp.west) (lamp.east)--(5.15,1.50)--(5.15,-1.55);
+\draw (0,.43)--(0,-1.55)--(resistor.west) (resistor.east)--(2.71,-1.55);
+\draw (0,0)--(2.45,0) (2.71,0)--(5.15,0);
+\EMcap{2.58}{0}{}
+\node[below] at (2.58,-.24) {$C$};
+\draw (2.71,-1.91)--(2.71,-1.19) (2.96,-1.77)--(2.96,-1.33) (2.96,-1.55)--(5.15,-1.55);
+\node[below left] at (2.69,-1.75) {$+$};
+\node[below right] at (2.96,-1.75) {$-$};
+\EMball{0,.94}{}{}
+\EMball{0,.43}{}{}
+\node[left,align=center] at (-.24,.69) {球形\\开关};
+\fill (0,0) circle[radius=1.25pt] (5.15,0) circle[radius=1.25pt];
+\end{tikzpicture}%

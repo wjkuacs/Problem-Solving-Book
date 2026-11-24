@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(3.8,0);
+\EMres[above=4pt]{.4,0}{2.0,0}{R'}
+\begin{scope}[shift={(2.65,0)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.26)--(-.13,.26) (.13,-.26)--(.13,.26);
+  \node[above=4pt] at (0,.18) {$C'$};
+\end{scope}
+\EMterm{0,0}{left}{a}
+\EMterm{3.8,0}{right}{b}
+\end{tikzpicture}%

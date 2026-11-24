@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) rectangle (4.0,2.0);
+\draw[fill=white] (0,1.0) circle[radius=.30];
+\draw (-.15,1.0) .. controls (-.075,1.14) and (0,1.14) .. (0,1.0)
+  .. controls (0,.86) and (.075,.86) .. (.15,1.0);
+\node[left=2pt] at (-.30,1.0) {电源};
+\node[right=2pt] at (.30,1.0) {$X+\mathrm{j}Y$};
+\node[draw,fill=white,minimum width=1.15cm,minimum height=.45cm,inner sep=1pt] at (4.0,1.0) {负载};
+\node[right=4pt] at (4.65,1.0) {$X-\mathrm{j}Y$};
+\EMdot{2.0,2.0} \EMdot{2.0,0}
+\end{tikzpicture}%

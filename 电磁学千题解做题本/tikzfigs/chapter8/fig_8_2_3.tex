@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Frame S
+\draw[vec] (0,0)--(0,1.65) node[left] {$y$};
+\draw[vec] (0,0)--(-1.05,-1.05) node[below left] {$z$};
+\draw[vec] (0,0)--(2.35,0) node[right] {$x, x'$};
+\node[below right] at (0,0) {$O$};
+% Magnetic field B along +z direction
+\draw[vec] (-.25,.65)--(-1.05,-.15) node[left] {$\vec{B}$};
+% Frame S'
+\coordinate (Op) at (.75,0);
+\draw[vec] (Op)--(.75,1.65) node[left] {$y'$};
+\draw[vec] (Op)--(.75-1.05,-1.05) node[below left] {$z'$};
+\node[below right] at (Op) {$O'$};
+\draw[vec] (.75,1.15)--(1.75,1.15) node[right] {$\vec{v}$};
+\draw[vec] (.75,-.55)--(1.75,-.55) node[right] {$\vec{v}$};
+\end{tikzpicture}%

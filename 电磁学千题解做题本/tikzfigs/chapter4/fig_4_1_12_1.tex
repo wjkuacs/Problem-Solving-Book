@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.55,0)--(0,0) (5.60,0)--(6.65,0);
+\foreach \k in {0,...,3} {
+  \pgfmathtruncatemacro{\index}{\k+1}
+  \EMres[below=4pt]{1.4*\k,0}{1.4*\index,0}{R_{\index}}
+}
+\draw (0,0)--(0,1.43)--(5.60,1.43)--(5.60,0)
+  (2.80,0)--(2.80,.68)--(5.60,.68)
+  (1.40,0)--(1.40,-1.13)--(6.45,-1.13)--(6.45,0)
+  (4.20,0)--(4.20,-1.13);
+\EMswitch{2.51,1.43}
+\EMswitch{4.17,.68}
+\EMswitch{2.44,-1.13}
+\EMswitch{5.45,-1.13}
+\EMswitch{6.04,0}
+\foreach \x/\y/\k in {2.51/1.43/4,4.17/.68/2,2.44/-1.13/3,5.45/-1.13/1,6.04/0/5}
+  \node[below] at (\x,\y-.05) {$K_{\k}$};
+\foreach \x in {0,1.40,2.80,4.20,5.60,6.45} { \EMdot{\x,0} }
+\EMdot{4.20,-1.13}
+\EMterm{-.55,0}{left}{a}
+\EMterm{6.65,0}{right}{b}
+\end{tikzpicture}%

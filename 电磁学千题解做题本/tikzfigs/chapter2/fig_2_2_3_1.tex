@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\draw[dielectric] (0,-.85) rectangle (4.86,.85);
+\draw (0,.85)--(4.86,.85) (0,-.85)--(4.86,-.85);
+\foreach \x in {.21,.62,...,4.71} {
+  \node[below,inner sep=0pt] at (\x,.85) {$+$};
+  \node[above,inner sep=0pt] at (\x,-.85) {$-$};
+}
+\node at (2.43,0) {$\varepsilon$};
+\node[right] at (4.86,.85) {$\sigma$};
+\node[right] at (4.86,-.85) {$-\sigma$};
+\end{tikzpicture}%

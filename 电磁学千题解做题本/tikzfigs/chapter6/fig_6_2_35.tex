@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Outer cylindrical shell of radius R carrying I out of page (dots)
+\def\R{1.42}
+\draw (0,0) circle[radius=\R];
+\foreach \ang in {0,45,...,315} {
+  \fill (\ang:\R) circle[radius=1.5pt];
+}
+\node[above=5pt] at (0,\R) {$I(\text{向外})$};
+% Inner conductor carrying I into page (cross)
+\begin{scope}[shift={(0,0)}]
+  \draw[fill=white] (0,0) circle[radius=4.0pt];
+  \draw[guide] (-2.6pt,-2.6pt)--(2.6pt,2.6pt) (-2.6pt,2.6pt)--(2.6pt,-2.6pt);
+\end{scope}
+\node[below=5pt] at (0,0) {$I(\text{向内})$};
+% Differential wedge d\varphi, radius R, and unit vector e_\varphi
+\draw[guide] (0,0)--(14:\R) (0,0)--(-10:\R);
+\draw[vec] (0,0)--(14:{\R-0.02}) node[midway,above left=-1pt] {$R$};
+\EMangle{0,0}{-10}{14}{0.75}{\mathrm{d}\varphi}
+\draw[vec] (\R,-0.08)--(\R,-0.92) node[right=1pt] {$\vec{e}_\varphi$};
+\end{tikzpicture}%

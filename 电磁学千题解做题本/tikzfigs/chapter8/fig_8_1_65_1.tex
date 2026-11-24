@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Outer magnetic field boundary and metal ring radius r
+\draw (0,0) circle[radius=1.55];
+\draw (0,0) circle[radius=1.22];
+\EMpoint{0,1.22}{below}{$a$}
+\EMpoint{0,-1.22}{above}{$b$}
+\node[right] at (-1.18,0) {$R_1$};
+\node[left] at (1.18,0) {$R_2$};
+\draw[vec] (0,0)--(42:1.22) node[midway,above left=-1pt] {$r$};
+% Crosses inside and outside ring
+\foreach \x/\y in {0/1.38, -.98/.98, .98/.98, -1.38/0, 1.38/0, -.98/-.98, .98/-.98, 0/-1.38,
+                   -.65/.42, .65/.42} {
+  \node[font=\footnotesize] at (\x,\y) {$\times$};
+}
+\node[font=\scriptsize,align=center] at (0,-.36) {$\vec{B}$ 向内\\并增大};
+\end{tikzpicture}%

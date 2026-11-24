@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Axes x, y, z
+\draw[vec] (0,0)--(0,1.75) node[left] {$y$};
+\draw[vec] (0,0)--(-1.05,-1.05) node[below left] {$z$};
+\draw[vec] (0,0)--(2.55,0) node[right] {$x$};
+\node[below right] at (0,0) {$O$};
+% B along +z
+\draw[vec] (-.20,.72)--(-1.05,-.13) node[left] {$\vec{B}$};
+% Tilted rod ba at 30 deg in x-y plane
+\coordinate (b) at (.58,.28);
+\coordinate (a) at (1.92,1.05);
+\draw[line width=1.1pt] (b)--(a);
+\node[below left] at (b) {$b$};
+\node[above right] at (a) {$a$};
+\draw[aux] (b)--(1.82,.28);
+\draw[guide] (1.10,.28) arc[start angle=0,end angle=30,radius=.52];
+\node at (1.50,.40) {$30^\circ$};
+\draw[vec] (1.35,.72)--(2.22,.72) node[right] {$\vec{v}$};
+\end{tikzpicture}%

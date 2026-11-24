@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.95)--(4.20,1.95)--(4.20,0)--(0,0);
+\draw (2.10,1.95)--(2.10,1.53) (2.10,.41)--(2.10,0);
+% Switches K_1 and K_2
+\EMswitch{1.05,1.95}
+\node[above=5pt] at (1.05,2.11) {$K_1$};
+\EMswitch{3.15,1.95}
+\node[above=5pt] at (3.15,2.11) {$K_2$};
+% Left capacitor C_1
+\draw[white,line width=2.2pt] (0,.88)--(0,1.06);
+\draw (-.26,.88)--(.26,.88) (-.26,1.06)--(.26,1.06);
+\node[left=4pt,align=center] at (-.26,.97) {$C_1$\\[-2pt]$(100\,\mu\mathrm{F})$};
+% Middle inductor L (loops bulge left)
+\foreach \i in {0,1,2,3}
+  \draw (2.10,.41+.28*\i+.28) arc[start angle=90,end angle=270,x radius=.15,y radius=.14];
+\node[right=3pt,align=left] at (2.14,.97) {$L$\\[-2pt]$(10\,\mathrm{H})$};
+% Right capacitor C_2
+\draw[white,line width=2.2pt] (4.20,.88)--(4.20,1.06);
+\draw (3.94,.88)--(4.46,.88) (3.94,1.06)--(4.46,1.06);
+\node[right=4pt,align=center] at (4.46,.97) {$C_2$\\[-2pt]$(900\,\mu\mathrm{F})$};
+\EMdot{2.10,1.95}
+\EMdot{2.10,0}
+\end{tikzpicture}%

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw[dielectric] (0,-1.24) rectangle (4.50,1.24);
+\draw (0,-.06)--(4.50,-.06);
+\EMplate{0}{4.50}{1.34}
+\EMplate{0}{4.50}{-1.34}
+\node[above] at (2.25,1.44) {$S$};
+\node at (2.25,.58) {$\varepsilon_1,\sigma_1$};
+\node at (2.25,-.65) {$\varepsilon_2,\sigma_2$};
+\draw (0,1.34)--(-1.29,1.34)--(-1.29,-1.34)--(0,-1.34);
+\EMcell[270]{-1.29,0}
+\draw[dim] (-.62,-1.29)--(-.62,1.29) node[midway,fill=white,inner sep=1pt] {$U$};
+\EMdimY{4.92}{-.06}{1.24}{d_1}
+\EMdimY{4.92}{-1.24}{-.06}{d_2}
+\end{tikzpicture}%

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(1.8,0) (2.6,0)--(4.4,0)--(4.4,1.72)--(0,1.72)--(0,0);
+\draw (.5,1.10) rectangle (3.9,2.35);
+\begin{scope}[shift={(2.2,2.35)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[above=4pt] at (0,.11) {$L$};
+\end{scope}
+\begin{scope}[shift={(1.7,1.10)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.24)--(-.13,.24) (.13,-.24)--(.13,.24);
+  \node[above=2pt] at (0,.26) {$C$};
+\end{scope}
+\EMres[above=4pt]{2.3,1.10}{3.7,1.10}{R}
+\draw (2.04,0) .. controls (2.12,.12) and (2.20,.12) .. (2.20,0)
+  .. controls (2.20,-.12) and (2.28,-.12) .. (2.36,0);
+\EMterm{1.8,0}{}{} \EMterm{2.6,0}{}{}
+\node[below=4pt] at (2.2,0) {$U$};
+
+\EMdot{1.15,2.35} \node[above=2pt] at (1.15,2.35) {$I_1$};
+\EMdot{1.15,1.10} \node[above=2pt] at (1.15,1.10) {$I_2$};
+\EMdot{.5,1.72} \EMdot{3.9,1.72}
+
+% U_C indicator across C
+\draw[guide] (1.35,.32)--(1.35,.78) (2.05,.32)--(2.05,.78);
+\draw[-{Stealth[length=2.3pt,width=2.2pt]}] (.88,.55)--(1.35,.55);
+\draw[-{Stealth[length=2.3pt,width=2.2pt]}] (2.52,.55)--(2.05,.55);
+\node at (1.70,.55) {$U_C$};
+\end{tikzpicture}%

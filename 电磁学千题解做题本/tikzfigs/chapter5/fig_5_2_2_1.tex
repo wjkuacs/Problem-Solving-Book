@@ -1,0 +1,18 @@
+\begin{tikzpicture}[em diagram]
+\def\a{1.15}
+% Two out-of-page wires I_1 (top) and I_2 (bottom)
+\draw[fill=white] (0,\a) circle[radius=4.2pt];
+\fill (0,\a) circle[radius=1.3pt];
+\node[above=4pt] at (0,\a) {$I_1$};
+\draw[fill=white] (0,-\a) circle[radius=4.2pt];
+\fill (0,-\a) circle[radius=1.3pt];
+\node[below=4pt] at (0,-\a) {$I_2$};
+% Dimension 2a on left
+\draw[guide] (-.68,\a)--(-.15,\a) (-.68,-\a)--(-.15,-\a);
+\draw[dim] (-.46,-\a)--(-.46,\a) node[midway,fill=white,inner sep=1pt] {$2a$};
+% Dashed lines to point P
+\coordinate (P) at (1.55,0.22);
+\draw[aux] (0.12,{\a-0.08})--(P) node[midway,above right=-1pt] {$r_1$};
+\draw[aux] (0.10,{-\a+0.10})--(P) node[midway,below right=-1pt] {$r_2$};
+\EMpoint{P}{right}{P}
+\end{tikzpicture}%

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Rotor cylinder with rotating magnetic field B
+\def\rx{.30}
+\def\ry{.68}
+\def\L{2.25}
+\draw[fill=white] (-\L/2,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (\L/2,\ry) arc[start angle=90,end angle=-90,x radius=\rx,y radius=\ry];
+\draw (-\L/2,\ry)--(\L/2,\ry) (-\L/2,-\ry)--(\L/2,-\ry);
+% Axis OO'
+\draw[axis] (-\L/2-\rx-.45,0)--(-\L/2,0);
+\draw[axis] (\L/2+\rx,0)--(\L/2+\rx+.45,0);
+\node[left] at (-\L/2-\rx-.45,0) {$O$};
+\node[right] at (\L/2+\rx+.45,0) {$O'$};
+% Dashed rotating B path around cylinder
+\draw[aux] (0,0) ellipse[x radius=.55,y radius=1.18];
+\draw[vec] (0,-1.18)--(0,1.25) node[above] {$\vec{B}$};
+\draw[vec] (-.22,1.10) arc[start angle=115,end angle=85,x radius=.55,y radius=1.18];
+\draw[vec] (.22,-1.10) arc[start angle=-65,end angle=-95,x radius=.55,y radius=1.18];
+\end{tikzpicture}%

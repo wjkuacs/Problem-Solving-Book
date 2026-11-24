@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(5.2,0)--(5.2,1.6)--(4.6,1.6)
+      (0,0)--(0,1.6)--(2.0,1.6);
+\draw (2.0,1.1) rectangle (4.6,2.1);
+\EMres[above=4pt]{.3,1.6}{1.7,1.6}{R}
+\begin{scope}[shift={(3.3,2.1)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+  \node[above=4pt] at (0,.11) {$L$};
+\end{scope}
+\begin{scope}[shift={(3.3,1.1)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[above=4pt] at (0,.16) {$C$};
+\end{scope}
+\draw[fill=white] (2.6,0) circle[radius=.30];
+\draw (2.45,0) .. controls (2.525,.14) and (2.60,.14) .. (2.60,0)
+  .. controls (2.60,-.14) and (2.675,-.14) .. (2.75,0);
+\node[below=3pt] at (2.6,-.30) {$220\mathrm{V},\,50\mathrm{Hz}$};
+\EMdot{0,.8} \node[right=2pt] at (0,.8) {$I$};
+\EMdot{2.45,2.1} \node[below=2pt] at (2.45,2.1) {$I_L$};
+\EMdot{2.45,1.1} \node[below=2pt] at (2.45,1.1) {$I_C$};
+\EMdot{2.0,1.6} \EMdot{4.6,1.6}
+\end{tikzpicture}%

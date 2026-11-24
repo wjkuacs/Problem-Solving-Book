@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram,x=1cm,y=1cm]
+\foreach \i in {0,1,2,3} {
+  \foreach \k in {0,1,2} {
+    \EMres{1.10*\k,1.10*\i}{1.10*\k+1.10,1.10*\i}{}
+    \EMres{1.10*\i,1.10*\k}{1.10*\i,1.10*\k+1.10}{}
+  }
+}
+\foreach \x in {0,1.10,2.20,3.30} {
+  \foreach \y in {1.10,2.20} { \EMdot{\x,\y} }
+}
+\foreach \x in {1.10,2.20} { \EMdot{\x,0} { \EMdot{\x,3.30} } }
+\foreach \x/\y/\labelNode/\side in {0/0/a/below left,3.30/3.30/b/above right,0/3.30/e/above left,3.30/0/h/below right,0/1.10/m/left,1.10/0/n/below,2.20/3.30/p/above,3.30/2.20/q/right,1.10/1.10/c/below left,2.20/2.20/d/above right,1.10/2.20/f/above left,2.20/1.10/g/below right}
+  \node[\side,inner sep=1.4pt] at (\x,\y) {$\labelNode$};
+\end{tikzpicture}%

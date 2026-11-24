@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,2.05)--(4.55,2.05)--(4.55,0);
+\EMcell[270]{0,1.00}
+\EMcell[270]{4.55,1.00}
+\node[left] at (-.29,1.00) {$\varepsilon_1$};
+\node[right] at (4.84,1.00) {$\varepsilon_2$};
+\EMres[below=4pt]{0,0}{2.275,0}{R_1}
+\EMres[below=4pt]{2.275,0}{4.55,0}{R_2}
+\EMres{2.275,0}{2.275,2.05}{R}
+\EMdot{2.275,0}
+\EMdot{2.275,2.05}
+\end{tikzpicture}%

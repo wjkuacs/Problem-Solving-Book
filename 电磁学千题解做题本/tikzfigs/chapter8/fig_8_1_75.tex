@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Upward B field lines
+\foreach \x in {-1.25,-.95,-.65,-.35,0,.35,.65,.95,1.25} {
+  \draw[vec] (\x,-.85)--(\x,.95);
+}
+\node[above] at (0,1.02) {$\vec{B}$};
+% Perspective circular electron orbit
+\draw[line width=.8pt] (-1.30,.12) arc[start angle=180,end angle=360,x radius=1.30,y radius=.42];
+\draw[aux] (1.30,.12) arc[start angle=0,end angle=180,x radius=1.30,y radius=.42];
+% Electron with tangent velocity v
+\EMcharge{.58,-.26}{}{}{-}
+\draw[vec] (.58,-.26)--(1.55,.10) node[right] {$\vec{v}$};
+\end{tikzpicture}%

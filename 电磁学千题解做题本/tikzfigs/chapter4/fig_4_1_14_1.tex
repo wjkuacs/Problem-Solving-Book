@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\draw (-.50,0)--(0,0) (5.80,0)--(6.30,0);
+\foreach \i/\side in {0/below,1/below,2/above,3/above} {
+  \pgfmathtruncatemacro{\index}{\i+1}
+  \EMres[\side=4pt]{1.45*\i,0}{1.45*\index,0}{R_{\index}}
+}
+\draw (0,0)--(0,.79)--(2.90,.79)--(2.90,0)
+      (1.45,0)--(1.45,-.79)--(4.35,-.79)--(4.35,0);
+\foreach \x in {0,1.45,2.90,4.35} { \EMdot{\x,0} }
+\EMterm{-.50,0}{left}{a}
+\EMterm{6.30,0}{right}{b}
+\end{tikzpicture}%

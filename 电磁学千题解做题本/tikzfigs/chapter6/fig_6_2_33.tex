@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+% Upper coaxial coil (multi-turn band)
+\foreach \dy in {0,0.04,0.08} {
+  \draw (0,{0.45+\dy}) ellipse[x radius=1.35,y radius=0.38];
+}
+\draw[vec] (0.45,0.13)--(-0.35,0.13);
+\node[above=1pt] at (0.05,0.14) {$NI$};
+% Lower coaxial coil (multi-turn band)
+\foreach \dy in {0,0.04,0.08} {
+  \draw (0,{-0.45+\dy}) ellipse[x radius=1.35,y radius=0.38];
+}
+\draw[vec] (-0.35,-0.83)--(0.45,-0.83);
+\node[below=1pt] at (0.05,-0.83) {$NI$};
+% Diameter 2R at top
+\draw[guide] (-1.35,0.53)--(-1.35,1.18) (1.35,0.53)--(1.35,1.18);
+\draw[dim] (-1.35,1.02)--(1.35,1.02) node[midway,fill=white,inner sep=1pt] {$2R$};
+% Separation r on left
+\draw[guide] (-1.75,0.49)--(-1.35,0.49) (-1.75,-0.41)--(-1.35,-0.41);
+\draw[vec] (-1.58,0.88)--(-1.58,0.49);
+\draw[vec] (-1.58,-0.80)--(-1.58,-0.41);
+\node[fill=white,inner sep=1pt] at (-1.58,0.04) {$r$};
+\end{tikzpicture}%

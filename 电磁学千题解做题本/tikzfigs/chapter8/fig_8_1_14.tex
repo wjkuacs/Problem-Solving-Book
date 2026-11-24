@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+% Outer ring B with CCW arrow I
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .08 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0) circle[radius=1.48];
+\node[above] at (0,1.50) {$B$};
+\node[right=2pt] at (1.35,.58) {$I$};
+% Inner ring A with negative charges
+\draw (0,0) circle[radius=.96];
+\node[below] at (0,.92) {$A$};
+\foreach \ang in {0,45,90,135,180,225,270,315} {
+  \node at (\ang:1.11) {$-$};
+}
+\end{tikzpicture}%

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[em diagram]
+\draw[vec] (-2.68,0)--(3.29,0) node[right] {$x$};
+\draw[vec] (0,0)--(0,1.86) node[above] {$y$};
+\draw[vec] (0,0)--(-1.31,-1.40) node[below left] {$z$};
+\draw[line width=.85pt] (-1.72,0)--(1.72,0) node[pos=.76,above] {$q$};
+\foreach \x/\planeLabel in {0/中垂面,1.72/端垂面} {
+  \draw (\x+.67,1.57)--(\x+.67,-.06)--(\x-.72,-1.56)--(\x-.72,.07)--cycle;
+  \node[align=center,text width=1em,font=\scriptsize,inner sep=0pt] at (\x+.44,.68) {\planeLabel};
+}
+\EMpoint{0,0}{left}{O}
+\EMdim{-1.72}{0}{.79}{.41}{l}
+\EMdim{.67}{2.39}{1.98}{1.64}{l}
+\end{tikzpicture}%

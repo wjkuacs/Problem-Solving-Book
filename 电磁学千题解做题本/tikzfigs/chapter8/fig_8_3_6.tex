@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+% Long cylinder of length l and cross section S
+\draw (-1.95,.32)--(1.95,.32) (-1.95,-.32)--(1.95,-.32);
+\draw (-1.95,0) ellipse[x radius=.12,y radius=.32];
+\draw (1.95,.32) arc[start angle=90,end angle=-90,x radius=.12,y radius=.32];
+\node[right] at (2.10,0) {$S$};
+% Dense N1 windings along full length
+\foreach \x in {-1.70,-1.50,...,1.70} {
+  \draw (\x,.32) .. controls (\x+.06,.16) and (\x+.06,-.16) .. (\x,-.32);
+}
+\draw (-1.70,.32)--(-1.70,1.08) (1.70,.32)--(1.70,1.08);
+\EMterm{-1.70,1.08}{}{}
+\EMterm{1.70,1.08}{}{}
+\node[above left] at (-.85,.42) {$N_1$};
+% Dimension l
+\draw[dim] (-1.70,.85)--(1.70,.85) node[midway,fill=white,inner sep=1pt] {$l$};
+% Thick N2 coil at middle
+\foreach \x in {-.35,-.05,.25} {
+  \draw[line width=1.4pt] (\x,.34) .. controls (\x+.08,.16) and (\x+.08,-.16) .. (\x,-.34);
+}
+\draw[line width=1.4pt] (-.35,-.34)--(-.35,-.85) (.25,-.34)--(.25,-.85);
+\node[below] at (-.05,-.68) {$N_2$};
+\end{tikzpicture}%

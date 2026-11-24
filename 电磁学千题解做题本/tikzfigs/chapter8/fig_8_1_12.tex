@@ -1,0 +1,36 @@
+\begin{tikzpicture}[em diagram]
+% Back leads going behind core
+\draw (-1.35,1.25)--(-1.35,.42);
+\draw (-.95,-1.05)--(-.95,-.42);
+% Back turns of primary and secondary
+\foreach \x in {-1.25,-.80,-.35,.10,.55,1.00} {
+  \draw (\x,.45)--(\x+.20,-.45);
+}
+% Horizontal cylindrical core
+\draw[fill=white] (-2.05,-.45) rectangle (2.05,.45);
+% Primary front turns (slanting / bottom-left to top-right)
+\draw (-1.35,.45) arc[start angle=180,end angle=0,x radius=.05,y radius=.07];
+\foreach \x in {-1.25,-.80,-.35,.10,.55,1.00} {
+  \draw (\x,-.45)--(\x+.45,.45);
+  \draw (\x,-.45) arc[start angle=180,end angle=360,x radius=.05,y radius=.07];
+  \draw (\x+.45,.45) arc[start angle=0,end angle=180,x radius=.05,y radius=.07];
+}
+\draw (1.45,.45)--(1.45,1.25);
+% Terminals a, a', b
+\EMdot{-1.35,1.25}
+\node[left] at (-1.38,1.25) {$a$};
+\fill (-1.35,.96) circle[radius=.95pt] node[left] {$a'$};
+\EMdot{1.45,1.25}
+\node[right] at (1.48,1.25) {$b$};
+% Secondary front turns (slanting \ top-left to bottom-right)
+\foreach \x in {-.80,-.35,.10,.55} {
+  \draw[line width=.75pt] (\x+.10,.45)--(\x+.38,-.45);
+}
+\draw (.93,-.45)--(.93,-1.05);
+% Bottom resistor circuit with c and d
+\draw (-.95,-1.05)--(-.45,-1.05);
+\EMres{-.45,-1.05}{.45,-1.05}{R}
+\draw (.45,-1.05)--(.93,-1.05);
+\node[below] at (-.70,-1.08) {$c$};
+\node[below] at (.70,-1.08) {$d$};
+\end{tikzpicture}%

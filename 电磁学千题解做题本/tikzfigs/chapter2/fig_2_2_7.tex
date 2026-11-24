@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\EMplate{0}{4.20}{1.05}
+\EMplate{0}{4.20}{-1.05}
+\draw[dielectric] (0,-.20) rectangle (4.20,.20);
+\node at (2.1,0) {$\varepsilon_r$};
+\node at (2.1,.58) {空隙};
+\node at (2.1,-.57) {空隙};
+\EMdimY{-.48}{-1.05}{1.05}{d}
+\draw[vec] (.81,.63)--(.81,.23);
+\draw[vec] (.81,-.62)--(.81,-.23);
+\node[left] at (.79,.34) {$t$};
+\draw (4.20,1.05)--(4.69,1.05)--(4.69,.12) (4.20,-1.05)--(4.69,-1.05)--(4.69,-.12);
+\EMbattery{4.69}{0}
+\node[right] at (5.28,0) {$U$};
+\end{tikzpicture}%

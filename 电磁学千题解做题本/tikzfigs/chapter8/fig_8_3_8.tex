@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Long solenoid divided into two halves l/2 and l/2
+\draw (-1.85,.42)--(1.85,.42) (-1.85,-.42)--(1.85,-.42);
+\foreach \x in {-1.70,-1.52,...,1.70} {
+  \draw (\x,.42)--(\x+.08,-.42);
+}
+% Terminals at ends and midpoint
+\draw (-1.70,-.42)--(-1.70,-.72) (0,-.42)--(0,-.72) (1.70,-.42)--(1.70,-.72);
+\EMterm{-1.70,-.72}{}{}
+\EMterm{0,-.72}{}{}
+\EMterm{1.70,-.72}{}{}
+% Dimension l on top
+\draw[guide] (-1.85,.42)--(-1.85,.95) (1.85,.42)--(1.85,.95);
+\draw[dim] (-1.85,.80)--(1.85,.80) node[midway,fill=white,inner sep=1pt] {$l$};
+% Dimensions l/2 and L1, L2 below
+\draw[dim] (-1.70,-.68)--(0,-.68) node[midway,fill=white,inner sep=1pt] {$l/2$};
+\draw[dim] (0,-.68)--(1.70,-.68) node[midway,fill=white,inner sep=1pt] {$l/2$};
+\node[below] at (-.85,-1.10) {$L_1$};
+\node[below] at (.85,-1.10) {$L_2$};
+\end{tikzpicture}%

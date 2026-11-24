@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Oblique cyclotron D-electrodes
+% Left D (open on right edge near x=-0.12)
+\draw[fill=black!5] (-0.12,0.52) arc[start angle=95,end angle=265,x radius=1.65,y radius=0.58] -- (-0.12,0.52);
+\draw (-1.76,-0.05)--(-1.76,-0.38) arc[start angle=180,end angle=265,x radius=1.65,y radius=0.58] -- (-0.12,-0.63);
+\draw (-0.12,0.52)--(-0.12,-0.96);
+% Right D (open on left edge near x=0.12)
+\draw[fill=black!5] (0.12,-0.63) arc[start angle=-85,end angle=85,x radius=1.65,y radius=0.58] -- (0.12,-0.63);
+\draw (0.12,-0.63)--(0.12,-0.96) arc[start angle=-85,end angle=0,x radius=1.65,y radius=0.58] -- (1.76,-0.05);
+% Alternating voltage leads U~
+\draw (-0.12,-0.80)--(-0.85,-1.22);
+\draw (0.12,-0.80)--(-0.62,-1.28);
+\draw[fill=white] (-0.85,-1.22) circle[radius=1.5pt];
+\draw[fill=white] (-0.62,-1.28) circle[radius=1.5pt];
+\node[left=2pt] at (-0.85,-1.25) {$U\sim$};
+% Vertical magnetic field arrows B
+\foreach \x/\yb/\yt in {-1.10/0.05/1.15, -0.55/0.25/1.30, 0.00/0.35/1.45, 0.55/0.25/1.30, 1.10/0.05/1.15} {
+  \draw[vec] (\x,\yb)--(\x,\yt);
+}
+\node[above] at (0,1.45) {$\vec{B}$};
+\end{tikzpicture}%

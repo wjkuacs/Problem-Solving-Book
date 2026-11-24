@@ -1,0 +1,12 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.55}
+\draw (0,0) circle[radius=\R];
+\draw[vec] (-1.04,1.15)--(1.04,1.15);
+\draw[vec] (-1.42,0.62)--(1.42,0.62);
+\draw[vec] (-\R,0)--(\R,0) node[right=2pt] {$\vec{M}$};
+\draw[vec] (-1.42,-0.62)--(1.42,-0.62);
+\draw[vec] (-1.04,-1.15)--(1.04,-1.15);
+\draw[guide] (0,0)--(28:\R);
+\node[above left=0pt,fill=white,inner sep=0.8pt] at (28:1.05) {$R$};
+\EMangle{0,0}{0}{28}{0.75}{\theta}
+\end{tikzpicture}%

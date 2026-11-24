@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+\def\a{2.15}
+\def\b{1.18}
+\pgfmathsetmacro{\c}{sqrt(\a*\a-\b*\b)}
+% Axes
+\draw[vec] (-2.65,0)--(2.75,0) node[right] {$x$};
+\draw[vec] (0,-1.55)--(0,1.65) node[above] {$y$};
+\node[below right] at (0,0) {$O$};
+\node[below right] at ({\a/2},0) {$a$};
+\node[left] at (0,{\b/2}) {$b$};
+% Ellipse with counterclockwise current
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .86 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (0,0) ellipse[x radius=\a,y radius=\b];
+\node[below right] at (1.15,-0.98) {$I$};
+% Focus F and point on upper-left arc (theta=128 deg on ellipse)
+\pgfmathsetmacro{\px}{\a*cos(128)}
+\pgfmathsetmacro{\py}{\b*sin(128)}
+\EMpoint{-\c,0}{below}{F}
+\draw (-\c,0)--(\px,\py);
+% Tangent arrow I dl pointing down-left along ellipse at 128 deg
+\draw[vec] (\px,\py)--({\px-0.42},{\py-0.18}) node[above left=-1pt] {$I\mathrm{d}l$};
+\draw[guide] ({-\c+0.36},0) arc[start angle=0,end angle=52,radius=0.36];
+\node at ({-\c+0.50},0.22) {$\theta$};
+\end{tikzpicture}%

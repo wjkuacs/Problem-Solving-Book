@@ -1,0 +1,23 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (A) at (0,0);
+\coordinate (B) at (1.88,-.68);
+\coordinate (S) at (1.88,2.35);
+\draw (A) -- (B) node[midway,below] {$x$} -- (S) -- (A);
+\draw[aux] (A) -- (0,.82);
+\draw[vec] (A) -- ++(160:1.03) node[left] {$F$};
+\draw[vec] (A) -- (0,-1.40) node[below] {$mg$};
+\draw[vec] (A) -- ++(51.34:1.60) node[pos=.78,right] {$T$};
+\draw[guide] (S) ++(0,-.52) arc[start angle=-90,end angle=-128.66,radius=.52];
+\node at (1.66,1.72) {$\theta$};
+\draw[guide] (A) ++(51.34:.54) arc[start angle=51.34,end angle=90,radius=.54];
+\node at (.23,.70) {$\theta$};
+\draw[guide] (A) ++(90:.46) arc[start angle=90,end angle=160,radius=.46];
+\node at (-.36,.44) {$\alpha$};
+\draw[guide] (A) ++(-20:.45) arc[start angle=-20,end angle=51.34,radius=.45];
+\node at (.63,.16) {$\alpha$};
+\draw[guide] (B) ++(90:.45) arc[start angle=90,end angle=160,radius=.45];
+\node at (1.59,-.20) {$\alpha$};
+\node[right] at (1.88,.96) {$l$};
+\EMball{0,0}{below left}{A}
+\EMball{1.88,-.68}{below right}{B}
+\end{tikzpicture}%

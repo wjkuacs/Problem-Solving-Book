@@ -1,0 +1,28 @@
+\begin{tikzpicture}[em diagram]
+\draw[line width=.7pt] (.80,0) rectangle (4.00,2.50);
+\draw[line width=.7pt] (1.15,.34) rectangle (3.65,2.16);
+
+% Left primary winding (100V)
+\draw (0,1.85)--(1.15,1.85) (0,.90)--(.80,.90);
+\foreach \y in {1.78,1.58,1.38,1.18,.98} {
+  \draw (.76,\y)--(.98,\y+.06)--(1.19,\y-.08);
+  \fill (.80,\y) circle[radius=.8pt] (1.15,\y-.08) circle[radius=.8pt];
+}
+\EMterm{0,1.85}{}{} \EMterm{0,.90}{}{}
+\node[left=2pt] at (0,1.375) {$100\mathrm{V}$};
+
+% Right secondary winding (3300V)
+\draw (3.65,2.04)--(4.80,2.04) (4.00,.54)--(4.80,.54);
+\foreach \y in {1.98,1.82,1.66,1.50,1.34,1.18,1.02,.86,.70} {
+  \draw (3.61,\y)--(3.83,\y-.06)--(4.04,\y+.06);
+  \fill (3.65,\y) circle[radius=.8pt] (4.00,\y+.06) circle[radius=.8pt];
+}
+\EMterm{4.80,2.04}{}{} \EMterm{4.80,.54}{}{}
+\node[right=2pt] at (4.80,1.29) {$3300\mathrm{V}$};
+
+% Single search loop around bottom limb connected to voltmeter V
+\draw (2.10,-.65)--(1.95,0);
+\draw (2.05,.34) .. controls (2.12,.68) and (2.55,.68) .. (2.68,.34) -- (2.85,-.65);
+\EMmeter{2.40,-.65}{\mathrm{V}}
+\EMterm{1.90,-.65}{}{} \EMterm{2.90,-.65}{}{}
+\end{tikzpicture}%

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0) ellipse[x radius=.82,y radius=1.45];
+\coordinate (A) at (-.49,1.162);
+\coordinate (P) at (3.38,0);
+\draw (0,0)--(A) node[midway,right] {$R$};
+\draw (0,0)--(P) node[midway,below] {$r$};
+\draw[aux] (P)--++(.99,0);
+\draw (A)--(P);
+\draw[vec] (P)--++(1.02,-.306) node[below] {$\mathrm d\boldsymbol E$};
+\EMpoint{-.49,1.162}{above left}{\mathrm dq}
+\EMpoint{3.38,0}{above right}{P}
+\node[below left] at (0,0) {$O$};
+\EMangle{3.38,0}{163.29}{180}{.94}{\theta}
+\end{tikzpicture}%

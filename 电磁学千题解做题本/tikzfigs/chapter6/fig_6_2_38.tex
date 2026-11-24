@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+% Closed loop L1 on left
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .72 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (-1.85,0.15) .. controls (-1.95,0.95) and (-1.15,1.15) .. (-0.75,0.75)
+  .. controls (-0.42,0.42) and (-0.35,-0.45) .. (-0.85,-0.88)
+  .. controls (-1.35,-1.25) and (-1.78,-0.55) .. (-1.85,0.15);
+\node at (-1.18,-0.25) {$L_1$};
+\node[below=2pt] at (-1.35,-1.02) {$I_1$};
+\coordinate (P1) at (-1.82,-0.15);
+\fill (P1) circle[radius=1.6pt];
+\node[left=1pt] at (P1) {$I_1\mathrm{d}\vec{l}_1$};
+% Closed loop L2 on right
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .18 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (0.65,0.22) .. controls (0.72,1.05) and (1.58,1.18) .. (2.15,0.68)
+  .. controls (2.58,0.28) and (2.42,-0.65) .. (1.72,-0.78)
+  .. controls (1.05,-0.92) and (0.58,-0.35) .. (0.65,0.22);
+\node at (1.65,-0.15) {$L_2$};
+\node[above right=-1pt] at (2.10,0.72) {$I_2$};
+\coordinate (P2) at (0.68,0.42);
+\fill (P2) circle[radius=1.6pt];
+\node[above left=0pt] at (P2) {$I_2\mathrm{d}\vec{l}_2$};
+% Vector r12 connecting P1 to P2
+\draw[vec] (P1)--(P2) node[midway,above] {$\vec{r}_{12}$};
+\end{tikzpicture}%

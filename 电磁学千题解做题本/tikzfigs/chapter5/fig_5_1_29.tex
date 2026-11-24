@@ -1,0 +1,26 @@
+\begin{tikzpicture}[em diagram]
+\def\L{4.50}
+\def\R{0.84}
+\def\rx{0.26}
+% Top and bottom lines
+\draw (0,\R)--(\L,\R) (0,-\R)--(\L,-\R);
+% Left end half-ellipse and right end full ellipse
+\draw (0,\R) arc[start angle=90,end angle=270,x radius=\rx,y radius=\R];
+\draw (\L,0) ellipse[x radius=\rx,y radius=\R];
+% Dense solenoid turns along the body
+\foreach \x in {0.22,0.44,...,4.35} {
+  \draw (\x,\R) arc[start angle=90,end angle=270,x radius=\rx,y radius=\R];
+}
+% Axis extension to right
+\draw[axis] (\L,0)--(\L+0.85,0);
+% Dimension l on top
+\draw[guide] (0,\R)--(0,\R+0.42) (\L,\R)--(\L,\R+0.42);
+\draw[dim] (0,\R+0.28)--(\L,\R+0.28) node[midway,fill=white,inner sep=1pt] {$l$};
+% Dimension R on left
+\draw[guide] (-\rx,0)--(-\rx-0.46,0) (0,\R)--(-\rx-0.46,\R);
+\draw[dim] (-\rx-0.30,0)--(-\rx-0.30,\R) node[midway,fill=white,inner sep=1pt] {$R$};
+% Center O and dimension r below
+\draw[guide] ({\L/2},-\R)--({\L/2},-\R-0.48) ({\L/2+1.25},-\R)--({\L/2+1.25},-\R-0.48);
+\draw[dim] ({\L/2},-\R-0.32)--({\L/2+1.25},-\R-0.32) node[midway,fill=white,inner sep=1pt] {$r$};
+\node[below] at ({\L/2},-\R-0.50) {$O$};
+\end{tikzpicture}%

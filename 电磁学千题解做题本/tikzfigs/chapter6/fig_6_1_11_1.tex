@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Vertical plate with small aperture
+\draw (0,-1.35)--(0,-0.16) (0,0.16)--(0,1.35);
+% 4x4 grid of magnetic field dots (out of page) to the right
+\foreach \x in {0.65,1.25,1.85,2.45} {
+  \foreach \y in {-1.05,-0.35,0.35,1.05} {
+    \fill (\x,\y) circle[radius=1.15pt];
+  }
+}
+% Electron entering horizontally through aperture
+\EMcharge{-0.55,0}{}{}{-}
+\draw[vec] (-0.42,0)--(0.55,0) node[above right=1pt] {$\vec{v}$};
+% Field direction label
+\node[align=center] at (3.05,0) {$\vec{B}$\\[-2pt]向\\[-2pt]外};
+\end{tikzpicture}%

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[em diagram]
+\foreach \i/\lab in {0/R_g,1/R_1,2/R_2,3/R_3} {
+  \EMres{1.38*\i,1.16}{1.38*\i+1.38,1.16}{\lab} }
+\foreach \x/\val in {0/+,2.76/{3\,\mathrm V},4.14/{15\,\mathrm V},5.52/{150\,\mathrm V}} {
+  \draw (\x,1.16)--(\x,0);
+  \EMterm{\x,0}{below}{\val}
+}
+\EMdot{2.76,1.16}
+\EMdot{4.14,1.16}
+\end{tikzpicture}%

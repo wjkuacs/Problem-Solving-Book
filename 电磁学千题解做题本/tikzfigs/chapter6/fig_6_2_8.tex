@@ -1,0 +1,36 @@
+\begin{tikzpicture}[em diagram]
+% Balance beam and pillar
+\draw (-2.15,1.25)--(2.15,1.25);
+\draw[guide] (-1.35,2.45)--(1.35,2.45);
+\draw (-0.12,1.25) .. controls (-0.06,1.45) .. (-0.06,2.35) -- (0,2.45) -- (0.06,2.35) .. controls (0.06,1.45) .. (0.12,1.25);
+% Left pan with large weight
+\draw (-1.35,2.45)--(-1.95,1.58)--(-0.75,1.58)--cycle;
+\fill (-1.50,1.58) rectangle (-1.20,1.86);
+\fill (-1.42,1.86) rectangle (-1.28,1.94);
+% Right pan with small weight
+\draw (1.35,2.45)--(0.75,1.58)--(1.95,1.58)--cycle;
+\fill (1.27,1.58) rectangle (1.43,1.74);
+\fill (1.31,1.74) rectangle (1.39,1.80);
+% Hanging rectangular coil below right pan
+\draw[guide] (1.35,1.58)--(1.35,0.68);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (1.02,-1.15)--(1.02,0.68) node[midway,left=1pt] {$I$};
+\draw (1.02,0.68)--(1.68,0.68);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (1.68,0.68)--(1.68,-1.15) node[midway,right=1pt] {$I$};
+\draw (1.68,-1.15)--(1.02,-1.15);
+% Width dimension l inside coil
+\draw[dim] (1.02,-0.55)--(1.68,-0.55) node[midway,fill=white,inner sep=1pt] {$l$};
+% Dashed magnetic field region at bottom of coil
+\draw[aux] (0.58,-1.52) rectangle (2.12,-0.78);
+\foreach \x in {0.76,1.06,1.35,1.64,1.94} {
+  \foreach \y in {-1.38,-1.14,-0.90} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide] (-1.8pt,-1.8pt)--(1.8pt,1.8pt) (-1.8pt,1.8pt)--(1.8pt,-1.8pt);
+    \end{scope}
+  }
+}
+\node[align=center] at (0.28,-1.15) {$\vec{B}$\\[-2pt]向\\[-2pt]内};
+\end{tikzpicture}%

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[em diagram]
+% Left parallel wire I1 (upward)
+\draw[aux] (-0.95,-1.55)--(-0.95,-1.15) (-0.95,1.15)--(-0.95,1.55);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (-0.95,-1.15)--(-0.95,1.15) node[midway,left=2pt] {$I_1$};
+% Right parallel wire I2 (upward)
+\draw[aux] (0.95,-1.55)--(0.95,-1.15) (0.95,1.15)--(0.95,1.55);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .62 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0.95,-1.15)--(0.95,1.15) node[pos=.68,right=2pt] {$I_2$};
+% Cross B1 (into page) on right wire
+\begin{scope}[shift={(0.95,-0.45)}]
+  \draw[fill=white] (0,0) circle[radius=3.5pt];
+  \draw[guide] (-2.4pt,-2.4pt)--(2.4pt,2.4pt) (-2.4pt,2.4pt)--(2.4pt,-2.4pt);
+\end{scope}
+\node[right=5pt] at (0.95,-0.45) {$\vec{B}_1$向内};
+% Distance d between wires
+\draw[dim] (-0.95,-0.95)--(0.95,-0.95) node[midway,fill=white,inner sep=1pt] {$d$};
+\end{tikzpicture}%

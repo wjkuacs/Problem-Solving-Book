@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(0,1.90)--(2.18,1.90) (3.30,1.90)--(5.20,1.90)--(5.20,0)--(0,0);
+\draw (1.90,1.90)--(1.90,.95)--(5.20,.95);
+% Top: R_1, L, b, R_2, a
+\EMres{.55,1.90}{1.45,1.90}{R_1}
+\foreach \i in {0,1,2,3}
+  \draw (2.18+.28*\i,1.90) arc[start angle=180,end angle=360,x radius=.14,y radius=.15];
+\node[above=2pt] at (2.74,1.90) {$L$};
+\node[above=3pt] at (3.55,1.90) {$b$};
+\EMres{3.80,1.90}{4.65,1.90}{R_2}
+\node[above=3pt] at (4.92,1.90) {$a$};
+% Middle branch: K_2
+\EMswitch{3.55,.95}
+\node[above=5pt] at (3.55,1.11) {$K_2$};
+% Bottom: cell (- left, + right) and K_1
+\EMcell[180]{1.75,0}
+\node[above=4pt] at (1.52,.14) {$-$};
+\node[above=4pt] at (1.98,.14) {$+$};
+\node[below=4pt] at (1.75,-.26) {$\varepsilon$};
+\EMswitch{3.55,0}
+\node[above=5pt] at (3.55,.16) {$K_1$};
+\end{tikzpicture}%

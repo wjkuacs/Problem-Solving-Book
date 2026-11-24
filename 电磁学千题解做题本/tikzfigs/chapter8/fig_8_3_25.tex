@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Large circular coil on left (radius a)
+\draw[line width=.75pt] (-1.65,0) ellipse[x radius=.24,y radius=.68];
+\draw[vec] (-1.65,0)--(-1.50,.60) node[midway,right=1pt] {$a$};
+% Axis and small bar magnet N-S on right
+\draw[axis] (-1.65,0)--(1.65,0);
+\draw[fill=white] (1.30,-.07) rectangle (1.90,.07);
+\draw (1.60,-.07)--(1.60,.07);
+\node[above] at (1.42,.08) {$N$};
+\node[above] at (1.78,.08) {$S$};
+\draw[vec] (1.90,0)--(2.50,0) node[right] {$\vec{v}$};
+% Dimension x below
+\draw[guide] (-1.65,0)--(-1.65,-.62) (1.60,-.08)--(1.60,-.62);
+\draw[dim] (-1.65,-.48)--(1.60,-.48) node[midway,fill=white,inner sep=1pt] {$x$};
+\end{tikzpicture}%

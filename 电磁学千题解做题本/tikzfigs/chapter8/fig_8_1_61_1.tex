@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.32}
+\draw (0,0) circle[radius=\R];
+\EMpoint{0,0}{below}{$O$}
+% Chord ab near top and perpendicular distance h
+\draw[line width=.75pt] (-1.06,.78)--(1.06,.78);
+\node[above left] at (-1.06,.78) {$a$};
+\node[above right] at (1.06,.78) {$b$};
+\node[above] at (0,.78) {$l$};
+\draw[aux] (0,0)--(0,.78) node[midway,right] {$h$};
+\draw[guide] (0,.62)--(-.16,.62)--(-.16,.78);
+% Crosses for B into page
+\foreach \x/\y in {-.75/.18, .75/.18, -.52/-.42, .52/-.42} {
+  \node at (\x,\y) {$\times$};
+}
+\node[below] at (0,-.76) {$\vec{B}$ 向内};
+\end{tikzpicture}%

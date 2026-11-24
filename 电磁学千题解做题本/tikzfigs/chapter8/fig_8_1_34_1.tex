@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\def\R{1.45}
+\draw[aux] (0,0) circle[radius=\R];
+% Out-of-page B marks inside circle
+\foreach \x/\y in {-.85/.72, -.22/.95, .45/.88, .92/.45,
+                   -1.08/.08, -.42/.32, .52/.22, 1.05/-.15,
+                   -.82/-.38, -.28/-.25, .42/-.35,
+                   -.68/-.92, 0/-.98, .68/-.92} {
+  \begin{scope}[shift={(\x,\y)}]
+    \draw (0,0) circle[radius=2.2pt];
+    \fill (0,0) circle[radius=.75pt];
+  \end{scope}
+}
+\node at (.22,.56) {$\vec{B}$};
+% Radius R and perpendicular distance r
+\draw[vec] (0,0)--(148:\R) node[midway,above right=-1pt] {$R$};
+\draw[guide] (0,0)--(0,-.58) node[midway,right] {$r$};
+% Horizontal straight wire
+\draw[line width=.8pt] (-1.75,-.58)--(1.75,-.58);
+\draw[vec] (-.75,-.58)--(-.75,.08) node[left] {$\vec{v}$};
+\draw[vec] (.75,-.58)--(.75,.08) node[right] {$\vec{v}$};
+\end{tikzpicture}%

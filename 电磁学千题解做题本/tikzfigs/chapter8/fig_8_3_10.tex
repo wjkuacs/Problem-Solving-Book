@@ -1,0 +1,16 @@
+\begin{tikzpicture}[em diagram]
+% Bobbin with flared ends
+\draw (-1.75,.52) .. controls (-1.55,.35) .. (-1.35,.35)--(1.35,.35) .. controls (1.55,.35) .. (1.75,.52);
+\draw (-1.75,-.52) .. controls (-1.55,-.35) .. (-1.35,-.35)--(1.35,-.35) .. controls (1.55,-.35) .. (1.75,-.52);
+\draw (-1.75,.52)--(-1.75,-.52) (1.75,.52)--(1.75,-.52);
+% Bifilar double-wound wire (two parallel strands folded at left end)
+\draw (-1.20,.05) .. controls (-1.32,.15) and (-1.32,-.15) .. (-1.20,-.05);
+\foreach \x in {-1.15,-.75,-.35,.05,.45,.85} {
+  \draw (\x,.35)--(\x+.12,-.35);
+  \draw (\x+.10,.35)--(\x+.22,-.35);
+  \draw (\x,.35) arc[start angle=180,end angle=0,x radius=.05,y radius=.05];
+  \draw (\x+.12,-.35) arc[start angle=180,end angle=360,x radius=.05,y radius=.05];
+}
+% Two leads exiting bottom-right
+\draw (.97,-.35)--(1.18,-1.02) (1.07,-.35)--(1.48,-1.02);
+\end{tikzpicture}%

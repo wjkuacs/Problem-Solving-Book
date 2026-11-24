@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Semicircular coil + vertical diameter (counter-clockwise current I)
+\def\R{1.25}
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .52 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0,-\R)--(0,\R) node[midway,right=2pt] {$I$};
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0,\R) arc[start angle=90,end angle=270,radius=\R];
+% Horizontal magnetic field lines H pointing right
+\foreach \y in {-0.75,0,0.75} {
+  \draw[field] (-1.65,\y)--(1.05,\y);
+}
+\node[right=2pt] at (1.05,0) {$\vec{H}$};
+\end{tikzpicture}%

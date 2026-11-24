@@ -1,0 +1,25 @@
+\begin{tikzpicture}[em diagram]
+% Infinite straight wire carrying upward current I1
+\draw[aux] (0,-1.85)--(0,-1.45) (0,1.45)--(0,1.85);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .82 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}]
+  (0,-1.45)--(0,1.45) node[above left=2pt] {$I_1$};
+% Tall rectangular loop ABCD with DA parallel to wire at distance c
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .18 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .40 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .65 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}},
+  mark=at position .90 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (0.28,-1.25)--(0.28,1.25)--(1.12,1.25)--(1.12,-1.25)--cycle;
+\node[above right=-1pt] at (0.28,1.25) {$A$};
+\node[above right=-1pt] at (1.12,1.25) {$B$};
+\node[below right=-1pt] at (1.12,-1.25) {$C$};
+\node[below right=-1pt] at (0.28,-1.25) {$D$};
+\node[right=2pt] at (1.12,0) {$I_2$};
+\node[right=1pt] at (0.28,0) {$a$};
+\node[below=2pt] at (0.70,1.25) {$b$};
+% Small gap c near bottom
+\draw[vec] (-0.35,-0.95)--(0,-0.95);
+\draw[vec] (0.63,-0.95)--(0.28,-0.95);
+\node[right=2pt] at (0.63,-0.95) {$c$};
+\end{tikzpicture}%

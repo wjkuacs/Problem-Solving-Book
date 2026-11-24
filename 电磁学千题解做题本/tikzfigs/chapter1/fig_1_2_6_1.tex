@@ -1,0 +1,11 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (.83,3.22);
+\draw (-.97,0) -- (.97,0) node[midway,below] {$l$};
+\draw (-.97,0) -- (P) -- (.97,0);
+\draw[vec] (0,0) -- (P) node[pos=.48,right] {$\vec{r}$};
+\node[above right] at (P) {$P(r,\theta)$};
+\EMangle{0,0}{0}{75.55}{.42}{\theta}
+\EMcharge{-.97,0}{left}{-q}{-}
+\EMcharge{.97,0}{right}{q}{+}
+\EMpoint{0,0}{above left}{O}
+\end{tikzpicture}%

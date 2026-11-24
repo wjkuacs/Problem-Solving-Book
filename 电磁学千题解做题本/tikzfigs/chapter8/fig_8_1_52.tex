@@ -1,0 +1,31 @@
+\begin{tikzpicture}[em diagram]
+% Three figure-8 loops with radii a > b > c
+\def\ra{1.08}
+\def\rb{.86}
+\def\rc{.68}
+\coordinate (Ca) at (0,0);
+\coordinate (Cb) at ({\ra+\rb},0);
+\coordinate (Cc) at ({\ra+2*\rb+\rc},0);
+% Outer and inner traces (double wire effect)
+\draw (Ca) circle[radius=\ra];
+\draw (Ca) circle[radius=\ra-.07];
+\draw (Cb) circle[radius=\rb];
+\draw (Cb) circle[radius=\rb-.07];
+\draw (Cc) circle[radius=\rc];
+\draw (Cc) circle[radius=\rc-.07];
+% Radius dimensions a, b, c above
+\draw[guide] (0,0)--(0,1.25) (-\ra,0)--(-\ra,1.25);
+\draw[dim] (-\ra,1.12)--(0,1.12) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[guide] ({\ra+\rb},0)--({\ra+\rb},1.02) (\ra,0)--(\ra,1.02);
+\draw[dim] (\ra,.88)--({\ra+\rb},.88) node[midway,fill=white,inner sep=1pt] {$b$};
+\draw[guide] ({\ra+2*\rb+\rc},0)--({\ra+2*\rb+\rc},.82) ({\ra+2*\rb},0)--({\ra+2*\rb},.82);
+\draw[dim] ({\ra+2*\rb},.68)--({\ra+2*\rb+\rc},.68) node[midway,fill=white,inner sep=1pt] {$c$};
+% Into-page B marks in each loop
+\foreach \cx in {0, {\ra+\rb}, {\ra+2*\rb+\rc}} {
+  \begin{scope}[shift={(\cx,.24)}]
+    \draw (0,0) circle[radius=2.0pt];
+    \draw (-1.3pt,-1.3pt)--(1.3pt,1.3pt) (-1.3pt,1.3pt)--(1.3pt,-1.3pt);
+    \node[below=2pt,font=\scriptsize,align=center] at (0,0) {$\vec{B}$\\向内};
+  \end{scope}
+}
+\end{tikzpicture}%

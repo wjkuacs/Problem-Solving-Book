@@ -1,0 +1,17 @@
+\begin{tikzpicture}[em diagram]
+% Parallel thin conducting strips (length l, width b, separation a)
+\draw (-1.85,.15)--(1.55,.15)--(2.35,.72)--(-1.05,.72)--cycle;
+\draw (-1.85,0)--(1.55,0)--(2.35,.57);
+\draw (-1.85,.15)--(-1.85,0) (1.55,.15)--(1.55,0) (2.35,.72)--(2.35,.57);
+% Current arrow I on top strip
+\draw[vec] (-.25,.42)--(.75,.42) node[right] {$I$};
+% Dimensions a, l, b
+\draw[guide] (-1.85,.15)--(-2.35,.15) (-1.85,0)--(-2.35,0);
+\draw[vec] (-2.20,.52)--(-2.20,.15);
+\draw[vec] (-2.20,-.35)--(-2.20,0);
+\node[left] at (-2.22,.08) {$a$};
+\draw[guide] (-1.05,.72)--(-1.05,1.15) (2.35,.72)--(2.35,1.15);
+\draw[dim] (-1.05,1.00)--(2.35,1.00) node[midway,fill=white,inner sep=1pt] {$l$};
+\draw[guide] (1.55,0)--(1.82,-.18) (2.35,.57)--(2.62,.39);
+\draw[dim] (1.72,-.12)--(2.52,.45) node[midway,below right=-1pt] {$b$};
+\end{tikzpicture}%

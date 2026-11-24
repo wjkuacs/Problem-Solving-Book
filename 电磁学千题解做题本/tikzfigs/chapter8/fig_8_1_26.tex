@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% N-shaped bent rod a-b-c-d
+\draw[line width=.8pt] (-.65,-.95)--(-.65,.95)--(.65,-.95)--(.65,.95);
+\node[below] at (-.65,-.95) {$a$};
+\node[above] at (-.65,.95) {$b$};
+\node[below] at (.65,-.95) {$c$};
+\node[above] at (.65,.95) {$d$};
+% Dimension l on left
+\draw[guide] (-1.22,.95)--(-.65,.95) (-1.22,-.95)--(-.65,-.95);
+\draw[dim] (-1.05,-.95)--(-1.05,.95) node[midway,fill=white,inner sep=1pt] {$l$};
+% Velocity arrow v
+\draw[vec] (.65,0)--(1.42,0) node[right] {$\vec{v}$};
+% Out-of-page B field marks
+\foreach \x/\y in {-.95/.55, 0/.58, 1.25/.58, -.15/-.55, 1.25/-.55} {
+  \begin{scope}[shift={(\x,\y)}]
+    \draw (0,0) circle[radius=2.4pt];
+    \fill (0,0) circle[radius=.8pt];
+  \end{scope}
+}
+\node[below right=1pt] at (.78,-.65) {$\vec{B}$ 向外};
+\end{tikzpicture}%

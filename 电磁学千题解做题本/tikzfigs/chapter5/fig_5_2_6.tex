@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+\def\a{1.75}
+% Bottom horizontal wire I_1
+\draw[axis] (-1.85,0)--(-1.35,0);
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.2pt,width=2.6pt]}}}] (-1.35,0)--(3.10,0) node[midway,below=2pt] {$I_1$};
+\draw[axis] (3.10,0)--(3.60,0);
+% Wire I_2 (out of page) at (0, a)
+\draw[fill=white] (0,\a) circle[radius=4.2pt];
+\fill (0,\a) circle[radius=1.3pt];
+\node[above=4pt] at (0,\a) {$I_2(\text{向外})$};
+% Point P at (a, a)
+\EMpoint{\a,\a}{above}{P}
+% Dimensions
+\draw[guide] (-.46,\a)--(-.15,\a) ({\a+.15},\a)--({\a+.46},\a);
+\draw[dim] (-.34,0)--(-.34,\a) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] ({\a+.34},0)--({\a+.34},\a) node[midway,fill=white,inner sep=1pt] {$a$};
+\draw[dim] (0.16,\a)--({\a-0.08},\a) node[midway,fill=white,inner sep=1pt] {$a$};
+\end{tikzpicture}%

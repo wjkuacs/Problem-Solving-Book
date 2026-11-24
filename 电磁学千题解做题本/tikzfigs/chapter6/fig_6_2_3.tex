@@ -1,0 +1,21 @@
+\begin{tikzpicture}[em diagram]
+% Hatched ceiling
+\draw (-1.85,1.25)--(1.85,1.25);
+\foreach \x in {-1.70,-1.45,...,1.70} {
+  \draw[guide] (\x,1.25)--({\x+0.15},1.42);
+}
+% Suspension strings
+\draw[guide] (-1.25,1.25)--(-1.25,-0.45) (1.25,1.25)--(1.25,-0.45);
+% Horizontal current-carrying bar
+\draw[fill=white] (-1.55,-0.56) rectangle (1.55,-0.44);
+\draw[vec] (-0.75,-0.50)--(0.75,-0.50) node[pos=.75,above=3pt,fill=white,inner sep=1pt] {$I$};
+% Magnetic field crosses (into page)
+\foreach \x in {-1.55,-0.78,0,0.78,1.55} {
+  \foreach \y in {-0.92,0.05,0.82} {
+    \begin{scope}[shift={(\x,\y)}]
+      \draw[guide] (-2.2pt,-2.2pt)--(2.2pt,2.2pt) (-2.2pt,2.2pt)--(2.2pt,-2.2pt);
+    \end{scope}
+  }
+}
+\node[fill=white,inner sep=1.5pt] at (0,0.52) {$\vec{B}$向内};
+\end{tikzpicture}%

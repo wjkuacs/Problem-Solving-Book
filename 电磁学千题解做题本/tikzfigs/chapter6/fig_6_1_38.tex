@@ -1,0 +1,19 @@
+\begin{tikzpicture}[em diagram]
+% Rectangular block of height l with top face a and bottom face b
+\draw (-1.45,-0.72) rectangle (1.45,0.62);
+\draw (-1.45,0.62)--(-1.25,0.82)--(1.65,0.82)--(1.45,0.62);
+\draw (1.45,-0.72)--(1.65,-0.52)--(1.65,0.82);
+% Width/height dimension l on the left
+\draw[guide] (-1.52,0.62)--(-1.98,0.62) (-1.52,-0.72)--(-1.98,-0.72);
+\draw[dim] (-1.82,-0.72)--(-1.82,0.62) node[midway,fill=white,inner sep=1pt] {$l$};
+% Labels a and b
+\node[above=1pt] at (0.95,0.82) {$a$};
+\node[below=1pt] at (0.95,-0.72) {$b$};
+% Current arrows I to the right
+\draw[vec] (-1.05,0.22)--(1.05,0.22);
+\draw[vec] (-0.85,-0.32)--(1.05,-0.32);
+\node[below=2pt] at (0.55,0.22) {$I$};
+% Magnetic field B emerging out-down-left from front face
+\draw[guide] (0.28,0.82)--(0.68,1.38);
+\draw[vec] (0.05,-0.02)--(-0.52,-1.12) node[right=2pt] {$\vec{B}$};
+\end{tikzpicture}%

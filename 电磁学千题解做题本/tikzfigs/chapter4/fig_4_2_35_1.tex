@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (A) at (-2.05,0);
+\coordinate (B) at (2.05,0);
+\coordinate (C) at (0,1.59);
+\coordinate (D) at (0,-1.59);
+\EMres{A}{C}{R_1}
+\EMres{C}{B}{R_2}
+\EMres[below=4pt]{A}{D}{R_3}
+\EMres[below=4pt]{D}{B}{R_4}
+\EMres{D}{C}{R_g}
+\draw (A)--(-2.05,-2.31)--(2.05,-2.31)--(B);
+\EMcell{0,-2.31}
+\node[below] at (0,-2.64) {$\varepsilon,r$};
+\foreach \p/\side in {A/left,B/right,C/above,D/below} { \EMpoint{\p}{\side}{\p} }
+\end{tikzpicture}%

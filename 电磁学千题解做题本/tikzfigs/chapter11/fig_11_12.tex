@@ -1,0 +1,14 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(5.6,0);
+\draw (.6,0)--(.6,1.95)--(5.0,1.95)--(5.0,0);
+\draw (.6,1.05)--(5.0,1.05) (2.6,0)--(2.6,1.05);
+\EMres[below=4pt]{.6,0}{2.6,0}{R}
+\node[draw,fill=white,minimum width=1.10cm,minimum height=.40cm,inner sep=0pt] at (3.8,0) {$Z$};
+\EMmeter{1.6,1.05}{\mathrm{V}_1}
+\EMmeter{3.8,1.05}{\mathrm{V}_2}
+\EMmeter{2.8,1.95}{\mathrm{V}}
+\foreach \x/\y in {0.6/0,2.6/0,5.0/0,0.6/1.05,2.6/1.05,5.0/1.05} {
+  \EMdot{\x,\y}
+}
+\EMterm{0,0}{}{} \EMterm{5.6,0}{}{}
+\end{tikzpicture}%

@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+\draw (-1.52,-1.52) rectangle (1.52,1.52);
+\draw[aux] (-1.52,-1.52)--(1.52,1.52) (-1.52,1.52)--(1.52,-1.52);
+\EMcharge{-1.52,1.52}{above left}{Q}{+}
+\EMcharge{1.52,1.52}{above right}{-Q}{-}
+\EMcharge{-1.52,-1.52}{below left}{-Q}{-}
+\EMcharge{1.52,-1.52}{below right}{Q}{+}
+\EMpoint{0,0}{below}{O}
+\node[above] at (0,0) {$q$};
+\EMpoint{1.52,0}{left}{P}
+\node[above] at (0,1.52) {$a$};
+\node[below] at (0,-1.52) {$a$};
+\node[left] at (-1.52,0) {$a$};
+\node[right] at (1.52,0) {$a$};
+\end{tikzpicture}%

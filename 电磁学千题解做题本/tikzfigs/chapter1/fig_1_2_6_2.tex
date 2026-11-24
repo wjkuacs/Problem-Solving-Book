@@ -1,0 +1,22 @@
+\begin{tikzpicture}[em diagram]
+\coordinate (P) at (.85,3.30);
+\draw (-1.25,0) -- (1.51,0);
+\draw (-1.25,0)--(P) node[pos=.33,above left] {$r_-$};
+\draw (1.25,0)--(P) node[pos=.49,right] {$r_+$};
+\draw (0,0)--(P) node[pos=.39,left] {$r$};
+\draw[vec] (P) -- ++(-.19,1.10) node[above] {$E_+$};
+\draw[vec] (P) -- ++(-.84,-1.32) node[pos=.63,left] {$E_-$};
+\draw[aux] (P) -- ++(.27,1.05);
+\EMangle{-1.25,0}{0}{57.53}{.32}{\theta_-}
+\EMangle{0,0}{0}{75.56}{.37}{\theta}
+\EMangle{1.25,0}{0}{96.91}{.32}{\theta_+}
+\draw[guide] (P) ++(75.56:.64) arc[start angle=75.56,end angle=99.80,radius=.64];
+\node[right] at (1.04,4.01) {$\theta_+-\theta$};
+\draw[guide] (P) ++(237.53:.71) arc[start angle=237.53,end angle=255.56,radius=.71];
+\draw[guide] (.46,2.68)--(-.15,2.88) node[left] {$\theta-\theta_-$};
+\EMcharge{-1.25,0}{}{}{-}
+\EMcharge{1.25,0}{}{}{+}
+\EMpoint{0,0}{below}{O}
+\node at (-.65,-.26) {$l/2$};
+\node at (.65,-.26) {$l/2$};
+\end{tikzpicture}%

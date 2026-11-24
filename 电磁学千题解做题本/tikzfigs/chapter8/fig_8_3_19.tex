@@ -1,0 +1,24 @@
+\begin{tikzpicture}[em diagram]
+% Left inductor L1 with current I1
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-2.05,-.62)--(-2.05,0);
+\node[left] at (-2.05,-.32) {$I_1$};
+\foreach \x in {-2.05,-1.75,-1.45,-1.15} {
+  \draw (\x,0) arc[start angle=180,end angle=0,x radius=.15,y radius=.13];
+}
+\draw[postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.5pt]}}}] (-.85,0)--(-.85,-.62);
+\node[right] at (-.85,-.32) {$I_1$};
+\node[above] at (-1.45,.20) {$L_1$};
+\node at (.05,0) {$M$};
+% Right tilted closed coil L2 with R2 = 0
+\begin{scope}[shift={(1.35,.05)},rotate=22]
+  \foreach \x in {-.60,-.30,0,.30} {
+    \draw (\x,0) arc[start angle=180,end angle=0,x radius=.15,y radius=.13];
+  }
+  \node[above] at (0,.20) {$L_2$};
+  \draw (-.60,0)--(-.60,-.65)--(-.35,-.65);
+  \EMres[below=3pt]{-.35,-.65}{.35,-.65}{R_2 = 0}
+  \draw (.35,-.65)--(.60,-.65)--(.60,0);
+\end{scope}
+\end{tikzpicture}%

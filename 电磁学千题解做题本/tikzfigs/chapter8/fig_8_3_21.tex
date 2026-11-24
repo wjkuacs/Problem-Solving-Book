@@ -1,0 +1,15 @@
+\begin{tikzpicture}[em diagram]
+% Two identical coaxial coils of radius a separated by l
+\def\rx{.18}
+\def\ry{.55}
+\draw (-1.65,0) ellipse[x radius=\rx,y radius=\ry];
+\draw (1.65,0) ellipse[x radius=\rx,y radius=\ry];
+% Common axis
+\draw (-1.65,0)--(1.65,0);
+% Radius arrows a
+\draw[vec] (-1.65,0)--(-1.65,\ry) node[midway,left=1pt] {$a$};
+\draw[vec] (1.65,0)--(1.65,\ry) node[midway,right=1pt] {$a$};
+% Dimension l above
+\draw[guide] (-1.65,0)--(-1.65,1.02) (1.65,0)--(1.65,1.02);
+\draw[dim] (-1.65,.88)--(1.65,.88) node[midway,fill=white,inner sep=1pt] {$l$};
+\end{tikzpicture}%

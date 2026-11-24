@@ -1,0 +1,29 @@
+\begin{tikzpicture}[em diagram]
+\draw (0,0)--(1.6,0) (2.4,0)--(4.0,0)--(4.0,2.2)--(0,2.2)--(0,0);
+\draw (0,1.1)--(4.0,1.1);
+\EMres[below=4pt]{.3,2.2}{1.7,2.2}{R}
+\begin{scope}[shift={(3.0,2.2)}]
+  \draw[white,line width=2pt] (-.44,0)--(.44,0);
+  \draw (-.44,0) arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11]
+    arc[start angle=180,end angle=0,radius=.11];
+\end{scope}
+\begin{scope}[shift={(2.0,1.1)}]
+  \draw[white,line width=2pt] (-.13,0)--(.13,0);
+  \draw (-.13,-.25)--(-.13,.25) (.13,-.25)--(.13,.25);
+  \node[below=4pt] at (0,-.16) {$C$};
+\end{scope}
+\draw (1.84,0) .. controls (1.92,.12) and (2.00,.12) .. (2.00,0)
+  .. controls (2.00,-.12) and (2.08,-.12) .. (2.16,0);
+\EMterm{1.6,0}{}{} \EMterm{2.4,0}{}{}
+
+\EMpoint{0,2.2}{above left}{a}
+\EMpoint{2.0,2.2}{above}{b}
+\EMpoint{4.0,2.2}{above right}{c}
+\EMpoint{.95,1.1}{below}{d}
+\EMpoint{3.05,1.1}{below}{e}
+\EMpoint{0,0}{below left}{f}
+\EMpoint{4.0,0}{below right}{g}
+\EMdot{0,1.1} \EMdot{4.0,1.1}
+\end{tikzpicture}%

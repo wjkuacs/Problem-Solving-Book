@@ -1,0 +1,27 @@
+\begin{tikzpicture}[em diagram]
+% 3D axes: y(B) up, x right, z down-left
+\coordinate (A) at (0,0);
+\draw[vec] (A)--(0,1.45) node[right=2pt] {$y(\vec{B})$};
+\draw[vec] (A)--(2.15,0) node[right] {$x$};
+\draw[vec] (A)--(-1.55,-1.25) node[below left] {$z$};
+\draw[guide] (A)--(0,-2.35);
+\node[above left=-1pt] at (A) {$a$};
+% Coil corners: a=(0,0), b=(-0.82,-0.66), d=(0.78,-1.42), c=(-0.04,-2.08)
+\coordinate (B) at (-0.82,-0.66);
+\coordinate (D) at (0.78,-1.42);
+\coordinate (C) at (-0.04,-2.08);
+% Equilibrium vertical dashed plane
+\draw[aux] (B)--(-0.82,-2.28)--(0,-1.62);
+% Tilted coil abcd
+\draw[line width=.75pt] (A)--(B) node[midway,fill=white,inner sep=0.8pt] {$6\,\mathrm{cm}$};
+\draw[line width=.75pt,postaction={decorate},decoration={markings,
+  mark=at position .5 with {\arrow{Stealth[length=3.0pt,width=2.4pt]}}}]
+  (B)--(C) node[midway,left=1pt] {$I$};
+\draw[line width=.75pt] (C)--(D)--(A);
+\node[left=1pt] at (B) {$b$};
+\node[below left=-1pt] at (C) {$c$};
+\node[right=1pt] at (D) {$d$};
+\node[above right=0pt] at (0.42,-0.68) {$8\,\mathrm{cm}$};
+% Angle 30 deg between -y axis and ad
+\EMangle{A}{-90}{-61}{1.15}{30^\circ}
+\end{tikzpicture}%

@@ -1,0 +1,40 @@
+\begin{tikzpicture}[em diagram]
+% Two main transmission lines
+\draw (0,2.95)--(5.8,2.95) (0,2.15)--(5.8,2.15);
+\draw[dim] (4.0,2.15)--(4.0,2.95) node[midway,fill=white,inner sep=1.5pt] {$U$};
+
+% Left choke branch jumping over lower main line
+\draw (1.0,2.95)--(1.0,2.33)
+  arc[start angle=90,end angle=-90,radius=.18]
+  --(1.0,0)--(5.2,0);
+% Inductor L (vertical)
+\begin{scope}[shift={(1.0,1.35)},rotate=90]
+  \draw[white,line width=2pt] (-.36,0)--(.36,0);
+  \draw (-.36,0) arc[start angle=180,end angle=0,radius=.09]
+    arc[start angle=180,end angle=0,radius=.09]
+    arc[start angle=180,end angle=0,radius=.09]
+    arc[start angle=180,end angle=0,radius=.09];
+\end{scope}
+\node[left,align=center] at (.68,1.25) {抗\\流\\圈};
+\node[right] at (1.08,1.35) {$L$};
+% Resistor r (vertical)
+\EMres[below=4pt]{1.0,0}{1.0,.96}{r}
+
+% Load bus from lower main line
+\draw (2.2,2.15)--(2.2,1.35)--(5.2,1.35)--(5.2,0);
+\draw[-{Stealth[length=2.8pt,width=2.3pt]}] (2.2,2.15)--(2.2,1.68) node[midway,right=1pt] {$I$};
+
+% Lamp bulbs
+\foreach \x in {2.2,2.85,4.55,5.2} {
+  \draw (\x,1.35)--(\x,0);
+  \EMdot{\x,1.35}
+  \EMdot{\x,0}
+  \draw[fill=white] (\x,.675) circle[radius=.22];
+  \draw (\x-.155,.675-.155)--(\x+.155,.675+.155)
+        (\x-.155,.675+.155)--(\x+.155,.675-.155);
+}
+\foreach \dx in {-.20,0,.20} {
+  \fill (3.70+\dx,.675) circle[radius=1.1pt];
+}
+\node[right] at (5.45,.675) {电灯};
+\end{tikzpicture}%
