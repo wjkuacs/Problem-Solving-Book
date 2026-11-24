@@ -1,0 +1,29 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany]{ctexbook}
+\usepackage{amsmath,amssymb,enumitem,geometry,fancyhdr,tikz,graphicx}
+\usetikzlibrary{arrows.meta}
+\usepackage[unicode,hidelinks]{hyperref}
+\geometry{left=24mm,right=24mm,top=23mm,bottom=22mm,headheight=16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{格里菲斯量子力学概论做题本}
+\fancyhead[R]{\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.12}
+\setlist[enumerate]{label=(\alph*),leftmargin=2.5em,itemsep=0.3em,topsep=0.4em}
+% 每题独占一页；章名只放在页眉和 PDF 书签中，不另占章首页。
+\newcommand{\bookchapter}[2]{\clearpage\setcounter{chapter}{#1}\chaptermark{#2}\pdfbookmark[0]{第 #1 章 #2}{ch#1}}
+\newcommand{\problem}[2][]{\clearpage\phantomsection\pdfbookmark[1]{习题 #2}{p#2}\noindent{\large\bfseries 习题 #2}\if\relax\detokenize{#1}\relax\else\quad{\small #1}\fi\par\medskip}
+\newcommand{\avg}[1]{\left\langle #1\right\rangle}
+\newcommand{\dd}{\mathrm{d}}
+\newcommand{\ket}[1]{\lvert #1\rangle}
+\begin{document}
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter2_10_54.tex}
+\input{chapters/chapter2_55_64.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter3_09_49.tex}
+\end{document}

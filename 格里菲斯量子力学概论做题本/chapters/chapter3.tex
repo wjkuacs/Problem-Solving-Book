@@ -1,0 +1,73 @@
+\bookchapter{3}{形式理论}
+
+\problem{3.1}
+\begin{enumerate}
+\item 证明全体平方可积函数集构成一个矢量空间（参考 A.1 节中的定义）。提示：要点是证明两个平方可积函数之和也是平方可积的。利用式（3.7）。全体可归一化的函数集构成矢量空间吗？
+\item 证明式（3.6）中的积分满足内积条件（A.2 节）。
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{3.2}
+\begin{enumerate}
+\item 对 $\nu$ 范围取什么时，在 $(0,1)$ 区间内的函数 $f(x)=x^\nu$ 在希尔伯特空间中？假设 $\nu$ 是实数，但不必是正数。
+\item 对于 $\nu=1/2$ 的特定情况，$f(x)$ 还在希尔伯特空间吗？$xf(x)$ 呢？$(\dd/\dd x)f(x)$ 呢？
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{3.3}
+证明如果对于所有的 $h$（希尔伯特空间中）都有
+\[
+\langle h\mid\hat Qh\rangle=\langle\hat Qh\mid h\rangle,
+\]
+则对于所有的 $f$ 和 $g$ 也有
+\[
+\langle f\mid\hat Qg\rangle=\langle\hat Qf\mid g\rangle
+\]
+（也就是，两种“厄米算符”的定义是等价的——式（3.16）和式（3.17））。提示：先令 $h=f+g$，然后再令 $h=f+\mathrm{i}g$。
+\vfill
+
+\problem{3.4}
+\begin{enumerate}
+\item 证明两个厄米算符之和仍是厄米算符。\footnote{在一个有限维的空间，厄米算符用厄米矩阵表示。厄米矩阵等于其厄米共轭：$\boldsymbol T=\boldsymbol T^\dagger\equiv\widetilde{\boldsymbol T}^{\,*}$。假如你对此不熟悉，请参阅附录。}
+\item 假设 $\hat Q$ 是厄米的，且 $\alpha$ 为复数，$\alpha$ 在什么条件下 $\alpha\hat Q$ 也是厄米的？
+\item 在什么条件下两个厄米算符的积也是厄米算符？
+\item 证明位置算符（$\hat x=x$）和哈密顿算符
+\[
+\hat H=-\frac{\hbar^2}{2m}\frac{\dd^2}{\dd x^2}+V(x)
+\]
+是厄米算符。\footnote{正如我第 1 章中提到的，存在平方可积的极端函数，但在无限远处并不为 $0$。然而，在物理学中并不存在这些函数。如果你担心这一点，我们可以简单限制算符的域，把它们排除在外。在有限区间中，你要特别小心边界项，一个算符在 $(-\infty,+\infty)$ 区间是厄米算符，在 $(0,\infty)$ 或 $(-\pi,+\pi)$ 区间上并非一定是厄米算符。对无限深方势阱，最安全的是认为这些波函数位于无限长直线上——它们只不过是恰巧在 $(0,a)$ 之外等于零。参看习题 3.48。}
+\end{enumerate}
+\vfill
+
+\problem{3.5}
+\begin{enumerate}
+\item 求出 $x$、$\mathrm{i}$ 和 $\dd/\dd x$ 的厄米共轭算符。
+\item 证明：
+\[
+(\hat Q\hat R)^\dagger=\hat R^\dagger\hat Q^\dagger
+\quad\text{（注意颠倒顺序），}\qquad
+(\hat Q+\hat R)^\dagger=\hat R^\dagger+\hat Q^\dagger,
+\]
+以及对复数 $c$ 有 $(c\hat Q)^\dagger=c^*\hat Q^\dagger$。
+\item 构建 $a_\pm$ 的厄米共轭算符（式（2.48））。
+\end{enumerate}
+\vfill
+
+\problem{3.6}
+考虑算符 $\hat Q=\dd^2/\dd\phi^2$，其中 $\phi$ 是极坐标中的方位角（同例题 3.1），且函数同样遵从式（3.26）。$\hat Q$ 是厄米算符吗？求出它的本征函数和本征值。$\hat Q$ 的谱是什么？这个谱是简并的吗？
+\vfill
+
+\problem{3.7}
+\begin{enumerate}
+\item 假设 $f(x)$ 和 $g(x)$ 是算符 $\hat Q$ 的两个具有相同本征值 $q$ 的本征函数。证明任何 $f$ 和 $g$ 的线性组合也是 $\hat Q$ 的本征函数，且本征值为 $q$。
+\item 验证 $f(x)=\exp(x)$ 与 $g(x)=\exp(-x)$ 是算符 $\dd^2/\dd x^2$ 具有相同本征值的两个本征函数。
+\end{enumerate}
+由 $f$ 和 $g$ 的线性组合构造两个波函数，使在 $(-1,1)$ 范围内它们是正交的。
+\vfill
+
+\problem{3.8}
+\begin{enumerate}
+\item 验证例题 3.1 中厄米算符的本征值是实数。证明具有不同本征值的本征函数正交。
+\item 对习题 3.6 中的算符做同样的验证。
+\end{enumerate}
+\vfill

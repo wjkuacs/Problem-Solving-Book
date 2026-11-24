@@ -1,0 +1,17 @@
+% 原书图 1.10 的定性示意重绘；曲线不表示指定的解析势函数。
+\begin{tikzpicture}[x=0.95cm,y=0.75cm,>=Stealth,font=\small]
+\draw[->] (-2.7,0)--(3.4,0) node[right] {$x$};
+\draw[->] (-0.7,-0.35)--(-0.7,4.15) node[above] {$V(x)$};
+\draw[thick] (-2.2,3.8) .. controls (-2.05,3.4) and (-1.95,3.1) .. (-1.83,2.8)
+ .. controls (-1.5,1.8) and (-1.15,0.9) .. (-0.55,1.05)
+ .. controls (0.2,1.45) and (0.4,1.5) .. (0.95,0.65)
+ .. controls (1.65,-0.25) and (2.1,0.15) .. (2.58,2.8)
+ .. controls (2.68,3.2) and (2.75,3.55) .. (2.8,3.8);
+\draw (-1.83,2.8)--(2.58,2.8) node[midway,above] {$E$};
+\draw[dashed] (-1.83,0) node[below] {$a$}--(-1.83,2.8);
+\draw[dashed] (2.58,0) node[below] {$b$}--(2.58,2.8);
+\draw (0.65,0)--(0.65,1.05);
+\draw (0.86,0)--(0.86,0.78);
+\node[below] at (0.75,0) {$\dd x$};
+\fill (-1.45,1.9) circle (1.7pt) node[above right] {$m$};
+\end{tikzpicture}

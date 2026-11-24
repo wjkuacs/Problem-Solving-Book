@@ -1,0 +1,12 @@
+% 原书图 2.20：两个等宽等深方势阱；b 为两阱间隔。
+\begin{tikzpicture}[x=1cm,y=0.8cm,>=Stealth,font=\small]
+\draw[->] (-3.5,0)--(3.6,0) node[right] {$x$};
+\draw[->] (0,-2.4)--(0,1.4) node[above] {$V(x)$};
+\draw[thick] (-3.3,0)--(-2.8,0)--(-2.8,-2)--(-0.5,-2)
+ --(-0.5,0)--(0.5,0)--(0.5,-2)--(2.8,-2)--(2.8,0)--(3.3,0);
+\draw[densely dotted] (-0.45,-2)--(0.45,-2);
+\node[below right] at (0,-2) {$-V_0$};
+\draw[|<->|] (-2.8,0.45)--(-0.5,0.45) node[midway,above] {$a$};
+\draw[|<->|] (-0.5,0.45)--(0.5,0.45) node[midway,above] {$b$};
+\draw[|<->|] (0.5,0.45)--(2.8,0.45) node[midway,above] {$a$};
+\end{tikzpicture}

@@ -1,0 +1,103 @@
+% 补录第五批图片；由 chapter3_09_49.tex 在 3.22 后按题号插入。
+\problem{3.23}
+证明投影算符等幂（idempotent）：$\hat P^2=\hat P$。求 $\hat P$ 的本征值，并描述其本征矢量。
+\vfill
+
+\problem{3.24}
+证明：若 $\hat Q$ 是厄米算符，则在任意正交基内所表示的矩阵元满足 $Q_{mn}=Q_{nm}^*$。也就是说，相应的矩阵等于其厄米共轭。\footnote{根据式（3.20），注意到 $\langle\hat Qf|=\langle f|\hat Q^\dagger$。}
+\vfill
+
+\problem{3.25}
+两能级系统的哈密顿量为
+\[
+\hat H=\varepsilon\left(\ket{1}\langle1|-\ket{2}\langle2|
++\ket{1}\langle2|+\ket{2}\langle1|\right),
+\]
+这里，$\ket{1}$、$\ket{2}$ 是正交归一基，$\varepsilon$ 为一个具有能量量纲的数值。求出其本征值和本征矢（用 $\ket{1}$ 和 $\ket{2}$ 的线性叠加表示）。用这组基表示 $\hat H$ 的矩阵是什么？
+\vfill
+
+\problem{3.26}
+考虑由正交归一基 $\ket{1}$、$\ket{2}$、$\ket{3}$ 构成的三维矢量空间，右矢 $\ket{\alpha}$ 和 $\ket{\beta}$ 分别为
+\[
+\ket{\alpha}=\mathrm{i}\ket{1}-2\ket{2}-\mathrm{i}\ket{3},\qquad
+\ket{\beta}=\mathrm{i}\ket{1}+2\ket{3}.
+\]
+\begin{enumerate}
+\item 构造出 $\langle\alpha|$ 和 $\langle\beta|$（以对偶基 $\langle1|$、$\langle2|$、$\langle3|$ 来表示）。
+\item 求出 $\langle\alpha|\beta\rangle$ 和 $\langle\beta|\alpha\rangle$，并证实 $\langle\beta|\alpha\rangle=\langle\alpha|\beta\rangle^*$。
+\item 在这组基中，求出算符 $\hat A\equiv\ket{\alpha}\langle\beta|$ 的所有 9 个矩阵元，并写出矩阵 $\boldsymbol A$。它是厄米矩阵吗？
+\end{enumerate}
+\vfill
+
+\problem{3.27}
+令算符 $\hat Q$ 是具有一组完备的正交归一本征矢：
+\[
+\hat Q\ket{e_n}=q_n\ket{e_n}\qquad(n=1,2,3,\ldots).
+\]
+\begin{enumerate}
+\item 证明 $\hat Q$ 可以写成它的谱分解（spectral decomposition）形式：
+\[
+\hat Q=\sum_nq_n\ket{e_n}\langle e_n|.
+\]
+提示：算符是通过它对所有可能矢量的作用来表征的，因此对于任意矢量 $\ket{\alpha}$ 来说，你需要证明
+\[
+\hat Q\ket{\alpha}
+=\left\{\sum_nq_n\ket{e_n}\langle e_n|\right\}\ket{\alpha}.
+\]
+\item 定义 $\hat Q$ 函数的另一种方法是通过谱分解：
+\[
+f(\hat Q)=\sum_nf(q_n)\ket{e_n}\langle e_n|.
+\]
+证明：对于 $\mathrm{e}^{\hat Q}$ 的情况，这等同于式（3.100）。
+\end{enumerate}
+\vfill
+
+\problem{3.28}
+令 $\hat D=\dd/\dd x$（导数算符）。求：
+\begin{enumerate}
+\item $\displaystyle(\sin\hat D)x^5$。
+\item $\displaystyle\left(\frac{1}{1-\hat D/2}\right)\cos x$。
+\end{enumerate}
+\vfill
+
+\problem[$\ast\ast$]{3.29}
+考虑两个相互不对易算符 $\hat A$ 和 $\hat B$（$\hat C=[\hat A,\hat B]$），但它们都与它们的对易式对易：
+\[
+[\hat A,\hat C]=[\hat B,\hat C]=0
+\]
+（例如 $\hat x$ 和 $\hat p$）。
+\begin{enumerate}
+\item 证明
+\[
+[\hat A^n,\hat B]=n\hat A^{n-1}\hat C.
+\]
+提示：利用式（3.65），对 $n$ 采用归纳法来证明。
+\item 证明
+\[
+[\mathrm{e}^{\lambda\hat A},\hat B]
+=\lambda\mathrm{e}^{\lambda\hat A}\hat C,
+\]
+其中 $\lambda$ 为任意复数。提示：把 $\mathrm{e}^{\lambda\hat A}$ 展开为幂级数。
+\item 推导贝克--坎贝尔--豪斯多夫公式（Baker--Campbell--Hausdorff formula）：
+\[
+\mathrm{e}^{\hat A+\hat B}
+=\mathrm{e}^{\hat A}\mathrm{e}^{\hat B}\mathrm{e}^{-\hat C/2}.
+\]
+提示：定义函数
+\[
+\hat f(\lambda)=\mathrm{e}^{\lambda(\hat A+\hat B)},\qquad
+\hat g(\lambda)=\mathrm{e}^{\lambda\hat A}\mathrm{e}^{\lambda\hat B}
+\mathrm{e}^{-\lambda^2\hat C/2}.
+\]
+注意：当 $\lambda=0$ 时，这两个函数相等。证明它们满足同样的微分方程：
+\[
+\frac{\dd\hat f}{\dd\lambda}=(\hat A+\hat B)\hat f,\qquad
+\frac{\dd\hat g}{\dd\lambda}=(\hat A+\hat B)\hat g.
+\]
+因此，对所有的 $\lambda$，这两个函数本身是相等的。
+\end{enumerate}
+\vfill
+
+\problem{3.30}
+利用例题 3.9 中的方法推导出位置空间到能量空间波函数（$c_n(t)$）的变换。假设能谱是不连续的，势能不显含时间。
+\vfill

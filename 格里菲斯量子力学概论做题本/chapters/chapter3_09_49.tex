@@ -1,0 +1,383 @@
+% 第四批图片：仅录入已提供的题目；缺 3.17、3.23--3.30。
+\problem{3.9}
+\begin{enumerate}
+\item 列举一个第 2 章中哈密顿量（谐振子除外），它仅有离散谱。
+\item 列举一个第 2 章中的哈密顿量（自由粒子除外），它仅有连续谱。
+\item 列举一个第 2 章中的哈密顿量（有限深方势阱除外），它既有离散谱又有连续谱。
+\end{enumerate}
+\vfill
+
+\problem{3.10}
+无限深方势阱的基态是动量的本征函数吗？如果是的话，它的动量是多少？如果不是，给出理由？（进一步的讨论参见习题 3.34。）
+\vfill
+
+\problem{3.11}
+对处于谐振子基态的粒子，求出其动量空间波函数 $\Phi(p,t)$。对该粒子的动量进行测量，得到其结果处在经典范围（具有相同能量）以外的几率是多大（精确到两位数）？提示：数值计算部分可查阅数学手册中“正态分布”或“误差函数”，或使用 Mathematica 软件。
+\vfill
+
+\problem{3.12}
+由式（2.101）引入的函数 $\phi(k)$ 求出自由粒子的 $\Phi(p,t)$。证明：对于自由粒子，$|\Phi(p,t)|^2$ 和时间无关。评注：对于自由粒子而言，$|\Phi(p,t)|^2$ 和时间无关是该系统动量守恒的一个表现。
+\vfill
+
+\problem[$\ast$]{3.13}
+证明
+\[
+\avg{x}=\int\Phi^*\left(\mathrm{i}\hbar\frac{\partial}{\partial p}\right)\Phi\,\dd p.
+\]
+\textbf{提示：}注意到 $x\exp(\mathrm{i}px/\hbar)=-\mathrm{i}\hbar(\partial/\partial p)\exp(\mathrm{i}px/\hbar)$，并利用式（2.147）。则在动量空间中，位置算符是 $\mathrm{i}\hbar\partial/\partial p$。更为普遍地有
+\[
+\avg{Q(x,p,t)}=
+\begin{cases}
+\displaystyle\int\Psi^*\hat Q\left(x,-\mathrm{i}\hbar\frac{\partial}{\partial x},t\right)\Psi\,\dd x,
+&\text{在位置空间；}\\[10pt]
+\displaystyle\int\Phi^*\hat Q\left(\mathrm{i}\hbar\frac{\partial}{\partial p},p,t\right)\Phi\,\dd p,
+&\text{在动量空间。}
+\end{cases}
+\]
+原则上，你们可以像在位置空间一样在动量空间做所有的计算（虽然不总是那么容易）。
+
+\textbf{整理注：}原图提示的文字将动量空间位置算符写成负号，与同图式（3.57）、（3.58）不符；此处统一为正号 $\mathrm{i}\hbar\partial/\partial p$。
+\vfill
+
+\problem[$\ast$]{3.14}
+\begin{enumerate}
+\item 证明下列对易关系等式：
+\begin{align*}
+[\hat A+\hat B,\hat C]&=[\hat A,\hat C]+[\hat B,\hat C],\\
+[\hat A\hat B,\hat C]&=\hat A[\hat B,\hat C]+[\hat A,\hat C]\hat B.
+\end{align*}
+\item 证明
+\[
+[x^n,\hat p]=\mathrm{i}\hbar n x^{n-1}.
+\]
+\item 对可以进行泰勒级数展开的任意函数 $f(x)$，更普遍地证明
+\[
+[f(x),\hat p]=\mathrm{i}\hbar\frac{\dd f}{\dd x}.
+\]
+\item 对简谐振子，证明
+\[
+[\hat H,\hat a_\pm]=\pm\hbar\omega\hat a_\pm.
+\]
+提示：利用式（2.54）。
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{3.15}
+对于位置（$A=x$）的不确定性和能量（$B=p^2/(2m)+V$）的不确定性，证明著名的“（你的雅号）不确定原理”：
+\[
+\sigma_x\sigma_H\geq\frac{\hbar}{2m}|\avg{p}|.
+\]
+对于定态，它告诉不了你多少——为什么不能？
+\vfill
+
+\problem{3.16}
+证明两个非对易算符不能拥有完备的共同本征函数集。提示：证明如果 $\hat P$ 和 $\hat Q$ 拥有完备的共同本征函数集，则对于希尔伯特空间的任意函数有 $[\hat P,\hat Q]f=0$。
+\vfill
+
+% 习题 3.17 未在本批图片中出现。
+\problem{3.18}
+在下列特殊情况中应用式（3.73）：（a）$Q=1$；（b）$Q=H$；（c）$Q=x$；（d）$Q=p$。对每种情况，特别是参考式（1.27）、式（1.33）、式（1.38）和能量守恒（式（2.21）后的注释），对你的结果进行讨论。
+\vfill
+
+\problem{3.19}
+用式（3.73）（或者习题 3.18（c）和（d））证明：
+\begin{enumerate}
+\item 对于描述自由粒子（$V(x)=0$）的任意归一化波包，$\avg{x}$ 以恒定速度运动（这是牛顿第一定律的量子类似物）。注释：虽然采用习题 2.42 中的高斯波包来证明，但结论是普适的。
+\item 对于处于谐振子（$V(x)=\frac12m\omega^2x^2$）势场中的任意波包，$\avg{x}$ 以经典频率振动。注释：虽然采用习题 2.49 中的高斯波包来证明，但结论是普适的。
+\end{enumerate}
+\vfill
+
+\problem{3.20}
+对习题 2.5 中的波函数和可观测量 $x$，通过精确计算 $\sigma_H$、$\sigma_x$ 和 $\dd\avg{x}/\dd t$ 来验证能量--时间不确定原理。
+\vfill
+
+\problem{3.21}
+对习题 2.42 中的自由粒子波包和可观测量 $x$，通过精确计算 $\sigma_H$、$\sigma_x$ 和 $\dd\avg{x}/\dd t$ 来验证能量--时间不确定原理。
+\vfill
+
+\problem{3.22}
+证明当所涉及的可观测量为 $x$ 时，能量--时间不确定原理还原为在习题 3.15 证明的不确定原理。
+\vfill
+
+% 第五批图片补齐 3.23--3.30，按教材题号插入。
+\input{chapters/chapter3_23_30.tex}
+\problem{3.31}
+\textbf{勒让德多项式（Legendre polynomials）。}用格拉姆--施密特方法（习题 A.4）在区间 $-1\leq x\leq1$ 内对函数 $1$、$x$、$x^2$、$x^3$ 进行正交归一化。你可能会认出这些结果——（除了归一化外）它们是勒让德多项式（习题 2.64 和表 4.1）。\footnote{勒让德那时不知道选择什么是最方便的；他选择整体因子使得在 $x=1$ 时他的所有函数为 $1$，因此，我们仍然用他这个不适当的选择。}
+\vfill
+
+\problem{3.32}
+反厄米算符等于其负的厄米共轭：
+\[
+\hat Q^\dagger=-\hat Q.
+\]
+\begin{enumerate}
+\item 证明反厄米算符的期望值是虚数。
+\item 证明反厄米算符的本征值是虚数。
+\item 证明属于反厄米算符不同本征值的本征态是正交的。
+\item 证明两个厄米算符的对易式是反厄米的。那么两个反厄米算符的对易式呢？
+\item 证明任一算符 $\hat Q$ 都可以表示为一个厄米算符 $\hat A$ 和一个反厄米算符 $\hat B$ 之和，用 $\hat Q$ 和它的伴算符 $\hat Q^\dagger$ 表出 $\hat A$ 和 $\hat B$。
+\end{enumerate}
+\vfill
+
+\problem{3.33}
+\textbf{相继测量（Sequential measurements）。}算符 $\hat A$ 表示可观测量 $A$，它的两个归一化本征态是 $\psi_1$ 和 $\psi_2$，相应本征值分别为 $a_1$ 和 $a_2$。算符 $\hat B$ 表示可观测量 $B$，它的两个归一化本征态是 $\phi_1$ 和 $\phi_2$，相应本征值分别为 $b_1$ 和 $b_2$。两组本征态之间有关系：
+\[
+\psi_1=\frac{3\phi_1+4\phi_2}{5},\qquad
+\psi_2=\frac{4\phi_1-3\phi_2}{5}.
+\]
+\begin{enumerate}
+\item 对可观测量 $A$ 进行测量，结果为 $a_1$。那么在测量后（瞬时）体系处在什么态？
+\item 现在如果再对 $B$ 进行测量，可能的结果是什么？出现的几率是多少？
+\item 恰好在测量 $B$ 后，再次测量 $A$。那么结果为 $a_1$ 的几率是多少？（请注意，如果我告诉你 $B$ 测量的结果，答案将非常不同。）
+\end{enumerate}
+\vfill
+
+\problem[$\ast\ast$；数值实验]{3.34}
+\begin{enumerate}
+\item 对无限深方势阱中的第 $n$ 个定态，求动量空间波函数 $\Phi_n(p,t)$。
+\item 求几率密度 $|\Phi_n(p,t)|^2$。对于 $n=1$、$n=2$、$n=5$ 和 $n=10$，画出几率密度函数。在 $n$ 很大时，$p$ 的最概然值是多少？这是你所预期的吗？将你的结果与习题 3.10 做比较。
+\item 利用 $\Phi_n(p,t)$ 计算 $p^2$ 处在第 $n$ 个状态的期望值。将你的结果与习题 2.4 做比较。
+\end{enumerate}
+\vfill
+
+\problem{3.35}
+考虑波函数
+\[
+\psi(x,0)=\begin{cases}
+\displaystyle\frac{1}{\sqrt{2n\lambda}}\mathrm{e}^{\mathrm{i}2\pi x/\lambda},&-n\lambda<x<n\lambda,\\[6pt]
+0,&\text{其他地方。}
+\end{cases}
+\]
+这里 $n$ 是某个正整数。在区间 $-n\lambda<x<n\lambda$ 上，它是纯正弦函数（波长为 $\lambda$），但由于振荡没有伸展到无限远处，它的动量仍然有一个分布范围。求出动量空间的波函数 $\Phi(p,0)$。画出 $\psi(x,0)$ 和 $|\Phi(p,0)|^2$，求出峰宽 $w_x$ 和 $w_p$（主峰两边零点之间的距离）。注意在当 $n\to\infty$ 时，每一个峰宽是如何变化的。利用 $w_x$ 和 $w_p$ 估算 $\Delta x$ 和 $\Delta p$，验证不确定原理是否满足。
+
+\textbf{提示：}如果尝试计算 $\sigma_p$，你将会感到很意外。你能够分析问题的原因所在吗？
+\vfill
+
+\problem{3.36}
+假设：
+\[
+\psi(x,0)=\frac{A}{x^2+a^2}\qquad(-\infty<x<\infty),
+\]
+式中，$A$ 和 $a$ 是常数。
+\begin{enumerate}
+\item 通过对 $\psi(x,0)$ 归一化确定 $A$ 的值。
+\item 求出 $\avg{x}$、$\avg{x^2}$ 和 $\sigma_x$（在 $t=0$ 时刻）。
+\item 求出动量空间的波函数 $\Phi(p,0)$，并验证它是归一化的。
+\item 用 $\Phi(p,0)$ 来计算 $\avg{p}$、$\avg{p^2}$ 和 $\sigma_p$（在 $t=0$ 时刻）。
+\item 对该状态验证海森伯不确定原理。
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{3.37}
+\textbf{位力定理（Virial theorem）。}利用式（3.73）证明
+\[
+\frac{\dd}{\dd t}\avg{xp}=2\avg{T}-\avg{x\frac{\partial V}{\partial x}},
+\]
+式中，$T$ 是动能（$H=T+V$）。对于定态，式（3.112）的左边为 $0$（为什么？），所以有
+\[
+2\avg{T}=\avg{x\frac{\dd V}{\dd x}}.
+\]
+这称之为位力定理。利用它证明谐振子的定态有 $\avg{T}=\avg{V}$，并验证这是否与习题 2.11 和习题 2.12 中所得到的结果一致。
+\vfill
+
+\problem{3.38}
+在能量--时间不确定性原理一个有趣的形式中，$\Delta t=\tau/\pi$，这里 $\tau$ 是 $\psi(x,t)$ 演变为与 $\psi(x,0)$ 相正交的状态所需要的时间。利用对某个（任意的）势场中的两个（正交归一的）定态波函数的线性组合：
+\[
+\psi(x,0)=\frac{1}{\sqrt{2}}[\psi_1(x)+\psi_2(x)],
+\]
+来验证这个结论。
+\vfill
+
+\problem[$\ast\ast$]{3.39}
+以谐振子（正交归一的）定态为基（式（2.68）），求出矩阵元 $\langle n|x|n'\rangle$ 和 $\langle n|p|n'\rangle$。你已经在习题 2.12 里计算过矩阵对角元（$n=n'$）；用同样方法计算更一般的情况。构造出相应的（无限）矩阵，$\boldsymbol X$ 和 $\boldsymbol P$。证明：在这基中，
+\[
+\frac{1}{2m}\boldsymbol P^2+\frac{m\omega^2}{2}\boldsymbol X^2=\boldsymbol H
+\]
+是对角矩阵。它的对角矩阵元是你所预期的吗？
+\vfill
+
+\problem[$\ast\ast$]{3.40}
+谐振子势中粒子波函数一般可写为
+\[
+\Psi(x,t)=\sum_n c_n\psi_n(x)\mathrm{e}^{-\mathrm{i}E_nt/\hbar}.
+\]
+证明位置期望值为
+\[
+\avg{x}=C\cos(\omega t-\phi),
+\]
+其中，实常数 $C$ 和 $\phi$ 由下式给出：
+\[
+C\mathrm{e}^{-\mathrm{i}\phi}
+=\sqrt{\frac{2\hbar}{m\omega}}\sum_{n=0}^{\infty}\sqrt{n+1}\,c_{n+1}^*c_n.
+\]
+所以，谐振子的位置期望值以经典频率 $\omega$ 振动（正如埃伦菲斯特定理预期的那样；见习题 3.19（b））。提示：利用式（3.114）。作为一个例子，找出习题 2.40 中波函数的 $C$ 和 $\phi$ 的值。
+\vfill
+
+\problem{3.41}
+谐振子处于这样的态，当对其能量进行测量时，所得结果是 $(1/2)\hbar\omega$ 或 $(3/2)\hbar\omega$ 的几率相等。在这种状态下，$\avg{p}$ 最大的可能值是多少？假设在 $t=0$ 时刻该值为最大，$\Psi(x,t)$ 是什么？
+\vfill
+
+\problem[$\ast\ast\ast$]{3.42}
+\begingroup\small
+\setlength{\abovedisplayskip}{5pt}
+\setlength{\belowdisplayskip}{5pt}
+\textbf{谐振子的相干态（Coherent states of the harmonic oscillator）。}在谐振子定态中（式（2.67）），仅当 $n=0$ 时的状态符合不确定原理的极限（$\sigma_x\sigma_p=\hbar/2$）；如同你在习题 2.12 得到的那样，在一般情况下有 $\sigma_x\sigma_p=(2n+1)\hbar/2$。但是，某些线性叠加（所谓的相干态）也会取不确定度乘积的最小值。它们是降算符的本征函数：\footnote{升算符没有可归一化的本征函数。}
+\[
+a_-\ket{\alpha}=\alpha\ket{\alpha}.
+\]
+（这里，本征值 $\alpha$ 可以是任何复数。）
+\begin{enumerate}
+\item 对态 $\ket{\alpha}$ 计算 $\avg{x}$、$\avg{x^2}$、$\avg{p}$ 和 $\avg{p^2}$。提示：利用例题 2.5 中的方法，要注意的是 $a_+$ 是 $a_-$ 的厄米共轭算符。不要假定 $\alpha$ 是实数。
+\item 求出 $\sigma_x$ 和 $\sigma_p$；证明 $\sigma_x\sigma_p=\hbar/2$。
+\item 像任何其他的波函数一样，相干态可以利用能量本征态做展开：
+\[
+\ket{\alpha}=\sum_{n=0}^{\infty}c_n\ket{n}.
+\]
+证明展开系数是
+\[
+c_n=\frac{\alpha^n}{\sqrt{n!}}c_0.
+\]
+\item 通过归一化 $\ket{\alpha}$ 确定 $c_0$。
+\item 现在，引入时间因子：
+\[
+\ket{n}\longrightarrow\mathrm{e}^{-\mathrm{i}E_nt/\hbar}\ket{n},
+\]
+证明 $\ket{\alpha(t)}$ 仍然是 $a_-$ 的本征态，但本征值是随时间变化的：
+\[
+\alpha(t)=\mathrm{e}^{-\mathrm{i}\omega t}\alpha.
+\]
+因此一个相干态将维持相干，并继续取不确定度乘积的最小值。
+\item 基于（a）（b）和（e）中得到的结果，求出作为时间函数的 $\avg{x}$ 和 $\sigma_x$。如果把复数 $\alpha$ 写成如下形式将会大有帮助：
+\[
+\alpha=C\sqrt{\frac{m\omega}{2\hbar}}\mathrm{e}^{\mathrm{i}\phi},
+\]
+其中 $C$ 和 $\phi$ 是实数。注释：在某种意义上，相干态的行为是准经典的。
+\item 基态（$\ket{n=0}$）本身是相干态吗？如果是，它的本征值是什么？
+\end{enumerate}
+\endgroup
+\vfill
+
+\problem{3.43}
+\textbf{扩展的不确定原理。}广义不确定原理（式（3.62））指出
+\[
+\sigma_A^2\sigma_B^2\geq\frac14\avg{C}^2,
+\]
+其中 $\hat C=-\mathrm{i}[\hat A,\hat B]$。
+\begin{enumerate}
+\item 证明它可以拓展为
+\[
+\sigma_A^2\sigma_B^2\geq\frac14\left(\avg{C}^2+\avg{D}^2\right),
+\]
+其中 $\hat D\equiv\hat A\hat B+\hat B\hat A-2\avg{A}\avg{B}$。提示：保留式（3.60）中的实部项 $\operatorname{Re}(z)$。
+\item 当 $B=A$ 时，验证式（3.115）（在这种情况下，标准的不确定原理是平庸的，因为 $\hat C=0$；遗憾的是，扩展的不确定原理也没什么帮助）。
+\end{enumerate}
+\vfill
+
+\problem{3.44}
+某三能级体系哈密顿量的矩阵形式表示为
+\[
+\boldsymbol H=\begin{pmatrix}a&0&b\\0&c&0\\b&0&a\end{pmatrix},
+\]
+其中 $a$、$b$ 和 $c$ 都是实数。
+\begin{enumerate}
+\item 如果体系的初始态是
+\[
+\ket{S(0)}=\begin{pmatrix}0\\1\\0\end{pmatrix},
+\]
+求 $\ket{S(t)}$。
+\item 如果初始态是
+\[
+\ket{S(0)}=\begin{pmatrix}1\\0\\0\end{pmatrix},
+\]
+求 $\ket{S(t)}$。
+\end{enumerate}
+\vfill
+
+\problem{3.45}
+求以谐振子能量的本征态作为基矢展开的位置算符。也就是，按照
+\[
+c_n(t)=\langle n|S(t)\rangle
+\]
+表示出
+\[
+\langle n|\hat x|S(t)\rangle.
+\]
+\textbf{提示：}利用式（3.114）。
+\vfill
+
+\problem{3.46}
+某个三能级体系哈密顿量的矩阵形式表示为
+\[
+\boldsymbol H=\hbar\omega\begin{pmatrix}1&0&0\\0&2&0\\0&0&2\end{pmatrix},
+\]
+另外的两个可观测量 $A$ 和 $B$ 的矩阵表示为
+\[
+\boldsymbol A=\lambda\begin{pmatrix}0&1&0\\1&0&0\\0&0&2\end{pmatrix},\qquad
+\boldsymbol B=\mu\begin{pmatrix}2&0&0\\0&0&1\\0&1&0\end{pmatrix},
+\]
+式中，$\omega$、$\lambda$ 和 $\mu$ 都是正实数。
+\begin{enumerate}
+\item 求出 $H$、$A$ 和 $B$ 的本征值和归一化的本征函数。
+\item 假设体系初始态为一般的状态
+\[
+\ket{S(0)}=\begin{pmatrix}c_1\\c_2\\c_3\end{pmatrix},
+\]
+其中 $|c_1|^2+|c_2|^2+|c_3|^2=1$，求（在 $t=0$ 时刻）$H$、$A$ 和 $B$ 的期望值。
+\item $\ket{S(t)}$ 是什么？如果你（在 $t$ 时刻）测量该态的能量，可能会获得什么样的值，几率分别是多少？对可观测量 $A$ 和 $B$，回答同样的问题。
+\end{enumerate}
+\vfill
+
+\problem[$\ast\ast$]{3.47}
+\textbf{超对称性（supersymmetry）。}考虑两个算符
+\[
+\hat A=\mathrm{i}\frac{\hat p}{\sqrt{2m}}+W(x),\qquad
+\hat A^\dagger=-\mathrm{i}\frac{\hat p}{\sqrt{2m}}+W(x),
+\]
+$W(x)$ 为某个函数。通过对两个算符按照不同次序相乘，可以构建两个哈密顿量：
+\[
+\hat H_1=\hat A^\dagger\hat A=\frac{\hat p^2}{2m}+V_1(x),\qquad
+\hat H_2=\hat A\hat A^\dagger=\frac{\hat p^2}{2m}+V_2(x).
+\]
+$V_1$ 和 $V_2$ 称为超对称伴势（supersymmetric partner potentials），$\hat H_1$ 和 $\hat H_2$ 的能量和本征态以有趣的方式联系在一起。
+\begin{enumerate}
+\item 用超势 $W(x)$（superpotential）表示出势 $V_1(x)$ 和 $V_2(x)$。
+\item 证明：如果 $\psi_n^{(1)}$ 是 $\hat H_1$ 的本征态，其本征值为 $E_n^{(1)}$，那么 $\hat A\psi_n^{(1)}$ 是 $\hat H_2$ 的本征态，且本征值也为 $E_n^{(1)}$。同样证明，如果 $\psi_n^{(2)}$ 是 $\hat H_2$ 的本征态，其本征值为 $E_n^{(2)}$，那么 $\hat A^\dagger\psi_n^{(2)}$ 是 $\hat H_1$ 的本征态，且本征值也为 $E_n^{(2)}$。因此，这两个哈密顿量有完全相同的能谱。
+\item 通常情况下，通过选择 $W(x)$ 使 $\hat H_1$ 的基态满足
+\[
+\hat A\psi_0^{(1)}(x)=0,
+\]
+同时 $E_0^{(1)}=0$。利用这些条件，用基态波函数 $\psi_0^{(1)}(x)$ 表示出超势 $W(x)$。（实际上，$\hat A$ 使 $\psi_0^{(1)}(x)$ 湮灭本身就意味着 $\hat H_2$ 的本征态要比 $\hat H_1$ 少一个，缺少的本征值是 $E_0^{(1)}$。）
+\item 考虑狄拉克 $\delta$ 函数势阱：
+\[
+V_1(x)=\frac{m\alpha^2}{2\hbar^2}-\alpha\delta(x),
+\]
+（常数项 $m\alpha^2/(2\hbar^2)$ 包含在内，因此 $E_0^{(1)}=0$。）它只有一个束缚态（式（2.132）），
+\[
+\psi_0^{(1)}(x)=\frac{\sqrt{m\alpha}}{\hbar}
+\exp\left[-\frac{m\alpha}{\hbar^2}|x|\right].
+\]
+利用（a）和（c）部分的结果以及习题 2.23（b），求出超势 $W(x)$ 和伴势 $V_2(x)$。你可能会认识这个伴势，显然它没有束缚态。这两个系统之间的超对称性解释了一个事实，即它们的反射系数和透射系数是相同的（见 2.5.2 节的最后一段）。
+\end{enumerate}
+\vfill
+
+\problem[$\ast\ast$]{3.48}
+算符不仅可以由其作用定义（对它作用的矢量进行操作），也可以由域来定义（算符作用的矢量集合）。在有限维矢量空间中，域就是整个空间，我们不必担心它。但是，对希尔伯特空间中的大多数算符，域是受限制的。特别地，在 $\hat Q$ 的域中，只允许函数 $\hat Qf(x)$ 留在希尔伯特空间中（正如你在习题 3.2 中发现的那样，导数运算符可以将一个函数作用后使之离开 $L^2$ 空间）。厄米算符的作用与它自伴算符的作用是一样的（习题 3.5），但实际上要表示可观测量要支持更多的东西：$\hat Q$ 和 $\hat Q^\dagger$ 的域必须是相同的。这种算符称自伴算符（self-adjoint）。\footnote{数学家称它们为“对称”算符。因为这种区别很少出现，物理学家更倾向于不加区别地使用“厄米”一词；严格来说，我们应该说“自伴的”，不管是作用还是域都有 $\hat Q=\hat Q^\dagger$。}
+\begin{enumerate}
+\item 在有限区间 $0\leq x\leq a$ 内，考虑动量算符 $\hat p=-\mathrm{i}\hbar\,\dd/\dd x$。考虑到无限深方势阱，域可以定义为函数集 $f(x)$，且 $f(0)=f(a)=0$（不言而喻，$f(x)$ 和 $\hat pf(x)$ 都在 $L^2(0,a)$ 中）。证明 $\hat p$ 是厄米的：$\langle g|\hat pf\rangle=\langle\hat p^\dagger g|f\rangle$ 和 $\hat p^\dagger=\hat p$。它是自伴算符吗？提示：只要 $f(0)=f(a)=0$，$g(0)$ 或 $g(a)$ 没有限制——$\hat p^\dagger$ 的域要比 $\hat p$ 的域大很多。\footnote{$\hat Q$ 的域是我们规定的；它决定了 $\hat Q^\dagger$ 的域。}
+\item 假设对于某些固定的复数 $\lambda$，我们扩展 $\hat p$ 的域以包含形式 $f(a)=\lambda f(0)$ 的所有形式的函数。必须对 $\hat p^\dagger$ 做什么样的限制条件才能使得 $\hat p$ 是厄米的？$\lambda$ 取什么值时，$\hat p$ 是自伴算符？评注：严格地讲，有限区间内没有动量算符——或者更确切地说，有无限多，没有方法确定哪一个是“正确的”。（在习题 3.34 中，我们是通过处理无限空间来避免这个问题的。）
+\item 对于半无限区域 $0\leq x\leq\infty$，情况又会如何？在这种情况下，动量自伴算符存在吗？
+\end{enumerate}
+\vfill
+
+\problem[$\ast\ast$]{3.49}
+\begin{enumerate}
+\item 在动量空间中，写出自由粒子的含时薛定谔方程，并求解。
+\item 对运动的高斯波包（习题 2.42）求 $\Phi(p,0)$，并构造 $\Phi(p,t)$。给出 $|\Phi(p,t)|^2$，注意到它是不依赖于时间的。
+\item 通过计算包含 $\Phi$ 的适当积分计算 $\avg{p}$ 和 $\avg{p^2}$，将答案和习题 2.42 的结果做比较。
+\item 证明
+\[
+\avg{H}=\frac{\avg{p}^2}{2m}+\avg{H}_0
+\]
+（这里，脚标“$0$”表示静态高斯波包），并讨论这个结果。
+\end{enumerate}
+\vfill

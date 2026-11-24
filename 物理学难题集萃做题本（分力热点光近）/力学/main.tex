@@ -1,0 +1,51 @@
+% !TeX program = xelatex
+% 物理学难题集萃 力学篇 · 题目部分（一页一题，无封面）
+\documentclass[12pt,a4paper,openany]{book}
+
+\usepackage{ctex}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{esint}
+\usepackage{geometry}
+\geometry{left=2.2cm,right=2.2cm,top=2.2cm,bottom=2.2cm}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 物理学难题集萃（力学）}
+\fancyhead[C]{\small\leftmark}
+\fancyhead[R]{\small 力学}
+\fancyfoot[C]{\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\allowdisplaybreaks
+\raggedbottom
+
+\begin{document}
+
+\chapter{运动学}
+\input{chapters/chapter1_运动学.tex}
+
+\chapter{牛顿运动定律}
+\input{chapters/chapter2_牛顿运动定律.tex}
+
+\chapter{功、能和动量}
+\input{chapters/chapter3_功能和动量.tex}
+
+\chapter{角动量、有心运动}
+\input{chapters/chapter4_角动量有心运动.tex}
+
+\chapter{静力平衡}
+\input{chapters/chapter5_静力平衡.tex}
+
+\chapter{刚体动力学}
+\input{chapters/chapter6_刚体动力学.tex}
+
+\chapter{振动与波动}
+\input{chapters/chapter7_振动与波动.tex}
+
+\end{document}

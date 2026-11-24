@@ -1,0 +1,240 @@
+\bookchapter{1}{波函数}
+
+\problem[$\ast$]{1.1}
+对 1.3.1 节中所给出的年龄分布：
+\begin{enumerate}
+\item 计算 $\avg{j^2}$ 和 $\avg{j}^2$。
+\item 对每一个 $j$ 求出其 $\Delta j$，利用式（1.11）计算标准差。
+\item 利用（a）和（b）所得结果验证式（1.12）。
+\end{enumerate}
+\vfill
+
+\problem{1.2}
+\begin{enumerate}
+\item 求出例题 1.2 中所给分布的标准方差。
+\item 随机选择一张拍摄的照片，其下落距离 $x$ 比平均值多出一个标准差的几率是多少？
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{1.3}
+考虑高斯（Gaussian）分布
+\[
+\rho(x)=A\mathrm{e}^{-\lambda(x-a)^2},
+\]
+其中 $A$、$a$ 和 $\lambda$ 是正的实数。（你所需要的积分公式可以在本书后环衬查阅。）
+\begin{enumerate}
+\item 利用式（1.16）确定 $A$。
+\item 求出 $\avg{x}$、$\avg{x^2}$ 和 $\sigma$。
+\item 画出 $\rho(x)$ 的草图。
+\end{enumerate}
+\vfill
+
+\problem{1.4}
+在 $t=0$ 时刻粒子的波函数为
+\[
+\Psi(x,0)=\begin{cases}
+A\dfrac{x}{a},&0\leq x\leq a,\\[4pt]
+A\dfrac{b-x}{b-a},&a\leq x\leq b,\\[4pt]
+0,&\text{其他地方。}
+\end{cases}
+\]
+式中，$A$、$a$ 和 $b$ 是正的常数。
+\begin{enumerate}
+\item 归一化 $\Psi$（即求出用 $a$ 和 $b$ 表示的 $A$ 的值）。
+\item 以 $x$ 为函数变量，画出 $\Psi(x,0)$ 的草图。
+\item 在 $t=0$ 时刻，最有可能发现粒子的位置在哪里？
+\item 在 $a$ 左边发现粒子的几率是多少？考虑 $b=a$ 和 $b=2a$ 两种极限情况来验证你的结论。
+\item $x$ 的期望值是多少？
+\end{enumerate}
+\vfill
+
+\problem[$\ast$]{1.5}
+考虑波函数
+\[
+\Psi(x,t)=A\mathrm{e}^{-\lambda|x|}\mathrm{e}^{-\mathrm{i}\omega t},
+\]
+式中，$A$、$\lambda$ 和 $\omega$ 是正的实数。（在第 2 章中，我们将会看到对什么样的势 $V$ 会有满足薛定谔方程的这种波函数。）
+\begin{enumerate}
+\item 归一化 $\Psi$。
+\item 求出 $x$ 和 $x^2$ 的期望值。
+\item 求出 $x$ 的标准差。画出 $|\Psi|^2$ 以 $x$ 为函数的草图，并在图上标出点 $\avg{x}+\sigma$ 和 $\avg{x}-\sigma$，解释在何种意义上 $\sigma$ 代表 $x$ 的“弥散”。在这个区域之外发现粒子的几率是多少？
+\end{enumerate}
+\vfill
+
+\problem{1.6}
+为什么你不可以直接对式（1.29）的中间一步进行分部积分——转化为对 $x$ 的时间导数，利用 $\partial x/\partial t=0$ 得到 $\dd\avg{x}/\dd t=0$ 的结论？
+\vfill
+
+\problem{1.7}
+计算 $\dd\avg{p}/\dd t$。原题给出的结果为
+\[
+\frac{\dd\avg{p}}{\dd t}=\avg{-\frac{\partial V}{\partial x}}.
+\]
+这是埃伦菲斯特定理（Ehrenfest theorem）的一个实例，这个定理告诉我们期望值遵从经典定律。
+\vfill
+
+\problem{1.8}
+假定在势能项中增加了一个常数 $V_0$（这里常数的意思是它不依赖 $x$ 和 $t$）。在经典力学中这不改变任何结论，但在量子力学中是什么样的情况？证明波函数将多一个含时的相因子：$\exp(-\mathrm{i}V_0t/\hbar)$。它对动力学变量的期望值有何影响？
+\vfill
+
+\problem[$\ast$]{1.9}
+质量为 $m$ 的粒子，其波函数是
+\[
+\Psi(x,t)=A\mathrm{e}^{-a\left[(mx^2/\hbar)+\mathrm{i}t\right]},
+\]
+式中，$A$ 和 $a$ 为正的实数。
+\begin{enumerate}
+\item 求出 $A$。
+\item 对什么样的势能函数 $V(x)$，这个 $\Psi$ 满足薛定谔方程？
+\item 计算 $x$、$x^2$、$p$ 和 $p^2$ 的期望值。
+\item 求出 $\sigma_x$ 和 $\sigma_p$，它们的乘积满足不确定原理吗？
+\end{enumerate}
+\vfill
+
+\problem{1.10}
+考虑 $\pi$ 的十进制展开的前面 25 位数（$3,1,4,1,5,9,\ldots$）。
+\begin{enumerate}
+\item 如果你随机从这套数字中选取一个，得到 10 个数字（$0\sim9$）中每一个的几率是多少？
+\item 最可见的数字是哪一个？中值数字是哪一个？平均值是多少？
+\item 给出这个分布的标准差。
+\end{enumerate}
+\vfill
+
+\problem{1.11}
+（本题是例题 1.2 的推广。）假设一个能量为 $E$、质量为 $m$ 的粒子位于势阱 $V(x)$ 中，粒子沿 $a$、$b$ 两个经典转折点往返无摩擦滑动（见下图，原书图 1.10）。从经典上来讲，发现粒子处在 $\dd x$ 范围内的几率等于粒子在 $\dd x$ 间隔内运动的时间和粒子从 $a$ 运动到 $b$ 所需的时间 $T$ 的比：
+\[
+\rho(x)\,\dd x=\frac{\dd t}{T}
+=\frac{(\dd t/\dd x)\,\dd x}{T}
+=\frac{1}{v(x)T}\,\dd x,
+\]
+这里 $v(x)$ 是速度，且
+\[
+T=\int_0^T\dd t=\int_a^b\frac{1}{v(x)}\,\dd x.
+\]
+因此
+\[
+\rho(x)=\frac{1}{v(x)T}.
+\]
+这大概是与 $|\Psi|^2$ 最接近的经典类比。
+\begin{enumerate}
+\item 利用能量守恒把 $v(x)$ 用 $E$ 和 $V(x)$ 表示出来。
+\item 求出简谐振子势能为 $V(x)=kx^2/2$ 的 $\rho(x)$。画出 $\rho(x)$，并验证它是严格归一化的。
+\item 在（b）中，对于经典谐振子情况，求出 $\avg{x}$、$\avg{x^2}$ 和 $\sigma_x$。
+\end{enumerate}
+\begin{center}
+\input{tikzfigs/fig_1_11.tex}
+\par\smallskip{\small 习题 1.11 图：一个势阱中的经典粒子（示意重绘）}
+\end{center}
+\vfill
+
+\problem[$\ast\ast$]{1.12}
+对习题 1.11（b）中的经典谐振子，若感兴趣的是动量的分布（$p=mv$），则
+\begin{enumerate}
+\item 求出经典几率分布 $\rho(p)$。（注意 $p$ 的取值范围是 $-\sqrt{2mE}$ 到 $+\sqrt{2mE}$。）
+\item 计算 $\avg{p}$、$\avg{p^2}$ 和 $\sigma_p$。
+\item 对于该系统，经典的不确定乘积 $\sigma_x\sigma_p$ 是多少？注意：一般来说，只要 $E\to0$，这个乘积值就可以足够小。但是在第 2 章将会看到，在量子力学中，简谐振子的能量不会小于 $\hbar\omega/2$，这里 $\omega=\sqrt{k/m}$ 是经典频率。在这种情况下，你对乘积 $\sigma_x\sigma_p$ 有什么看法？
+\end{enumerate}
+\vfill
+
+\problem[数值实验]{1.13}
+用下面的“数值实验”检验习题 1.11（b）的结果，在 $t$ 时刻谐振子的位置是
+\[
+x(t)=A\cos\omega t.
+\]
+你也可以取 $\omega=1$（设置时间标度）和 $A=1$（设置长度标度）。取 10000 个随机时间点画出 $x$ 值图，并和 $\rho(x)$ 做比较。
+
+\textbf{提示：}使用 Mathematica，首先定义
+\begin{verbatim}
+x[t_] := Cos[t]
+\end{verbatim}
+然后构造一个位置的表格
+\begin{verbatim}
+snapshots = Table[x[Pi RandomReal[]], {j, 10000}]
+\end{verbatim}
+最后，做所获数据的柱状图：
+\begin{verbatim}
+Histogram[snapshots, 100, "PDF", PlotRange -> {0, 2}]
+\end{verbatim}
+与此同时，作密度函数 $\rho(x)$ 图，使用 \texttt{Show}，将两个叠加起来比较。
+\vfill
+
+\problem{1.14}
+设 $P_{ab}(t)$ 是在 $t$ 时刻发现粒子处在区间（$a<x<b$）内的几率。
+\begin{enumerate}
+\item 证明：
+\[
+\frac{\dd P_{ab}}{\dd t}=J(a,t)-J(b,t),
+\]
+其中，
+\[
+J(x,t)=\frac{\mathrm{i}\hbar}{2m}
+\left(\Psi\frac{\partial\Psi^*}{\partial x}
+-\Psi^*\frac{\partial\Psi}{\partial x}\right).
+\]
+问 $J(x,t)$ 的单位是什么？注释：$J$ 称为几率流，因为它告诉你“流”过 $x$ 点几率的速率。若 $P_{ab}(t)$ 随时间增加，则流进该区域的一端的几率大于流出端。
+\item 求出习题 1.9 中波函数的几率流。（这不是一个非常简单的例子，恐怕在以后的课程中我们会遇到更多实质性的问题。）
+\end{enumerate}
+\vfill
+
+\problem{1.15}
+证明：对（处在相同势场 $V(x)$ 中）任何两个同时满足薛定谔方程的（归一化）解 $\Psi_1$ 和 $\Psi_2$ 有
+\[
+\frac{\dd}{\dd t}\int_{-\infty}^{\infty}\Psi_1^*\Psi_2\,\dd x=0.
+\]
+\vfill
+
+\problem{1.16}
+（$t=0$ 时刻）粒子运动由下面波函数描述：
+\[
+\Psi(x,0)=\begin{cases}
+A(a^2-x^2),&-a\leq x\leq a,\\
+0,&\text{其他地方。}
+\end{cases}
+\]
+\begin{enumerate}
+\item 确定归一化常数 $A$。
+\item $x$ 的期望值是多少？
+\item $p$ 的期望值是多少？（注意：不能通过 $\avg{p}=m\,\dd\avg{x}/\dd t$ 来得到它，为什么？）
+\item 求出 $x^2$ 的期望值。
+\item 求出 $p^2$ 的期望值。
+\item 求出 $x$ 的不确定度（即 $\sigma_x$）。
+\item 求出 $p$ 的不确定度（即 $\sigma_p$）。
+\item 验证所得到的结果和不确定原理一致。
+\end{enumerate}
+\vfill
+
+\problem{1.17}
+假设描述一个不稳定的粒子，它以“寿命”$\tau$ 自发衰变。在这种情况下，整个空间发现粒子的几率不再是常数，而是（比如说）按指数衰减：
+\[
+P(t)=\int_{-\infty}^{\infty}|\Psi(x,t)|^2\,\dd x=\mathrm{e}^{-t/\tau}.
+\]
+粗略地实现这一结果的方法如下：在式（1.24）中，我们默认假设 $V$（势能）是实数。这当然是合理的，但是它导致了式（1.27）隐含着“几率守恒”。如果在 $V$ 中添加一个虚数部分：
+\[
+V=V_0-\mathrm{i}\Gamma,
+\]
+将会怎么样？式中，$V_0$ 是真实的势能；$\Gamma$ 是一个实的常数。
+\begin{enumerate}
+\item 证明（取代式（1.27））存在关系
+\[
+\frac{\dd P}{\dd t}=-\frac{2\Gamma}{\hbar}P.
+\]
+\item 求出 $P(t)$，并用 $\Gamma$ 表示出粒子的寿命。
+\end{enumerate}
+\vfill
+
+\problem{1.18}
+粗略地讲，当粒子的德布罗意波长（$h/p$）比体系的特征长度（$d$）大时，就要涉及量子力学。在温度 $T\,\mathrm{K}$ 下粒子处于热平衡时，其平均动能是
+\[
+\frac{p^2}{2m}=\frac{3}{2}k_{\mathrm B}T
+\]
+（$k_{\mathrm B}$ 是玻尔兹曼常数，Boltzmann constant），所以对应的德布罗意波长为
+\[
+\lambda=\frac{h}{\sqrt{3mk_{\mathrm B}T}}.
+\]
+这个问题的目的是确定哪些系统必须用量子力学来处理，哪些系统可以有把握地用经典方法来描述。
+\begin{enumerate}
+\item \textbf{固体。}典型固体的晶格间距大约是 $d=0.3\,\mathrm{nm}$。找出固体中自由电子的量子力学温度。固体量子力学中的原子核温度低于多少（以硅为例）？原则上固体中的自由电子总是量子力学的，但原子核通常不是量子力学的。对液体也有同样的结果（原子之间的间隔和固体差不多），但是 $4\,\mathrm{K}$ 以下的氦是个例外。
+\item \textbf{气体。}压强为 $p$ 的理想气体中原子的量子力学温度是多少？提示：利用理想气体定律（$pV=Nk_{\mathrm B}T$）导出原子之间的间距。
+\end{enumerate}
+显然（为了使气体显示量子行为）我们希望 $m$ 应当尽可能地小，而 $p$ 尽可能地大。对氦来讲，把一个大气压下的数据代入上式。问遥远宇宙中的氢（温度大约 $3\,\mathrm{K}$，原子间距大约 $1\,\mathrm{cm}$）需要用量子力学处理吗？（假设它是氢原子，不是氢分子。）
+\vfill
