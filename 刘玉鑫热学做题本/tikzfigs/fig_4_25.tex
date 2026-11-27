@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\draw[->] (0,0)--(4.4,0) node[right]{$V$};
+\draw[->] (0,0)--(0,3.8) node[above]{$p$};
+\node[below left] at (0,0){$O$};
+\coordinate (A) at (1,1);
+\coordinate (B) at (1,3.4);
+\coordinate (C) at (2.397,1);
+\draw[process] (C)--(A);
+\draw[process] (A)--(B);
+\draw[process,domain=1:2.397,samples=60] plot(\x,{3.4/\x^1.4});
+\node[left] at (A){$A$};
+\node[above left] at (B){$B$};
+\node[right] at (C){$C$};
+\end{tikzpicture}

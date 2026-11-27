@@ -1,0 +1,16 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Latex,font=\small]
+\draw (-.3,-.18) rectangle (0,.18);
+\draw (.65,-.45)--(.65,-.13) (.65,.13)--(.65,.45);
+\fill[pattern=north east lines] (1.55,.22) rectangle (2.45,.83);
+\fill[pattern=north east lines] (1.55,-.22) rectangle (2.45,-.83);
+\draw (1.55,.22) rectangle (2.45,.83) (1.55,-.22) rectangle (2.45,-.83);
+\draw (4.25,-1.05)--(4.25,1.05) node[above]{屏};
+\draw (-.15,0)--(1.55,0);
+\draw (1.55,0) to[out=0,in=188] (2.45,.10)--(4.25,.32);
+\draw (1.55,0) to[out=0,in=172] (2.45,-.10)--(4.25,-.32);
+\draw[<->] (4.6,-.32)--(4.6,.32) node[midway,right]{$\Delta z$};
+\draw[densely dashed] (4.25,.32)--(4.72,.32) (4.25,-.32)--(4.72,-.32);
+\draw (1.55,-.9)--(1.55,-1.25) (2.45,-.9)--(2.45,-1.25) (4.25,-1.08)--(4.25,-1.25);
+\draw[<->] (1.55,-1.12)--(2.45,-1.12) node[midway,fill=white]{$d_1$};
+\draw[<->] (2.45,-1.12)--(4.25,-1.12) node[midway,fill=white]{$d_2$};
+\end{tikzpicture}

@@ -1,0 +1,37 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Three polarizers in perspective along tilted propagation axis
+  \coordinate (L) at (-1.0, 0.45);
+  \coordinate (C1) at (0.3, 0.25);
+  \coordinate (C2) at (2.5, -0.09);
+  \coordinate (C3) at (4.7, -0.43);
+  \coordinate (R) at (6.0, -0.63);
+
+  % Propagation axis
+  \draw[thin] (L) -- (C1);
+  \draw[thin] (C1) -- (C2);
+  \draw[thin] (C2) -- (C3);
+  \draw[thin] (C3) -- (R);
+
+  % Polarizer N1 (vertical transmission axis)
+  \begin{scope}[shift={(C1)},rotate=-8]
+    \draw[thick] (0,0) ellipse (0.58 and 0.92);
+    \draw[thick,-Stealth] (0, 0) -- (0, 0.78);
+    \node[above] at (0, 0.95) {$\mathrm{N_1}$};
+  \end{scope}
+
+  % Rotating polarizer in middle (angle omega t)
+  \begin{scope}[shift={(C2)},rotate=-15]
+    \draw[thick] (0,0) ellipse (0.58 and 0.92);
+    \draw[dashed] (0, 0) -- (0, 0.75);
+    \draw[thick,-Stealth] (0, 0) -- (0.34, 0.66);
+    \draw[thin,-Stealth] (0, 0.45) arc (90:62:0.45);
+    \node[above right,font=\scriptsize] at (0.08, 0.92) {$\omega t$};
+  \end{scope}
+
+  % Polarizer N2 (horizontal / orthogonal transmission axis)
+  \begin{scope}[shift={(C3)},rotate=-35]
+    \draw[thick] (0,0) ellipse (0.58 and 0.92);
+    \draw[thick,-Stealth] (0, 0) -- (0.55, 0.35);
+    \node[above] at (0, 0.95) {$\mathrm{N_2}$};
+  \end{scope}
+\end{tikzpicture}

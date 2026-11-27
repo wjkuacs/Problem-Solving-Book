@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\draw[->] (0,0)--(4.5,0) node[right]{$V/\mathrm L$};
+\draw[->] (0,0)--(0,3.8) node[above]{$p$};
+\node[below left] at (0,0){$O$};
+\coordinate (A) at (1.5,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (3,1.5);
+\coordinate (D) at (2.461,1.5);
+\draw[dashed] (1.5,0) node[below]{20}--(A);
+\draw[dashed] (3,0) node[below]{40}--(C);
+\draw[process] (A)--(B);
+\draw[process] (B)--(C);
+\draw[process,domain=1.5:3,samples=60] plot(\x,{4.5/\x});
+\draw[process,domain=1.5:2.461,samples=60] plot(\x,{3*(1.5/\x)^1.4});
+\draw[process] (D)--(C);
+\node[above left] at (A){$A$};
+\node[above right] at (B){$B$};
+\node[right] at (C){$C$};
+\node[below left] at (D){$D$};
+\end{tikzpicture}

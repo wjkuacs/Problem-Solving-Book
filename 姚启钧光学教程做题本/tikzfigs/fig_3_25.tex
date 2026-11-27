@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Optical axis MM'
+  \draw[thin] (-2.8, 0) -- (3.2, 0);
+  \node[left] at (-2.8, 0) {$M$};
+  \node[right] at (3.2, 0) {$M'$};
+
+  % Thin lens L at x=0
+  \draw[thin] (0, -1.35) -- (0, 1.35) node[right] {$\mathrm{L}$};
+
+  % Ray ABC
+  \coordinate (A) at (-2.3, 0.45);
+  \coordinate (B) at (0, 0.75);
+  \coordinate (C) at (1.5, 0.15);
+  \draw[ray] (A) -- (B);
+  \draw[ray] (B) -- (C);
+  \node[left] at (A) {$A$};
+  \node[above left] at (B) {$B$};
+  \node[right] at (C) {$C$};
+
+  % Ray DE
+  \coordinate (D) at (-1.9, -1.25);
+  \coordinate (E) at (0, -0.55);
+  \draw[ray] (D) -- (E);
+  \node[left] at (D) {$D$};
+  \node[above left] at (E) {$E$};
+\end{tikzpicture}

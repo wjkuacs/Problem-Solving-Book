@@ -1,0 +1,18 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % Three slits of width b at x=0, x=1.2, x=3.6 (distances d and 2d)
+  \draw[thick] (0, 0) rectangle (0.28, 3.0);
+  \draw[thick] (1.2, 0) rectangle (1.48, 3.0);
+  \draw[thick] (3.6, 0) rectangle (3.88, 3.0);
+
+  \node[above] at (0.14, 3.0) {$b$};
+  \node[above] at (1.34, 3.0) {$b$};
+  \node[above] at (3.74, 3.0) {$b$};
+
+  % Dimension lines for d and 2d (center-to-center or left-edge-to-left-edge)
+  \draw[thin] (0.14, 0) -- (0.14, -0.55);
+  \draw[thin] (1.34, 0) -- (1.34, -0.55);
+  \draw[thin] (3.74, 0) -- (3.74, -0.55);
+
+  \draw[dim] (0.14, -0.35) -- (1.34, -0.35) node[midway,fill=white,inner sep=1.5pt] {$d$};
+  \draw[dim] (1.34, -0.35) -- (3.74, -0.35) node[midway,fill=white,inner sep=1.5pt] {$2d$};
+\end{tikzpicture}

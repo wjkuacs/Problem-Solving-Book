@@ -1,0 +1,108 @@
+\begin{tikzpicture}[scale=1.0,>=Stealth,font=\small]
+  % Pellin-Broca / constant deviation prism:
+  % Left 45-45-90 triangle + right 30-60-90 triangle
+  % Let bottom-left corner be A=(0,0)
+  % Left vertical edge: A(0,0) to B(0, 2.2)
+  % Top slanted edge (45 deg from vertical -> angle -15 deg? Let's match exact textbook geometry):
+  % In textbook:
+  %   Left prism: right-angled triangle with 30-60-90? Look closely at fig 3.5!
+  %   Top-left corner has 45 deg and 30 deg -> Wait:
+  %   The internal dividing line goes from A(0,0) up-right at 30 deg to horizontal, meeting the hypotenuse at 90 deg!
+  %   Let's check the angles labeled in fig 3.5:
+  %   Left vertical face, bottom horizontal face -> corner at bottom-left is 60 deg + 30 deg = 90 deg!
+  %   Top-left triangle (above the 30-deg line): corners are (0,0) [60 deg], top-left [30 deg], and right-angle on the tilted top-right face!
+  %   Then above-right is a 45-45-90 triangle!
+  %   Let's compute exact coordinates:
+  %   Let A=(0,0). Bottom-left vertical edge: A=(0,0) to B=(0, 2.2).
+  %   Wait: angle at B inside left triangle is 30 deg, angle at A is 60 deg, angle at D is 90 deg.
+  %   So line AD has angle 30 deg above x-axis: D = (2.2*sin(30)*cos(30), 2.2*sin(30)*sin(30))?
+  %   Let's check: in right triangle ABD with right angle at D, hypotenuse AB = 2.2 (vertical):
+  %   AD = 2.2 * cos(60) = 1.1, BD = 2.2 * sin(60) = 1.905.
+  %   Wait: vector AB = (0, 2.2). Angle BAD = 60 deg -> AD is at angle 90-60 = 30 deg!
+  %   So D = (1.1*cos(30), 1.1*sin(30)) = (0.953, 0.55). Wait no, if AB=2.2 is hypotenuse, AD = 2.2*cos(60)=1.1, BD = 2.2*sin(60)=1.905.
+  %   Let's check vector BD: from B(0,2.2) to D(0.953, 0.55) -> dx=0.953, dy=-1.65 -> length = sqrt(0.908+2.722)=1.905! Angle with vertical: atan(0.953/1.65)=30 deg!
+  %   Now, on top of BD (or rather, extending from B and D), there is a 45-45-90 triangle B-C-E?
+  %   Look at the figure:
+  %   From B(0, 2.2), the top-right edge goes at 45 deg from BD!
+  %   Direction of BD is -60 deg from +x axis (down-right).
+  %   Rotate BD counter-clockwise by 45 deg -> -15 deg from +x axis!
+  %   And from D, extend line AD (which is at +30 deg from +x axis) to E!
+  %   Wait: angle BDE = 90 deg, angle EBC = 45 deg -> triangle BDE with right angle at D is 45-45-90 if DE = BD = 1.905!
+  %   Then E = D + 1.905*(cos 30, sin 30) = (0.953 + 1.65, 0.55 + 0.953) = (2.603, 1.503).
+  %   Check BE: vector from B(0, 2.2) to E(2.603, 1.503) = (2.603, -0.697). Angle = -15 deg! Length = 2.695 = 1.905*sqrt(2)!
+  %   Now look at the bottom-right triangle A-E-F:
+  %   AE is along +30 deg, length = AD + DE = 1.1 + 1.905 = 3.005.
+  %   Bottom edge AF is horizontal (+x axis). Angle EAF = 30 deg!
+  %   Angle AEF = 90 deg! (Look at the right-angle square at E!)
+  %   Then F is on x-axis: AF = AE / cos(30) = 3.005 / 0.866 = 3.470!
+  %   Angle AFE = 60 deg!
+  %   OH!! Every single angle in the textbook diagram matches to 100% geometric precision!!
+  %   Let's verify:
+  %   A = (0, 0)
+  %   B = (0, 2.2)
+  %   D = (0.953, 0.55)
+  %   E = (2.603, 1.503)
+  %   F = (3.470, 0)
+  %   Check EF: (0.867, -1.503), dot product with AE (2.603, 1.503) = 2.257 - 2.259 = 0!
+  %   And the ray path:
+  %   Incident ray i hits vertical face AB at P1=(0, 1.1) from below-left at angle theta_1 to horizontal normal!
+  %   Inside prism, refracted ray goes parallel to AE (+30 deg) to hit top mirror face BE at P2!
+  %   Wait: angle of incidence on BE: BE is at -15 deg, ray is at +30 deg, so angle between ray and BE is 45 deg -> reflects at 45 deg -> reflected ray goes at -60 deg (parallel to BD and EF)!
+  %   Then it hits bottom face AF at P3 at angle 30 deg to vertical normal!
+  %   Then exits into air at angle theta_2 = theta_1 to vertical normal! Since normals of AB (horizontal) and AF (vertical) are perpendicular, and theta_1 = theta_2, exit ray r is perpendicular to incident ray i!
+  %   WHAT A BEAUTY!
+
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (0, 2.2);
+  \coordinate (D) at (0.953, 0.55);
+  \coordinate (E) at (2.603, 1.503);
+  \coordinate (F) at (3.470, 0);
+
+  % Outer contour of constant-deviation prism
+  \draw[thick] (A) -- (B) -- (E) -- (F) -- cycle;
+  % Internal dividing lines
+  \draw[thin] (A) -- (E);
+  \draw[thin] (B) -- (D);
+
+  % Right-angle marks at D and E
+  \draw[thin] ($(D)+(-0.12,0.208)$) -- ($(D)+(0.088,0.328)$) -- ($(D)+(0.208,0.12)$);
+  \draw[thin] ($(E)+(-0.208,-0.12)$) -- ($(E)+(-0.088,-0.328)$) -- ($(E)+(0.12,-0.208)$);
+
+  % Angle labels inside prism
+  \node[font=\scriptsize] at (0.20, 1.65) {$30^\circ$};
+  \node[font=\scriptsize] at (0.45, 1.92) {$45^\circ$};
+  \node[font=\scriptsize] at (2.05, 1.45) {$45^\circ$};
+  \node[font=\scriptsize] at (0.28, 0.38) {$60^\circ$};
+  \node[font=\scriptsize] at (0.72, 0.16) {$30^\circ$};
+  \node[font=\scriptsize] at (3.08, 0.22) {$60^\circ$};
+
+  % Ray path:
+  % P1 on AB at (0, 1.15)
+  \coordinate (P1) at (0, 1.15);
+  % Ray from P1 at +30 deg intersects BE (y = 2.2 - 0.26795 x)
+  % 1.15 + 0.57735 x = 2.2 - 0.26795 x => 0.8453 x = 1.05 => x = 1.242, y = 1.867
+  \coordinate (P2) at (1.242, 1.867);
+  % Reflected ray at -60 deg from P2 hits AF (y=0):
+  % x = 1.242 + 1.867 / 1.732 = 2.320, y = 0
+  \coordinate (P3) at (2.320, 0);
+
+  % Incident ray i (theta_1 = 45 deg below horizontal)
+  \coordinate (Pin) at (-1.1, 0.05);
+  % Exit ray r (theta_2 = 45 deg right of downward vertical)
+  \coordinate (Pout) at (3.42, -1.1);
+
+  \draw[ray] (Pin) -- (P1) node[pos=0.35,below right] {$i$};
+  \draw[ray] (P1) -- (P2);
+  \draw[ray] (P2) -- (P3);
+  \draw[ray] (P3) -- (Pout) node[pos=0.7,above right] {$r$};
+
+  % Normals at P1 and P3
+  \draw[dashed] (-0.85, 1.15) -- (0.5, 1.15);
+  \draw[dashed] (2.320, 0.75) -- (2.320, -0.85);
+
+  % Angle arcs for theta_1 and theta_2
+  \draw[thin] (-0.42, 1.15) arc (180:225:0.42);
+  \node[font=\scriptsize] at (-0.58, 0.96) {$\theta_1$};
+  \draw[thin] (2.320, -0.42) arc (270:315:0.42);
+  \node[font=\scriptsize] at (2.52, -0.58) {$\theta_2$};
+\end{tikzpicture}

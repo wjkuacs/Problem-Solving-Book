@@ -1,0 +1,40 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany,fontset=fandol]{ctexbook}
+\usepackage{amsmath,amssymb,graphicx,geometry,fancyhdr,enumitem}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns,decorations.markings,calc}
+\tikzset{process/.style={thick,postaction={decorate},decoration={markings,mark=at position .55 with {\arrow{Stealth}}}}}
+\usepackage[unicode,hidelinks]{hyperref}
+\geometry{left=23mm,right=23mm,top=22mm,bottom=22mm,headheight=16pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small 刘玉鑫热学做题本}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.12}
+\ctexset{chapter={beforeskip=10pt,afterskip=20pt}}
+\setlist[enumerate]{label=（\arabic*）,leftmargin=2.5em,itemsep=2pt,topsep=3pt}
+\newcommand{\problem}[2]{\par\phantomsection\pdfbookmark[1]{习题 #1}{problem-#1}\noindent\textbf{习题 #1}\quad #2\par}
+\newcommand{\answerarea}{\par\vfill}
+\newsavebox{\figbox}
+\newcommand{\fig}[1]{\par\smallskip{\centering\sbox{\figbox}{\input{tikzfigs/fig_#1.tex}}\ifdim\ht\figbox>38mm\resizebox{!}{38mm}{\usebox{\figbox}}\else\usebox{\figbox}\fi\par\smallskip{\footnotesize 习题\figlabel#1\relax\ 图}\par}\smallskip}
+\newcommand{\bookfig}[2]{\par\smallskip{\centering\resizebox{!}{45mm}{\input{tikzfigs/fig_#1.tex}}\par\smallskip{\footnotesize #2}\par}\smallskip}
+\def\figlabel#1_#2\relax{#1.#2}
+\begin{document}
+\begin{titlepage}
+\centering\vspace*{.24\textheight}
+{\Huge\bfseries 刘玉鑫热学做题本\par}
+\vspace{2cm}{\Large 习题整理与作答空间\par}
+\vfill
+{\large 姓名：\underline{\hspace{4cm}}\quad 日期：\underline{\hspace{3cm}}\par}
+\end{titlepage}
+\tableofcontents\clearpage
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\end{document}

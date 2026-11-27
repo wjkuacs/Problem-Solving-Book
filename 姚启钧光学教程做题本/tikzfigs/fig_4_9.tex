@@ -1,0 +1,40 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Optical axis
+  \draw[thin] (-0.9, 0) -- (6.0, 0);
+
+  % Incident parallel rays on left
+  \foreach \y in {0.42, 0, -0.42} {
+    \draw[ray] (-0.9, \y) -- (-0.2, \y);
+  }
+
+  % Lens L1 at x=0.5, height +-1.15
+  \draw[thick,<->] (0.5, -1.15) -- (0.5, 1.15);
+  \node[below] at (0.5, -1.15) {$\mathrm{L_1}$};
+  \node[right,font=\scriptsize] at (0.56, 0.30) {$D_1$};
+  \draw[very thin] (0.5, 1.15) -- (0.5, 1.6);
+
+  % Lens L2 at x=4.5, height +-0.58
+  \draw[thick,<->] (4.5, -0.58) -- (4.5, 0.58);
+  \node[below] at (4.5, -0.58) {$\mathrm{L_2}$};
+  \draw[very thin] (4.5, 0.58) -- (4.5, 1.6);
+
+  % Lens L3 at x=5.3, height +-0.58
+  \draw[thick,<->] (5.3, -0.58) -- (5.3, 0.58);
+  \node[below] at (5.3, -0.58) {$\mathrm{L_3}$};
+  \draw[very thin] (5.3, 0.58) -- (5.3, 1.6);
+
+  % Aperture boundary lines and labels D2, D3
+  \draw[very thin] (4.05, 0.58) -- (5.6, 0.58);
+  \draw[very thin] (4.05, -0.58) -- (5.6, -0.58);
+  \node[left,font=\scriptsize] at (4.46, 0.22) {$D_2$};
+  \node[left,font=\scriptsize] at (5.26, 0.22) {$D_3$};
+
+  % Dimensions 10 cm and 2 cm
+  \draw[dim] (0.5, 1.45) -- (4.5, 1.45) node[midway,above,font=\scriptsize] {$10\,\mathrm{cm}$};
+  \draw[dim] (4.5, 1.45) -- (5.3, 1.45) node[midway,above,font=\scriptsize] {$2\,\mathrm{cm}$};
+
+  % Eye symbol at right
+  \draw[thick] (5.75, 0.30) -- (6.3, 0) -- (5.75, -0.30);
+  \draw[thick] (6.0, 0.14) arc (110:250:0.15);
+  \fill (5.92, 0) circle (1.4pt);
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth,font=\small,line width=.8pt]
+\foreach \shift/\panel in {0/a,5.5/b}{
+\begin{scope}[xshift=\shift cm]
+% Two capillary outlets share the horizontal gas channel.
+\draw (.2,.25)--(.2,2)--(2.05,2)--(2.05,2.8)
+ (2.25,2.8)--(2.25,2)--(4.2,2)--(4.2,.4);
+\draw (.4,.25)--(.4,1.8)--(4,1.8)--(4,.4);
+\draw[thick] (1.25,2)--(1.25,2.35)--(1.4,2.35)--(1.4,2)
+ (3.1,2)--(3.1,2.35)--(3.25,2.35)--(3.25,2);
+\draw[fill=white] (1.18,2.35) rectangle (1.47,2.43);
+\draw[fill=white] (3.03,2.35) rectangle (3.32,2.43);
+\draw[thick] (2.05,2.62)--(2.45,2.62);
+\draw[fill=white] (2.45,2.54) rectangle (2.53,2.7);
+\node[above] at (2.25,2.9){$C_1$};
+\node[above] at (3.25,2.5){$C_2$};
+\node[above] at (1.28,2.5){$C_3$};
+\node[right] at (4.2,.65){$A$};
+\node[left] at (.2,.5){$B$};
+\draw (4.2,.4) arc[start angle=80,end angle=-260,radius=.5];
+\draw (4.08,.2) arc[start angle=75,end angle=-80,radius=.32];
+\draw (4.3,-.05) arc[start angle=30,end angle=-50,radius=.22];
+\node at (2.2,-1){（\panel）};
+\end{scope}}
+\draw (.2,.25) arc[start angle=115,end angle=425,radius=.25];
+\draw (.24,.07) arc[start angle=110,end angle=390,radius=.10];
+\draw (5.7,.25)--(5.9,.25);
+\end{tikzpicture}

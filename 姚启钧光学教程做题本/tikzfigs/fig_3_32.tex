@@ -1,0 +1,52 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  \def\R{1.25}
+  % A at 154 deg => alpha = (180 - 154)/2 = 13 deg
+  \coordinate (O) at (0, 0);
+  \coordinate (B) at (\R, 0);
+  \coordinate (A) at (154:\R);
+  \coordinate (C) at (-154:\R);
+
+  % Water droplet circle
+  \draw[thick] (O) circle (\R);
+
+  % Horizontal symmetry axis: dash-dot on left through circle, dashed on right
+  \draw[thin,dash pattern=on 8pt off 3pt on 1pt off 3pt] (-2.5, 0) -- (B);
+  \draw[thin,dashed] (B) -- (4.3, 0);
+
+  % Dashed normal at A (from O through A outward at 154 deg)
+  \draw[thin,dashed] (O) -- (154:2.55);
+
+  % Incident ray: arrives at A heading at -8 deg (from 172 deg)
+  % Angle phi between outward normal (154 deg) and incoming ray (172 deg) is 18 deg
+  \coordinate (Pin) at ($(A)+(172:1.45)$);
+  \draw[thin] (Pin) -- (A);
+  \draw[rayend] (Pin) -- ($(Pin)!0.22!(A)$);
+  % Forward dashed extension of incident ray past X
+  \coordinate (PincExt) at ($(A)+(-8:5.45)$);
+  \draw[thin,dashed] (A) -- (PincExt);
+
+  % Exit ray: leaves C heading at -172 deg (symmetric across x-axis)
+  \coordinate (Pout) at ($(C)+(-172:1.45)$);
+  \draw[thin] (C) -- (Pout);
+  \draw[rayend] ($(C)!0.72!(Pout)$) -- ($(C)!0.86!(Pout)$);
+  % Backward dashed extension of exit ray past X
+  \coordinate (PoutExt) at ($(C)+(8:5.45)$);
+  \draw[thin,dashed] (C) -- (PoutExt);
+
+  % Internal reflected rays A -> B -> C
+  \draw[thin] (A) -- (B) -- (C);
+
+  % Angle phi arc and label (between 154 deg and 172 deg at A)
+  \draw[thin] ($(A)+(154:0.80)$) arc (154:172:0.80);
+  \node[font=\small] at ($(A)+(163:1.05)$) {$\varphi$};
+
+  % Angle alpha arc and label (between 167 deg and 180 deg at B)
+  \draw[thin] ($(B)+(167:0.82)$) arc (167:180:0.82);
+  \node[font=\small] at ($(B)+(173.5:1.05)$) {$\alpha$};
+
+  % Intersection point X on x-axis: x_X = -R*cos(26) + R*sin(26)/tan(8) = -1.1235 + 3.8989 = 2.775
+  \coordinate (X) at (2.775, 0);
+  % Deviation angle delta arc on bottom (from 188 deg to 352 deg)
+  \draw[thin] ($(X)+(188:0.42)$) arc (188:352:0.42);
+  \node[below,font=\small] at ($(X)+(0, -0.44)$) {$\delta$};
+\end{tikzpicture}

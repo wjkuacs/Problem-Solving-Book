@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\draw[->] (0,0)--(4.4,0) node[right]{$V$};
+\draw[->] (0,0)--(0,3.5) node[above]{$p$};
+\node[below left] at (0,0){$O$};
+\coordinate (A) at (1.5,3);
+\coordinate (B) at (3,3);
+\coordinate (C) at (3,1.137);
+\draw[dashed] (0,3)--(A)--(1.5,0) node[below]{$V_1$};
+\draw[dashed] (0,1.137)--(C)--(3,0) node[below]{$2V_1$};
+\draw[process] (A)--(B);
+\draw[process] (B)--(C);
+\draw[process,domain=3:1.5,samples=60] plot(\x,{3*(1.5/\x)^1.4});
+\node[above left] at (A){$A$};
+\node[above right] at (B){$B$};
+\node[below right] at (C){$C$};
+\end{tikzpicture}

@@ -1,0 +1,46 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany,fontset=fandol]{ctexbook}
+\usepackage{amsmath,amssymb,graphicx,geometry,fancyhdr,enumitem,booktabs}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,patterns,calc}
+\usepackage[unicode,hidelinks]{hyperref}
+\geometry{left=23mm,right=23mm,top=22mm,bottom=22mm,headheight=16pt}
+\pagestyle{fancy}\fancyhf{}
+\fancyhead[L]{\small 徐克遵近代物理学做题本}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.12}
+\ctexset{chapter={beforeskip=10pt,afterskip=20pt}}
+\setlist[enumerate]{label=（\arabic*）,leftmargin=2.5em,itemsep=2pt,topsep=3pt}
+\newcommand{\problem}[2]{\par\phantomsection\pdfbookmark[1]{习题 #1}{problem-#1}\noindent\textbf{习题 #1}\quad #2\par}
+\newcommand{\answerarea}{\par\vfill}
+\newcommand{\sourcenote}[1]{\par\smallskip{\footnotesize 整理注：#1\par}}
+\newcommand{\nucl}[3]{\ensuremath{{}^{#1}_{#2}\mathrm{#3}}}
+\newsavebox{\figbox}
+\newcommand{\fig}[1]{\par\smallskip{\centering\sbox{\figbox}{\input{tikzfigs/fig_#1.tex}}\ifdim\dimexpr\ht\figbox+\dp\figbox\relax>38mm\resizebox{!}{38mm}{\usebox{\figbox}}\else\usebox{\figbox}\fi\par{\footnotesize 习题 #1 图}\par}\smallskip}
+\begin{document}
+\begin{titlepage}
+\centering\vspace*{.24\textheight}
+{\Huge\bfseries 徐克遵近代物理学\par}
+\vspace{.5cm}{\Huge\bfseries 做题本\par}
+\vspace{1.5cm}{\Large 习题整理与作答空间\par}
+\vspace{.6cm}{\large 第一至九章\quad 共 170 题\par}
+\vspace{.5cm}{\small 根据所提供习题截图整理\par}
+\vfill
+{\large 姓名：\underline{\hspace{4cm}}\quad 日期：\underline{\hspace{3cm}}\par}
+\end{titlepage}
+\frontmatter
+\tableofcontents\clearpage
+\mainmatter
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\input{chapters/chapter8.tex}
+\input{chapters/chapter9.tex}
+\end{document}

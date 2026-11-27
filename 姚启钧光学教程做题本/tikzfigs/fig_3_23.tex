@@ -1,0 +1,26 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % Optical axis
+  \draw[thin] (-0.4, 0) -- (5.8, 0);
+
+  % Isosceles right-angle prism: top-left (0, 0.8), top-right (1.6, 0.8), bottom-right (1.6, -0.8)
+  \draw[thick] (0, 0.8) -- (1.6, 0.8) -- (1.6, -0.8) -- cycle;
+  \node[font=\scriptsize] at (1.35, -0.25) {$45^\circ$};
+
+  % Object above prism
+  \draw[thick] (0.65, 1.75) -- (0.95, 1.75) node[midway,above] {物};
+  % Vertical axis from object into prism
+  \draw[thin] (0.8, 0) -- (0.8, 1.75);
+  % Dimension 6 cm (object to top of prism)
+  \draw[dim] (0.8, 0.8) -- (0.8, 1.75) node[midway,right,font=\scriptsize] {$6\,\mathrm{cm}$};
+  % Dimension 6 cm (prism height)
+  \draw[very thin] (1.6, 0.8) -- (1.95, 0.8);
+  \draw[very thin] (1.6, -0.8) -- (1.95, -0.8);
+  \draw[dim] (1.85, -0.8) -- (1.85, 0.8) node[midway,right,font=\scriptsize] {$6\,\mathrm{cm}$};
+
+  % Convex lens at x=3.8
+  \draw[thick,<->] (3.8, -0.75) -- (3.8, 0.75);
+  % Concave lens at x=4.8
+  \draw[thick] (4.8, -0.75) -- (4.8, 0.75);
+  \draw[thick] (4.68, 0.87) -- (4.8, 0.75) -- (4.92, 0.87);
+  \draw[thick] (4.68, -0.87) -- (4.8, -0.75) -- (4.92, -0.87);
+\end{tikzpicture}

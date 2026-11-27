@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth,font=\small,line width=.6pt]
+\draw[->] (0,0)--(5,0);
+\draw[->] (0,0)--(0,3.4) node[above] {高度/km};
+\foreach \y in {0,1,2,3}{\draw (-.06,\y)--(.06,\y) node[left=3pt]{\y};}
+\path[fill=gray!12] (.25,0)--(1.1,.65)--(1.7,1.4)--(2.7,2.75)--(3.1,2.95)--(3.6,1.4)--(4.4,0)--cycle;
+\draw[thick] (.25,0)--(1.1,.65)--(1.7,1.4)--(2.7,2.75)--(3.1,2.95)--(3.6,1.4)--(4.4,0);
+\draw[gray] (.7,1.15) ..controls (.3,1.5) and (.55,1.8)..(.95,1.7)
+ ..controls (.8,2.1) and (1.1,2.4)..(1.45,2.25)
+ ..controls (1.4,2.7) and (1.8,2.9)..(2.1,2.75)
+ ..controls (2.2,3.2) and (2.6,3.25)..(2.8,3.05);
+\draw[dashed] (.45,1)--(1.6,1) node[midway,below]{凝结高度};
+\foreach \x/\y in {1.65/1.65,1.9/1.9,2.15/2.15,2.4/2.4}{\draw[gray] (\x,\y)--++(-.1,-.25);}
+\draw[process] (.45,.25)--(1.45,1.2);
+\draw[process] (1.7,1.6)--(2.8,2.95);
+\draw[process] (3.3,2.6)--(3.65,1.6);
+\draw[process] (3.7,1.3)--(4.25,.2);
+\node[below right] at (.25,.2){$M_1$};
+\node[left] at (1.5,1.15){$M_2$};
+\node[above right] at (2.9,2.8){$M_3$};
+\node[right] at (4.3,.15){$M_4$};
+\end{tikzpicture}

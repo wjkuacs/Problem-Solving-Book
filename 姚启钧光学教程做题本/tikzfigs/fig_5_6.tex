@@ -1,0 +1,58 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % Water surface at y=0
+  \draw[thick] (-1.8, 0) -- (2.2, 0);
+  % Water dashed lines below y=0
+  \foreach \y in {-0.28,-0.56,-0.84,-1.12,-1.40,-1.68,-1.96} {
+    \draw[dashed] (-1.8, \y) -- (2.2, \y);
+  }
+
+  % Normal at water surface (x=0)
+  \draw[thin] (0, 1.3) -- (0, -1.2);
+
+  % Incident natural light ray from upper-left to (0,0)
+  \coordinate (A) at (-1.1, 1.35);
+  \coordinate (O) at (0, 0);
+  \draw[ray] (A) -- (O);
+  \foreach \t in {0.25,0.45,0.65} {
+    \coordinate (P) at ($(A)!\t!(O)$);
+    \fill (P) circle (1.3pt);
+    \draw[thin] ($(P)+(-0.10,-0.08)$) -- ($(P)+(0.10,0.08)$);
+  }
+  % Angle i
+  \draw[thin] (0, 0.55) arc (90:129:0.55);
+  \node[font=\scriptsize] at (-0.18, 0.72) {$i$};
+
+  % Reflected ray from water surface (linearly polarized: dots)
+  \coordinate (R1) at (1.1, 1.35);
+  \draw[ray] (O) -- (R1);
+  \foreach \t in {0.35,0.58,0.78} {
+    \fill ($(O)!\t!(R1)$) circle (1.3pt);
+  }
+
+  % Refracted ray in water to glass plate at B=(0.72, -1.65)
+  \coordinate (B) at (0.72, -1.65);
+  \draw[ray] (O) -- (B);
+  \foreach \t in {0.35,0.65} {
+    \coordinate (P) at ($(O)!\t!(B)$);
+    \fill (P) circle (1.2pt);
+    \draw[thin] ($(P)+(-0.10,0.04)$) -- ($(P)+(0.10,-0.04)$);
+  }
+
+  % Tilted glass plate at angle alpha to horizontal
+  \begin{scope}[shift={(B)},rotate=-28]
+    \draw[thick,fill=white] (-0.75, -0.22) rectangle (0.95, 0);
+  \end{scope}
+
+  % Horizontal reference line at bottom of plate for angle alpha
+  \draw[thin] (-0.2, -2.1) -- (1.85, -2.1);
+  % Reflected ray from glass plate going right
+  \coordinate (R2) at (2.15, -1.65);
+  \draw[ray] (B) -- (R2);
+  \foreach \t in {0.42,0.72} {
+    \fill ($(B)!\t!(R2)$) circle (1.2pt);
+  }
+
+  % Angle alpha arc and clean label
+  \draw[thin] (1.1, -2.1) arc (180:152:0.45);
+  \node[font=\scriptsize,fill=white,inner sep=1pt] at (0.68, -2.32) {$\alpha$};
+\end{tikzpicture}

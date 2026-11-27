@@ -1,0 +1,84 @@
+\begin{tikzpicture}[scale=0.88,>=Stealth,font=\scriptsize]
+  % He-Ne laser
+  \draw[thick] (0, -0.25) rectangle (1.35, 0.25);
+  \node at (0.675, 0) {He-Ne};
+
+  % Spatial filter: small focusing lens + pinhole
+  \draw[thin] (1.35, 0.08) -- (1.72, 0.08);
+  \draw[thin] (1.35, -0.08) -- (1.72, -0.08);
+  \draw[thick] (1.72, -0.25) to[out=75,in=-75] (1.72, 0.25) to[out=-105,in=105] (1.72, -0.25);
+  % Pinhole at x=2.05
+  \draw[thick] (2.05, 0.35) -- (2.05, 0.05);
+  \draw[thick] (2.05, -0.05) -- (2.05, -0.35);
+  % Expanding beam from pinhole to collimating lens
+  \draw[thin] (1.72, 0.08) -- (2.05, 0) -- (2.68, 0.55);
+  \draw[thin] (1.72, -0.08) -- (2.05, 0) -- (2.68, -0.55);
+
+  % Spatial filter label + arrows
+  \node[align=center] at (0.75, 1.15) {空间\\滤波器};
+  \draw[very thin,-Stealth] (1.3, 1.0) -- (1.72, 0.28);
+  \draw[very thin,-Stealth] (1.3, 1.0) -- (2.02, 0.36);
+
+  % Collimating lens at x=2.68
+  \draw[thick] (2.68, -0.70) to[out=75,in=-75] (2.68, 0.70) to[out=-105,in=105] (2.68, -0.70);
+  \node[above] at (2.45, 1.02) {准直镜};
+  \draw[very thin,-Stealth] (2.52, 0.98) -- (2.65, 0.72);
+
+  % Polarizer (起偏器) at x=3.8
+  \draw[thick] (3.8, 0) ellipse (0.50 and 0.90);
+  \draw[thin] (3.8, -0.72) -- (3.8, 0.72);
+  \node[above] at (3.6, 1.02) {起偏器};
+  \draw[very thin,-Stealth] (3.65, 0.98) -- (3.76, 0.88);
+
+  % LCD panel (perspective tilted rectangle) at x=4.65..5.6
+  \draw[thick] (4.65, 0.95) -- (5.55, 0.28) -- (5.55, -1.05) -- (4.65, -0.38) -- cycle;
+  \node at (5.10, -0.05) {LCD};
+
+  % Analyzer (检偏器) at x=6.35
+  \draw[thick] (6.35, 0) ellipse (0.46 and 0.85);
+  \draw[thin] (6.02, -0.45) -- (6.68, 0.45);
+  \node[above] at (5.75, 1.02) {检偏器};
+  \draw[very thin,-Stealth] (5.92, 0.98) -- (6.18, 0.78);
+
+  % Fourier transform lens (傅里叶透镜) at x=7.35
+  \draw[thick] (7.35, -0.78) to[out=72,in=-72] (7.35, 0.78) to[out=-108,in=108] (7.35, -0.78);
+  \node[align=center] at (7.10, 1.32) {傅里叶\\透镜};
+  \draw[very thin,-Stealth] (7.25, 1.02) -- (7.33, 0.80);
+
+  % CCD camera at x=8.35
+  \draw[thick] (8.18, 0.50) rectangle (8.42, 0.72);
+  \draw[thick] (8.42, 0.45) rectangle (8.52, 0.77);
+  \node[above] at (8.35, 0.95) {CCD};
+
+  % Spectrum plane / paper screen (频谱面(纸屏))
+  \draw[thick] (8.75, 1.55) -- (10.55, 0.05) -- (10.55, -2.05) -- (8.75, -0.55) -- cycle;
+  \node[align=center] at (9.65, -0.15) {频谱面\\（纸屏）};
+
+  % Focal distance f arrows: LCD to FT lens, and FT lens to spectrum plane
+  \draw[very thin] (5.10, -0.72) -- (5.10, -1.35);
+  \draw[very thin] (7.35, -0.78) -- (7.35, -1.35);
+  \draw[very thin] (9.65, -1.30) -- (9.65, -1.35);
+  \draw[dim] (5.10, -1.25) -- (7.35, -1.25) node[midway,fill=white,inner sep=1pt] {$f$};
+  \draw[dim] (7.35, -1.25) -- (9.65, -1.25) node[midway,fill=white,inner sep=1pt] {$f$};
+
+  % Computer (计算机) below left
+  \draw[thick] (4.2, -1.70) rectangle (5.3, -2.40);
+  \node at (4.75, -2.05) {计算机};
+  \draw[thick] (4.2, -2.40) -- (3.85, -2.70) -- (4.95, -2.70) -- (5.3, -2.40);
+  % Connection from computer to LCD
+  \draw[thin] (4.75, -1.70) -- (4.75, -0.45);
+  % Connection from computer to LCD driver
+  \draw[thin] (5.3, -2.05) -- (6.15, -2.05);
+
+  % LCD driver & power (LCD 驱动电路及电源)
+  \draw[thick] (6.15, -1.52) rectangle (7.95, -2.72);
+  \node[align=center] at (7.05, -2.12) {LCD\\驱动电路\\及电源};
+  % Connection from LCD driver to LCD
+  \draw[thin] (6.15, -1.75) -- (5.80, -1.75) -- (5.80, -0.55) -- (5.55, -0.55);
+
+  % Display terminal (显示终端)
+  \draw[thick] (8.60, -1.75) rectangle (9.80, -2.55);
+  \node[align=center] at (9.20, -2.15) {显示\\终端};
+  % Connection from CCD to Display terminal
+  \draw[thin] (8.18, 0.61) -- (8.08, 0.61) -- (8.08, -2.15) -- (8.60, -2.15);
+\end{tikzpicture}

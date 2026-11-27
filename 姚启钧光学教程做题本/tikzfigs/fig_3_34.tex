@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Meslin split lens apparatus
+  \coordinate (S) at (0, 0);
+  \coordinate (O1) at (2.2, 0);
+  \coordinate (O2) at (2.9, 0);
+  \coordinate (S2) at (4.4, 0);
+  \coordinate (S1) at (5.4, 0);
+  \coordinate (P) at (4.65, 0.25);
+
+  % Optical axis
+  \draw[thin] (S) -- (7.0, 0);
+  \node[left] at (S) {$S$};
+
+  % Upper half-lens L1 at O1
+  \draw[thick] (2.08, 0) to[out=90,in=-110] (2.2, 0.95) to[out=-70,in=90] (2.32, 0) -- cycle;
+  \node[above] at (2.2, 0.95) {$\mathrm{L_1}$};
+  \node[below] at (2.2, -0.05) {$O_1$};
+
+  % Lower half-lens L2 at O2
+  \draw[thick] (2.78, 0) to[out=-90,in=110] (2.9, -0.95) to[out=70,in=-90] (3.02, 0) -- cycle;
+  \node[below] at (2.9, -0.95) {$\mathrm{L_2}$};
+  \node[above] at (2.9, 0.05) {$O_2$};
+
+  % Upper ray S -> top of L1 -> S1 -> continue
+  \draw[thin] (S) -- (2.2, 0.95) -- (S1) -- (6.7, -0.38);
+  \draw[ray] (S1) -- (6.7, -0.38);
+
+  % Lower ray S -> bottom of L2 -> S2 -> continue through P
+  \draw[thin] (S) -- (2.9, -0.95) -- (S2) -- (6.2, 1.14);
+  \draw[ray] (S2) -- (6.2, 1.14);
+
+  % Labels S2, S1, P
+  \node[below right,font=\scriptsize] at (S2) {$S_2$};
+  \node[below right,font=\scriptsize] at (S1) {$S_1$};
+  \node[above,font=\scriptsize] at (4.72, 0.26) {$P$};
+
+  % Dimension l between S2 and S1
+  \draw[very thin] (4.4, 0) -- (4.4, -1.35);
+  \draw[very thin] (5.4, 0) -- (5.4, -1.35);
+  \draw[dim] (4.4, -1.1) -- (5.4, -1.1) node[midway,fill=white,inner sep=1.5pt] {$l$};
+\end{tikzpicture}

@@ -1,0 +1,66 @@
+% 根据补充的壳层模型能级图重绘。纵向位置仅作示意，不代表能量比例。
+\begin{tikzpicture}[x=1cm,y=.70cm,font=\small,line width=.45pt]
+\newcommand{\shelllevel}[4]{%
+  \draw (3.25,#1)--(8.5,#1);
+  \node[fill=white,inner sep=1pt] at (#2,#1) {$#3$};
+  \node[anchor=west,fill=white,inner sep=1pt] at (8.58,#1) {$#4$};}
+\newcommand{\leftlevel}[2]{\draw (1.63,#1)--(2.15,#1);\node[anchor=east,fill=white,inner sep=1pt] at (1.65,#1) {$#2$};}
+\newcommand{\branch}[2]{\draw[dashed] (2.15,#1)--(3.25,#2);}
+% 单粒子能级、简并度及累积核子数（由低到高）。
+\shelllevel{0}{5.4}{1\mathrm s_{1/2}}{2\quad[2]}
+\shelllevel{0.72}{6.7}{1\mathrm p_{3/2}}{4\quad[6]}
+\shelllevel{1.44}{4.5}{1\mathrm p_{1/2}}{2\quad[8]}
+\shelllevel{3.275}{4.5}{1\mathrm d_{5/2}}{6\quad[14]}
+\shelllevel{4.2}{6.7}{2\mathrm s_{1/2}}{2\quad[16]}
+\shelllevel{4.92}{4.5}{1\mathrm d_{3/2}}{4\quad[20]}
+\shelllevel{6.825}{6.7}{1\mathrm f_{7/2}}{8\quad[28]}
+\shelllevel{9.025}{4.5}{2\mathrm p_{3/2}}{4\quad[32]}
+\shelllevel{9.745}{6.7}{1\mathrm f_{5/2}}{6\quad[38]}
+\shelllevel{10.465}{4.5}{2\mathrm p_{1/2}}{2\quad[40]}
+\shelllevel{11.185}{6.7}{1\mathrm g_{9/2}}{10\quad[50]}
+\shelllevel{12.5}{4.5}{2\mathrm d_{5/2}}{6\quad[56]}
+\shelllevel{13.22}{6.7}{1\mathrm g_{7/2}}{8\quad[64]}
+\shelllevel{13.94}{4.5}{3\mathrm s_{1/2}}{2\quad[66]}
+\shelllevel{14.66}{6.7}{2\mathrm d_{3/2}}{4\quad[70]}
+\shelllevel{15.38}{4.5}{1\mathrm h_{11/2}}{12\quad[82]}
+\shelllevel{16.775}{6.7}{2\mathrm f_{7/2}}{8\quad[90]}
+\shelllevel{17.495}{4.5}{1\mathrm h_{9/2}}{10\quad[100]}
+\shelllevel{18.215}{6.7}{3\mathrm p_{3/2}}{4\quad[104]}
+\shelllevel{18.935}{4.5}{2\mathrm f_{5/2}}{6\quad[110]}
+\shelllevel{19.655}{6.7}{3\mathrm p_{1/2}}{2\quad[112]}
+\shelllevel{20.375}{4.5}{1\mathrm i_{13/2}}{14\quad[126]}
+\shelllevel{21.675}{6.7}{2\mathrm g_{9/2}}{10\quad[136]}
+\shelllevel{22.395}{4.5}{3\mathrm d_{5/2}}{6\quad[142]}
+\shelllevel{23.115}{6.7}{1\mathrm i_{11/2}}{12\quad[154]}
+\shelllevel{23.835}{4.5}{2\mathrm g_{7/2}}{8\quad[162]}
+\shelllevel{24.555}{6.7}{4\mathrm s_{1/2}}{2\quad[164]}
+\shelllevel{25.275}{4.5}{3\mathrm d_{3/2}}{4\quad[168]}
+\shelllevel{25.995}{6.7}{1\mathrm j_{15/2}}{16\quad[184]}
+% 未计入自旋--轨道耦合时的轨道组及其分支。
+\leftlevel{0}{1\mathrm s}\branch{0}{0}
+\leftlevel{1.08}{1\mathrm p}\branch{1.08}{0.72}\branch{1.08}{1.44}
+\leftlevel{3.925}{1\mathrm d}\branch{3.925}{3.275}\branch{3.925}{4.92}
+\leftlevel{4.6659}{2\mathrm s}\branch{4.6659}{4.2}
+\leftlevel{8.1}{1\mathrm f}\branch{8.1}{6.825}\branch{8.1}{9.745}
+\leftlevel{9.7763}{2\mathrm p}\branch{9.7763}{9.025}\branch{9.7763}{10.465}
+\leftlevel{12.067}{1\mathrm g}\branch{12.067}{11.185}\branch{12.067}{13.22}
+\leftlevel{13.64}{2\mathrm d}\branch{13.64}{12.5}\branch{13.64}{14.66}
+\leftlevel{14.18}{3\mathrm s}\branch{14.18}{13.94}
+\leftlevel{16.2794}{1\mathrm h}\branch{16.2794}{15.38}\branch{16.2794}{17.495}
+\leftlevel{18.005}{2\mathrm f}\branch{18.005}{16.775}\branch{18.005}{18.935}
+\leftlevel{19.085}{3\mathrm p}\branch{19.085}{18.215}\branch{19.085}{19.655}
+\leftlevel{21.1854}{1\mathrm i}\branch{21.1854}{20.375}\branch{21.1854}{23.115}
+\leftlevel{22.605}{2\mathrm g}\branch{22.605}{21.675}\branch{22.605}{23.835}
+\leftlevel{23.685}{3\mathrm d}\branch{23.685}{22.395}\branch{23.685}{25.275}
+\leftlevel{24.4298}{4\mathrm s}\branch{24.4298}{24.555}
+\draw[dashed] (2.15,27.295)--(3.25,25.995);
+% 谐振子主壳层；括号只标明归组，不表示比例。
+\node[anchor=east] at (.55,0) {$0\hbar\omega$};\draw (.6,0)--(1,0);
+\node[anchor=east] at (.55,1.08) {$1\hbar\omega$};\draw (.6,1.08)--(1,1.08);
+\foreach \low/\high/\mid/\n in {3.75/4.9416/4.15/2,7.9/10.0267/8.775/3,11.9227/14.45/12.9383/4,16.0959/19.385/17.525/5,21.0166/24.7428/22.605/6}{
+  \draw (1.12,\low)--(1,\low)--(1,\high)--(1.12,\high);
+  \draw (.6,\mid)--(1,\mid);\node[anchor=east] at (.55,\mid) {$\n\hbar\omega$};}
+% 壳层闭合数。
+\foreach \y/\n in {0.2304/2,2.4023/8,5.9374/20,7.8/28,11.8585/50,16.0591/82,21.1516/126,26.695/184}{
+  \node[anchor=west] at (10.2,\y) {$\cdots\ \n$};}
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth,font=\small]
+\draw[->] (0,0)--(5.3,0) node[right]{$V$};
+\draw[->] (0,0)--(0,3.7) node[above]{$p$};
+\node[below left] at (0,0){$O$};
+\coordinate (A) at (4.5,1);
+\coordinate (B) at (1.5,3);
+\coordinate (C) at (.9,3);
+\coordinate (D) at (2.7,1);
+\draw[dashed] (0,3) node[left]{$p_2$}--(C);
+\draw[dashed] (0,1) node[left]{$p_1$}--(D);
+\draw[process,domain=4.5:1.5,samples=50] plot(\x,{4.5/\x});
+\draw[process] (B)--(C);
+\draw[process,domain=.9:2.7,samples=50] plot(\x,{2.7/\x});
+\draw[process] (D)--(A);
+\node[above] at (B){$B$};
+\node[above left] at (C){$C$};
+\node[below] at (D){$D$};
+\node[below] at (A){$A$};
+\node at (3,1.9){$T_2$};
+\node at (1.25,1.45){$T_1$};
+\end{tikzpicture}

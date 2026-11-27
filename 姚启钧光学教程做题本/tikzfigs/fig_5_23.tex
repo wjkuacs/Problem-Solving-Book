@@ -1,0 +1,31 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Optical axis
+  \draw[thin] (0, 0) -- (6.2, 0);
+
+  % Source S
+  \fill (0, 0) circle (1.6pt) node[below] {$S$};
+
+  % Lens L at x=0.6
+  \draw[thick] (0.6, -0.75) -- (0.6, 0.75);
+  \node[below] at (0.6, -0.75) {$\mathrm{L}$};
+
+  % Arrows I0 (going right) and I (returning left)
+  \draw[rayend] (0.9, 0.25) -- (1.55, 0.25) node[midway,above] {$I_0$};
+  \draw[rayend] (1.55, -0.25) -- (0.9, -0.25) node[midway,below] {$I$};
+
+  % Polarizer cube P at x=1.9..2.5
+  \draw[thick] (1.9, -0.3) rectangle (2.5, 0.3);
+  \draw[thick] (1.9, -0.3) -- (2.5, 0.3);
+  \node[below] at (2.2, -0.32) {$\mathrm{P}$};
+
+  % Quarter-wave plate L1 at x=4.5
+  \draw[thick] (4.5, -0.65) -- (4.5, 0.65);
+  \node[below] at (4.5, -0.65) {$\mathrm{L_1}$};
+
+  % Plane mirror M at x=6.2
+  \draw[thick] (6.2, -1.0) -- (6.2, 1.0);
+  \foreach \y in {-0.9,-0.7,...,0.9} {
+    \draw[very thin] (6.2, \y) -- (6.38, \y-0.14);
+  }
+  \node[below] at (6.2, -1.05) {$\mathrm{M}$};
+\end{tikzpicture}

@@ -1,0 +1,525 @@
+{
+  "source": "用户提供的11张习题截图、1张目录截图及1张式（10.8-1）补充截图",
+  "total_problems": 90,
+  "pdf_pages": 48,
+  "body_pages": 46,
+  "problems_per_page_max": 2,
+  "figure_placements": 6,
+  "distinct_figure_sources": 5,
+  "chapters": [
+    {
+      "chapter": 1,
+      "title": "原子的基本状况",
+      "count": 8,
+      "problem_ids": [
+        "1.1",
+        "1.2",
+        "1.3",
+        "1.4",
+        "1.5",
+        "1.6",
+        "1.7",
+        "1.8"
+      ]
+    },
+    {
+      "chapter": 2,
+      "title": "原子的能级和辐射",
+      "count": 12,
+      "problem_ids": [
+        "2.1",
+        "2.2",
+        "2.3",
+        "2.4",
+        "2.5",
+        "2.6",
+        "2.7",
+        "2.8",
+        "2.9",
+        "2.10",
+        "2.11",
+        "2.12"
+      ]
+    },
+    {
+      "chapter": 3,
+      "title": "量子力学初步",
+      "count": 8,
+      "problem_ids": [
+        "3.1",
+        "3.2",
+        "3.3",
+        "3.4",
+        "3.5",
+        "3.6",
+        "3.7",
+        "3.8"
+      ]
+    },
+    {
+      "chapter": 4,
+      "title": "碱金属原子和电子自旋",
+      "count": 8,
+      "problem_ids": [
+        "4.1",
+        "4.2",
+        "4.3",
+        "4.4",
+        "4.5",
+        "4.6",
+        "4.7",
+        "4.8"
+      ]
+    },
+    {
+      "chapter": 5,
+      "title": "多电子原子",
+      "count": 8,
+      "problem_ids": [
+        "5.1",
+        "5.2",
+        "5.3",
+        "5.4",
+        "5.5",
+        "5.6",
+        "5.7",
+        "5.8"
+      ]
+    },
+    {
+      "chapter": 6,
+      "title": "在磁场中的原子",
+      "count": 11,
+      "problem_ids": [
+        "6.1",
+        "6.2",
+        "6.3",
+        "6.4",
+        "6.5",
+        "6.6",
+        "6.7",
+        "6.8",
+        "6.9",
+        "6.10",
+        "6.11"
+      ]
+    },
+    {
+      "chapter": 7,
+      "title": "原子的壳层结构",
+      "count": 5,
+      "problem_ids": [
+        "7.1",
+        "7.2",
+        "7.3",
+        "7.4",
+        "7.5"
+      ]
+    },
+    {
+      "chapter": 8,
+      "title": "X 射线",
+      "count": 8,
+      "problem_ids": [
+        "8.1",
+        "8.2",
+        "8.3",
+        "8.4",
+        "8.5",
+        "8.6",
+        "8.7",
+        "8.8"
+      ]
+    },
+    {
+      "chapter": 9,
+      "title": "分子结构和分子光谱",
+      "count": 6,
+      "problem_ids": [
+        "9.1",
+        "9.2",
+        "9.3",
+        "9.4",
+        "9.5",
+        "9.6"
+      ]
+    },
+    {
+      "chapter": 10,
+      "title": "原子核",
+      "count": 10,
+      "problem_ids": [
+        "10.1",
+        "10.2",
+        "10.3",
+        "10.4",
+        "10.5",
+        "10.6",
+        "10.7",
+        "10.8",
+        "10.9",
+        "10.10"
+      ]
+    },
+    {
+      "chapter": 11,
+      "title": "基本粒子",
+      "count": 6,
+      "problem_ids": [
+        "11.1",
+        "11.2",
+        "11.3",
+        "11.4",
+        "11.5",
+        "11.6"
+      ]
+    }
+  ],
+  "supplements": [
+    {
+      "problem": "10.9",
+      "material": "已补入原书式（10.8-1）前四式，释能分别为3.25、4.00、17.6、18.3 MeV"
+    }
+  ],
+  "pending_materials": [
+    {
+      "problem": "11.4, 11.5",
+      "missing": "原书表11.2"
+    }
+  ],
+  "verification": {
+    "sequential_problem_ids": true,
+    "all_problems_in_pdf_once": true,
+    "no_overfull_or_missing_glyphs": true,
+    "page_map": [
+      {
+        "pdf_page": 1,
+        "problems": []
+      },
+      {
+        "pdf_page": 2,
+        "problems": []
+      },
+      {
+        "pdf_page": 3,
+        "problems": [
+          "1.1",
+          "1.2"
+        ]
+      },
+      {
+        "pdf_page": 4,
+        "problems": [
+          "1.3",
+          "1.4"
+        ]
+      },
+      {
+        "pdf_page": 5,
+        "problems": [
+          "1.5",
+          "1.6"
+        ]
+      },
+      {
+        "pdf_page": 6,
+        "problems": [
+          "1.7",
+          "1.8"
+        ]
+      },
+      {
+        "pdf_page": 7,
+        "problems": [
+          "2.1",
+          "2.2"
+        ]
+      },
+      {
+        "pdf_page": 8,
+        "problems": [
+          "2.3",
+          "2.4"
+        ]
+      },
+      {
+        "pdf_page": 9,
+        "problems": [
+          "2.5",
+          "2.6"
+        ]
+      },
+      {
+        "pdf_page": 10,
+        "problems": [
+          "2.7",
+          "2.8"
+        ]
+      },
+      {
+        "pdf_page": 11,
+        "problems": [
+          "2.9",
+          "2.10"
+        ]
+      },
+      {
+        "pdf_page": 12,
+        "problems": [
+          "2.11",
+          "2.12"
+        ]
+      },
+      {
+        "pdf_page": 13,
+        "problems": [
+          "3.1",
+          "3.2"
+        ]
+      },
+      {
+        "pdf_page": 14,
+        "problems": [
+          "3.3",
+          "3.4"
+        ]
+      },
+      {
+        "pdf_page": 15,
+        "problems": [
+          "3.5",
+          "3.6"
+        ]
+      },
+      {
+        "pdf_page": 16,
+        "problems": [
+          "3.7",
+          "3.8"
+        ]
+      },
+      {
+        "pdf_page": 17,
+        "problems": [
+          "4.1",
+          "4.2"
+        ]
+      },
+      {
+        "pdf_page": 18,
+        "problems": [
+          "4.3",
+          "4.4"
+        ]
+      },
+      {
+        "pdf_page": 19,
+        "problems": [
+          "4.5",
+          "4.6"
+        ]
+      },
+      {
+        "pdf_page": 20,
+        "problems": [
+          "4.7",
+          "4.8"
+        ]
+      },
+      {
+        "pdf_page": 21,
+        "problems": [
+          "5.1",
+          "5.2"
+        ]
+      },
+      {
+        "pdf_page": 22,
+        "problems": [
+          "5.3",
+          "5.4"
+        ]
+      },
+      {
+        "pdf_page": 23,
+        "problems": [
+          "5.5",
+          "5.6"
+        ]
+      },
+      {
+        "pdf_page": 24,
+        "problems": [
+          "5.7",
+          "5.8"
+        ]
+      },
+      {
+        "pdf_page": 25,
+        "problems": [
+          "6.1",
+          "6.2"
+        ]
+      },
+      {
+        "pdf_page": 26,
+        "problems": [
+          "6.3",
+          "6.4"
+        ]
+      },
+      {
+        "pdf_page": 27,
+        "problems": [
+          "6.5",
+          "6.6"
+        ]
+      },
+      {
+        "pdf_page": 28,
+        "problems": [
+          "6.7",
+          "6.8"
+        ]
+      },
+      {
+        "pdf_page": 29,
+        "problems": [
+          "6.9",
+          "6.10"
+        ]
+      },
+      {
+        "pdf_page": 30,
+        "problems": [
+          "6.11"
+        ]
+      },
+      {
+        "pdf_page": 31,
+        "problems": [
+          "7.1",
+          "7.2"
+        ]
+      },
+      {
+        "pdf_page": 32,
+        "problems": [
+          "7.3",
+          "7.4"
+        ]
+      },
+      {
+        "pdf_page": 33,
+        "problems": [
+          "7.5"
+        ]
+      },
+      {
+        "pdf_page": 34,
+        "problems": [
+          "8.1",
+          "8.2"
+        ]
+      },
+      {
+        "pdf_page": 35,
+        "problems": [
+          "8.3",
+          "8.4"
+        ]
+      },
+      {
+        "pdf_page": 36,
+        "problems": [
+          "8.5",
+          "8.6"
+        ]
+      },
+      {
+        "pdf_page": 37,
+        "problems": [
+          "8.7",
+          "8.8"
+        ]
+      },
+      {
+        "pdf_page": 38,
+        "problems": [
+          "9.1",
+          "9.2"
+        ]
+      },
+      {
+        "pdf_page": 39,
+        "problems": [
+          "9.3",
+          "9.4"
+        ]
+      },
+      {
+        "pdf_page": 40,
+        "problems": [
+          "9.5",
+          "9.6"
+        ]
+      },
+      {
+        "pdf_page": 41,
+        "problems": [
+          "10.1",
+          "10.2"
+        ]
+      },
+      {
+        "pdf_page": 42,
+        "problems": [
+          "10.3",
+          "10.4"
+        ]
+      },
+      {
+        "pdf_page": 43,
+        "problems": [
+          "10.5",
+          "10.6"
+        ]
+      },
+      {
+        "pdf_page": 44,
+        "problems": [
+          "10.7",
+          "10.8"
+        ]
+      },
+      {
+        "pdf_page": 45,
+        "problems": [
+          "10.9",
+          "10.10"
+        ]
+      },
+      {
+        "pdf_page": 46,
+        "problems": [
+          "11.1",
+          "11.2"
+        ]
+      },
+      {
+        "pdf_page": 47,
+        "problems": [
+          "11.3",
+          "11.4"
+        ]
+      },
+      {
+        "pdf_page": 48,
+        "problems": [
+          "11.5",
+          "11.6"
+        ]
+      }
+    ]
+  }
+}

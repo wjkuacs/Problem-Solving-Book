@@ -1,0 +1,61 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Source S and image S'
+  \coordinate (S) at (0, 0.55);
+  \coordinate (Sp) at (0, -0.55);
+  \coordinate (M1) at (3.2, 0);
+  \coordinate (M2) at (4.8, 0);
+  \coordinate (ScrTop) at (8.0, 1.9);
+  \coordinate (ScrBot) at (8.0, -0.9);
+  \coordinate (P0) at (8.0, 0);
+  % Reflected rays from M1 and M2
+  % From S'(0,-0.55) through M1(3.2,0) to x=8.0: y = -0.55 + (0.55/3.2)*8 = 0.825
+  \coordinate (P2) at (8.0, 0.825);
+  % From S'(0,-0.55) through M2(4.8,0) to x=8.0: y = -0.55 + (0.55/4.8)*8 = 0.367
+  \coordinate (P1) at (8.0, 0.367);
+  % Direct ray from S to top of screen (just illustrative upper ray)
+  \coordinate (Ptop) at (8.0, 1.55);
+
+  % Optical plane / mirror line (dashed)
+  \draw[dashed] (-0.3, 0) -- (8.0, 0);
+
+  % Lloyd's mirror block
+  \draw[thick] (M1) -- (M2);
+  \draw[fill=gray!20] (3.2, -0.18) rectangle (4.8, 0);
+
+  % Screen
+  \draw[thick] (ScrBot) -- (ScrTop);
+  \node[right] at (P0) {$P_0$};
+  \node[right] at (P1) {$P_1$};
+  \node[right] at (P2) {$P_2$};
+
+  % Source S and virtual image S'
+  \fill (S) circle (1.4pt) node[above] {$S$};
+  \fill (Sp) circle (1.4pt) node[left] {$S'$};
+  \draw[dashed] (S) -- (Sp);
+
+  % Rays from S to mirror edges and reflected to P2, P1
+  \draw[ray] (S) -- (M1);
+  \draw[ray] (M1) -- (P2);
+  \draw[ray] (S) -- (M2);
+  \draw[ray] (M2) -- (P1);
+  % Direct ray from S to upper screen
+  \draw[ray] (S) -- (Ptop);
+
+  % Virtual rays from S' to M1, M2
+  \draw[dashed] (Sp) -- (M1);
+  \draw[dashed] (Sp) -- (M2);
+
+  % Dimension: 2 mm (S to mirror plane)
+  \draw[dim] (-0.45, 0) -- (-0.45, 0.55) node[midway,left] {$2\,\mathrm{mm}$};
+  \draw[very thin] (-0.52, 0.55) -- (-0.1, 0.55);
+
+  % Dimension: 0.4 m (mirror length)
+  \draw[very thin] (3.2, -0.18) -- (3.2, -0.62);
+  \draw[very thin] (4.8, -0.18) -- (4.8, -0.62);
+  \draw[dim] (3.2, -0.52) -- (4.8, -0.52) node[midway,below] {$0.4\,\mathrm{m}$};
+
+  % Dimension: 1.5 m (S to screen)
+  \draw[very thin] (0, -0.55) -- (0, -1.15);
+  \draw[very thin] (8.0, -0.9) -- (8.0, -1.15);
+  \draw[dim] (0, -1.05) -- (8.0, -1.05) node[midway,below] {$1.5\,\mathrm{m}$};
+\end{tikzpicture}

@@ -1,0 +1,5 @@
+\begin{tikzpicture}[line width=.8pt]
+\draw (0,0) circle (1.15);
+\draw[domain=0:360,samples=241,smooth,variable=\t]
+ plot ({(1.15+.20*cos(5*\t))*cos(\t+18)},{(1.15+.20*cos(5*\t))*sin(\t+18)});
+\end{tikzpicture}

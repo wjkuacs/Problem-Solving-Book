@@ -1,0 +1,44 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Optical axis
+  \draw[thin] (-3.2, 0) -- (3.8, 0);
+
+  % Glass slab (n'=1.5) from x=0 to x=1.4
+  \draw[thick] (0, -1.0) rectangle (1.4, 2.2);
+  \node[above] at (-0.5, 1.85) {$n=1$};
+  \node[above] at (0.7, 1.85) {$n'=1.5$};
+  \node[above] at (1.95, 1.85) {$n=1$};
+
+  % Object PQ at x=-2.4
+  \draw[thick,->] (-2.4, 0) -- (-2.4, 0.95) node[above] {$Q$};
+  \node[below left] at (-2.4, 0) {$P$};
+
+  % Virtual image P'Q' at x=-1.6
+  \draw[thick,dashed,->] (-1.6, 0) -- (-1.6, 0.95) node[above] {$Q'$};
+  \node[below right] at (-1.6, 0) {$P'$};
+
+  % Ray from Q through slab to Eye E at (3.2, 0)
+  % Q(-2.4, 0.95) to slab entry (0, 0.45), refracted to (1.4, 0.30), exit parallel to (3.2, 0)
+  \coordinate (Q) at (-2.4, 0.95);
+  \coordinate (A) at (0, 0.48);
+  \coordinate (B) at (1.4, 0.31);
+  \coordinate (E) at (3.1, 0);
+  \draw[thin] (Q) -- (A) -- (B) -- (E);
+  % Backward extension of exit ray to Q'
+  \draw[dashed] (B) -- (-1.6, 0.95);
+
+  % Eye symbol at E
+  \draw[thick] (3.3, 0.25) -- (3.85, -0.05) -- (3.3, -0.35);
+  \draw[thick] (3.55, 0.12) arc (110:250:0.18);
+  \fill (3.48, -0.05) circle (1.5pt);
+  \node[below] at (3.1, -0.1) {$\mathrm{E}$};
+
+  % Dimension d_2 between P and P'
+  \draw[very thin] (-2.4, 0) -- (-2.4, -0.45);
+  \draw[very thin] (-1.6, 0) -- (-1.6, -0.45);
+  \draw[very thin,-Stealth] (-2.9, -0.3) -- (-2.4, -0.3);
+  \draw[very thin,-Stealth] (-1.1, -0.3) -- (-1.6, -0.3);
+  \node[below] at (-2.0, -0.18) {$d_2$};
+
+  % Dimension d for slab thickness
+  \draw[dim] (0, -0.8) -- (1.4, -0.8) node[midway,fill=white,inner sep=1.5pt] {$d$};
+\end{tikzpicture}

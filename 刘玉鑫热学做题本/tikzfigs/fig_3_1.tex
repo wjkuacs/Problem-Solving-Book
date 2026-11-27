@@ -1,0 +1,19 @@
+\begin{tikzpicture}[line width=.7pt,>=Stealth,font=\small]
+\fill[pattern=north east lines] (-.8,4.7) rectangle (.8,4.9);
+\draw[thick] (-.8,4.7)--(.8,4.7);
+\draw (0,4.7)--(0,4.05);
+\draw (-.4,3.2)--(0,4.05)--(.4,3.2);
+\draw (0,2.8) ellipse[x radius=.65,y radius=.22];
+\draw (.65,2.8) arc[start angle=0,end angle=-180,x radius=.65,y radius=.22];
+\draw (0,2.25) ellipse[x radius=1,y radius=.32];
+\path[fill=gray!12] (-1,2.25)--(-1,.3) arc[start angle=180,end angle=360,x radius=1,y radius=.32]--(1,2.25) arc[start angle=0,end angle=-180,x radius=1,y radius=.32];
+\draw (-1,2.25)--(-1,.3) arc[start angle=180,end angle=360,x radius=1,y radius=.32]--(1,2.25);
+\draw (-.65,2.8)--(-.65,2.0) (.65,2.8)--(.65,2.0);
+\draw[dashed] (-.65,2.0)--(-.65,.65) arc[start angle=180,end angle=360,x radius=.65,y radius=.22]--(.65,2.0);
+\draw[dash dot] (0,-.7)--(0,3.9);
+\draw (-.2,-.05)--(-.2,-.6)--(.2,-.6)--(.2,-.05);
+\draw[->] (0,1.5)--node[above]{$R$}(.65,1.5);
+\draw[->] (0,.2)--(1,.2) node[right]{$R+\delta$};
+\draw[<->] (1.35,.3)--node[right]{$L$}(1.35,2.25);
+\draw[->] (-.8,-.9) arc[start angle=200,end angle=330,x radius=.95,y radius=.2] node[right]{$\omega$};
+\end{tikzpicture}

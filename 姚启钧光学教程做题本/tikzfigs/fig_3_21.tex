@@ -1,0 +1,25 @@
+\begin{tikzpicture}[scale=0.85,font=\small]
+  % Optical axis
+  \draw[thin] (-1.5, 0) -- (4.8, 0);
+
+  % Left: original lens with central hatched section C
+  \begin{scope}[shift={(0.4,0)}]
+    \draw[thick] (0, 2.0) to[out=-115,in=90] (-0.42, 0) to[out=-90,in=115] (0, -2.0);
+    \draw[thick] (0, 2.0) to[out=-65,in=90] (0.42, 0) to[out=-90,in=65] (0, -2.0);
+    \fill[pattern=north east lines] (-0.41, -0.35) rectangle (0.41, 0.35);
+    \draw[thick] (-0.41, 0.35) -- (0.41, 0.35);
+    \draw[thick] (-0.41, -0.35) -- (0.41, -0.35);
+    \node[right] at (0.45, 0.95) {A};
+    \node[right] at (0.45, -0.95) {B};
+    \node[right] at (0.50, 0) {C};
+  \end{scope}
+
+  % Right: A and B glued together
+  \begin{scope}[shift={(3.0,0)}]
+    \draw[thick] (0, 1.65) to[out=-115,in=90] (-0.41, 0) to[out=-90,in=115] (0, -1.65);
+    \draw[thick] (0, 1.65) to[out=-65,in=90] (0.41, 0) to[out=-90,in=65] (0, -1.65);
+    \draw[thick] (-0.41, 0) -- (0.41, 0);
+    \node[right] at (0.42, 0.72) {A};
+    \node[right] at (0.42, -0.72) {B};
+  \end{scope}
+\end{tikzpicture}

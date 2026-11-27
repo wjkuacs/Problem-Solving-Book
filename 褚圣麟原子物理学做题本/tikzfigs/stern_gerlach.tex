@@ -1,0 +1,17 @@
+% 共用装置：磁极出口至屏为 L_2，d 为两外侧束的总间距。
+\begin{tikzpicture}[>=Stealth,line width=.7pt,font=\small]
+\draw (-.9,-.13) rectangle (-.55,.13);
+\draw[->] (-.72,0)--(1.8,0);
+\foreach \x in {-.25,.25}{\draw (\x,.10)--(\x,.36);\draw (\x,-.10)--(\x,-.36);}
+\draw (.9,.65)--(.9,.22)--(2.1,.22)--(2.1,.65);
+\draw (.9,-.65)--(.9,-.22)--(2.1,-.22)--(2.1,-.65);
+\draw (.9,0) .. controls (1.5,0) and (1.8,.11) .. (2.1,.18)--(4.65,.73);
+\draw (.9,0) .. controls (1.5,0) and (1.8,-.11) .. (2.1,-.18)--(4.65,-.73);
+\draw[dashed] (2.1,0)--(4.65,0);
+\draw[thick] (4.65,-.96)--(4.65,.96);
+\node[above] at (4.65,1) {屏};
+\draw[<->] (4.9,-.73)--node[right] {$d$} (4.9,.73);
+\foreach \x in {.9,2.1,4.65}{\draw[densely dashed] (\x,-.76)--(\x,-1.13);}
+\draw[<->] (.9,-1.02)--node[fill=white,inner sep=1pt] {$L_1$} (2.1,-1.02);
+\draw[<->] (2.1,-1.02)--node[fill=white,inner sep=1pt] {$L_2$} (4.65,-1.02);
+\end{tikzpicture}

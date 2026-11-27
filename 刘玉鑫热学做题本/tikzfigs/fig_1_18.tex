@@ -1,0 +1,22 @@
+\begin{tikzpicture}[x=1cm,y=1cm,>=Stealth,line width=.7pt,font=\small]
+\path[pattern=north west lines] (0,2.5)--(0,.8)
+  .. controls (0,.2) and (.4,0)..(.9,0)--(1.9,0)
+  ..controls (2.4,0) and (2.8,.2)..(2.8,.8)
+  --(2.8,2.5)--(2.4,2.5)--(2.4,.8)
+  ..controls (2.4,.5) and (2.2,.4)..(1.9,.4)--(.9,.4)
+  ..controls (.6,.4) and (.4,.5)..(.4,.8)--(.4,2.5)--cycle;
+\draw (0,2.5)--(0,4.0) arc[start angle=180,end angle=0,radius=.2]
+  --(.4,.8)..controls (.4,.5) and (.6,.4)..(.9,.4)--(1.9,.4)
+  ..controls (2.2,.4) and (2.4,.5)..(2.4,.8)--(2.4,4.1);
+\draw (0,2.5)--(0,.8)..controls (0,.2) and (.4,0)..(.9,0)--(1.9,0)
+  ..controls (2.4,0) and (2.8,.2)..(2.8,.8)--(2.8,4.1);
+\draw (0,2.5)..controls (.1,2.65) and (.3,2.65)..(.4,2.5);
+\draw (2.4,2.5)..controls (2.5,2.65) and (2.7,2.65)..(2.8,2.5);
+\draw[dashed] (.45,2.5)--(3.35,2.5);
+\draw[dashed] (2.4,3.25)..controls (2.5,3.4) and (2.7,3.4)..(2.8,3.25);
+\draw (.6,4.2)--(1.2,4.2) (.6,1.75)--(1.0,1.75);
+\draw[<->] (1.1,2.5)--node[sloped,above]{$h\,(50\,\mathrm{cm})$}(1.1,4.2);
+\draw[<->] (.8,1.75)--node[right]{$h'$}(.8,2.5);
+\draw (2.85,3.25)--(3.35,3.25);
+\draw[<->] (3.15,2.5)--node[right]{$h'$}(3.15,3.25);
+\end{tikzpicture}

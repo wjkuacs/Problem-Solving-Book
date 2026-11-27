@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth,font=\small,line width=.7pt]
+\fill[pattern=north east lines] (0,0) rectangle (4,.14);
+\fill[pattern=north east lines] (0,0) rectangle (.13,2.4);
+\fill[pattern=north east lines] (3.87,0) rectangle (4,2.4);
+\fill[gray!15] (.15,.15) rectangle (3.85,1.85);
+\draw (.13,2.4)--(3.87,2.4);
+\draw (0,2.4)--(0,0)--(4,0)--(4,2.4);
+\draw[densely dashed] (.15,1.85)--(3.85,1.85);
+\filldraw[fill=white] (.6,.25) rectangle (.95,2.65);
+\filldraw[fill=white] (3.05,.25) rectangle (3.4,2.65);
+\draw (.775,2.65)--(.775,3.15)--(1.65,3.15);
+\draw (2.35,3.15)--(3.225,3.15)--(3.225,2.65);
+\draw (1.65,3.05) rectangle (2.35,3.25);
+\draw[->] (1.1,3.45)--node[above]{$4e^-$}(2.9,3.45);
+\draw[->] (.3,2.95)--(.5,2.6) node[pos=0,above] {氢气 $\mathrm H_2$};
+\draw[->] (3.7,2.95)--(3.5,2.6) node[pos=0,above] {氧气 $\mathrm O_2$};
+\node at (.775,.5){$+$};
+\node at (3.225,.5){$-$};
+\node[align=center] at (2,.9){KOH\\电解溶液};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[scale=0.95,>=Stealth,font=\small]
+  % Central axis
+  \draw[thin] (-1.2, 0) -- (6.2, 0);
+
+  % First slit S at x=-0.5
+  \draw[thick] (-0.5, 0.95) -- (-0.5, 0.14);
+  \draw[thick] (-0.5, -0.14) -- (-0.5, -0.95);
+  \node[left] at (-0.5, 0.12) {$S$};
+
+  % Double slit S1, S2 at x=0.25
+  \draw[thick] (0.25, 1.15) -- (0.25, 0.52);
+  \draw[thick] (0.25, 0.34) -- (0.25, -0.34);
+  \draw[thick] (0.25, -0.52) -- (0.25, -1.15);
+  \node[left,font=\scriptsize] at (0.25, 0.43) {$S_1$};
+  \node[left,font=\scriptsize] at (0.25, -0.43) {$S_2$};
+
+  % Polarizer P after double slit at x=0.45..0.58
+  \draw[thick] (0.45, -1.0) rectangle (0.58, 1.0);
+  \node[above,font=\scriptsize] at (0.515, 1.02) {$\mathrm{P}$};
+
+  % Half-wave plate behind upper slit S1 at x=0.72..0.85
+  \draw[thick] (0.72, 0.18) rectangle (0.85, 0.72);
+
+  % Screen at x=6.2
+  \draw[thick] (6.2, -1.15) -- (6.2, 1.45);
+  \fill (6.2, 0) circle (1.4pt) node[right] {$A$};
+  \fill (6.2, 0.38) circle (1.4pt) node[right] {$B$};
+  \fill (6.2, 0.76) circle (1.4pt) node[right] {$C$};
+\end{tikzpicture}

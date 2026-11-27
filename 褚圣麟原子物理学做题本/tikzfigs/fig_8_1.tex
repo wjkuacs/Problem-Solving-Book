@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,font=\small]
+\coordinate (O) at (0,0);
+\draw[->] (-1.5,0)--(O);
+\draw[dashed] (O)--(3.55,0);
+\draw[fill=white,rotate=-15] (-.42,-.045) rectangle (1.12,.045);
+\draw[->] (O)--(3.65,-2.107);
+\draw[->] (O)--(3.65,-4.35);
+\draw[dashed] (O)--(3.65,-.978);
+\draw[thick] (3.65,.25)--(3.65,-4.55);
+\node[right] at (3.65,-2.107) {0 级极大};
+\node[right] at (3.65,-4.35) {$n$ 级极大};
+\draw (1.25,0) arc (0:-15:1.25);
+\node at (1.55,-.12) {$\theta$};
+\draw (1.739,-.466) arc (-15:-30:1.8);
+\node at (1.95,-.75) {$\theta$};
+\draw (1.905,-1.10) arc (-30:-50:2.2);
+\node at (2.0,-1.65) {$\alpha$};
+\end{tikzpicture}

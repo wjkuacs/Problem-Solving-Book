@@ -1,0 +1,35 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % Centers O_A and O_B
+  \coordinate (OA) at (0, 2.8);
+  \coordinate (OB) at (0, -2.8);
+  \coordinate (Touch) at (0, 0);
+
+  % Vertical axis
+  \draw[thin] (0, 3.0) -- (0, -3.0);
+  \fill (OA) circle (1.2pt) node[right] {$O_{\mathrm{A}}$};
+  \fill (OB) circle (1.2pt) node[right] {$O_{\mathrm{B}}$};
+
+  % Lens A (upper plano-convex, flat top at y=0.55, curved bottom tangent at (0,0))
+  \draw[thick] (-1.85, 0.55) -- (1.85, 0.55);
+  \draw[thick] (-1.85, 0.55) to[out=-28,in=180] (0,0) to[out=0,in=-152] (1.85, 0.55);
+  \node[left] at (-1.85, 0.55) {A};
+
+  % Lens B (lower plano-convex, flat bottom at y=-0.55, curved top tangent at (0,0))
+  \draw[thick] (-1.85, -0.55) -- (1.85, -0.55);
+  \draw[thick] (-1.85, -0.55) to[out=28,in=180] (0,0) to[out=0,in=152] (1.85, -0.55);
+  \node[left] at (-1.85, -0.55) {B};
+
+  % Radius lines R_A and R_B
+  \draw[thin] (OA) -- (-1.65, 0.44) node[midway,left] {$R_{\mathrm{A}}$};
+  \draw[thin] (OB) -- (-1.65, -0.44) node[midway,left] {$R_{\mathrm{B}}$};
+
+  % r_AB and d_AB
+  \coordinate (Ptop) at (1.25, 0.25);
+  \coordinate (Pbot) at (1.25, -0.25);
+  \draw[thin] (Ptop) -- (2.3, 0.25);
+  \draw[thin] (Pbot) -- (2.3, -0.25);
+  \draw[dim] (2.15, -0.25) -- (2.15, 0.25) node[midway,right] {$d_{\mathrm{AB}}$};
+
+  \draw[thin] (1.25, -0.25) -- (1.25, -1.15);
+  \draw[dim] (0, -1.0) -- (1.25, -1.0) node[midway,below] {$r_{\mathrm{AB}}$};
+\end{tikzpicture}

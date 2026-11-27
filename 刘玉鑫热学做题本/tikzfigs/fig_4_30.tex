@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth,font=\small,line width=.7pt]
+\draw[->] (0,0)--(4.8,0) node[right]{$V$};
+\draw[->] (0,0)--(0,4.4) node[above]{$p$};
+\node[below left] at (0,0){$O$};
+\coordinate (A) at (4,.45);
+\coordinate (B) at (1,2.375);
+\coordinate (C) at (2,2.375);
+\coordinate (D) at (4,1.034);
+\draw[process,domain=4:1,samples=60] plot(\x,{.45*(4/\x)^1.2});
+\draw[process] (B)--(C);
+\draw[process,domain=2:4,samples=60] plot(\x,{2.375*(2/\x)^1.2});
+\draw[process] (D)--(A);
+\draw[dashed] (1,0) node[below]{$V_2$}--(B);
+\draw[dashed] (2,0) node[below]{$V_3$}--(C);
+\draw[dashed] (4,0) node[below]{$V_1$}--(A);
+\node[below right] at (A){$A$};
+\node[above left] at (B){$B$};
+\node[above right] at (C){$C$};
+\node[above right] at (D){$D$};
+\draw[->] (1.4,3.1) node[above]{$Q_1$}--(1.4,2.37);
+\draw[->] (4,.75)--(4.7,.75) node[right]{$Q'_2$};
+\node at (3.55,3.65){绝热};
+\draw[->] (3.35,3.45)--(2.8,1.59);
+\draw[->] (3.35,3.45)--(2.3,.875);
+\end{tikzpicture}

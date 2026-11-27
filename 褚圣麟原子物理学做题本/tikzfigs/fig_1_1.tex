@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth,line width=.7pt,font=\small]
+\coordinate (O) at (0,0);
+\draw[->] (-2.25,-.82)--(O) node[pos=.26,above] {$\alpha$};
+\draw[dashed] (O)--(1.65,.60);
+\draw[->] (O)--(4.25,0);
+\draw[fill=white,rotate=80] (-.44,-.035) rectangle (.49,.035);
+\node[below left] at (0,-.43) {银箔};
+\draw (.78,0) arc (0:20:.78);
+\node at (1.02,.17) {$20^\circ$};
+\draw (.54,.197) arc (20:80:.575);
+\node at (.45,.65) {$60^\circ$};
+\draw (3.42,0) ellipse (.11 and .27);
+\draw (3.42,.27)--(3.95,.27) arc (90:-90:.11 and .27)--(3.42,-.27);
+\node[above] at (3.4,.34) {窗口};
+\node[below] at (3.7,-.35) {计数器};
+\draw[<->] (0,-.5)--node[fill=white,inner sep=1pt] {$L$} (3.42,-.5);
+\end{tikzpicture}

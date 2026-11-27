@@ -1,0 +1,41 @@
+\begin{tikzpicture}[scale=0.9,>=Stealth,font=\small]
+  % Billet split lens
+  \coordinate (P) at (0, 0);
+  \coordinate (ScrTop) at (6.8, 1.8);
+  \coordinate (ScrBot) at (6.8, -1.8);
+
+  % Optical axis
+  \draw[thin] (-0.3, 0) -- (6.8, 0);
+  \fill (P) circle (1.3pt) node[above left] {$P$};
+
+  % Upper half-lens at x=1.5, y from 0.2 to 1.25
+  \draw[thick] (1.36, 0.2) -- (1.64, 0.2);
+  \draw[thick] (1.36, 0.2) to[out=90,in=-110] (1.5, 1.25) to[out=-70,in=90] (1.64, 0.2);
+  % Lower half-lens at x=1.5, y from -0.2 to -1.25
+  \draw[thick] (1.36, -0.2) -- (1.64, -0.2);
+  \draw[thick] (1.36, -0.2) to[out=-90,in=110] (1.5, -1.25) to[out=70,in=-90] (1.64, -0.2);
+  % Stop K in gap
+  \draw[very thick] (1.5, -0.2) -- (1.5, 0.2);
+  \node[right,font=\scriptsize] at (1.55, 0.08) {$\mathrm{K}$};
+
+  % Images P1 and P2 at x=2.8, y=+-0.38
+  \coordinate (P1) at (2.8, 0.38);
+  \coordinate (P2) at (2.8, -0.38);
+  \fill (P1) circle (1.2pt) node[above] {$P_1$};
+  \fill (P2) circle (1.2pt) node[below] {$P_2$};
+
+  % Rays from P through upper half-lens to P1 and screen
+  \draw[thin] (P) -- (1.5, 1.25) -- (P1) -- (6.8, -1.6);
+  \draw[thin] (P) -- (1.5, 0.2) -- (P1) -- (6.8, 0.93);
+  % Rays from P through lower half-lens to P2 and screen
+  \draw[thin] (P) -- (1.5, -1.25) -- (P2) -- (6.8, 1.6);
+  \draw[thin] (P) -- (1.5, -0.2) -- (P2) -- (6.8, -0.93);
+
+  % Screen
+  \draw[thick] (ScrBot) -- (ScrTop);
+
+  % Dimension l from lens to screen
+  \draw[very thin] (1.5, -1.35) -- (1.5, -2.05);
+  \draw[very thin] (6.8, -1.8) -- (6.8, -2.05);
+  \draw[dim] (1.5, -1.9) -- (6.8, -1.9) node[midway,fill=white,inner sep=1.5pt] {$l$};
+\end{tikzpicture}
