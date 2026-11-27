@@ -1,0 +1,1234 @@
+\probchapter{第七章\quad 带参数的积分}
+
+\probsec{§1. 带参数的常义积分}
+
+\begin{prob}[M]{3711}
+证明: 不连续函数 $f(x, y) = \operatorname{sgn}(x - y)$ 的积分
+\[
+F(y) = \int_0^1 f(x, y) \,\mathrm{d}x
+\]
+为连续函数. 作出函数 $u = F(y)$ 的图像.
+\end{prob}
+
+\begin{prob}[M]{3712}
+研究函数
+\[
+F(y) = \int_0^1 \frac{y f(x)}{x^2 + y^2} \,\mathrm{d}x
+\]
+的连续性, 其中 $f(x)$ 在闭区间 $[0, 1]$ 上是正的连续函数.
+\end{prob}
+
+\begin{prob}[L]{3713}
+求:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \lim_{\alpha \to 0} \int_\alpha^{1+\alpha} \frac{\mathrm{d}x}{1 + x^2 + \alpha^2}$;
+\item $\displaystyle \lim_{\alpha \to 0} \int_{-1}^1 \sqrt{x^2 + \alpha^2} \,\mathrm{d}x$;
+\item $\displaystyle \lim_{\alpha \to 0} \int_0^2 x^2 \cos \alpha x \,\mathrm{d}x$;
+\item $\displaystyle \lim_{n \to \infty} \int_0^1 \frac{\mathrm{d}x}{1 + \left(1 + \frac{x}{n}\right)^n}$;
+\item $\displaystyle \lim_{R \to \infty} \int_0^{\frac{\pi}{2}} \mathrm{e}^{-R \sin \theta} \,\mathrm{d}\theta$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3714.1}
+设函数 $f(x)$ 在闭区间 $[A, B]$ 上连续. 证明:
+\[
+\lim_{h \to 0} \frac{1}{h} \int_a^x [f(t + h) - f(t)] \,\mathrm{d}t = f(x) - f(a) \quad (A < a < x < B).
+\]
+\end{prob}
+
+\begin{prob}[M]{3714.2}
+设: (1) 在 $[-1, 1]$ 上 $\varphi_n(x) \geqslant 0$ ($n = 1, 2, \cdots$); (2) 对于 $0 < \varepsilon \leqslant |x| \leqslant 1$, 当 $n \to \infty$ 时 $\varphi_n(x) \rightrightarrows 0$; (3) 当 $n \to \infty$ 时 $\displaystyle \int_{-1}^1 \varphi_n(x) \,\mathrm{d}x \to 1$. 证明: 若 $f(x) \in C[-1, 1]$, 则
+\[
+\lim_{n \to \infty} \int_{-1}^1 f(x) \varphi_n(x) \,\mathrm{d}x = f(0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3715}
+在表达式
+\[
+\lim_{y \to 0} \int_0^1 \frac{x}{y^2} \mathrm{e}^{-\frac{x^2}{y^2}} \,\mathrm{d}x
+\]
+中, 可否在积分符号下完成极限运算?
+\end{prob}
+
+\begin{prob}[M]{3716}
+当 $y = 0$ 时可否根据莱布尼茨法则计算函数
+\[
+F(y) = \int_0^1 \ln \sqrt{x^2 + y^2} \,\mathrm{d}x
+\]
+的导数?
+\end{prob}
+
+\begin{prob}[M]{3717}
+若
+\[
+F(x) = \int_x^{x^2} \mathrm{e}^{-x y^2} \,\mathrm{d}y,
+\]
+计算 $F'(x)$.
+\end{prob}
+
+\begin{prob}[L]{3718}
+设:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle F(\alpha) = \int_{\sin \alpha}^{\cos \alpha} \mathrm{e}^{\alpha \sqrt{1 - x^2}} \,\mathrm{d}x$;
+\item $\displaystyle F(\alpha) = \int_{a+\alpha}^{b+\alpha} \frac{\sin \alpha x}{x} \,\mathrm{d}x$;
+\item $\displaystyle F(\alpha) = \int_0^\alpha \frac{\ln(1 + \alpha x)}{x} \,\mathrm{d}x$;
+\item $\displaystyle F(\alpha) = \int_0^\alpha f(x + \alpha, x - \alpha) \,\mathrm{d}x$;
+\item $\displaystyle F(\alpha) = \int_0^{\alpha^2} \mathrm{d}x \int_{x-\alpha}^{x+\alpha} \sin(x^2 + y^2 - \alpha^2) \,\mathrm{d}y$.
+\end{enumerate}
+求 $F'(\alpha)$.
+\end{prob}
+
+\begin{prob}[M]{3719}
+若
+\[
+F(x) = \int_0^x (x + y) f(y) \,\mathrm{d}y,
+\]
+其中 $f(x)$ 为可微函数, 求 $F''(x)$.
+\end{prob}
+
+\begin{prob}[M]{3720}
+设
+\[
+F(x) = \int_a^b f(y) |x - y| \,\mathrm{d}y,
+\]
+其中 $a < b$, $f(y)$ 为可微函数, 求 $F''(x)$.
+\end{prob}
+
+\begin{prob}[M]{3721.1}
+设
+\[
+F(x) = \frac{1}{h^2} \int_0^h \mathrm{d}\xi \int_0^h f(x + \xi + \eta) \,\mathrm{d}\eta \quad (h > 0),
+\]
+其中 $f(x)$ 为连续函数, 求 $F''(x)$.
+\end{prob}
+
+\begin{prob}[M]{3721.2}
+设
+\[
+F(x) = \int_0^x f(t)(x - t)^{n-1} \,\mathrm{d}t,
+\]
+求 $F^{(n)}(x)$.
+\end{prob}
+
+\begin{prob}[L]{3722}
+证明公式:
+\[
+\frac{\mathrm{d}^n}{\mathrm{d}x^n} \left( \frac{\sin x}{x} \right) = \frac{1}{x^{n+1}} \int_0^x y^n \cos \left( y + \frac{n\pi}{2} \right) \,\mathrm{d}y \quad (n = 1, 2, \cdots). \tag{1}
+\]
+利用公式 (1) 获得以下估计:
+\[
+\left| \frac{\mathrm{d}^n}{\mathrm{d}x^n} \left( \frac{\sin x}{x} \right) \right| \leqslant \frac{1}{n + 1}, \quad x \in (-\infty, +\infty).
+\]
+\end{prob}
+
+\begin{prob}[M]{3723}
+在区间 $1 \leqslant x \leqslant 3$ 上用线性函数 $a + bx$ 近似地代替函数 $f(x) = x^2$, 使得
+\[
+\int_1^3 (a + bx - x^2)^2 \,\mathrm{d}x = \min.
+\]
+\end{prob}
+
+\begin{prob}[M]{3724}
+依条件: 函数 $a + bx$ 及 $\sqrt{1 + x^2}$ 在已知区间 $[0, 1]$ 上的均方偏差为最小, 求近似公式
+\[
+\sqrt{1 + x^2} \approx a + bx \quad (0 \leqslant x \leqslant 1).
+\]
+\end{prob}
+
+\begin{prob}[L]{3725}
+求完全椭圆积分
+\[
+E(k) = \int_0^{\frac{\pi}{2}} \sqrt{1 - k^2 \sin^2 \varphi} \,\mathrm{d}\varphi, \quad F(k) = \int_0^{\frac{\pi}{2}} \frac{\mathrm{d}\varphi}{\sqrt{1 - k^2 \sin^2 \varphi}} \quad (0 < k < 1)
+\]
+的导数, 并把它们用函数 $E(k)$ 和 $F(k)$ 表示出来.
+
+证明: $E(k)$ 满足微分方程
+\[
+E''(k) + \frac{1}{k} E'(k) + \frac{E(k)}{1 - k^2} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3726}
+证明: 阶数 $n$ 为整数的贝塞尔函数
+\[
+J_n(x) = \frac{1}{\pi} \int_0^\pi \cos(n\varphi - x \sin \varphi) \,\mathrm{d}\varphi
+\]
+满足贝塞尔方程
+\[
+x^2 J_n''(x) + x J_n'(x) + (x^2 - n^2) J_n(x) = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3727}
+设
+\[
+I(\alpha) = \int_0^\alpha \frac{\varphi(x) \,\mathrm{d}x}{\sqrt{\alpha - x}},
+\]
+其中函数 $\varphi(x)$ 及其导数 $\varphi'(x)$ 在闭区间 $0 \leqslant x \leqslant a$ 上连续. 证明: 当 $0 < \alpha < a$ 时有
+\[
+I'(\alpha) = \frac{\varphi(0)}{\sqrt{\alpha}} + \int_0^\alpha \frac{\varphi'(x)}{\sqrt{\alpha - x}} \,\mathrm{d}x.
+\]
+\probhint{令 $x = \alpha t$.}
+\end{prob}
+
+\begin{prob}[M]{3728}
+设
+\[
+u(x) = \int_0^1 K(x, y) v(y) \,\mathrm{d}y,
+\]
+其中
+\[
+K(x, y) = \begin{cases} x(1 - y), & x \leqslant y, \\ y(1 - x), & x > y, \end{cases}
+\]
+及 $v(y)$ 都是连续的, 证明: 函数 $u(x)$ 满足方程
+\[
+u''(x) = -v(x) \quad (0 \leqslant x \leqslant 1).
+\]
+\end{prob}
+
+\begin{prob}[M]{3729}
+设
+\[
+F(x, y) = \int_{\frac{x}{y}}^{xy} (x - yz) f(z) \,\mathrm{d}z,
+\]
+其中 $f(z)$ 为可微函数, 求 $F''_{xy}(x, y)$.
+\end{prob}
+
+\begin{prob}[M]{3730}
+设 $f(x)$ 为二阶可微函数, $F(x)$ 为可微函数. 证明: 函数
+\[
+u(x, t) = \frac{1}{2} [f(x - at) + f(x + at)] + \frac{1}{2a} \int_{x-at}^{x+at} F(z) \,\mathrm{d}z
+\]
+满足弦的振动方程
+\[
+\frac{\partial^2 u}{\partial t^2} = a^2 \frac{\partial^2 u}{\partial x^2}
+\]
+及初始条件: $u(x, 0) = f(x)$, $u'_t(x, 0) = F(x)$.
+\end{prob}
+
+\begin{prob}[M]{3731}
+证明: 若函数 $f(x)$ 在闭区间 $[0, l]$ 上连续, 且当 $0 \leqslant \xi \leqslant l$ 时 $(x - \xi)^2 + y^2 + z^2 \neq 0$, 则函数
+\[
+u(x, y, z) = \int_0^l \frac{f(\xi) \,\mathrm{d}\xi}{\sqrt{(x - \xi)^2 + y^2 + z^2}}
+\]
+满足拉普拉斯方程
+\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0.
+\]
+\end{prob}
+
+\probgroup{应用对参数的微分法, 计算下列积分:}
+
+\begin{prob}[M]{3732}
+$\displaystyle \int_0^{\frac{\pi}{2}} \ln(a^2 \sin^2 x + b^2 \cos^2 x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3733}
+$\displaystyle \int_0^\pi \ln(1 - 2a \cos x + a^2) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3734}
+$\displaystyle \int_0^{\frac{\pi}{2}} \frac{\arctan(a \tan x)}{\tan x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3735}
+$\displaystyle \int_0^{\frac{\pi}{2}} \ln \frac{1 + a \cos x}{1 - a \cos x} \cdot \frac{\mathrm{d}x}{\cos x} \quad (|a| < 1)$.
+\end{prob}
+
+\begin{prob}[M]{3736}
+利用公式
+\[
+\frac{\arctan x}{x} = \int_0^1 \frac{\mathrm{d}y}{1 + x^2 y^2},
+\]
+计算积分
+\[
+\int_0^1 \frac{\arctan x}{x} \frac{\mathrm{d}x}{\sqrt{1 - x^2}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3737}
+应用积分号下的积分法, 计算积分
+\[
+\int_0^1 \frac{x^b - x^a}{\ln x} \,\mathrm{d}x \quad (a > 0, b > 0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3738}
+计算积分:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_0^1 \sin\left(\ln \frac{1}{x}\right) \frac{x^b - x^a}{\ln x} \,\mathrm{d}x$;
+\item $\displaystyle \int_0^1 \cos\left(\ln \frac{1}{x}\right) \frac{x^b - x^a}{\ln x} \,\mathrm{d}x \quad (a > 0, b > 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3739}
+设 $F(k)$ 和 $E(k)$ 为完全椭圆积分 (参阅习题 3725). 证明公式:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_0^k F(k) k \,\mathrm{d}k = E(k) - k_1^2 F(k)$;
+\item $\displaystyle \int_0^k E(k) k \,\mathrm{d}k = \frac{1}{3} [(1 + k^2) E(k) - k_1^2 F(k)]$,
+\end{enumerate}
+其中 $k_1^2 = 1 - k^2$.
+\end{prob}
+
+\begin{prob}[M]{3740}
+证明公式:
+\[
+\int_0^x x J_0(x) \,\mathrm{d}x = x J_1(x),
+\]
+其中 $J_0(x)$ 及 $J_1(x)$ 为阶数是 $0$ 与 $1$ 的贝塞尔函数 (参阅习题 3726).
+\end{prob}
+
+\probsec{§2. 带参数的广义积分. 积分的一致收敛性}
+
+\probgroup{求积分的收敛域:}
+
+\begin{prob}[S]{3741}
+$\int_{0}^{+\infty} \frac{\mathrm{e}^{-ax}}{1+x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3742}
+$\int_{\pi}^{+\infty} \frac{x\cos x}{x^p + x^q}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3743}
+$\int_{0}^{+\infty} \frac{\sin x^q}{x^p}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3744}
+$\int_{0}^{2} \frac{\mathrm{d}x}{|\ln x|^p}$.
+\end{prob}
+
+\begin{prob}[S]{3745}
+$\int_{0}^{1} \frac{\cos \frac{1}{1-x}}{\sqrt[n]{1-x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3746}
+$\int_{0}^{+\infty} \frac{\sin x}{x^p + \sin x}\,\mathrm{d}x \ (p > 0)$.
+\end{prob}
+
+\probgroup{利用与级数比较的方法研究下列积分的收敛性：}
+
+\begin{prob}[S]{3747}
+$\int_{0}^{+\infty} \frac{\cos x}{x+a}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3748}
+$\int_{0}^{+\infty} \frac{x\,\mathrm{d}x}{1 + x^n \sin^2 x} \ (n > 0)$.
+\end{prob}
+
+\begin{prob}[S]{3749}
+$\int_{\pi}^{+\infty} \frac{\mathrm{d}x}{x^p \sqrt[3]{\sin^2 x}}$.
+\end{prob}
+
+\begin{prob}[S]{3750}
+$\int_{0}^{+\infty} \frac{\sin(x+x^2)}{x^n}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3751}
+用肯定的方式陈述，什么是积分
+\[
+\int_{a}^{+\infty} f(x, y)\,\mathrm{d}x
+\]
+在已知区间 $(y_1, y_2)$ 内不一致收敛？
+\end{prob}
+
+\begin{prob}[M]{3752}
+证明：若 1) 积分
+\[
+\int_{a}^{+\infty} f(x, y)\,\mathrm{d}x
+\]
+收敛，2) 函数 $\varphi(x, y)$ 有界，且关于 $x$ 是单调的，则积分
+\[
+\int_{a}^{+\infty} f(x)\varphi(x, y)\,\mathrm{d}x
+\]
+一致收敛（在相应区域内）。
+\end{prob}
+
+\begin{prob}[M]{3753}
+证明：一致收敛的积分
+\[
+I = \int_{1}^{+\infty} \mathrm{e}^{-\frac{1}{y^2}\left(x-\frac{1}{y}\right)^2}\,\mathrm{d}x \quad (0 < y < 1)
+\]
+不能以与参数无关的收敛积分为强函数。
+\end{prob}
+
+\begin{prob}[M]{3754}
+证明：积分
+\[
+I = \int_{0}^{+\infty} \alpha \mathrm{e}^{-\alpha x}\,\mathrm{d}x
+\]
+(a) 在任何区间 $0 < a \leqslant \alpha \leqslant b$ 内一致收敛；(b) 在区间 $0 \leqslant \alpha \leqslant b$ 内非一致收敛。
+\end{prob}
+
+\begin{prob}[M]{3755.1}
+证明：狄利克雷积分
+\[
+I = \int_{0}^{+\infty} \frac{\sin \alpha x}{x}\,\mathrm{d}x
+\]
+(a) 在每一个不含数值 $\alpha = 0$ 的闭区间 $[a, b]$ 上一致收敛，(b) 在含数值 $\alpha = 0$ 的每一个闭区间 $[a, b]$ 上非一致收敛。
+\end{prob}
+
+\begin{prob}[M]{3755.2}
+研究积分 $\int_{1}^{+\infty} \frac{\mathrm{d}x}{x^\alpha}$ 在以下区间上的一致收敛性：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $1 < \alpha_0 \leqslant \alpha < +\infty$；
+  \item $1 < \alpha < +\infty$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3755.3}
+证明：积分
+\[
+\int_{0}^{+\infty} \frac{\mathrm{d}x}{x^\alpha + 1}
+\]
+在区间 $1 < \alpha < +\infty$ 上一致收敛。
+\end{prob}
+
+\probgroup{研究下列积分在所指定区间内的一致收敛性：}
+
+\begin{prob}[M]{3756}
+(a) $\int_{0}^{1} \frac{\mathrm{d}x}{x^\alpha} \ (0 < \alpha < 1)$；\qquad (b) $\int_{0}^{+\infty} \mathrm{e}^{-\alpha x}\sin x\,\mathrm{d}x \ (0 < \alpha_0 \leqslant \alpha < +\infty)$。
+\end{prob}
+
+\begin{prob}[S]{3757}
+$\int_{1}^{+\infty} x^\alpha \mathrm{e}^{-x}\,\mathrm{d}x \ (a \leqslant \alpha \leqslant b)$。
+\end{prob}
+
+\begin{prob}[S]{3758}
+$\int_{-\infty}^{+\infty} \frac{\cos \alpha x}{1+x^2}\,\mathrm{d}x \ (-\infty < \alpha < +\infty)$。
+\end{prob}
+
+\begin{prob}[S]{3759}
+$\int_{0}^{+\infty} \frac{\mathrm{d}x}{(x+\alpha)^2 + 1} \ (0 \leqslant \alpha < +\infty)$。
+\end{prob}
+
+\begin{prob}[M]{3760}
+(a) $\int_{0}^{+\infty} \frac{\sin x}{x} \mathrm{e}^{-\alpha x}\,\mathrm{d}x \ (0 \leqslant \alpha < +\infty)$；\qquad (b) $\int_{1}^{+\infty} \frac{\ln^p x}{x\sqrt{x}}\,\mathrm{d}x \ (0 \leqslant p \leqslant 10)$。
+\end{prob}
+
+\begin{prob}[S]{3761}
+$\int_{1}^{+\infty} \mathrm{e}^{-\alpha x}\frac{\cos x}{x^p}\,\mathrm{d}x \ (0 \leqslant \alpha < +\infty)$，其中 $p > 0$ 是常数。
+\end{prob}
+
+\begin{prob}[S]{3762}
+$\int_{0}^{+\infty} \sqrt{\alpha}\mathrm{e}^{-\alpha x^2}\,\mathrm{d}x \ (0 \leqslant \alpha < +\infty)$。
+\end{prob}
+
+\begin{prob}[M]{3763}
+$\int_{-\infty}^{+\infty} \mathrm{e}^{-(x-\alpha)^2}\,\mathrm{d}x$；(a) $a < \alpha < b$；(b) $-\infty < \alpha < +\infty$。
+\end{prob}
+
+\begin{prob}[M]{3764}
+(a) $\int_{0}^{+\infty} \mathrm{e}^{-x^2(1+y^2)} \sin x\,\mathrm{d}y \ (-\infty < x < +\infty)$；\qquad (b) $\int_{0}^{+\infty} \frac{\sin x^2}{1+x^p}\,\mathrm{d}x \ (p \geqslant 0)$。
+\end{prob}
+
+\begin{prob}[M]{3765}
+选取数 $b > 0$，使得在 $1.1 \leqslant p \leqslant 10$ 时
+\[
+\int_{b}^{+\infty} \frac{\mathrm{d}x}{1+x^p} < \varepsilon,
+\]
+式中 $\varepsilon = 10^{-6}$。
+\end{prob}
+
+\begin{prob}[M]{3766}
+$\int_{0}^{1} x^{p-1} \ln^q \frac{1}{x}\,\mathrm{d}x$；(a) $p \geqslant p_0 > 0$；(b) $p > 0 \ (q > -1)$。
+\end{prob}
+
+\begin{prob}[S]{3767}
+$\int_{0}^{1} \frac{x^n}{\sqrt{1-x^2}}\,\mathrm{d}x \ (0 \leqslant n < +\infty)$。
+\end{prob}
+
+\begin{prob}[S]{3768}
+$\int_{0}^{1} \sin \frac{1}{x}\frac{\mathrm{d}x}{x^n} \ (0 < n < 2)$。
+\end{prob}
+
+\begin{prob}[S]{3769}
+$\int_{0}^{2} \frac{x^\alpha\,\mathrm{d}x}{\sqrt[3]{(x-1)(x-2)^2}} \ \left(|\alpha| < \frac{1}{2}\right)$。
+\end{prob}
+
+\begin{prob}[S]{3770}
+$\int_{0}^{1} \frac{\sin \alpha x}{\sqrt{|x-\alpha|}}\,\mathrm{d}x \ (0 \leqslant \alpha \leqslant 1)$。
+\end{prob}
+
+\begin{prob}[M]{3771}
+若积分在参数的已知值的某邻域内一致收敛，则称此积分对参数的已知值一致收敛。
+
+证明：积分
+\[
+I = \int_{0}^{+\infty} \frac{\alpha\,\mathrm{d}x}{1+\alpha^2 x^2}
+\]
+对每一个 $\alpha \neq 0$ 的值一致收敛，而对 $\alpha = 0$ 非一致收敛。
+\end{prob}
+
+\begin{prob}[M]{3772}
+在下式中
+\[
+\lim_{\alpha \to +0} \int_{0}^{+\infty} \alpha \mathrm{e}^{-\alpha x}\,\mathrm{d}x
+\]
+把极限移到积分符号内合理吗？
+\end{prob}
+
+\begin{prob}[M]{3773}
+函数 $f(x)$ 在区间 $(0, +\infty)$ 内可积，证明公式：
+\[
+\lim_{\alpha \to +0} \int_{0}^{+\infty} \mathrm{e}^{-\alpha x} f(x)\,\mathrm{d}x = \int_{0}^{+\infty} f(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{3774.1}
+证明：若 $f'(x)$ 在 $[a, +\infty)$ 上绝对可积，则存在 $\lim_{x \to \infty} f(x)$。
+\end{prob}
+
+\begin{prob}[M]{3774.2}
+证明：若 $f(x)$ 在区间 $(0, +\infty)$ 内绝对可积，则
+\[
+\lim_{n \to \infty} \int_{0}^{+\infty} f(x) \sin nx\,\mathrm{d}x = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3775}
+证明：若 (1) 在每一个有限区间 $(a, b)$ 内 $f(x, y) \rightrightarrows f(x, y_0)$；(2) $|f(x, y)| \leqslant F(x)$，其中 $\int_{a}^{+\infty} F(x)\,\mathrm{d}x < +\infty$，则
+\[
+\lim_{y \to y_0} \int_{a}^{+\infty} f(x, y)\,\mathrm{d}x = \int_{a}^{+\infty} \lim_{y \to y_0} f(x, y)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{3776.1}
+利用积分号与极限号互换，计算积分
+\[
+\int_{0}^{+\infty} \mathrm{e}^{-x^2}\,\mathrm{d}x = \int_{0}^{+\infty} \lim_{n \to \infty} \left[\left(1 + \frac{x^2}{n}\right)^{-n}\right]\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{3776.2}
+设 $f(x)$ 在 $[0, +\infty)$ 上连续且有界。证明：
+\[
+\lim_{y \to 0} \frac{2}{\pi} \int_{0}^{+\infty} \frac{y f(x)}{x^2 + y^2}\,\mathrm{d}x = f(0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3777.1}
+求
+\[
+\lim_{n \to \infty} \int_{0}^{+\infty} \frac{\mathrm{d}x}{x^n + 1}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3777.2}
+证明：积分
+\[
+F(a) = \int_{0}^{+\infty} \mathrm{e}^{-(x-a)^2}\,\mathrm{d}x
+\]
+是参数 $a$ 的连续函数。
+\end{prob}
+
+\begin{prob}[M]{3778.1}
+证明：
+\[
+F(\alpha) = \int_{0}^{1} \frac{\sin \frac{\alpha}{x}}{x^\alpha}\,\mathrm{d}x
+\]
+在区间 $0 < \alpha < 1$ 上是连续函数。
+\end{prob}
+
+\begin{prob}[M]{3778.2}
+求函数
+\[
+F(a) = \int_{0}^{+\infty} \frac{\sin(1-a^2)x}{x}\,\mathrm{d}x
+\]
+的间断点。作出函数 $y = F(a)$ 的图像。
+\end{prob}
+
+\probgroup{研究下列函数在所指定区间内的连续性：}
+
+\begin{prob}[S]{3779}
+$F(\alpha) = \int_{0}^{+\infty} \frac{x\,\mathrm{d}x}{2 + x^\alpha}$，当 $\alpha > 2$。
+\end{prob}
+
+\begin{prob}[S]{3780}
+$F(\alpha) = \int_{1}^{+\infty} \frac{\cos x}{x^\alpha}\,\mathrm{d}x$，当 $\alpha > 0$。
+\end{prob}
+
+\begin{prob}[S]{3781}
+$F(\alpha) = \int_{0}^{\pi} \frac{\sin x}{x^\alpha (\pi - x)^\alpha}\,\mathrm{d}x$，当 $0 < \alpha < 2$。
+\end{prob}
+
+\begin{prob}[S]{3782}
+$F(\alpha) = \int_{0}^{+\infty} \frac{\mathrm{e}^{-x}}{|\sin x|^\alpha}\,\mathrm{d}x$，当 $0 < \alpha < 1$。
+\end{prob}
+
+\begin{prob}[S]{3783}
+$F(\alpha) = \int_{0}^{+\infty} \alpha \mathrm{e}^{-x\alpha^2}\,\mathrm{d}x$，其中 $-\infty < \alpha < +\infty$。
+\end{prob}
+
+\probsec{§3. 广义积分号下的微分法和积分法}
+
+\begin{prob}[M]{3784}
+利用公式
+\[
+\int_{0}^{1} x^{n-1}\,\mathrm{d}x = \frac{1}{n} \quad (n > 0)
+\]
+计算积分
+\[
+I = \int_{0}^{1} x^{n-1} \ln^m x\,\mathrm{d}x, \quad \text{其中 } m \text{ 为正整数}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3785}
+利用公式
+\[
+\int_{0}^{+\infty} \frac{\mathrm{d}x}{x^2 + a} = \frac{\pi}{2\sqrt{a}} \quad (a > 0)
+\]
+计算积分
+\[
+I = \int_{0}^{+\infty} \frac{\mathrm{d}x}{(x^2 + a)^{n+1}}, \quad \text{其中 } n \text{ 为正整数}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3786}
+证明：狄利克雷积分
+\[
+I(\alpha) = \int_{0}^{+\infty} \frac{\sin \alpha x}{x}\,\mathrm{d}x
+\]
+当 $\alpha \neq 0$ 时有导数，但是不能利用莱布尼茨法则来求它。
+\probhint{令 $\alpha x = y$。}
+\end{prob}
+
+\begin{prob}[M]{3787}
+证明：函数
+\[
+F(\alpha) = \int_{0}^{+\infty} \frac{\cos x}{1 + (x + \alpha)^2}\,\mathrm{d}x
+\]
+在区域 $-\infty < \alpha < +\infty$ 内连续并且可微。
+\end{prob}
+
+\begin{prob}[M]{3788}
+从等式
+\[
+\frac{\mathrm{e}^{-ax} - \mathrm{e}^{-bx}}{x} = \int_{a}^{b} \mathrm{e}^{-xy}\,\mathrm{d}y
+\]
+出发，计算积分
+\[
+\int_{0}^{+\infty} \frac{\mathrm{e}^{-ax} - \mathrm{e}^{-bx}}{x}\,\mathrm{d}x \quad (a > 0, b > 0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3789}
+证明傅茹兰公式：
+\[
+\int_{0}^{+\infty} \frac{f(ax) - f(bx)}{x}\,\mathrm{d}x = f(0) \ln \frac{b}{a} \quad (a > 0, b > 0),
+\]
+式中 $f(x)$ 为连续函数，积分 $\int_{A}^{+\infty} \frac{f(x)}{x}\,\mathrm{d}x$ 对任何 $A > 0$ 都有意义。
+\end{prob}
+
+\probgroup{利用傅茹兰公式，计算积分：}
+
+\begin{prob}[S]{3790}
+$\int_{0}^{+\infty} \frac{\cos ax - \cos bx}{x}\,\mathrm{d}x \ (a > 0, b > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3791}
+$\int_{0}^{+\infty} \frac{\sin ax - \sin bx}{x}\,\mathrm{d}x \ (a > 0, b > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3792}
+$\int_{0}^{+\infty} \frac{\arctan ax - \arctan bx}{x}\,\mathrm{d}x \ (a > 0, b > 0)$。
+\end{prob}
+
+\probgroup{利用对参数的微分法计算下列积分：}
+
+\begin{prob}[S]{3793}
+$\int_{0}^{+\infty} \frac{\mathrm{e}^{-\alpha x^2} - \mathrm{e}^{-\beta x^2}}{x}\,\mathrm{d}x \ (\alpha > 0, \beta > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3794}
+$\int_{0}^{+\infty} \left(\frac{\mathrm{e}^{-\alpha x} - \mathrm{e}^{-\beta x}}{x}\right)^2\,\mathrm{d}x \ (\alpha > 0, \beta > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3795}
+$\int_{0}^{+\infty} \frac{\mathrm{e}^{-\alpha x} - \mathrm{e}^{-\beta x}}{x} \sin mx\,\mathrm{d}x \ (\alpha > 0, \beta > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3796}
+$\int_{0}^{+\infty} \frac{\mathrm{e}^{-\alpha x} - \mathrm{e}^{-\beta x}}{x} \cos mx\,\mathrm{d}x \ (\alpha > 0, \beta > 0)$。
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{3797}
+$\int_{0}^{1} \frac{\ln(1 - \alpha^2 x^2)}{x^2 \sqrt{1 - x^2}}\,\mathrm{d}x \ (|\alpha| \leqslant 1)$。
+\end{prob}
+
+\begin{prob}[S]{3798}
+$\int_{0}^{1} \frac{\ln(1 - \alpha^2 x^2)}{\sqrt{1 - x^2}}\,\mathrm{d}x \ (|\alpha| \leqslant 1)$。
+\end{prob}
+
+\begin{prob}[S]{3799}
+$\int_{1}^{+\infty} \frac{\arctan \alpha x}{x^2 \sqrt{x^2 - 1}}\,\mathrm{d}x$。
+\end{prob}
+
+\begin{prob}[S]{3800}
+$\int_{0}^{+\infty} \frac{\ln(\alpha^2 + x^2)}{\beta^2 + x^2}\,\mathrm{d}x$。
+\end{prob}
+
+\begin{prob}[S]{3801}
+$\int_{0}^{+\infty} \frac{\arctan \alpha x \arctan \beta x}{x^2}\,\mathrm{d}x$。
+\end{prob}
+
+\begin{prob}[S]{3802}
+$\int_{0}^{+\infty} \frac{\ln(1 + \alpha^2 x^2)\ln(1 + \beta^2 x^2)}{x^4}\,\mathrm{d}x$。
+\end{prob}
+
+\begin{prob}[M]{3803}
+从公式
+\[
+I^2 = \int_{0}^{+\infty} \mathrm{e}^{-x^2}\,\mathrm{d}x \int_{0}^{+\infty} x\mathrm{e}^{-x^2 y^2}\,\mathrm{d}y
+\]
+出发，计算欧拉--泊松积分
+\[
+I = \int_{0}^{+\infty} \mathrm{e}^{-x^2}\,\mathrm{d}x.
+\]
+\end{prob}
+
+\probgroup{利用欧拉--泊松积分，求下列积分：}
+
+\begin{prob}[S]{3804}
+$\displaystyle \int_{-\infty}^{+\infty} \mathrm{e}^{-(ax^2+2bx+c)} \,\mathrm{d}x \quad (a>0,\, ac-b^2>0)$.
+\end{prob}
+
+\begin{prob}[S]{3805}
+$\displaystyle \int_{-\infty}^{+\infty} (a_1 x^2 + 2b_1 x + c_1)\mathrm{e}^{-(ax^2+2bx+c)} \,\mathrm{d}x \quad (a>0,\, ac-b^2>0)$.
+\end{prob}
+
+\begin{prob}[S]{3806}
+$\displaystyle \int_{-\infty}^{+\infty} \mathrm{e}^{-ax^2} \cosh bx \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{3807}
+$\displaystyle \int_0^{+\infty} \mathrm{e}^{-\left(x^2+\frac{a^2}{x^2}\right)} \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{3808}
+$\displaystyle \int_0^{+\infty} \frac{\mathrm{e}^{-\alpha x^2}-\mathrm{e}^{-\beta x^2}}{x^2} \,\mathrm{d}x \quad (\alpha>0,\, \beta>0)$.
+\end{prob}
+
+\begin{prob}[S]{3809}
+$\displaystyle \int_0^{+\infty} \mathrm{e}^{-ax^2} \cos bx \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[M]{3810}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_0^{+\infty} x\mathrm{e}^{-ax^2} \sin bx \,\mathrm{d}x \quad (a>0)$；
+\item $\displaystyle \int_0^{+\infty} x^{2n}\mathrm{e}^{-x^2} \cos 2bx \,\mathrm{d}x$ ($n$ 为正整数).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3811}
+证明：
+\[
+\lim_{x\to+\infty} \sqrt{x} \int_{-\delta}^{\delta} \mathrm{e}^{-axt^2} \,\mathrm{d}t = \sqrt{\frac{\pi}{a}} \quad (a>0,\, \delta>0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3812.1}
+从积分
+\[
+I(\alpha) = \int_0^{+\infty} \mathrm{e}^{-\alpha x} \frac{\sin\beta x}{x} \,\mathrm{d}x \quad (\alpha\geqslant 0)
+\]
+出发，计算狄利克雷积分
+\[
+D(\beta) = \int_0^{+\infty} \frac{\sin\beta x}{x} \,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{3812.2}
+积分正弦被定义为
+\[
+\mathrm{Si}\,x = \int_0^x \frac{\sin t}{t} \,\mathrm{d}t.
+\]
+函数 $y = \mathrm{Si}\,x$ 的图像大致具有怎样的形状？
+\end{prob}
+
+\probgroup{利用狄利克雷积分和傅茹兰积分，求下列积分：}
+
+\begin{prob}[S]{3813}
+$\displaystyle \int_0^{+\infty} \frac{\mathrm{e}^{-\alpha x^2}-\cos\beta x}{x^2} \,\mathrm{d}x \quad (\alpha>0)$.
+\end{prob}
+
+\begin{prob}[S]{3814}
+$\displaystyle \int_0^{+\infty} \frac{\sin\alpha x \sin\beta x}{x} \,\mathrm{d}x \quad (|\alpha|\neq|\beta|)$.
+\end{prob}
+
+\begin{prob}[S]{3815}
+$\displaystyle \int_0^{+\infty} \frac{\sin\alpha x \cos\beta x}{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3816}
+$\displaystyle \int_0^{+\infty} \frac{\sin^3 \alpha x}{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3817}
+$\displaystyle \int_0^{+\infty} \left(\frac{\sin\alpha x}{x}\right)^2 \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3818}
+$\displaystyle \int_0^{+\infty} \left(\frac{\sin\alpha x}{x}\right)^3 \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3819}
+$\displaystyle \int_0^{+\infty} \frac{\sin^4 x}{x^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3820}
+$\displaystyle \int_0^{+\infty} \frac{\sin^4 \alpha x - \sin^4 \beta x}{x} \,\mathrm{d}x \quad (\alpha\beta\neq 0)$.
+\end{prob}
+
+\begin{prob}[S]{3821}
+$\displaystyle \int_0^{+\infty} \frac{\sin(x^2)}{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3822}
+$\displaystyle \int_0^{+\infty} \mathrm{e}^{-kx} \frac{\sin\alpha x \sin\beta x}{x^2} \,\mathrm{d}x \quad (k\geqslant 0,\, \alpha>0,\, \beta>0)$.
+\end{prob}
+
+\begin{prob}[M]{3823}
+对于不同的 $x$ 值，求狄利克雷间断乘子
+\[
+D(x) = \frac{2}{\pi} \int_0^{+\infty} \sin\lambda \cos\lambda x \frac{\,\mathrm{d}\lambda}{\lambda}.
+\]
+作出函数 $y = D(x)$ 的图像.
+\end{prob}
+
+\begin{prob}[M]{3824}
+计算积分：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \mathrm{v.p.} \int_{-\infty}^{+\infty} \frac{\sin ax}{x+b} \,\mathrm{d}x$；
+\item $\displaystyle \mathrm{v.p.} \int_{-\infty}^{+\infty} \frac{\cos ax}{x+b} \,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3825}
+利用公式
+\[
+\frac{1}{1+x^2} = \int_0^{+\infty} \mathrm{e}^{-y(1+x^2)} \,\mathrm{d}y
+\]
+计算拉普拉斯积分
+\[
+L = \int_0^{+\infty} \frac{\cos ax}{1+x^2} \,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[S]{3826}
+计算积分
+\[
+L_1 = \int_0^{+\infty} \frac{x\sin ax}{1+x^2} \,\mathrm{d}x.
+\]
+\end{prob}
+
+\probgroup{计算积分：}
+
+\begin{prob}[S]{3827}
+$\displaystyle \int_0^{+\infty} \frac{\sin^2 x}{1+x^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3828}
+$\displaystyle \int_0^{+\infty} \frac{\cos ax}{(1+x^2)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3829}
+$\displaystyle \int_0^{+\infty} \frac{\cos ax}{ax^2+2bx+c} \,\mathrm{d}x \quad (a>0,\, ac-b^2>0)$.
+\end{prob}
+
+\begin{prob}[M]{3830}
+利用公式
+\[
+\frac{1}{\sqrt{x}} = \frac{2}{\sqrt{\pi}} \int_0^{+\infty} \mathrm{e}^{-xy^2} \,\mathrm{d}y \quad (x>0)
+\]
+计算菲涅尔积分
+\begin{align*}
+\int_0^{+\infty} \sin(x^2) \,\mathrm{d}x &= \frac{1}{2} \int_0^{+\infty} \frac{\sin x}{\sqrt{x}} \,\mathrm{d}x, \\
+\int_0^{+\infty} \cos(x^2) \,\mathrm{d}x &= \frac{1}{2} \int_0^{+\infty} \frac{\cos x}{\sqrt{x}} \,\mathrm{d}x.
+\end{align*}
+\end{prob}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{3831}
+$\displaystyle \int_{-\infty}^{+\infty} \sin(ax^2+2bx+c) \,\mathrm{d}x \quad (a\neq 0)$.
+\end{prob}
+
+\begin{prob}[S]{3832}
+$\displaystyle \int_{-\infty}^{+\infty} \sin x^2 \cdot \cos 2ax \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3833}
+$\displaystyle \int_{-\infty}^{+\infty} \cos x^2 \cdot \cos 2ax \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3834}
+证明公式：
+1) $\displaystyle \int_0^{+\infty} \frac{\cos\alpha x}{a^2-x^2} \,\mathrm{d}x = \frac{\pi}{2a}\sin a\alpha$； \qquad
+2) $\displaystyle \int_0^{+\infty} \frac{x\sin\alpha x}{a^2-x^2} \,\mathrm{d}x = -\frac{\pi}{2}\cos a\alpha$，
+这里 $a\neq 0$，积分应理解为在柯西主值的意义上.
+\end{prob}
+
+\begin{prob}[L]{3835}
+对于函数 $f(t)$，求拉普拉斯变换
+\[
+F(p) = \int_0^{+\infty} \mathrm{e}^{-pt} f(t) \,\mathrm{d}t \quad (p>0),
+\]
+设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(t) = t^n$ ($n$ 为正整数)；
+\item $f(t) = \sqrt{t}$；
+\item $f(t) = \mathrm{e}^{\alpha t}$；
+\item $f(t) = t\mathrm{e}^{-\alpha t}$；
+\item $f(t) = \cos t$；
+\item $\displaystyle f(t) = \frac{1-\mathrm{e}^{-t}}{t}$；
+\item $f(t) = \sin\alpha\sqrt{t}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3836}
+证明公式：(利普希茨积分)
+\[
+\int_0^{+\infty} \mathrm{e}^{-at} J_0(bt) \,\mathrm{d}t = \frac{1}{\sqrt{a^2+b^2}} \quad (a>0),
+\]
+其中 $J_0(x) = \frac{1}{\pi} \int_0^{\pi} \cos(x\sin\varphi) \,\mathrm{d}\varphi$ 为 $0$ 阶贝塞尔函数（参阅习题 3726）.
+\end{prob}
+
+\begin{prob}[L]{3837}
+求魏尔斯特拉斯变换
+\[
+F(x) = \frac{1}{\sqrt{\pi}} \int_{-\infty}^{+\infty} \mathrm{e}^{-(x-y)^2} f(y) \,\mathrm{d}y,
+\]
+设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(y) = 1$；
+\item $f(y) = y^2$；
+\item $f(y) = \mathrm{e}^{2ay}$；
+\item $f(y) = \cos ay$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3838}
+切比雪夫--埃尔米特多项式由公式
+\[
+H_n(x) = (-1)^n \mathrm{e}^{x^2} \frac{\mathrm{d}^n}{\mathrm{d}x^n}(\mathrm{e}^{-x^2}) \quad (n=0,1,2,\cdots)
+\]
+定义，证明：
+\[
+\int_{-\infty}^{+\infty} H_m(x) H_n(x) \mathrm{e}^{-x^2} \,\mathrm{d}x =
+\begin{cases}
+0, & m\neq n, \\
+2^n n! \sqrt{\pi}, & m=n.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{3839}
+计算在概率论中有重要意义的积分
+\[
+\varphi(x) = \frac{1}{2\pi\sigma_1\sigma_2} \int_{-\infty}^{+\infty} \mathrm{e}^{-\frac{1}{2}\left[\frac{\xi^2}{\sigma_1^2}+\frac{(x-\xi)^2}{\sigma_2^2}\right]} \,\mathrm{d}\xi \quad (\sigma_1>0,\, \sigma_2>0).
+\]
+\end{prob}
+
+\begin{prob}[L]{3840}
+设函数 $f(x)$ 在区间 $(-\infty,+\infty)$ 内连续且绝对可积．证明：积分
+\[
+u(x,t) = \frac{1}{2a\sqrt{\pi t}} \int_{-\infty}^{+\infty} f(\xi)\mathrm{e}^{-\frac{(\xi-x)^2}{4a^2 t}} \,\mathrm{d}\xi
+\]
+满足热传导方程
+\[
+\frac{\partial u}{\partial t} = \frac{1}{a^2}\frac{\partial^2 u}{\partial x^2}
+\]
+及初始条件
+\[
+\lim_{t\to+0} u(x,t) = f(x).
+\]
+\end{prob}
+
+\probsec{§4. 欧拉积分}
+
+\begin{prob}[M]{3841}
+证明：$\Gamma$ 函数 $\Gamma(x)$ 在区域 $x>0$ 内连续，并且有各阶连续导数.
+\end{prob}
+
+\begin{prob}[M]{3842}
+证明：$\beta$ 函数 $\beta(x,y)$ 在区域 $x>0, y>0$ 内连续，并且有各阶连续导数.
+\end{prob}
+
+\probgroup{利用欧拉积分计算下列积分：}
+
+\begin{prob}[S]{3843}
+$\displaystyle \int_0^1 \sqrt{x-x^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3844}
+$\displaystyle \int_0^a x^2\sqrt{a^2-x^2} \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{3845}
+$\displaystyle \int_0^{+\infty} \frac{\sqrt[4]{x}}{(1+x)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3846}
+$\displaystyle \int_0^{+\infty} \frac{\mathrm{d}x}{1+x^3}$.
+\end{prob}
+
+\begin{prob}[S]{3847}
+$\displaystyle \int_0^{+\infty} \frac{x^2\,\mathrm{d}x}{1+x^4}$.
+\end{prob}
+
+\begin{prob}[S]{3848}
+$\displaystyle \int_0^{\frac{\pi}{2}} \sin^6 x \cdot \cos^4 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3849}
+$\displaystyle \int_0^1 \frac{\mathrm{d}x}{\sqrt[n]{1-x^n}} \quad (n>0)$.
+\end{prob}
+
+\begin{prob}[S]{3850}
+$\displaystyle \int_0^{+\infty} x^{2n}\mathrm{e}^{-x^2} \,\mathrm{d}x$ ($n$ 为正整数).
+\end{prob}
+
+\probgroup{求下列积分的存在域，并用欧拉积分表示这些积分：}
+
+\begin{prob}[S]{3851}
+$\displaystyle \int_0^{+\infty} \frac{x^{m-1}}{1+x^n} \,\mathrm{d}x \quad (n>0)$.
+\end{prob}
+
+\begin{prob}[S]{3852}
+$\displaystyle \int_0^{+\infty} \frac{x^{m-1}}{(1+x)^n} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3853}
+$\displaystyle \int_0^{+\infty} \frac{x^m\,\mathrm{d}x}{(a+bx^n)^p} \quad (a>0,\, b>0,\, n>0)$.
+\end{prob}
+
+\begin{prob}[S]{3854}
+$\displaystyle \int_a^b \frac{(x-a)^m(b-x)^n}{(x+c)^{m+n+2}} \,\mathrm{d}x \quad (0<a<b,\, c>0)$.
+\end{prob}
+
+\begin{prob}[S]{3855}
+$\displaystyle \int_0^1 \frac{\mathrm{d}x}{\sqrt[n]{1-x^m}} \quad (m>0)$.
+\end{prob}
+
+\begin{prob}[S]{3856}
+$\displaystyle \int_0^{\frac{\pi}{2}} \sin^m x \cos^n x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3857}
+$\displaystyle \int_0^{\frac{\pi}{2}} \tan^n x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3858}
+$\displaystyle \int_0^{\pi} \frac{\sin^{n-1} x}{(1+k\cos x)^n} \,\mathrm{d}x \quad (0<|k|<1)$.
+\end{prob}
+
+\begin{prob}[S]{3859}
+$\displaystyle \int_0^{+\infty} \mathrm{e}^{-x^n} \,\mathrm{d}x \quad (n>0)$.
+\end{prob}
+
+\begin{prob}[S]{3860}
+$\displaystyle \int_0^{+\infty} x^m \mathrm{e}^{-x^n} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3861}
+$\displaystyle \int_0^1 \left(\ln\frac{1}{x}\right)^p \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3862}
+$\displaystyle \int_0^{+\infty} x^p \mathrm{e}^{-ax} \ln x \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{3863}
+$\displaystyle \int_0^{+\infty} \frac{x^{p-1}\ln x}{1+x} \,\mathrm{d}x \quad (p>0)$.
+\end{prob}
+
+\begin{prob}[L]{3864}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_0^{+\infty} \frac{x^{p-1}\ln^2 x}{1+x} \,\mathrm{d}x \quad (p>0)$；
+\item $\displaystyle \int_0^{\infty} \frac{x\ln x}{1+x^3} \,\mathrm{d}x$；
+\item $\displaystyle \int_0^{\infty} \frac{\ln^2 x}{1+x^4} \,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{3865}
+$\displaystyle \int_0^{+\infty} \frac{x^{p-1}-x^{q-1}}{(1+x)\ln x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3866}
+$\displaystyle \int_0^1 \frac{x^{p-1}-x^{-p}}{1-x} \,\mathrm{d}x \quad (0<p<1)$.
+\probhint{此积分可看作 $\lim_{\varepsilon\to+0} [\beta(p,\varepsilon) - \beta(1-p,\varepsilon)]$.}
+\end{prob}
+
+\begin{prob}[S]{3867}
+$\displaystyle \int_0^{+\infty} \frac{\sinh\alpha x}{\sinh\beta x} \,\mathrm{d}x \quad (0<\alpha<\beta)$.
+\end{prob}
+
+\begin{prob}[S]{3868}
+$\displaystyle \int_0^1 \ln\Gamma(x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3869}
+$\displaystyle \int_a^{a+1} \ln\Gamma(x) \,\mathrm{d}x \quad (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{3870}
+$\displaystyle \int_0^1 \ln\Gamma(x)\sin\pi x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3871}
+$\displaystyle \int_0^1 \ln\Gamma(x)\cos 2n\pi x \,\mathrm{d}x$ ($n$ 为正整数).
+\end{prob}
+
+\probgroup{证明等式：}
+
+\begin{prob}[M]{3872}
+$\displaystyle \int_0^1 \frac{\mathrm{d}x}{\sqrt{1-x^4}} \cdot \int_0^1 \frac{x^2\,\mathrm{d}x}{\sqrt{1-x^4}} = \frac{\pi}{4}$.
+\end{prob}
+
+\begin{prob}[M]{3873}
+$\displaystyle \int_0^{+\infty} \mathrm{e}^{-x^4}\,\mathrm{d}x \cdot \int_0^{+\infty} x^2\mathrm{e}^{-x^4}\,\mathrm{d}x = \frac{\pi}{8\sqrt{2}}$.
+\end{prob}
+
+\begin{prob}[M]{3874}
+$\displaystyle \prod_{m=1}^{n} \int_0^{+\infty} x^{m-1}\mathrm{e}^{-x^n}\,\mathrm{d}x = \left(\frac{1}{n}\right)^{n+\frac{1}{2}} (2\pi)^{\frac{n-1}{2}}$.
+\end{prob}
+
+\begin{prob}[M]{3875}
+$\displaystyle \lim_{n\to\infty} \int_0^{+\infty} \mathrm{e}^{-x^n}\,\mathrm{d}x = 1$.
+\end{prob}
+
+\probgroup{利用等式 $\frac{1}{x^m} = \frac{1}{\Gamma(m)} \int_0^{+\infty} t^{m-1}\mathrm{e}^{-xt}\,\mathrm{d}t \ (x>0)$，求积分：}
+
+\begin{prob}[S]{3876}
+$\displaystyle \int_0^{+\infty} \frac{\cos ax}{x^m}\,\mathrm{d}x \quad (0<m<1)$.
+\end{prob}
+
+\begin{prob}[S]{3877}
+$\displaystyle \int_0^{+\infty} \frac{\sin ax}{x^m}\,\mathrm{d}x \quad (0<m<2)$.
+\end{prob}
+
+\begin{prob}[M]{3878}
+证明欧拉公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_0^{+\infty} t^{x-1}\mathrm{e}^{-\lambda t\cos\alpha}\cos(\lambda t\sin\alpha)\,\mathrm{d}t = \frac{\Gamma(x)}{\lambda^x}\cos\alpha x$；
+\item $\displaystyle \int_0^{+\infty} t^{x-1}\mathrm{e}^{-\lambda t\cos\alpha}\sin(\lambda t\sin\alpha)\,\mathrm{d}t = \frac{\Gamma(x)}{\lambda^x}\sin\alpha x$
+\end{enumerate}
+$\left(\lambda>0,\, x>0,\, -\frac{\pi}{2}<\alpha<\frac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[M]{3879}
+求曲线
+\[
+r^n = a^n \cos n\varphi \quad (a>0,\, n \text{ 为正整数})
+\]
+的弧长.
+\end{prob}
+
+\begin{prob}[M]{3880}
+求曲线
+\[
+|x|^n + |y|^n = a^n \quad (n>0,\, a>0)
+\]
+所围的面积.
+\end{prob}
+
+\probsec{§5. 傅里叶积分公式}
+
+\probgroup{用傅里叶积分表示下列函数：}
+
+\begin{prob}[S]{3881}
+$f(x) = \begin{cases} 1, & |x| < 1, \\ 0, & |x| > 1. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{3882}
+$f(x) = \begin{cases} \operatorname{sgn} x, & |x| < 1, \\ 0, & |x| > 1. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{3883}
+$f(x) = \operatorname{sgn}(x - a) - \operatorname{sgn}(x - b)\ (b > a).$
+\end{prob}
+
+\begin{prob}[S]{3884}
+$f(x) = \begin{cases} h\left(1 - \dfrac{|x|}{a}\right), & |x| \leqslant a, \\ 0, & |x| > a. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{3885}
+$f(x) = \dfrac{1}{a^2 + x^2}\ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{3886}
+$f(x) = \dfrac{x}{a^2 + x^2}\ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{3887}
+$f(x) = \begin{cases} \sin x, & |x| \leqslant \pi, \\ 0, & |x| > \pi. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{3888}
+$f(x) = \begin{cases} \cos x, & |x| \leqslant \dfrac{\pi}{2}, \\ 0, & |x| > \dfrac{\pi}{2}. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{3889}
+$f(x) = \begin{cases} A\sin \omega x, & |t| \leqslant \dfrac{2\pi n}{\omega}, \\ 0, & |t| > \dfrac{2\pi n}{\omega} \end{cases}\ (n\text{ 为正整数}).$
+\end{prob}
+
+\begin{prob}[S]{3890}
+$f(x) = \mathrm{e}^{-\alpha |x|}\ (\alpha > 0).$
+\end{prob}
+
+\begin{prob}[S]{3891}
+$f(x) = \mathrm{e}^{-\alpha |x|} \cos \beta x\ (\alpha > 0).$
+\end{prob}
+
+\begin{prob}[S]{3892}
+$f(x) = \mathrm{e}^{-\alpha |x|} \sin \beta x\ (\alpha > 0).$
+\end{prob}
+
+\begin{prob}[S]{3893}
+$f(x) = \mathrm{e}^{-x^2}.$
+\end{prob}
+
+\begin{prob}[S]{3894}
+$f(x) = x\mathrm{e}^{-x^2}.$
+\end{prob}
+
+\begin{prob}[M]{3895}
+用傅里叶积分来表示函数
+\[
+f(x) = \mathrm{e}^{-x}\ (0 < x < +\infty),
+\]
+(a) 用偶式延拓；\qquad (b) 用奇式延拓.
+\end{prob}
+
+\probgroup{对于下列函数 $f(t)$，求傅里叶变换
+\[
+F(x) = \frac{1}{\sqrt{2\pi}} \int_{-\infty}^{+\infty} f(t)\mathrm{e}^{-itx}\,\mathrm{d}t = \frac{1}{\sqrt{2\pi}} \lim_{l \to +\infty} \int_{-l}^{l} f(t)\mathrm{e}^{-itx}\,\mathrm{d}t :
+\]}
+
+\begin{prob}[S]{3896}
+$f(x) = \mathrm{e}^{-\alpha |x|}\ (\alpha > 0).$
+\end{prob}
+
+\begin{prob}[S]{3897}
+$f(x) = x\mathrm{e}^{-\alpha |x|}\ (\alpha > 0).$
+\end{prob}
+
+\begin{prob}[S]{3898}
+$f(x) = \mathrm{e}^{-\frac{x^2}{2}}.$
+\end{prob}
+
+\begin{prob}[S]{3899}
+$f(x) = \mathrm{e}^{-\frac{x^2}{2}} \cos \alpha x.$
+\end{prob}
+
+\begin{prob}[M]{3900}
+求函数 $\varphi(x)$ 及 $\psi(x)$，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \int_{0}^{+\infty} \varphi(y)\cos xy\,\mathrm{d}y = \frac{1}{1 + x^2};$
+\item $\displaystyle \int_{0}^{+\infty} \psi(y)\sin xy\,\mathrm{d}y = \mathrm{e}^{-x}\ (x > 0).$
+\end{enumerate}
+\end{prob}

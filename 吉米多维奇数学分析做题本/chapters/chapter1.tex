@@ -1,0 +1,5126 @@
+\probchapter{第一章\quad 分析引论}
+
+\probsec{§1. 实数}
+
+\probgroup{利用数学归纳法求证下列等式对任何正整数 $n$ 皆成立：}
+
+\begin{prob}[M]{1}
+$1 + 2 + \cdots + n = \dfrac{n(n+1)}{2}$.
+\end{prob}
+
+\begin{prob}[M]{2}
+$1^2 + 2^2 + \cdots + n^2 = \dfrac{n(n+1)(2n+1)}{6}$.
+\end{prob}
+
+\begin{prob}[M]{3}
+$1^3 + 2^3 + \cdots + n^3 = (1 + 2 + \cdots + n)^2$.
+\end{prob}
+
+\begin{prob}[M]{4}
+$1 + 2 + 2^2 + \cdots + 2^{n-1} = 2^n - 1$.
+\end{prob}
+
+\begin{prob}[M]{5}
+设 $a^{[n]} = a(a-h)\cdots[a-(n-1)h]$ 及 $a^{[0]} = 1$，求证
+\[
+(a+b)^{[n]} = \sum_{m=0}^{n} \mathrm{C}_n^m a^{[n-m]} b^{[m]},
+\]
+其中 $\mathrm{C}_n^m$ 是由 $n$ 个元素中选取 $m$ 个的组合数，由此推出牛顿二项式公式.
+\end{prob}
+
+\begin{prob}[M]{6}
+证明伯努利不等式：
+\[
+(1+x_1)(1+x_2)\cdots(1+x_n) \geqslant 1 + x_1 + x_2 + \cdots + x_n,
+\]
+式中 $x_1, x_2, \cdots, x_n$ 是符号相同且大于 $-1$ 的数.
+\end{prob}
+
+\begin{prob}[M]{7}
+证明：若 $x > -1$，则不等式
+\[
+(1+x)^n \geqslant 1 + nx \quad (n > 1)
+\]
+为真，且仅当 $x = 0$ 时，等式成立.
+\end{prob}
+
+\begin{prob}[M]{8}
+证明不等式：
+\[
+n! < \left(\frac{n+1}{2}\right)^n \quad (n > 1).
+\]
+\probhint{利用不等式
+\[
+\left(\frac{n+2}{n+1}\right)^{n+1} = \left(1 + \frac{1}{n+1}\right)^{n+1} > 2 \quad (n = 1, 2, \cdots).
+\]}
+\end{prob}
+
+\begin{prob}[M]{9}
+证明如下不等式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $2! \cdot 4! \cdots (2n)! > [(n+1)!]^n \ (n > 1)$;
+  \item $\dfrac{1}{2} \cdot \dfrac{3}{4} \cdots \dfrac{2n-1}{2n} < \dfrac{1}{\sqrt{2n+1}}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{10}
+证明如下不等式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $1 + \dfrac{1}{\sqrt{2}} + \dfrac{1}{\sqrt{3}} + \cdots + \dfrac{1}{\sqrt{n}} > \sqrt{n} \ (n \geqslant 2)$;
+  \item $n^{n+1} > (n+1)^n \ (n \geqslant 3)$;
+  \item $\left|\sin\left(\displaystyle\sum_{k=1}^{n} x_k\right)\right| \leqslant \displaystyle\sum_{k=1}^{n} \sin x_k \ (0 \leqslant x_k \leqslant \pi, \, k = 1, 2, \cdots, n)$;
+  \item $(2n)! < 2^{2n}(n!)^2$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{11}
+设 $c$ 为正整数，而不为整数的平方，且 $A/B$ 为确定实数 $\sqrt{c}$ 的分割，其中 $B$ 类包含所有满足 $b^2 > c$ 的正有理数 $b$，而 $A$ 类包含所有其余的有理数. 求证：在 $A$ 类中无最大数，而在 $B$ 类中无最小数.
+\end{prob}
+
+\begin{prob}[M]{12}
+确定数 $\sqrt[3]{2}$ 的分割 $A/B$ 用下面的方法来建立：$A$ 类包含所有满足 $a^3 < 2$ 的有理数 $a$；$B$ 类包含所有其余的有理数. 证明：在 $A$ 类中无最大数，而在 $B$ 类中无最小数.
+\end{prob}
+
+\begin{prob}[M]{13}
+作出适当的分割，然后证明等式：
+
+(a) $\sqrt{2} + \sqrt{8} = \sqrt{18}$; \qquad (b) $\sqrt{2}\sqrt{3} = \sqrt{6}$.
+\end{prob}
+
+\begin{prob}[M]{14}
+建立确定数 $2^{\sqrt{2}}$ 的分割.
+\end{prob}
+
+\begin{prob}[M]{15}
+求证：任何非空且下方有界的数集有下确界，而且任何非空且上方有界的数集有上确界.
+\end{prob}
+
+\begin{prob}[M]{16}
+证明：一切有理真分数 $\dfrac{m}{n}$（式中 $m$ 及 $n$ 为正整数，且 $0 < m < n$）的集合无最小及最大的元素. 求这个集合的上确界及下确界.
+\end{prob}
+
+\begin{prob}[M]{17}
+求满足不等式
+\[
+r^2 < 2
+\]
+的有理数 $r$ 所成集合的下确界和上确界.
+\end{prob}
+
+\begin{prob}[M]{18}
+设 $\{-x\}$ 为数 $x \in \{x\}$ 的相反数的集合，证明：
+
+(a) $\inf\{-x\} = -\sup\{x\}$; \qquad (b) $\sup\{-x\} = -\inf\{x\}$.
+\end{prob}
+
+\begin{prob}[M]{19}
+设 $\{x+y\}$ 为所有 $x+y$ 这些和的集合，其中 $x \in \{x\}$ 及 $y \in \{y\}$，证明等式：
+
+(a) $\inf\{x+y\} = \inf\{x\} + \inf\{y\}$; \qquad (b) $\sup\{x+y\} = \sup\{x\} + \sup\{y\}$.
+\end{prob}
+
+\begin{prob}[M]{20}
+设 $\{xy\}$ 为所有 $xy$ 乘积的集合，其中 $x \in \{x\}$ 及 $y \in \{y\}$，且 $x \geqslant 0$ 及 $y \geqslant 0$. 证明等式：
+
+(a) $\inf\{xy\} = \inf\{x\}\inf\{y\}$; \qquad (b) $\sup\{xy\} = \sup\{x\}\sup\{y\}$.
+\end{prob}
+
+\begin{prob}[M]{21}
+求证不等式：
+
+(a) $|x - y| \geqslant ||x| - |y||$; \qquad (b) $|x + x_1 + \cdots + x_n| \geqslant |x| - (|x_1| + \cdots + |x_n|)$.
+\end{prob}
+
+\probgroup{解不等式：}
+
+\begin{prob}[S]{22}
+$|x + 1| < 0.01$.
+\end{prob}
+
+\begin{prob}[S]{23}
+$|x - 2| \geqslant 10$.
+\end{prob}
+
+\begin{prob}[S]{24}
+$|x| > |x + 1|$.
+\end{prob}
+
+\begin{prob}[S]{25}
+$|2x - 1| < |x - 1|$.
+\end{prob}
+
+\begin{prob}[S]{26}
+$|x + 2| + |x - 2| \leqslant 12$.
+\end{prob}
+
+\begin{prob}[S]{27}
+$|x + 2| - |x| > 1$.
+\end{prob}
+
+\begin{prob}[S]{28}
+$||x + 1| - |x - 1|| < 1$.
+\end{prob}
+
+\begin{prob}[S]{29}
+$|x(1 - x)| < 0.05$.
+\end{prob}
+
+\begin{prob}[M]{30}
+证明恒等式：
+\[
+\left(\frac{x + |x|}{2}\right)^2 + \left(\frac{x - |x|}{2}\right)^2 = x^2.
+\]
+\end{prob}
+
+\begin{prob}[S]{31}
+当测量长度 $10\,\mathrm{cm}$ 时，绝对误差为 $0.5\,\mathrm{mm}$；当测量距离 $500\,\mathrm{km}$ 时，绝对误差等于 $200\,\mathrm{m}$. 哪种测量较为精确？
+\end{prob}
+
+\begin{prob}[S]{32}
+设数 $x = 2.3752$ 的相对误差为 $1\%$，试确定此数包含多少位精确数字？
+\end{prob}
+
+\begin{prob}[S]{33}
+数 $x = 12.125$ 包含 $3$ 位精确数字，试求此数的相对误差.
+\end{prob}
+
+\begin{prob}[M]{34}
+矩形的边长等于：
+\[
+x = 2.50\,\mathrm{cm} \pm 0.01\,\mathrm{cm}, \quad y = 4.00\,\mathrm{cm} \pm 0.02\,\mathrm{cm}.
+\]
+这个矩形的面积 $S$ 界于什么范围内？当其边长取平均值时，矩形面积的绝对误差 $\Delta$ 和相对误差 $\delta$ 是多少？
+\end{prob}
+
+\begin{prob}[M]{35}
+物体的质量 $P = 12.59\,\mathrm{g} \pm 0.01\,\mathrm{g}$，其体积 $v = 3.2\,\mathrm{cm}^3 \pm 0.2\,\mathrm{cm}^3$. 若对物体的质量和体积都取其平均值，试求物体的密度，并估计密度的绝对误差和相对误差.
+\end{prob}
+
+\begin{prob}[M]{36}
+圆半径
+\[
+r = 7.2\,\mathrm{m} \pm 0.1\,\mathrm{m}.
+\]
+若取 $\pi = 3.14$，则求出的圆面积的最小相对误差是多少？
+\end{prob}
+
+\begin{prob}[M]{37}
+已测得长方体各边长为
+\[
+x = 24.7\,\mathrm{m} \pm 0.2\,\mathrm{m}, \quad y = 6.5\,\mathrm{m} \pm 0.1\,\mathrm{m}, \quad z = 1.2\,\mathrm{m} \pm 0.1\,\mathrm{m}.
+\]
+此长方体的体积 $V$ 界于什么范围内？若测量的各结果都取其平均值，则所求出的体积可能有的绝对误差和相对误差是多少？
+\end{prob}
+
+\begin{prob}[M]{38}
+正方形的边长 $x$ 满足 $2\,\mathrm{m} < x < 3\,\mathrm{m}$. 应当以多小的绝对误差来测量边长，在计算此正方形的面积时才有可能精确到 $0.001\,\mathrm{m}^2$？
+\end{prob}
+
+\begin{prob}[M]{39}
+假设矩形每边的长皆不超过 $10\,\mathrm{m}$，为了使根据测量所计算出来的面积与原面积之差不超过 $0.01\,\mathrm{cm}^2$，问测量矩形的边 $x$ 与 $y$ 时，许可的绝对误差 $\Delta$ 的值多大？
+\end{prob}
+
+\begin{prob}[M]{40}
+设 $\delta(x)$ 及 $\delta(y)$ 为数 $x$ 和 $y$ 的相对误差，$\delta(xy)$ 为数 $xy$ 的相对误差. 求证
+\[
+\delta(xy) \leqslant \delta(x) + \delta(y) + \delta(x)\delta(y).
+\]
+为数列 $x_n$ 的（有限或无穷）极限存在的充分必要条件.
+\end{prob}
+
+\probsec{§2. 数列理论}
+
+\begin{prob}[M]{41}
+设
+\[
+x_n = \frac{n}{n+1} \quad (n=1,2,\cdots).
+\]
+证明：
+\[
+\lim_{n\to\infty} x_n = 1,
+\]
+即对于任一个给定的 $\varepsilon > 0$，求出数 $N = N(\varepsilon)$，使得
+\[
+\text{在 } n > N \text{ 时，} \quad |x_n - 1| < \varepsilon.
+\]
+填下表：
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+$\quad \varepsilon \quad$ & $\quad 0.1 \quad$ & $\quad 0.01 \quad$ & $\quad 0.001 \quad$ & $\quad 0.0001 \quad$ & $\quad \cdots \quad$ \\
+\hline
+$N$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[L]{42}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $x_n = \dfrac{(-1)^{n+1}}{n}$；
+\item $x_n = \dfrac{2n}{n^3+1}$；
+\item $x_n = \dfrac{1}{n!}$；
+\item $x_n = (-1)^n \cdot 0.999^n$，
+\end{enumerate}
+对于任何的 $\varepsilon > 0$，求出数 $N = N(\varepsilon)$，使得
+\[
+\text{当 } n > N \text{ 时，} \quad |x_n| < \varepsilon;
+\]
+从而证明：$x_n\ (n=1,2,\cdots)$ 为无穷小量（就是说，它的极限值为 $0$）.
+
+对应着上面四种情形，填下表：
+\begin{center}
+\begin{tabular}{c|c|c|c|c}
+\hline
+$\quad \varepsilon \quad$ & $\quad 0.1 \quad$ & $\quad 0.01 \quad$ & $\quad 0.001 \quad$ & $\quad \cdots \quad$ \\
+\hline
+$N$ & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[L]{43}
+证明：数列
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $x_n = (-1)^n n$，
+\item $x_n = 2^{\sqrt{n}}$，
+\item $x_n = \lg(\lg n)\ (n \geqslant 2)$
+\end{enumerate}
+当 $n \to \infty$ 时有无穷极限（即成为无穷大），即：对任意的 $E > 0$，求出数 $N = N(E)$，使得
+\[
+\text{当 } n > N \text{ 时，} \quad |x_n| > E.
+\]
+对应着上面的每一种情形，填下表：
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+$\quad E \quad$ & $\quad 10 \quad$ & $\quad 100 \quad$ & $\quad 1000 \quad$ & $\quad 10000 \quad$ & $\quad \cdots \quad$ \\
+\hline
+$N$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[M]{44}
+求证：
+\[
+x_n = n^{(-1)^n} \quad (n=1,2,\cdots)
+\]
+无界，但当 $n \to \infty$ 时，它并不成为无穷大.
+\end{prob}
+
+\begin{prob}[L]{45}
+用不等式表述下列命题：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\lim\limits_{n\to\infty} x_n = \infty$；
+\item $\lim\limits_{n\to\infty} x_n = -\infty$；
+\item $\lim\limits_{n\to\infty} x_n = +\infty$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{设 $n$ 遍历正整数列，求下列各式之值：}
+
+\begin{prob}[S]{46}
+$\lim\limits_{n\to\infty} \dfrac{10\,000n}{n^2+1}$.
+\end{prob}
+
+\begin{prob}[S]{47}
+$\lim\limits_{n\to\infty} (\sqrt{n+1} - \sqrt{n})$.
+\end{prob}
+
+\begin{prob}[S]{48}
+$\lim\limits_{n\to\infty} \dfrac{\sqrt[3]{n^2}\sin n!}{n+1}$.
+\end{prob}
+
+\begin{prob}[S]{49}
+$\lim\limits_{n\to\infty} \dfrac{(-2)^n + 3^n}{(-2)^{n+1} + 3^{n+1}}$.
+\end{prob}
+
+\begin{prob}[S]{50}
+$\lim\limits_{n\to\infty} \dfrac{1 + a + a^2 + \cdots + a^n}{1 + b + b^2 + \cdots + b^n}\ (|a|<1,\ |b|<1)$.
+\end{prob}
+
+\begin{prob}[S]{51}
+$\lim\limits_{n\to\infty} \left(\dfrac{1}{n^2} + \dfrac{2}{n^2} + \cdots + \dfrac{n-1}{n^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{52}
+$\lim\limits_{n\to\infty} \left|\dfrac{1}{n} - \dfrac{2}{n} + \dfrac{3}{n} - \cdots + \dfrac{(-1)^{n-1}n}{n}\right|$.
+\end{prob}
+
+\begin{prob}[S]{53}
+$\lim\limits_{n\to\infty} \left[\dfrac{1^2}{n^3} + \dfrac{2^2}{n^3} + \cdots + \dfrac{(n-1)^2}{n^3}\right]$.
+\end{prob}
+
+\begin{prob}[S]{54}
+$\lim\limits_{n\to\infty} \left[\dfrac{1^2}{n^3} + \dfrac{3^2}{n^3} + \cdots + \dfrac{(2n-1)^2}{n^3}\right]$.
+\end{prob}
+
+\begin{prob}[S]{55}
+$\lim\limits_{n\to\infty} \left(\dfrac{1}{2} + \dfrac{3}{2^2} + \dfrac{5}{2^3} + \cdots + \dfrac{2n-1}{2^n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{56}
+$\lim\limits_{n\to\infty} \left[\dfrac{1}{1\cdot 2} + \dfrac{1}{2\cdot 3} + \cdots + \dfrac{1}{n(n+1)}\right]$.
+\end{prob}
+
+\begin{prob}[S]{57}
+$\lim\limits_{n\to\infty} \left(\sqrt{2}\sqrt[4]{2}\sqrt[8]{2}\cdots\sqrt[2^n]{2}\right)$.
+\end{prob}
+
+\probgroup{证明下列等式：}
+
+\begin{prob}[M]{58}
+$\lim\limits_{n\to\infty} \dfrac{n}{2^n} = 0$.
+\end{prob}
+
+\begin{prob}[M]{59}
+$\lim\limits_{n\to\infty} \dfrac{2^n}{n!} = 0$.
+\end{prob}
+
+\begin{prob}[M]{60}
+$\lim\limits_{n\to\infty} \dfrac{n^k}{a^n} = 0\ (a > 1)$.
+\end{prob}
+
+\begin{prob}[M]{61}
+$\lim\limits_{n\to\infty} \dfrac{a^n}{n!} = 0$.
+\end{prob}
+
+\begin{prob}[M]{62}
+$\lim\limits_{n\to\infty} nq^n = 0$，若 $|q| < 1$.
+\end{prob}
+
+\begin{prob}[M]{63}
+$\lim\limits_{n\to\infty} \sqrt[n]{a} = 1\ (a > 0)$.
+\end{prob}
+
+\begin{prob}[M]{64}
+$\lim\limits_{n\to\infty} \dfrac{\log_a n}{n} = 0\ (a > 1)$.
+\end{prob}
+
+\begin{prob}[M]{65}
+$\lim\limits_{n\to\infty} \sqrt[n]{n} = 1$.
+\end{prob}
+
+\begin{prob}[M]{66}
+$\lim\limits_{n\to\infty} \dfrac{1}{\sqrt[n]{n!}} = 0$.
+\end{prob}
+
+\begin{prob}[L]{67}
+当 $n$ 充分大时，下列各组表达式中哪个更大？
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $100n + 200,\ 0.01n^2$；
+\item $2^n,\ n^{1000}$；
+\item $1000^n,\ n!$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{68}
+证明：
+\[
+\lim_{n\to\infty} \left(\frac{1}{2}\cdot\frac{3}{4}\cdots\frac{2n-1}{2n}\right) = 0.
+\]
+\probhint{参阅习题 9 (b).}
+\end{prob}
+
+\begin{prob}[M]{69}
+证明：数列
+\[
+x_n = \left(1 + \frac{1}{n}\right)^n \quad (n=1,2,\cdots)
+\]
+是单调增的，且上方有界，而数列
+\[
+y_n = \left(1 + \frac{1}{n}\right)^{n+1} \quad (n=1,2,\cdots)
+\]
+是单调减的，且上方有界. 由此推出这些数列有公共的极限：
+\[
+\lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n = \lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^{n+1} = \mathrm{e}.
+\]
+\probhint{先作出比 $\dfrac{x_{n+1}}{x_n},\ \dfrac{y_n}{y_{n-1}}$，并利用习题 7 的不等式.}
+\end{prob}
+
+\begin{prob}[M]{70}
+证明：
+\[
+0 < \mathrm{e} - \left(1 + \frac{1}{n}\right)^n < \frac{3}{n} \quad (n=1,2,\cdots).
+\]
+当指数 $n$ 是什么样的数值时，表达式 $\left(1 + \dfrac{1}{n}\right)^n$ 与数 $\mathrm{e}$ 之差小于 $0.001$？
+\end{prob}
+
+\begin{prob}[M]{71}
+设 $p_n\ (n=1,2,\cdots)$ 为趋于 $+\infty$ 的任意数列，而 $q_n\ (n=1,2,\cdots)$ 为趋于 $-\infty$ 的任意数列 ($p_n, q_n \notin [-1,0]$). 求证：
+\[
+\lim_{n\to\infty} \left(1 + \frac{1}{p_n}\right)^{p_n} = \lim_{n\to\infty} \left(1 + \frac{1}{q_n}\right)^{q_n} = \mathrm{e}.
+\]
+\end{prob}
+
+\begin{prob}[L]{72}
+已知
+\[
+\lim_{n\to\infty} \left(1 + \frac{1}{n}\right)^n = \mathrm{e},
+\]
+求证：
+\[
+\lim_{n\to\infty} \left(1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots + \frac{1}{n!}\right) = \mathrm{e}.
+\]
+由此推出公式
+\[
+\mathrm{e} = 1 + 1 + \frac{1}{2!} + \frac{1}{3!} + \cdots + \frac{1}{n!} + \frac{\theta_n}{n!n}, \tag{$*$}
+\]
+其中 $0 < \theta_n < 1$，并计算数 $\mathrm{e}$，精确到 $10^{-5}$.
+\end{prob}
+
+\begin{prob}[M]{73}
+证明：数 $\mathrm{e}$ 为无理数.
+\end{prob}
+
+\begin{prob}[M]{74}
+证明不等式：
+\[
+\left(\frac{n}{\mathrm{e}}\right)^n < n! < \mathrm{e}\left(\frac{n}{2}\right)^n.
+\]
+\end{prob}
+
+\begin{prob}[M]{75}
+证明不等式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\dfrac{1}{n+1} < \ln\left(1 + \dfrac{1}{n}\right) < \dfrac{1}{n}$，其中 $n$ 为任意的正整数.
+\item $1 + a < \mathrm{e}^a$，其中 $a$ 为异于零的实数.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{76}
+求证：
+\[
+\lim_{n\to\infty} n\left(a^{\frac{1}{n}} - 1\right) = \ln a \quad (a > 0),
+\]
+式中 $\ln a$ 是取 $\mathrm{e} = 2.718\cdots$ 作底时，数 $a$ 的对数.
+\end{prob}
+
+\probgroup{利用关于单调有界数列极限存在的定理，证明以下各数列的收敛性：}
+
+\begin{prob}[M]{77}
+$x_n = p_0 + \dfrac{p_1}{10} + \cdots + \dfrac{p_n}{10^n}\ (n=1,2,\cdots)$，其中 $p_i\ (i=0,1,2,\cdots)$ 是非负整数，并且从 $p_1$ 起不大于 $9$.
+\end{prob}
+
+\begin{prob}[M]{78}
+$x_n = \dfrac{10}{1}\cdot\dfrac{11}{3}\cdots\dfrac{n+9}{2n-1}$.
+\end{prob}
+
+\begin{prob}[M]{79}
+$x_n = \left(1 - \dfrac{1}{2}\right)\left(1 - \dfrac{1}{4}\right)\cdots\left(1 - \dfrac{1}{2^n}\right)$.
+\end{prob}
+
+\begin{prob}[M]{80}
+$x_n = \left(1 + \dfrac{1}{2}\right)\left(1 + \dfrac{1}{4}\right)\cdots\left(1 + \dfrac{1}{2^n}\right)$.
+\end{prob}
+
+\begin{prob}[M]{81}
+$x_1 = \sqrt{2},\ x_2 = \sqrt{2 + \sqrt{2}},\ \cdots,\ x_n = \underbrace{\sqrt{2 + \sqrt{2 + \cdots + \sqrt{2}}}}_{n\text{ 重根号}},\ \cdots$.
+\end{prob}
+
+\probgroup{利用柯西准则，证明以下各数列的收敛性：}
+
+\begin{prob}[M]{82}
+$x_n = a_0 + a_1 q + \cdots + a_n q^n$，其中 $|a_k| < M\ (k=0,1,2,\cdots)$ 且 $|q| < 1$.
+\end{prob}
+
+\begin{prob}[M]{83}
+$x_n = \dfrac{\sin 1}{2} + \dfrac{\sin 2}{2^2} + \cdots + \dfrac{\sin n}{2^n}$.
+\end{prob}
+
+\begin{prob}[M]{84}
+$x_n = \dfrac{\cos 1!}{1\cdot 2} + \dfrac{\cos 2!}{2\cdot 3} + \cdots + \dfrac{\cos n!}{n(n+1)}$.
+\end{prob}
+
+\begin{prob}[M]{85}
+$x_n = 1 + \dfrac{1}{2^2} + \dfrac{1}{3^2} + \cdots + \dfrac{1}{n^2}$.
+\probhint{利用不等式 $\dfrac{1}{n^2} < \dfrac{1}{n-1} - \dfrac{1}{n}\ (n=2,3,\cdots)$.}
+\end{prob}
+
+\begin{prob}[L]{86}
+对于数列 $x_n\ (n=1,2,\cdots)$，若存在数 $C$，使得
+\[
+|x_2 - x_1| + |x_3 - x_2| + \cdots + |x_n - x_{n-1}| < C \quad (n=2,3,\cdots),
+\]
+则称数列 $x_n$ 有有界变差.
+
+证明：凡有有界变差的数列是收敛的.
+
+举出一个收敛数列而无有界变差的例子.
+\end{prob}
+
+\begin{prob}[S]{87}
+试述“某数列不满足柯西准则”的含义.
+\end{prob}
+
+\begin{prob}[M]{88}
+利用柯西准则，证明数列：
+\[
+x_n = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n}
+\]
+的发散性.
+\end{prob}
+
+\begin{prob}[M]{89}
+证明：若数列 $x_n\ (n=1,2,\cdots)$ 收敛，则它的任何子数列 $x_{p_n}$ 也收敛且有同一极限：$\lim\limits_{n\to\infty} x_{p_n} = \lim\limits_{n\to\infty} x_n$.
+\end{prob}
+
+\begin{prob}[M]{90}
+证明：若单调数列的某一子数列收敛，则此单调数列本身是收敛的.
+\end{prob}
+
+\begin{prob}[M]{91}
+证明：若 $\lim\limits_{n\to\infty} x_n = a$，则 $\lim\limits_{n\to\infty} |x_n| = |a|$.
+\end{prob}
+
+\begin{prob}[S]{92}
+设 $x_n \to a$，则极限
+\[
+\lim_{n\to\infty} \frac{x_{n+1}}{x_n}
+\]
+是什么？
+\end{prob}
+
+\begin{prob}[M]{93}
+证明：收敛的数列是有界的.
+\end{prob}
+
+\begin{prob}[M]{94}
+证明：收敛的数列或达到其上确界，或达到其下确界，或两者都达到. 举出这三类数列的例子.
+\end{prob}
+
+\begin{prob}[M]{95}
+证明：趋于 $+\infty$ 的数列 $x_n\ (n=1,2,\cdots)$ 必定达到其下确界.
+\end{prob}
+
+\probgroup{求数列 $x_n\ (n=1,2,\cdots)$ 的最大项，设：}
+
+\begin{prob}[S]{96}
+$x_n = \dfrac{n^2}{2^n}$.
+\end{prob}
+
+\begin{prob}[S]{97}
+$x_n = \dfrac{\sqrt{n}}{100+n}$.
+\end{prob}
+
+\begin{prob}[S]{98}
+$x_n = \dfrac{1000^n}{n!}$.
+\end{prob}
+
+\probgroup{求数列 $x_n\ (n=1,2,\cdots)$ 的最小项，设：}
+
+\begin{prob}[S]{99}
+$x_n = n^2 - 9n - 100$.
+\end{prob}
+
+\begin{prob}[S]{100}
+$x_n = n + \dfrac{100}{n}$.
+\end{prob}
+
+\probgroup{求数列 $x_n\ (n=1,2,\cdots)$ 的 $\inf x_n,\ \sup x_n,\ \varliminf\limits_{n\to\infty} x_n$ 及 $\varlimsup\limits_{n\to\infty} x_n$，设：}
+
+\begin{prob}[M]{101}
+(a) $x_n = 1 - \dfrac{1}{n}$； \qquad (b) $x_n = (-1)^{n-1}\left(2 + \dfrac{3}{n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{102}
+$x_n = \dfrac{(-1)^n}{n} + \dfrac{1+(-1)^n}{2}$.
+\end{prob}
+
+\begin{prob}[S]{103}
+$x_n = 1 + \dfrac{n}{n+1}\cos\dfrac{n\pi}{2}$.
+\end{prob}
+
+\begin{prob}[S]{104}
+$x_n = 1 + 2\cdot(-1)^{n+1} + 3\cdot(-1)^{\frac{n(n-1)}{2}}$.
+\end{prob}
+
+\begin{prob}[S]{105}
+$x_n = \dfrac{n-1}{n+1}\cos\dfrac{2n\pi}{3}$.
+\end{prob}
+
+\begin{prob}[S]{106}
+$x_n = (-1)^n n$.
+\end{prob}
+
+\begin{prob}[S]{107}
+$x_n = -n[2 + (-1)^n]$.
+\end{prob}
+
+\begin{prob}[S]{108}
+$x_n = n^{(-1)^n}$.
+\end{prob}
+
+\begin{prob}[S]{109}
+$x_n = 1 + n\sin\dfrac{n\pi}{2}$.
+\end{prob}
+
+\begin{prob}[S]{110}
+$x_n = \dfrac{1}{n - 10.2}$.
+\end{prob}
+
+\probgroup{求 $\varliminf\limits_{n\to\infty} x_n$ 及 $\varlimsup\limits_{n\to\infty} x_n$，设：}
+
+\begin{prob}[S]{111}
+$x_n = \dfrac{n^2}{1+n^2}\cos\dfrac{2n\pi}{3}$.
+\end{prob}
+
+\begin{prob}[S]{112}
+$x_n = \left(1 + \dfrac{1}{n}\right)^n \cdot (-1)^n + \sin\dfrac{n\pi}{4}$.
+\end{prob}
+
+\begin{prob}[S]{113}
+$x_n = \dfrac{n}{n+1}\sin^2\dfrac{n\pi}{4}$.
+\end{prob}
+
+\begin{prob}[S]{114}
+$x_n = \sqrt[n]{1 + 2^{n(-1)^n}}$.
+\end{prob}
+
+\begin{prob}[S]{115}
+$x_n = \cos^n\dfrac{2n\pi}{3}$.
+\end{prob}
+
+\probgroup{求以下各数列的子列极限：}
+
+\begin{prob}[S]{116}
+$\dfrac{1}{2},\ \dfrac{1}{2},\ \dfrac{1}{4},\ \dfrac{3}{4},\ \dfrac{1}{8},\ \dfrac{7}{8},\ \cdots,\ \dfrac{1}{2^n},\ \dfrac{2^n-1}{2^n},\ \cdots$.
+\end{prob}
+
+\begin{prob}[S]{117}
+$1,\ \dfrac{1}{2},\ 1+\dfrac{1}{2},\ \dfrac{1}{3},\ 1+\dfrac{1}{3},\ \dfrac{1}{2}+\dfrac{1}{3},\ \dfrac{1}{4},\ 1+\dfrac{1}{4},\ \dfrac{1}{2}+\dfrac{1}{4},\ \dfrac{1}{3}+\dfrac{1}{4},\ \dfrac{1}{5},\ \cdots,\ \dfrac{1}{n},\ 1+\dfrac{1}{n},\ \dfrac{1}{2}+\dfrac{1}{n},\ \cdots,\ \dfrac{1}{n-1}+\dfrac{1}{n},\ \dfrac{1}{n+1},\ \cdots$.
+\end{prob}
+
+\begin{prob}[S]{118}
+$\dfrac{1}{2},\ \dfrac{1}{3},\ \dfrac{2}{3},\ \dfrac{1}{4},\ \dfrac{2}{4},\ \dfrac{3}{4},\ \dfrac{1}{5},\ \dfrac{2}{5},\ \dfrac{3}{5},\ \dfrac{4}{5},\ \cdots$.
+\end{prob}
+
+\begin{prob}[S]{119}
+$x_n = 3\left(1 - \dfrac{1}{n}\right) + 2(-1)^n$.
+\end{prob}
+
+\begin{prob}[S]{120}
+$x_n = \dfrac{1}{2}[(a+b) + (-1)^n(a-b)]$.
+\end{prob}
+
+\begin{prob}[M]{121}
+试举出以已知数
+\[
+a_1, a_2, \cdots, a_p
+\]
+作为子列极限的数列的例子.
+\end{prob}
+
+\begin{prob}[M]{122}
+试举出数列的例子，对此数列而言，已知数列
+\[
+a_1, a_2, \cdots, a_n, \cdots
+\]
+的所有各项皆为其子列极限. 所举数列还必有怎样的子列极限?
+\end{prob}
+
+\begin{prob}[L]{123}
+举出数列的例子:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 没有有限的子列极限;
+  \item 有唯一有限的子列极限, 但不收敛;
+  \item 有无穷多的子列极限;
+  \item 以每一实数作为子列极限.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{124}
+证明: 数列 $x_n$ 和 $y_n = x_n \sqrt[n]{n}$ ($n = 1, 2, \cdots$) 有相同的子列极限.
+\end{prob}
+
+\begin{prob}[M]{125}
+证明: 从有界的数列 $x_n$ ($n = 1, 2, \cdots$) 中, 永远可选出收敛的子数列 $x_{p_n}$ ($n = 1, 2, \cdots$).
+\end{prob}
+
+\begin{prob}[M]{126}
+证明: 若数列 $x_n$ ($n = 1, 2, \cdots$) 无界, 则存在子数列 $x_{p_n}$, 使得
+\[
+\lim_{n\to\infty} x_{p_n} = \infty.
+\]
+\end{prob}
+
+\begin{prob}[M]{127}
+设数列 $x_n$ ($n = 1, 2, \cdots$) 收敛, 而数列 $y_n$ ($n = 1, 2, \cdots$) 发散, 则能否断定关于数列 (a) $x_n + y_n$, (b) $x_n y_n$ 的收敛性? 举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{128}
+设数列 $x_n$ 和 $y_n$ 发散 ($n = 1, 2, \cdots$). 可否断定数列 (a) $x_n + y_n$, (b) $x_n y_n$ 也发散呢?
+\end{prob}
+
+\begin{prob}[M]{129}
+设 $\lim\limits_{n\to\infty} x_n = 0$, $y_n$ ($n = 1, 2, \cdots$) 为任意数列. 能否断定
+\[
+\lim_{n\to\infty} x_n y_n = 0?
+\]
+举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{130}
+设 $\lim\limits_{n\to\infty} x_n y_n = 0$, 是否由此可得出: 或 $\lim\limits_{n\to\infty} x_n = 0$, 或 $\lim\limits_{n\to\infty} y_n = 0$? 考虑例子:
+\[
+x_n = \frac{1 + (-1)^n}{2}, \quad y_n = \frac{1 - (-1)^n}{2} \quad (n = 1, 2, \cdots).
+\]
+\end{prob}
+
+\begin{prob}[L]{131}
+证明\footnote{在习题 131---133 中, 假设极限之和或积皆有意义. —— 译注}:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\varliminf\limits_{n\to\infty} x_n + \varliminf\limits_{n\to\infty} y_n \leqslant \varliminf\limits_{n\to\infty} (x_n + y_n) \leqslant \varliminf\limits_{n\to\infty} x_n + \varlimsup\limits_{n\to\infty} y_n$;
+  \item $\varliminf\limits_{n\to\infty} x_n + \varlimsup\limits_{n\to\infty} y_n \leqslant \varlimsup\limits_{n\to\infty} (x_n + y_n) \leqslant \varlimsup\limits_{n\to\infty} x_n + \varlimsup\limits_{n\to\infty} y_n$.
+\end{enumerate}
+举出在上面关系式中严格不等式成立的例子.
+\end{prob}
+
+\begin{prob}[L]{132}
+设 $x_n \geqslant 0$ 且 $y_n \geqslant 0$ ($n = 1, 2, \cdots$), 证明:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\varliminf\limits_{n\to\infty} x_n \cdot \varliminf\limits_{n\to\infty} y_n \leqslant \varliminf\limits_{n\to\infty} (x_n y_n) \leqslant \varliminf\limits_{n\to\infty} x_n \cdot \varlimsup\limits_{n\to\infty} y_n$;
+  \item $\varliminf\limits_{n\to\infty} x_n \cdot \varlimsup\limits_{n\to\infty} y_n \leqslant \varlimsup\limits_{n\to\infty} (x_n y_n) \leqslant \varlimsup\limits_{n\to\infty} x_n \cdot \varlimsup\limits_{n\to\infty} y_n$.
+\end{enumerate}
+举出在这些关系式中严格不等式成立的例子.
+\end{prob}
+
+\begin{prob}[M]{133}
+证明: 若 $\lim\limits_{n\to\infty} x_n$ 存在, 则对于任何数列 $y_n$ ($n = 1, 2, \cdots$) 有:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\varlimsup\limits_{n\to\infty} (x_n + y_n) = \lim\limits_{n\to\infty} x_n + \varlimsup\limits_{n\to\infty} y_n$;
+  \item $\varlimsup\limits_{n\to\infty} (x_n y_n) = \lim\limits_{n\to\infty} x_n \cdot \varlimsup\limits_{n\to\infty} y_n \quad (x_n \geqslant 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{134}
+证明: 若对于某数列 $x_n$ ($n = 1, 2, \cdots$), 无论数列 $y_n$ ($n = 1, 2, \cdots$) 如何选取, 以下两个等式中都至少有一个成立:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\varlimsup\limits_{n\to\infty} (x_n + y_n) = \varlimsup\limits_{n\to\infty} x_n + \varlimsup\limits_{n\to\infty} y_n$;
+  \item $\varlimsup\limits_{n\to\infty} (x_n y_n) = \varlimsup\limits_{n\to\infty} x_n \cdot \varlimsup\limits_{n\to\infty} y_n \quad (x_n \geqslant 0)$,
+\end{enumerate}
+则数列 $x_n$ 收敛或发散于 $+\infty$\footnote{此处的原文是: 则序列 $x_n$ 收敛. —— 译注}.
+\end{prob}
+
+\begin{prob}[M]{135}
+证明: 若 $x_n > 0$ ($n = 1, 2, \cdots$) 及
+\[
+\varlimsup_{n\to\infty} x_n \cdot \varlimsup_{n\to\infty} \frac{1}{x_n} = 1,
+\]
+则数列 $x_n$ 是收敛的.
+\end{prob}
+
+\begin{prob}[M]{136}
+证明: 若数列 $x_n$ ($n = 1, 2, \cdots$) 有界, 且
+\[
+\lim_{n\to\infty} (x_{n+1} - x_n) = 0,
+\]
+则此数列的子列极限充满于下极限和上极限
+\[
+l = \varliminf_{n\to\infty} x_n \quad \text{和} \quad L = \varlimsup_{n\to\infty} x_n
+\]
+之间, 即区间 $[l, L]$ 中的任意一个数都是该数列的子列极限.
+\end{prob}
+
+\begin{prob}[M]{137}
+设数列 $x_1, x_2, \cdots, x_n, \cdots$ 满足条件
+\[
+0 \leqslant x_{m+n} \leqslant x_m + x_n \quad (m, n = 1, 2, \cdots),
+\]
+证明: $\lim\limits_{n\to\infty} \dfrac{x_n}{n}$ 存在.
+\end{prob}
+
+\begin{prob}[M]{138}
+证明: 若数列 $x_n$ 收敛, 则算术平均值数列
+\[
+\xi_n = \frac{1}{n}(x_1 + x_2 + \cdots + x_n) \quad (n = 1, 2, \cdots)
+\]
+也收敛, 且
+\[
+\lim_{n\to\infty} \frac{x_1 + x_2 + \cdots + x_n}{n} = \lim_{n\to\infty} x_n.
+\]
+逆命题不成立, 举例说明.
+\end{prob}
+
+\begin{prob}[M]{139}
+证明: 若 $\lim\limits_{n\to\infty} x_n = +\infty$, 则
+\[
+\lim_{n\to\infty} \frac{x_1 + x_2 + \cdots + x_n}{n} = +\infty.
+\]
+\end{prob}
+
+\begin{prob}[M]{140}
+证明: 若数列 $x_n$ ($n = 1, 2, \cdots$) 收敛且 $x_n > 0$, 则
+\[
+\lim_{n\to\infty} \sqrt[n]{x_1 x_2 \cdots x_n} = \lim_{n\to\infty} x_n.
+\]
+\end{prob}
+
+\begin{prob}[M]{141}
+证明: 若 $x_n > 0$ ($n = 1, 2, \cdots$) 且 $\lim\limits_{n\to\infty} \dfrac{x_{n+1}}{x_n}$ 存在, 则
+\[
+\lim_{n\to\infty} \sqrt[n]{x_n} = \lim_{n\to\infty} \frac{x_{n+1}}{x_n}.
+\]
+\end{prob}
+
+\begin{prob}[M]{142}
+证明:
+\[
+\lim_{n\to\infty} \frac{n}{\sqrt[n]{n!}} = \mathrm{e}.
+\]
+\end{prob}
+
+\begin{prob}[L]{143}
+证明施托尔茨定理: 若
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y_{n+1} > y_n$ ($n = 1, 2, \cdots$);
+  \item $\lim\limits_{n\to\infty} y_n = +\infty$;
+  \item $\lim\limits_{n\to\infty} \dfrac{x_{n+1} - x_n}{y_{n+1} - y_n}$ 存在,
+\end{enumerate}
+则
+\[
+\lim_{n\to\infty} \frac{x_n}{y_n} = \lim_{n\to\infty} \frac{x_{n+1} - x_n}{y_{n+1} - y_n}.
+\]
+\end{prob}
+
+\begin{prob}[M]{144}
+求:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{n\to+\infty} \dfrac{n^2}{a^n}$ ($a > 1$);
+  \item $\lim\limits_{n\to+\infty} \dfrac{\lg n}{n}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{145}
+证明: 若 $p$ 为正整数, 则
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{n\to\infty} \dfrac{1^p + 2^p + \cdots + n^p}{n^{p+1}} = \dfrac{1}{p+1}$,
+  \item $\lim\limits_{n\to\infty} \left(\dfrac{1^p + 2^p + \cdots + n^p}{n^p} - \dfrac{n}{p+1}\right) = \dfrac{1}{2}$,
+  \item $\lim\limits_{n\to\infty} \dfrac{1^p + 3^p + \cdots + (2n-1)^p}{n^{p+1}} = \dfrac{2^p}{p+1}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{146}
+证明: 数列
+\[
+x_n = 1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} - \ln n \quad (n = 1, 2, \cdots)
+\]
+收敛.
+
+因此有公式
+\[
+1 + \frac{1}{2} + \frac{1}{3} + \cdots + \frac{1}{n} = C + \ln n + \varepsilon_n,
+\]
+式中 $C = 0.577216\cdots$ 称为欧拉常数, 且当 $n \to \infty$ 时 $\varepsilon_n \to 0$.
+\end{prob}
+
+\begin{prob}[M]{147}
+求
+\[
+\lim_{n\to\infty} \left(\frac{1}{n+1} + \frac{1}{n+2} + \cdots + \frac{1}{2n}\right).
+\]
+\end{prob}
+
+\begin{prob}[M]{148}
+数列 $x_n$ ($n = 1, 2, \cdots$) 由下列各式
+\[
+x_1 = a, \quad x_2 = b, \quad x_n = \frac{x_{n-1} + x_{n-2}}{2} \quad (n = 3, 4, \cdots)
+\]
+所确定, 求 $\lim\limits_{n\to\infty} x_n$.
+\end{prob}
+
+\begin{prob}[M]{149}
+设 $x_n$ ($n = 1, 2, \cdots$) 为由以下各式
+\[
+x_0 > 0, \quad x_{n+1} = \frac{1}{2}\left(x_n + \frac{1}{x_n}\right) \quad (n = 0, 1, 2, \cdots)
+\]
+所确定的数列. 求证
+\[
+\lim_{n\to\infty} x_n = 1.
+\]
+\end{prob}
+
+\begin{prob}[M]{150}
+证明: 由下列各式
+\[
+x_1 = a, \quad y_1 = b, \quad x_{n+1} = \sqrt{x_n y_n}, \quad y_{n+1} = \frac{x_n + y_n}{2},
+\]
+确定的数列 $x_n$ 和 $y_n$ ($n = 1, 2, \cdots$) 有共同的极限
+\[
+\mu(a, b) = \lim_{n\to\infty} x_n = \lim_{n\to\infty} y_n
+\]
+(数 $a$ 和 $b$ 的算术几何平均值).
+\end{prob}
+
+\probsec{§3. 函数的概念}
+
+\probgroup{求下列函数的存在域:}
+
+\begin{prob}[S]{151}
+$y = \dfrac{x^2}{1 + x}$.
+\end{prob}
+
+\begin{prob}[S]{152}
+$y = \sqrt{3x - x^3}$.
+\end{prob}
+
+\begin{prob}[S]{153}
+$y = (x - 2)\sqrt{\dfrac{1 + x}{1 - x}}$.
+\end{prob}
+
+\begin{prob}[M]{154}
+(a) $y = \log(x^2 - 4)$; \qquad (b) $y = \log(x + 2) + \log(x - 2)$.
+\end{prob}
+
+\begin{prob}[S]{155}
+$y = \sqrt{\sin(\sqrt{x})}$.
+\end{prob}
+
+\begin{prob}[S]{156}
+$y = \sqrt{\cos x^2}$.
+\end{prob}
+
+\begin{prob}[S]{157}
+$y = \lg\left(\sin\dfrac{\pi}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{158}
+$y = \dfrac{\sqrt{x}}{\sin \pi x}$.
+\end{prob}
+
+\begin{prob}[S]{159}
+$y = \arcsin\dfrac{2x}{1 + x}$.
+\end{prob}
+
+\begin{prob}[S]{160}
+$y = \arccos(2\sin x)$.
+\end{prob}
+
+\begin{prob}[S]{161}
+$y = \lg[\cos(\lg x)]$.
+\end{prob}
+
+\begin{prob}[S]{162}
+$y = (x + |x|)\sqrt{x\sin^2 \pi x}$.
+\end{prob}
+
+\begin{prob}[S]{163}
+$y = \cot \pi x + \arccos(2^x)$.
+\end{prob}
+
+\begin{prob}[S]{164}
+$y = \arcsin(1 - x) + \lg(\lg x)$.
+\end{prob}
+
+\begin{prob}[L]{165}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = (2x)!$;
+  \item $y = \log_2 \log_3 \log_4 x$;
+  \item $y = \sqrt[4]{\lg\tan x}$;
+  \item $y = \sqrt{\sin 2x} + \sqrt{\sin 3x}$ ($0 \leqslant x \leqslant 2\pi$).
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列函数的存在域和值域:}
+
+\begin{prob}[S]{166}
+$y = \sqrt{2 + x - x^2}$.
+\end{prob}
+
+\begin{prob}[S]{167}
+$y = \lg(1 - 2\cos x)$.
+\end{prob}
+
+\begin{prob}[S]{168}
+$y = \arccos\dfrac{2x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{169}
+$y = \arcsin\left(\lg\dfrac{x}{10}\right)$.
+\end{prob}
+
+\begin{prob}[S]{170}
+$y = (-1)^x$.
+\end{prob}
+
+\begin{prob}[L]{171}
+在底 $AC = b$ 和高 $BD = h$ 的三角形 $ABC$ 中 (图 1) 内接一个高 $NM = x$ 的矩形 $KLMN$. 把矩形 $KLMN$ 的周长 $P$ 及其面积 $S$ 表示为 $x$ 的函数.
+
+作函数 $P = P(x)$ 及 $S = S(x)$ 的图像.
+\probfig{fig_171.png}{图 1}
+\end{prob}
+
+\begin{prob}[L]{172}
+在三角形 $ABC$ 中, 边 $AB = 6\,\mathrm{cm}$, $AC = 8\,\mathrm{cm}$, 角 $BAC = x$. 把边 $BC = a$ 和面积 $ABC = S$ 表示为变量 $x$ 的函数. 作函数 $a = a(x)$ 及 $S = S(x)$ 的图像.
+\end{prob}
+
+\begin{prob}[L]{173}
+在等腰梯形 $ABCD$ 中 (图 2), 底 $AD = a$, $BC = b$ ($a > b$), 高 $HB = h$, 引直线 $MN \parallel BH$, $MN$ 与顶点 $A$ 相距 $AM = x$. 把图形 $ABNMA$ 的面积 $S$ 表示为变量 $x$ 的函数. 作函数 $S = S(x)$ 的图像.
+\probfig{fig_173.png}{图 2}
+\end{prob}
+
+\begin{prob}[L]{174}
+有 $2\,\mathrm{g}$ 质量均匀分布在 $Ox$ 轴上的闭区间 $0 \leqslant x \leqslant 1$ 上, 另有两个质量为 $1\,\mathrm{g}$ 的质点分别位于点 $x = 2$ 和 $x = 3$.
+
+设 $m(x)$ 是区间 $(-\infty, x)$ 内的质量的值, 求函数 $m = m(x)$ ($-\infty < x < +\infty$) 的解析表达式, 并作这个函数的图像.
+\end{prob}
+
+\begin{prob}[M]{175}
+函数 $y = \operatorname{sgn} x$ 被定义为:
+\[
+\operatorname{sgn} x = \begin{cases}
+-1, & x < 0, \\
+0, & x = 0, \\
+1, & x > 0.
+\end{cases}
+\]
+作这个函数的图像. 证明:
+\[
+|x| = x \operatorname{sgn} x.
+\]
+\end{prob}
+
+\begin{prob}[M]{176}
+函数 $y = [x]$ (数 $x$ 的整数部分) 用下法定义: 若 $x = n + r$, 式中 $n$ 为整数且 $0 \leqslant r < 1$, 则
+\[
+[x] = n.
+\]
+作这个函数的图像.
+\end{prob}
+
+\begin{prob}[M]{177}
+设
+\[
+y = \pi(x) \quad (x \geqslant 0)
+\]
+表示不超过数 $x$ 的素数的数目, 作这个函数在 $0 \leqslant x \leqslant 20$ 时的图像.
+\end{prob}
+
+\probgroup{下列函数 $y = f(x)$ 把集合 $E_x$ 映射成怎样的集合 $E_y$?}
+
+\begin{prob}[S]{178}
+$y = x^2$, $E_x = \{-1 \leqslant x \leqslant 2\}$.
+\end{prob}
+
+\begin{prob}[S]{179}
+$y = \lg x$, $E_x = \{10 < x < 1000\}$.
+\end{prob}
+
+\begin{prob}[S]{180}
+$y = \dfrac{1}{\pi}\operatorname{arccot} x,\ E_x = \{-\infty < x < +\infty\}$.
+\end{prob}
+
+\begin{prob}[S]{181}
+$y = \cot\dfrac{\pi x}{4},\ E_x = \{0 < |x| \leqslant 1\}$.
+\end{prob}
+
+\begin{prob}[S]{182}
+$y = |x|,\ E_x = \{1 \leqslant |x| \leqslant 2\}$.
+\end{prob}
+
+\probgroup{设变量 $x$ 遍历区间 $0 < x < 1$，试确定变量 $y$ 所遍历的集合：}
+
+\begin{prob}[S]{183}
+$y = a + (b - a)x$.
+\end{prob}
+
+\begin{prob}[S]{184}
+$y = \dfrac{1}{1 - x}$.
+\end{prob}
+
+\begin{prob}[S]{185}
+$y = \dfrac{x}{2x - 1}$.
+\end{prob}
+
+\begin{prob}[S]{186}
+$y = \sqrt{x - x^2}$.
+\end{prob}
+
+\begin{prob}[S]{187}
+$y = \cot\pi x$.
+\end{prob}
+
+\begin{prob}[S]{188}
+$y = x + [2x]$.
+\end{prob}
+
+\begin{prob}[S]{189}
+设 $f(x) = x^4 - 6x^3 + 11x^2 - 6x$，求 $f(0),\, f(1),\, f(2),\, f(3),\, f(4)$。
+\end{prob}
+
+\begin{prob}[S]{190}
+设 $f(x) = \lg x^2$，求 $f(-1),\, f(-0.001),\, f(100)$。
+\end{prob}
+
+\begin{prob}[S]{191}
+设 $f(x) = 1 + [x]$，求 $f(0.9),\, f(0.99),\, f(0.999),\, f(1)$。
+\end{prob}
+
+\begin{prob}[M]{192}
+设
+\[
+f(x) = \begin{cases}
+1 + x, & -\infty < x \leqslant 0, \\
+2^x, & 0 < x < +\infty,
+\end{cases}
+\]
+求 $f(-2),\, f(-1),\, f(0),\, f(1),\, f(2)$。
+\end{prob}
+
+\begin{prob}[M]{193}
+设
+\[
+f(x) = \frac{1 - x}{1 + x},
+\]
+求 $f(0),\, f(-x),\, f(x + 1),\, f(x) + 1,\, f\!\left(\dfrac{1}{x}\right),\, \dfrac{1}{f(x)}$。
+\end{prob}
+
+\begin{prob}[L]{194}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = x - x^3$;
+\item $f(x) = \sin\dfrac{\pi}{x}$;
+\item $f(x) = (x + |x|)(1 - x)$.
+\end{enumerate}
+求满足以下各式的 $x$ 值：(1) $f(x) = 0$；(2) $f(x) > 0$；(3) $f(x) < 0$。
+\end{prob}
+
+\begin{prob}[L]{195}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = ax + b$;
+\item $f(x) = x^2$;
+\item $f(x) = a^x$,
+\end{enumerate}
+求 $\varphi(x) = \dfrac{f(x + h) - f(x)}{h}$。
+\end{prob}
+
+\begin{prob}[M]{196}
+设 $f(x) = ax^2 + bx + c$，证明：
+\[
+f(x + 3) - 3f(x + 2) + 3f(x + 1) - f(x) \equiv 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{197}
+若 $f(0) = -2,\, f(3) = 5$，求线性函数
+\[
+f(x) = ax + b.
+\]
+$f(1)$ 及 $f(2)$ 等于什么（线性插值法）？
+\end{prob}
+
+\begin{prob}[M]{198}
+若 $f(-2) = 0,\, f(0) = 1,\, f(1) = 5$，求二次有理函数：
+\[
+f(x) = ax^2 + bx + c.
+\]
+$f(-1)$ 及 $f(0.5)$ 等于什么（二次插值法）？
+\end{prob}
+
+\begin{prob}[M]{199}
+设 $f(-1) = 0,\, f(0) = 2,\, f(1) = -3,\, f(2) = 5$。求三次有理函数：
+\[
+f(x) = ax^3 + bx^2 + cx + d.
+\]
+\end{prob}
+
+\begin{prob}[M]{200}
+设 $f(0) = 15,\, f(2) = 30,\, f(4) = 90$。求形为
+\[
+f(x) = a + bc^x
+\]
+的函数。
+\end{prob}
+
+\begin{prob}[M]{201}
+证明：对于线性函数
+\[
+f(x) = ax + b,
+\]
+若自变量的值 $x = x_n\ (n = 1, 2, \cdots)$ 组成等差数列，则对应的函数值 $y_n = f(x_n)\ (n = 1, 2, \cdots)$ 也组成等差数列。
+\end{prob}
+
+\begin{prob}[M]{202}
+证明：对于指数函数
+\[
+f(x) = a^x \quad (a > 0),
+\]
+若自变量的值 $x = x_n\ (n = 1, 2, \cdots)$ 组成等差数列，则对应的函数值 $y_n = f(x_n)\ (n = 1, 2, \cdots)$ 组成等比数列。
+\end{prob}
+
+\begin{prob}[L]{203}
+设当 $0 < u < 1$ 时函数 $f(u)$ 有定义。求下列函数的定义域：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(\sin x)$;
+\item $f(\ln x)$;
+\item $f\!\left(\dfrac{[x]}{x}\right)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{204}
+设
+\[
+f(x) = \frac{1}{2}(a^x + a^{-x}) \quad (a > 0).
+\]
+证明：
+\[
+f(x + y) + f(x - y) = 2f(x)f(y).
+\]
+\end{prob}
+
+\begin{prob}[L]{205}
+设 $f(x) + f(y) = f(z)$。求出 $z$，若
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = ax$;
+\item $f(x) = \dfrac{1}{x}$;
+\item $f(x) = \arctan x\ (|x| < 1)$;
+\item $f(x) = \log\dfrac{1 + x}{1 - x}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求 $\varphi[\varphi(x)],\, \psi[\psi(x)],\, \varphi[\psi(x)]$ 及 $\psi[\varphi(x)]$，设}
+
+\begin{prob}[M]{206}
+$\varphi(x) = x^2$ 及 $\psi(x) = 2^x$。
+\end{prob}
+
+\begin{prob}[M]{207}
+$\varphi(x) = \operatorname{sgn} x$ 及 $\psi(x) = \dfrac{1}{x}$。
+\end{prob}
+
+\begin{prob}[M]{208}
+\[
+\varphi(x) = \begin{cases}
+0, & x \leqslant 0, \\
+x, & x > 0.
+\end{cases}
+\quad \text{及} \quad
+\psi(x) = \begin{cases}
+0, & x \leqslant 0, \\
+-x^2, & x > 0.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{209}
+设
+\[
+f(x) = \frac{1}{1 - x},
+\]
+求 $f[f(x)],\, f\{f[f(x)]\}$。
+\end{prob}
+
+\begin{prob}[M]{210}
+设
+\[
+f_n(x) = \underbrace{f(f(\cdots f(x)))}_{n\text{ 次}},
+\]
+若
+\[
+f(x) = \frac{x}{\sqrt{1 + x^2}},
+\]
+求 $f_n(x)$。
+\end{prob}
+
+\begin{prob}[S]{211}
+设 $f(x + 1) = x^2 - 3x + 2$，求 $f(x)$。
+\end{prob}
+
+\begin{prob}[M]{212}
+设
+\[
+f\!\left(x + \frac{1}{x}\right) = x^2 + \frac{1}{x^2} \quad (|x| \geqslant 2),
+\]
+求 $f(x)$。
+\end{prob}
+
+\begin{prob}[M]{213.1}
+设
+\[
+f\!\left(\frac{1}{x}\right) = x + \sqrt{1 + x^2} \quad (x > 0),
+\]
+求 $f(x)$。
+\end{prob}
+
+\begin{prob}[M]{213.2}
+设
+\[
+f\!\left(\frac{x}{x + 1}\right) = x^2,
+\]
+求 $f(x)$。
+\end{prob}
+
+\probgroup{证明：下列各函数在所给区间内是单调增函数：}
+
+\begin{prob}[S]{214}
+$f(x) = x^2\ (0 \leqslant x < +\infty)$.
+\end{prob}
+
+\begin{prob}[S]{215}
+$f(x) = \sin x\ \left(-\dfrac{\pi}{2} \leqslant x \leqslant \dfrac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{216}
+$f(x) = \tan x\ \left(-\dfrac{\pi}{2} < x < \dfrac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[M]{217}
+$f(x) = 2x + \sin x\ (-\infty < x < +\infty)$.
+\end{prob}
+
+\probgroup{证明：下列各函数在所给区间内是单调减函数：}
+
+\begin{prob}[S]{218}
+$f(x) = x^2\ (-\infty < x \leqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{219}
+$f(x) = \cos x\ (0 \leqslant x \leqslant \pi)$.
+\end{prob}
+
+\begin{prob}[S]{220}
+$f(x) = \cot x\ (0 < x < \pi)$.
+\end{prob}
+
+\begin{prob}[L]{221}
+研究下列函数的单调性：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = ax + b$;
+\item $f(x) = ax^2 + bx + c$;
+\item $f(x) = x^3$;
+\item $f(x) = \dfrac{ax + b}{cx + d}$;
+\item $f(x) = a^x\ (a > 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{222}
+不等式能否逐项取对数？
+\end{prob}
+
+\begin{prob}[M]{223}
+设 $\varphi(x),\, \psi(x)$ 及 $f(x)$ 为单调增函数。证明：若
+\[
+\varphi(x) \leqslant f(x) \leqslant \psi(x),
+\]
+则
+\[
+\varphi[\varphi(x)] \leqslant f[f(x)] \leqslant \psi[\psi(x)].
+\]
+\end{prob}
+
+\probgroup{求反函数 $x = \varphi(y)$ 和它的存在域，若：}
+
+\begin{prob}[S]{224}
+$y = 2x + 3\ (-\infty < x < +\infty)$.
+\end{prob}
+
+\begin{prob}[M]{225}
+$y = x^2$；(a) $(-\infty < x \leqslant 0)$；\qquad (b) $(0 \leqslant x < +\infty)$。
+\end{prob}
+
+\begin{prob}[S]{226}
+$y = \dfrac{1 - x}{1 + x}\ (x \neq -1)$.
+\end{prob}
+
+\begin{prob}[M]{227}
+$y = \sqrt{1 - x^2}$；(a) $(-1 \leqslant x \leqslant 0)$；\qquad (b) $(0 \leqslant x \leqslant 1)$。
+\end{prob}
+
+\begin{prob}[M]{228}
+$y = \sinh x$，式中 $\sinh x = \dfrac{1}{2}(\mathrm{e}^x - \mathrm{e}^{-x})\ (-\infty < x < +\infty)$。
+\end{prob}
+
+\begin{prob}[M]{229}
+$y = \tanh x$，其中 $\tanh x = \dfrac{\mathrm{e}^x - \mathrm{e}^{-x}}{\mathrm{e}^x + \mathrm{e}^{-x}}\ (-\infty < x < +\infty)$。
+\end{prob}
+
+\begin{prob}[M]{230}
+\[
+y = \begin{cases}
+x, & -\infty < x < 1, \\
+x^2, & 1 \leqslant x \leqslant 4, \\
+2^x, & 4 < x < +\infty.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[L]{231}
+设函数 $f(x)$ 定义于对称区间 $(-l, l)$，若
+\[
+f(-x) \equiv f(x),
+\]
+则称 $f(x)$ 为偶函数；若
+\[
+f(-x) \equiv -f(x),
+\]
+则称 $f(x)$ 为奇函数。
+
+确定下列函数中哪些是偶函数，哪些是奇函数：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = 3x - x^3$;
+\item $f(x) = \sqrt[3]{(1 - x)^2} + \sqrt[3]{(1 + x)^2}$;
+\item $f(x) = a^x + a^{-x}\ (a > 0)$;
+\item $f(x) = \ln\dfrac{1 - x}{1 + x}$;
+\item $f(x) = \ln\!\left(x + \sqrt{1 + x^2}\right)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{232}
+证明：定义于对称区间 $(-l, l)$ 的任何函数 $f(x)$ 可以表示为偶函数与奇函数之和的形式。
+\end{prob}
+
+\begin{prob}[L]{233}
+若存在数 $T > 0$（函数的周期——在广义的意义上！），使定义于集合 $E$ 的函数 $f(x)$ 满足等式
+\[
+f(x \pm T) = f(x) \quad (x \in E),
+\]
+则函数 $f(x)$ 称为周期函数。
+
+说明下列函数中哪些是周期函数，并求它们的最小周期：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = A\cos\lambda x + B\sin\lambda x$;
+\item $f(x) = \sin x + \dfrac{1}{2}\sin 2x + \dfrac{1}{3}\sin 3x$;
+\item $f(x) = 2\tan\dfrac{x}{2} - 3\tan\dfrac{x}{3}$;
+\item $f(x) = \sin^2 x$;
+\item $f(x) = \sin x^2$;
+\item $f(x) = \sqrt{\tan x}$;
+\item $f(x) = \tan\sqrt{x}$;
+\item $f(x) = \sin x + \sin(x\sqrt{2})$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{234}
+证明：对于狄利克雷函数
+\[
+\chi(x) = \begin{cases}
+1, & x\text{ 为有理数}, \\
+0, & x\text{ 为无理数},
+\end{cases}
+\]
+任何有理数皆为其周期。
+\end{prob}
+
+\begin{prob}[M]{235.1}
+证明：定义于共同的集合且周期可公度的两个周期函数之和及其乘积也是周期函数。
+\end{prob}
+
+\begin{prob}[M]{235.2}
+若
+\[
+f(x + T) \equiv -f(x) \quad (T > 0),
+\]
+则函数 $f(x)$ 称为反周期函数。证明：此函数是以 $2T$ 为周期的函数。
+\end{prob}
+
+\begin{prob}[M]{236}
+证明：若函数 $f(x)\ (-\infty < x < +\infty)$ 满足等式 $f(x + T) = kf(x)$，式中 $k$ 和 $T$ 为正的常数，则 $f(x) = a^x\varphi(x)$，式中 $a$ 为常数，而 $\varphi(x)$ 为以 $T$ 为周期的函数。
+\end{prob}
+
+\probsec{§4. 函数的图像表示法}
+
+\begin{prob}[M]{237}
+作出线性齐次函数 $y = ax$ 当 $a = 0,\, \dfrac{1}{2},\, 1,\, 2,\, -1$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{238}
+作出线性函数 $y = x + b$ 当 $b = 0,\, 1,\, 2,\, -1$ 时的图像。
+\end{prob}
+
+\begin{prob}[L]{239}
+作出线性函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y = 2x + 3$;
+\item $y = 2 - 0.1x$;
+\item $y = -\dfrac{x}{2} - 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{240}
+铁的线膨胀系数 $\alpha = 1.2 \times 10^{-5}\,\mathrm{K}^{-1}$。在适当的尺度下作出函数
+\[
+l = f(T) \quad (233\,\mathrm{K} \leqslant T \leqslant 373\,\mathrm{K})
+\]
+的图像，其中 $T$ 表示温度，$l$ 表示当温度为 $T$ 时细长铁棒的长，已知当 $T = 273\,\mathrm{K}$ 时，$l = 100\,\mathrm{cm}$。
+\end{prob}
+
+\begin{prob}[M]{241}
+二质点沿数轴运动，第一个质点在初始时刻 $t = 0$ 时位于坐标原点左方 $20\,\mathrm{m}$ 处，其速度为 $v_1 = 10\,\mathrm{m/s}$；第二个质点在 $t = 0$ 时位于原点 $O$ 右方 $30\,\mathrm{m}$ 处，其速度为 $v_2 = -20\,\mathrm{m/s}$。作出此二点运动方程的图像并求它们相遇的时刻和位置。
+\end{prob}
+
+\begin{prob}[L]{242}
+作出二次有理函数的图像（抛物线）：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y = ax^2$，当 $a = 1,\, \dfrac{1}{2},\, 2,\, -1$;
+\item $y = (x - x_0)^2$，当 $x_0 = 0,\, 1,\, 2,\, -1$;
+\end{enumerate}
+(c) $y = x^2 + c$，当 $c = 0, 1, 2, -1$.
+\end{prob}
+
+\begin{prob}[L]{243}
+把二次三项式 $y = ax^2 + bx + c$ 化为 $y = y_0 + a(x - x_0)^2$ 的形式，再作出它的图像。研究例子：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = 8x - 2x^2$;
+  \item $y = x^2 - 3x + 2$;
+  \item $y = -x^2 + 2x - 1$;
+  \item $y = \dfrac{1}{2}x^2 + x + 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{244}
+质点以初速度 $v_0 = 600\,\mathrm{m/s}$ 沿与水平面成角 $\alpha = 45^\circ$ 的方向射出。作出运动轨迹的图像并求最大上升高度及射程（取 $g \approx 10\,\mathrm{m/s^2}$，不计空气阻力）。
+\end{prob}
+
+\probgroup{作出下列高于二次的有理函数的图像：}
+
+\begin{prob}[S]{245}
+$y = x^3 + 1$.
+\end{prob}
+
+\begin{prob}[S]{246}
+$y = (1 - x^2)(2 + x)$.
+\end{prob}
+
+\begin{prob}[S]{247}
+$y = x^2 - x^4$.
+\end{prob}
+
+\begin{prob}[S]{248}
+$y = x(a - x)^2(a + x)^3 \ (a > 0)$.
+\end{prob}
+
+\probgroup{作出下列分式线性函数的图像（双曲线）：}
+
+\begin{prob}[S]{249}
+$y = \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{250}
+$y = \dfrac{1 - x}{1 + x}$.
+\end{prob}
+
+\begin{prob}[M]{251}
+把分式线性函数
+\[
+y = \frac{ax + b}{cx + d} \quad (ad - bc \neq 0,\ c \neq 0)
+\]
+化为以下形式：
+\[
+y = y_0 + \frac{m}{x - x_0},
+\]
+再作出它的图像。
+
+研究例子
+\[
+y = \frac{3x + 2}{2x - 3}.
+\]
+\end{prob}
+
+\begin{prob}[M]{252}
+设气体当压强 $p_0 = 1\,\mathrm{Pa}$ 时占有体积 $V_0 = 12\,\mathrm{m^3}$。若气体的温度保持不变，作出气体体积 $V$ 对压强 $p$ 的依赖关系的图像（玻意耳--马略特定律）。
+\end{prob}
+
+\probgroup{作下列分式有理函数的图像：}
+
+\begin{prob}[S]{253}
+$y = x + \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{254}
+$y = x^2 + \dfrac{1}{x}$（牛顿三叉线）。
+\end{prob}
+
+\begin{prob}[S]{255}
+$y = x + \dfrac{1}{x^2}$.
+\end{prob}
+
+\begin{prob}[S]{256}
+$y = \dfrac{1}{1 + x^2}$（箕舌线）。
+\end{prob}
+
+\begin{prob}[S]{257}
+$y = \dfrac{2x}{1 + x^2}$（牛顿蛇形线）。
+\end{prob}
+
+\begin{prob}[S]{258}
+$y = \dfrac{1}{1 - x^2}$.
+\end{prob}
+
+\begin{prob}[S]{259}
+$y = \dfrac{x}{1 - x^2}$.
+\end{prob}
+
+\begin{prob}[S]{260}
+$y = \dfrac{1}{1 + x} - \dfrac{2}{x} + \dfrac{1}{1 - x}$.
+\end{prob}
+
+\begin{prob}[S]{261}
+$y = \dfrac{1}{1 + x} - \dfrac{2}{x^2} + \dfrac{1}{1 - x}$.
+\end{prob}
+
+\begin{prob}[S]{262}
+$y = \dfrac{(x + 1)(x - 2)}{(x - 1)(x + 2)}$.
+\end{prob}
+
+\begin{prob}[M]{263}
+把函数
+\[
+y = \frac{ax^2 + bx + c}{a_1 x + b_1} \quad (a_1 \neq 0)
+\]
+化为以下形式：
+\[
+y = kx + m + \frac{n}{x - x_0},
+\]
+然后作出它的草图。
+
+研究例子
+\[
+y = \frac{x^2 - 4x + 3}{x + 1}.
+\]
+\end{prob}
+
+\begin{prob}[M]{264}
+一质点与引力中心相距 $x$，质点所受引力的大小为 $F$，并且当 $x = 1\,\mathrm{m}$ 时 $F = 10\,\mathrm{N}$。作出引力 $F$ 的图像（牛顿定律）。
+\end{prob}
+
+\begin{prob}[M]{265}
+根据范德瓦耳斯定律，当温度不变时，真实气体的体积 $V$ 与压强 $p$ 以关系式
+\[
+\left(p + \frac{a}{V^2}\right)(V - b) = c
+\]
+相联系。若 $a = 2, b = 0.1$ 及 $c = 10$，作出函数 $p = p(V)$ 的图像。
+\end{prob}
+
+\probgroup{作下列无理函数的图像：}
+
+\begin{prob}[S]{266}
+$y = \pm\sqrt{-x - 2}$（抛物线）。
+\end{prob}
+
+\begin{prob}[S]{267}
+$y = \pm x\sqrt{x}$（半三次抛物线）。
+\end{prob}
+
+\begin{prob}[S]{268}
+$y = \pm\dfrac{1}{2}\sqrt{100 - x^2}$（椭圆）。
+\end{prob}
+
+\begin{prob}[S]{269}
+$y = \pm\sqrt{x^2 - 1}$（双曲线）。
+\end{prob}
+
+\begin{prob}[S]{270}
+$y = \pm\sqrt{\dfrac{1 - x}{1 + x}}$.
+\end{prob}
+
+\begin{prob}[S]{271}
+$y = \pm x\sqrt{100 - x^2}$.
+\end{prob}
+
+\begin{prob}[S]{272}
+$y = \pm x\sqrt{\dfrac{x}{10 - x}}$（蔓叶线）。
+\end{prob}
+
+\begin{prob}[S]{273}
+$y = \pm\sqrt{(x^2 - 1)(9 - x^2)}$.
+\end{prob}
+
+\begin{prob}[M]{274}
+作幂函数 $y = x^n$ 当 (a) $n = 1, 3, 5$; (b) $n = 2, 4, 6$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{275}
+作幂函数 $y = x^n$ 当 (a) $n = -1, -3$; (b) $n = -2, -4$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{276}
+作根式 $y = \sqrt[m]{x}$ 当 (a) $m = 2, 4$; (b) $m = 3, 5$ 时的图像。
+\end{prob}
+
+\begin{prob}[L]{277}
+设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $m = 2,\ k = 1$;
+  \item $m = 2,\ k = 3$;
+  \item $m = 3,\ k = 1$;
+  \item $m = 3,\ k = 2$;
+  \item $m = 3,\ k = 4$;
+  \item $m = 4,\ k = 2$;
+  \item $m = 4,\ k = 3$.
+\end{enumerate}
+作根式 $y = \sqrt[m]{x^k}$ 的图像。
+\end{prob}
+
+\begin{prob}[M]{278}
+作指数函数 $y = a^x$ 当 $a = \dfrac{1}{2}, 1, 2, \mathrm{e}, 10$ 时的图像。
+\end{prob}
+
+\begin{prob}[L]{279}
+作复合指数函数 $y = \mathrm{e}^{y_1}$ 的图像，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y_1 = x^2$;
+  \item $y_1 = -x^2$;
+  \item $y_1 = \dfrac{1}{x}$;
+  \item $y_1 = \dfrac{1}{x^2}$;
+  \item $y_1 = -\dfrac{1}{x^2}$;
+  \item $y_1 = \dfrac{2x}{1 - x^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{280}
+作对数函数 $y = \log_a x$ 当 $a = \dfrac{1}{2}, 2, \mathrm{e}, 10$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{281}
+作下列函数的图像：
+
+(a) $y = \ln(-x)$; \qquad (b) $y = -\ln(x)$.
+\end{prob}
+
+\begin{prob}[L]{282}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y_1 = 1 + x^2$;
+  \item $y_1 = (x - 1)(x - 2)^2(x - 3)^3$;
+  \item $y_1 = \dfrac{1 - x}{1 + x}$;
+  \item $y_1 = \dfrac{1}{x^2}$;
+  \item $y_1 = 1 + \mathrm{e}^x$.
+\end{enumerate}
+作出对数复合函数 $y = \ln y_1$ 的图像。
+\end{prob}
+
+\begin{prob}[S]{283}
+作函数 $y = \log_x 2$ 的图像。
+\end{prob}
+
+\begin{prob}[S]{284}
+作函数 $y = A\sin x$ 当 $A = 1, 10, -2$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{285}
+作函数 $y = \sin(x - x_0)$ 在 $x_0 = 0, \dfrac{\pi}{4}, \dfrac{\pi}{2}, \dfrac{3\pi}{4}, \pi$ 时的图像。
+\end{prob}
+
+\begin{prob}[M]{286}
+作函数 $y = \sin nx$ 的图像。设 $n = 1, 2, 3, \dfrac{1}{2}, \dfrac{1}{3}$。
+\end{prob}
+
+\begin{prob}[M]{287}
+把函数 $y = a\cos x + b\sin x$ 化为以下形式 $y = A\sin(x - x_0)$，再作它的图像。研究例子：$y = 6\cos x + 8\sin x$。
+\end{prob}
+
+\probgroup{作下列三角函数的图像：}
+
+\begin{prob}[S]{288}
+$y = \cos x$.
+\end{prob}
+
+\begin{prob}[S]{289}
+$y = \tan x$.
+\end{prob}
+
+\begin{prob}[S]{290}
+$y = \cot x$.
+\end{prob}
+
+\begin{prob}[S]{291}
+$y = \sec x$.
+\end{prob}
+
+\begin{prob}[S]{292}
+$y = \csc x$.
+\end{prob}
+
+\begin{prob}[S]{293}
+$y = \sin^2 x$.
+\end{prob}
+
+\begin{prob}[S]{294}
+$y = \sin^3 x$.
+\end{prob}
+
+\begin{prob}[S]{295}
+$y = \cot^2 x$.
+\end{prob}
+
+\begin{prob}[S]{296}
+$y = \sin x \cdot \sin 3x$.
+\end{prob}
+
+\begin{prob}[S]{297}
+$y = \pm\sqrt{\cos x}$.
+\end{prob}
+
+\probgroup{作下列函数的图像：}
+
+\begin{prob}[S]{298}
+$y = \sin x^2$.
+\end{prob}
+
+\begin{prob}[S]{299}
+$y = \sin\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[M]{300}
+(a) $y = x\cos\dfrac{\pi}{x}$; \qquad (b) $y = \sin x \cdot \sin\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[M]{301}
+(a) $y = \tan\dfrac{\pi}{x}$; \qquad (b) $y = \sec\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{302}
+$y = x\left(2 + \sin\dfrac{1}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{303}
+$y = \pm\sqrt{1 - x^2}\sin\dfrac{\pi}{x}$.
+\end{prob}
+
+\begin{prob}[S]{304}
+$y = \dfrac{\sin x}{x}$.
+\end{prob}
+
+\begin{prob}[S]{305}
+$y = \mathrm{e}^x\cos x$.
+\end{prob}
+
+\begin{prob}[S]{306}
+$y = \pm 2^{-x}\sqrt{\sin\pi x}$.
+\end{prob}
+
+\begin{prob}[S]{307}
+$y = \dfrac{\cos x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{308}
+$y = \ln(\cos x)$.
+\end{prob}
+
+\begin{prob}[S]{309}
+$y = \cos(\ln x)$.
+\end{prob}
+
+\begin{prob}[S]{310}
+$y = \mathrm{e}^{\frac{1}{\sin x}}$.
+\end{prob}
+
+\probgroup{作下列反三角函数的图像：}
+
+\begin{prob}[S]{311}
+$y = \arcsin x$.
+\end{prob}
+
+\begin{prob}[S]{312}
+$y = \arccos x$.
+\end{prob}
+
+\begin{prob}[S]{313}
+$y = \arctan x$.
+\end{prob}
+
+\begin{prob}[S]{314}
+$y = \operatorname{arccot} x$.
+\end{prob}
+
+\begin{prob}[S]{315}
+$y = \arcsin\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{316}
+$y = \arccos\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{317}
+$y = \arctan\dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{318}
+$y = \arcsin(\sin x)$.
+\end{prob}
+
+\begin{prob}[S]{319}
+$y = \arcsin(\cos x)$.
+\end{prob}
+
+\begin{prob}[S]{320}
+$y = \arccos(\cos x)$.
+\end{prob}
+
+\begin{prob}[S]{321}
+$y = \arctan(\tan x)$.
+\end{prob}
+
+\begin{prob}[S]{322}
+$y = \arcsin(2\sin x)$.
+\end{prob}
+
+\begin{prob}[L]{323}
+设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y_1 = 1 - \dfrac{x}{2}$;
+  \item $y_1 = \dfrac{2x}{1 + x^2}$;
+  \item $y_1 = \dfrac{1 - x}{1 + x}$;
+  \item $y_1 = \mathrm{e}^x$.
+\end{enumerate}
+作函数 $y = \arcsin y_1$ 的图像。
+\end{prob}
+
+\begin{prob}[L]{324.1}
+设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y_1 = x^2$;
+  \item $y_1 = \dfrac{1}{x^2}$;
+  \item $y_1 = \ln x$;
+  \item $y_1 = \dfrac{1}{\sin x}$.
+\end{enumerate}
+作函数 $y = \arctan y_1$ 的图像。
+\end{prob}
+
+\begin{prob}[L]{324.2}
+作下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = x^3 - 3x + 2$;
+  \item $y = \dfrac{x^3}{(1 - x)(1 + x)^2}$;
+  \item $y = \dfrac{x^2}{|x| - 1}$;
+  \item $y = \sqrt{x(1 - x^2)}$;
+  \item $y = 3\sin\left(\dfrac{x}{2} + \dfrac{\pi}{4}\right)$;
+  \item $y = \cot\dfrac{\pi x}{1 + x^2}$;
+  \item $y = \dfrac{1}{1 - 2^{\frac{x}{1 - x}}}$;
+  \item $y = \lg(x^2 - 3x + 2)$;
+  \item $y = \arcsin\left(\dfrac{3}{2} - \sin x\right)$;
+  \item $y = \arctan\left(\dfrac{1}{x - 1} + \dfrac{1}{x - 2} + \dfrac{1}{x - 3}\right)$;
+  \item $y = \log_{\cos x} \sin x$;
+  \item $y = (\sin x)^{\cot x}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{325}
+已知函数 $y = f(x)$ 的图像，作下列各函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = -f(x)$;
+  \item $y = f(-x)$;
+  \item $y = -f(-x)$;
+  \item $y = f(x - x_0)$;
+  \item $y = y_0 + f(x - x_0)$;
+  \item $y = f(2x)$;
+  \item $y = f(kx + b) \ (k \neq 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{326}
+设
+\[
+f(x) = \begin{cases}
+1 - |x|, & |x| \leqslant 1, \\
+0, & |x| > 1.
+\end{cases}
+\]
+作函数
+\[
+y = \frac{1}{2}(f(x - t) + f(x + t))
+\]
+当 $t = 0, t = 1$ 及 $t = 2$ 时的图像。
+\end{prob}
+
+\begin{prob}[L]{327}
+作函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = 2 + \sqrt{1 - x}$;
+  \item $y = 1 - \mathrm{e}^{-x}$;
+  \item $y = \ln(1 + x)$;
+  \item $y = -\arcsin(1 + x)$;
+  \item $y = 3 + 2\cos 3x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{328}
+已知函数 $y = f(x)$ 的图像，作下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = |f(x)|$;
+  \item $y = \dfrac{1}{2}(|f(x)| + f(x))$;
+  \item $y = \dfrac{1}{2}(|f(x)| - f(x))$;
+  \item $y = f^2(x)$;
+  \item $y = \sqrt{f(x)}$;
+  \item $y = \ln f(x)$;
+  \item $y = f(f(x))$;
+  \item $y = \operatorname{sgn} f(x)$;
+  \item $y = [f(x)]$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{329.1}
+设
+\[
+f(x) = (x - a)(b - x) \quad (a < b),
+\]
+作下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = f(x)$;
+  \item $y = f^2(x)$;
+  \item $y = \dfrac{1}{f(x)}$;
+  \item $y = \sqrt{f(x)}$;
+  \item $y = \mathrm{e}^{f(x)}$;
+  \item $y = \lg f(x)$;
+  \item $y = \operatorname{arccot} f(x)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{329.2}
+若 (1) $f(x) = x^2$; (2) $f(x) = x^3$，作如下函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = \arcsin(\sin f(x))$;
+  \item $y = \arcsin(\cos f(x))$;
+  \item $y = \arccos(\sin f(x))$;
+  \item $y = \arccos(\cos f(x))$;
+  \item $y = \arctan(\tan f(x))$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{330}
+已知函数 $y = f(x)$ 和 $y = g(x)$ 的图像，作下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = f(x) + g(x)$;
+  \item $y = f(x)g(x)$;
+  \item $y = f(g(x))$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{利用图像的加法，作下列函数的图像：}
+
+\begin{prob}[S]{331}
+$y = 1 + x + \mathrm{e}^x$.
+\end{prob}
+
+\begin{prob}[S]{332}
+$y = (x + 1)^{-2} + (x - 1)^{-2}$.
+\end{prob}
+
+\begin{prob}[S]{333}
+$y = x + \sin x$.
+\end{prob}
+
+\begin{prob}[S]{334}
+$y = x + \arctan x$.
+\end{prob}
+
+\begin{prob}[S]{335}
+$y = \cos x + \dfrac{1}{2}\cos 2x + \dfrac{1}{3}\cos 3x$.
+\end{prob}
+
+\begin{prob}[S]{336}
+$y = \sin x - \dfrac{1}{3}\sin 3x + \dfrac{1}{5}\sin 5x$.
+\end{prob}
+
+\begin{prob}[S]{337}
+$y = \sin^4 x + \cos^4 x$.
+\end{prob}
+
+\begin{prob}[S]{338}
+$y = |1 - x| + |1 + x|$.
+\end{prob}
+
+\begin{prob}[S]{339}
+$y = |1 - x| - |1 + x|$.
+\end{prob}
+
+\begin{prob}[L]{340}
+作双曲函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = \cosh x$，式中 $\cosh x = \dfrac{1}{2}(\mathrm{e}^x + \mathrm{e}^{-x})$;
+  \item $y = \sinh x$，式中 $\sinh x = \dfrac{1}{2}(\mathrm{e}^x - \mathrm{e}^{-x})$;
+  \item $y = \tanh x$，式中 $\tanh x = \dfrac{\sinh x}{\cosh x}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{利用图像的乘法，作下列函数的图像：}
+
+\begin{prob}[S]{341}
+$y = x\sin x$.
+\end{prob}
+
+\begin{prob}[S]{342}
+$y = x\cos x$.
+\end{prob}
+
+\begin{prob}[S]{343}
+$y = x^2 \sin^2 x$.
+\end{prob}
+
+\begin{prob}[S]{344}
+$y = \dfrac{\sin x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{345}
+$y = \mathrm{e}^{-x^2} \cos 2x$.
+\end{prob}
+
+\begin{prob}[S]{346}
+$y = x \operatorname{sgn}(\sin x)$.
+\end{prob}
+
+\begin{prob}[S]{347}
+$y = [x] |\sin \pi x|$.
+\end{prob}
+
+\begin{prob}[S]{348}
+$y = \cos x \cdot \operatorname{sgn}(\sin x)$.
+\end{prob}
+
+\begin{prob}[L]{349}
+设
+\[
+f(x) = \begin{cases}
+1 - |x|, & |x| \leqslant 1, \\
+0, & |x| > 1.
+\end{cases}
+\]
+作函数 $y = f(x) f(a - x)$ 当 (a) $a = 0$; (b) $a = 1$; (c) $a = 2$ 时的图像.
+\end{prob}
+
+\begin{prob}[M]{350}
+作函数 $y = x + \sqrt{x} \operatorname{sgn}(\sin \pi x)$ 的图像.
+\end{prob}
+
+\probgroup{作函数 $y = \dfrac{1}{f(x)}$ 的图像，设：}
+
+\begin{prob}[S]{351}
+$f(x) = x^2(1 - x^2)$.
+\end{prob}
+
+\begin{prob}[S]{352}
+$f(x) = x(1 - x)^2$.
+\end{prob}
+
+\begin{prob}[S]{353}
+$f(x) = \sin^2 x$.
+\end{prob}
+
+\begin{prob}[S]{354}
+$f(x) = \ln x$.
+\end{prob}
+
+\begin{prob}[S]{355}
+$f(x) = \mathrm{e}^x \sin x$.
+\end{prob}
+
+\begin{prob}[M]{356}
+设
+\[
+f(u) = \begin{cases}
+-1, & -\infty < u < -1, \\
+u, & -1 \leqslant u \leqslant 1, \\
+1, & 1 < u < +\infty.
+\end{cases}
+\]
+作复合函数 $y = f(u)$ 的图像，其中 $u = 2\sin x$.
+\end{prob}
+
+\begin{prob}[L]{357}
+设
+\[
+\varphi(x) = \frac{1}{2}(x + |x|) \quad \text{和} \quad \psi(x) = \begin{cases}
+x, & x < 0, \\
+x^2, & x \geqslant 0.
+\end{cases}
+\]
+作下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = \varphi(\varphi(x))$;
+  \item $y = \varphi(\psi(x))$;
+  \item $y = \psi(\varphi(x))$;
+  \item $y = \psi(\psi(x))$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{358}
+设
+\[
+\varphi(x) = \begin{cases}
+1, & |x| \leqslant 1, \\
+0, & |x| > 1
+\end{cases} \quad \text{及} \quad \psi(x) = \begin{cases}
+2 - x^2, & |x| \leqslant 2, \\
+2, & |x| > 2.
+\end{cases}
+\]
+作函数
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = \varphi(\varphi(x))$;
+  \item $y = \varphi(\psi(x))$;
+  \item $y = \psi(\varphi(x))$;
+  \item $y = \psi(\psi(x))$.
+\end{enumerate}
+的图像.
+\end{prob}
+
+\begin{prob}[L]{359}
+把定义于正数区域 $x > 0$ 的函数 $f(x)$ 延拓到负数区域 $x < 0$，使所得的函数为：(1) 偶函数；(2) 奇函数，并分别作出所得函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = 1 - x$;
+  \item $f(x) = 2x - x^2$;
+  \item $f(x) = \sqrt{x}$;
+  \item $f(x) = \sin x$;
+  \item $f(x) = \mathrm{e}^x$;
+  \item $f(x) = \ln x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{360}
+确定下列函数的图像在竖直方向上的对称轴：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = ax^2 + bx + c$;
+  \item $y = \dfrac{1}{x^2} + \dfrac{1}{(1 - x)^2}$;
+  \item $y = \sqrt{a + x} + \sqrt{b - x}$ ($0 < a < b$);
+  \item $y = a + b\cos x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{361}
+确定下列函数的图像的对称中心：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = ax + b$;
+  \item $y = \dfrac{ax + b}{cx + d}$;
+  \item $y = ax^3 + bx^2 + cx + d$;
+  \item $y = \dfrac{1}{x - 1} + \dfrac{1}{x - 2} + \dfrac{1}{x - 3}$;
+  \item $y = 1 + \sqrt[3]{x - 2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{362}
+作周期函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $y = |\sin x|$;
+  \item $y = \operatorname{sgn}\cos x$;
+  \item $y = f(x)$，其中 $f(x) = A\dfrac{x}{l}\left(2 - \dfrac{x}{l}\right)$，假设 $0 \leqslant x \leqslant 2l$ 和 $f(x + 2l) \equiv f(x)$;
+  \item $y = [x] - 2\left[\dfrac{x}{2}\right]$;
+  \item $y = (x)$，此处 $(x)$ 为从数 $x$ 到最近的整数的距离.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{363}
+证明：若函数 $y = f(x)$ ($-\infty < x < +\infty$) 的图像关于竖直方向上的两条直线 $x = a$ 和 $x = b$ ($b > a$) 对称，则函数 $f(x)$ 为周期函数.
+\end{prob}
+
+\begin{prob}[M]{364}
+证明：若函数 $y = f(x)$ ($-\infty < x < +\infty$) 的图像关于两点 $A(a, y_0)$ 和 $B(b, y_1)$ ($b > a$) 对称，则函数 $f(x)$ 是线性函数与周期函数的和. 特别是，若 $y_0 = y_1$，则函数 $f(x)$ 是周期函数.
+\end{prob}
+
+\begin{prob}[M]{365}
+证明：若函数 $y = f(x)$ ($-\infty < x < +\infty$) 的图像关于点 $A(a, y_0)$ 和直线 $x = b$ ($b \neq a$) 对称，则函数 $f(x)$ 为周期函数.
+\end{prob}
+
+\begin{prob}[M]{366}
+设 $f(x + 1) = 2f(x)$，且当 $0 \leqslant x \leqslant 1$ 时 $f(x) = x(1 - x)$，作函数 $y = f(x)$ ($-\infty < x < +\infty$) 的图像.
+\end{prob}
+
+\begin{prob}[M]{367}
+设 $f(x + \pi) = f(x) + \sin x$，且当 $0 \leqslant x \leqslant \pi$ 时 $f(x) = 0$. 作函数 $y = f(x)$ ($-\infty < x < +\infty$) 的图像.
+\end{prob}
+
+\begin{prob}[L]{368}
+作函数 $y = y(x)$ 的图像，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $x = y - y^3$;
+  \item $x = \dfrac{1 - y}{1 + y^2}$;
+  \item $x = y - \ln y$;
+  \item $x^2 = \sin y$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{369}
+作出下列用参数形式表示的函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $x = 1 - t$, $y = 1 - t^2$;
+  \item $x = t + \dfrac{1}{t}$, $y = t + \dfrac{1}{t^2}$;
+  \item $x = 10\cos t$, $y = \sin t$ (椭圆);
+  \item $x = \cosh t$, $y = \sinh t$ (双曲线);
+  \item $x = 5\cos^2 t$, $y = 3\sin^2 t$;
+  \item $x = 2(t - \sin t)$, $y = 2(1 - \cos t)$ (摆线);
+  \item $x = \sqrt[t+1]{t}$, $y = \sqrt[t]{t + 1}$ ($t > 0$).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{370.1}
+作下列隐函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $x^2 - xy + y^2 = 1$ (椭圆);
+  \item $x^3 + y^3 - 3xy = 0$ (笛卡儿叶形线);
+  \item $\sqrt{x} + \sqrt{y} = 1$ (抛物线);
+  \item $x^{\frac{2}{3}} + y^{\frac{2}{3}} = 4$ (星形线);
+  \item $\sin x = \sin y$;
+  \item $\cos(\pi x^2) = \cos(\pi y)$;
+  \item $x^y = y^x$ ($x > 0, y > 0$);
+  \item $x - |x| = y - |y|$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{370.2}
+作下列隐函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\min(x, y) = 1$;
+  \item $\max(x, y) = 1$;
+  \item $\max(|x|, |y|) = 1$;
+  \item $\min(x^2, y) = 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{371.1}
+在极坐标系 $(r, \varphi)$ 中作出下列函数 $r = r(\varphi)$ 的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $r = \varphi$ (阿基米德螺线);
+  \item $r = \dfrac{\pi}{\varphi}$ (双曲螺线);
+  \item $r = \dfrac{\varphi}{\varphi + 1}$ ($0 \leqslant \varphi < +\infty$);
+  \item $r = 2^{\frac{\varphi}{2\pi}}$ (对数螺线);
+  \item $r = 2(1 + \cos\varphi)$ (心脏线);
+  \item $r = 10\sin 3\varphi$ (三瓣玫瑰线);
+  \item $r^2 = 36\cos 2\varphi$ (伯努利双纽线);
+  \item $\varphi = \dfrac{r}{r - 1}$ ($r > 1$);
+  \item $\varphi = 2\pi\sin r$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{371.2}
+在极坐标系 $(r, \varphi)$ 中作出下列函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\varphi = 4r - r^2$;
+  \item $\varphi = \dfrac{12r}{1 + r^2}$;
+  \item $r^2 + \varphi^2 = 100$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{371.3}
+在极坐标系 $(r, \varphi)$ 中作出以参数方程表示的函数的图像 ($t \geqslant 0$ 为参数)：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\begin{cases} \varphi = t\cos^2 t, \\ r = t\sin^2 t; \end{cases}$
+  \item $\begin{cases} \varphi = 1 - 2^{-t}\sin\dfrac{\pi t}{2}, \\ r = 1 - 2^{-t}\cos\dfrac{\pi t}{2}. \end{cases}$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{372}
+利用函数 $y = x^3 - 3x + 1$ 的图像近似地求解方程 $x^3 - 3x + 1 = 0$.
+\end{prob}
+
+\probgroup{用图解法解下列方程：}
+
+\begin{prob}[S]{373}
+$x^3 - 4x - 1 = 0$.
+\end{prob}
+
+\begin{prob}[S]{374}
+$x^4 - 4x + 1 = 0$.
+\end{prob}
+
+\begin{prob}[S]{375}
+$x = 2^{-x}$.
+\end{prob}
+
+\begin{prob}[S]{376}
+$\lg x = 0.1x$.
+\end{prob}
+
+\begin{prob}[S]{377}
+$10^x = x^2$.
+\end{prob}
+
+\begin{prob}[S]{378}
+$\tan x = x$ ($0 \leqslant x \leqslant 2\pi$).
+\end{prob}
+
+\probgroup{用图解法解下列方程组：}
+
+\begin{prob}[S]{379}
+$\begin{cases} x + y^2 = 1, \\ 16x^2 + y = 4. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{380}
+$\begin{cases} x^2 + y^2 = 100, \\ y = 10(x^2 - x - 2). \end{cases}$
+\end{prob}
+
+\probsec{§5. 函数的极限}
+
+\begin{prob}[M]{381}
+证明：函数
+\[
+f(x) = \begin{cases}
+n, & x = \dfrac{m}{n} \text{（$m$ 和 $n$ 为互素的整数，且 $n > 0$）}, \\
+0, & x \text{ 为无理数},
+\end{cases}
+\]
+在每一点 $x$ 为有限的，但并非有界的（即在这点的任何邻域中是无界的）.
+\end{prob}
+
+\begin{prob}[M]{382}
+若函数 $f(x)$ 在：(a) 开区间，(b) 闭区间内的每一点有定义且局部有界，则此函数在该开区间或闭区间内是否有界的？举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{383}
+证明：函数
+\[
+f(x) = \frac{1 + x^2}{1 + x^4}
+\]
+在区间 $-\infty < x < +\infty$ 中是有界的.
+\end{prob}
+
+\begin{prob}[M]{384}
+证明：函数
+\[
+f(x) = \frac{1}{x} \cos \frac{1}{x}
+\]
+在点 $x = 0$ 的任何邻域内是无界的，但在 $x \to 0$ 时不成为无穷大.
+\end{prob}
+
+\begin{prob}[M]{385}
+研究函数 $f(x) = \ln x \cdot \sin^2 \dfrac{\pi}{x}$ 在区间 $0 < x < \varepsilon$ 内的有界性.
+\end{prob}
+
+\begin{prob}[M]{386}
+证明：函数
+\[
+f(x) = \frac{x}{1 + x}
+\]
+在区域 $0 \leqslant x < +\infty$ 内有下确界 $m = 0$ 和上确界 $M = 1$.
+\end{prob}
+
+\begin{prob}[S]{387}
+函数 $f(x)$ 在闭区间 $[a, b]$ 上有定义且单调上升，则在此闭区间内函数的下确界和上确界等于什么？
+\end{prob}
+
+\probgroup{求下列函数的下确界和上确界：}
+
+\begin{prob}[S]{388}
+$f(x) = x^2$ 在 $[-2, 5]$ 内.
+\end{prob}
+
+\begin{prob}[S]{389}
+$f(x) = \dfrac{1}{1 + x^2}$ 在 $(-\infty, +\infty)$ 内.
+\end{prob}
+
+\begin{prob}[S]{390}
+$f(x) = \dfrac{2x}{1 + x^2}$ 在 $(0, +\infty)$ 内.
+\end{prob}
+
+\begin{prob}[S]{391}
+$f(x) = x + \dfrac{1}{x}$ 在 $(0, +\infty)$ 内.
+\end{prob}
+
+\begin{prob}[S]{392}
+$f(x) = \sin x$ 在 $(0, +\infty)$ 内.
+\end{prob}
+
+\begin{prob}[S]{393}
+$f(x) = \sin x + \cos x$ 在 $[0, 2\pi]$ 内.
+\end{prob}
+
+\begin{prob}[S]{394}
+$f(x) = 2^x$ 在 $(-1, 2)$ 内.
+\end{prob}
+
+\begin{prob}[M]{395}
+$f(x) = [x]$：(a) 在 $(0, 2)$ 内，(b) 在 $[0, 2]$ 内.
+\end{prob}
+
+\begin{prob}[S]{396}
+$f(x) = x - [x]$ 在 $[0, 1]$ 内.
+\end{prob}
+
+\begin{prob}[L]{397}
+求函数 $f(x) = x^2$ 在下列区间内的振幅：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $(1, 3)$;
+  \item $(1.9, 2.1)$;
+  \item $(1.99, 2.01)$;
+  \item $(1.999, 2.001)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{398}
+求函数 $f(x) = \arctan\dfrac{1}{x}$ 在下列区间内的振幅：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $(-1, 1)$;
+  \item $(-0.1, 0.1)$;
+  \item $(-0.01, 0.01)$;
+  \item $(-0.001, 0.001)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{399}
+设 $m[f]$ 和 $M[f]$ 分别为函数 $f(x)$ 在区间 $(a, b)$ 内的下确界和上确界.
+证明：若 $f_1(x)$ 和 $f_2(x)$ 为定义于 $(a, b)$ 的函数，则
+\[
+m[f_1 + f_2] \geqslant m[f_1] + m[f_2],
+\]
+\[
+M[f_1 + f_2] \leqslant M[f_1] + M[f_2].
+\]
+举出函数 $f_1(x)$ 和 $f_2(x)$ 的例子，使上述两个关系式为：(a) 等式，(b) 不等式.
+\end{prob}
+
+\begin{prob}[M]{400}
+设函数 $f(x)$ 定义于区域 $[a, +\infty)$，并且在每一个闭区间 $[a, b]$ 上是有界的. 令
+\[
+m(x) = \inf_{a \leqslant \xi \leqslant x} f(\xi), \quad M(x) = \sup_{a \leqslant \xi \leqslant x} f(\xi).
+\]
+作函数 $y = m(x)$ 和 $y = M(x)$ 的图像，设
+(a) $f(x) = \sin x$; \qquad (b) $f(x) = \cos x$.
+\end{prob}
+
+\begin{prob}[M]{401}
+利用“$\varepsilon$-$\delta$”语言，证明：
+\[
+\lim_{x \to 2} x^2 = 4.
+\]
+填下表：
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+$\varepsilon$ & $0.1$ & $0.01$ & $0.001$ & $0.0001$ & $\cdots$ \\
+\hline
+$\delta$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[M]{402}
+以“$\varepsilon$-$\delta$”语言，证明：
+\[
+\lim_{x \to 1} \frac{1}{(1 - x)^2} = +\infty.
+\]
+填下表：
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+$E$ & $10$ & $100$ & $1000$ & $10000$ & $\cdots$ \\
+\hline
+$\delta$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[L]{403}
+利用不等式表示下列各式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to a} f(x) = b$;
+  \item $\lim\limits_{x \to a-0} f(x) = b$;
+  \item $\lim\limits_{x \to a+0} f(x) = b$.
+\end{enumerate}
+举出适当的例子.
+\end{prob}
+
+\probgroup{利用不等式表示下列结论，并举出适当的例子：}
+
+\begin{prob}[L]{404}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to \infty} f(x) = b$;
+  \item $\lim\limits_{x \to -\infty} f(x) = b$;
+  \item $\lim\limits_{x \to +\infty} f(x) = b$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{405}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to a} f(x) = \infty$;
+  \item $\lim\limits_{x \to a} f(x) = -\infty$;
+  \item $\lim\limits_{x \to a} f(x) = +\infty$;
+  \item $\lim\limits_{x \to a-0} f(x) = \infty$;
+  \item $\lim\limits_{x \to a-0} f(x) = -\infty$;
+  \item $\lim\limits_{x \to a-0} f(x) = +\infty$;
+  \item $\lim\limits_{x \to a+0} f(x) = \infty$;
+  \item $\lim\limits_{x \to a+0} f(x) = -\infty$;
+  \item $\lim\limits_{x \to a+0} f(x) = +\infty$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{406}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to \infty} f(x) = \infty$;
+  \item $\lim\limits_{x \to \infty} f(x) = -\infty$;
+  \item $\lim\limits_{x \to \infty} f(x) = +\infty$;
+  \item $\lim\limits_{x \to -\infty} f(x) = \infty$;
+  \item $\lim\limits_{x \to -\infty} f(x) = -\infty$;
+  \item $\lim\limits_{x \to -\infty} f(x) = +\infty$;
+  \item $\lim\limits_{x \to +\infty} f(x) = \infty$;
+  \item $\lim\limits_{x \to +\infty} f(x) = -\infty$;
+  \item $\lim\limits_{x \to +\infty} f(x) = +\infty$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{407}
+命 $y = f(x)$. 利用不等式表示下列结论：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 当 $x \to a$ 时，$y \to b - 0$;
+  \item 当 $x \to a - 0$ 时，$y \to b - 0$;
+  \item 当 $x \to a + 0$ 时，$y \to b - 0$;
+  \item 当 $x \to a$ 时，$y \to b + 0$;
+  \item 当 $x \to a - 0$ 时，$y \to b + 0$;
+  \item 当 $x \to a + 0$ 时，$y \to b + 0$;
+  \item 当 $x \to \infty$ 时，$y \to b - 0$;
+  \item 当 $x \to -\infty$ 时，$y \to b - 0$;
+  \item 当 $x \to +\infty$ 时，$y \to b - 0$;
+  \item 当 $x \to \infty$ 时，$y \to b + 0$;
+  \item 当 $x \to -\infty$ 时，$y \to b + 0$;
+  \item 当 $x \to +\infty$ 时，$y \to b + 0$.
+\end{enumerate}
+举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{408}
+设
+\[
+P(x) = a_0 x^n + a_1 x^{n-1} + \cdots + a_n,
+\]
+式中 $a_i\ (i = 0, 1, \cdots, n;\ n \geqslant 1,\ a_0 \neq 0)$ 为实数. 证明：
+\[
+\lim_{x \to \infty} |P(x)| = +\infty.
+\]
+\end{prob}
+
+\begin{prob}[M]{409}
+设
+\[
+R(x) = \frac{a_0 x^n + a_1 x^{n-1} + \cdots + a_n}{b_0 x^m + b_1 x^{m-1} + \cdots + b_m},
+\]
+式中 $a_0 \neq 0, b_0 \neq 0$，证明：
+\[
+\lim_{x \to \infty} |R(x)| = \begin{cases}
+\infty, & n > m, \\
+\dfrac{a_0}{b_0}, & n = m, \\
+0, & n < m.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{410}
+设 $R(x) = \dfrac{P(x)}{Q(x)}$，式中 $P(x)$ 和 $Q(x)$ 为 $x$ 的多项式，且 $P(a) = Q(a) = 0$. 表达式
+\[
+\lim_{x \to a} \frac{P(x)}{Q(x)}
+\]
+可能取何值？
+\end{prob}
+
+\probgroup{求下列各式之值：}
+
+\begin{prob}[L]{411}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to 0} \dfrac{x^2 - 1}{2x^2 - x - 1}$;
+  \item $\lim\limits_{x \to 1} \dfrac{x^2 - 1}{2x^2 - x - 1}$;
+  \item $\lim\limits_{x \to \infty} \dfrac{x^2 - 1}{2x^2 - x - 1}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{412}
+$\lim\limits_{x \to 0} \dfrac{(1 + x)(1 + 2x)(1 + 3x) - 1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{413}
+$\lim\limits_{x \to 0} \dfrac{(1 + x)^5 - (1 + 5x)}{x^2 + x^5}$.
+\end{prob}
+
+\begin{prob}[S]{414}
+$\lim\limits_{x \to 0} \dfrac{(1 + mx)^n - (1 + nx)^m}{x^2}$（$m$ 与 $n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{415}
+$\lim\limits_{x \to \infty} \dfrac{(x - 1)(x - 2)(x - 3)(x - 4)(x - 5)}{(5x - 1)^5}$.
+\end{prob}
+
+\begin{prob}[S]{416}
+$\lim\limits_{x \to \infty} \dfrac{(2x - 3)^{20}(3x + 2)^{30}}{(2x + 1)^{50}}$.
+\end{prob}
+
+\begin{prob}[S]{417}
+$\lim\limits_{x \to \infty} \dfrac{(x + 1)(x^2 + 1)\cdots(x^n + 1)}{[(nx)^n + 1]^{\frac{n+1}{2}}}$.
+\end{prob}
+
+\begin{prob}[S]{418}
+$\lim\limits_{x \to 3} \dfrac{x^2 - 5x + 6}{x^2 - 8x + 15}$.
+\end{prob}
+
+\begin{prob}[S]{419}
+$\lim\limits_{x \to 1} \dfrac{x^3 - 3x + 2}{x^4 - 4x + 3}$.
+\end{prob}
+
+\begin{prob}[S]{420}
+$\lim\limits_{x \to 1} \dfrac{x^4 - 3x + 2}{x^5 - 4x + 3}$.
+\end{prob}
+
+\begin{prob}[S]{421}
+$\lim\limits_{x \to 2} \dfrac{x^3 - 2x^2 - 4x + 8}{x^4 - 8x^2 + 16}$.
+\end{prob}
+
+\begin{prob}[S]{422}
+$\lim\limits_{x \to -1} \dfrac{x^3 - 2x - 1}{x^5 - 2x - 1}$.
+\end{prob}
+
+\begin{prob}[S]{423}
+$\lim\limits_{x \to 2} \dfrac{(x^2 - x - 2)^{20}}{(x^3 - 12x + 16)^{10}}$.
+\end{prob}
+
+\begin{prob}[M]{424}
+(a) $\lim\limits_{x \to 1} \dfrac{x + x^2 + \cdots + x^n - n}{x - 1}$; \qquad (b) $\lim\limits_{x \to 1} \dfrac{x^{100} - 2x + 1}{x^{50} - 2x + 1}$.
+\end{prob}
+
+\begin{prob}[S]{425}
+$\lim\limits_{x \to 1} \dfrac{x^m - 1}{x^n - 1}$（$m$ 和 $n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{426}
+$\lim\limits_{x \to a} \dfrac{(x^n - a^n) - na^{n-1}(x - a)}{(x - a)^2}$（$n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{427}
+$\lim\limits_{x \to 1} \dfrac{x^{n+1} - (n + 1)x + n}{(x - 1)^2}$（$n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{428}
+$\lim\limits_{x \to 1} \left(\dfrac{m}{1 - x^m} - \dfrac{n}{1 - x^n}\right)$（$m$ 和 $n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{429}
+$\lim\limits_{n \to \infty} \dfrac{1}{n} \left[\left(x + \dfrac{a}{n}\right) + \left(x + \dfrac{2a}{n}\right) + \cdots + \left(x + \dfrac{(n - 1)a}{n}\right)\right]$.
+\end{prob}
+
+\begin{prob}[M]{430}
+$\lim\limits_{n \to \infty} \dfrac{1}{n} \left[\left(x + \dfrac{a}{n}\right)^2 + \left(x + \dfrac{2a}{n}\right)^2 + \cdots + \left(x + \dfrac{(n - 1)a}{n}\right)^2\right]$.
+\probhint{参阅题 2.}
+\end{prob}
+
+\begin{prob}[S]{431}
+$\lim\limits_{n \to \infty} \dfrac{1^2 + 3^2 + \cdots + (2n - 1)^2}{2^2 + 4^2 + \cdots + (2n)^2}$.
+\end{prob}
+
+\begin{prob}[M]{432}
+$\lim\limits_{n \to \infty} \left(\dfrac{1^3 + 2^3 + \cdots + n^3}{n^3} - \dfrac{\pi}{4}\right)$.
+\probhint{参阅题 3.}
+\end{prob}
+
+\begin{prob}[S]{433}
+$\lim\limits_{n \to \infty} \dfrac{1^3 + 4^3 + 7^3 + \cdots + (3n - 2)^3}{[1 + 4 + 7 + \cdots + (3n - 2)]^2}$.
+\end{prob}
+
+\begin{prob}[M]{434}
+把由抛物线 $y = b\left(\dfrac{x}{a}\right)^2$，$Ox$ 轴及直线 $x = a$ 所围成的曲边三角形 $OAM$（图 3）的面积，当作以 $\dfrac{a}{n}$ 为底的各内接矩形面积之和当 $n \to \infty$ 的极限值，求此面积.
+\probfig{fig_434.png}{图 3}
+\end{prob}
+
+\probgroup{求极限：}
+
+\begin{prob}[S]{435}
+$\lim\limits_{x \to +\infty} \dfrac{\sqrt{x + \sqrt{x + \sqrt{x}}}}{\sqrt{x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{436}
+$\lim\limits_{x \to +\infty} \dfrac{\sqrt{x} + \sqrt[3]{x} + \sqrt[4]{x}}{\sqrt{2x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{437}
+$\lim\limits_{x \to 4} \dfrac{\sqrt{1 + 2x} - 3}{\sqrt{x} - 2}$.
+\end{prob}
+
+\begin{prob}[S]{438}
+$\lim\limits_{x \to -8} \dfrac{\sqrt{1 - x} - 3}{2 + \sqrt[3]{x}}$.
+\end{prob}
+
+\begin{prob}[S]{439}
+$\lim\limits_{x \to a} \dfrac{\sqrt{x} - \sqrt{a} + \sqrt{x - a}}{\sqrt{x^2 - a^2}}$.
+\end{prob}
+
+\begin{prob}[S]{440}
+$\lim\limits_{x \to 3} \dfrac{\sqrt{x + 13} - 2\sqrt{x + 1}}{x^2 - 9}$.
+\end{prob}
+
+\begin{prob}[S]{441}
+$\lim\limits_{x \to -2} \dfrac{\sqrt[3]{x - 6} + 2}{x^3 + 8}$.
+\end{prob}
+
+\begin{prob}[S]{442}
+$\lim\limits_{x \to 16} \dfrac{\sqrt[4]{x} - 2}{\sqrt{x} - 4}$.
+\end{prob}
+
+\begin{prob}[S]{443}
+$\lim\limits_{x \to 8} \dfrac{\sqrt{9 + 2x} - 5}{\sqrt[3]{x} - 2}$.
+\end{prob}
+
+\begin{prob}[S]{444}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[n]{1 + x} - 1}{x}$（$n$ 为整数）.
+\end{prob}
+
+\begin{prob}[S]{445}
+$\lim\limits_{x \to 0} \dfrac{\sqrt{1 - 2x - x^2} - (1 + x)}{x}$.
+\end{prob}
+
+\begin{prob}[S]{446}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[3]{8 + 3x - x^2} - 2}{x + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{447}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[3]{27 + x} - \sqrt[3]{27 - x}}{x + 2\sqrt[3]{x^4}}$.
+\end{prob}
+
+\begin{prob}[S]{448}
+$\lim\limits_{x \to 0} \dfrac{\sqrt{1 + x} - \sqrt{1 - x}}{\sqrt[3]{1 + x} - \sqrt[3]{1 - x}}$.
+\end{prob}
+
+\begin{prob}[S]{449}
+$\lim\limits_{x \to 7} \dfrac{\sqrt{x + 2} - \sqrt[3]{x + 20}}{\sqrt[4]{x + 9} - 2}$.
+\end{prob}
+
+\begin{prob}[S]{450}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[3]{1 + \dfrac{x}{3}} - \sqrt[4]{1 + \dfrac{x}{4}}}{1 - \sqrt{1 - \dfrac{x}{2}}}$.
+\end{prob}
+
+\begin{prob}[S]{451}
+$\lim\limits_{x \to 0} \dfrac{x^2}{\sqrt[5]{1 + 5x} - (1 + x)}$.
+\end{prob}
+
+\begin{prob}[S]{452}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[m]{1 + \alpha x} - \sqrt[n]{1 + \beta x}}{x}$（$m$ 及 $n$ 为整数）.
+\end{prob}
+
+\begin{prob}[S]{453}
+$\lim\limits_{x \to 0} \dfrac{\sqrt[m]{1 + \alpha x}\sqrt[n]{1 + \beta x} - 1}{x}$（$m$ 及 $n$ 为整数）.
+\end{prob}
+
+\begin{prob}[M]{454}
+设 $P(x) = a_1 x + a_2 x^2 + \cdots + a_n x^n$ 又 $m$ 为整数，求证：
+\[
+\lim_{x \to 0} \frac{\sqrt[m]{1 + p(x)} - 1}{x} = \frac{a_1}{m}.
+\]
+\end{prob}
+
+\probgroup{求下列的极限：}
+
+\begin{prob}[S]{455.1}
+$\lim\limits_{x \to 1} \dfrac{\sqrt[m]{x} - 1}{\sqrt[n]{x} - 1}$（$m$ 及 $n$ 为整数）.
+\end{prob}
+
+\begin{prob}[S]{455.2}
+$\lim\limits_{x \to 1} \left(\dfrac{3}{1 - \sqrt{x}} - \dfrac{2}{1 - \sqrt[3]{x}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{456}
+$\lim\limits_{x \to 1} \dfrac{(1 - \sqrt{x})(1 - \sqrt[3]{x})\cdots(1 - \sqrt[n]{x})}{(1 - x)^{n-1}}$.
+\end{prob}
+
+\begin{prob}[S]{457}
+$\lim\limits_{x \to +\infty} \left[\sqrt{(x + a)(x + b)} - x\right]$.
+\end{prob}
+
+\begin{prob}[S]{458}
+$\lim\limits_{x \to +\infty} \left(\sqrt{x + \sqrt{x + \sqrt{x}}} - \sqrt{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{459}
+$\lim\limits_{x \to +\infty} x\left(\sqrt{x^2 + 2x} - 2\sqrt{x^2 + x} + x\right)$.
+\end{prob}
+
+\begin{prob}[M]{460}
+$\lim\limits_{x \to +0} \left(\sqrt{\dfrac{1}{x} + \sqrt{\dfrac{1}{x} + \sqrt{\dfrac{1}{x}}}} - \sqrt{\dfrac{1}{x} - \sqrt{\dfrac{1}{x} + \sqrt{\dfrac{1}{x}}}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{461}
+$\lim\limits_{x \to \infty} \left(\sqrt[3]{x^3 + x^2 + 1} - \sqrt[3]{x^3 - x^2 + 1}\right)$.
+\end{prob}
+
+\begin{prob}[S]{462}
+$\lim\limits_{x \to +\infty} \left(\sqrt[3]{x^3 + 3x^2} - \sqrt{x^2 - 2x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{463}
+$\lim\limits_{x \to \infty} x^{\frac{1}{3}} \left[(x + 1)^{\frac{2}{3}} - (x - 1)^{\frac{2}{3}}\right]$.
+\end{prob}
+
+\begin{prob}[S]{464}
+$\lim\limits_{x \to +\infty} x^{\frac{3}{2}} \left(\sqrt{x + 2} - 2\sqrt{x + 1} + \sqrt{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{465}
+$\lim\limits_{x \to +\infty} \left[\sqrt[n]{(x + a_1)\cdots(x + a_n)} - x\right]$.
+\end{prob}
+
+\begin{prob}[S]{466}
+$\lim\limits_{x \to +\infty} \dfrac{\left(x - \sqrt{x^2 - 1}\right)^n + \left(x + \sqrt{x^2 - 1}\right)^n}{x^n}$（$n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[S]{467}
+$\lim\limits_{x \to 0} \dfrac{\left(\sqrt{1 + x^2} + x\right)^n - \left(\sqrt{1 + x^2} - x\right)^n}{x}$（$n$ 为正整数）.
+\end{prob}
+
+\begin{prob}[M]{468}
+设二次方程 $ax^2 + bx + c = 0$ 的系数 $a$ 趋于零，系数 $b$ 与 $c$ 为常数，且 $b \neq 0$，试研究此二次方程之二根 $x_1$ 及 $x_2$ 的性质.
+\end{prob}
+
+\begin{prob}[M]{469}
+从条件
+\[
+\lim_{x \to \infty} \left(\frac{x^2 + 1}{x + 1} - ax - b\right) = 0
+\]
+求常数 $a$ 和 $b$.
+\end{prob}
+
+\begin{prob}[M]{470}
+从条件
+\[
+\lim_{x \to -\infty} \left(\sqrt{x^2 - x + 1} - a_1 x - b_1\right) = 0,
+\]
+\[
+\lim_{x \to +\infty} \left(\sqrt{x^2 - x + 1} - a_2 x - b_2\right) = 0
+\]
+求常数 $a_i$ 和 $b_i\ (i = 1, 2)$.
+\end{prob}
+
+\probgroup{求下列极限：}
+
+\begin{prob}[S]{471}
+$\lim\limits_{x \to 0} \dfrac{\sin 5x}{x}$.
+\end{prob}
+
+\begin{prob}[S]{472}
+$\lim\limits_{x \to \infty} \dfrac{\sin x}{x}$.
+\end{prob}
+
+\begin{prob}[S]{473}
+$\lim\limits_{x \to \pi} \dfrac{\sin mx}{\sin nx}$（$m$ 及 $n$ 为整数）.
+\end{prob}
+
+\begin{prob}[L]{474}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to 0} \dfrac{1 - \cos x}{x^2}$;
+  \item $\lim\limits_{x \to 0} \dfrac{\tan x}{x}$;
+  \item $\lim\limits_{x \to 0} x \cot 3x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{475}
+$\lim\limits_{x \to 0} \dfrac{\tan x - \sin x}{\sin^3 x}$.
+\end{prob}
+
+\begin{prob}[S]{476}
+$\lim\limits_{x \to 0} \dfrac{\sin 5x - \sin 3x}{\sin x}$.
+\end{prob}
+
+\begin{prob}[S]{477}
+$\lim\limits_{x \to 0} \dfrac{\cos x - \cos 3x}{x^2}$.
+\end{prob}
+
+\begin{prob}[S]{478}
+$\lim\limits_{x \to 0} \dfrac{1 + \sin x - \cos x}{1 + \sin px - \cos px}$.
+\end{prob}
+
+\begin{prob}[S]{479}
+$\lim\limits_{x \to \frac{\pi}{4}} \tan 2x \tan\left(\dfrac{\pi}{4} - x\right)$.
+\end{prob}
+
+\begin{prob}[S]{480}
+$\lim\limits_{x \to 1} (1 - x) \tan \dfrac{\pi x}{2}$.
+\end{prob}
+
+\begin{prob}[L]{481}
+证明等式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim\limits_{x \to a} \sin x = \sin a$;
+  \item $\lim\limits_{x \to a} \cos x = \cos a$;
+  \item $\lim\limits_{x \to a} \tan x = \tan a\ \left(a \neq \dfrac{2n - 1}{2}\pi;\ n = 0, \pm 1, \pm 2, \cdots\right)$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列极限：}
+
+\begin{prob}[S]{482}
+$\lim\limits_{x \to a} \dfrac{\sin x - \sin a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{483}
+$\lim\limits_{x \to a} \dfrac{\cos x - \cos a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{484}
+$\lim\limits_{x \to a} \dfrac{\tan x - \tan a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{485}
+$\lim\limits_{x \to a} \dfrac{\cot x - \cot a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{486}
+$\lim\limits_{x \to a} \dfrac{\sec x - \sec a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{487}
+$\lim\limits_{x \to a} \dfrac{\csc x - \csc a}{x - a}$.
+\end{prob}
+
+\begin{prob}[S]{488}
+$\lim\limits_{x \to 0} \dfrac{\sin(a + 2x) - 2\sin(a + x) + \sin a}{x^2}$.
+\end{prob}
+
+\begin{prob}[S]{489}
+$\displaystyle \lim_{x\to 0} \frac{\cos(a+2x) - 2\cos(a+x) + \cos a}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{490}
+$\displaystyle \lim_{x\to 0} \frac{\tan(a+2x) - 2\tan(a+x) + \tan a}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{491}
+$\displaystyle \lim_{x\to 0} \frac{\cot(a+2x) - 2\cot(a+x) + \cot a}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{492}
+$\displaystyle \lim_{x\to 0} \frac{\sin(a+x)\sin(a+2x) - \sin^2 a}{x}.$
+\end{prob}
+
+\begin{prob}[S]{493}
+$\displaystyle \lim_{x\to \frac{\pi}{6}} \frac{2\sin^2 x + \sin x - 1}{2\sin^2 x - 3\sin x + 1}.$
+\end{prob}
+
+\begin{prob}[S]{494}
+$\displaystyle \lim_{x\to 0} \frac{1 - \cos x \cos 2x \cos 3x}{1 - \cos x}.$
+\end{prob}
+
+\begin{prob}[S]{495}
+$\displaystyle \lim_{x\to \frac{\pi}{3}} \frac{\sin\left(x - \dfrac{\pi}{3}\right)}{1 - 2\cos x}.$
+\end{prob}
+
+\begin{prob}[S]{496}
+$\displaystyle \lim_{x\to \frac{\pi}{3}} \frac{\tan^3 x - 3\tan x}{\cos\left(x + \dfrac{\pi}{6}\right)}.$
+\end{prob}
+
+\begin{prob}[S]{497}
+$\displaystyle \lim_{x\to 0} \frac{\tan(a+x)\tan(a-x) - \tan^2 a}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{498}
+$\displaystyle \lim_{x\to \frac{\pi}{4}} \frac{1 - \cot^3 x}{2 - \cot x - \cot^3 x}.$
+\end{prob}
+
+\begin{prob}[S]{499}
+$\displaystyle \lim_{x\to 0} \frac{\sqrt{1+\tan x} - \sqrt{1+\sin x}}{x^3}.$
+\end{prob}
+
+\begin{prob}[S]{500}
+$\displaystyle \lim_{x\to 0} \frac{x^2}{\sqrt{1+x\sin x} - \sqrt{\cos x}}.$
+\end{prob}
+
+\begin{prob}[S]{501}
+$\displaystyle \lim_{x\to 0} \frac{\sqrt{\cos x} - \sqrt[3]{\cos x}}{\sin^2 x}.$
+\end{prob}
+
+\begin{prob}[S]{502}
+$\displaystyle \lim_{x\to 0} \frac{\sqrt{1-\cos x^2}}{1-\cos x}.$
+\end{prob}
+
+\begin{prob}[S]{503}
+$\displaystyle \lim_{x\to 0} \frac{1-\sqrt{\cos x}}{1-\cos(\sqrt{x})}.$
+\end{prob}
+
+\begin{prob}[S]{504}
+$\displaystyle \lim_{x\to 0} \frac{1 - \cos x\sqrt{\cos 2x}\sqrt[3]{\cos 3x}}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{505}
+$\displaystyle \lim_{x\to +\infty} (\sin\sqrt{x+1} - \sin\sqrt{x}).$
+\end{prob}
+
+\begin{prob}[L]{506}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to 0} \left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}$;
+  \item $\displaystyle \lim_{x\to 1} \left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}$;
+  \item $\displaystyle \lim_{x\to +\infty} \left(\frac{1+x}{2+x}\right)^{\frac{1-\sqrt{x}}{1-x}}.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{507}
+$\displaystyle \lim_{x\to \infty} \left(\frac{x+2}{2x-1}\right)^{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{508}
+$\displaystyle \lim_{x\to \infty} \left(\frac{3x^2 - x + 1}{2x^2 + x + 1}\right)^{\frac{x^3}{1-x}}.$
+\end{prob}
+
+\begin{prob}[S]{509}
+$\displaystyle \lim_{n\to \infty} \left(\sin^n \frac{2n\pi}{3n+1}\right).$
+\end{prob}
+
+\begin{prob}[S]{510}
+$\displaystyle \lim_{x\to \frac{\pi}{4}+0} \left[\tan\left(\frac{\pi}{8}+x\right)\right]^{\tan 2x}.$
+\end{prob}
+
+\begin{prob}[S]{511}
+$\displaystyle \lim_{x\to \infty} \left(\frac{x^2-1}{x^2+1}\right)^{\frac{x-1}{x+1}}.$
+\end{prob}
+
+\begin{prob}[S]{512}
+$\displaystyle \lim_{x\to \infty} \left(\frac{x^2+1}{x^2-2}\right)^{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{513}
+$\displaystyle \lim_{x\to \infty} \left(\frac{x^2+2x-1}{2x^2-3x-2}\right)^{\frac{1}{x}}.$
+\end{prob}
+
+\begin{prob}[S]{514}
+$\displaystyle \lim_{x\to 0} \sqrt[x]{1-2x}.$
+\end{prob}
+
+\begin{prob}[S]{515}
+$\displaystyle \lim_{x\to \infty} \left(\frac{x+a}{x-a}\right)^x.$
+\end{prob}
+
+\begin{prob}[S]{516}
+$\displaystyle \lim_{x\to +\infty} \left(\frac{a_1 x + b_1}{a_2 x + b_2}\right)^x \ (a_1 > 0, a_2 > 0).$
+\end{prob}
+
+\begin{prob}[S]{517}
+$\displaystyle \lim_{x\to 0} (1+x^2)^{\cot^2 x}.$
+\end{prob}
+
+\begin{prob}[S]{518}
+$\displaystyle \lim_{x\to 1} (1+\sin\pi x)^{\cot\pi x}.$
+\end{prob}
+
+\begin{prob}[M]{519}
+(a) $\displaystyle \lim_{x\to 0} \left(\frac{1+\tan x}{1+\sin x}\right)^{\frac{1}{\sin x}}$; \qquad (b) $\displaystyle \lim_{x\to 0} \left(\frac{1+\tan x}{1+\sin x}\right)^{\frac{1}{\sin^3 x}}.$
+\end{prob}
+
+\begin{prob}[S]{520}
+$\displaystyle \lim_{x\to a} \left(\frac{\sin x}{\sin a}\right)^{\frac{1}{x-a}}.$
+\end{prob}
+
+\begin{prob}[S]{521}
+$\displaystyle \lim_{x\to 0} \left(\frac{\cos x}{\cos 2x}\right)^{\frac{1}{x^2}}.$
+\end{prob}
+
+\begin{prob}[S]{522}
+$\displaystyle \lim_{x\to \frac{\pi}{4}} (\tan x)^{\tan 2x}.$
+\end{prob}
+
+\begin{prob}[S]{523}
+$\displaystyle \lim_{x\to \frac{\pi}{2}} (\sin x)^{\tan x}.$
+\end{prob}
+
+\begin{prob}[S]{524}
+$\displaystyle \lim_{x\to 0} \left[\tan\left(\frac{\pi}{4}-x\right)\right]^{\cot x}.$
+\end{prob}
+
+\begin{prob}[S]{525}
+$\displaystyle \lim_{x\to \infty} \left(\sin\frac{1}{x} + \cos\frac{1}{x}\right)^x.$
+\end{prob}
+
+\begin{prob}[S]{526}
+$\displaystyle \lim_{x\to 0} \sqrt[x]{\cos\sqrt{x}}.$
+\end{prob}
+
+\begin{prob}[S]{527}
+$\displaystyle \lim_{n\to \infty} \left(\frac{n+x}{n-1}\right)^n.$
+\end{prob}
+
+\begin{prob}[S]{528}
+$\displaystyle \lim_{n\to \infty} \cos^n \frac{x}{\sqrt{n}}.$
+\end{prob}
+
+\begin{prob}[S]{529}
+$\displaystyle \lim_{x\to 0} \frac{\ln(1+x)}{x}.$
+\end{prob}
+
+\begin{prob}[S]{530}
+$\displaystyle \lim_{x\to +\infty} x[\ln(x+1) - \ln x].$
+\end{prob}
+
+\begin{prob}[S]{531}
+$\displaystyle \lim_{x\to a} \frac{\ln x - \ln a}{x-a} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{532}
+$\displaystyle \lim_{x\to +\infty} [\sin\ln(x+1) - \sin\ln x].$
+\end{prob}
+
+\begin{prob}[S]{533}
+$\displaystyle \lim_{x\to +\infty} \frac{\ln(x^2-x+1)}{\ln(x^{10}+x+1)}.$
+\end{prob}
+
+\begin{prob}[S]{534}
+$\displaystyle \lim_{x\to \infty} \left(\lg\frac{100+x^2}{1+100x^2}\right).$
+\end{prob}
+
+\begin{prob}[S]{535}
+$\displaystyle \lim_{x\to +\infty} \frac{\ln(2+\mathrm{e}^{3x})}{\ln(3+\mathrm{e}^{2x})}.$
+\end{prob}
+
+\begin{prob}[S]{536}
+$\displaystyle \lim_{x\to +\infty} \frac{\ln(1+\sqrt{x}+\sqrt[3]{x})}{\ln(1+\sqrt[3]{x}+\sqrt[4]{x})}.$
+\end{prob}
+
+\begin{prob}[S]{537}
+$\displaystyle \lim_{h\to 0} \frac{\log(x+h) + \log(x-h) - 2\log x}{h^2} \ (x > 0).$
+\end{prob}
+
+\begin{prob}[S]{538}
+$\displaystyle \lim_{x\to 0} \frac{\ln\tan\left(\dfrac{\pi}{4}+ax\right)}{\sin bx}.$
+\end{prob}
+
+\begin{prob}[S]{539}
+$\displaystyle \lim_{x\to 0} \frac{\ln\cos ax}{\ln\cos bx}.$
+\end{prob}
+
+\begin{prob}[M]{540}
+(a) $\displaystyle \lim_{x\to 0} \left(\ln\frac{nx+\sqrt{1-n^2 x^2}}{x+\sqrt{1-x^2}}\right)$; \qquad (b) $\displaystyle \lim_{x\to 0} \frac{\ln(nx+\sqrt{1-n^2 x^2})}{\ln(x+\sqrt{1-x^2})}.$
+\end{prob}
+
+\begin{prob}[S]{541}
+$\displaystyle \lim_{x\to 0} \frac{a^x - 1}{x} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{542}
+$\displaystyle \lim_{x\to a} \frac{a^x - x^a}{x-a} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{543}
+$\displaystyle \lim_{x\to a} \frac{x^x - a^a}{x-a} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{544}
+$\displaystyle \lim_{x\to 0} (x+\mathrm{e}^x)^{\frac{1}{x}}.$
+\end{prob}
+
+\begin{prob}[L]{545}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to 0} \left(\frac{1+x\cdot 2^x}{1+x\cdot 3^x}\right)^{\frac{1}{x^2}}$;
+  \item $\displaystyle \lim_{x\to 0} \left(\frac{1+\sin x\cos\alpha x}{1+\sin x\cos\beta x}\right)^{\cot^3 x}$;
+  \item $\displaystyle \lim_{x\to 1} \frac{\sin(\pi x^\alpha)}{\sin(\pi x^\beta)}$;
+  \item $\displaystyle \lim_{x\to 1} \frac{\sin^2(\pi\cdot 2^x)}{\ln(\cos(\pi\cdot 2^x))}.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{546}
+$\displaystyle \lim_{n\to \infty} \tan^n \left(\frac{\pi}{4}+\frac{1}{n}\right).$
+\end{prob}
+
+\begin{prob}[S]{547}
+$\displaystyle \lim_{x\to 0} \frac{\mathrm{e}^{\alpha x} - \mathrm{e}^{\beta x}}{\sin\alpha x - \sin\beta x}.$
+\end{prob}
+
+\begin{prob}[S]{548}
+$\displaystyle \lim_{x\to a} \frac{x^\alpha - a^\alpha}{x^\beta - a^\beta} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{549}
+$\displaystyle \lim_{x\to b} \frac{a^x - a^b}{x-b} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{550}
+$\displaystyle \lim_{h\to 0} \frac{a^{x+h} + a^{x-h} - 2a^x}{h^2} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[S]{551}
+$\displaystyle \lim_{x\to \infty} \frac{(x+a)^{x+a}(x+b)^{x+b}}{(x+a+b)^{2x+a+b}}.$
+\end{prob}
+
+\begin{prob}[S]{552}
+$\displaystyle \lim_{n\to \infty} n(\sqrt[n]{x} - 1) \ (x > 0).$
+\end{prob}
+
+\begin{prob}[S]{553}
+$\displaystyle \lim_{n\to \infty} n^2(\sqrt[n]{x} - \sqrt[n+1]{x}) \ (x > 0).$
+\end{prob}
+
+\begin{prob}[S]{554}
+$\displaystyle \lim_{n\to \infty} \left(\frac{a - 1 + \sqrt[n]{b}}{a}\right)^n \ (a > 0, b > 0).$
+\end{prob}
+
+\begin{prob}[S]{555}
+$\displaystyle \lim_{n\to \infty} \left(\frac{\sqrt[n]{a} + \sqrt[n]{b}}{2}\right)^n \ (a > 0, b > 0).$
+\end{prob}
+
+\begin{prob}[S]{556}
+$\displaystyle \lim_{x\to 0} \left(\frac{a^x + b^x + c^x}{3}\right)^{\frac{1}{x}} \ (a > 0, b > 0, c > 0).$
+\end{prob}
+
+\begin{prob}[S]{557}
+$\displaystyle \lim_{x\to 0} \left(\frac{a^{x+1} + b^{x+1} + c^{x+1}}{a+b+c}\right)^{\frac{1}{x}} \ (a > 0, b > 0, c > 0).$
+\end{prob}
+
+\begin{prob}[S]{558}
+$\displaystyle \lim_{x\to 0} \left(\frac{a^{x^2} + b^{x^2}}{a^x + b^x}\right)^{\frac{1}{x}} \ (a > 0, b > 0).$
+\end{prob}
+
+\begin{prob}[S]{559}
+$\displaystyle \lim_{x\to 0} \frac{a^{x^2} - b^{x^2}}{(a^x - b^x)^2} \ (a > 0, b > 0).$
+\end{prob}
+
+\begin{prob}[S]{560}
+$\displaystyle \lim_{x\to a} \frac{a^{a^x} - a^{x^a}}{a^x - x^a} \ (a > 0).$
+\end{prob}
+
+\begin{prob}[M]{561}
+(a) $\displaystyle \lim_{x\to -\infty} \frac{\ln(1+3^x)}{\ln(1+2^x)}$; \qquad (b) $\displaystyle \lim_{x\to +\infty} \frac{\ln(1+3^x)}{\ln(1+2^x)}.$
+\end{prob}
+
+\begin{prob}[S]{562}
+$\displaystyle \lim_{x\to +\infty} \ln(1+2^x)\ln\left(1+\frac{3}{x}\right).$
+\end{prob}
+
+\begin{prob}[S]{563}
+$\displaystyle \lim_{x\to 1} (1-x)\log_x 2.$
+\end{prob}
+
+\begin{prob}[M]{564}
+证明：
+\[
+\lim_{x\to +\infty} \frac{x^n}{a^x} = 0 \quad (a > 1, n > 0).
+\]
+\end{prob}
+
+\begin{prob}[M]{565}
+证明：
+\[
+\lim_{x\to +\infty} \frac{\log_a x}{x^\varepsilon} = 0 \quad (a > 1, \varepsilon > 0).
+\]
+\end{prob}
+
+\probgroup{求下列极限：}
+
+\begin{prob}[M]{566}
+(a) $\displaystyle \lim_{x\to 0} \frac{\ln(x^2+\mathrm{e}^x)}{\ln(x^4+\mathrm{e}^{2x})}$; \qquad (b) $\displaystyle \lim_{x\to +\infty} \frac{\ln(x^2+\mathrm{e}^x)}{\ln(x^4+\mathrm{e}^{2x})}.$
+\end{prob}
+
+\begin{prob}[S]{567}
+$\displaystyle \lim_{x\to 0} \frac{\ln(1+x\mathrm{e}^x)}{\ln(x+\sqrt{1+x^2})}.$
+\end{prob}
+
+\begin{prob}[S]{568}
+$\displaystyle \lim_{x\to +\infty} [(x+2)\ln(x+2) - 2(x+1)\ln(x+1) + x\ln x].$
+\end{prob}
+
+\begin{prob}[S]{569}
+$\displaystyle \lim_{x\to +0} \left[\ln(x\ln a)\cdot \ln\left(\frac{\ln ax}{\ln\frac{x}{a}}\right)\right] \ (a > 1).$
+\end{prob}
+
+\begin{prob}[S]{570}
+$\displaystyle \lim_{x\to +\infty} \left(\ln\frac{x+\sqrt{x^2+1}}{x+\sqrt{x^2-1}}\cdot \ln^{-2}\frac{x+1}{x-1}\right).$
+\end{prob}
+
+\begin{prob}[S]{571}
+$\displaystyle \lim_{x\to 0} \frac{\sqrt{1+x\sin x} - 1}{\mathrm{e}^{x^2} - 1}.$
+\end{prob}
+
+\begin{prob}[S]{572}
+$\displaystyle \lim_{x\to 0} \frac{\cos(x\mathrm{e}^x) - \cos(x\mathrm{e}^{-x})}{x^3}.$
+\end{prob}
+
+\begin{prob}[S]{573}
+$\displaystyle \lim_{x\to 0} \left(2\mathrm{e}^{\frac{x}{x+1}} - 1\right)^{\frac{x^2+1}{x}}.$
+\end{prob}
+
+\begin{prob}[S]{574}
+$\displaystyle \lim_{x\to 1} (2-x)^{\sec\frac{\pi x}{2}}.$
+\end{prob}
+
+\begin{prob}[S]{575}
+$\displaystyle \lim_{x\to \frac{\pi}{2}} \frac{1 - \sin^{\alpha+\beta} x}{\sqrt{(1-\sin^\alpha x)(1-\sin^\beta x)}} \ (\alpha > 0, \beta > 0).$
+\end{prob}
+
+\begin{prob}[L]{576}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to 0} \frac{\sinh x}{x}$;
+  \item $\displaystyle \lim_{x\to 0} \frac{\cosh x - 1}{x^2}$;
+  \item $\displaystyle \lim_{x\to 0} \frac{\tanh x}{x}$ （参考习题 340）。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{577}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to 0} \frac{\sinh^2 x}{\ln(\cosh 3x)}$ （参考习题 340）；
+  \item $\displaystyle \lim_{x\to +\infty} \frac{\sinh\sqrt{x^2+x} - \sinh\sqrt{x^2-x}}{\cosh x}.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{578}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to a} \frac{\sinh x - \sinh a}{x-a}$;
+  \item $\displaystyle \lim_{x\to a} \frac{\cosh x - \cosh a}{x-a}$;
+  \item $\displaystyle \lim_{x\to 0} \frac{\ln\cosh x}{\ln\cos x}.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{579}
+(a) $\displaystyle \lim_{x\to +\infty} (x - \ln\cosh x)$; \qquad (b) $\displaystyle \lim_{x\to 0} \frac{\mathrm{e}^{\sin 2x} - \mathrm{e}^{\sin x}}{\tanh x}.$
+\end{prob}
+
+\begin{prob}[S]{580}
+$\displaystyle \lim_{n\to \infty} \left(\frac{\cosh\dfrac{\pi}{n}}{\cos\dfrac{\pi}{n}}\right)^{n^2}.$
+\end{prob}
+
+\begin{prob}[S]{581}
+$\displaystyle \lim_{x\to \infty} \arcsin\frac{1-x}{1+x}.$
+\end{prob}
+
+\begin{prob}[S]{582}
+$\displaystyle \lim_{x\to +\infty} \arccos(\sqrt{x^2+x} - x).$
+\end{prob}
+
+\begin{prob}[S]{583}
+$\displaystyle \lim_{x\to 2} \arctan\frac{x-4}{(x-2)^2}.$
+\end{prob}
+
+\begin{prob}[S]{584}
+$\displaystyle \lim_{x\to -\infty} \operatorname{arccot}\frac{x}{\sqrt{1+x^2}}.$
+\end{prob}
+
+\begin{prob}[S]{585}
+$\displaystyle \lim_{h\to 0} \frac{\arctan(x+h) - \arctan x}{h}.$
+\end{prob}
+
+\begin{prob}[S]{586}
+$\displaystyle \lim_{x\to 0} \frac{\ln\dfrac{1+x}{1-x}}{\arctan(1+x) - \arctan(1-x)}.$
+\end{prob}
+
+\begin{prob}[S]{587}
+$\displaystyle \lim_{n\to \infty} \left[n\arctan\frac{1}{n(x^2+1)+x}\cdot \tan^n \left(\frac{\pi}{4}+\frac{x}{2n}\right)\right].$
+\end{prob}
+
+\begin{prob}[S]{588}
+$\displaystyle \lim_{x\to \infty} x\left(\frac{\pi}{4} - \arctan\frac{x}{x+1}\right).$
+\end{prob}
+
+\begin{prob}[S]{589}
+$\displaystyle \lim_{x\to +\infty} x\left(\frac{\pi}{2} - \arcsin\frac{x}{\sqrt{x^2+1}}\right).$
+\end{prob}
+
+\begin{prob}[S]{590}
+$\displaystyle \lim_{n\to \infty} \left[1 + \frac{(-1)^n}{n}\right]^{\csc(\pi\sqrt{1+n^2})}.$
+\end{prob}
+
+\begin{prob}[M]{591}
+(a) $\displaystyle \lim_{x\to 0} \frac{1}{x^{100}}\mathrm{e}^{-\frac{1}{x^2}}$; \qquad (b) $\displaystyle \lim_{x\to +0} x\ln x.$
+\end{prob}
+
+\begin{prob}[M]{592}
+(a) $\displaystyle \lim_{x\to -\infty} (\sqrt{x^2+x} - x)$; \qquad (b) $\displaystyle \lim_{x\to +\infty} (\sqrt{x^2+x} - x).$
+\end{prob}
+
+\begin{prob}[M]{593}
+(a) $\displaystyle \lim_{x\to -\infty} (\sqrt{1+x+x^2} - \sqrt{1-x+x^2})$; \qquad (b) $\displaystyle \lim_{x\to +\infty} (\sqrt{1+x+x^2} - \sqrt{1-x+x^2}).$
+\end{prob}
+
+\begin{prob}[M]{594}
+设
+\[
+f(x) = \ln\frac{x+\sqrt{x^2+a^2}}{x+\sqrt{x^2+b^2}},
+\]
+求
+\[
+h = \lim_{x\to +\infty} f(x) - \lim_{x\to -\infty} f(x).
+\]
+\end{prob}
+
+\begin{prob}[M]{595}
+(a) $\displaystyle \lim_{x\to 1-0} \arctan\frac{1}{1-x}$; \qquad (b) $\displaystyle \lim_{x\to 1+0} \arctan\frac{1}{1-x}.$
+\end{prob}
+
+\begin{prob}[M]{596}
+(a) $\displaystyle \lim_{x\to -0} \frac{1}{1+\mathrm{e}^{\frac{1}{x}}}$; \qquad (b) $\displaystyle \lim_{x\to +0} \frac{1}{1+\mathrm{e}^{\frac{1}{x}}}.$
+\end{prob}
+
+\begin{prob}[M]{597}
+(a) $\displaystyle \lim_{x\to -\infty} \frac{\ln(1+\mathrm{e}^x)}{x}$; \qquad (b) $\displaystyle \lim_{x\to -\infty} \frac{\ln(1+\mathrm{e}^x)}{x}.$
+\end{prob}
+
+\begin{prob}[M]{598}
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 当 $x \to -\infty$ 时，$\dfrac{2x}{1+x} \to 2 + 0$；
+  \item 当 $x \to +\infty$ 时，$\dfrac{2x}{1+x} \to 2 - 0$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{599}
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 当 $x \to -0$ 时，$2^x \to 1 - 0$；
+  \item 当 $x \to +0$ 时，$2^x \to 1 + 0$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{600}
+设 $f(x) = x + [x^2]$，求 $f(1),\, f(1-0),\, f(1+0)$。
+\end{prob}
+
+\begin{prob}[S]{601}
+设 $f(x) = \operatorname{sgn}(\sin\pi x)$，求 $f(n),\, f(n-0),\, f(n+0) \ (n = 0, \pm 1, \cdots)$。
+\end{prob}
+
+\probgroup{求：}
+
+\begin{prob}[S]{602}
+$\displaystyle \lim_{x\to 0} x\sqrt{\cos\frac{1}{x}}.$
+\end{prob}
+
+\begin{prob}[S]{603}
+$\displaystyle \lim_{x\to 0} x\left[\frac{1}{x}\right].$
+\end{prob}
+
+\begin{prob}[S]{604}
+$\displaystyle \lim_{n\to \infty} \sin(\pi\sqrt{n^2+1}).$
+\end{prob}
+
+\begin{prob}[S]{605}
+$\displaystyle \lim_{n\to \infty} \sin^2(\pi\sqrt{n^2+n}).$
+\end{prob}
+
+\begin{prob}[S]{606}
+$\displaystyle \lim_{n\to \infty} \underbrace{\sin\sin\cdots\sin}_{n\text{ 次}} x.$
+\end{prob}
+
+\begin{prob}[L]{607}
+设 $\lim_{x\to a} \varphi(x) = A$ 及 $\lim_{x\to A} \psi(x) = B$，则由此是否可推出
+\[
+\lim_{x\to a} \psi(\varphi(x)) = B?
+\]
+研究例子：
+\[
+\varphi(x) = \begin{cases}
+\dfrac{1}{q}, & x = \dfrac{p}{q} \ (p, q \text{ 是互素的整数}), \\[8pt]
+0, & x \text{ 为无理数},
+\end{cases}
+\qquad
+\psi(x) = \begin{cases}
+1, & x \neq 0, \\
+0, & x = 0,
+\end{cases}
+\]
+并且 $x \to 0$。
+\end{prob}
+
+\begin{prob}[L]{608}
+证明柯西定理：若函数 $f(x)$ 定义于区间 $(a, +\infty)$，且在每一个有限的区间 $(a, b)$ 内是有界的，则
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \lim_{x\to +\infty} \frac{f(x)}{x} = \lim_{x\to +\infty} [f(x+1) - f(x)]$；
+  \item $\displaystyle \lim_{x\to +\infty} [f(x)]^{\frac{1}{x}} = \lim_{x\to +\infty} \frac{f(x+1)}{f(x)} \ (f(x) \geqslant C > 0)$，
+\end{enumerate}
+假定等式右端的极限都存在。
+\end{prob}
+
+\begin{prob}[M]{609}
+证明：若 (1) 函数 $f(x)$ 定义于区域 $x > a$；(2) $f(x)$ 在每一个有限的区域 $a < x < b$ 内是有界的；(3) $\lim_{x\to +\infty} [f(x+1) - f(x)] = \pm\infty$，则
+\[
+\lim_{x\to +\infty} \frac{f(x)}{x} = \pm\infty.
+\]
+\end{prob}
+
+\begin{prob}[M]{610}
+证明：若 (1) 函数 $f(x)$ 定义于区域 $x > a$；(2) $f(x)$ 在每一个有限的区域 $a < x < b$ 内是有界的；(3) 存在着有限的或无穷的极限
+\[
+\lim_{x \to +\infty} \frac{f(x+1) - f(x)}{x^n} = l,
+\]
+则
+\[
+\lim_{x \to +\infty} \frac{f(x)}{x^{n+1}} = \frac{l}{n+1}.
+\]
+\end{prob}
+
+\begin{prob}[M]{611}
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\lim_{n \to \infty} \left(1 + \frac{x}{n}\right)^n = \mathrm{e}^x$;
+\item $\lim_{n \to \infty} \left(1 + x + \frac{x^2}{2!} + \cdots + \frac{x^n}{n!}\right) = \mathrm{e}^x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{612}
+证明：
+\[
+\lim_{n \to \infty} n\sin(2\pi \mathrm{e} n!) = 2\pi.
+\]
+\probhint{利用 72 题的公式 $(*)$.}
+\end{prob}
+
+\probgroup{作下列函数的图像：}
+
+\begin{prob}[M]{613}
+(a) $y = 1 - x^{100}$; \qquad (b) $y = \lim_{n \to \infty} (1 - x^{2n})$ $(-1 \leqslant x \leqslant 1)$.
+\end{prob}
+
+\begin{prob}[M]{614}
+(a) $y = \frac{x^{100}}{1 + x^{100}}$ $(x \geqslant 0)$; \qquad (b) $y = \lim_{n \to \infty} \frac{x^n}{1 + x^n}$ $(x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{615}
+$y = \lim_{n \to \infty} \frac{x^n - x^{-n}}{x^n + x^{-n}}$ $(x \neq 0)$.
+\end{prob}
+
+\begin{prob}[M]{616}
+$y = \lim_{n \to \infty} \sqrt{x^2 + \frac{1}{n^2}}$.
+\end{prob}
+
+\begin{prob}[M]{617}
+$y = \lim_{n \to \infty} \sqrt[n]{1 + x^n}$ $(x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{618}
+$y = \lim_{n \to \infty} \sqrt[n]{1 + x^n + \left(\frac{x^2}{2}\right)^n}$ $(x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{619}
+$y = \lim_{n \to \infty} \frac{x^{n+2}}{\sqrt{2^{2n} + x^{2n}}}$ $(x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{620}
+(a) $y = \sin^{1000} x$; \qquad (b) $y = \lim_{n \to \infty} \sin^{2n} x$.
+\end{prob}
+
+\begin{prob}[M]{621}
+$y = \lim_{n \to \infty} \frac{\ln(2^n + x^n)}{n}$ $(x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{622}
+$y = \lim_{n \to \infty} (x - 1)\arctan x^n$.
+\end{prob}
+
+\begin{prob}[M]{623}
+$y = \lim_{n \to \infty} \sqrt[n]{1 + \mathrm{e}^{n(x+1)}}$.
+\end{prob}
+
+\begin{prob}[M]{624}
+(a) $y = \lim_{t \to +\infty} \frac{x + \mathrm{e}^{tx}}{1 + \mathrm{e}^{tx}}$; \qquad (b) $y = \lim_{t \to x} \frac{1}{t - x}\ln\frac{t}{x}$ $(x > 0)$.
+\end{prob}
+
+\begin{prob}[L]{625}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y = \lim_{n \to \infty} \frac{x\tan^{2n}\frac{\pi x}{4} + \sqrt{x}}{\tan^{2n}\frac{\pi x}{4} + 1}$ $(x \geqslant 0)$;
+\item $y = \lim_{n \to \infty} x\operatorname{sgn}|\sin^2(n!\pi x)|$;
+\item 作曲线 $\lim_{n \to \infty} \sqrt[n]{|x|^n + |y|^n} = 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{626}
+若有
+\[
+\lim_{x \to \infty} [f(x) - (kx + b)] = 0,
+\]
+则直线 $y = kx + b$ 称为曲线 $y = f(x)$ 的（斜）渐近线。利用此方程推出渐近线存在的充分必要条件。
+\end{prob}
+
+\begin{prob}[L]{627}
+求下列曲线的渐近线并作其图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y = \frac{x^3}{x^2 + x - 2}$;
+\item $y = \sqrt{x^2 + x}$;
+\item $y = \sqrt[3]{x^2 - x^3}$;
+\item $y = \frac{x\mathrm{e}^x}{\mathrm{e}^x - 1}$;
+\item $y = \ln(1 + \mathrm{e}^x)$;
+\item $y = x + \arccos\frac{1}{x}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列极限：}
+
+\begin{prob}[M]{628}
+$\lim_{n \to \infty} \left[\frac{x^{n+1}}{(n+1)!} + \frac{x^{n+2}}{(n+2)!} + \cdots + \frac{x^{2n}}{(2n)!}\right]$.
+\end{prob}
+
+\begin{prob}[M]{629}
+$\lim_{n \to \infty} [(1+x)(1+x^2)(1+x^4)\cdots(1+x^{2n})]$，若 $|x| < 1$.
+\end{prob}
+
+\begin{prob}[M]{630}
+$\lim_{n \to \infty} \left(\cos\frac{x}{2}\cos\frac{x}{4}\cdots\cos\frac{x}{2^n}\right)$.
+\end{prob}
+
+\begin{prob}[L]{631}
+设
+\[
+\lim_{x \to 0} \frac{\varphi(x)}{\psi(x)} = 1,
+\]
+其中 $\psi(x) > 0$，再设 $n \to \infty$ 时 $\alpha_{mn} \rightrightarrows 0$ $(m = 1, 2, \cdots, n)$，换言之，对于任意 $\varepsilon > 0$，存在正整数 $N(\varepsilon)$，当 $m = 1, 2, \cdots, n$ 且 $n > N(\varepsilon)$ 时 $0 < |\alpha_{mn}| < \varepsilon$。
+
+证明：
+\[
+\lim_{n \to \infty} [\varphi(\alpha_{1n}) + \varphi(\alpha_{2n}) + \cdots + \varphi(\alpha_{nn})] = \lim_{n \to \infty} [\psi(\alpha_{1n}) + \psi(\alpha_{2n}) + \cdots + \psi(\alpha_{nn})], \tag{1}
+\]
+此处假定等式 (1) 右端的极限存在。
+\end{prob}
+
+\probgroup{利用上述定理，求：}
+
+\begin{prob}[M]{632}
+$\lim_{n \to \infty} \sum_{k=1}^{n} \left(\sqrt[3]{1 + \frac{k}{n^2}} - 1\right)$.
+\end{prob}
+
+\begin{prob}[M]{633}
+$\lim_{n \to \infty} \sum_{k=1}^{n} \left(\sin\frac{ka}{n^2}\right)$.
+\end{prob}
+
+\begin{prob}[M]{634}
+$\lim_{n \to \infty} \sum_{k=1}^{n} \left(a^{\frac{k}{n^2}} - 1\right)$ $(a > 0)$.
+\end{prob}
+
+\begin{prob}[M]{635}
+$\lim_{n \to \infty} \prod_{k=1}^{n} \left(1 + \frac{k}{n^2}\right)$.
+\end{prob}
+
+\begin{prob}[M]{636}
+$\lim_{n \to \infty} \prod_{k=1}^{n} \cos\frac{ka}{n\sqrt{n}}$.
+\end{prob}
+
+\begin{prob}[M]{637.1}
+数列 $x_n$ 由以下的等式所给定：
+\[
+x_1 = \sqrt{a}, \quad x_2 = \sqrt{a + \sqrt{a}}, \quad x_3 = \sqrt{a + \sqrt{a + \sqrt{a}}}, \quad \cdots \quad (a > 0).
+\]
+求 $\lim_{n \to \infty} x_n$.
+\end{prob}
+
+\begin{prob}[M]{637.2}
+数列 $x_n$ 按下述方式给定：
+\[
+x_1 = 0, \quad x_2 = 1, \quad x_n = \frac{1}{2}(x_{n-1} + x_{n-2}) \quad (n = 3, 4, \cdots).
+\]
+求 $\lim_{n \to \infty} x_n$.
+\end{prob}
+
+\begin{prob}[M]{637.3}
+数列 $y_n$ 借助于数列 $x_n$，由下述关系式定义：
+\[
+y_0 = x_0, \quad y_n = x_n - \alpha x_{n-1} \quad (n = 1, 2, \cdots),
+\]
+其中 $|\alpha| < 1$。若 $\lim_{n \to \infty} y_n = b$，求 $\lim_{n \to \infty} x_n$.
+\end{prob}
+
+\begin{prob}[M]{637.4}
+数列 $x_n$ 按下述方式给定：
+\[
+x_0 = 1, \quad x_n = \frac{1}{1 + x_{n-1}} \quad (n = 1, 2, \cdots).
+\]
+求 $\lim_{n \to \infty} x_n$.
+\probhint{考虑 $x_n$ 与方程 $x = \frac{1}{1+x}$ 的根之差.}
+\end{prob}
+
+\begin{prob}[M]{638}
+函数序列
+\[
+y_n = y_n(x) \quad (0 \leqslant x \leqslant 1)
+\]
+用以下的方法来确定：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y_1 = \frac{x}{2}, \; y_n = \frac{x}{2} - \frac{y_{n-1}^2}{2}$ $(n = 2, 3, \cdots)$;
+\item $y_1 = \frac{x}{2}, \; y_n = \frac{x}{2} + \frac{y_{n-1}^2}{2}$ $(n = 2, 3, \cdots)$.
+\end{enumerate}
+求 $\lim_{n \to \infty} y_n$.
+\end{prob}
+
+\begin{prob}[M]{639.1}
+设 $x > 0$ 且 $y_n = y_{n-1}(2 - x y_{n-1})$ $(n = 1, 2, \cdots)$。证明：若 $y_i > 0$ $(i = 0, 1)$，则序列 $y_n$ 收敛且
+\[
+\lim_{n \to \infty} y_n = \frac{1}{x}.
+\]
+\probhint{研究差 $\frac{1}{x} - y_n$.}
+\end{prob}
+
+\begin{prob}[M]{639.2}
+为了求 $y = \sqrt{x}$，其中 $x > 0$，应用如下的步骤：$y_0 > 0$ 是任意的，
+\[
+y_n = \frac{1}{2}\left(y_{n-1} + \frac{x}{y_{n-1}}\right) \quad (n = 1, 2, \cdots).
+\]
+证明：
+\[
+\lim_{n \to \infty} y_n = \sqrt{x}.
+\]
+\probhint{利用公式
+\[
+\frac{y_n - \sqrt{x}}{y_n + \sqrt{x}} = \left(\frac{y_{n-1} - \sqrt{x}}{y_{n-1} + \sqrt{x}}\right)^2 \quad (n \geqslant 1).
+\]}
+\end{prob}
+
+\begin{prob}[L]{640}
+为了求开普勒方程
+\[
+x - \varepsilon \sin x = m \quad (0 < \varepsilon < 1) \tag{1}
+\]
+的近似解，假设
+\[
+x_0 = m, \quad x_1 = m + \varepsilon \sin x_0, \quad \cdots, \quad x_n = m + \varepsilon \sin x_{n-1}, \quad \cdots
+\]
+（逐步逼近法）。
+
+证明：存在 $\xi = \lim_{n \to \infty} x_n$，且数 $\xi$ 为方程 (1) 的唯一的根。
+\end{prob}
+
+\begin{prob}[L]{641}
+若 $\omega_h(f)$ 为函数 $f(x)$ 在区间 $|x - \xi| \leqslant h$ $(h > 0)$ 上的振幅，则数
+\[
+\omega_0(f) = \lim_{h \to 0} \omega_h(f)
+\]
+称为函数 $f(x)$ 在 $\xi$ 点的振幅。
+
+若 $f(x) = 0$，而在 $x \neq 0$ 时 $f(x)$ 为下列函数，求 $f(x)$ 在点 $x = 0$ 的振幅：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \sin\frac{1}{x}$;
+\item $f(x) = \frac{1}{x^2}\cos^2\frac{1}{x}$;
+\item $f(x) = x\left(2 + \sin\frac{1}{x}\right)$;
+\item $f(x) = \frac{1}{\pi}\arctan\frac{1}{x}$;
+\item $f(x) = \frac{|\sin x|}{x}$;
+\item $f(x) = \frac{1}{1 + \mathrm{e}^{\frac{1}{x}}}$;
+\item $f(x) = (1 + |x|)^{\frac{1}{x}}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{642}
+命
+\[
+f(x) = \sin\frac{1}{x},
+\]
+证明：对于满足条件 $-1 \leqslant \alpha \leqslant 1$ 的任何数 $\alpha$，可以选出数列 $x_n \to 0$ $(n = 1, 2, \cdots)$，使得
+\[
+\lim_{n \to \infty} f(x_n) = \alpha.
+\]
+\end{prob}
+
+\begin{prob}[L]{643}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \sin^2\frac{1}{x} + \frac{2}{\pi}\arctan\frac{1}{x}$;
+\item $f(x) = (2 - x^2)\cos\frac{1}{x}$;
+\item $f(x) = \left(1 + \cos^2\frac{1}{x}\right)^{\sec^2\frac{1}{x}}$.
+\end{enumerate}
+求
+\[
+l = \varliminf_{x \to 0} f(x) \quad \text{和} \quad L = \varlimsup_{x \to 0} f(x).
+\]
+\end{prob}
+
+\begin{prob}[L]{644}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \sin x$;
+\item $f(x) = x^2\cos^2 x$;
+\item $f(x) = 2^{\sin x^2}$;
+\item $f(x) = \frac{x}{1 + x^2\sin^2 x}$ $(x \geqslant 0)$.
+\end{enumerate}
+求
+\[
+l = \varliminf_{x \to \infty} f(x) \quad \text{和} \quad L = \varlimsup_{x \to \infty} f(x).
+\]
+\end{prob}
+
+\probsec{§6. 符号 $O$}
+
+\begin{prob}[L]{645}
+把圆心角 $AOB = x$（图 4）当作 $1$ 阶无穷小量，求下列各无穷小量的阶：
+\probfig{fig_645.png}{图 4}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 弦 $AB$;
+\item 拱高 $CD$;
+\item 扇形 $AOB$ 的面积;
+\item 三角形 $ABC$ 的面积;
+\item 梯形 $ABB_1A_1$ 的面积;
+\item 弓形 $ABC$ 的面积.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{646}
+设 $o(f(x))$ 是当 $x \to a$ 时比函数 $f(x)$ 低阶增长的任意函数，并且 $O(f(x))$ 是当 $x \to a$ 时与函数 $f(x)$ 同阶增长的任意函数，其中 $f(x) > 0$。
+
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $o(o(f(x))) = o(f(x))$;
+\item $O(o(f(x))) = o(f(x))$;
+\end{enumerate}
+\begin{enumerate}[label=(\alph*), start=3, itemsep=2pt, topsep=3pt]
+  \item $o(O(f(x))) = o(f(x))$;
+  \item $O(O(f(x))) = O(f(x))$;
+  \item $O(f(x)) + o(f(x)) = O(f(x))$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{647}
+设 $x \to 0$ 和 $n > 0$. 证明:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $C O(x^n) = O(x^n)$ ($C \neq 0$ 为常数);
+  \item $O(x^n) + O(x^m) = O(x^n)$ ($n < m$);
+  \item $O(x^n) O(x^m) = O(x^{n+m})$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{648}
+设 $x \to +\infty, n > 0$. 证明:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $C O(x^n) = O(x^n)$ ($C$ 为常数);
+  \item $O(x^n) + O(x^m) = O(x^n)$ ($n > m$);
+  \item $O(x^n) O(x^m) = O(x^{n+m})$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{649}
+证明符号 $\sim$ 具有如下性质:
+\begin{enumerate}[label=(\arabic*), itemsep=2pt, topsep=3pt]
+  \item 自反性: $\varphi(x) \sim \varphi(x)$;
+  \item 对称性: 若 $\varphi(x) \sim \psi(x)$, 则 $\psi(x) \sim \varphi(x)$;
+  \item 传递性: 若 $\varphi(x) \sim \psi(x)$ 及 $\psi(x) \sim \chi(x)$, 则 $\varphi(x) \sim \chi(x)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{650}
+设 $x \to 0$, 证明下列等式:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $2x - x^2 = O(x)$;
+  \item $x\sin\sqrt{x} = O(x^{\frac{3}{2}})$;
+  \item $x\sin\dfrac{1}{x} = O(|x|)$;
+  \item $\ln x = o\left(\dfrac{1}{x^\varepsilon}\right)$ ($\varepsilon > 0$);
+  \item $\sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt[8]{x}$;
+  \item $\arctan\dfrac{1}{x} = O(1)$;
+  \item $(1 + x)^n = 1 + nx + o(x)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{651}
+设 $x \to +\infty$. 证明下列等式:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $2x^3 - 3x^2 + 1 = O(x^3)$;
+  \item $\dfrac{x + 1}{x^2 + 1} = O\left(\dfrac{1}{x}\right)$;
+  \item $x + x^2\sin x = O(x^2)$;
+  \item $\dfrac{\arctan x}{1 + x^2} = O\left(\dfrac{1}{x^2}\right)$;
+  \item $\ln x = o(x^\varepsilon)$ ($\varepsilon > 0$);
+  \item $x^p \mathrm{e}^{-x} = o\left(\dfrac{1}{x^2}\right)$;
+  \item $\sqrt{x + \sqrt{x + \sqrt{x}}} \sim \sqrt{x}$;
+  \item $x^2 + x\ln^{100} x \sim x^2$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{652.1}
+证明: 当 $x$ 充分大时, 下面的不等式成立:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $x^2 + 10x + 100 < 0.001x^3$;
+  \item $\ln^{1000} x < \sqrt{x}$;
+  \item $x^{10}\mathrm{e}^x < \mathrm{e}^{2x}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{652.2}
+证明渐近公式: 当 $x \to +\infty$ 时,
+\[
+  \sqrt{x^2 + px + q} = x + \frac{p}{2} + O\left(\frac{1}{x}\right).
+\]
+\end{prob}
+
+\begin{prob}[L]{653}
+设 $x \to 0$. 分出下列函数的形如 $Cx^n$ ($C$ 为常数) 的主部, 并求其对于无穷小变量 $x$ 的阶:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = 2x - 3x^3 + x^5$;
+  \item $f(x) = \sqrt{1 + x} - \sqrt{1 - x}$;
+  \item $f(x) = \sqrt{1 - 2x} - \sqrt[3]{1 - 3x}$;
+  \item $f(x) = \tan x - \sin x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{654}
+设 $x \to 0$. 证明: 无穷小量
+\[
+  \text{(a) } f(x) = \frac{1}{\ln x}; \qquad \text{(b) } f(x) = \mathrm{e}^{-\frac{1}{x^2}}
+\]
+无论对任何的 $n$, 也不能与无穷小量 $x^n (x > 0)$ 相比较. 即, 对于任何的 $n$, 等式
+\[
+  \lim_{x \to 0} \frac{f(x)}{x^n} = k
+\]
+都不成立, 式中 $k$ 为异于零的有限量.
+\end{prob}
+
+\begin{prob}[L]{655}
+设 $x \to 1$. 分出下列函数的形如 $C(x - 1)^n$ 的主部, 并求其对于无穷小量 $x - 1$ 的阶:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = x^3 - 3x + 2$;
+  \item $f(x) = \sqrt[3]{1 - \sqrt{x}}$;
+  \item $f(x) = \ln x$;
+  \item $f(x) = \mathrm{e}^x - \mathrm{e}$;
+  \item $f(x) = x^x - 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{656}
+设 $x \to +\infty$. 分出下列函数的形如 $Cx^n$ 的主部, 并求其对于无穷大量 $x$ 的阶:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = x^2 + 100x + 10\,000$;
+  \item $f(x) = \dfrac{2x^5}{x^3 - 3x + 1}$;
+  \item $f(x) = \sqrt[3]{x^2 - x} + \sqrt{x}$;
+  \item $f(x) = \sqrt{1 + \sqrt{1 + \sqrt{x}}}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{657}
+设 $x \to +\infty$. 分出下列函数的形如 $C\left(\dfrac{1}{x}\right)^n$ 的主部, 并求其对于无穷小量 $\dfrac{1}{x}$ 的阶:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = \dfrac{x + 1}{x^4 + 1}$;
+  \item $f(x) = \sqrt{x + 1} - \sqrt{x}$;
+  \item $f(x) = \sqrt{x + 2} - 2\sqrt{x + 1} + \sqrt{x}$;
+  \item $f(x) = \dfrac{1}{x}\sin\dfrac{1}{x}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{658}
+设 $x \to 1$. 分出下列函数的形如 $C\left(\dfrac{1}{x - 1}\right)^n$ 的主部, 并求其对于无穷大量 $\dfrac{1}{x - 1}$ 的阶:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = \dfrac{x^2}{x^2 - 1}$;
+  \item $f(x) = \sqrt{\dfrac{1 + x}{1 - x}}$;
+  \item $f(x) = \dfrac{x}{\sqrt[3]{1 - x^3}}$;
+  \item $f(x) = \dfrac{1}{\sin\pi x}$;
+  \item $f(x) = \dfrac{\ln x}{(1 - x)^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{659}
+设 $x \to +\infty$, $f_n(x) = x^n$ ($n = 1, 2, 3, \cdots$). 证明:
+\begin{enumerate}[label=(\arabic*), itemsep=2pt, topsep=3pt]
+  \item 每一个函数 $f_n(x)$ 都比其前面的一个函数 $f_{n-1}(x)$ 增加得快;
+  \item 函数 $\mathrm{e}^x$ 比函数 $f_n(x)$ ($n = 1, 2, \cdots$) 中的每一个都增加得快.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{660}
+设 $x \to +\infty$, $f_n(x) = \sqrt[n]{x}$ ($n = 1, 2, 3, \cdots$). 证明:
+\begin{enumerate}[label=(\arabic*), itemsep=2pt, topsep=3pt]
+  \item 每一个函数 $f_n(x)$ 都比其前面的一个函数 $f_{n-1}(x)$ 增加得慢;
+  \item 函数 $f(x) = \ln x$ 比函数 $f_n(x)$ ($n = 1, 2, \cdots$) 中的每一个都增加得慢.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{661}
+证明: 对于任意的函数序列
+\[
+  f_1(x), f_2(x), \cdots, f_n(x), \cdots \quad (x_0 < x < +\infty),
+\]
+可举出一函数 $f(x)$, 当 $x \to +\infty$ 时它比函数 $f_n(x)$ ($n = 1, 2, \cdots$) 中的每一个都增加得快.
+\end{prob}
+
+\probsec{§7. 函数的连续性}
+
+\begin{prob}[M]{662}
+已给连续函数 $y = f(x)$ 的图像, 对于给定点 $a$ 与给定数 $\varepsilon > 0$, 用几何方法表示出这样的数 $\delta > 0$, 使当 $|x - a| < \delta$ 时, $|f(x) - f(a)| < \varepsilon$.
+\end{prob}
+
+\begin{prob}[L]{663}
+需要制造一块边长 $x_0 = 10\,\mathrm{cm}$ 的正方形金属板, 其面积 $y = x^2$ 与设计值 $y_0 = 100\,\mathrm{cm}^2$ 之差不可超过: (a) $\pm 1\,\mathrm{cm}^2$; (b) $\pm 0.1\,\mathrm{cm}^2$; (c) $\pm 0.01\,\mathrm{cm}^2$; (d) $\pm \varepsilon\,\mathrm{cm}^2$, 问其边长 $x$ 可以在什么范围内变化?
+\end{prob}
+
+\begin{prob}[L]{664}
+立方体的边介于 $2\,\mathrm{m}$ 和 $3\,\mathrm{m}$ 之间, 在测量此立方体边长 $x$ 时容许怎样的绝对误差 $\Delta$, 方可使计算立方体体积时的绝对误差不超过: (a) $\varepsilon = 0.1\,\mathrm{m}^3$; (b) $\varepsilon = 0.01\,\mathrm{m}^3$; (c) $\varepsilon = 0.001\,\mathrm{m}^3$?
+\end{prob}
+
+\begin{prob}[M]{665}
+问在 $x_0 = 100$ 的尽可能多大的邻域内, 函数 $y = \sqrt{x}$ 的图像的纵坐标与 $y_0 = 10$ 之差小于 $\varepsilon = 10^{-n}$ ($n \geqslant 0$)? 求当 $n = 0, 1, 2, 3$ 时这个邻域的大小.
+\end{prob}
+
+\begin{prob}[M]{666}
+利用 “$\varepsilon$--$\delta$” 语言, 证明: 函数 $f(x) = x^2$ 当 $x = 5$ 时连续. 填下表:
+\begin{center}
+\begin{tabular}{c|c|c|c|c|c}
+\hline
+$\varepsilon$ & \quad $1$ \quad & \quad $0.1$ \quad & \quad $0.01$ \quad & \quad $0.001$ \quad & \quad $\cdots$ \quad \\
+\hline
+$\delta$ & & & & & \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[M]{667}
+设 $f(x) = \dfrac{1}{x}$, $\varepsilon = 0.001$. 对于数值 $x_0 = 0.1; 0.01; 0.001; \cdots$ 求出最大的正数 $\delta = \delta(\varepsilon, x_0)$, 使得可从不等式 $|x - x_0| < \delta$ 推出不等式 $|f(x) - f(x_0)| < \varepsilon$.
+
+可否对于已知的 $\varepsilon = 0.001$ 选出这样的 $\delta > 0$, 使它对区间 $(0, 1)$ 中的一切 $x_0$ 值都适用? 换言之, 可否找到这样的 $\delta > 0$, 使得只要 $|x - x_0| < \delta$, 就有 $|f(x) - f(x_0)| < \varepsilon$, 而不论 $x_0 \in (0, 1)$ 为何值?
+\end{prob}
+
+\begin{prob}[M]{668}
+用 “$\varepsilon$--$\delta$” 语言以肯定的方式表述以下论断: 函数 $f(x)$ 在点 $x_0$ 有定义, 而在这一点不连续.
+\end{prob}
+
+\begin{prob}[M]{669}
+设对于某些数 $\varepsilon > 0$ 可找到对应的数 $\delta = \delta(\varepsilon, x_0) > 0$, 使得只要 $|x - x_0| < \delta$, 则 $|f(x) - f(x_0)| < \varepsilon$.
+
+若 (a) 诸数 $\varepsilon$ 组成一有限的集合; (b) 数 $\varepsilon$ 组成分数 $\varepsilon = \dfrac{1}{2^n}$ ($n = 1, 2, \cdots$) 的无穷集合, 则可否断定函数 $f(x)$ 在点 $x_0$ 连续?
+\end{prob}
+
+\begin{prob}[M]{670}
+设已知函数
+\[
+  f(x) = x + 0.001[x].
+\]
+证明: 对于每一个 $\varepsilon > 0.001$, 可以选出 $\delta = \delta(\varepsilon, x) > 0$, 使得只要 $|x' - x| < \delta$, 则 $|f(x') - f(x)| < \varepsilon$. 然而, 当 $0 < \varepsilon \leqslant 0.001$ 时, 对于所有 $x$ 值都无法选出这样的 $\delta$.
+
+这个函数的连续性在哪些点遭到破坏?
+\end{prob}
+
+\begin{prob}[M]{671}
+设对于每一个充分小的数 $\delta > 0$, 都存在 $\varepsilon = \varepsilon(\delta, x_0) > 0$, 使得只要 $|x - x_0| < \delta$ 则不等式 $|f(x) - f(x_0)| < \varepsilon$ 成立. 由此是否可知函数 $f(x)$ 在 $x = x_0$ 连续? 这些不等式描述了函数 $f(x)$ 的什么性质?
+\end{prob}
+
+\begin{prob}[M]{672}
+设对于每一个数 $\varepsilon > 0$, 都存在数 $\delta = \delta(\varepsilon, x_0) > 0$, 使得若 $|f(x) - f(x_0)| < \varepsilon$, 则 $|x - x_0| < \delta$. 由此是否可知函数 $f(x)$ 在 $x = x_0$ 连续? 这些不等式描述了函数的什么性质?
+\end{prob}
+
+\begin{prob}[M]{673}
+设对于每一个数 $\delta > 0$, 都存在数 $\varepsilon = \varepsilon(\delta, x_0) > 0$, 使得若 $|f(x) - f(x_0)| < \varepsilon$, 则 $|x - x_0| < \delta$. 由此是否可知函数 $f(x)$ 在 $x = x_0$ 连续? 这些不等式描述了函数的什么性质?
+
+研究例子:
+\[
+  f(x) = \begin{cases}
+    \arctan x, & x\text{ 为有理数}, \\
+    \pi - \arctan x, & x\text{ 为无理数}.
+  \end{cases}
+\]
+\end{prob}
+
+\begin{prob}[L]{674}
+利用 “$\varepsilon$--$\delta$” 语言证明下列函数的连续性:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $ax + b$;
+  \item $x^2$;
+  \item $x^3$;
+  \item $\sqrt{x}$;
+  \item $\sqrt[3]{x}$;
+  \item $\sin x$;
+  \item $\cos x$;
+  \item $\arctan x$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{研究下列函数的连续性并绘出其图像:}
+
+\begin{prob}[M]{675}
+$f(x) = |x|$.
+\end{prob}
+
+\begin{prob}[M]{676}
+$f(x) = \begin{cases} \dfrac{x^2 - 4}{x - 2}, & x \neq 2, \\ A, & x = 2. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{677}
+$f(x) = \begin{cases} \dfrac{1}{(1 + x)^2}, & x \neq -1, \\ \text{任意值}, & x = -1. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{678}
+(a) $f_1(x) = \begin{cases} \left|\dfrac{\sin x}{x}\right|, & x \neq 0, \\ 1, & x = 0; \end{cases}$ \qquad (b) $f_2(x) = \begin{cases} \dfrac{\sin x}{|x|}, & x \neq 0, \\ 1, & x = 0. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{679}
+$f(x) = \begin{cases} \sin\dfrac{1}{x}, & x \neq 0, \\ \text{任意值}, & x = 0. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{680}
+$f(x) = \begin{cases} x\sin\dfrac{1}{x}, & x \neq 0, \\ 0, & x = 0. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{681}
+$f(x) = \begin{cases} \mathrm{e}^{-\frac{1}{x^2}}, & x \neq 0, \\ 0, & x = 0. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{682}
+$f(x) = \begin{cases} \dfrac{1}{1 + \mathrm{e}^{\frac{1}{x - 1}}}, & x \neq 1, \\ \text{任意值}, & x = 1. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{683}
+$f(x) = \begin{cases} x\ln x^2, & x \neq 0, \\ a, & x = 0. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{684}
+$f(x) = \operatorname{sgn} x$.
+\end{prob}
+
+\begin{prob}[M]{685}
+$f(x) = [x]$.
+\end{prob}
+
+\begin{prob}[M]{686}
+$f(x) = \sqrt{x} - [\sqrt{x}]$.
+\end{prob}
+
+\probgroup{求出下列函数的间断点并研究这些点的性质:}
+
+\begin{prob}[S]{687}
+$y = \dfrac{x}{(1 + x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{688}
+$y = \dfrac{1 + x}{1 + x^3}$.
+\end{prob}
+
+\begin{prob}[S]{689}
+$y = \dfrac{x^2 - 1}{x^3 - 3x + 2}$.
+\end{prob}
+
+\begin{prob}[S]{690}
+$y = \dfrac{\dfrac{1}{x} - \dfrac{1}{x + 1}}{\dfrac{1}{x - 1} - \dfrac{1}{x}}$.
+\end{prob}
+
+\begin{prob}[S]{691}
+$y = \dfrac{x}{\sin x}$.
+\end{prob}
+
+\begin{prob}[S]{692}
+$y = \sqrt{\dfrac{1 - \cos \pi x}{4 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{693}
+$y = \cos^2 \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{694}
+$y = \operatorname{sgn}\left(\sin \dfrac{\pi}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{695}
+$y = \dfrac{\cos \dfrac{\pi}{x}}{\cos \dfrac{\pi}{x}}$.
+\end{prob}
+
+\begin{prob}[S]{696}
+$y = \arctan \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{697}
+$y = \sqrt{x} \arctan \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{698}
+$y = \mathrm{e}^{x + \frac{1}{x}}$.
+\end{prob}
+
+\begin{prob}[S]{699}
+$y = \dfrac{1}{\ln x}$.
+\end{prob}
+
+\begin{prob}[S]{700}
+$y = \dfrac{1}{1 - \mathrm{e}^{\frac{x}{1 - x}}}$.
+\end{prob}
+
+\probgroup{研究下列函数的连续性并绘出其大略图像:}
+
+\begin{prob}[S]{701}
+$y = \operatorname{sgn}(\sin x)$.
+\end{prob}
+
+\begin{prob}[S]{702}
+$y = x - [x]$.
+\end{prob}
+
+\begin{prob}[S]{703}
+$y = x[x]$.
+\end{prob}
+
+\begin{prob}[S]{704}
+$y = [x] \sin \pi x$.
+\end{prob}
+
+\begin{prob}[S]{705}
+$y = x^2 - [x^2]$.
+\end{prob}
+
+\begin{prob}[S]{706}
+$y = \left[\dfrac{1}{x}\right]$.
+\end{prob}
+
+\begin{prob}[S]{707}
+$y = x\left[\dfrac{1}{x}\right]$.
+\end{prob}
+
+\begin{prob}[S]{708}
+$y = \operatorname{sgn}\left(\cos \dfrac{1}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{709}
+$y = \left[\dfrac{1}{x^2}\right] \operatorname{sgn}\left(\sin \dfrac{\pi}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{710}
+$y = \cot \dfrac{\pi}{x}$.
+\end{prob}
+
+\begin{prob}[S]{711}
+$y = \sec^2 \dfrac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{712}
+$y = (-1)^{[x^2]}$.
+\end{prob}
+
+\begin{prob}[S]{713}
+$y = \arctan\left(\dfrac{1}{x} + \dfrac{1}{x - 1} + \dfrac{1}{x - 2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{714}
+$y = \dfrac{1}{x^2 \sin^2 x}$.
+\end{prob}
+
+\begin{prob}[S]{715}
+$y = \dfrac{1}{\sin(x^2)}$.
+\end{prob}
+
+\begin{prob}[S]{716}
+$y = \ln \dfrac{x^2}{(x + 1)(x - 3)}$.
+\end{prob}
+
+\begin{prob}[S]{717}
+$y = \mathrm{e}^{-\frac{1}{x}}$.
+\end{prob}
+
+\begin{prob}[S]{718}
+$y = 1 - \mathrm{e}^{-\frac{1}{x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{719}
+$y = \tanh \dfrac{2x}{1 - x^2}$.
+\end{prob}
+
+\probgroup{研究下列函数的连续性并作出其图像:}
+
+\begin{prob}[M]{720}
+$y = \lim\limits_{n \to \infty} \dfrac{1}{1 + x^n} \ (x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{721}
+$y = \lim\limits_{n \to \infty} \dfrac{n^x - n^{-x}}{n^x + n^{-x}}$.
+\end{prob}
+
+\begin{prob}[M]{722}
+$y = \lim\limits_{n \to \infty} \sqrt[n]{1 + x^{2n}}$.
+\end{prob}
+
+\begin{prob}[M]{723}
+$y = \lim\limits_{n \to \infty} \cos^{2n} x$.
+\end{prob}
+
+\begin{prob}[M]{724}
+$y = \lim\limits_{n \to \infty} \dfrac{x}{1 + (2\sin x)^{2n}}$.
+\end{prob}
+
+\begin{prob}[M]{725}
+$y = \lim\limits_{n \to \infty} [x \arctan(n \cot x)]$.
+\end{prob}
+
+\begin{prob}[M]{726}
+$y = \lim\limits_{n \to \infty} \dfrac{x + x^2 \mathrm{e}^{nx}}{1 + \mathrm{e}^{nx}}$.
+\end{prob}
+
+\begin{prob}[M]{727}
+$y = \lim\limits_{t \to +\infty} \dfrac{\ln(1 + \mathrm{e}^{xt})}{\ln(1 + \mathrm{e}^t)}$.
+\end{prob}
+
+\begin{prob}[M]{728}
+$y = \lim\limits_{t \to +\infty} (1 + x)\tanh tx$.
+\end{prob}
+
+\begin{prob}[M]{729}
+函数
+\[
+f(x) = \begin{cases}
+2x, & 0 \leqslant x \leqslant 1, \\
+2 - x, & 1 < x \leqslant 2
+\end{cases}
+\]
+是否连续?
+\end{prob}
+
+\begin{prob}[M]{730}
+设
+\[
+f(x) = \begin{cases}
+\mathrm{e}^x, & x < 0, \\
+a + x, & x \geqslant 0.
+\end{cases}
+\]
+怎样选择数 $a$, 可使函数 $f(x)$ 连续?
+\end{prob}
+
+\begin{prob}[L]{731}
+研究下列函数的连续性并说明间断点的性质:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \begin{cases} x^2, & 0 \leqslant x \leqslant 1, \\ 2 - x, & 1 < x \leqslant 2; \end{cases}$
+\item $f(x) = \begin{cases} x, & |x| \leqslant 1, \\ 1, & |x| > 1; \end{cases}$
+\item $f(x) = \begin{cases} \cos\dfrac{\pi x}{2}, & |x| \leqslant 1, \\ |x - 1|, & |x| > 1; \end{cases}$
+\item $f(x) = \begin{cases} \cot^2 \pi x, & x \text{ 非整数}, \\ 0, & x \text{ 为整数}; \end{cases}$
+\item $f(x) = \begin{cases} \sin \pi x, & x \text{ 为有理数}, \\ 0, & x \text{ 为无理数}. \end{cases}$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{732}
+函数 $d = d(x)$ 是数轴 $Ox$ 上的点 $x$ 与由线段 $0 \leqslant x \leqslant 1$ 及 $2 \leqslant x \leqslant 3$ 所构成点集间的最短距离. 求函数 $d$ 的解析表达式, 作出其图像并研究其连续性.
+\end{prob}
+
+\begin{prob}[L]{733}
+图像 $E$ 由高为 $1$ 底为 $1$ 的等腰三角形及底为 $1$ 高为 $2$ 及 $3$ 的二矩形构成 (图 5). 函数 $S = S(y) \ (0 \leqslant y < +\infty)$ 是图像 $E$ 介于平行线 $Y = 0$ 及 $Y = y$ 之间的那一部分面积, 而函数 $b = b(y) \ (0 \leqslant y < +\infty)$ 是用平行线 $Y = y$ 去截图像所得截痕之长. 求函数 $S$ 及 $b$ 的解析表达式, 作出它们的图像并研究其连续性.
+\probfig{fig_733.png}{图 5}
+\end{prob}
+
+\begin{prob}[M]{734}
+证明: 狄利克雷函数
+\[
+\chi(x) = \lim_{m \to \infty} \left\{\lim_{n \to \infty} \cos^n(\pi m! x)\right\}
+\]
+对于每个 $x$ 值都是不连续的.
+\end{prob}
+
+\begin{prob}[M]{735}
+设有函数
+\[
+f(x) = x\chi(x),
+\]
+式中 $\chi(x)$ 为狄利克雷函数 (参阅上题), 研究函数 $f(x)$ 的连续性并作出它的草图.
+\end{prob}
+
+\begin{prob}[L]{736}
+证明: 黎曼函数
+\[
+f(x) = \begin{cases}
+\dfrac{1}{n}, & x = \dfrac{m}{n}, \text{ 其中 } m \text{ 和 } n \text{ 为互素的数}, \\
+0, & x \text{ 为无理数},
+\end{cases}
+\]
+当 $x$ 取任一个有理值时是不连续的, 而当 $x$ 取任一个无理值时是连续的. 作出这个函数的草图.
+\end{prob}
+
+\begin{prob}[M]{737}
+研究函数
+\[
+f(x) = \begin{cases}
+\dfrac{nx}{n + 1}, & x \text{ 为既约的有理分数 } \dfrac{m}{n} \ (n \geqslant 1), \\
+|x|, & x \text{ 为无理数}
+\end{cases}
+\]
+的连续性并作出此函数的草图.
+\end{prob}
+
+\begin{prob}[S]{738}
+函数 $f(x) = \dfrac{1 - \cos x}{x^2}$ 当自变量 $x$ 取一切非零值时都有定义. 为了使此函数在 $x = 0$ 时连续, 应当以什么数值作为函数在点 $x = 0$ 的值?
+\end{prob}
+
+\begin{prob}[M]{739}
+证明: 无论怎样选取数 $f(1)$, 函数 $f(x) = \dfrac{1}{1 - x}$ 在 $x = 1$ 时都是不连续的.
+\end{prob}
+
+\begin{prob}[L]{740}
+下列函数 $f(x)$ 当 $x = 0$ 时没有意义. 定义 $f(0)$ 的值, 使得 $f(x)$ 在 $x = 0$ 连续:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \dfrac{\sqrt{1 + x} - 1}{\sqrt[3]{1 + x} - 1}$;
+\item $f(x) = \dfrac{\tan 2x}{x}$;
+\item $f(x) = \sin x \sin \dfrac{1}{x}$;
+\item $f(x) = (1 + x)^{\frac{1}{x}}$;
+\item $f(x) = \dfrac{1}{x^2} \mathrm{e}^{-\frac{1}{x^2}}$;
+\item $f(x) = x^x \ (x > 0)$;
+\item $f(x) = x \ln^2 x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{741}
+设: (a) 函数 $f(x)$ 当 $x = x_0$ 时是连续的, 而函数 $g(x)$ 当 $x = x_0$ 时是不连续的; (b) 当 $x = x_0$ 时函数 $f(x)$ 和 $g(x)$ 二者都是不连续的, 则此二函数的和 $f(x) + g(x)$ 在已知点 $x_0$ 是否必为不连续的? 举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{742}
+设: (a) 函数 $f(x)$ 于 $x_0$ 连续, 而函数 $g(x)$ 于 $x_0$ 不连续; (b) 当 $x = x_0$ 时, 函数 $f(x)$ 和 $g(x)$ 二者都不连续, 则此二函数的乘积 $f(x)g(x)$ 在已知点 $x_0$ 是否必不连续? 举出适当的例子.
+\end{prob}
+
+\begin{prob}[M]{743}
+可否断定不连续函数的平方仍为不连续函数? 举出处处不连续但其平方连续的函数的例子.
+\end{prob}
+
+\begin{prob}[L]{744}
+研究函数 $f[g(x)]$ 和 $g[f(x)]$ 的连续性:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \operatorname{sgn} x$ 及 $g(x) = 1 + x^2$;
+\item $f(x) = \operatorname{sgn} x$ 及 $g(x) = x(1 - x^2)$;
+\item $f(x) = \operatorname{sgn} x$ 及 $g(x) = 1 + x - [x]$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{745}
+设
+\[
+f(u) = \begin{cases}
+u, & 0 < u \leqslant 1, \\
+2 - u, & 1 < u < 2,
+\end{cases}
+\]
+\[
+\varphi(x) = \begin{cases}
+x, & x \text{ 为有理数}, \\
+2 - x, & x \text{ 为无理数},
+\end{cases}
+\]
+其中 $0 < x < 1$. 研究复合函数 $y = f(u)$ 的连续性, 其中 $u = \varphi(x)$.
+\end{prob}
+
+\begin{prob}[M]{746}
+证明: 若 $f(x)$ 是连续函数, 则下列函数也是连续的:
+\[
+F(x) = |f(x)|.
+\]
+\end{prob}
+
+\begin{prob}[M]{747}
+证明: 若函数 $f(x)$ 是连续的, 则函数
+\[
+f_c(x) = \begin{cases}
+-c, & f(x) < -c, \\
+f(x), & |f(x)| \leqslant c, \\
+c, & f(x) > c
+\end{cases}
+\]
+(式中 $c$ 为任意的正数) 也是连续函数.
+\end{prob}
+
+\begin{prob}[M]{748}
+证明: 若函数 $f(x)$ 在闭区间 $[a, b]$ 上连续, 则函数
+\[
+m(x) = \inf_{a \leqslant \xi \leqslant x} \{f(\xi)\} \quad \text{和} \quad M(x) = \sup_{a \leqslant \xi \leqslant x} \{f(\xi)\}
+\]
+在 $[a, b]$ 上也是连续的.
+\end{prob}
+
+\begin{prob}[M]{749}
+证明: 若函数 $f(x)$ 和 $g(x)$ 是连续的, 则函数
+\[
+\varphi(x) = \min[f(x), g(x)] \quad \text{和} \quad \psi(x) = \max[f(x), g(x)]
+\]
+也是连续的.
+\end{prob}
+
+\begin{prob}[M]{750}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上有定义并有界. 证明: 函数
+\[
+m(x) = \inf_{a \leqslant \xi < x} \{f(\xi)\} \quad \text{和} \quad M(x) = \sup_{a \leqslant \xi < x} \{f(\xi)\}
+\]
+在闭区间 $[a, b]$ 上是左连续的.
+\end{prob}
+
+\begin{prob}[M]{751}
+证明: 若函数 $f(x)$ 在区间 $a \leqslant x < +\infty$ 上连续, 且有有限的
+\[
+\lim_{x \to +\infty} f(x),
+\]
+则此函数在已知区间上是有界的.
+\end{prob}
+
+\begin{prob}[M]{752}
+设函数 $f(x)$ 在区间 $(x_0, +\infty)$ 上连续并有界. 证明: 对于任何数 $T$, 可求得数列 $x_n \to +\infty$, 使
+\[
+\lim_{n \to \infty} [f(x_n + T) - f(x_n)] = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{753}
+设 $\varphi(x)$ 及 $\psi(x)$ 为定义于 $-\infty < x < +\infty$ 的连续周期函数, 且
+\[
+\lim_{x \to +\infty} [\varphi(x) - \psi(x)] = 0.
+\]
+证明: $\varphi(x) \equiv \psi(x)$.
+\end{prob}
+
+\begin{prob}[M]{754}
+证明: 单调有界函数的一切间断点皆为第一类间断点.
+\end{prob}
+
+\begin{prob}[M]{755}
+证明: 若函数 $f(x)$ 具有下列性质: (1) 在闭区间 $[a, b]$ 上有定义且单调; (2) 取介于 $f(a)$ 和 $f(b)$ 之间所有的数作为其函数值, 则此函数在 $[a, b]$ 上连续.
+\end{prob}
+
+\begin{prob}[M]{756}
+证明: 函数
+\[
+f(x) = \begin{cases}
+\sin \dfrac{1}{x - a}, & x \neq a, \\
+0, & x = a
+\end{cases}
+\]
+在任意闭区间 $[a, b]$ 上取介于 $f(a)$ 和 $f(b)$ 之间的一切中间值, 但在 $[a, b]$ 上并不连续.
+\end{prob}
+
+\begin{prob}[M]{757}
+证明: 若函数 $f(x)$ 在区间 $(a, b)$ 内连续, 且 $x_1, x_2, \cdots, x_n$ 为此区间中的任意值, 则在它们之间可找到一个数值 $\xi$, 使得
+\[
+f(\xi) = \frac{1}{n}[f(x_1) + f(x_2) + \cdots + f(x_n)].
+\]
+\end{prob}
+
+\begin{prob}[M]{758}
+设函数 $f(x)$ 在区间 $(a, b)$ 上连续, 且
+\[
+l = \varliminf_{x \to a} f(x), \quad L = \varlimsup_{x \to a} f(x).
+\]
+证明: 对于满足 $l \leqslant \lambda \leqslant L$ 的任意的数 $\lambda$, 存在数列 $x_n \to a \ (n = 1, 2, \cdots)$, 使得
+\[
+\lim_{n \to \infty} f(x_n) = \lambda.
+\]
+\end{prob}
+
+\probsec{§8. 反函数. 用参数形式表示的函数}
+
+\begin{prob}[M]{759}
+求分式线性函数
+\[
+y = \frac{ax + b}{cx + d} \quad (ad - bc \neq 0)
+\]
+的反函数. 在怎样的情形下, 反函数与已知函数相同?
+\end{prob}
+
+\begin{prob}[S]{760}
+设 $y = x + [x]$, 求反函数 $x = x(y)$.
+\end{prob}
+
+\begin{prob}[M]{761}
+证明: 存在唯一的连续函数 $y = y(x) \ (-\infty < x < +\infty)$ 满足开普勒方程
+\[
+y - \varepsilon \sin y = x \quad (0 \leqslant \varepsilon < 1).
+\]
+\end{prob}
+
+\begin{prob}[M]{762}
+证明: 对于每一个实数 $k \ (-\infty < k < +\infty)$ 方程
+\[
+\cot x = kx
+\]
+在区间 $0 < x < \pi$ 中有唯一连续的根 $x = x(k)$.
+\end{prob}
+
+\begin{prob}[M]{763}
+非单调的函数 $y = f(x) \ (-\infty < x < +\infty)$ 可否有单值的反函数? 研究例子:
+\[
+y = \begin{cases}
+x, & x \text{ 为有理数}, \\
+-x, & x \text{ 为无理数}.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[S]{764}
+在什么情况下, 函数 $y = f(x)$ 和反函数 $x = f^{-1}(y)$ 是同一个函数?
+\end{prob}
+
+\begin{prob}[M]{765}
+证明: 不连续函数
+\[
+y = (1 + x^2)\operatorname{sgn} x
+\]
+的反函数是连续函数.
+\end{prob}
+
+\begin{prob}[M]{766}
+证明: 若函数 $f(x)$ 在闭区间 $[a, b]$ 上有定义并且是严格单调的, 且
+\[
+\lim_{n \to \infty} f(x_n) = f(a) \quad (a \leqslant x_n \leqslant b),
+\]
+则
+\[
+\lim_{n \to \infty} x_n = a.
+\]
+\end{prob}
+
+\probgroup{求下列函数的反函数的连续单值分支：}
+
+\begin{prob}[S]{767}
+$y = x^2.$
+\end{prob}
+
+\begin{prob}[S]{768}
+$y = 2x - x^2.$
+\end{prob}
+
+\begin{prob}[S]{769}
+$y = \frac{2x}{1 + x^2}.$
+\end{prob}
+
+\begin{prob}[S]{770}
+$y = \sin x.$
+\end{prob}
+
+\begin{prob}[S]{771}
+$y = \cos x.$
+\end{prob}
+
+\begin{prob}[S]{772}
+$y = \tan x.$
+\end{prob}
+
+\begin{prob}[M]{773}
+证明：连续函数 $y = 1 + \sin x$ 在区间 $0 < x < 2\pi$ 内的值域是闭区间.
+\end{prob}
+
+\begin{prob}[M]{774}
+证明：等式
+\[
+\arcsin x + \arccos x = \frac{\pi}{2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{775}
+证明：等式
+\[
+\arctan x + \arctan \frac{1}{x} = \frac{\pi}{2}\operatorname{sgn} x \quad (x \neq 0).
+\]
+\end{prob}
+
+\begin{prob}[L]{776}
+证明反正切加法定理：
+\[
+\arctan x + \arctan y = \arctan \frac{x + y}{1 - xy} + \varepsilon \pi,
+\]
+式中 $\varepsilon = \varepsilon(x, y)$ 为取 $0, 1, -1$ 这三个值的函数.
+
+当给定 $x$ 的值时，对于怎样的 $y$ 值，函数 $\varepsilon$ 可能不连续？在 $Oxy$ 平面上作出函数 $\varepsilon$ 连续的相应区域，并求此函数在所得区域内的值.
+\end{prob}
+
+\begin{prob}[M]{777}
+证明反正弦加法定理：
+\[
+\arcsin x + \arcsin y = (-1)^{\varepsilon} \arcsin \left( x\sqrt{1 - y^2} + y\sqrt{1 - x^2} \right) + \varepsilon \pi \quad (|x| \leqslant 1, |y| \leqslant 1),
+\]
+式中
+\[
+\varepsilon = \begin{cases}
+0, & xy \leqslant 0 \text{ 或 } x^2 + y^2 \leqslant 1, \\
+\operatorname{sgn} x, & xy > 0 \text{ 和 } x^2 + y^2 > 1.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{778}
+证明反余弦相加的定理：
+\[
+\arccos x + \arccos y = (-1)^{\varepsilon} \arccos \left( xy - \sqrt{1 - x^2}\sqrt{1 - y^2} \right) + 2\pi \varepsilon \quad (|x| \leqslant 1, |y| \leqslant 1),
+\]
+式中
+\[
+\varepsilon = \begin{cases}
+0, & x + y \geqslant 0, \\
+1, & x + y < 0.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{779}
+作函数的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item $y = \arcsin x - \arcsin \sqrt{1 - x^2}$;
+    \item $y = \arcsin \left(2x\sqrt{1 - x^2}\right) - 2\arcsin x.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{780}
+函数 $y = y(x)$ 由下面的方程给出：
+\[
+x = \arctan t, \quad y = \operatorname{arccot} t \quad (-\infty < t < +\infty),
+\]
+求此函数. 此函数的定义域是什么？
+\end{prob}
+
+\begin{prob}[M]{781}
+设
+\[
+x = \cosh t, \quad y = \sinh t \quad (-\infty < t < +\infty).
+\]
+在参量 $t$ 的哪些变化域中可以把变量 $y$ 看作变量 $x$ 的单值函数？求 $y$ 在不同变化域上的表达式.
+\end{prob}
+
+\begin{prob}[M]{782}
+设 $y$ 对 $x$ 的函数关系由方程组
+\[
+x = \varphi(t), \quad y = \psi(t) \quad (\alpha < t < \beta)
+\]
+给出，问 $y = y(x)$ 是单值函数的充分必要条件是什么？
+
+研究例子：
+\[
+x = \sin^2 t, \quad y = \cos^2 t.
+\]
+\end{prob}
+
+\begin{prob}[M]{783}
+在怎样的条件下，两个方程组
+\[
+x = \varphi(t), \quad y = \psi(t) \quad (a < t < b)
+\]
+和
+\[
+x = \varphi(\chi(\tau)), \quad y = \psi(\chi(\tau)) \quad (\alpha < \tau < \beta)
+\]
+定义出同一个函数 $y = y(x)$？
+\end{prob}
+
+\begin{prob}[M]{784}
+设函数 $\varphi(x)$ 和 $\psi(x)$ 在区间 $(a, b)$ 内有定义并且连续，且
+\[
+A = \inf_{a < x < b} \varphi(x), \quad B = \sup_{a < x < b} \varphi(x).
+\]
+在何种情况下存在单值函数 $f(x)$，它在区间 $(A, B)$ 上有定义，并且当 $a < x < b$ 时 $\psi(x) = f[\varphi(x)]$？
+\end{prob}
+
+\probsec{§9. 函数的一致连续性}
+
+\begin{prob}[L]{785}
+某工厂车间制造正方形平板，其边长 $x$ 在 $1\,\mathrm{cm}$ 至 $10\,\mathrm{cm}$ 之间取值. 当边长的允许误差 $\delta$ 为何值时，不论制造多大的平板（边长在上述范围内），其面积 $y$ 与设计值之差都小于 $\varepsilon$？考虑下列情形：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item $\varepsilon = 1\,\mathrm{cm}^2$;
+    \item $\varepsilon = 0.01\,\mathrm{cm}^2$;
+    \item $\varepsilon = 0.0001\,\mathrm{cm}^2.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{786}
+圆柱形套筒的宽为 $\varepsilon$，长为 $\delta$. 将套筒套在曲线 $y = \sqrt[3]{x}$ 上并使它沿此曲线滑动，但套筒的轴须保持平行于 $Ox$ 轴. $\delta$ 应取何值，才可以使此筒顺利地经过此曲线上由不等式 $-10 \leqslant x \leqslant 10$ 所限定的部分？考虑下列情形：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item $\varepsilon = 1$;
+    \item $\varepsilon = 0.1$;
+    \item $\varepsilon = 0.001$;
+    \item $\varepsilon$ 为任意小数.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{787}
+以“$\varepsilon\text{-}\delta$”语言用肯定的方式表达下述论断：函数 $f(x)$ 在某集合（开区间，闭区间，等等）上连续，但在此集合上并不一致连续.
+\end{prob}
+
+\begin{prob}[M]{788}
+证明：函数 $f(x) = \frac{1}{x}$ 在区间 $(0, 1)$ 上是连续的，但在此区间上并非一致连续的.
+\end{prob}
+
+\begin{prob}[M]{789}
+证明：函数 $f(x) = \sin \frac{\pi}{x}$ 在区间 $(0, 1)$ 上是连续的并且有界，但在此区间上并非一致连续的.
+\end{prob}
+
+\begin{prob}[M]{790}
+证明：函数 $f(x) = \sin x^2$ 在无穷区间 $-\infty < x < +\infty$ 上连续并且有界，但在此区间上并非一致连续的.
+\end{prob}
+
+\begin{prob}[M]{791}
+证明：若函数 $f(x)$ 在区域 $a \leqslant x < +\infty$ 上有定义并且连续，而且有限的
+\[
+\lim_{x \to +\infty} f(x)
+\]
+存在，则 $f(x)$ 在此区域上是一致连续的.
+\end{prob}
+
+\begin{prob}[M]{792}
+证明：无界函数 $f(x) = x + \sin x$ 于全轴 $-\infty < x < +\infty$ 上一致连续.
+\end{prob}
+
+\begin{prob}[M]{793}
+函数 $f(x) = x^2$ 在下列区间中是否为一致连续的：(a) $(-l, l)$，这里 $l$ 为任意大的正数；\qquad (b) 在区间 $(-\infty, +\infty)$ 上？
+\end{prob}
+
+\probgroup{研究下列函数在给定区域上的一致连续性：}
+
+\begin{prob}[S]{794}
+$f(x) = \frac{x}{4 - x^2} \quad (-1 \leqslant x \leqslant 1).$
+\end{prob}
+
+\begin{prob}[S]{795}
+$f(x) = \ln x \quad (0 < x < 1).$
+\end{prob}
+
+\begin{prob}[S]{796}
+$f(x) = \frac{\sin x}{x} \quad (0 < x < \pi).$
+\end{prob}
+
+\begin{prob}[S]{797}
+$f(x) = \mathrm{e}^x \cos \frac{1}{x} \quad (0 < x < 1).$
+\end{prob}
+
+\begin{prob}[S]{798}
+$f(x) = \arctan x \quad (-\infty < x < +\infty).$
+\end{prob}
+
+\begin{prob}[S]{799}
+$f(x) = \sqrt{x} \quad (1 \leqslant x < +\infty).$
+\end{prob}
+
+\begin{prob}[S]{800}
+$f(x) = x \sin x \quad (0 \leqslant x < +\infty).$
+\end{prob}
+
+\begin{prob}[M]{801.1}
+证明：函数 $f(x) = \frac{|\sin x|}{x}$ 在每个区间
+\[
+J_1 = (-1 < x < 0) \quad \text{及} \quad J_2 = (0 < x < 1)
+\]
+上是一致连续的，但在它们的和
+\[
+J_1 + J_2 = \{0 < |x| < 1\}
+\]
+上并非一致连续的.
+\end{prob}
+
+\begin{prob}[M]{801.2}
+证明：若函数 $f(x)$ 在每一个闭区间 $[a, c]$ 与 $[c, b]$ 上是一致连续的，则这个函数在合起来的闭区间 $[a, b]$ 上也是一致连续的.
+\end{prob}
+
+\begin{prob}[L]{802}
+对于 $\varepsilon > 0$，求使下列函数 $f(x)$ 在所给区间上满足一致连续条件的 $\delta = \delta(\varepsilon)$（任意的！）：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item $f(x) = 5x - 3 \quad (-\infty < x < +\infty)$;
+    \item $f(x) = x^2 - 2x - 1 \quad (-2 \leqslant x \leqslant 5)$;
+    \item $f(x) = \frac{1}{x} \quad (0.1 \leqslant x \leqslant 1)$;
+    \item $f(x) = \sqrt{x} \quad (0 \leqslant x < +\infty)$;
+    \item $f(x) = 2\sin x - \cos x \quad (-\infty < x < +\infty)$;
+    \item $f(x) = \begin{cases} x \sin \frac{1}{x}, & x \neq 0, \\ 0, & x = 0 \end{cases} \quad (0 \leqslant x \leqslant \pi).$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{803}
+将闭区间 $[1, 10]$ 等分为多少段，就足以让函数 $f(x) = x^2$ 在每一段上的振幅小于 $0.0001$？
+\end{prob}
+
+\begin{prob}[M]{804}
+证明：有限个在区间 $(a, b)$ 上一致连续的函数的和与积在此区间上仍是一致连续的.
+\end{prob}
+
+\begin{prob}[M]{805}
+证明：若单调有界的函数 $f(x)$ 在有限或无穷的区间 $(a, b)$ 上是连续的，则此函数在区间 $(a, b)$ 上是一致连续的.
+\end{prob}
+
+\begin{prob}[M]{806.1}
+证明：若函数 $f(x)$ 在有限区间 $(a, b)$ 上一致连续，则存在极限
+\[
+A = \lim_{x \to a+0} f(x) \quad \text{及} \quad B = \lim_{x \to b-0} f(x).
+\]
+这个定理对无穷区间 $(a, b)$ 是否成立？
+\end{prob}
+
+\begin{prob}[M]{806.2}
+证明：在有限区间 $(a, b)$ 上有定义且连续的函数 $f(x)$，可用连续的方法延拓到闭区间 $[a, b]$ 上，其充分必要条件是函数 $f(x)$ 在区间 $(a, b)$ 上是一致连续的.
+\end{prob}
+
+\begin{prob}[M]{807}
+函数
+\[
+\omega_f(\delta) = \sup |f(x_1) - f(x_2)|
+\]
+（式中 $x_1$ 和 $x_2$ 为 $(a, b)$ 中受条件 $|x_1 - x_2| \leqslant \delta$ 限制的任意两点）称为函数 $f(x)$ 在区间 $(a, b)$ 上的连续模.
+
+证明：函数 $f(x)$ 在区间 $(a, b)$ 上一致连续的充分必要条件是
+\[
+\lim_{\delta \to +0} \omega_f(\delta) = 0.
+\]
+\end{prob}
+
+\begin{prob}[L]{808}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item $f(x) = x^3 \quad (0 \leqslant x \leqslant 1)$;
+    \item $f(x) = \sqrt{x} \quad (0 \leqslant x \leqslant a) \text{ 及 } (a < x < +\infty)$;
+    \item $f(x) = \sin x + \cos x \quad (0 \leqslant x \leqslant 2\pi).$
+\end{enumerate}
+对 $f(x)$ 的连续模 $\omega_f(\delta)$（参阅前题）作如下形式的估计：
+\[
+\omega_f(\delta) \leqslant C\delta^{\alpha},
+\]
+式中 $C$ 和 $\alpha$ 为常数.
+\end{prob}
+
+\probsec{§10. 函数方程}
+
+\begin{prob}[M]{809}
+证明：对于所有实数 $x$ 和 $y$ 都满足方程
+\[
+f(x + y) = f(x) + f(y) \tag{1}
+\]
+的唯一的连续函数 $f(x)$ $(-\infty < x < +\infty)$ 是线性齐次函数
+\[
+f(x) = ax,
+\]
+式中 $a = f(1)$ 是任意的常数.
+\end{prob}
+
+\begin{prob}[M]{810}
+证明：满足方程 $(1)$ 的单调函数 $f(x)$ 是线性齐次的.
+\end{prob}
+
+\begin{prob}[M]{811}
+证明：满足方程 $(1)$ 且在任意小区间 $(-\varepsilon, \varepsilon)$ 上有界的函数 $f(x)$，是线性齐次函数.
+\end{prob}
+
+\begin{prob}[M]{812}
+证明：对于所有 $x$ 和 $y$ 都满足方程
+\[
+f(x + y) = f(x) f(y) \tag{2}
+\]
+的唯一不恒等于零的连续函数 $f(x)$ $(-\infty < x < +\infty)$ 是指数函数：
+\[
+f(x) = a^x,
+\]
+式中 $a = f(1)$ 为正的常数.
+\end{prob}
+
+\begin{prob}[M]{813}
+证明：在区间 $(0, \varepsilon)$ 中有界并满足方程 $(2)$ 的不恒等于零的函数 $f(x)$ 是指数函数.
+\end{prob}
+
+\begin{prob}[M]{814}
+证明：对于所有正数 $x$ 和 $y$ 都满足方程
+\[
+f(xy) = f(x) + f(y)
+\]
+的唯一不恒等于零的连续函数 $f(x)$ $(0 < x < +\infty)$ 是对数函数：
+\[
+f(x) = \log_a x,
+\]
+式中 $a$ 为正的常数.
+\end{prob}
+
+\begin{prob}[M]{815}
+证明：对于所有正数 $x$ 和 $y$ 都满足方程
+\[
+f(xy) = f(x) f(y), \tag{3}
+\]
+的唯一不恒等于零的连续函数 $f(x)$ $(0 < x < +\infty)$ 是幂函数：
+\[
+f(x) = x^a,
+\]
+式中 $a$ 为常数.
+\end{prob}
+
+\begin{prob}[M]{816}
+求对于所有实数 $x$ 和 $y$ 都满足方程 $(3)$ 的所有的连续函数 $f(x)$ $(-\infty < x < +\infty)$.
+\end{prob}
+
+\begin{prob}[S]{817}
+证明：不连续函数 $f(x) = \operatorname{sgn} x$ 满足方程 $(3)$.
+\end{prob}
+
+\begin{prob}[M]{818}
+求对于所有实数 $x$ 和 $y$ 都满足方程
+\[
+f(x + y) + f(x - y) = 2f(x) f(y)
+\]
+的所有的连续函数 $f(x)$ $(-\infty < x < +\infty)$.
+\end{prob}
+
+\begin{prob}[M]{819}
+求对于所有实数 $x$ 和 $y$ 都满足方程组
+\[
+f(x + y) = f(x) f(y) - g(x) g(y), \quad g(x + y) = f(x) g(y) + f(y) g(x),
+\]
+以及规范条件
+\[
+f(0) = 1 \quad \text{和} \quad g(0) = 0
+\]
+的所有的有界连续函数 $f(x)$ 和 $g(x)$ $(-\infty < x < +\infty)$.
+\probhint{研究函数 $F(x) = f^2(x) + g^2(x)$.}
+\end{prob}
+
+\begin{prob}[M]{820}
+设
+\[
+\Delta f(x) = f(x + \Delta x) - f(x), \quad \Delta^2 f(x) = \Delta\{\Delta f(x)\}
+\]
+分别为函数 $f(x)$ 的一阶、二阶有限差分.
+
+证明：若函数 $f(x)$ $(-\infty < x < +\infty)$ 是连续的且
+\[
+\Delta^2 f(x) \equiv 0,
+\]
+则此函数是线性函数，即
+\[
+f(x) = ax + b,
+\]
+式中 $a$ 和 $b$ 为常数.
+\end{prob}

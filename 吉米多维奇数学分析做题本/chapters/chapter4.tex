@@ -1,0 +1,2044 @@
+\probchapter{第四章\quad 定积分}
+
+\probsec{§1. 定积分是积分和的极限}
+
+\begin{prob}[M]{2181}
+把区间 $[-1, 4]$ 分为 $n$ 个相等的子区间, 并取这些子区间中点的坐标作自变量 $\xi_i$ 的值 ($i = 0, 1, \cdots, n-1$). 求函数 $f(x) = 1 + x$ 在此区间上的积分和 $S_n$.
+\end{prob}
+
+\begin{prob}[L]{2182}
+把所给区间分为 $n$ 个相等的部分, 求下列函数 $f(x)$ 在相应区间上的下积分和 $\underline{S}_n$ 与上积分和 $\overline{S}_n$:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = x^3 \quad (-2 \leqslant x \leqslant 3)$;
+  \item $f(x) = \sqrt{x} \quad (0 \leqslant x \leqslant 1)$;
+  \item $f(x) = 2^x \quad (0 \leqslant x \leqslant 10)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2183}
+把闭区间 $[1, 2]$ 分为 $n$ 份, 使这 $n$ 份的长构成一等比数列, 求函数 $f(x) = x^4$ 在此区间上的下积分和. 当 $n \to \infty$ 时此和的极限等于什么?
+\end{prob}
+
+\begin{prob}[M]{2184}
+从积分的定义出发, 求
+\[
+\int_{0}^{T} (v_0 + gt)\,\mathrm{d}t,
+\]
+其中 $T, v_0, g$ 为常数.
+\end{prob}
+
+\probgroup{以适当的方法分割积分区间, 并视积分为相应积分和的极限, 计算下列定积分:}
+
+\begin{prob}[S]{2185}
+$\displaystyle\int_{-1}^{2} x^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2186}
+$\displaystyle\int_{0}^{1} a^x\,\mathrm{d}x \ (a > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2187}
+$\displaystyle\int_{0}^{\frac{\pi}{2}} \sin x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2188}
+$\displaystyle\int_{0}^{x} \cos t\,\mathrm{d}t$.
+\end{prob}
+
+\begin{prob}[M]{2189}
+$\displaystyle\int_{a}^{b} \frac{\mathrm{d}x}{x^2} \ (0 < a < b)$.
+\probhint{令 $\xi_i = \sqrt{x_i x_{i+1}} \ (i = 0, 1, \cdots, n)$.}
+\end{prob}
+
+\begin{prob}[M]{2190}
+$\displaystyle\int_{a}^{b} x^m\,\mathrm{d}x \ (0 < a < b; \, m \neq -1)$.
+\probhint{选择诸分点, 使它们的横坐标 $x_i$ 构成一等比数列.}
+\end{prob}
+
+\begin{prob}[S]{2191}
+$\displaystyle\int_{a}^{b} \frac{\mathrm{d}x}{x} \ (0 < a < b)$.
+\end{prob}
+
+\begin{prob}[M]{2192}
+计算泊松积分
+\[
+\int_{0}^{\pi} \ln(1 - 2\alpha\cos x + \alpha^2)\,\mathrm{d}x,
+\]
+考虑两种情形: (a) $|\alpha| < 1$; \qquad (b) $|\alpha| > 1$.
+\probhint{分解多项式 $\alpha^{2n} - 1$ 为二次因式.}
+\end{prob}
+
+\begin{prob}[M]{2193.1}
+设函数 $f(x)$ 及 $\varphi(x)$ 在 $[a, b]$ 上连续, 证明:
+\[
+\lim_{\max|\Delta x_i| \to 0} \sum_{i=0}^{n-1} f(\xi_i)\varphi(\theta_i)\Delta x_i = \int_{a}^{b} f(x)\varphi(x)\,\mathrm{d}x,
+\]
+其中 $x_i \leqslant \xi_i \leqslant x_{i+1}, \, x_i \leqslant \theta_i \leqslant x_{i+1} \ (i = 0, 1, \cdots, n-1)$, 且 $\Delta x_i = x_{i+1} - x_i \ (x_0 = a, \, x_n = b)$.
+\end{prob}
+
+\begin{prob}[M]{2193.2}
+设函数 $f(x)$ 在 $[0, 1]$ 上有界且单调, 证明:
+\[
+\int_{0}^{1} f(x)\,\mathrm{d}x - \frac{1}{n} \sum_{k=1}^{n} f\left(\frac{k}{n}\right) = O\left(\frac{1}{n}\right).
+\]
+\end{prob}
+
+\begin{prob}[M]{2193.3}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上有界并凹 (参考习题 1312), 证明:
+\[
+(b - a)\frac{f(a) + f(b)}{2} \leqslant \int_{a}^{b} f(x)\,\mathrm{d}x \leqslant (b - a)f\left(\frac{a + b}{2}\right).
+\]
+\end{prob}
+
+\begin{prob}[M]{2193.4}
+设 $f(x) \in C^{(2)}[1, +\infty)$, 且当 $x \in [1, +\infty)$ 时 $f(x) \geqslant 0, \, f'(x) \geqslant 0, \, f''(x) \leqslant 0$. 证明: 当 $n \to \infty$ 时
+\[
+\sum_{k=1}^{n} f(k) = \frac{1}{2}f(n) + \int_{1}^{n} f(x)\,\mathrm{d}x + O(1).
+\]
+\end{prob}
+
+\begin{prob}[M]{2193.5}
+设 $f(x) \in C^{(1)}[a, b]$,
+\[
+\Delta_n = \int_{a}^{b} f(x)\,\mathrm{d}x - \frac{b - a}{n} \sum_{k=1}^{n} f\left(a + k\frac{b - a}{n}\right),
+\]
+求 $\displaystyle\lim_{n \to \infty} n\Delta_n$.
+\end{prob}
+
+\begin{prob}[M]{2194}
+证明: 不连续函数
+\[
+f(x) = \operatorname{sgn}\left(\sin\frac{\pi}{x}\right)
+\]
+在区间 $[0, 1]$ 上可积.
+\end{prob}
+
+\begin{prob}[M]{2195}
+证明: 黎曼函数
+\[
+\varphi(x) = \begin{cases} 0, & x \text{ 为无理数}, \\ \dfrac{1}{n}, & x = \dfrac{m}{n} \ (m \text{ 及 } n \ (n \geqslant 1) \text{ 为互素的整数}) \end{cases}
+\]
+在任何有限的区间上可积.
+\end{prob}
+
+\begin{prob}[M]{2196}
+证明: 函数
+\[
+f(x) = \begin{cases} \dfrac{1}{x} - \left[\dfrac{1}{x}\right], & x \neq 0, \\ 0, & x = 0 \end{cases}
+\]
+在闭区间 $[0, 1]$ 上可积.
+\end{prob}
+
+\begin{prob}[M]{2197}
+证明: 狄利克雷函数
+\[
+\chi(x) = \begin{cases} 0, & x \text{ 为无理数}, \\ 1, & x \text{ 为有理数} \end{cases}
+\]
+在任何区间上不可积.
+\end{prob}
+
+\begin{prob}[M]{2198}
+设函数 $f(x)$ 在 $[a, b]$ 上可积, 且
+\[
+f_n(x) = \sup f(x) \quad (x_i \leqslant x \leqslant x_{i+1}),
+\]
+其中 $x_i = a + \dfrac{i}{n}(b - a) \ (i = 0, 1, \cdots, n; \, n = 1, 2, \cdots)$. 证明:
+\[
+\lim_{n \to \infty} \int_{a}^{b} f_n(x)\,\mathrm{d}x = \int_{a}^{b} f(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2199}
+证明: 若函数 $f(x)$ 在 $[a, b]$ 上可积, 则存在连续函数 $\varphi_n(x) \ (n = 1, 2, \cdots)$ 的序列, 使得在 $a \leqslant c \leqslant b$ 时
+\[
+\int_{a}^{c} f(x)\,\mathrm{d}x = \lim_{n \to \infty} \int_{a}^{c} \varphi_n(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2200}
+证明: 若有界函数 $f(x)$ 在闭区间 $[a, b]$ 上可积, 则其绝对值 $|f(x)|$ 在 $[a, b]$ 上也可积, 并且
+\[
+\left|\int_{a}^{b} f(x)\,\mathrm{d}x\right| \leqslant \int_{a}^{b} |f(x)|\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2201}
+设 $f(x)$ 在闭区间 $[a, b]$ 上绝对可积, 即积分 $\displaystyle\int_{a}^{b} |f(x)|\,\mathrm{d}x$ 存在. 这个函数在 $[a, b]$ 上是否为可积函数? 研究例子:
+\[
+f(x) = \begin{cases} 1, & x \text{ 为有理数}, \\ -1, & x \text{ 为无理数}. \end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{2202}
+设函数 $\varphi(x)$ 在闭区间 $[A, B]$ 上有定义并连续, 函数 $f(x)$ 在 $[a, b]$ 上可积, 并且当 $a \leqslant x \leqslant b$ 时 $A \leqslant f(x) \leqslant B$. 证明: 函数 $\varphi(f(x))$ 在 $[a, b]$ 上可积.
+\end{prob}
+
+\begin{prob}[M]{2203}
+若函数 $f(x)$ 及 $\varphi(x)$ 可积, 则函数 $f(\varphi(x))$ 是否也必定可积? 研究例子:
+\[
+f(x) = \begin{cases} 0, & x = 0, \\ 1, & x \neq 0, \end{cases}
+\]
+$\varphi(x)$ 为黎曼函数 (见习题 2195).
+\end{prob}
+
+\begin{prob}[M]{2204}
+设函数 $f(x)$ 在闭区间 $[A, B]$ 上可积, 证明: 函数 $f(x)$ 有积分连续性, 即
+\[
+\lim_{h \to 0} \int_{a}^{b} |f(x + h) - f(x)|\,\mathrm{d}x = 0,
+\]
+其中 $[a, b] \subset [A, B]$.
+\end{prob}
+
+\begin{prob}[M]{2205}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上可积, 证明: 等式
+\[
+\int_{a}^{b} f^2(x)\,\mathrm{d}x = 0
+\]
+当且仅当对属于闭区间 $[a, b]$ 内函数 $f(x)$ 连续的一切点有 $f(x) = 0$ 时方成立.
+\end{prob}
+
+\probsec{§2. 利用不定积分计算定积分的方法}
+
+\probgroup{利用牛顿--莱布尼茨公式, 求下列定积分并绘出相应的曲边图形面积:}
+
+\begin{prob}[S]{2206}
+$\displaystyle\int_{-1}^{8} \sqrt[3]{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2207}
+$\displaystyle\int_{0}^{\pi} \sin x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2208}
+$\displaystyle\int_{\frac{1}{\sqrt{3}}}^{\sqrt{3}} \frac{\mathrm{d}x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2209}
+$\displaystyle\int_{-\frac{1}{2}}^{\frac{1}{2}} \frac{\mathrm{d}x}{\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2210}
+$\displaystyle\int_{\sinh 1}^{\sinh 2} \frac{\mathrm{d}x}{\sqrt{1 + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2211}
+$\displaystyle\int_{0}^{2} |1 - x|\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2212}
+$\displaystyle\int_{-1}^{1} \frac{\mathrm{d}x}{x^2 - 2x\cos\alpha + 1} \ (0 < \alpha < \pi)$.
+\end{prob}
+
+\begin{prob}[S]{2213}
+$\displaystyle\int_{0}^{2\pi} \frac{\mathrm{d}x}{1 + \varepsilon\cos x} \ (0 \leqslant \varepsilon < 1)$.
+\end{prob}
+
+\begin{prob}[S]{2214}
+$\displaystyle\int_{-1}^{1} \frac{\mathrm{d}x}{\sqrt{(1 - 2ax + a^2)(1 - 2bx + b^2)}} \ (|a| < 1, \, |b| < 1, \, ab > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2215}
+$\displaystyle\int_{0}^{\frac{\pi}{2}} \frac{\mathrm{d}x}{a^2 \sin^2 x + b^2 \cos^2 x} \ (ab \neq 0)$.
+\end{prob}
+
+\begin{prob}[L]{2216}
+对于下列定积分:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle\int_{-1}^{1} \frac{\mathrm{d}x}{x}$;
+  \item $\displaystyle\int_{0}^{2\pi} \frac{\sec^2 x\,\mathrm{d}x}{2 + \tan^2 x}$;
+  \item $\displaystyle\int_{-1}^{1} \frac{\mathrm{d}}{\mathrm{d}x}\left(\arctan\frac{1}{x}\right)\mathrm{d}x$,
+\end{enumerate}
+说明为什么运用牛顿--莱布尼茨公式会得到不正确的结果.
+\end{prob}
+
+\begin{prob}[S]{2217}
+求 $\displaystyle\int_{-1}^{1} \frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{1}{1 + 2^{\frac{1}{x}}}\right)\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2218}
+求 $\displaystyle\int_{0}^{100\pi} \sqrt{1 - \cos 2x}\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{利用定积分求下列和的极限值:}
+
+\begin{prob}[S]{2219}
+$\displaystyle\lim_{n \to \infty} \left(\frac{1}{n^2} + \frac{2}{n^2} + \cdots + \frac{n-1}{n^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2220}
+$\displaystyle\lim_{n \to \infty} \left(\frac{1}{n+1} + \frac{1}{n+2} + \cdots + \frac{1}{n+n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2221}
+$\displaystyle\lim_{n \to \infty} \left(\frac{n}{n^2 + 1^2} + \frac{n}{n^2 + 2^2} + \cdots + \frac{n}{n^2 + n^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2222}
+$\displaystyle\lim_{n \to \infty} \frac{1}{n}\left(\sin\frac{\pi}{n} + \sin\frac{2\pi}{n} + \cdots + \sin\frac{(n-1)\pi}{n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2223}
+$\displaystyle\lim_{n \to \infty} \frac{1^p + 2^p + \cdots + n^p}{n^{p+1}} \ (p > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2224}
+$\displaystyle\lim_{n \to \infty} \frac{1}{n}\left(\sqrt{1 + \frac{1}{n}} + \sqrt{1 + \frac{2}{n}} + \cdots + \sqrt{1 + \frac{n}{n}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2225}
+$\displaystyle\lim_{n \to \infty} \frac{\sqrt[n]{n!}}{n}$.
+\end{prob}
+
+\begin{prob}[S]{2226}
+$\displaystyle\lim_{n \to \infty} \left[\frac{1}{n} \sum_{k=1}^{n} f\left(a + k\frac{b - a}{n}\right)\right]$.
+\end{prob}
+
+\probgroup{弃掉高阶无穷小量, 求下列和的极限值:}
+
+\begin{prob}[S]{2227}
+$\displaystyle\lim_{n \to \infty} \left[\left(1 + \frac{1}{n}\right)\sin\frac{\pi}{n^2} + \left(1 + \frac{2}{n}\right)\sin\frac{2\pi}{n^2} + \cdots + \left(1 + \frac{n-1}{n}\right)\sin\frac{(n-1)\pi}{n^2}\right]$.
+\end{prob}
+
+\begin{prob}[S]{2228}
+$\displaystyle\lim_{n \to \infty} \sin\frac{\pi}{n} \cdot \sum_{k=1}^{n} \frac{1}{2 + \cos\frac{k\pi}{n}}$.
+\end{prob}
+
+\begin{prob}[S]{2229}
+$\lim_{n\to\infty} \dfrac{\sum\limits_{k=1}^{n} \sqrt{(nx+k)(nx+k+1)}}{n^2}\ (x > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2230}
+$\lim_{n\to\infty} \left( \dfrac{2^{\frac{1}{n}}}{n+1} + \dfrac{2^{\frac{2}{n}}}{n+\frac{1}{2}} + \cdots + \dfrac{2^{\frac{n}{n}}}{n+\frac{1}{n}} \right)$.
+\end{prob}
+
+\begin{prob}[M]{2231}
+求：
+\[ \frac{\mathrm{d}}{\mathrm{d}x} \int_a^b \sin x^2 \,\mathrm{d}x; \qquad \frac{\mathrm{d}}{\mathrm{d}a} \int_a^b \sin x^2 \,\mathrm{d}x; \qquad \frac{\mathrm{d}}{\mathrm{d}b} \int_a^b \sin x^2 \,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[L]{2232}
+求：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\dfrac{\mathrm{d}}{\mathrm{d}x} \int_0^{x^2} \sqrt{1+t^2}\,\mathrm{d}t$;
+  \item $\dfrac{\mathrm{d}}{\mathrm{d}x} \int_{x^2}^{x^3} \dfrac{\mathrm{d}t}{\sqrt{1+t^4}}$;
+  \item $\dfrac{\mathrm{d}}{\mathrm{d}x} \int_{\sin x}^{\cos x} \cos(\pi t^2)\,\mathrm{d}t$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2233}
+求：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\lim_{x\to 0} \dfrac{\int_0^x \cos t^2 \,\mathrm{d}t}{x}$;
+  \item $\lim_{x\to +\infty} \dfrac{\int_0^x (\arctan t)^2 \,\mathrm{d}t}{\sqrt{x^2+1}}$;
+  \item $\lim_{x\to +\infty} \dfrac{\left(\int_0^x \mathrm{e}^{t^2}\,\mathrm{d}t\right)^2}{\int_0^x \mathrm{e}^{2t^2}\,\mathrm{d}t}$;
+  \item $\lim_{n\to\infty} \int_0^1 f(nx)\,\mathrm{d}x$，其中 $f(x) \in C[0,+\infty)$，且当 $x\to +\infty$ 时 $f(x) \to A$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2234}
+证明：当 $x\to \infty$ 时
+\[ \int_0^x \mathrm{e}^{t^2}\,\mathrm{d}t \sim \frac{1}{2x}\mathrm{e}^{x^2}. \]
+\end{prob}
+
+\begin{prob}[M]{2235}
+求
+\[ \lim_{x\to +0} \frac{\int_0^{\sin x} \sqrt{\tan t}\,\mathrm{d}t}{\int_0^{\tan x} \sqrt{\sin t}\,\mathrm{d}t}. \]
+\end{prob}
+
+\begin{prob}[M]{2236}
+设 $f(x)$ 为连续正值函数. 证明：当 $x \geqslant 0$ 时，函数
+\[ \varphi(x) = \frac{\int_0^x t f(t)\,\mathrm{d}t}{\int_0^x f(t)\,\mathrm{d}t} \]
+递增.
+\end{prob}
+
+\begin{prob}[M]{2237}
+求：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int_0^2 f(x)\,\mathrm{d}x$，设 $f(x) = \begin{cases} x^2, & 0 \leqslant x \leqslant 1, \\ 2-x, & 1 < x \leqslant 2; \end{cases}$
+  \item $\int_0^1 f(x)\,\mathrm{d}x$，设 $f(x) = \begin{cases} x, & 0 \leqslant x \leqslant t, \\ t \cdot \dfrac{1-x}{1-t}, & t \leqslant x \leqslant 1. \end{cases}$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2238}
+计算下列积分并作出这些积分对参数 $\alpha$ 的函数关系 $I = I(\alpha)$ 的图像：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $I = \int_0^1 x|x-\alpha|\,\mathrm{d}x$;
+  \item $I = \int_0^\pi \dfrac{\sin^2 x}{1 + 2\alpha \cos x + \alpha^2}\,\mathrm{d}x$;
+  \item $I = \int_0^\pi \dfrac{\sin x\,\mathrm{d}x}{\sqrt{1 - 2\alpha \cos x + \alpha^2}}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{利用分部积分公式，求下列定积分：}
+
+\begin{prob}[S]{2239}
+$\int_0^{\ln 2} x\mathrm{e}^{-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2240}
+$\int_0^\pi x\sin x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2241}
+$\int_0^{2\pi} x^2 \cos x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2242}
+$\int_{\frac{1}{\mathrm{e}}}^{\mathrm{e}} |\ln x|\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2243}
+$\int_0^1 \arccos x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2244}
+$\int_0^{\sqrt{3}} x\arctan x\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{利用适当的变量代换，求下列定积分：}
+
+\begin{prob}[S]{2245}
+$\int_{-1}^1 \dfrac{x\,\mathrm{d}x}{\sqrt{5-4x}}$.
+\end{prob}
+
+\begin{prob}[S]{2246}
+$\int_0^a x^2\sqrt{a^2-x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2247}
+$\int_0^{0.75} \dfrac{\mathrm{d}x}{(x+1)\sqrt{x^2+1}}$.
+\end{prob}
+
+\begin{prob}[S]{2248}
+$\int_0^{\ln 2} \sqrt{\mathrm{e}^x - 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2249}
+$\int_0^1 \dfrac{\arcsin \sqrt{x}}{\sqrt{x(1-x)}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2250}
+令 $x - \dfrac{1}{x} = t$，计算积分
+\[ \int_{-1}^1 \frac{1+x^2}{1+x^4}\,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[L]{2251}
+对于下列定积分和代换 $x = \varphi(t)$：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int_{-1}^1 \mathrm{d}x,\ t = x^{\frac{2}{3}}$;
+  \item $\int_{-1}^1 \dfrac{\mathrm{d}x}{1+x^2},\ x = \dfrac{1}{t}$;
+  \item $\int_0^\pi \dfrac{\mathrm{d}x}{1+\sin^2 x},\ \tan x = t$.
+\end{enumerate}
+说明为什么用 $\varphi(t)$ 代换 $x$ 会引致不正确的结果.
+\end{prob}
+
+\begin{prob}[M]{2252}
+在积分
+\[ \int_0^3 x \sqrt[3]{1-x^2}\,\mathrm{d}x \]
+中，令 $x = \sin t$ 是否可以？
+\end{prob}
+
+\begin{prob}[M]{2253}
+若在积分 $\int_0^1 \sqrt{1-x^2}\,\mathrm{d}x$ 中作变量代换 $x = \sin t$，可否取数 $\pi$ 和 $\dfrac{\pi}{2}$ 作为新的积分上下限？
+\end{prob}
+
+\begin{prob}[M]{2254}
+证明：若函数 $f(x)$ 在闭区间 $[a, b]$ 内连续，则：
+\[ \int_a^b f(x)\,\mathrm{d}x = (b-a) \int_0^1 f(a + (b-a)x)\,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[M]{2255}
+证明等式：
+\[ \int_0^a x^3 f(x^2)\,\mathrm{d}x = \frac{1}{2} \int_0^{a^2} x f(x)\,\mathrm{d}x \quad (a > 0). \]
+\end{prob}
+
+\begin{prob}[M]{2256}
+设 $f(x)$ 为闭区间 $[A, B] \supset [a, b]$ 上的连续函数，当 $[a-x, b-x] \subset [A, B]$ 时，求 $\dfrac{\mathrm{d}}{\mathrm{d}x} \int_a^b f(x+y)\,\mathrm{d}y$.
+\end{prob}
+
+\begin{prob}[M]{2257}
+证明：若函数 $f(x)$ 在闭区间 $[0, 1]$ 上连续，则：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int_0^{\frac{\pi}{2}} f(\sin x)\,\mathrm{d}x = \int_0^{\frac{\pi}{2}} f(\cos x)\,\mathrm{d}x$;
+  \item $\int_0^\pi x f(\sin x)\,\mathrm{d}x = \dfrac{\pi}{2} \int_0^\pi f(\sin x)\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2258}
+证明：若函数 $f(x)$ 在闭区间 $[-l, l]$ 上连续，则
+\begin{enumerate}[label=(\arabic*), itemsep=2pt, topsep=3pt]
+  \item 当函数 $f(x)$ 为偶函数时
+  \[ \int_{-l}^l f(x)\,\mathrm{d}x = 2\int_0^l f(x)\,\mathrm{d}x, \]
+  \item 当函数 $f(x)$ 奇函数时
+  \[ \int_{-l}^l f(x)\,\mathrm{d}x = 0. \]
+\end{enumerate}
+给出这些事实的几何解释.
+\end{prob}
+
+\begin{prob}[M]{2259}
+证明：偶函数的原函数中之一个为奇函数，而奇函数的一切原函数皆为偶函数.
+\end{prob}
+
+\begin{prob}[M]{2260}
+引入新变量
+\[ t = x + \frac{1}{x}, \]
+计算积分
+\[ \int_{\frac{1}{2}}^2 \left(1 + x - \frac{1}{x}\right)\mathrm{e}^{x+\frac{1}{x}}\,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[M]{2261}
+在积分
+\[ \int_0^{2\pi} f(x)\cos x\,\mathrm{d}x \]
+中进行变量代换 $\sin x = t$.
+\end{prob}
+
+\begin{prob}[M]{2262}
+计算积分
+\[ \int_{\mathrm{e}^{-2\pi n}}^1 \left| \left[ \cos x \left( \ln \frac{1}{x} \right) \right]' \right| \,\mathrm{d}x \quad (n\ \text{为正整数}). \]
+\end{prob}
+
+\begin{prob}[M]{2263}
+求积分
+\[ \int_0^\pi \frac{x\sin x}{1+\cos^2 x}\,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[M]{2264}
+设
+\[ f(x) = \frac{(x+1)^2(x-1)}{x^3(x-2)}, \]
+求积分
+\[ \int_{-1}^3 \frac{f'(x)}{1+f^2(x)}\,\mathrm{d}x. \]
+\end{prob}
+
+\begin{prob}[M]{2265}
+证明：若 $f(x)$ 为定义于 $-\infty < x < +\infty$ 而周期为 $T$ 的连续的周期函数，则
+\[ \int_a^{a+T} f(x)\,\mathrm{d}x = \int_0^T f(x)\,\mathrm{d}x, \]
+式中 $a$ 为任意的数.
+\end{prob}
+
+\begin{prob}[M]{2266}
+证明：当 $n$ 为奇数时，函数
+\[ F(x) = \int_0^x \sin^n t\,\mathrm{d}t \quad \text{和} \quad G(x) = \int_0^x \cos^n t\,\mathrm{d}t \]
+为以 $2\pi$ 为周期的周期函数；而当 $n$ 为偶数时，其中的每一个皆为线性函数与周期函数之和.
+\end{prob}
+
+\begin{prob}[M]{2267}
+证明：若 $f(x)$ 为以 $T$ 为周期的连续的周期函数，则函数
+\[ F(x) = \int_{x_0}^x f(t)\,\mathrm{d}t \]
+在一般情形下是线性函数与周期等于 $T$ 的周期函数的和，
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{2268}
+$\int_0^1 x(2-x^2)^{12}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2269}
+$\int_{-1}^1 \dfrac{x\,\mathrm{d}x}{x^2+x+1}$.
+\end{prob}
+
+\begin{prob}[S]{2270}
+$\int_1^{\mathrm{e}} (x\ln x)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2271}
+$\int_1^9 x\sqrt[3]{1-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2272}
+$\int_{-2}^{-1} \dfrac{\mathrm{d}x}{x\sqrt{x^2-1}}$.
+\end{prob}
+
+\begin{prob}[S]{2273}
+$\int_0^1 x^{15}\sqrt{1+3x^8}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2274}
+$\int_0^3 \arcsin \sqrt{\dfrac{x}{1+x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2275}
+$\int_0^{2\pi} \dfrac{\mathrm{d}x}{(2+\cos x)(3+\cos x)}$.
+\end{prob}
+
+\begin{prob}[S]{2276}
+$\int_0^{2\pi} \dfrac{\mathrm{d}x}{\sin^4 x + \cos^4 x}$.
+\end{prob}
+
+\begin{prob}[S]{2277}
+$\int_0^{\frac{\pi}{2}} \sin x \sin 2x \sin 3x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2278}
+$\int_0^\pi (x\sin x)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2279}
+$\int_0^\pi \mathrm{e}^x \cos^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2280}
+$\int_0^{\ln 2} \sinh^4 x\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{利用递推公式来计算下列依赖于取正整数值的参数 $n$ 的积分：}
+
+\begin{prob}[S]{2281}
+$I_n = \int_0^{\frac{\pi}{2}} \sin^n x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2282}
+$I_n = \int_0^{\frac{\pi}{2}} \cos^n x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2283}
+$I_n = \int_0^{\frac{\pi}{4}} \tan^{2n} x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2284}
+$I_n = \int_0^1 (1-x^2)^n\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2285}
+$I_n = \int_0^1 \dfrac{x^n\,\mathrm{d}x}{\sqrt{1-x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2286}
+$I_n = \int_0^1 x^m (\ln x)^n\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2287}
+$I_n = \int_0^{\frac{\pi}{4}} \left( \dfrac{\sin x - \cos x}{\sin x + \cos x} \right)^{2n+1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2288}
+利用欧拉公式
+\[ \mathrm{e}^{\mathrm{i}x} = \cos x + \mathrm{i}\sin x, \]
+证明：
+\[ \int_0^{2\pi} \mathrm{e}^{\mathrm{i}nx}\mathrm{e}^{-\mathrm{i}mx}\,\mathrm{d}x = \begin{cases} 0, & m \neq n, \\ 2\pi, & m = n \end{cases} \quad (n\ \text{及}\ m\ \text{为整数}). \]
+\end{prob}
+
+\begin{prob}[M]{2289}
+证明：
+\[ \int_a^b \mathrm{e}^{(\alpha+\mathrm{i}\beta)x}\,\mathrm{d}x = \frac{\mathrm{e}^{b(\alpha+\mathrm{i}\beta)} - \mathrm{e}^{a(\alpha+\mathrm{i}\beta)}}{\alpha+\mathrm{i}\beta} \quad (\alpha\ \text{及}\ \beta\ \text{为常数}). \]
+\end{prob}
+
+\probgroup{利用欧拉公式：$\cos x = \frac{1}{2}(\mathrm{e}^{\mathrm{i}x} + \mathrm{e}^{-\mathrm{i}x}),\ \sin x = \frac{1}{2\mathrm{i}}(\mathrm{e}^{\mathrm{i}x} - \mathrm{e}^{-\mathrm{i}x})$，计算下列积分（$m$ 及 $n$ 为正整数）：}
+
+\begin{prob}[S]{2290}
+$\int_0^{\frac{\pi}{2}} \sin^{2m} x \cos^{2n} x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2291}
+$\int_0^\pi \dfrac{\sin nx}{\sin x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2292}
+$\int_0^\pi \dfrac{\cos(2n+1)x}{\cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2293}
+$\int_0^\pi \cos^n x \cos nx\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2294}
+$\int_0^\pi \sin^n x \sin nx\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{求下列积分（$n$ 为正整数）：}
+
+\begin{prob}[S]{2295}
+$\int_0^\pi \sin^{n-1} x \cos(n+1)x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2296}
+$\int_0^\pi \cos^{n-1} x \sin(n+1)x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2297}
+$\int_0^{2\pi} \mathrm{e}^{-ax}\cos^{2n} x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2298}
+$\int_0^{\frac{\pi}{2}} \ln \cos x \cdot \cos 2nx\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2299}
+多次利用分部积分法，计算欧拉积分：
+\[ B(m, n) = \int_0^1 x^{m-1}(1-x)^{n-1}\,\mathrm{d}x \quad (m\ \text{及}\ n\ \text{为正整数}). \]
+\end{prob}
+
+\begin{prob}[M]{2300}
+勒让德多项式 $P_n(x)$ 可由以下公式定义：
+\[ P_n(x) = \frac{1}{2^n n!} \frac{\mathrm{d}^n}{\mathrm{d}x^n}\left[(x^2-1)^n\right] \quad (n = 0, 1, 2, \cdots). \]
+证明：
+\[ \int_{-1}^1 P_m(x)P_n(x)\,\mathrm{d}x = \begin{cases} 0, & m \neq n, \\ \dfrac{2}{2n+1}, & m = n. \end{cases} \]
+\end{prob}
+
+\begin{prob}[M]{2301}
+设函数 $f(x)$ 在 $[a, b]$ 上可积，函数 $F(x)$ 在 $[a, b]$ 内除了有限个内点 $c_i\ (i = 1, \cdots, p)$ 及点 $a$ 与 $b$ 外皆满足等式 $F'(x) = f(x)$，而在这些点上 $F(x)$ 有第一类间断点
+(广义原函数). 证明:
+\[
+\int_{a}^{b} f(x)\,\mathrm{d}x = F(b-0) - F(a+0) - \sum_{i=1}^{p} [F(c_i+0) - F(c_i-0)].
+\]
+\end{prob}
+
+\begin{prob}[L]{2302}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上可积, 而
+\[
+F(x) = C + \int_{a}^{x} f(\xi)\,\mathrm{d}\xi
+\]
+为 $f(x)$ 的不定积分. 证明: 函数 $F(x)$ 连续, 且在函数 $f(x)$ 连续的一切点处成立等式
+\[
+F'(x) = f(x).
+\]
+问在函数 $f(x)$ 的间断点处函数 $F(x)$ 的导数是什么?
+
+研究例子:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f\left(\dfrac{1}{n}\right) = 1$ ($n = \pm 1, \pm 2, \cdots$), 当 $x \neq \dfrac{1}{n}$ 时 $f(x) = 0$;
+  \item $f(x) = \operatorname{sgn} x$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列有界不连续函数的不定积分:}
+
+\begin{prob}[S]{2303}
+$\int \operatorname{sgn} x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2304}
+$\int \operatorname{sgn}(\sin x)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2305}
+$\int [x]\,\mathrm{d}x$ ($x \geqslant 0$).
+\end{prob}
+
+\begin{prob}[S]{2306}
+$\int x[x]\,\mathrm{d}x$ ($x \geqslant 0$).
+\end{prob}
+
+\begin{prob}[S]{2307}
+$\int (-1)^{[x]}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2308}
+$\int_{0}^{x} f(x)\,\mathrm{d}x$, 其中 $f(x) = \begin{cases} 1, & |x| < l, \\ 0, & |x| > l. \end{cases}$
+\end{prob}
+
+\probgroup{计算下列有界不连续函数的定积分:}
+
+\begin{prob}[S]{2309}
+$\int_{0}^{3} \operatorname{sgn}(x - x^3)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2310}
+$\int_{0}^{2} [\mathrm{e}^x]\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2311}
+$\int_{0}^{6} [x]\sin\dfrac{\pi x}{6}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2312}
+$\int_{0}^{\pi} x\operatorname{sgn}(\cos x)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2313}
+$\int_{1}^{n+1} \ln[x]\,\mathrm{d}x$ ($n$ 为正整数).
+\end{prob}
+
+\begin{prob}[S]{2314}
+$\int_{0}^{1} \operatorname{sgn}[\sin(\ln x)]\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2315}
+求 $\int_{E} |\cos x|\sqrt{\sin x}\,\mathrm{d}x$, 其中 $E$ 为闭区间 $[0, 4\pi]$ 中使被积函数有意义的一切值的集合.
+\end{prob}
+
+\probsec{§3. 中值定理}
+
+\begin{prob}[L]{2316}
+确定下列定积分的符号:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int_{0}^{2\pi} x\sin x\,\mathrm{d}x$;
+  \item $\int_{0}^{2\pi} \dfrac{\sin x}{x}\,\mathrm{d}x$;
+  \item $\int_{-2}^{2} x^3 2^x\,\mathrm{d}x$;
+  \item $\int_{\frac{1}{2}}^{1} x^2 \ln x\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2317}
+确定哪个积分较大:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int_{0}^{\frac{\pi}{2}} \sin^{10} x\,\mathrm{d}x$ 或 $\int_{0}^{\frac{\pi}{2}} \sin^2 x\,\mathrm{d}x$;
+  \item $\int_{0}^{1} \mathrm{e}^{-x}\,\mathrm{d}x$ 或 $\int_{0}^{1} \mathrm{e}^{-x^2}\,\mathrm{d}x$;
+  \item $\int_{0}^{\pi} \mathrm{e}^{-x^2}\cos^2 x\,\mathrm{d}x$ 或 $\int_{\pi}^{2\pi} \mathrm{e}^{-x^2}\cos^2 x\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2318}
+求下列函数在所给区间内的平均值:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = x^2$, 在 $[0, 1]$ 上;
+  \item $f(x) = \sqrt{x}$, 在 $[0, 100]$ 上;
+  \item $f(x) = 10 + 2\sin x + 3\cos x$, 在 $[0, 2\pi]$ 上;
+  \item $f(x) = \sin x\sin(x + \varphi)$, 在 $[0, 2\pi]$ 上.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2319.1}
+求椭圆之焦径
+\[
+r = \frac{\rho}{1 - \varepsilon\cos\varphi} \quad (0 < \varepsilon < 1)
+\]
+之长的平均值.
+\end{prob}
+
+\begin{prob}[S]{2319.2}
+求初速度为 $v_0$ 之自由落体的速度之平均值.
+\end{prob}
+
+\begin{prob}[M]{2320}
+电流强度依规律
+\[
+i = i_0 \sin\left(\frac{2\pi t}{T} + \varphi\right)
+\]
+变化, 其中 $i_0$ 为振幅, $t$ 为时间, $T$ 为周期, $\varphi$ 为初相. 求电流强度之平方的平均值.
+\end{prob}
+
+\begin{prob}[M]{2321}
+设 $f(x) \in C[0, +\infty)$ 且 $\lim\limits_{x\to+\infty} f(x) = A$. 求 $\lim\limits_{x\to+\infty} \dfrac{1}{x}\int_{0}^{x} f(t)\,\mathrm{d}t$. 研究例子 $f(x) = \arctan x$.
+\end{prob}
+
+\begin{prob}[L]{2322}
+命
+\[
+\int_{0}^{x} f(t)\,\mathrm{d}t = x f(\theta x).
+\]
+求 $\theta$, 设: (a) $f(t) = t^n$ ($n > -1$); (b) $f(t) = \ln t$; (c) $f(t) = \mathrm{e}^t$. $\lim\limits_{x\to+0} \theta$ 及 $\lim\limits_{x\to+\infty} \theta$ 等于什么?
+\end{prob}
+
+\probgroup{利用第一中值定理, 估计积分:}
+
+\begin{prob}[S]{2323}
+$\int_{0}^{2\pi} \dfrac{\mathrm{d}x}{1 + 0.5\cos x}$.
+\end{prob}
+
+\begin{prob}[S]{2324}
+$\int_{0}^{1} \dfrac{x^9}{\sqrt{1 + x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2325}
+$\int_{0}^{100} \dfrac{\mathrm{e}^{-x}}{x + 100}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2326.1}
+证明等式:
+
+(a) $\lim\limits_{n\to\infty} \int_{0}^{1} \dfrac{x^n}{1 + x}\,\mathrm{d}x = 0$; \qquad (b) $\lim\limits_{n\to\infty} \int_{0}^{\frac{\pi}{2}} \sin^n x\,\mathrm{d}x = 0$.
+\end{prob}
+
+\begin{prob}[M]{2326.2}
+求:
+
+(a) $\lim\limits_{\varepsilon\to 0} \int_{0}^{1} \dfrac{\mathrm{d}x}{\varepsilon x^2 + 1}$; \qquad (b) $\lim\limits_{\varepsilon\to+0} \int_{a\varepsilon}^{b\varepsilon} f(x)\,\dfrac{\mathrm{d}x}{x}$ ($a > 0, b > 0, f(x) \in C[0, 1]$).
+\end{prob}
+
+\begin{prob}[M]{2327}
+设函数 $f(x)$ 在 $[a, b]$ 上连续, 而 $\varphi(x)$ 在 $[a, b]$ 上连续且在 $(a, b)$ 上可微, 并且当 $a < x < b$ 时 $\varphi'(x) \geqslant 0$. 应用分部积分法及第一中值定理, 证明第二中值定理.
+\end{prob}
+
+\probgroup{利用第二中值定理, 估计积分:}
+
+\begin{prob}[S]{2328}
+$\int_{100\pi}^{200\pi} \dfrac{\sin x}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2329}
+$\int_{a}^{b} \dfrac{\mathrm{e}^{-\alpha x}}{x}\sin x\,\mathrm{d}x$ ($\alpha \geqslant 0; 0 < a < b$).
+\end{prob}
+
+\begin{prob}[S]{2330}
+$\int_{a}^{b} \sin x^2\,\mathrm{d}x$ ($0 < a < b$).
+\end{prob}
+
+\begin{prob}[M]{2331}
+设函数 $\varphi(x)$ 及 $\psi(x)$ 和它们的平方在区间 $[a, b]$ 上可积. 证明柯西--布尼亚科夫斯基不等式:
+\[
+\left\{ \int_{a}^{b} \varphi(x)\psi(x)\,\mathrm{d}x \right\}^2 \leqslant \int_{a}^{b} \varphi^2(x)\,\mathrm{d}x \int_{a}^{b} \psi^2(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2332}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上连续可微且 $f(a) = 0$. 证明不等式:
+\[
+M^2 \leqslant (b - a) \int_{a}^{b} f'^2(x)\,\mathrm{d}x,
+\]
+其中 $M = \sup\limits_{a \leqslant x \leqslant b} |f(x)|$.
+\end{prob}
+
+\begin{prob}[M]{2333}
+证明等式:
+\[
+\lim_{n\to\infty} \int_{n}^{n+p} \frac{\sin x}{x}\,\mathrm{d}x = 0 \quad (p > 0).
+\]
+\end{prob}
+
+\probsec{§4. 广义积分}
+
+\probgroup{计算下列积分:}
+
+\begin{prob}[S]{2334}
+$\int_{a}^{+\infty} \dfrac{\mathrm{d}x}{x^2}$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[S]{2335}
+$\int_{0}^{1} \ln x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2336}
+$\int_{-\infty}^{+\infty} \dfrac{\mathrm{d}x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2337}
+$\int_{-1}^{1} \dfrac{\mathrm{d}x}{\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2338}
+$\int_{2}^{+\infty} \dfrac{\mathrm{d}x}{x^2 + x - 2}$.
+\end{prob}
+
+\begin{prob}[S]{2339}
+$\int_{-\infty}^{+\infty} \dfrac{\mathrm{d}x}{(x^2 + x + 1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2340}
+$\int_{0}^{+\infty} \dfrac{\mathrm{d}x}{1 + x^3}$.
+\end{prob}
+
+\begin{prob}[S]{2341}
+$\int_{0}^{+\infty} \dfrac{x^2 + 1}{x^4 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2342}
+$\int_{0}^{1} \dfrac{\mathrm{d}x}{(2 - x)\sqrt{1 - x}}$.
+\end{prob}
+
+\begin{prob}[S]{2343}
+$\int_{1}^{+\infty} \dfrac{\mathrm{d}x}{x\sqrt{1 + x^5 + x^{10}}}$.
+\end{prob}
+
+\begin{prob}[S]{2344}
+$\int_{0}^{+\infty} \dfrac{x\ln x}{(1 + x^2)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2345}
+$\int_{0}^{+\infty} \dfrac{\arctan x}{(1 + x^2)^{\frac{3}{2}}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2346}
+$\int_{0}^{+\infty} \mathrm{e}^{-ax}\cos bx\,\mathrm{d}x$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[S]{2347}
+$\int_{0}^{+\infty} \mathrm{e}^{-ax}\sin bx\,\mathrm{d}x$ ($a > 0$).
+\end{prob}
+
+\probgroup{利用递推公式计算下列广义积分 ($n$ 为正整数):}
+
+\begin{prob}[S]{2348}
+$I_n = \int_{0}^{+\infty} x^n \mathrm{e}^{-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2349}
+$I_n = \int_{-\infty}^{+\infty} \dfrac{\mathrm{d}x}{(ax^2 + 2bx + c)^n}$ ($ac - b^2 > 0$).
+\end{prob}
+
+\begin{prob}[S]{2350}
+$I_n = \int_{1}^{+\infty} \dfrac{\mathrm{d}x}{x(x + 1)\cdots(x + n)}$.
+\end{prob}
+
+\begin{prob}[S]{2351}
+$I_n = \int_{0}^{1} \dfrac{x^n\,\mathrm{d}x}{\sqrt{(1 - x)(1 + x)}}$.
+\end{prob}
+
+\begin{prob}[S]{2352}
+$I_n = \int_{0}^{+\infty} \dfrac{\mathrm{d}x}{\cosh^{n+1} x}$.
+\end{prob}
+
+\begin{prob}[M]{2353}
+(a) $\int_{0}^{\frac{\pi}{2}} \ln\sin x\,\mathrm{d}x$; \qquad (b) $\int_{0}^{\frac{\pi}{2}} \ln\cos x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2354}
+求
+\[
+\int_E \frac{|\sin x - \cos x|}{\sqrt{\sin x}} \mathrm{e}^{-\frac{x}{2}}\,\mathrm{d}x,
+\]
+其中 $E$ 为区间 $(0, +\infty)$ 中使被积函数有意义的一切 $x$ 值的集合.
+\end{prob}
+
+\begin{prob}[M]{2355}
+证明等式:
+\[
+\int_0^{+\infty} f\left(ax + \frac{b}{x}\right)\,\mathrm{d}x = \frac{1}{a} \int_0^{+\infty} f\left(\sqrt{x^2 + 4ab}\right)\,\mathrm{d}x,
+\]
+其中 $a > 0, b > 0$ (假定等式左端的积分有意义).
+\end{prob}
+
+\begin{prob}[L]{2356}
+数
+\[
+M[f] = \lim_{x \to +\infty} \frac{1}{x} \int_0^x f(\xi)\,\mathrm{d}\xi
+\]
+称为函数 $f(x)$ 在区间 $(0, +\infty)$ 上的平均值. 求下列函数在此区间上的平均值:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \sin^2 x + \cos^2(x\sqrt{2})$;
+\item $f(x) = \arctan x$;
+\item $f(x) = \sqrt{x} \sin x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2357}
+求:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\lim_{x \to 0} x \int_x^1 \frac{\cos t}{t^2}\,\mathrm{d}t$;
+\item $\displaystyle\lim_{x \to \infty} \frac{\int_0^x \sqrt{1 + t^4}\,\mathrm{d}t}{x^3}$;
+\item $\displaystyle\lim_{x \to +0} \frac{\int_x^{+\infty} t^{-1} \mathrm{e}^{-t}\,\mathrm{d}t}{\ln \frac{1}{x}}$;
+\item $\displaystyle\lim_{x \to 0} x^\alpha \int_x^1 \frac{f(t)}{t^{\alpha + 1}}\,\mathrm{d}t$,
+\end{enumerate}
+其中 $\alpha > 0$, $f(t)$ 为闭区间 $[0, 1]$ 上的连续函数.
+\end{prob}
+
+\probgroup{研究下列积分的收敛性:}
+
+\begin{prob}[S]{2358}
+$\displaystyle\int_0^{+\infty} \frac{x^2\,\mathrm{d}x}{x^4 - x^2 + 1}$.
+\end{prob}
+
+\begin{prob}[S]{2359}
+$\displaystyle\int_1^{+\infty} \frac{\mathrm{d}x}{x \sqrt[3]{x^2 + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{2360}
+$\displaystyle\int_0^2 \frac{\mathrm{d}x}{\ln x}$.
+\end{prob}
+
+\begin{prob}[S]{2361}
+$\displaystyle\int_0^{+\infty} x^{p - 1} \mathrm{e}^{-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2362}
+$\displaystyle\int_0^1 x^p \ln^q \frac{1}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2363}
+$\displaystyle\int_0^{+\infty} \frac{x^m}{1 + x^n}\,\mathrm{d}x\ (n \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2364}
+$\displaystyle\int_0^{+\infty} \frac{\arctan ax}{x^n}\,\mathrm{d}x\ (a \neq 0)$.
+\end{prob}
+
+\begin{prob}[S]{2365}
+$\displaystyle\int_0^{+\infty} \frac{\ln(1 + x)}{x^n}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2366}
+$\displaystyle\int_0^{+\infty} \frac{x^m \arctan x}{2 + x^n}\,\mathrm{d}x\ (n \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2367}
+$\displaystyle\int_0^{+\infty} \frac{\cos ax}{1 + x^n}\,\mathrm{d}x\ (n \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2368}
+$\displaystyle\int_0^{+\infty} \frac{\sin^2 x}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2369}
+$\displaystyle\int_0^{\frac{\pi}{2}} \frac{\mathrm{d}x}{\sin^p x \cos^q x}$.
+\end{prob}
+
+\begin{prob}[M]{2370}
+(a) $\displaystyle\int_0^1 \frac{x^n\,\mathrm{d}x}{\sqrt{1 - x^2}}$; \qquad (b) $\displaystyle\int_0^{+\infty} \frac{\mathrm{d}x}{\sqrt{x^3 + x}}$.
+\end{prob}
+
+\begin{prob}[S]{2371}
+$\displaystyle\int_0^{+\infty} \frac{\mathrm{d}x}{x^p + x^q}$.
+\end{prob}
+
+\begin{prob}[S]{2372}
+$\displaystyle\int_0^1 \frac{\ln x}{1 - x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2373}
+$\displaystyle\int_0^{\frac{\pi}{2}} \frac{\ln(\sin x)}{\sqrt{x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2374}
+$\displaystyle\int_1^{+\infty} \frac{\mathrm{d}x}{x^p \ln^q x}$.
+\end{prob}
+
+\begin{prob}[S]{2375}
+$\displaystyle\int_{\mathrm{e}}^{+\infty} \frac{\mathrm{d}x}{x^p (\ln x)^q (\ln \ln x)^r}$.
+\end{prob}
+
+\begin{prob}[M]{2376}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\int_{-\infty}^{+\infty} \frac{\mathrm{d}x}{|x - a_1|^{p_1} |x - a_2|^{p_2} \cdots |x - a_n|^{p_n}}\ (a_1 < a_2 < \cdots < a_n)$;
+\item $\displaystyle\int_0^{+\infty} x^\alpha |x - 1|^\beta\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2377}
+$\displaystyle\int_0^{+\infty} \frac{P_m(x)}{P_n(x)}\,\mathrm{d}x$, 式中 $P_m(x)$ 和 $P_n(x)$ 为次数分别为 $m$ 及 $n$ 的互素的多项式.
+\end{prob}
+
+\probgroup{研究下列积分的绝对收敛性和条件收敛性:}
+
+\begin{prob}[S]{2378}
+$\displaystyle\int_0^{+\infty} \frac{\sin x}{x}\,\mathrm{d}x$. \probhint{$|\sin x| \geqslant \sin^2 x$.}
+\end{prob}
+
+\begin{prob}[S]{2379}
+$\displaystyle\int_0^{+\infty} \frac{\sqrt{x} \cos x}{x + 100}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[L]{2380}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\int_0^{+\infty} x^p \sin(x^q)\,\mathrm{d}x\ (q \neq 0)$;
+\item $\displaystyle\int_0^{\frac{\pi}{2}} \sin(\sec x)\,\mathrm{d}x$;
+\item $\displaystyle\int_0^{+\infty} x^2 \cos(\mathrm{e}^x)\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2381}
+$\displaystyle\int_0^{+\infty} \frac{x^p \sin x}{1 + x^q}\,\mathrm{d}x\ (q \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2382}
+$\displaystyle\int_0^{+\infty} \frac{\sin\left(x + \frac{1}{x}\right)}{x^n}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2383}
+$\displaystyle\int_a^{+\infty} \frac{P_m(x)}{P_n(x)} \sin x\,\mathrm{d}x$, 式中 $P_m(x)$ 及 $P_n(x)$ 为整多项式, 且若 $x \geqslant a \geqslant 0$, 则 $P_n(x) > 0$.
+\end{prob}
+
+\begin{prob}[M]{2384.1}
+若 $\displaystyle\int_a^{+\infty} f(x)\,\mathrm{d}x$ 收敛, 则当 $x \to +\infty$ 时是否必有 $f(x) \to 0$? 研究例子:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\int_0^{+\infty} \sin(x^2)\,\mathrm{d}x$;
+\item $\displaystyle\int_0^{+\infty} (-1)^{[x^2]}\,\mathrm{d}x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2384.2}
+设 $f(x) \in C^{(1)}[x_0, +\infty)$, 当 $x_0 \leqslant x < +\infty$ 时 $|f'(x)| < C$, 且
+\[
+\int_{x_0}^{+\infty} |f(x)|\,\mathrm{d}x
+\]
+收敛. 证明: 当 $x \to +\infty$ 时 $f(x) \to 0$. \probhint{研究积分 $\displaystyle\int_{x_0}^{+\infty} f(x) f'(x)\,\mathrm{d}x$.}
+\end{prob}
+
+\begin{prob}[M]{2385}
+设函数在 $[a, b]$ 上有定义且无界. 可否把函数 $f(x)$ 的收敛广义积分
+\[
+\int_a^b f(x)\,\mathrm{d}x
+\]
+看作相应积分和
+\[
+\sum_{i=0}^{n-1} f(\xi_i) \Delta x_i \quad (x_i \leqslant \xi_i \leqslant x_{i+1},\ \Delta x_i = x_{i+1} - x_i)
+\]
+的极限?
+\end{prob}
+
+\begin{prob}[M]{2386}
+设:
+\[
+\int_a^{+\infty} f(x)\,\mathrm{d}x \tag{1}
+\]
+收敛, 函数 $\varphi(x)$ 有界, 则积分
+\[
+\int_a^{+\infty} f(x)\varphi(x)\,\mathrm{d}x \tag{2}
+\]
+是否必定收敛? 举出适当的例子.
+
+若积分 $(1)$ 绝对收敛, 问积分 $(2)$ 的收敛性如何?
+\end{prob}
+
+\begin{prob}[M]{2387}
+证明: 若 $\displaystyle\int_a^{+\infty} f(x)\,\mathrm{d}x$ 收敛, $f(x)$ 为单调函数, 则 $f(x) = O\left(\frac{1}{x}\right)$.
+\end{prob}
+
+\begin{prob}[M]{2388}
+设函数 $f(x)$ 在区间 $0 < x \leqslant 1$ 内是单调函数, 且在点 $x = 0$ 的邻域内是无界的. 证明: 若
+\[
+\int_0^1 f(x)\,\mathrm{d}x
+\]
+存在, 则
+\[
+\lim_{n \to \infty} \frac{1}{n} \sum_{k=1}^n f\left(\frac{k}{n}\right) = \int_0^1 f(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2389}
+证明: 若函数 $f(x)$ 在区间 $0 < x < a$ 内单调且有界, 且
+\[
+\int_0^a x^p f(x)\,\mathrm{d}x
+\]
+存在, 则
+\[
+\lim_{x \to +0} x^{p+1} f(x) = 0.
+\]
+\end{prob}
+
+\begin{prob}[L]{2390}
+证明:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\mathrm{v.p.} \displaystyle\int_{-1}^1 \frac{\mathrm{d}x}{x} = 0$;
+\item $\mathrm{v.p.} \displaystyle\int_0^{+\infty} \frac{\mathrm{d}x}{1 - x^2} = 0$;
+\item $\mathrm{v.p.} \displaystyle\int_{-\infty}^{+\infty} \sin x\,\mathrm{d}x = 0$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2391}
+证明: 当 $x \geqslant 0$ 且 $x \neq 1$ 时存在
+\[
+\mathrm{li}\,x = \mathrm{v.p.} \int_0^x \frac{\mathrm{d}\xi}{\ln \xi}.
+\]
+\end{prob}
+
+\probgroup{求下列积分:}
+
+\begin{prob}[S]{2392}
+$\mathrm{v.p.} \displaystyle\int_0^{+\infty} \frac{\mathrm{d}x}{x^2 - 3x + 2}$.
+\end{prob}
+
+\begin{prob}[S]{2393}
+$\mathrm{v.p.} \displaystyle\int_{\frac{1}{2}}^2 \frac{\mathrm{d}x}{x \ln x}$.
+\end{prob}
+
+\begin{prob}[S]{2394}
+$\mathrm{v.p.} \displaystyle\int_{-\infty}^{+\infty} \frac{1 + x}{1 + x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2395}
+$\mathrm{v.p.} \displaystyle\int_{-\infty}^{+\infty} \arctan x\,\mathrm{d}x$.
+\end{prob}
+
+\probsec{§5. 面积的计算法}
+
+\begin{prob}[M]{2396}
+证明: 正抛物线弓形的面积等于
+\[
+S = \frac{2}{3} bh,
+\]
+式中 $b$ 为弓形的底, $h$ 为高 (图 13).
+\probfig{fig_2396.png}{图 13}
+\end{prob}
+
+\probgroup{求下列直角坐标方程所给曲线为界的图形的面积\footnote{在第四章的这一节和以后各节都把一切的参数当作是正的.}:}
+
+\begin{prob}[S]{2397}
+$ax = y^2, ay = x^2$.
+\end{prob}
+
+\begin{prob}[S]{2398}
+$y = x^2, x + y = 2$.
+\end{prob}
+
+\begin{prob}[S]{2399}
+$y = 2x - x^2, x + y = 0$.
+\end{prob}
+
+\begin{prob}[L]{2400}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y = |\lg x|, y = 0, x = 0, 1, x = 10$;
+\item $y = 2^x, y = 2, x = 0$;
+\item $y = (x + 1)^2, y = \sin \pi y, y = 0\ (0 \leqslant y \leqslant 1)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2401}
+$y = x, y = x + \sin^2 x\ (0 \leqslant x \leqslant \pi)$.
+\end{prob}
+
+\begin{prob}[S]{2402}
+$y = \dfrac{a^3}{a^2 + x^2}, y = 0$.
+\end{prob}
+
+\begin{prob}[S]{2403}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$.
+\end{prob}
+
+\begin{prob}[S]{2404}
+$y^2 = x^2(a^2 - x^2)$.
+\end{prob}
+
+\begin{prob}[S]{2405}
+$y^2 = 2px, 27py^2 = 8(x - p)^3$.
+\end{prob}
+
+\begin{prob}[S]{2406}
+$Ax^2 + 2Bxy + Cy^2 = 1\ (A > 0, AC - B^2 > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2407}
+$y^2 = \dfrac{x^3}{2a - x}$ (蔓叶线), $x = 2a$.
+\end{prob}
+
+\begin{prob}[S]{2408}
+$x = a \ln \dfrac{a + \sqrt{a^2 - y^2}}{y} - \sqrt{a^2 - y^2}$ (曳物线), $y = 0$.
+\end{prob}
+
+\begin{prob}[S]{2409}
+$y^2 = \dfrac{x^n}{(1 + x^{n+2})^2}\ (x > 0; n > -2)$.
+\end{prob}
+
+\begin{prob}[S]{2410}
+$y = \mathrm{e}^{-x} |\sin x|, y = 0\ (x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{2411}
+抛物线 $y^2 = 2x$ 把圆 $x^2 + y^2 = 8$ 的面积分为两部分, 这两部分的比如何?
+\end{prob}
+
+\begin{prob}[M]{2412}
+把双曲线 $x^2 - y^2 = 1$ 上的点 $M(x, y)$ 的坐标表示为双曲线扇形 $OM'M$ 的面积 $S$ 的函数, 此扇形以双曲线的弧 $M'M$ 与二射线 $OM$ 及 $OM'$ 为界, 其中 $M'(x, -y)$ 是点 $M$ 相对于 $Ox$ 轴的对称点.
+\end{prob}
+
+\probgroup{求下列参数方程所给曲线所围图形的面积:}
+
+\begin{prob}[S]{2413}
+$x = a(t - \sin t), y = a(1 - \cos t)\ (0 \leqslant t \leqslant 2\pi)$ (摆线) 及 $y = 0$.
+\end{prob}
+
+\begin{prob}[S]{2414}
+$x = 2t - t^2, y = 2t^2 - t^3$.
+\end{prob}
+
+\begin{prob}[S]{2415}
+$x = a(\cos t + t \sin t), y = a(\sin t - t \cos t)\ (0 \leqslant t \leqslant 2\pi)$ (圆的渐伸线) 及 $x = a, y \leqslant 0$.
+\end{prob}
+
+\begin{prob}[S]{2416}
+$x = a(2\cos t - \cos 2t), y = a(2\sin t - \sin 2t)$.
+\end{prob}
+
+\begin{prob}[M]{2417}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $x = \dfrac{c^2}{a} \cos^3 t, y = \dfrac{c^2}{b} \sin^3 t\ (c^2 = a^2 - b^2)$ (椭圆的渐屈线);
+\item $x = a \cos t, y = \dfrac{a \sin^2 t}{2 + \sin t}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列极坐标方程所给曲线所围图形 $S$ 的面积:}
+
+\begin{prob}[S]{2418}
+$r^2 = a^2 \cos 2\varphi$ (双纽线).
+\end{prob}
+
+\begin{prob}[S]{2419}
+$r = a(1 + \cos \varphi)$ (心脏线).
+\end{prob}
+
+\begin{prob}[S]{2420}
+$r = a \sin 3\varphi$ (三叶线).
+\end{prob}
+
+\begin{prob}[S]{2421}
+$r = \dfrac{p}{1 - \cos \varphi}$ (抛物线), $\varphi = \dfrac{\pi}{4}, \varphi = \dfrac{\pi}{2}$.
+\end{prob}
+
+\begin{prob}[L]{2422}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $r = \dfrac{p}{1 + \varepsilon \cos \varphi}\ (0 < \varepsilon < 1)$ (椭圆);
+\item $r = 3 + 2\cos \varphi$;
+\item $r = \dfrac{1}{\varphi}, r = \dfrac{1}{\sin \varphi}\ \left(0 < \varphi \leqslant \frac{\pi}{2}\right)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2423}
+$r = a\cos\varphi$, $r = a(\cos\varphi + \sin\varphi)$ $\left(M\left(\frac{a}{2}, 0\right) \in S\right)$.
+\end{prob}
+
+\begin{prob}[S]{2424}
+求由曲线 $\varphi = r\arctan r$ 及二射线 $\varphi = 0$ 及 $\varphi = \frac{\pi}{\sqrt{3}}$ 所围成之扇形的面积.
+\end{prob}
+
+\begin{prob}[L]{2425}
+求下列曲线所围图形的面积:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $r^2 + \varphi^2 = 1$;
+\item 曲线 $\varphi = \sin(\pi r)$ ($0 \leqslant r \leqslant 1$) 的蔓叶线;
+\item $\varphi = 4r - r^3$, $\varphi = 0$;
+\item $\varphi = r - \sin r$, $\varphi = \pi$;
+\item 封闭曲线 $r = \frac{2at}{1+t^2}$, $\varphi = \frac{\pi t}{1+t}$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{变换为极坐标, 求下列曲线所围图形的面积:}
+
+\begin{prob}[S]{2426}
+$x^3 + y^3 = 3axy$ (笛卡儿叶形线).
+\end{prob}
+
+\begin{prob}[S]{2427}
+$x^4 + y^4 = a^2(x^2 + y^2)$.
+\end{prob}
+
+\begin{prob}[S]{2428}
+$(x^2 + y^2)^2 = 2a^2 xy$ (双纽线).
+\end{prob}
+
+\probgroup{用参数方程的形式给出下列曲线, 再求曲线所围图形的面积:}
+
+\begin{prob}[S]{2429}
+$x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ (星形线).
+\end{prob}
+
+\begin{prob}[M]{2430}
+$x^4 + y^4 = ax^2 y$.
+\probhint{令 $y = tx$.}
+\end{prob}
+
+\probsec{§6. 弧长的计算法}
+
+\probgroup{求下列曲线的弧长:}
+
+\begin{prob}[S]{2431}
+$y = x^{\frac{3}{2}}$ ($0 \leqslant x \leqslant 4$).
+\end{prob}
+
+\begin{prob}[S]{2432}
+$y^2 = 2px$ ($0 \leqslant x \leqslant x_0$).
+\end{prob}
+
+\begin{prob}[S]{2433}
+$y = a\cosh\frac{x}{a}$, 从点 $A(0, a)$ 至点 $B(b, h)$.
+\end{prob}
+
+\begin{prob}[S]{2434}
+$y = \mathrm{e}^x$ ($0 \leqslant x \leqslant x_0$).
+\end{prob}
+
+\begin{prob}[S]{2435}
+$x = \frac{1}{4}y^2 - \frac{1}{2}\ln y$ ($1 \leqslant y \leqslant \mathrm{e}$).
+\end{prob}
+
+\begin{prob}[S]{2436}
+$y = a\ln\frac{a^2}{a^2 - x^2}$ ($0 \leqslant x \leqslant b < a$).
+\end{prob}
+
+\begin{prob}[S]{2437}
+$y = \ln\cos x$ $\left(0 \leqslant x \leqslant a < \frac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2438}
+$x = a\ln\frac{a + \sqrt{a^2 - y^2}}{y} - \sqrt{a^2 - y^2}$ ($0 < b \leqslant y \leqslant a$).
+\end{prob}
+
+\begin{prob}[S]{2439}
+$y^2 = \frac{x^3}{2a - x}$ $\left(0 \leqslant x \leqslant \frac{5}{3}a\right)$.
+\end{prob}
+
+\begin{prob}[S]{2440}
+$x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ (星形线).
+\end{prob}
+
+\begin{prob}[S]{2441}
+$x = \frac{c^2}{a}\cos^3 t$, $y = \frac{c^2}{b}\sin^3 t$, $c^2 = a^2 - b^2$ (椭圆的渐屈线).
+\end{prob}
+
+\begin{prob}[S]{2442}
+$x = a\cos^4 t$, $y = a\sin^4 t$.
+\end{prob}
+
+\begin{prob}[S]{2443}
+$x = a(t - \sin t)$, $y = a(1 - \cos t)$ ($0 \leqslant t \leqslant 2\pi$).
+\end{prob}
+
+\begin{prob}[S]{2444}
+$x = a(\cos t + t\sin t)$, $y = a(\sin t - t\cos t)$ ($0 \leqslant t \leqslant 2\pi$) (圆的渐伸线).
+\end{prob}
+
+\begin{prob}[M]{2445}
+(a) $x = a(\sinh t - t)$, $y = a(\cosh t - 1)$ ($0 \leqslant t \leqslant T$); \qquad (b) $x = \cosh^3 t$, $y = \sinh^3 t$ ($0 \leqslant t \leqslant T$).
+\end{prob}
+
+\begin{prob}[S]{2446}
+$r = a\varphi$ (阿基米德螺线) ($0 \leqslant \varphi \leqslant 2\pi$).
+\end{prob}
+
+\begin{prob}[S]{2447}
+$r = a\mathrm{e}^{m\varphi}$ ($m > 0, 0 < r < a$).
+\end{prob}
+
+\begin{prob}[S]{2448}
+$r = a(1 + \cos\varphi)$.
+\end{prob}
+
+\begin{prob}[S]{2449}
+$r = \frac{p}{1 + \cos\varphi}$ $\left(|\varphi| \leqslant \frac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2450}
+$r = a\sin^3\frac{\varphi}{3}$.
+\end{prob}
+
+\begin{prob}[S]{2451}
+$r = a\tanh\frac{\varphi}{2}$ ($0 \leqslant \varphi \leqslant 2\pi$).
+\end{prob}
+
+\begin{prob}[L]{2452}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\varphi = \frac{1}{2}\left(r + \frac{1}{r}\right)$ ($1 \leqslant r \leqslant 3$);
+\item $\varphi = \sqrt{r}$ ($0 \leqslant r \leqslant 5$);
+\item $\varphi = \int_0^r \frac{\sinh\rho}{\rho}\,\mathrm{d}\rho$ ($0 \leqslant r \leqslant R$);
+\item $r = 1 + \cos t$, $\varphi = t - \tan\frac{t}{2}$ ($0 \leqslant t \leqslant T < \pi$).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2453}
+证明: 椭圆
+\[
+x = a\cos t, \quad y = b\sin t
+\]
+的弧长等于正弦曲线 $y = c\sin\frac{x}{b}$ 的一波之长. 其中 $c = \sqrt{a^2 - b^2}$.
+\end{prob}
+
+\begin{prob}[M]{2454}
+抛物线 $4ay = x^2$ 沿 $Ox$ 轴滚动. 证明: 抛物线的焦点的轨迹是悬链线.
+\end{prob}
+
+\begin{prob}[M]{2455}
+求曲线
+\[
+y = \pm\left(\frac{1}{3} - x\right)\sqrt{x}
+\]
+的封闭部分与等周长圆周所分别围成的面积之比.
+\end{prob}
+
+\probsec{§7. 体积的计算法}
+
+\begin{prob}[M]{2456}
+求顶楼的体积, 其底是边长等于 $a$ 及 $b$ 的矩形, 其顶的棱边等于 $c$, 而高等于 $h$.
+\end{prob}
+
+\begin{prob}[M]{2457}
+求截楔形的体积, 其平行的上下底为边长分别等于 $A, B$ 和 $a, b$ 的矩形, 而高等于 $h$.
+\end{prob}
+
+\begin{prob}[M]{2458}
+求截锥体的体积, 其上下底为半轴长分别等于 $A, B$ 和 $a, b$ 的椭圆, 而高等于 $h$.
+\end{prob}
+
+\begin{prob}[S]{2459}
+求旋转抛物体的体积, 其底为 $S$, 而高等于 $H$.
+\end{prob}
+
+\begin{prob}[M]{2460}
+设一物体之垂直于 $Ox$ 轴的横截面的面积 $S = S(x)$ 依下面的二次式规律变化:
+\[
+S(x) = Ax^2 + Bx + C \quad (a \leqslant x \leqslant b),
+\]
+其中 $A, B$ 及 $C$ 为常数. 证明: 此物体之体积等于
+\[
+V = \frac{H}{6}\left[S(a) + 4S\left(\frac{a+b}{2}\right) + S(b)\right],
+\]
+其中 $H = b - a$ (辛普森公式).
+\end{prob}
+
+\begin{prob}[M]{2461}
+物体是点 $M(x, y, z)$ 的集合, 其中 $0 \leqslant z \leqslant 1$, 而且当 $z$ 为有理数时, $0 \leqslant x \leqslant 1$, $0 \leqslant y \leqslant 1$; 当 $z$ 为无理数时, $-1 \leqslant x \leqslant 0$, $-1 \leqslant y \leqslant 0$. 证明: 此物体的体积不存在, 尽管相应积分
+\[
+\int_0^1 S(z)\,\mathrm{d}x = 1.
+\]
+\end{prob}
+
+\probgroup{求下列曲面所围成的体积:}
+
+\begin{prob}[S]{2462}
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$, $z = \frac{c}{a}x$, $z = 0$.
+\end{prob}
+
+\begin{prob}[S]{2463}
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ (椭球面).
+\end{prob}
+
+\begin{prob}[S]{2464}
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} - \frac{z^2}{c^2} = 1$, $z = \pm c$.
+\end{prob}
+
+\begin{prob}[S]{2465}
+$x^2 + z^2 = a^2$, $y^2 + z^2 = a^2$.
+\end{prob}
+
+\begin{prob}[S]{2466}
+$x^2 + y^2 + z^2 = a^2$, $x^2 + y^2 = ax$.
+\end{prob}
+
+\begin{prob}[S]{2467}
+$z^2 = b(a - x)$, $x^2 + y^2 = ax$.
+\end{prob}
+
+\begin{prob}[S]{2468}
+$\frac{x^2}{a^2} + \frac{y^2}{z^2} = 1$ ($0 < z < a$).
+\end{prob}
+
+\begin{prob}[S]{2469}
+$x + y + z^2 = 1$, $x = 0$, $y = 0$, $z = 0$.
+\end{prob}
+
+\begin{prob}[S]{2470}
+$x^2 + y^2 + z^2 + xy + yz + zx = a^2$.
+\end{prob}
+
+\begin{prob}[M]{2471}
+证明: 将平面图形
+\[
+a \leqslant x \leqslant b, \quad 0 \leqslant y \leqslant y(x)
+\]
+绕 $Oy$ 轴旋转所成的旋转体的体积等于
+\[
+V_y = 2\pi\int_a^b xy(x)\,\mathrm{d}x,
+\]
+这里 $y(x)$ 为单值连续函数.
+\end{prob}
+
+\probgroup{求下列曲线段旋转所成旋转体的体积:}
+
+\begin{prob}[S]{2472}
+$y = b\left(\frac{x}{a}\right)^{\frac{2}{3}}$ ($0 \leqslant x \leqslant a$) 绕 $Ox$ 轴 (半立方抛物线).
+\end{prob}
+
+\begin{prob}[M]{2473}
+$y = 2x - x^2$, $y = 0$: (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2474}
+$y = \sin x$, $y = 0$ ($0 \leqslant x \leqslant \pi$): (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2475}
+$y = b\left(\frac{x}{a}\right)^2$, $y = b\left|\frac{x}{a}\right|$: (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2476}
+$y = \mathrm{e}^{-x}$, $y = 0$ ($0 \leqslant x < +\infty$): (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2477}
+$x^2 + (y - b)^2 = a^2$ ($0 < a \leqslant b$), 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2478}
+$x^2 - xy + y^2 = a^2$, 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2479}
+$y = \mathrm{e}^{-x}\sqrt{\sin x}$ ($0 \leqslant x < +\infty$), 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[L]{2480}
+$x = a(t - \sin t)$, $y = a(1 - \cos t)$ ($0 \leqslant t \leqslant 2\pi$), $y = 0$:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 绕 $Ox$ 轴;
+\item 绕 $Oy$ 轴;
+\item 绕直线 $y = 2a$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2481}
+$x = a\sin^3 t$, $y = b\cos^3 t$ ($0 \leqslant t \leqslant 2\pi$): (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2482.1}
+求曲线
+\[
+x = 2t - t^2, \quad y = 4t - t^3
+\]
+所围图形绕 (a) $Ox$ 轴; (b) $Oy$ 轴旋转所成旋转体的体积.
+\end{prob}
+
+\begin{prob}[M]{2482.2}
+证明: 把平面图形
+\[
+0 \leqslant \alpha \leqslant \varphi \leqslant \beta \leqslant \pi, \quad 0 \leqslant r \leqslant r(\varphi) \quad (\varphi\text{ 与 }r\text{ 为极坐标})
+\]
+绕极轴旋转所成旋转体的体积等于
+\[
+V = \frac{2\pi}{3}\int_\alpha^\beta r^3(\varphi)\sin\varphi\,\mathrm{d}\varphi.
+\]
+\end{prob}
+
+\probgroup{求下列由极坐标或直角坐标给的平面图形经旋转后所成旋转体的体积:}
+
+\begin{prob}[M]{2483.1}
+$r = a(1 + \cos\varphi)$ ($0 \leqslant \varphi \leqslant 2\pi$): (a) 绕极轴; \qquad (b) 绕直线 $r\cos\varphi = -\frac{a}{4}$.
+\end{prob}
+
+\begin{prob}[L]{2483.2}
+$(x^2 + y^2)^2 = a^2(x^2 - y^2)$:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 绕 $Ox$ 轴;
+\item 绕 $Oy$ 轴;
+\item 绕直线 $y = x$.
+\end{enumerate}
+\probhint{化为极坐标.}
+\end{prob}
+
+\begin{prob}[M]{2484.1}
+求半圈阿基米德螺线
+\[
+r = a\varphi \quad (a > 0; 0 \leqslant \varphi \leqslant \pi)
+\]
+绕极轴旋转所成旋转体的体积.
+\end{prob}
+
+\begin{prob}[M]{2484.2}
+求曲线
+\[
+\varphi = \pi r^3, \quad \varphi = \pi
+\]
+所围图形绕极轴旋转所成旋转体的体积.
+\end{prob}
+
+\begin{prob}[M]{2485}
+求图形
+\[
+a \leqslant r \leqslant a\sqrt{2\sin 2\varphi}
+\]
+绕极轴旋转而成的旋转体的体积.
+\end{prob}
+
+\probsec{§8. 旋转曲面表面积的计算法}
+
+\probgroup{求旋转下列曲线所成曲面的面积:}
+
+\begin{prob}[S]{2486}
+$y = x\sqrt{\frac{x}{a}}$ ($0 \leqslant x \leqslant a$), 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2487}
+$y = a\cos\frac{\pi x}{2b}$ ($|x| \leqslant b$), 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2488}
+$y = \tan x$ $\left(0 \leqslant x \leqslant \frac{\pi}{4}\right)$, 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2489}
+$y^2 = 2px$ ($0 \leqslant x \leqslant x_0$), (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2490}
+$\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ ($0 < b \leqslant a$), (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2491}
+$x^2 + (y - b)^2 = a^2$ ($b \geqslant a$), 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2492}
+$x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$, 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[M]{2493}
+$y = a\cosh\frac{x}{a}$ ($|x| \leqslant b$), (a) 绕 $Ox$ 轴; \qquad (b) 绕 $Oy$ 轴.
+\end{prob}
+
+\begin{prob}[S]{2494}
+$\pm x = a\ln\frac{a + \sqrt{a^2 - y^2}}{y} - \sqrt{a^2 - y^2}$, 绕 $Ox$ 轴.
+\end{prob}
+
+\begin{prob}[L]{2495}
+$x = a(t - \sin t)$, $y = a(1 - \cos t)$ ($0 \leqslant t \leqslant 2\pi$),
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 绕 $Ox$ 轴;
+\item 绕 $Oy$ 轴;
+\item 绕直线 $y = 2a$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2496}
+$x = a\cos^3 t$, $y = a\sin^3 t$, 绕直线 $y = x$.
+\end{prob}
+
+\begin{prob}[S]{2497}
+$r = a(1 + \cos\varphi)$, 绕极轴.
+\end{prob}
+
+\begin{prob}[L]{2498}
+$r^2 = a^2\cos 2\varphi$,
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 绕极轴;
+\item 绕轴 $\varphi = \frac{\pi}{2}$;
+\item 绕轴 $\varphi = \frac{\pi}{4}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2499}
+由抛物线 $ay = a^2 - x^2$ 及 $Ox$ 轴围成的图形绕 $Ox$ 轴旋转而构成一旋转体, 求其表面积与等体积球的表面积之比.
+\end{prob}
+
+\begin{prob}[M]{2500}
+由直线 $x = \frac{p}{2}$ 与抛物线 $y^2 = 2px$ 围成的图形绕直线 $y = p$ 旋转而构成一旋转体, 求其体积和表面积.
+\end{prob}
+
+\probsec{§9. 矩的计算法. 质心的坐标}
+
+\begin{prob}[M]{2501.1}
+求半径为 $a$ 的半圆弧对过此弧两端点的直径的静矩和转动惯量.
+\end{prob}
+
+\begin{prob}[M]{2501.2}
+求抛物线弧 $y^2 = 2px \left(0 \leqslant x \leqslant \dfrac{p}{2}\right)$ 对直线 $x = \dfrac{p}{2}$ 的静矩.
+\end{prob}
+
+\begin{prob}[M]{2502.1}
+求底为 $b$, 高为 $h$ 的均质三角形平板对其底边的静矩和转动惯量 ($\rho = 1$).
+\end{prob}
+
+\begin{prob}[M]{2502.2}
+求曲线
+\[
+ay = 2ax - x^2 \quad (a > 0), \quad y = 0
+\]
+所围抛物线弓形对 $Ox$ 轴和 $Oy$ 轴的转动惯量 $I_x = M_2^{(x)}$ 和 $I_y = M_2^{(y)}$. 由关系式 $I_x = S r_x^2$, $I_y = S r_y^2$ ($S$ 为弓形面积) 定义的惯性半径 $r_x$ 和 $r_y$ 等于什么？
+\end{prob}
+
+\begin{prob}[M]{2503}
+求半轴长为 $a$ 和 $b$ 的均质椭圆形平板对其主轴的转动惯量 ($\rho = 1$).
+\end{prob}
+
+\begin{prob}[M]{2504.1}
+求底半径为 $r$ 高为 $h$ 的均质圆锥对其底平面的静矩和转动惯量 ($\rho = 1$).
+\end{prob}
+
+\begin{prob}[M]{2504.2}
+求半径为 $R$ 质量为 $M$ 的均质球体对其直径的转动惯量.
+\end{prob}
+
+\begin{prob}[M]{2505}
+证明古尔丹第一定理：平面曲线弧 $C$ 绕此弧所在平面上不与它相交的轴旋转而成的旋转面，其面积等于此弧的长度与它的质心所画出的圆周之长的乘积.
+\end{prob}
+
+\begin{prob}[M]{2506}
+证明古尔丹第二定理：平面图形 $S$ 绕此图形所在平面上不与它相交的轴旋转而成的旋转体，其体积等于图形 $S$ 的面积与此图形的质心所画出的圆周之长的乘积.
+\end{prob}
+
+\begin{prob}[M]{2507}
+求圆弧 $x = a\cos\varphi, y = a\sin\varphi \ (|\varphi| \leqslant \alpha \leqslant \pi)$ 质心的坐标.
+\end{prob}
+
+\begin{prob}[M]{2508}
+求抛物线 $ax = y^2, ay = x^2 \ (a > 0)$ 所围图形的质心的坐标.
+\end{prob}
+
+\begin{prob}[M]{2509}
+求图形
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} \leqslant 1 \quad (0 \leqslant x \leqslant a, 0 \leqslant y \leqslant b)
+\]
+的质心的坐标.
+\end{prob}
+
+\begin{prob}[M]{2510}
+求半径为 $a$ 的均质半球的质心坐标.
+\end{prob}
+
+\begin{prob}[M]{2511}
+求对数螺线
+\[
+r = a\mathrm{e}^{m\varphi} \quad (m > 0)
+\]
+上由点 $O(-\infty, 0)$ 到点 $P(\varphi, r)$ 的弧 $OP$ 的质心 $C(\varphi_0, r_0)$ 之坐标. 当点 $P$ 移动时，点 $C$ 画出怎样的曲线？
+\end{prob}
+
+\begin{prob}[M]{2512}
+求曲线 $r = a(1 + \cos\varphi)$ 所围图形的质心坐标.
+\end{prob}
+
+\begin{prob}[M]{2513}
+求摆线 $x = a(t - \sin t), y = a(1 - \cos t) \ (0 \leqslant t \leqslant 2\pi)$ 的第一拱与 $Ox$ 轴所围图形的质心的坐标.
+\end{prob}
+
+\begin{prob}[M]{2514}
+求图形 $0 \leqslant x \leqslant a; y^2 \leqslant 2px$ 绕 $Ox$ 轴旋转所成旋转体的质心的坐标.
+\end{prob}
+
+\begin{prob}[M]{2515}
+求半球 $x^2 + y^2 + z^2 = a^2 \ (z \geqslant 0)$ 的质心的坐标.
+\end{prob}
+
+\probsec{§10. 力学和物理学中的问题}
+
+\probgroup{组成适当的积分并求出其极限，以便求解下列问题：}
+
+\begin{prob}[M]{2516}
+杆的长度 $l = 10\,\mathrm{m}$, 若该杆的线密度按规律 $\delta = 6 + 0.3x\,\mathrm{kg/m}$ 而变，其中 $x$ 为到杆的一个端点的距离，求杆的质量.
+\end{prob}
+
+\begin{prob}[M]{2517}
+把质量为 $m$ 的物体从地球 (其半径为 $R$) 表面抬升到高度为 $h$ 的地方，需要对它作多少功？若物体远离至无穷远处，则功等于多少？
+\end{prob}
+
+\begin{prob}[M]{2518}
+若 $10\,\mathrm{N}$ 的力能使弹簧伸长 $1\,\mathrm{cm}$, 现在要使这弹簧伸长 $10\,\mathrm{cm}$, 问要作多少功？
+\probhint{利用胡克定律。}
+\end{prob}
+
+\begin{prob}[M]{2519}
+直径为 $20\,\mathrm{cm}$, 长为 $80\,\mathrm{cm}$ 的圆柱形汽缸充满压强为 $100\,\mathrm{N/cm}^2$ 的蒸汽. 假定蒸汽的温度保持不变，要使其体积减小一半，需要作多少功？
+\end{prob}
+
+\begin{prob}[M]{2520}
+求水对竖直放置的半圆形档板的压力，该档板的半径为 $a$, 而水面位于档板顶部直径的位置.\footnote{此题是流体静力学问题，在实际求解时还应知道水面上的压强 $p_0$, 以及水的密度 $\rho$. 原书所给答案对应着 $p_0 = 0$ 的特例. 类似情形还出现在习题 2521, 4070, 4071, 4072. —— 译注}
+\end{prob}
+
+\begin{prob}[M]{2521}
+求水对竖直壁面的压力，此壁面的形状为梯形，其下底 $a = 10\,\mathrm{m}$, 上底 $b = 6\,\mathrm{m}$, 高 $h = 5\,\mathrm{m}$, 下底位于水面以下 $c = 20\,\mathrm{m}$ 的深度.\footnote{此题应考虑水面处大气压 $p_0$ 的影响. 书后的答案对应 $p_0 = 0$ 的情形，与实际结果有较大差别. —— 译注}
+\end{prob}
+
+\probgroup{写出微分方程并求解下列问题：}
+
+\begin{prob}[M]{2522}
+一质点的速度按规律
+\[
+v = v_0 + at \quad (v_0 = \text{常数}, \ a = \text{常数})
+\]
+变化，问在时间间隔 $[0, T]$ 内此质点经过怎样的路程？
+\end{prob}
+
+\begin{prob}[M]{2523}
+半径为 $R$ 而密度为 $\delta$ 的均质球体以角速度 $\omega$ 绕其直径旋转. 求此球的动能.
+\end{prob}
+
+\begin{prob}[M]{2524}
+线密度 $\mu_0$ 为常数的无穷直线以怎样的力吸引距此直线距离为 $a$ 质量为 $m$ 的质点？
+\end{prob}
+
+\begin{prob}[M]{2525}
+计算半径为 $a$ 且面密度 $\delta_0$ 为常数的圆形薄板以怎样的力吸引质量为 $m$ 的质点 $P$, 此质点位于通过薄板中心 $Q$ 且垂直于薄板平面的直线上，距离 $PQ$ 等于 $b$.
+\end{prob}
+
+\begin{prob}[M]{2526}
+根据托里拆利定律，液体通过小孔从容器中流出的速度等于
+\[
+v = c\sqrt{2gh},
+\]
+式中 $g$ 为重力加速度，$h$ 为液体表面在小孔以上的高度，$c = 0.6$ 为实验系数. 直径为 $D = 1\,\mathrm{m}$ 高为 $H = 2\,\mathrm{m}$ 的直立圆柱形大桶，其底部有一个直径为 $d = 1\,\mathrm{cm}$ 的圆孔，问此桶充满液体后经过多长时间方可完全排空？
+\end{prob}
+
+\begin{prob}[M]{2527}
+旋转体容器应当具有什么形状，才能使液体从容器底部流出时，液体表面的下降是均匀的？
+\end{prob}
+
+\begin{prob}[M]{2528}
+镭在每一时刻的衰变速度与其现存的量成正比. 设镭的量在初始时刻 $t = 0$ 为 $Q_0$, 经过时间 $T = 1600$ 年它的量减少了一半. 求镭的衰变规律.
+\end{prob}
+
+\begin{prob}[M]{2529}
+在一种把物质 $A$ 变为物质 $B$ 的二阶化学反应中，反应速度与此二物质浓度之积成正比. 若在 $t = 0$ 时在容器中有 $20\%$ 的物质 $B$, 而当 $t = 15\,\mathrm{min}$ 时其浓度变为 $80\%$, 问在 $t = 1\,\mathrm{h}$ 时其浓度如何？
+\end{prob}
+
+\begin{prob}[M]{2530}
+根据胡克定律，杆的相对伸长 $\varepsilon$ 与相应横截面上的应力 $\sigma$ 成正比，即
+\[
+\varepsilon = \frac{\sigma}{E},
+\]
+式中 $E$ 为杨氏模量. 求圆锥形杆在自重作用下的伸长量，此锥形的顶向下而底固定，设底半径等于 $R$, 圆锥的高为 $H$, 密度为 $\rho$.
+\end{prob}
+
+\probsec{§11. 定积分的近似计算法}
+
+\begin{prob}[M]{2531}
+利用矩形公式 ($n = 12$), 近似地计算
+\[
+\int_0^{2\pi} x\sin x\,\mathrm{d}x,
+\]
+并把结果同精确答案进行比较.
+\end{prob}
+
+\probgroup{利用梯形公式计算下列积分并估计它们的误差：}
+
+\begin{prob}[S]{2532}
+$\displaystyle \int_0^1 \frac{\mathrm{d}x}{1+x} \ (n = 8)$.
+\end{prob}
+
+\begin{prob}[S]{2533}
+$\displaystyle \int_0^1 \frac{\mathrm{d}x}{1+x^3} \ (n = 12)$.
+\end{prob}
+
+\begin{prob}[S]{2534}
+$\displaystyle \int_0^{\frac{\pi}{2}} \sqrt{1 - \frac{1}{4}\sin^2 x}\,\mathrm{d}x \ (n = 6)$.
+\end{prob}
+
+\probgroup{利用辛普森公式计算下列积分：}
+
+\begin{prob}[S]{2535}
+$\displaystyle \int_1^9 \sqrt{x}\,\mathrm{d}x \ (n = 4)$.
+\end{prob}
+
+\begin{prob}[S]{2536}
+$\displaystyle \int_0^{\pi} \sqrt{3 + \cos x}\,\mathrm{d}x \ (n = 6)$.
+\end{prob}
+
+\begin{prob}[S]{2537}
+$\displaystyle \int_0^{\frac{\pi}{2}} \frac{\sin x}{x}\,\mathrm{d}x \ (n = 10)$.
+\end{prob}
+
+\begin{prob}[S]{2538}
+$\displaystyle \int_0^1 \frac{x\,\mathrm{d}x}{\ln(1+x)} \ (n = 6)$.
+\end{prob}
+
+\begin{prob}[M]{2539}
+取 $n = 10$, 计算卡塔兰常数
+\[
+G = \int_0^1 \frac{\arctan x}{x}\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2540}
+利用公式
+\[
+\frac{\pi}{4} = \int_0^1 \frac{\mathrm{d}x}{1+x^2}
+\]
+计算数 $\pi$, 精确到 $10^{-5}$.
+\end{prob}
+
+\begin{prob}[M]{2541}
+精确到 $0.001$, 计算
+\[
+\int_0^1 \mathrm{e}^{x^2}\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2542}
+精确到 $10^{-4}$, 计算
+\[
+\int_0^1 (\mathrm{e}^x - 1)\ln\frac{1}{x}\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2543}
+精确到 $0.001$, 计算概率积分
+\[
+\int_0^{+\infty} \mathrm{e}^{-x^2}\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2544}
+近似地求出半轴为 $a = 10$ 及 $b = 6$ 的椭圆的周长.
+\end{prob}
+
+\begin{prob}[M]{2545}
+取 $\Delta x = \dfrac{\pi}{3}$, 描点作出函数
+\[
+y = \int_0^x \frac{\sin t}{t}\,\mathrm{d}t \quad (0 \leqslant x \leqslant 2\pi)
+\]
+的图像.
+\end{prob}

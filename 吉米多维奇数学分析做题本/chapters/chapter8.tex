@@ -1,0 +1,3427 @@
+\probchapter{第八章\quad 多重积分和曲线积分}
+
+\probsec{§1. 二重积分}
+
+\begin{prob}[M]{3901}
+把积分 $\iint\limits_{\substack{0 \leqslant x \leqslant 1 \\ 0 \leqslant y \leqslant 1}} xy\,\mathrm{d}x\,\mathrm{d}y$ 当作积分和的极限，用直线
+\[
+x = \frac{i}{n}, \quad y = \frac{j}{n} \quad (i, j = 1, 2, \cdots, n - 1)
+\]
+把积分域分为许多正方形，并选取被积函数在这些正方形之右顶点的值，计算此积分。
+\end{prob}
+
+\begin{prob}[M]{3902}
+用直线
+\[
+x = 1 + \frac{i}{n}, \quad y = 1 + \frac{2j}{n} \quad (i, j = 0, 1, \cdots, n)
+\]
+把区域 $1 \leqslant x \leqslant 2$, $1 \leqslant y \leqslant 3$ 分为许多矩形，列出函数 $f(x, y) = x^2 + y^2$ 在此区域内的下积分和 $\underline{S}$ 与上积分和 $\overline{S}$。
+
+当 $n \to \infty$ 时，上积分和与下积分和的极限等于什么？
+\end{prob}
+
+\begin{prob}[M]{3903}
+用一组顶点 $A_{ij}$ 位于整数点的正方形作为积分域的近似域，并取被积函数在每个正方形距原点最远的顶点之值，近似地计算积分
+\[
+\iint\limits_{x^2 + y^2 \leqslant 25} \frac{\mathrm{d}x\,\mathrm{d}y}{\sqrt{24 + x^2 + y^2}},
+\]
+并与精确值加以比较。
+\end{prob}
+
+\begin{prob}[M]{3904}
+用直线 $x = \text{常数}$, $y = \text{常数}$, $x + y = \text{常数}$ 把积分域 $S$ 分为四个相同的三角形，并取被积函数在每个三角形的质心之值，近似地计算积分
+\[
+\iint\limits_{S} \sqrt{x + y}\,\mathrm{d}S.
+\]
+其中 $S$ 是以直线 $x = 0, y = 0$ 及 $x + y = 1$ 为边的三角形。
+\end{prob}
+
+\begin{prob}[M]{3905}
+把积分域 $S: \{x^2 + y^2 \leqslant 1\}$ 分为有限个直径小于 $\delta$ 的可求积的子区域 $\Delta S_i$ $(i = 1, 2, \cdots, n)$。怎样的值 $\delta$ 能保证不等式
+\[
+\left| \iint\limits_{S} \sin(x + y)\,\mathrm{d}S - \sum_{i=1}^{n} \sin(x_i + y_i)\Delta S_i \right| < 0.001
+\]
+成立？其中 $(x_i, y_i) \in \Delta S_i$。
+\end{prob}
+
+\probgroup{计算积分：}
+
+\begin{prob}[S]{3906}
+$\int_{0}^{1}\,\mathrm{d}x \int_{0}^{1} (x + y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3907}
+$\int_{0}^{1}\,\mathrm{d}x \int_{x^2}^{x} xy^2\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3908}
+$\int_{0}^{2\pi}\,\mathrm{d}\varphi \int_{0}^{a} r^2 \sin^2\varphi\,\mathrm{d}r$。
+\end{prob}
+
+\begin{prob}[M]{3909}
+设 $R$ 为矩形
+\[
+a \leqslant x \leqslant A, \quad b \leqslant y \leqslant B,
+\]
+函数 $X(x)$ 和 $Y(y)$ 在相应区间上连续，证明等式：
+\[
+\iint\limits_{R} X(x)Y(y)\,\mathrm{d}x\,\mathrm{d}y = \int_{a}^{A} X(x)\,\mathrm{d}x \cdot \int_{b}^{B} Y(y)\,\mathrm{d}y.
+\]
+\end{prob}
+
+\begin{prob}[M]{3910}
+设
+\[
+f(x, y) = F''_{xy}(x, y),
+\]
+计算
+\[
+I = \int_{a}^{A}\,\mathrm{d}x \int_{b}^{B} f(x, y)\,\mathrm{d}y.
+\]
+\end{prob}
+
+\begin{prob}[M]{3911}
+设 $f(x)$ 为区间 $a \leqslant x \leqslant b$ 内的连续函数。证明不等式：
+\[
+\left[ \int_{a}^{b} f(x)\,\mathrm{d}x \right]^2 \leqslant (b - a) \int_{a}^{b} f^2(x)\,\mathrm{d}x,
+\]
+且仅当 $f(x) = \text{常数}$ 时等号成立。
+\probhint{研究积分
+\[
+\int_{a}^{b}\,\mathrm{d}x \int_{a}^{b} [f(x) - f(y)]^2\,\mathrm{d}y.
+\]}
+\end{prob}
+
+\begin{prob}[L]{3912}
+下列积分有怎样的符号？
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\iint\limits_{|x| + |y| \leqslant 1} \ln(x^2 + y^2)\,\mathrm{d}x\,\mathrm{d}y$;
+\item $\iint\limits_{x^2 + y^2 \leqslant 4} \sqrt[3]{1 - x^2 - y^2}\,\mathrm{d}x\,\mathrm{d}y$;
+\item $\iint\limits_{\substack{0 \leqslant x \leqslant 1 \\ -1 \leqslant y \leqslant 1 - x}} \arcsin(x + y)\,\mathrm{d}x\,\mathrm{d}y$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3913}
+求函数
+\[
+f(x, y) = \sin^2 x \sin^2 y
+\]
+在正方形 $0 \leqslant x \leqslant \pi, 0 \leqslant y \leqslant \pi$ 内的平均值。
+\end{prob}
+
+\begin{prob}[M]{3914}
+利用中值定理估计积分
+\[
+I = \iint\limits_{|x| + |y| \leqslant 10} \frac{\mathrm{d}x\,\mathrm{d}y}{100 + \cos^2 x + \cos^2 y}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3915}
+求圆 $(x - a)^2 + (y - b)^2 \leqslant R^2$ 上的点到原点的距离之平方的平均值。
+\end{prob}
+
+\probgroup{在问题 3916—3922 中，对二重积分 $\iint\limits_{\Omega} f(x, y)\,\mathrm{d}x\,\mathrm{d}y$ 按所给区域 $\Omega$ 依两个不同的顺序安置积分的上下限。}
+
+\begin{prob}[S]{3916}
+$\Omega$ — 以 $O(0, 0)$, $A(1, 0)$, $B(1, 1)$ 为顶点的三角形。
+\end{prob}
+
+\begin{prob}[S]{3917}
+$\Omega$ — 以 $O(0, 0)$, $A(2, 1)$, $B(-2, 1)$ 为顶点的三角形。
+\end{prob}
+
+\begin{prob}[S]{3918}
+$\Omega$ — 以 $O(0, 0)$, $A(1, 0)$, $B(1, 2)$, $C(0, 1)$ 为顶点的梯形。
+\end{prob}
+
+\begin{prob}[S]{3919}
+$\Omega$ — 圆 $x^2 + y^2 \leqslant 1$。
+\end{prob}
+
+\begin{prob}[S]{3920}
+$\Omega$ — 圆 $x^2 + y^2 \leqslant y$。
+\end{prob}
+
+\begin{prob}[S]{3921}
+$\Omega$ — 被曲线 $y = x^2$ 和直线 $y = 1$ 所包围的区域。
+\end{prob}
+
+\begin{prob}[S]{3922}
+$\Omega$ — 圆环 $1 \leqslant x^2 + y^2 \leqslant 4$。
+\end{prob}
+
+\begin{prob}[M]{3923}
+证明狄利克雷公式：
+\[
+\int_{0}^{a}\,\mathrm{d}x \int_{0}^{x} f(x, y)\,\mathrm{d}y = \int_{0}^{a}\,\mathrm{d}y \int_{y}^{a} f(x, y)\,\mathrm{d}x \quad (a > 0).
+\]
+\end{prob}
+
+\probgroup{在下列积分中改变积分的顺序：}
+
+\begin{prob}[S]{3924}
+$\int_{0}^{2}\,\mathrm{d}x \int_{x}^{2x} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3925}
+$\int_{-6}^{2}\,\mathrm{d}x \int_{\frac{x^2}{4} - 1}^{2 - x} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3926}
+$\int_{0}^{1}\,\mathrm{d}x \int_{x^3}^{x^2} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3927}
+$\int_{-1}^{1}\,\mathrm{d}x \int_{-\sqrt{1 - x^2}}^{1 - x^2} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3928}
+$\int_{1}^{2}\,\mathrm{d}x \int_{2 - x}^{\sqrt{2x - x^2}} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3929}
+$\int_{0}^{2a}\,\mathrm{d}x \int_{\sqrt{2ax - x^2}}^{\sqrt{2ax}} f(x, y)\,\mathrm{d}y \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3930}
+$\int_{1}^{\mathrm{e}}\,\mathrm{d}x \int_{0}^{\ln x} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3931}
+$\int_{0}^{2\pi}\,\mathrm{d}x \int_{0}^{\sin x} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[M]{3932}
+$\iint\limits_{\Omega} xy^2\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega$ 是被抛物线 $y^2 = 2px$ 和直线 $x = \frac{p}{2}$ $(p > 0)$ 所包围的区域。
+\end{prob}
+
+\begin{prob}[M]{3933}
+$\iint\limits_{\Omega} \frac{\mathrm{d}x\,\mathrm{d}y}{\sqrt{2a - x}}$ $(a > 0)$, 其中 $\Omega$ 是以圆心在点 $(a, a)$ 半径为 $a$ 的圆周（它与坐标轴相切）的较短弧和坐标轴为界的区域。
+\end{prob}
+
+\begin{prob}[M]{3934}
+$\iint\limits_{\Omega} |xy|\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega$ 是以 $a$ 为半径，以坐标原点为圆心的圆。
+\end{prob}
+
+\begin{prob}[M]{3935}
+$\iint\limits_{\Omega} (x^2 + y^2)\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega$ 是以 $y = x, y = x + a, y = a$ 和 $y = 3a$ $(a > 0)$ 为边的平行四边形。
+\end{prob}
+
+\begin{prob}[M]{3936}
+$\iint\limits_{\Omega} y^2\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega$ 是被横轴和摆线
+\[
+x = a(t - \sin t), \quad y = a(1 - \cos t) \quad (0 \leqslant t \leqslant 2\pi)
+\]
+的第一拱所包围的区域。
+\end{prob}
+
+\probgroup{在二重积分
+\[
+\iint\limits_{\Omega} f(x, y)\,\mathrm{d}x\,\mathrm{d}y
+\]
+中，令 $x = r\cos\varphi$ 和 $y = r\sin\varphi$，变换为极坐标 $r$ 和 $\varphi$，并配置积分的上下限，设：}
+
+\begin{prob}[S]{3937}
+$\Omega$ — 圆 $x^2 + y^2 \leqslant a^2$。
+\end{prob}
+
+\begin{prob}[S]{3938}
+$\Omega$ — 圆 $x^2 + y^2 \leqslant ax$ $(a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3939}
+$\Omega$ — 环 $a^2 \leqslant x^2 + y^2 \leqslant b^2$。
+\end{prob}
+
+\begin{prob}[S]{3940}
+$\Omega$ — 三角形 $0 \leqslant x \leqslant 1; 0 \leqslant y \leqslant 1 - x$。
+\end{prob}
+
+\begin{prob}[S]{3941}
+$\Omega$ — 区域 $-a \leqslant x \leqslant a; \frac{x^2}{a} \leqslant y \leqslant a$。
+\end{prob}
+
+\begin{prob}[M]{3942}
+在怎样的情况下，当变换为极坐标之后，积分的上下限是常数？
+\end{prob}
+
+\probgroup{在下列积分中，令 $x = r\cos\varphi$ 和 $y = r\sin\varphi$，变换为极坐标 $r$ 和 $\varphi$，并依两种不同的顺序配置积分的上下限：}
+
+\begin{prob}[S]{3943}
+$\int_{0}^{1}\,\mathrm{d}x \int_{0}^{1} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3944}
+$\int_{0}^{1}\,\mathrm{d}x \int_{1 - x}^{\sqrt{1 - x^2}} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3945}
+$\int_{0}^{2}\,\mathrm{d}x \int_{x}^{\sqrt{3}x} f(\sqrt{x^2 + y^2})\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3946}
+$\int_{0}^{1}\,\mathrm{d}x \int_{0}^{x^2} f(x, y)\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[M]{3947}
+$\iint\limits_{\Omega} f(x, y)\,\mathrm{d}x\,\mathrm{d}y$, 其中区域 $\Omega$ 由曲线 $(x^2 + y^2)^2 = a^2(x^2 - y^2)$ $(x \geqslant 0)$ 围成。
+\end{prob}
+
+\probgroup{令 $r$ 和 $\varphi$ 为极坐标，在下列积分中变更积分的顺序：}
+
+\begin{prob}[S]{3948}
+$\int_{-\frac{\pi}{2}}^{\frac{\pi}{2}}\,\mathrm{d}\varphi \int_{0}^{a\cos\varphi} f(\varphi, r)\,\mathrm{d}r \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3949}
+$\int_{0}^{\frac{\pi}{2}}\,\mathrm{d}\varphi \int_{0}^{a\sqrt{\sin 2\varphi}} f(\varphi, r)\,\mathrm{d}r \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3950}
+$\int_{0}^{a}\,\mathrm{d}\varphi \int_{0}^{\varphi} f(\varphi, r)\,\mathrm{d}r \quad (0 < a < 2\pi)$。
+\end{prob}
+
+\probgroup{变换成极坐标，把二重积分化为一重积分：}
+
+\begin{prob}[S]{3951}
+$\iint\limits_{x^2 + y^2 \leqslant 1} f(\sqrt{x^2 + y^2})\,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3952}
+$\iint\limits_{\Omega} f(\sqrt{x^2 + y^2})\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega = \{|y| \leqslant |x|; |x| \leqslant 1\}$。
+\end{prob}
+
+\begin{prob}[S]{3953}
+$\iint\limits_{x^2 + y^2 \leqslant x} f\left(\frac{y}{x}\right)\,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\probgroup{变换成极坐标，计算下列二重积分：}
+
+\begin{prob}[S]{3954}
+$\iint\limits_{x^2 + y^2 \leqslant a^2} \sqrt{x^2 + y^2}\,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3955}
+$\iint\limits_{\pi^2 \leqslant x^2 + y^2 \leqslant 4\pi^2} \sin\sqrt{x^2 + y^2}\,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[M]{3956}
+利用函数组
+\[
+u = \frac{y^2}{x}, \quad v = \sqrt{xy}
+\]
+把正方形 $S\{a < x < a + h, b < y < b + h\} (a > 0, b > 0)$ 变换为区域 $S'$。求区域 $S'$ 的面积与区域 $S$ 的面积之比。当 $h \to 0$ 时，此比值的极限等于什么？
+\end{prob}
+
+\probgroup{引入新的变量 $u$, $v$ 来代替 $x$, $y$，并确定下列二重积分中的积分限：}
+
+\begin{prob}[S]{3957}
+$\int_{a}^{b}\,\mathrm{d}x \int_{\alpha x}^{\beta x} f(x, y)\,\mathrm{d}y \quad (0 < a < b; 0 < \alpha < \beta)$, 令 $u = x, v = \frac{y}{x}$。
+\end{prob}
+
+\begin{prob}[S]{3958}
+$\int_{0}^{2}\,\mathrm{d}x \int_{1 - x}^{2 - x} f(x, y)\,\mathrm{d}y$, 令 $u = x + y, v = x - y$。
+\end{prob}
+
+\begin{prob}[M]{3959}
+$\iint\limits_{\Omega} f(x, y)\,\mathrm{d}x\,\mathrm{d}y$, 其中 $\Omega$ 是被曲线 $\sqrt{x} + \sqrt{y} = \sqrt{a}, x = 0, y = 0$ $(a > 0)$ 所
+包围的区域，令
+\[
+x = u \cos^4 v, \quad y = u \sin^4 v.
+\]
+\end{prob}
+
+\begin{prob}[M]{3960}
+证明：变量代换
+\[
+x + y = \xi, \quad y = \xi\eta
+\]
+把三角形 $0 \leqslant x \leqslant 1, \, 0 \leqslant y \leqslant 1 - x$ 变为单位正方形 $0 \leqslant \xi \leqslant 1, \, 0 \leqslant \eta \leqslant 1$。
+\end{prob}
+
+\begin{prob}[M]{3961}
+在怎样的变量代换下，由曲线 $xy = 1, \, xy = 2, \, x - y + 1 = 0, \, x - y - 1 = 0$ $(x > 0, \, y > 0)$ 围成的曲线四边形被变换成矩形，且其边平行于坐标轴？
+\end{prob}
+
+\probgroup{进行适当的变量代换，把二重积分化为一重积分：}
+
+\begin{prob}[S]{3962}
+$\displaystyle \iint\limits_{|x| + |y| \leqslant 1} f(x + y) \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3963}
+$\displaystyle \iint\limits_{x^2 + y^2 \leqslant 1} f(ax + by + c) \,\mathrm{d}x\,\mathrm{d}y \quad (a^2 + b^2 \neq 0)$。
+\end{prob}
+
+\begin{prob}[S]{3964}
+$\displaystyle \iint\limits_{\Omega} f(xy) \,\mathrm{d}x\,\mathrm{d}y$，其中区域 $\Omega$ 由曲线 $xy = 1, \, xy = 2, \, y = x, \, y = 4x$ $(x > 0, \, y > 0)$ 围成。
+\end{prob}
+
+\probgroup{计算下列二重积分：}
+
+\begin{prob}[S]{3965}
+$\displaystyle \iint\limits_{\Omega} (x + y) \,\mathrm{d}x\,\mathrm{d}y$，其中区域 $\Omega$ 由曲线 $x^2 + y^2 = x + y$ 围成。
+\end{prob}
+
+\begin{prob}[S]{3966}
+$\displaystyle \iint\limits_{|x| + |y| \leqslant 1} (|x| + |y|) \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3967}
+$\displaystyle \iint\limits_{\Omega} \sqrt{1 - \frac{x^2}{a^2} - \frac{y^2}{b^2}} \,\mathrm{d}x\,\mathrm{d}y$，其积分域 $\Omega$ 是椭圆区域 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} \leqslant 1$。
+\end{prob}
+
+\begin{prob}[S]{3968}
+$\displaystyle \iint\limits_{x^4 + y^4 \leqslant 1} (x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3969}
+$\displaystyle \iint\limits_{\Omega} (x + y) \,\mathrm{d}x\,\mathrm{d}y$，其积分域 $\Omega$ 由曲线 $y^2 = 2x, \, x + y = 4, \, x + y = 12$ 围成。
+\end{prob}
+
+\begin{prob}[S]{3970}
+$\displaystyle \iint\limits_{\Omega} xy \,\mathrm{d}x\,\mathrm{d}y$，其中 $\Omega$ 是由曲线 $xy = 1, \, x + y = \dfrac{5}{2}$ 围成的区域。
+\end{prob}
+
+\begin{prob}[S]{3971}
+$\displaystyle \iint\limits_{\substack{0 \leqslant x \leqslant \pi \\ 0 \leqslant y \leqslant \pi}} |\cos(x + y)| \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3972}
+$\displaystyle \iint\limits_{x^2 + y^2 \leqslant 1} \left| \frac{x + y}{\sqrt{2}} - x^2 - y^2 \right| \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3973}
+$\displaystyle \iint\limits_{\substack{|x| \leqslant 1 \\ 0 \leqslant y \leqslant 2}} \sqrt{|y - x^2|} \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\probgroup{计算不连续函数的积分：}
+
+\begin{prob}[S]{3974}
+$\displaystyle \iint\limits_{x^2 + y^2 \leqslant 4} \operatorname{sgn}(x^2 - y^2 + 2) \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3975}
+$\displaystyle \iint\limits_{\substack{0 \leqslant x \leqslant 2 \\ 0 \leqslant y \leqslant 2}} [x + y] \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[S]{3976}
+$\displaystyle \iint\limits_{x^2 \leqslant y \leqslant 4} \sqrt{[y - x^2]} \,\mathrm{d}x\,\mathrm{d}y$。
+\end{prob}
+
+\begin{prob}[M]{3977}
+设 $m$ 及 $n$ 为正整数且其中至少有一个是奇数，证明：
+\[
+\iint\limits_{x^2 + y^2 \leqslant a^2} x^m y^n \,\mathrm{d}x\,\mathrm{d}y = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3978}
+求
+\[
+\lim_{\rho \to 0} \frac{1}{\pi\rho^2} \iint\limits_{x^2 + y^2 \leqslant \rho^2} f(x, y) \,\mathrm{d}x\,\mathrm{d}y,
+\]
+其中 $f(x, y)$ 为连续函数。
+\end{prob}
+
+\begin{prob}[S]{3979}
+设
+\[
+F(t) = \iint\limits_{\substack{0 \leqslant x \leqslant t \\ 0 \leqslant y \leqslant t}} \mathrm{e}^{\frac{tx}{y^2}} \,\mathrm{d}x\,\mathrm{d}y,
+\]
+求 $F'(t)$。
+\end{prob}
+
+\begin{prob}[S]{3980}
+设
+\[
+F(t) = \iint\limits_{(x - t)^2 + (y - t)^2 \leqslant 1} \sqrt{x^2 + y^2} \,\mathrm{d}x\,\mathrm{d}y,
+\]
+求 $F'(t)$。
+\end{prob}
+
+\begin{prob}[S]{3981}
+设
+\[
+F(t) = \iint\limits_{x^2 + y^2 \leqslant t^2} f(x, y) \,\mathrm{d}x\,\mathrm{d}y \quad (t > 0),
+\]\footnote{要求 $f$ 在有关区域上连续。——译注}
+求 $F'(t)$。
+\end{prob}
+
+\begin{prob}[M]{3982}
+证明：若 $f(x, y)$ 连续，则函数
+\[
+u(x, y) = \frac{1}{2} \int_0^x \,\mathrm{d}\xi \int_{\xi - x + y}^{x + y - \xi} f(\xi, \eta) \,\mathrm{d}\eta
+\]
+满足方程
+\[
+\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} = f(x, y).
+\]
+\end{prob}
+
+\begin{prob}[M]{3983}
+设函数 $f(x, y)$ 的等值线是简单封闭曲线，区域 $S(v_1, v_2)$ 由曲线 $f(x, y) = v_1$ 及 $f(x, y) = v_2$ 围成。证明：
+\[
+\iint\limits_{S(v_1, v_2)} f(x, y) \,\mathrm{d}x\,\mathrm{d}y = \int_{v_1}^{v_2} v F'(v) \,\mathrm{d}v,
+\]
+其中 $F(v)$ 为曲线 $f(x, y) = v_1$ 与 $f(x, y) = v_2$ 所包围的面积。
+\probhint{用函数 $f(x, y)$ 的无限接近的等值线把积分域分为许多部分。}
+\end{prob}
+
+\probsec{§2. 面积的计算法}
+
+\probgroup{求下列曲线所围的面积：}
+
+\begin{prob}[S]{3984}
+$xy = a^2, \quad x + y = \dfrac{5}{2}a \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3985}
+$y^2 = 2px + p^2, \quad y^2 = -2qx + q^2 \quad (p > 0, \, q > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3986}
+$(x - y)^2 + x^2 = a^2 \quad (a > 0)$。
+\end{prob}
+
+\probgroup{变换为极坐标，计算下列曲线所围的面积：}
+
+\begin{prob}[S]{3987}
+$(x^2 + y^2)^2 = 2a^2(x^2 - y^2), \quad x^2 + y^2 \geqslant a^2$。
+\end{prob}
+
+\begin{prob}[S]{3988}
+$(x^3 + y^3)^2 = x^2 + y^2, \quad x \geqslant 0, \, y \geqslant 0$。
+\end{prob}
+
+\begin{prob}[S]{3989}
+$(x^2 + y^2)^2 = a(x^3 - 3xy^2) \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{3990}
+$(x^2 + y^2)^2 = 8a^2 xy, \quad (x - a)^2 + (y - a)^2 \leqslant a^2 \quad (a > 0)$。
+\end{prob}
+
+\probgroup{根据以下公式引入广义极坐标 $r$ 和 $\varphi$：
+\[
+x = a r \cos^\alpha \varphi, \quad y = b r \sin^\alpha \varphi \quad (r \geqslant 0),
+\]
+其中 $a, b$ 和 $\alpha$ 为以适当的方法选出的常数，且考虑到 $\dfrac{D(x, y)}{D(r, \varphi)} = \alpha a b r \cos^{\alpha - 1} \varphi \sin^{\alpha - 1} \varphi$，求由下列曲线所围的面积（假定参数是正的）：}
+
+\begin{prob}[S]{3991}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{x}{h} + \dfrac{y}{k}$。
+\end{prob}
+
+\begin{prob}[S]{3992}
+$\dfrac{x^3}{a^3} + \dfrac{y^3}{b^3} = \dfrac{x^2}{h^2} + \dfrac{y^2}{k^2}; \quad x = 0, \, y = 0$。
+\end{prob}
+
+\begin{prob}[S]{3993}
+$\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^4 = \dfrac{x^2}{h^2} + \dfrac{y^2}{k^2} \quad (x > 0, \, y > 0)$。
+\end{prob}
+
+\begin{prob}[M]{3994}
+(a) $\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^4 = \dfrac{x^2}{h^2} - \dfrac{y^2}{k^2} \quad (x > 0, \, y > 0)$; \qquad (b) $\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^5 = \dfrac{x^2 y^2}{c^4}$。
+\end{prob}
+
+\begin{prob}[S]{3995}
+$\sqrt[4]{\dfrac{x}{a}} + \sqrt[4]{\dfrac{y}{b}} = 1; \quad x = 0, \, y = 0$。
+\end{prob}
+
+\probgroup{进行适当的变量代换，求下列曲线所围的面积：}
+
+\begin{prob}[S]{3996}
+$x + y = a, \quad x + y = b, \quad y = \alpha x, \quad y = \beta x \quad (0 < a < b, \, 0 < \alpha < \beta)$。
+\end{prob}
+
+\begin{prob}[S]{3997}
+$xy = a^2, \quad xy = 2a^2, \quad y = x, \quad y = 2x \quad (x > 0, \, y > 0)$。
+\end{prob}
+
+\begin{prob}[L]{3998}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $y^2 = 2px, \quad y^2 = 2qx, \quad x^2 = 2ry, \quad x^2 = 2sy \quad (0 < p < q, \, 0 < r < s)$;
+\item $x^2 = ay, \quad x^2 = by, \quad x^3 = cy^2, \quad x^3 = dy^2 \quad (0 < a < b, \, 0 < c < d)$;
+\item $y = ax^p, \quad y = bx^p, \quad y = cx^q, \quad y = dx^q \quad (0 < p < q, \, 0 < a < b, \, 0 < c < d)$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3999}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sqrt{\dfrac{x}{a}} + \sqrt{\dfrac{y}{b}} = 1, \quad \sqrt{\dfrac{x}{a}} + \sqrt{\dfrac{y}{b}} = 2, \quad \dfrac{x}{a} = \dfrac{y}{b}, \quad \dfrac{4x}{a} = \dfrac{y}{b} \quad (a > 0, \, b > 0)$;
+\item $\left(\dfrac{x}{a}\right)^{\frac{2}{3}} + \left(\dfrac{y}{b}\right)^{\frac{2}{3}} = 1, \quad \left(\dfrac{x}{a}\right)^{\frac{2}{3}} + \left(\dfrac{y}{b}\right)^{\frac{2}{3}} = 4, \quad \dfrac{x}{a} = \dfrac{y}{b}, \quad \dfrac{8x}{a} = \dfrac{y}{b} \quad (x > 0, \, y > 0)$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4000}
+$\dfrac{x^2}{\lambda} + \dfrac{y^2}{\lambda - c^2} = 1$，其中 $\lambda$ 取下列各值：$\dfrac{1}{3}c^2, \, \dfrac{2}{3}c^2, \, \dfrac{4}{3}c^2, \, \dfrac{5}{3}c^2 \quad (x > 0, \, y > 0)$。
+\end{prob}
+
+\begin{prob}[M]{4001}
+求椭圆 $(a_1 x + b_1 y + c_1)^2 + (a_2 x + b_2 y + c_2)^2 = 1$（其中 $\delta = a_1 b_2 - a_2 b_1 \neq 0$）的面积。
+\end{prob}
+
+\begin{prob}[M]{4002}
+求椭圆
+\[
+\frac{x^2}{\cosh^2 u} + \frac{y^2}{\sinh^2 u} = c^2 \quad (u = u_1, u_2)
+\]
+和双曲线
+\[
+\frac{x^2}{\cos^2 v} - \frac{y^2}{\sin^2 v} = c^2 \quad (v = v_1, v_2)
+\]
+\[
+(0 < u_1 < u_2; \quad 0 < v_1 < v_2; \quad x > 0, \, y > 0)
+\]
+所围的面积。
+\probhint{令 $x = c \cosh u \cos v, \, y = c \sinh u \sin v$。}
+\end{prob}
+
+\begin{prob}[M]{4003}
+求平面 $x + y + z = b$ 与曲面 $x^2 + y^2 + z^2 - xy - xz - yz = a^2$ 相截所得截断面之面积。
+\end{prob}
+
+\begin{prob}[M]{4004}
+求平面 $z = 1 - 2(x + y)$ 与曲面 $\dfrac{1}{x} + \dfrac{1}{y} + \dfrac{1}{z} = 0$ 相截所得截断面之面积。
+\end{prob}
+
+\probsec{§3. 体积的计算法}
+
+\begin{prob}[M]{4005}
+试绘出一物体，其体积等于积分
+\[
+V = \int_0^1 \,\mathrm{d}x \int_0^{1 - x} (x^2 + y^2) \,\mathrm{d}y.
+\]
+\end{prob}
+
+\begin{prob}[L]{4006}
+绘出下列二重积分所表示的体积：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \iint\limits_{\substack{0 \leqslant x + y \leqslant 1 \\ x \geqslant 0, y \geqslant 0}} (x + y) \,\mathrm{d}x\,\mathrm{d}y$;
+\item $\displaystyle \iint\limits_{\frac{x^2}{4} + \frac{y^2}{9} \leqslant 1} \sqrt{1 - \frac{x^2}{4} - \frac{y^2}{9}} \,\mathrm{d}x\,\mathrm{d}y$;
+\item $\displaystyle \iint\limits_{|x| + |y| \leqslant 1} (x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y$;
+\item $\displaystyle \iint\limits_{x^2 + y^2 \leqslant x} \sqrt{x^2 + y^2} \,\mathrm{d}x\,\mathrm{d}y$;
+\item $\displaystyle \iint\limits_{\substack{1 \leqslant x \leqslant 2 \\ x \leqslant y \leqslant 2x}} \sqrt{xy} \,\mathrm{d}x\,\mathrm{d}y$;
+\item $\displaystyle \iint\limits_{x^2 + y^2 \leqslant 1} \sin \pi \sqrt{x^2 + y^2} \,\mathrm{d}x\,\mathrm{d}y$。
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列曲面所围区域的体积：}
+
+\begin{prob}[S]{4007}
+$z = 1 + x + y, \quad z = 0, \quad x + y = 1, \quad x = 0, \quad y = 0$。
+\end{prob}
+
+\begin{prob}[S]{4008}
+$x + y + z = a, \quad x^2 + y^2 = R^2, \quad x = 0, \quad y = 0, \quad z = 0 \quad (a \geqslant \sqrt{2}R)$。
+\end{prob}
+
+\begin{prob}[S]{4009}
+$z = x^2 + y^2, \quad y = x^2, \quad y = 1, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4010}
+$z = \cos x \cos y, \quad z = 0, \quad |x + y| \leqslant \dfrac{\pi}{2}, \quad |x - y| \leqslant \dfrac{\pi}{2}$。
+\end{prob}
+
+\begin{prob}[S]{4011}
+$z = \sin \dfrac{\pi y}{2x}, \quad z = 0, \quad y = x, \quad y = 0, \quad x = \pi$。
+\end{prob}
+
+\begin{prob}[S]{4012}
+$z = xy, \quad x + y + z = 1, \quad z = 0$。
+\end{prob}
+
+\probgroup{变换成极坐标，求下列曲面所围区域的体积：}
+
+\begin{prob}[S]{4013}
+$z^2 = xy, \quad x^2 + y^2 = a^2$。
+\end{prob}
+
+\begin{prob}[S]{4014}
+$z = x + y, \quad (x^2 + y^2)^2 = 2xy, \quad z = 0 \quad (x > 0, \, y > 0)$。
+\end{prob}
+
+\begin{prob}[S]{4015}
+$z = x^2 + y^2, \quad x^2 + y^2 = x, \quad x^2 + y^2 = 2x, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4016}
+$x^2 + y^2 + z^2 = a^2, \quad x^2 + y^2 \geqslant a|x| \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{4017}
+$x^2 + y^2 - az = 0, \quad (x^2 + y^2)^2 = a^2(x^2 - y^2), \quad z = 0 \quad (a > 0)$。
+\end{prob}
+
+\begin{prob}[S]{4018}
+$z = \mathrm{e}^{-(x^2 + y^2)}, \quad z = 0, \quad x^2 + y^2 = R^2$。
+\end{prob}
+
+\begin{prob}[S]{4019}
+$z = c\cos\dfrac{\pi\sqrt{x^2 + y^2}}{2a}, \quad x^2 + y^2 = a^2, \quad y = x\tan\alpha, \quad y = x\tan\beta \quad (a > 0, \, c > 0, \, 0 \leqslant \alpha < \beta \leqslant 2\pi)$。
+\end{prob}
+
+\begin{prob}[S]{4020}
+$z = x^2 + y^2, \quad z = x + y$。
+\end{prob}
+
+\probgroup{求下列曲面所围区域的体积（假定参数是正的）：}
+
+\begin{prob}[S]{4021}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1, \quad \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{z^2}{c^2} \quad (z > 0)$。
+\end{prob}
+
+\begin{prob}[S]{4022}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2} = -1, \quad \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$。
+\end{prob}
+
+\begin{prob}[S]{4023}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{z}{c}, \quad \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{x}{a} + \dfrac{y}{b}, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4024}
+$\left(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}\right)^2 + \dfrac{z}{c} = 1, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4025}
+$\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^2 + \dfrac{z^2}{c^2} = 1, \quad x = 0, \quad y = 0, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4026}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1, \quad \left(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2}\right)^2 = \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2}$。
+\end{prob}
+
+\begin{prob}[S]{4027}
+$z^2 = xy, \quad x + y = a, \quad x + y = b \quad (0 < a < b)$。
+\end{prob}
+
+\begin{prob}[S]{4028}
+$z = x^2 + y^2, \quad xy = a^2, \quad xy = 2a^2, \quad y = \dfrac{x}{2}, \quad y = 2x, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4029}
+$z = xy, \quad x^2 = y, \quad x^2 = 2y, \quad y^2 = x, \quad y^2 = 2x, \quad z = 0$。
+\end{prob}
+
+\begin{prob}[S]{4030}
+$z = c\sin\dfrac{\pi xy}{a^2}, \quad z = 0, \quad xy = a^2, \quad y = \alpha x, \quad y = \beta x \quad (0 < \alpha < \beta, \, x > 0)$。
+\end{prob}
+
+\begin{prob}[S]{4031}
+$z = x^{\frac{3}{2}} + y^{\frac{3}{2}}, \quad z = 0, \quad x + y = 1, \quad x = 0, \quad y = 0$。
+\end{prob}
+
+\begin{prob}[S]{4032}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z}{c} = 1$, $\left(\dfrac{x}{a}\right)^{\frac{2}{3}} + \left(\dfrac{y}{b}\right)^{\frac{2}{3}} = 1$, $z = 0$.
+\end{prob}
+
+\begin{prob}[M]{4033}
+(a) $z = c\arctan\dfrac{y}{x}$, $z = 0$, $\sqrt{x^2 + y^2} = a\arctan\dfrac{y}{x}$ ($y \geqslant 0$); \qquad
+(b) $z = y\mathrm{e}^{-\frac{xy}{a^2}}$, $xy = a^2$, $xy = 2a^2$, $y = m$, $y = n$, $z = 0$ ($0 < m < n$).
+\end{prob}
+
+\begin{prob}[S]{4034}
+$\dfrac{x^n}{a^n} + \dfrac{y^n}{b^n} + \dfrac{z^n}{c^n} = 1$, $x = 0$, $y = 0$, $z = 0$ ($n > 0$).
+\end{prob}
+
+\begin{prob}[S]{4035}
+$\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^n + \left(\dfrac{z}{c}\right)^m = 1$, $x = 0$, $y = 0$, $z = 0$ ($n > 0, m > 0$).
+\end{prob}
+
+\probsec{§4. 曲面面积的计算}
+
+\begin{prob}[M]{4036}
+求曲面 $az = xy$ 包含在圆柱 $x^2 + y^2 = a^2$ 内那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4037}
+求以曲面 $x^2 + z^2 = a^2$ 和 $y^2 + z^2 = a^2$ 为界的物体的表面积.
+\end{prob}
+
+\begin{prob}[M]{4038}
+求球面 $x^2 + y^2 + z^2 = a^2$ 包含在柱面 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ ($b \leqslant a$) 内那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4039}
+求曲面 $z^2 = 2xy$ 被平面 $x + y = 1$, $x = 0$, $y = 0$ 所截部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4040}
+求曲面 $x^2 + y^2 + z^2 = a^2$ 在圆柱 $x^2 + y^2 = \pm ax$ 内那部分的面积（维维亚尼问题）.
+\end{prob}
+
+\begin{prob}[M]{4041}
+求曲面 $z = \sqrt{x^2 + y^2}$ 包含在圆柱 $x^2 + y^2 = 2x$ 内那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4042}
+求曲面 $z = \sqrt{x^2 - y^2}$ 包含在柱面 $(x^2 + y^2)^2 = a^2(x^2 - y^2)$ 内那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4043}
+求曲面 $z = \dfrac{1}{2}(x^2 - y^2)$ 被平面 $x - y = \pm 1$, $x + y = \pm 1$ 所截部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4044}
+求曲面 $x^2 + y^2 = 2az$ 包含在柱面 $(x^2 + y^2)^2 = 2a^2 xy$ 内那部分的面积.
+\end{prob}
+
+\begin{prob}[L]{4045}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 求曲面 $x^2 + y^2 = a^2$ 被平面 $x + z = 0$, $x - z = 0$ ($x > 0, y > 0$) 所截部分的面积;
+  \item 求曲面 $(x^2 + y^2)^{\frac{3}{2}} + z = 1$ 被平面 $z = 0$ 所截部分的面积;
+  \item 求曲面 $\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^2 + \dfrac{2z}{c} = 1$ 被平面 $x = 0$, $y = 0$ 和 $z = 0$ 所截部分的面积;
+  \item 求曲面 $\dfrac{x^2}{a} - \dfrac{y^2}{b} = 2z$ 被曲面 $\dfrac{x^2}{a^2} + \dfrac{x^2}{b^2} = 1$ ($z \geqslant 0$) 所截部分的面积;
+  \item 求曲面 $\sin z = \sinh x \cdot \sinh y$ 被平面 $x = 1$ 和 $x = 2$ ($y \geqslant 0$) 所截部分的面积.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4046}
+求以曲面 $x^2 + y^2 = \dfrac{1}{3}z^2$ 和 $x + y + z = 2a$ ($a > 0$) 为界的物体的表面积和体积.
+\end{prob}
+
+\begin{prob}[M]{4047}
+求球面在两条纬线和两条经线之间那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4048}
+求螺旋面
+\[
+x = r\cos\varphi, \quad y = r\sin\varphi, \quad z = h\varphi
+\]
+在 $0 < r < a$, $0 < \varphi < 2\pi$ 那部分的面积.
+\end{prob}
+
+\begin{prob}[L]{4049}
+求环面
+\[
+x = (b + a\cos\psi)\cos\varphi, \quad y = (b + a\cos\psi)\sin\varphi, \quad z = a\sin\psi \quad (0 < a \leqslant b)
+\]
+在两条经线 $\varphi = \varphi_1$, $\varphi = \varphi_2$ 和两条纬线 $\psi = \psi_1$, $\psi = \psi_2$ 之间那部分的面积. 整个环的表面积等于什么?
+\end{prob}
+
+\begin{prob}[M]{4050}
+求矩形 $x = a > 0$, $0 \leqslant y \leqslant b$, $0 \leqslant z \leqslant c$ 对坐标原点的立体角 $\omega$. 若 $a$ 很大, 推出 $\omega$ 的近似公式.
+\end{prob}
+
+\probsec{§5. 二重积分在力学上的应用}
+
+\begin{prob}[M]{4051}
+求边长为 $a$ 的正方形薄板的质量, 设薄板上每一点的面密度与该点到正方形顶点之一的距离成正比, 且在正方形中心等于 $\rho_0$.
+\end{prob}
+
+\probgroup{求以下列曲线为界的均匀薄板的质心坐标：}
+
+\begin{prob}[S]{4052}
+$ay = x^2$, $x + y = 2a$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[S]{4053}
+$\sqrt{x} + \sqrt{y} = \sqrt{a}$, $x = 0$, $y = 0$.
+\end{prob}
+
+\begin{prob}[S]{4054}
+$x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ ($x > 0, y > 0$).
+\end{prob}
+
+\begin{prob}[S]{4055}
+$\left(\dfrac{x}{a} + \dfrac{y}{b}\right)^3 = \dfrac{xy}{c^2}$（线圈）.
+\end{prob}
+
+\begin{prob}[S]{4056}
+$(x^2 + y^2)^2 = 2a^2 xy$ ($x > 0, y > 0$).
+\end{prob}
+
+\begin{prob}[S]{4057}
+$r = a(1 + \cos\varphi)$, $\varphi = 0$.
+\end{prob}
+
+\begin{prob}[S]{4058}
+$x = a(t - \sin t)$, $y = a(1 - \cos t)$ ($0 \leqslant t \leqslant 2\pi$), $y = 0$.
+\end{prob}
+
+\begin{prob}[M]{4059}
+求圆形薄板 $x^2 + y^2 \leqslant a^2$ 的质心坐标. 设它在点 $M(x,y)$ 的面密度与点 $M$ 到点 $A(a,0)$ 的距离成正比.
+\end{prob}
+
+\begin{prob}[M]{4060}
+求曲线
+\[
+y = \sqrt{2px}, \quad y = 0, \quad x = X
+\]
+所围图形的质心在参数 $X$ 变化时所描绘的曲线.
+\end{prob}
+
+\probgroup{求由下列曲线所围的面积（$\rho = 1$）对坐标轴 $Ox$ 和 $Oy$ 的转动惯量 $I_x$ 和 $I_y$：}
+
+\begin{prob}[S]{4061}
+$\dfrac{x}{b_1} + \dfrac{y}{h} = 1$, $\dfrac{x}{b_2} + \dfrac{y}{h} = 1$, $y = 0$ ($b_1 > 0, b_2 > 0, h > 0$).
+\end{prob}
+
+\begin{prob}[S]{4062}
+$(x - a)^2 + (y - a)^2 = a^2$, $x = 0$, $y = 0$ ($0 \leqslant x \leqslant a$).
+\end{prob}
+
+\begin{prob}[S]{4063}
+$r = a(1 + \cos\varphi)$.
+\end{prob}
+
+\begin{prob}[S]{4064}
+$x^4 + y^4 = a^2(x^2 + y^2)$.
+\end{prob}
+
+\begin{prob}[S]{4065}
+$xy = a^2$, $xy = 2a^2$, $x = 2y$, $2x = y$ ($x > 0, y > 0$).
+\end{prob}
+
+\begin{prob}[M]{4066.1}
+求曲线
+\[
+(x^2 + y^2)^2 = a^2(x^2 - y^2)
+\]
+所围区域 $S$ 的极转动惯量
+\[
+I_0 = \iint\limits_S (x^2 + y^2)\,\mathrm{d}x\,\mathrm{d}y.
+\]
+\end{prob}
+
+\begin{prob}[M]{4066.2}
+求曲线
+\[
+ay = x^2, \quad ax = y^2 \quad (a > 0)
+\]
+所围平面图形的惯性积 $I_{xy}$.
+\end{prob}
+
+\begin{prob}[M]{4067}
+证明公式:
+\[
+I_l = I_{l_0} + Sd^2,
+\]
+式中 $I_l$, $I_{l_0}$ 是图形 $S$ 对二平行轴 $l$ 和 $l_0$ 的转动惯量, 其中 $l_0$ 是通过图形的质心, 而 $d$ 为两轴间的距离.
+\end{prob}
+
+\begin{prob}[M]{4068}
+证明: 平面图形 $S$ 对通过其质心 $O(0,0)$ 并与 $Ox$ 轴成 $\alpha$ 角的直线的转动惯量等于
+\[
+I = I_x\cos^2\alpha - 2I_{xy}\sin\alpha\cos\alpha + I_y\sin^2\alpha,
+\]
+其中 $I_x$ 和 $I_y$ 为图形 $S$ 对 $Ox$ 轴和 $Oy$ 轴的转动惯量, $I_{xy}$ 为惯性积:
+\[
+I_{xy} = \iint\limits_S \rho xy\,\mathrm{d}x\,\mathrm{d}y.
+\]
+\end{prob}
+
+\begin{prob}[M]{4069}
+求以 $a$ 为边的正三角形对通过三角形质心并与它的高成 $\alpha$ 角的直线的转动惯量.
+\end{prob}
+
+\begin{prob}[M]{4070}
+设圆柱形容器 $x^2 + y^2 = a^2$, $z = 0$ 内盛有水, 水平面为 $z = h$, 求水对容器侧壁 $x \geqslant 0$ 的压力.\footnote{关于习题 4070\textasciitilde 4072 可参阅 166 页的脚注. —— 译注}
+\end{prob}
+
+\begin{prob}[M]{4071}
+半径为 $a$ 的球体沉入密度为 $\delta$ 的液体中深度为 $h$（由球心算起）的地方, 这里 $h \geqslant a$. 求液体对球的上表面和下表面的压力.
+\end{prob}
+
+\begin{prob}[M]{4072}
+底半径为 $a$ 高为 $b$ 的直圆柱体完全沉入密度为 $\delta$ 的液体中, 其中心在水面下的深度为 $h$, 而圆柱的轴与竖直方向成 $\alpha$ 角. 求液体对圆柱上底和下底的压力.
+\end{prob}
+
+\begin{prob}[M]{4073}
+求均匀的圆柱体 $x^2 + y^2 \leqslant a^2$, $0 \leqslant z \leqslant h$ 对质点 $P(0,0,b)$ 的引力, 设圆柱的质量等于 $M$, 而质点的质量等于 $m$.
+\end{prob}
+
+\begin{prob}[M]{4074}
+物体对挤压面
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} \leqslant 1
+\]
+的压强分布由公式
+\[
+p = p_0\left(1 - \frac{x^2}{a^2} - \frac{y^2}{b^2}\right)
+\]
+给出. 求物体对此面的平均压强.
+\end{prob}
+
+\begin{prob}[M]{4075}
+以 $a$ 和 $b$ 为边的矩形草地上均匀地覆盖有已收割的干草, 其面密度为 $\rho$. 若运送质量为 $M$ 的货物到距离为 $r$ 的地方所需的功等于 $kMr$ ($0 < k < 1$)\footnote{原书如此，其实系数 $k$ 是有量纲的，它的值也不应限制在 $0$ 与 $1$ 之间. —— 译注}, 则为了把所有干草集中在草地的中心, 至少应消耗多少功?
+\end{prob}
+
+\probsec{§6. 三重积分}
+
+\probgroup{计算下列三重积分：}
+
+\begin{prob}[M]{4076}
+$\displaystyle\iiint\limits_V xy^2 z^3\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$, 其中 $V$ 是曲面 $z = xy$, $y = x$, $x = 1$, $z = 0$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4077}
+$\displaystyle\iiint\limits_V \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{(1 + x + y + z)^3}$, 其中 $V$ 是曲面 $x + y + z = 1$, $x = 0$, $y = 0$, $z = 0$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4078}
+$\displaystyle\iiint\limits_V xyz\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$, 其中 $V$ 是曲面 $x^2 + y^2 + z^2 = 1$, $x = 0$, $y = 0$, $z = 0$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4079}
+$\displaystyle\iiint\limits_V \left(\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2}\right)\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$, 其中 $V$ 是曲面 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4080}
+$\displaystyle\iiint\limits_V \sqrt{x^2 + y^2}\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$, 其中 $V$ 是曲面 $x^2 + y^2 = z^2$, $z = 1$ 所围的区域.
+\end{prob}
+
+\probgroup{在下列三重积分内，用不同方法配置积分的上下限：}
+
+\begin{prob}[S]{4081}
+$\displaystyle\int_0^1 \mathrm{d}x \int_0^{1-x} \mathrm{d}y \int_0^{x+y} f(x,y,z)\,\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[S]{4082}
+$\displaystyle\int_{-1}^1 \mathrm{d}x \int_{-\sqrt{1-x^2}}^{\sqrt{1-x^2}} \mathrm{d}y \int_{\sqrt{x^2+y^2}}^1 f(x,y,z)\,\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[S]{4083}
+$\displaystyle\int_0^1 \mathrm{d}x \int_0^1 \mathrm{d}y \int_0^{x^2+y^2} f(x,y,z)\,\mathrm{d}z$.
+\end{prob}
+
+\probgroup{用一重积分代替三重积分：}
+
+\begin{prob}[S]{4084}
+$\displaystyle \int_{0}^{x} \,\mathrm{d}\xi \int_{0}^{\xi} \,\mathrm{d}\eta \int_{0}^{\eta} f(\zeta)\,\mathrm{d}\zeta$.
+\end{prob}
+
+\begin{prob}[S]{4085}
+$\displaystyle \int_{0}^{1} \,\mathrm{d}x \int_{0}^{1} \,\mathrm{d}y \int_{0}^{x+y} f(z)\,\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[M]{4086}
+设 $f(x, y, z) = F'''_{xyz}(x, y, z)$，且 $a, b, c, A, B, C$ 为常数，求
+\[
+\int_{a}^{A} \,\mathrm{d}x \int_{b}^{B} \,\mathrm{d}y \int_{c}^{C} f(x, y, z)\,\mathrm{d}z.
+\]
+\end{prob}
+
+\probgroup{变换为球坐标，计算积分：}
+
+\begin{prob}[M]{4087}
+$\displaystyle \iiint_{V} \sqrt{x^2+y^2+z^2} \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，其中 $V$ 是曲面 $x^2+y^2+z^2=z$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4088}
+$\displaystyle \int_{0}^{1} \,\mathrm{d}x \int_{0}^{\sqrt{1-x^2}} \,\mathrm{d}y \int_{\sqrt{x^2+y^2}}^{\sqrt{2-x^2-y^2}} z^2 \,\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[M]{4089}
+在积分中变换为球坐标：
+\[
+\iiint_{V} f\left(\sqrt{x^2+y^2+z^2}\right) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中 $V$ 是曲面 $z=x^2+y^2,\ x=y,\ x=1,\ y=0,\ z=0$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4090}
+进行适当的变量代换，计算三重积分
+\[
+\iiint_{V} \sqrt{1 - \frac{x^2}{a^2} - \frac{y^2}{b^2} - \frac{z^2}{c^2}} \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中 $V$ 为椭球 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2}=1$.
+\end{prob}
+
+\begin{prob}[M]{4091}
+变换为圆柱坐标，计算积分
+\[
+\iiint_{V} (x^2+y^2) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中 $V$ 是曲面 $x^2+y^2=2z,\ z=2$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4092}
+计算积分
+\[
+\iiint_{V} x^2 \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中 $V$ 是曲面 $z=ay^2,\ z=by^2,\ y>0\ (0<a<b),\ z=\alpha x,\ z=\beta x\ (0<\alpha<\beta),\ z=h\ (h>0)$ 所围的区域.
+\end{prob}
+
+\begin{prob}[M]{4093}
+求积分
+\[
+\iiint_{V} xyz \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中区域 $V$ 位于象限 $x>0, y>0, z>0$ 且由下列曲面围成：
+\[
+z=\frac{x^2+y^2}{m},\quad z=\frac{x^2+y^2}{n},\quad xy=a^2,\quad xy=b^2,\quad y=\alpha x,\quad y=\beta x
+\]
+\[
+(0<a<b;\ 0<\alpha<\beta;\ 0<m<n).
+\]
+\end{prob}
+
+\begin{prob}[M]{4094}
+求函数 $f(x, y, z) = x^2+y^2+z^2$ 在区域 $x^2+y^2+z^2 \leqslant x+y+z$ 内的平均值.
+\end{prob}
+
+\begin{prob}[M]{4095}
+求函数
+\[
+f(x, y, z) = \mathrm{e}^{\sqrt{\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}}}
+\]
+在区域 $\dfrac{x^2}{a^2}+\dfrac{y^2}{b^2}+\dfrac{z^2}{c^2} \leqslant 1$ 内的平均值.
+\end{prob}
+
+\begin{prob}[M]{4096}
+利用中值定理，估计积分
+\[
+u = \iiint_{x^2+y^2+z^2 \leqslant R^2} \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{\sqrt{(x-a)^2+(y-b)^2+(z-c)^2}},
+\]
+其中 $a^2+b^2+c^2 > R^2$.
+\end{prob}
+
+\begin{prob}[M]{4097}
+证明：若函数 $f(x, y, z)$ 在区域 $V$ 内是连续的，且对于任何区域 $\omega \subset V$ 有
+\[
+\iiint_{\omega} f(x, y, z) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z = 0,
+\]
+则当 $(x, y, z) \in V$ 时 $f(x, y, z) \equiv 0$.
+\end{prob}
+
+\begin{prob}[M]{4098}
+求 $F'(t)$，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle F(t) = \iiint_{x^2+y^2+z^2 \leqslant t^2} f(x^2+y^2+z^2) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，其中 $f$ 为可微函数；
+\item $\displaystyle F(t) = \iiint_{\substack{0 \leqslant x \leqslant t \\ 0 \leqslant y \leqslant t \\ 0 \leqslant z \leqslant t}} f(xyz) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，其中 $f$ 为可微函数.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4099}
+求
+\[
+\iiint_{x^2+y^2+z^2 \leqslant 1} x^m y^n z^p \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中 $m, n, p$ 为非负整数.
+\end{prob}
+
+\begin{prob}[M]{4100}
+令 $x+y+z=\xi,\ y+z=\xi\eta,\ z=\xi\eta\zeta$，计算狄利克雷积分
+\[
+\iiint_{V} x^p y^q z^r (1-x-y-z)^s \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z \quad (p>0, q>0, r>0, s>0),
+\]
+其中 $V$ 是平面 $x+y+z=1,\ x=0,\ y=0,\ z=0$ 所围的区域.
+\end{prob}
+
+\probsec{§7. 利用三重积分计算体积}
+
+\probgroup{求以下列曲面为界的物体的体积：}
+
+\begin{prob}[S]{4101}
+$z=x^2+y^2,\ z=2x^2+2y^2,\ y=x,\ y=x^2$.
+\end{prob}
+
+\begin{prob}[S]{4102}
+$z=x+y,\ z=xy,\ x+y=1,\ x=0,\ y=0$.
+\end{prob}
+
+\begin{prob}[S]{4103}
+$x^2+z^2=a^2,\ x+y=\pm a,\ x-y=\pm a$.
+\end{prob}
+
+\begin{prob}[S]{4104}
+$az=x^2+y^2,\ z=\sqrt{x^2+y^2}\ (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{4105}
+$az=a^2-x^2-y^2,\ z=a-x-y,\ x=0,\ y=0,\ z=0\ (a>0)$.
+\end{prob}
+
+\begin{prob}[S]{4106}
+$z=6-x^2-y^2,\ z=\sqrt{x^2+y^2}$.
+\end{prob}
+
+\probgroup{变换为球坐标或圆柱坐标，计算以下曲面所围的体积：}
+
+\begin{prob}[S]{4107}
+$x^2+y^2+z^2=2az,\ x^2+y^2 \leqslant z^2$.
+\end{prob}
+
+\begin{prob}[S]{4108}
+$(x^2+y^2+z^2)^2 = a^2(x^2+y^2-z^2)$.
+\end{prob}
+
+\begin{prob}[S]{4109}
+$(x^2+y^2+z^2)^3 = 3xyz$.
+\end{prob}
+
+\begin{prob}[S]{4110}
+$x^2+y^2+z^2=a^2,\ x^2+y^2+z^2=b^2,\ x^2+y^2=z^2\ (z \geqslant 0)\ (0<a<b)$.
+\end{prob}
+
+\probgroup{在下列各题中最好利用广义球坐标
+\[
+r, \varphi, \psi \quad \left(r \geqslant 0;\ 0 \leqslant \varphi \leqslant 2\pi;\ -\frac{\pi}{2} \leqslant \psi \leqslant \frac{\pi}{2}\right),
+\]
+它们由以下公式引入：
+\[
+\begin{cases}
+x = a r \cos^{\alpha}\varphi \cos^{\beta}\psi, \\
+y = b r \sin^{\alpha}\varphi \cos^{\beta}\psi, \\
+z = c r \sin^{\beta}\psi
+\end{cases}
+\]
+($a, b, c, \alpha, \beta$ 为常数)，并且
+\[
+\frac{D(x, y, z)}{D(r, \varphi, \psi)} = \alpha\beta a b c r^2 \cos^{\alpha-1}\varphi \sin^{\alpha-1}\varphi \cos^{2\beta-1}\psi \sin^{\beta-1}\psi.
+\]
+求下列曲面为界的物体的体积：}
+
+\begin{prob}[S]{4111}
+$\displaystyle \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\right)^2 = \frac{x}{h}$.
+\end{prob}
+
+\begin{prob}[M]{4112}
+(a) $\displaystyle \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\right)^2 = \frac{x^2}{a^2}+\frac{y^2}{b^2}$; \qquad
+(b) $\displaystyle \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\right)^2 = \frac{x^2}{a^2}+\frac{y^2}{b^2}-\frac{z^2}{c^2}$.
+\end{prob}
+
+\begin{prob}[S]{4113}
+$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}=1,\ \frac{x^2}{a^2}+\frac{y^2}{b^2}=\frac{z}{c}$.
+\end{prob}
+
+\begin{prob}[S]{4114}
+$\displaystyle \frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^4}{c^4}=1$.
+\end{prob}
+
+\begin{prob}[S]{4115}
+$\displaystyle \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)^2+\frac{z^4}{c^4}=1$.
+\end{prob}
+
+\probgroup{利用适当的变量代换，计算以下列曲面为界的物体的体积（假定参数是正的）：}
+
+\begin{prob}[M]{4116}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \left(\frac{x}{a}+\frac{y}{b}+\frac{z}{c}\right)^2 = \frac{x}{h}+\frac{y}{k}\ (x \geqslant 0, y \geqslant 0, z \geqslant 0)$；
+\item $\displaystyle \left(\frac{x}{a}+\frac{y}{b}+\frac{z}{c}\right)^2 = \frac{x}{h}-\frac{y}{k}\ (x \geqslant 0, y \geqslant 0, z \geqslant 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4117}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \left(\frac{x}{a}+\frac{y}{b}+\frac{z}{c}\right)^4 = \frac{xyz}{abc}\ (x \geqslant 0, y \geqslant 0, z \geqslant 0)$；
+\item $\displaystyle \left(\frac{x}{a}+\frac{y}{b}\right)^2 + \left(\frac{z}{c}\right)^2 = 1\ (x \geqslant 0, y \geqslant 0, z \geqslant 0)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{4118}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \sqrt{\frac{x}{a}}+\sqrt{\frac{y}{b}}+\sqrt{\frac{z}{c}} = 1 \quad (x \geqslant 0, y \geqslant 0, z \geqslant 0)$；
+\item $\displaystyle \sqrt[3]{\frac{x}{a}}+\sqrt[3]{\frac{y}{b}}+\sqrt[3]{\frac{z}{c}} = 1 \quad (x \geqslant 0, y \geqslant 0, z \geqslant 0)$；
+\item $\displaystyle \left(\frac{x}{a}\right)^{\frac{2}{3}}+\left(\frac{y}{b}\right)^{\frac{2}{3}}+\left(\frac{z}{c}\right)^{\frac{2}{3}} = 1$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{4119}
+$z=x^2+y^2,\ z=2(x^2+y^2),\ xy=a^2,\ xy=2a^2,\ x=2y,\ 2x=y\ (x>0, y>0)$.
+\end{prob}
+
+\begin{prob}[S]{4120}
+$x^2+z^2=a^2,\ x^2+z^2=b^2,\ x^2-y^2-z^2=0\ (x>0)$.
+\end{prob}
+
+\begin{prob}[S]{4121}
+$\displaystyle (x^2+y^2+z^2)^3 = \frac{a^6 x^2}{x^2+y^2}$.
+\end{prob}
+
+\begin{prob}[S]{4122}
+$\displaystyle \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}\right)^2 = \frac{z}{h} \cdot \mathrm{e}^{-\frac{\frac{z^2}{c^2}}{\frac{x^2}{a^2}+\frac{y^2}{b^2}+\frac{z^2}{c^2}}}$.
+\end{prob}
+
+\begin{prob}[S]{4123}
+$\displaystyle \frac{\dfrac{x}{a}+\dfrac{y}{b}}{\dfrac{x}{a}+\dfrac{y}{b}+\dfrac{z}{c}} = \frac{2}{\pi} \arcsin\left(\frac{x}{a}+\frac{y}{b}+\frac{z}{c}\right),\ \frac{x}{a}+\frac{y}{b}=1,\ x=0,\ x=a$.
+\end{prob}
+
+\begin{prob}[S]{4124}
+$\displaystyle \frac{x}{a}+\frac{y}{b}+\frac{z}{c} = \ln \frac{\dfrac{x}{a}+\dfrac{y}{b}+\dfrac{z}{c}}{\dfrac{x}{a}+\dfrac{y}{b}},\ x=0,\ z=0,\ \frac{y}{b}+\frac{z}{c}=0,\ \frac{x}{a}+\frac{y}{b}+\frac{z}{c}=1$.
+\end{prob}
+
+\begin{prob}[M]{4125}
+曲面 $x^2+y^2+az=4a^2$ 将球 $x^2+y^2+z^2=4az$ 分成两部分，求这两部分的体积之比.
+\end{prob}
+
+\begin{prob}[M]{4126}
+求以曲面
+\[
+x^2+y^2=az,\quad z=2a-\sqrt{x^2+y^2} \quad (a>0)
+\]
+为界的物体的体积和表面积.
+\end{prob}
+
+\begin{prob}[M]{4127}
+求以平面
+\[
+\begin{aligned}
+a_1 x + b_1 y + c_1 z &= \pm h_1, \\
+a_2 x + b_2 y + c_2 z &= \pm h_2, \\
+a_3 x + b_3 y + c_3 z &= \pm h_3
+\end{aligned}
+\]
+为界的平行六面体的体积，设
+\[
+\Delta = \begin{vmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3
+\end{vmatrix} \neq 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{4128}
+求以曲面
+\[
+(a_1 x + b_1 y + c_1 z)^2 + (a_2 x + b_2 y + c_2 z)^2 + (a_3 x + b_3 y + c_3 z)^2 = h^2
+\]
+为界的物体的体积，设
+\[
+\Delta = \begin{vmatrix}
+a_1 & b_1 & c_1 \\
+a_2 & b_2 & c_2 \\
+a_3 & b_3 & c_3
+\end{vmatrix} \neq 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{4129}
+求以曲面
+\[
+\left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)^n + \frac{z^{2n}}{c^{2n}} = \frac{z}{h} \left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)^{n-2} \quad (n>1)
+\]
+为界的物体的体积.
+\end{prob}
+
+\begin{prob}[M]{4130}
+一物体位于正象限 $Oxyz\ (x>0, y>0, z>0)$，并以曲面
+\[
+\frac{x^m}{a^m} + \frac{y^n}{b^n} + \frac{z^p}{c^p} = 1 \quad (m>0, n>0, p>0),\quad x=0,\quad y=0,\quad z=0
+\]
+为界，求其体积.
+\end{prob}
+
+\probsec{§8. 三重积分在力学上的应用}
+
+\begin{prob}[M]{4131}
+设物体在点 $M(x,y,z)$ 的密度由公式 $\rho = x + y + z$ 给出，求占有单位体积 $0 \leqslant x \leqslant 1, 0 \leqslant y \leqslant 1, 0 \leqslant z \leqslant 1$ 之物体的质量．
+\end{prob}
+
+\begin{prob}[M]{4132}
+若物体的密度按规律 $\rho = \rho_0 \mathrm{e}^{-k\sqrt{x^2+y^2+z^2}}$（其中 $\rho_0 > 0$ 及 $k > 0$ 为常数）而变化，求占有无限区域 $x^2 + y^2 + z^2 \geqslant 1$ 的物体的质量．
+\end{prob}
+
+\probgroup{求下列曲面为界的均匀物体的质心坐标：}
+
+\begin{prob}[S]{4133}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{z^2}{c^2},\; z = c$．
+\end{prob}
+
+\begin{prob}[S]{4134}
+$z = x^2 + y^2,\; x + y = a,\; x = 0,\; y = 0,\; z = 0$．
+\end{prob}
+
+\begin{prob}[S]{4135}
+$x^2 = 2pz,\; y^2 = 2px,\; x = \dfrac{p}{2},\; z = 0$．
+\end{prob}
+
+\begin{prob}[S]{4136}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1,\; x \geqslant 0,\; y \geqslant 0,\; z \geqslant 0$．
+\end{prob}
+
+\begin{prob}[S]{4137}
+$x^2 + z^2 = a^2,\; y^2 + z^2 = a^2$ ($z \geqslant 0$)．
+\end{prob}
+
+\begin{prob}[S]{4138}
+$x^2 + y^2 = 2z,\; x + y = z$．
+\end{prob}
+
+\begin{prob}[S]{4139}
+$\left(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\right)^2 = \dfrac{xyz}{abc}$ ($x \geqslant 0,\; y \geqslant 0,\; z \geqslant 0,\; a > 0,\; b > 0,\; c > 0$)．
+\end{prob}
+
+\begin{prob}[S]{4140}
+$z = x^2 + y^2,\; z = \dfrac{1}{2}(x^2 + y^2),\; x + y = \pm 1,\; x - y = \pm 1$．
+\end{prob}
+
+\begin{prob}[S]{4141}
+$\dfrac{x^n}{a^n} + \dfrac{y^n}{b^n} + \dfrac{z^n}{c^n} = 1,\; x = 0,\; y = 0,\; z = 0$ ($n > 0;\; x \geqslant 0,\; y \geqslant 0,\; z \geqslant 0$)．
+\end{prob}
+
+\begin{prob}[M]{4142}
+求形状为立方体
+\[
+0 \leqslant x \leqslant 1, \quad 0 \leqslant y \leqslant 1, \quad 0 \leqslant z \leqslant 1
+\]
+的物体的质心坐标，设此物体在点 $(x,y,z)$ 的密度等于
+\[
+\rho = x^{\frac{2\alpha-1}{1-\alpha}} y^{\frac{2\beta-1}{1-\beta}} z^{\frac{2\gamma-1}{1-\gamma}},
+\]
+其中 $0 < \alpha < 1,\; 0 < \beta < 1,\; 0 < \gamma < 1$．
+\end{prob}
+
+\probgroup{求下列曲面（参量是正的）为界的均匀物体对坐标平面的转动惯量：}
+
+\begin{prob}[S]{4143}
+$\dfrac{x}{a} + \dfrac{y}{b} + \dfrac{z}{c} = 1,\; x = 0,\; y = 0,\; z = 0$．
+\end{prob}
+
+\begin{prob}[S]{4144}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$．
+\end{prob}
+
+\begin{prob}[S]{4145}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{z^2}{c^2},\; z = c$．
+\end{prob}
+
+\begin{prob}[M]{4146}
+(a) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1,\; \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = \dfrac{x}{a}$；\qquad
+(b) $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 2\dfrac{z}{c},\; \dfrac{x}{a} + \dfrac{y}{b} = \dfrac{z}{c}$．
+\end{prob}
+
+\begin{prob}[M]{4147}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\left(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}\right)^2 = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} - \dfrac{z^2}{c^2}$；
+  \item $\left(\dfrac{x}{a}\right)^n + \left(\dfrac{y}{b}\right)^n + \left(\dfrac{z}{c}\right)^n = 1,\; x = 0,\; y = 0,\; z = 0$ ($n > 0;\; x \geqslant 0,\; y \geqslant 0,\; z \geqslant 0$)．
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列曲面为界的均匀物体对 $Oz$ 轴的转动惯量：}
+
+\begin{prob}[S]{4148}
+$z = x^2 + y^2,\; x + y = \pm 1,\; x - y = \pm 1,\; z = 0$．
+\end{prob}
+
+\begin{prob}[M]{4149}
+(a) $x^2 + y^2 + z^2 = 2,\; x^2 + y^2 = z^2$ ($z > 0$)；\qquad
+(b) $(x^2 + y^2 + z^2)^3 = a^5 z$．
+\end{prob}
+
+\begin{prob}[M]{4150}
+求质量为 $M$ 的非均匀球体 $x^2 + y^2 + z^2 \leqslant R^2$ 对其直径的转动惯量，设球内各点 $P(x,y,z)$ 的密度与该点至球心的距离成正比．
+\end{prob}
+
+\begin{prob}[M]{4151}
+证明等式：
+\[
+I_l = I_{l_0} + Md^2,
+\]
+其中 $I_l$ 为物体对某轴 $l$ 的转动惯量，$I_{l_0}$ 为对平行于 $l$ 并通过物体质心的轴 $l_0$ 的转动惯量，$d$ 为此二轴之间的距离，$M$ 为物体的质量．
+\end{prob}
+
+\begin{prob}[L]{4152}
+证明：占有区域 $V$ 的物体对过其质心 $O(0,0,0)$ 并与坐标轴成角 $\alpha, \beta, \gamma$ 的轴 $l$ 的转动惯量等于：
+\[
+\begin{aligned}
+I_l &= I_x \cos^2\alpha + I_y \cos^2\beta + I_z \cos^2\gamma - 2K_{xy} \cos\alpha \cos\beta \\
+&\quad - 2K_{xz} \cos\alpha \cos\gamma - 2K_{yz} \cos\beta \cos\gamma,
+\end{aligned}
+\]
+其中 $I_x, I_y, I_z$ 为物体对坐标轴的转动惯量，而
+\[
+K_{xy} = \iiint\limits_V \rho xy \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z, \quad
+K_{xz} = \iiint\limits_V \rho xz \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z, \quad
+K_{yz} = \iiint\limits_V \rho yz \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z
+\]
+为惯性积．
+\end{prob}
+
+\begin{prob}[M]{4153}
+求密度为 $\rho_0$ 的均匀圆柱体 $x^2 + y^2 \leqslant a^2,\; -h \leqslant z \leqslant h$ 对直线 $x = y = z$ 的转动惯量．
+\end{prob}
+
+\begin{prob}[M]{4154}
+求密度为 $\rho_0$，以曲面
+\[
+(x^2 + y^2 + z^2)^2 = a^2(x^2 + y^2)
+\]
+为界的均匀物体对坐标原点的转动惯量．
+\end{prob}
+
+\begin{prob}[M]{4155}
+求密度为 $\rho_0$ 的均匀球体 $\xi^2 + \eta^2 + \zeta^2 \leqslant R^2$ 在点 $P(x,y,z)$ 的牛顿引力势．
+\probhint{令 $O\zeta$ 轴通过点 $P(x,y,z)$．}
+\end{prob}
+
+\begin{prob}[M]{4156}
+求球壳层 $R_1^2 \leqslant \xi^2 + \eta^2 + \zeta^2 \leqslant R_2^2$ 在点 $P(x,y,z)$ 的牛顿引力势，设密度 $\rho = f(R)$，此处 $f$ 为已知函数，而
+\[
+R = \sqrt{\xi^2 + \eta^2 + \zeta^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{4157}
+求密度 $\rho_0$ 恒定的圆柱体 $\xi^2 + \eta^2 \leqslant a^2,\; 0 \leqslant \zeta \leqslant h$ 在点 $P(0,0,z)$ 的牛顿引力势．
+\end{prob}
+
+\begin{prob}[M]{4158}
+半径为 $R$ 质量为 $M$ 的均匀球体 $\xi^2 + \eta^2 + \zeta^2 \leqslant R^2$ 以怎样的力吸引质量为 $m$ 的质点 $P(0,0,a)$？
+\end{prob}
+
+\begin{prob}[M]{4159}
+求密度为 $\rho_0$ 的均匀圆柱体 $\xi^2 + \eta^2 \leqslant a^2,\; 0 \leqslant \zeta \leqslant h$ 对单位质量质点 $P(0,0,z)$ 的引力．
+\end{prob}
+
+\begin{prob}[M]{4160}
+求密度为 $\rho_0$ 的均匀球锥体对位于其顶点的单位质量质点的引力，设球面半径为 $R$，而轴截面的扇形的角等于 $2\alpha$．
+\end{prob}
+
+\probsec{§9. 二重和三重广义积分}
+
+\probgroup{研究下列具有无界积分域的广义积分的收敛性（$0 < m \leqslant |\varphi(x,y)| \leqslant M$）：}
+
+\begin{prob}[S]{4161}
+$\displaystyle\iint\limits_{x^2+y^2 \geqslant 1} \dfrac{\varphi(x,y)}{(x^2+y^2)^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4162}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \dfrac{\mathrm{d}x\,\mathrm{d}y}{(1+|x|^p)(1+|y|^q)}$．
+\end{prob}
+
+\begin{prob}[S]{4163}
+$\displaystyle\iint\limits_{0 \leqslant y \leqslant 1} \dfrac{\varphi(x,y)}{(1+x^2+y^2)^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4164}
+$\displaystyle\iint\limits_{|x|+|y| \geqslant 1} \dfrac{\mathrm{d}x\,\mathrm{d}y}{|x|^p + |y|^q}$ ($p > 0,\; q > 0$)．
+\end{prob}
+
+\begin{prob}[S]{4165}
+$\displaystyle\iint\limits_{x+y \geqslant 1} \dfrac{\sin x \sin y}{(x+y)^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[M]{4166}
+证明：若连续函数 $f(x,y)$ 不为负，$S_n$ ($n = 1, 2, \cdots$) 为有界闭区域，并且组成区域 $S$ 的任意一个竭尽递增序列，则
+\[
+\iint\limits_S f(x,y) \,\mathrm{d}x\,\mathrm{d}y = \lim_{n \to \infty} \iint\limits_{S_n} f(x,y) \,\mathrm{d}x\,\mathrm{d}y,
+\]
+这里左端与右端同时有意义或同时无意义．
+\end{prob}
+
+\begin{prob}[M]{4167}
+证明：
+\[
+\lim_{n \to \infty} \iint\limits_{\substack{|x| \leqslant n \\ |y| \leqslant n}} \sin(x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y = \pi,
+\]
+然而
+\[
+\lim_{n \to \infty} \iint\limits_{x^2+y^2 \leqslant 2\pi n} \sin(x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y = 0
+\]
+（$n$ 为正整数）．
+\end{prob}
+
+\begin{prob}[M]{4168}
+证明：尽管二重积分
+\[
+\int_1^{+\infty} \mathrm{d}x \int_1^{+\infty} \dfrac{x^2 - y^2}{(x^2 + y^2)^2} \,\mathrm{d}y \quad \text{及} \quad \int_1^{+\infty} \mathrm{d}y \int_1^{+\infty} \dfrac{x^2 - y^2}{(x^2 + y^2)^2} \,\mathrm{d}x
+\]
+收敛，但积分
+\[
+\iint\limits_{x \geqslant 1,\, y \geqslant 1} \dfrac{x^2 - y^2}{(x^2 + y^2)^2} \,\mathrm{d}x\,\mathrm{d}y
+\]
+发散．
+\end{prob}
+
+\probgroup{计算下列积分（参数是正的）：}
+
+\begin{prob}[S]{4169}
+$\displaystyle\iint\limits_{\substack{xy \geqslant 1 \\ x \geqslant 1}} \dfrac{\mathrm{d}x\,\mathrm{d}y}{x^p y^q}$．
+\end{prob}
+
+\begin{prob}[S]{4170}
+$\displaystyle\iint\limits_{\substack{x+y \geqslant 1 \\ 0 \leqslant x \leqslant 1}} \dfrac{\mathrm{d}x\,\mathrm{d}y}{(x+y)^p}$．
+\end{prob}
+
+\begin{prob}[S]{4171}
+$\displaystyle\iint\limits_{x^2+y^2 \leqslant 1} \dfrac{\mathrm{d}x\,\mathrm{d}y}{\sqrt{1 - x^2 - y^2}}$．
+\end{prob}
+
+\begin{prob}[S]{4172}
+$\displaystyle\iint\limits_{x^2+y^2 \geqslant 1} \dfrac{\mathrm{d}x\,\mathrm{d}y}{(x^2 + y^2)^p}$．
+\end{prob}
+
+\begin{prob}[S]{4173}
+$\displaystyle\iint\limits_{y \geqslant x^2 + 1} \dfrac{\mathrm{d}x\,\mathrm{d}y}{x^4 + y^2}$．
+\end{prob}
+
+\begin{prob}[S]{4174}
+$\displaystyle\iint\limits_{0 \leqslant x \leqslant y} \mathrm{e}^{-(x+y)} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\probgroup{变换为极坐标，计算下列积分：}
+
+\begin{prob}[S]{4175}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{-(x^2+y^2)} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4176}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{-(x^2+y^2)} \cos(x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4177}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{-(x^2+y^2)} \sin(x^2 + y^2) \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{4178}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{ax^2 + 2bxy + cy^2 + 2dx + 2ey + f} \,\mathrm{d}x\,\mathrm{d}y$，其中 $a < 0,\; ac - b^2 > 0$．
+\end{prob}
+
+\begin{prob}[S]{4179}
+$\displaystyle\iint\limits_{\frac{x^2}{a^2}+\frac{y^2}{b^2} \geqslant 1} \mathrm{e}^{-\left(\frac{x^2}{a^2}+\frac{y^2}{b^2}\right)} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4180}
+$\displaystyle\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} xy \mathrm{e}^{-\left(\frac{x^2}{a^2} + 2\varepsilon \frac{x}{a}\frac{y}{b} + \frac{y^2}{b^2}\right)} \,\mathrm{d}x\,\mathrm{d}y$ ($0 < |\varepsilon| < 1$)．
+\end{prob}
+
+\probgroup{研究下列不连续函数的二重广义积分的收敛性（$0 < m \leqslant |\varphi(x,y)| \leqslant M$）：}
+
+\begin{prob}[S]{4181}
+$\displaystyle\iint\limits_{\Omega} \dfrac{\mathrm{d}x\,\mathrm{d}y}{x^2 + y^2}$，式中区域 $\Omega$ 由条件 $|y| \leqslant x^2,\; x^2 + y^2 \leqslant 1$ 确定．
+\end{prob}
+
+\begin{prob}[S]{4182}
+$\displaystyle\iint\limits_{x^2+y^2 \leqslant 1} \dfrac{\varphi(x,y)}{(x^2 + xy + y^2)^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4183}
+$\displaystyle\iint\limits_{|x|+|y| \leqslant 1} \dfrac{\mathrm{d}x\,\mathrm{d}y}{|x|^p + |y|^q}$ ($p > 0,\; q > 0$)．
+\end{prob}
+
+\begin{prob}[S]{4184}
+$\displaystyle\int_0^a \int_0^a \dfrac{\varphi(x,y)}{|x - y|^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4185}
+$\displaystyle\iint\limits_{x^2+y^2 \leqslant 1} \dfrac{\varphi(x,y)}{(1 - x^2 - y^2)^p} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[M]{4186}
+证明：若 1) 函数 $\varphi(x,y)$ 在有界区域 $a \leqslant x \leqslant A,\; b \leqslant y \leqslant B$ 内连续；2) 函数 $f(x)$ 在闭区间 $a \leqslant x \leqslant A$ 上连续；3) $p < 1$，则积分
+\[
+\int_a^A \mathrm{d}x \int_b^B \dfrac{\varphi(x,y)}{|f(x) - y|^p} \,\mathrm{d}y
+\]
+收敛．
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{4187}
+$\displaystyle\iint\limits_{x^2+y^2 \leqslant 1} \ln\dfrac{1}{\sqrt{x^2 + y^2}} \,\mathrm{d}x\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4188}
+$\displaystyle\int_0^a \mathrm{d}x \int_0^x \dfrac{\mathrm{d}y}{\sqrt{(a - x)(x - y)}}$ ($a > 0$)．
+\end{prob}
+
+\begin{prob}[S]{4189}
+$\displaystyle\iint\limits_{\Omega} \ln\sin(x - y) \,\mathrm{d}x\,\mathrm{d}y$，其中区域 $\Omega$ 是由直线 $y = 0,\; y = x,\; x = \pi$ 围成的．
+\end{prob}
+
+\begin{prob}[S]{4190}
+$\displaystyle\iint\limits_{x^2+y^2 \leqslant x} \dfrac{\mathrm{d}x\,\mathrm{d}y}{\sqrt{x^2 + y^2}}$．
+\end{prob}
+
+\probgroup{研究下列三重积分的收敛性：}
+
+\begin{prob}[S]{4191}
+$\displaystyle\iiint\limits_{x^2+y^2+z^2 > 1} \dfrac{\varphi(x,y,z)}{(x^2 + y^2 + z^2)^p} \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，其中 $0 < m \leqslant |\varphi(x,y,z)| \leqslant M$．
+\end{prob}
+
+\begin{prob}[S]{4192}
+$\displaystyle\iiint\limits_{x^2+y^2+z^2 \leqslant 1} \dfrac{\varphi(x,y,z)}{(x^2 + y^2 + z^2)^p} \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，其中 $0 < m \leqslant |\varphi(x,y,z)| \leqslant M$．
+\end{prob}
+
+\begin{prob}[S]{4193}
+$\displaystyle\iiint\limits_{|x|+|y|+|z| > 1} \dfrac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{|x|^p + |y|^q + |z|^r}$ ($p > 0,\; q > 0,\; r > 0$)．
+\end{prob}
+
+\begin{prob}[M]{4194}
+$\displaystyle\int_0^a \int_0^a \int_0^a \dfrac{f(x,y,z) \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{\{[y - \varphi(x)]^2 + [z - \psi(x)]^2\}^p}$，其中 $0 < m \leqslant |f(x,y,z)| \leqslant M$，而 $\varphi(x)$ 和 $\psi(x)$ 是闭区间 $[0, a]$ 上的连续函数．
+\end{prob}
+
+\begin{prob}[S]{4195}
+$\displaystyle \iiint\limits_{\substack{|x|\leqslant 1 \\ |y|\leqslant 1 \\ |z|\leqslant 1}} \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{|x+y-z|^p}$.
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{4196}
+$\displaystyle \int_0^1 \int_0^1 \int_0^1 \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{x^p y^q z^r}$.
+\end{prob}
+
+\begin{prob}[S]{4197}
+$\displaystyle \iiint\limits_{x^2+y^2+z^2>1} \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{(x^2+y^2+z^2)^3}$.
+\end{prob}
+
+\begin{prob}[S]{4198}
+$\displaystyle \iiint\limits_{x^2+y^2+z^2\leqslant 1} \frac{\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z}{(1-x^2-y^2-z^2)^p}$.
+\end{prob}
+
+\begin{prob}[S]{4199}
+$\displaystyle \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{-(x^2+y^2+z^2)}\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[M]{4200}
+计算积分
+\[
+\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \mathrm{e}^{-P(x_1, x_2, x_3)}\,\mathrm{d}x_1\,\mathrm{d}x_2\,\mathrm{d}x_3,
+\]
+其中 $P(x_1, x_2, x_3) = \sum_{i=1}^3 \sum_{j=1}^3 a_{ij} x_i x_j (a_{ij}=a_{ji})$ 为正定二次型.
+\end{prob}
+
+\probsec{§10. 多重积分}
+
+\begin{prob}[M]{4201}
+设 $K(x, y)$ 为区域 $R(a \leqslant x \leqslant b; a \leqslant y \leqslant b)$ 内的连续函数，且
+\[
+K_n(x, y) = \int_a^b \int_a^b \cdots \int_a^b K(x, t_1) K(t_1, t_2) \cdots K(t_n, y)\,\mathrm{d}t_1\,\mathrm{d}t_2 \cdots \mathrm{d}t_n,
+\]
+证明：
+\[
+K_{n+m+1}(x, y) = \int_a^b K_n(x, t) K_m(t, y)\,\mathrm{d}t.
+\]
+\end{prob}
+
+\begin{prob}[M]{4202}
+设 $f = f(x_1, x_2, \cdots, x_n)$ 为区域 $0 \leqslant x_i \leqslant x$ ($i = 1, 2, \cdots, n$) 内的连续函数. 证明等式：
+\[
+\int_0^x \mathrm{d}x_1 \int_0^{x_1} \mathrm{d}x_2 \cdots \int_0^{x_{n-1}} f\,\mathrm{d}x_n = \int_0^x \mathrm{d}x_n \int_{x_n}^x \mathrm{d}x_{n-1} \cdots \int_{x_2}^x f\,\mathrm{d}x_1 \quad (n \geqslant 2).
+\]
+\end{prob}
+
+\begin{prob}[M]{4203}
+证明：
+\[
+\int_0^t \mathrm{d}t_1 \int_0^{t_1} \mathrm{d}t_2 \cdots \int_0^{t_{n-1}} f(t_1) f(t_2) \cdots f(t_n)\,\mathrm{d}t_n = \frac{1}{n!} \left\{ \int_0^t f(\tau)\,\mathrm{d}\tau \right\}^n,
+\]
+其中 $f$ 为连续函数.
+\end{prob}
+
+\probgroup{计算下列多重积分：}
+
+\begin{prob}[M]{4204}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \int_0^1 \int_0^1 \cdots \int_0^1 (x_1^2 + x_2^2 + \cdots + x_n^2)\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n$;
+  \item $\displaystyle \int_0^1 \int_0^1 \cdots \int_0^1 (x_1 + x_2 + \cdots + x_n)^2\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{4205}
+$\displaystyle I_n = \iint\limits_{\substack{x_1\geqslant 0, x_2\geqslant 0, \cdots, x_n\geqslant 0 \\ x_1+x_2+\cdots+x_n\leqslant a}} \cdots \int \mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n$.
+\end{prob}
+
+\begin{prob}[S]{4206}
+$\displaystyle \int_0^1 \mathrm{d}x_1 \int_0^{x_1} \mathrm{d}x_2 \cdots \int_0^{x_{n-1}} x_1 x_2 \cdots x_n\,\mathrm{d}x_n$.
+\end{prob}
+
+\begin{prob}[S]{4207}
+$\displaystyle \iint\limits_{\substack{x_1\geqslant 0, x_2\geqslant 0, \cdots, x_n\geqslant 0 \\ x_1+x_2+\cdots+x_n\leqslant 1}} \cdots \int \sqrt{x_1+x_2+\cdots+x_n}\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n$.
+\end{prob}
+
+\begin{prob}[M]{4208}
+求以平面
+\[
+a_{i1} x_1 + a_{i2} x_2 + \cdots + a_{in} x_n = \pm h_i \quad (i = 1, 2, \cdots, n)
+\]
+为界的 $n$ 维平行 $2n$ 面体的体积，这里设 $\Delta = |a_{ij}| \neq 0$.
+\end{prob}
+
+\begin{prob}[M]{4209}
+求 $n$ 维角锥
+\[
+\frac{x_1}{a_1} + \frac{x_2}{a_2} + \cdots + \frac{x_n}{a_n} \leqslant 1, \quad x_i \geqslant 0 \ (i = 1, 2, \cdots, n) \quad (a_i > 0, i = 1, 2, \cdots, n)
+\]
+的体积.
+\end{prob}
+
+\begin{prob}[M]{4210}
+求以曲面
+\[
+\frac{x_1^2}{a_1^2} + \frac{x_2^2}{a_2^2} + \cdots + \frac{x_{n-1}^2}{a_{n-1}^2} = \frac{x_n^2}{a_n^2}, \quad x_n = a_n
+\]
+为界的 $n$ 维圆锥的体积.
+\end{prob}
+
+\begin{prob}[M]{4211}
+求 $n$ 维球体
+\[
+x_1^2 + x_2^2 + \cdots + x_n^2 \leqslant a^2
+\]
+的体积.
+\end{prob}
+
+\begin{prob}[M]{4212}
+求 $\displaystyle \iint\limits_\Omega \cdots \int x_n^2\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n$，其中区域 $\Omega$ 是由以下不等式确定的：
+\[
+x_1^2 + x_2^2 + \cdots + x_{n-1}^2 \leqslant a^2, \quad -\frac{h}{2} \leqslant x_n \leqslant \frac{h}{2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{4213}
+计算
+\[
+\iint\limits_{x_1^2+x_2^2+\cdots+x_n^2\leqslant 1} \cdots \int \frac{\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n}{\sqrt{1-x_1^2-x_2^2-\cdots-x_n^2}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{4214}
+证明等式：
+\[
+\int_0^x \mathrm{d}x_1 \int_0^{x_1} \mathrm{d}x_2 \cdots \int_0^{x_{n-1}} f(x_n)\,\mathrm{d}x_n = \int_0^x f(u) \frac{(x-u)^{n-1}}{(n-1)!}\,\mathrm{d}u.
+\]
+\end{prob}
+
+\begin{prob}[M]{4215}
+证明等式：
+\[
+\int_0^x x_1\,\mathrm{d}x_1 \int_0^{x_1} x_2\,\mathrm{d}x_2 \cdots \int_0^{x_n} f(x_{n+1})\,\mathrm{d}x_{n+1} = \frac{1}{2^n n!} \int_0^x (x^2 - u^2)^n f(u)\,\mathrm{d}u.
+\]
+\end{prob}
+
+\begin{prob}[M]{4216}
+证明狄利克雷公式：
+\[
+\iint\limits_{\substack{x_1, x_2, \cdots, x_n \geqslant 0 \\ x_1+x_2+\cdots+x_n \leqslant 1}} \cdots \int x_1^{p_1-1} x_2^{p_2-1} \cdots x_n^{p_n-1}\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n = \frac{\Gamma(p_1)\Gamma(p_2)\cdots\Gamma(p_n)}{\Gamma(p_1+p_2+\cdots+p_n+1)} \quad (p_1, p_2, \cdots, p_n > 0).
+\]
+\end{prob}
+
+\begin{prob}[M]{4217}
+证明刘维尔公式：
+\[
+\iint\limits_{\substack{x_1, x_2, \cdots, x_n \geqslant 0 \\ x_1+x_2+\cdots+x_n \leqslant 1}} \cdots \int f(x_1+x_2+\cdots+x_n) x_1^{p_1-1} x_2^{p_2-1} \cdots x_n^{p_n-1}\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n = \frac{\Gamma(p_1)\Gamma(p_2)\cdots\Gamma(p_n)}{\Gamma(p_1+p_2+\cdots+p_n)} \int_0^1 f(u) u^{p_1+p_2+\cdots+p_n-1}\,\mathrm{d}u \quad (p_1, p_2, \cdots, p_n > 0),
+\]
+式中 $f(u)$ 为连续函数.
+\probhint{运用数学归纳法.}
+\end{prob}
+
+\begin{prob}[M]{4218}
+将区域 $x_1^2 + x_2^2 + \cdots + x_n^2 \leqslant R^2$ 上的 $n$ 重积分 $(n \geqslant 2)$
+\[
+\iint\limits_\Omega \cdots \int f\left(\sqrt{x_1^2+x_2^2+\cdots+x_n^2}\right)\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n
+\]
+(其中 $f(u)$ 为连续函数) 化为一重积分.
+\end{prob}
+
+\begin{prob}[M]{4219}
+计算半径为 $R$，密度为 $\rho_0$ 的均质球体对自身的引力势，即求积分
+\[
+u = \frac{\rho_0^2}{2} \iiint\iiint\limits_{\substack{x_1^2+y_1^2+z_1^2 \leqslant R^2 \\ x_2^2+y_2^2+z_2^2 \leqslant R^2}} \frac{\mathrm{d}x_1\,\mathrm{d}y_1\,\mathrm{d}z_1\,\mathrm{d}x_2\,\mathrm{d}y_2\,\mathrm{d}z_2}{r_{1,2}},
+\]
+式中 $r_{1,2} = \sqrt{(x_1-x_2)^2 + (y_1-y_2)^2 + (z_1-z_2)^2}$.
+\end{prob}
+
+\begin{prob}[M]{4220}
+设 $\sum_{i,j=1}^n a_{ij} x_i x_j$ ($a_{ij}=a_{ji}$) 为正定二次型，计算 $n$ 重积分
+\[
+\int_{-\infty}^{+\infty} \int_{-\infty}^{+\infty} \cdots \int_{-\infty}^{+\infty} \mathrm{e}^{-\left\{\sum_{i,j=1}^n a_{ij} x_i x_j + 2\sum_{i=1}^n b_i x_i + c\right\}}\,\mathrm{d}x_1\,\mathrm{d}x_2 \cdots \mathrm{d}x_n.
+\]
+\end{prob}
+
+\probsec{§11. 曲线积分}
+
+\probgroup{计算下列第一型曲线积分：}
+
+\begin{prob}[S]{4221}
+$\displaystyle \int\limits_C (x+y)\,\mathrm{d}s$，其中 $C$ 为以 $O(0,0)$，$A(1,0)$ 和 $B(0,1)$ 为顶点的三角形围线.
+\end{prob}
+
+\begin{prob}[S]{4222}
+$\displaystyle \int\limits_C y^2\,\mathrm{d}s$，其中 $C$ 为摆线 $x = a(t - \sin t)$，$y = a(1 - \cos t)$ ($0 \leqslant t \leqslant 2\pi$) 的一拱.
+\end{prob}
+
+\begin{prob}[S]{4223}
+$\displaystyle \int\limits_C (x^2+y^2)\,\mathrm{d}s$，其中 $C$ 为曲线 $x = a(\cos t + t\sin t)$，$y = a(\sin t - t\cos t)$ ($0 \leqslant t \leqslant 2\pi$).
+\end{prob}
+
+\begin{prob}[S]{4224}
+$\displaystyle \int\limits_C xy\,\mathrm{d}s$，其中 $C$ 为双曲线 $x = a\cosh t$，$y = a\sinh t$ ($0 \leqslant t \leqslant t_0$) 的弧.
+\end{prob}
+
+\begin{prob}[S]{4225}
+$\displaystyle \int\limits_C (x^{\frac{4}{3}} + y^{\frac{4}{3}})\,\mathrm{d}s$，其中 $C$ 为内摆线 $x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ 的弧.
+\end{prob}
+
+\begin{prob}[S]{4226}
+$\displaystyle \int\limits_C \mathrm{e}^{\sqrt{x^2+y^2}}\,\mathrm{d}s$，其中 $C$ 为由曲线 $r = a$，$\varphi = 0$，$\varphi = \frac{\pi}{4}$ ($r$ 和 $\varphi$ 为极坐标) 给出的凸围线.
+\end{prob}
+
+\begin{prob}[S]{4227}
+$\displaystyle \int\limits_C |y|\,\mathrm{d}s$，其中 $C$ 为双纽线 $(x^2+y^2)^2 = a^2(x^2-y^2)$ 的弧.
+\end{prob}
+
+\begin{prob}[S]{4228}
+$\displaystyle\int_C x\,\mathrm{d}s$，其中 $C$ 为对数螺线 $r = a\mathrm{e}^{k\varphi}$ ($k > 0$) 在圆 $r = a$ 内的部分．
+\end{prob}
+
+\begin{prob}[S]{4229}
+$\displaystyle\int_C \sqrt{x^2+y^2}\,\mathrm{d}s$，其中 $C$ 为圆周 $x^2+y^2 = ax$．
+\end{prob}
+
+\begin{prob}[S]{4230}
+$\displaystyle\int_C \frac{\mathrm{d}s}{y^2}$，其中 $C$ 为悬链线 $y = a\cosh\frac{x}{a}$．
+\end{prob}
+
+\probgroup{求下列空间曲线的弧长（参数是正的）：}
+
+\begin{prob}[S]{4231}
+$x = 3t, y = 3t^2, z = 2t^3$，从 $O(0,0,0)$ 到 $A(3,3,2)$．
+\end{prob}
+
+\begin{prob}[S]{4232}
+$x = \mathrm{e}^{-t}\cos t, y = \mathrm{e}^{-t}\sin t, z = \mathrm{e}^{-t}$，当 $0 < t < +\infty$．
+\end{prob}
+
+\begin{prob}[S]{4233}
+$y = a\arcsin\frac{x}{a}, z = \frac{a}{4}\ln\frac{a-x}{a+x}$，从 $O(0,0,0)$ 到 $A(x_0, y_0, z_0)$．
+\end{prob}
+
+\begin{prob}[S]{4234}
+$(x-y)^2 = a(x+y), x^2-y^2 = \frac{9}{8}x^2$，从 $O(0,0,0)$ 到 $A(x_0, y_0, z_0)$．
+\end{prob}
+
+\begin{prob}[S]{4235}
+$x^2+y^2 = cz, \frac{y}{x} = \tan\frac{z}{c}$，从 $O(0,0,0)$ 到 $A(x_0, y_0, z_0)$．
+\end{prob}
+
+\begin{prob}[S]{4236}
+$x^2+y^2+z^2 = a^2, \sqrt{x^2+y^2}\cosh\left(\arctan\frac{y}{x}\right) = a$，从点 $A(a,0,0)$ 到点 $B(x,y,z)$．
+\end{prob}
+
+\probgroup{计算沿空间曲线的第一型曲线积分：}
+
+\begin{prob}[S]{4237}
+$\displaystyle\int_C (x^2+y^2+z^2)\,\mathrm{d}s$，其中 $C$ 为螺旋线 $x = a\cos t, y = a\sin t, z = bt$ ($0 \leqslant t \leqslant 2\pi$) 的一段．
+\end{prob}
+
+\begin{prob}[S]{4238}
+$\displaystyle\int_C x^2\,\mathrm{d}s$，其中 $C$ 为圆周 $x^2+y^2+z^2 = a^2, x+y+z = 0$．
+\end{prob}
+
+\begin{prob}[S]{4239}
+$\displaystyle\int_C z\,\mathrm{d}s$，其中 $C$ 为圆锥螺旋 $x = t\cos t, y = t\sin t, z = t$ ($0 \leqslant t \leqslant t_0$)．
+\end{prob}
+
+\begin{prob}[S]{4240}
+$\displaystyle\int_C z\,\mathrm{d}s$，其中 $C$ 为曲线 $x^2+y^2 = z^2, y^2 = ax$ 上从点 $O(0,0,0)$ 到点 $A(a, a, \sqrt{2}a)$ 的弧．
+\end{prob}
+
+\begin{prob}[M]{4241.1}
+设曲线 $x = a\cos t, y = b\sin t$ ($a \geqslant b > 0, 0 \leqslant t \leqslant 2\pi$) 在点 $(x,y)$ 的线密度等于 $|y|$，求其质量．
+\end{prob}
+
+\begin{prob}[M]{4241.2}
+设抛物线 $y^2 = 2px$ $\left(0 \leqslant x \leqslant \frac{p}{2}\right)$ 在点 $M(x,y)$ 的线密度等于 $|y|$，求其质量．
+\end{prob}
+
+\begin{prob}[M]{4241.3}
+求曲线 $x = at, y = \frac{a}{2}t^2, z = \frac{a}{3}t^3$ ($0 \leqslant t \leqslant 1$) 的弧之质量，其密度按规律 $\rho = \sqrt{\frac{2y}{a}}$ 而变化．
+\end{prob}
+
+\begin{prob}[M]{4242}
+计算均匀曲线 $y = a\cosh\frac{x}{a}$ 从点 $A(0,a)$ 到点 $B(b,h)$ 的弧的质心的坐标．
+\end{prob}
+
+\begin{prob}[M]{4243}
+求摆线 $x = a(t-\sin t), y = a(1-\cos t)$ ($0 \leqslant t \leqslant \pi$) 的弧的质心．
+\end{prob}
+
+\begin{prob}[M]{4244.1}
+求星形线 $x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ ($x \geqslant 0, y \geqslant 0$) 的弧 $C$ 对坐标轴的静矩
+\[
+S_y = \int_C x\,\mathrm{d}s, \qquad S_x = \int_C y\,\mathrm{d}s.
+\]
+\end{prob}
+
+\begin{prob}[M]{4244.2}
+求圆周 $x^2+y^2 = a^2$ 对其直径的转动惯量．
+\end{prob}
+
+\begin{prob}[M]{4244.3}
+求下列曲线对点 $O(0,0)$ 的极转动惯量：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 正方形 $\max\{|x|, |y|\} = a$ 的边界 $C$；
+\item 以极坐标点 $P(a,0)$，$Q\left(a, \frac{2\pi}{3}\right)$，$R\left(a, \frac{4\pi}{3}\right)$ 为顶点的正三角形的边界 $C$．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4244.4}
+求星形线 $x^{\frac{2}{3}} + y^{\frac{2}{3}} = a^{\frac{2}{3}}$ 的平均极半径，即由以下公式给出的数 $r_0$ ($r_0 > 0$)：
+\[
+I_0 = sr_0^2,
+\]
+其中 $I_0$ 是星形线对坐标原点的极转动惯量（参见习题 4244.3），$s$ 是星形线的弧长．
+\end{prob}
+
+\begin{prob}[M]{4245}
+计算球面上的三角形 $x^2+y^2+z^2 = a^2, x \geqslant 0, y \geqslant 0, z \geqslant 0$ 的围线的质心的坐标．
+\end{prob}
+
+\begin{prob}[M]{4246}
+求均匀的弧 $x = \mathrm{e}^t\cos t, y = \mathrm{e}^t\sin t, z = \mathrm{e}^t$ ($-\infty < t \leqslant 0$) 的质心的坐标．
+\end{prob}
+
+\begin{prob}[M]{4247}
+求螺线 $x = a\cos t, y = a\sin t, z = \frac{h}{2\pi}t$ ($0 \leqslant t \leqslant 2\pi$) 的一支对坐标轴的转动惯量．
+\end{prob}
+
+\begin{prob}[L]{4248}
+计算第二型曲线积分
+\[
+\int_{OA} x\,\mathrm{d}y - y\,\mathrm{d}x,
+\]
+式中 $O$ 为坐标原点，点 $A$ 的坐标为 $(1,2)$，并设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $OA$ 为直线段；
+\item $OA$ 为抛物线，其轴为 $Oy$；
+\item $OA$ 为由 $Ox$ 轴上的线段 $OB$ 和平行于 $Oy$ 轴的线段 $BA$ 组成的折线．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4249}
+对于上题中所指示的途径 (a), (b), (c)，计算
+\[
+\int_{OA} x\,\mathrm{d}y + y\,\mathrm{d}x.
+\]
+\end{prob}
+
+\probgroup{在参数增加的方向，沿所指示的曲线计算下列第二型曲线积分：}
+
+\begin{prob}[S]{4250}
+$\displaystyle\int_C (x^2-2xy)\,\mathrm{d}x + (y^2-2xy)\,\mathrm{d}y$，其中 $C$ 为抛物线 $y = x^2$ ($-1 \leqslant x \leqslant 1$)．
+\end{prob}
+
+\begin{prob}[S]{4251}
+$\displaystyle\int_C (x^2+y^2)\,\mathrm{d}x + (x^2-y^2)\,\mathrm{d}y$，其中 $C$ 为曲线 $y = 1 - |1-x|$ ($0 \leqslant x \leqslant 2$)．
+\end{prob}
+
+\begin{prob}[S]{4252}
+$\displaystyle\oint_C (x+y)\,\mathrm{d}x + (x-y)\,\mathrm{d}y$，其中 $C$ 为依逆时针方向通过的椭圆周 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$．
+\end{prob}
+
+\begin{prob}[S]{4253}
+$\displaystyle\int_C (2a-y)\,\mathrm{d}x + x\,\mathrm{d}y$，其中 $C$ 为摆线 $x = a(t-\sin t), y = a(1-\cos t)$ ($0 \leqslant t \leqslant 2\pi$) 的一拱．
+\end{prob}
+
+\begin{prob}[S]{4254}
+$\displaystyle\oint_C \frac{(x+y)\,\mathrm{d}x - (x-y)\,\mathrm{d}y}{x^2+y^2}$，其中 $C$ 为依逆时针方向通过的圆周 $x^2+y^2 = a^2$．
+\end{prob}
+
+\begin{prob}[M]{4255}
+$\displaystyle\oint_{ABCDA} \frac{\mathrm{d}x + \mathrm{d}y}{|x| + |y|}$，其中 $ABCDA$ 为以 $A(1,0), B(0,1), C(-1,0), D(0,-1)$ 为顶点的正方形围线．
+\end{prob}
+
+\begin{prob}[S]{4256}
+$\displaystyle\int_{AB} \sin y\,\mathrm{d}x + \sin x\,\mathrm{d}y$，其中 $AB$ 为介于点 $A(0,\pi)$ 和点 $B(\pi,0)$ 之间的直线段．
+\end{prob}
+
+\begin{prob}[M]{4257}
+$\displaystyle\oint_{OmAnO} \arctan\frac{y}{x}\,\mathrm{d}y - \mathrm{d}x$，其中 $OmA$ 为抛物线段 $y = x^2$，$OnA$ 为直线段 $y = x$．
+\end{prob}
+
+\probgroup{验证被积函数为全微分，并计算下列曲线积分：}
+
+\begin{prob}[S]{4258}
+$\displaystyle\int_{(-1,2)}^{(2,3)} x\,\mathrm{d}y + y\,\mathrm{d}x$．
+\end{prob}
+
+\begin{prob}[S]{4259}
+$\displaystyle\int_{(0,1)}^{(3,-4)} x\,\mathrm{d}x + y\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4260}
+$\displaystyle\int_{(0,1)}^{(2,3)} (x+y)\,\mathrm{d}x + (x-y)\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4261}
+$\displaystyle\int_{(1,-1)}^{(1,1)} (x-y)(\mathrm{d}x - \mathrm{d}y)$．
+\end{prob}
+
+\begin{prob}[S]{4262}
+$\displaystyle\int_{(0,0)}^{(a,b)} f(x+y)(\mathrm{d}x + \mathrm{d}y)$，其中 $f(u)$ 为连续函数．
+\end{prob}
+
+\begin{prob}[S]{4263}
+$\displaystyle\int_{(2,1)}^{(1,2)} \frac{y\,\mathrm{d}x - x\,\mathrm{d}y}{x^2}$ 沿着不与 $Oy$ 轴相交的路径．
+\end{prob}
+
+\begin{prob}[S]{4264}
+$\displaystyle\int_{(1,0)}^{(6,8)} \frac{x\,\mathrm{d}x + y\,\mathrm{d}y}{\sqrt{x^2+y^2}}$ 沿着不通过坐标原点的路径．
+\end{prob}
+
+\begin{prob}[S]{4265}
+$\displaystyle\int_{(x_1,y_1)}^{(x_2,y_2)} \varphi(x)\,\mathrm{d}x + \psi(y)\,\mathrm{d}y$，其中 $\varphi$ 和 $\psi$ 为连续函数．
+\end{prob}
+
+\begin{prob}[S]{4266}
+$\displaystyle\int_{(-2,-1)}^{(3,0)} (x^4 + 4xy^3)\,\mathrm{d}x + (6x^2y^2 - 5y^4)\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4267}
+$\displaystyle\int_{(0,-1)}^{(1,0)} \frac{x\,\mathrm{d}y - y\,\mathrm{d}x}{(x-y)^2}$ 沿着不与直线 $y = x$ 相交的路径．
+\end{prob}
+
+\begin{prob}[S]{4268}
+$\displaystyle\int_{(1,\pi)}^{(2,\pi)} \left(1 - \frac{y^2}{x^2}\cos\frac{y}{x}\right)\,\mathrm{d}x + \left(\sin\frac{y}{x} + \frac{y}{x}\cos\frac{y}{x}\right)\,\mathrm{d}y$ 沿着不与 $Oy$ 轴相交的路径．
+\end{prob}
+
+\begin{prob}[S]{4269}
+$\displaystyle\int_{(0,0)}^{(a,b)} \mathrm{e}^x(\cos y\,\mathrm{d}x - \sin y\,\mathrm{d}y)$．
+\end{prob}
+
+\begin{prob}[M]{4270}
+证明：若 $f(u)$ 为连续函数且 $C$ 为逐段光滑的封闭围线，则
+\[
+\oint_C f(x^2+y^2)(x\,\mathrm{d}x + y\,\mathrm{d}y) = 0.
+\]
+\end{prob}
+
+\probgroup{求原函数 $z$，设：}
+
+\begin{prob}[S]{4271}
+$\mathrm{d}z = (x^2 + 2xy - y^2)\,\mathrm{d}x + (x^2 - 2xy - y^2)\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4272}
+$\mathrm{d}z = \frac{y\,\mathrm{d}x - x\,\mathrm{d}y}{3x^2 - 2xy + 3y^2}$．
+\end{prob}
+
+\begin{prob}[S]{4273}
+$\mathrm{d}z = \frac{(x^2 + 2xy + 5y^2)\,\mathrm{d}x + (x^2 - 2xy + y^2)\,\mathrm{d}y}{(x+y)^3}$．
+\end{prob}
+
+\begin{prob}[S]{4274}
+$\mathrm{d}z = \mathrm{e}^x[\mathrm{e}^y(x - y + 2) + y]\,\mathrm{d}x + \mathrm{e}^x[\mathrm{e}^y(x - y) + 1]\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[S]{4275}
+$\mathrm{d}z = \frac{\partial^{n+m+1}u}{\partial x^{n+1}\partial y^m}\,\mathrm{d}x + \frac{\partial^{n+m+1}u}{\partial x^n\partial y^{m+1}}\,\mathrm{d}y$．
+\end{prob}
+
+\begin{prob}[M]{4276}
+$\mathrm{d}z = \frac{\partial^{n+m+1}}{\partial x^{n+2}\partial y^{m-1}}\left(\ln\frac{1}{r}\right)\,\mathrm{d}x - \frac{\partial^{n+m+1}}{\partial x^{n-1}\partial y^{m+2}}\left(\ln\frac{1}{r}\right)\,\mathrm{d}y$，其中 $r = \sqrt{x^2+y^2}$．
+\end{prob}
+
+\begin{prob}[M]{4277}
+证明：下面的估计对于曲线积分是正确的：
+\[
+\left|\int_C P\,\mathrm{d}x + Q\,\mathrm{d}y\right| \leqslant LM,
+\]
+其中 $L$ 为积分路径的长，$M = \max \sqrt{P^2+Q^2}$（在弧 $C$ 上）．
+\end{prob}
+
+\begin{prob}[M]{4278}
+估计积分
+\[
+I_R = \oint_{x^2+y^2=R^2} \frac{y\,\mathrm{d}x - x\,\mathrm{d}y}{(x^2+xy+y^2)^2}.
+\]
+证明：$\lim_{R\to\infty} I_R = 0$．
+\end{prob}
+
+\probgroup{计算沿空间曲线的积分（假定坐标系是右手的）：}
+
+\begin{prob}[S]{4279}
+$\displaystyle\int_C (y^2 - z^2)\,\mathrm{d}x + 2yz\,\mathrm{d}y - x^2\,\mathrm{d}z$，式中 $C$ 为曲线 $x = t, y = t^2, z = t^3$ ($0 \leqslant t \leqslant 1$)，以参数增加的方向为正．
+\end{prob}
+
+\begin{prob}[S]{4280}
+$\displaystyle\int_C y\,\mathrm{d}x + z\,\mathrm{d}y + x\,\mathrm{d}z$，式中 $C$ 为纽形螺线 $x = a\cos t, y = a\sin t, z = bt$ ($0 \leqslant t \leqslant 2\pi$)，以参数增加的方向为正．
+\end{prob}
+
+\begin{prob}[M]{4281}
+$\displaystyle\int_C (y-z)\,\mathrm{d}x + (z-x)\,\mathrm{d}y + (x-y)\,\mathrm{d}z$，式中 $C$ 为圆周 $x^2+y^2+z^2 = a^2, y = x\tan\alpha$ ($0 < \alpha < \pi$)，若从 $x$ 轴的正向看去，沿逆时针方向为正．
+\end{prob}
+
+\begin{prob}[M]{4282}
+$\displaystyle\int_C y^2\,\mathrm{d}x + z^2\,\mathrm{d}y + x^2\,\mathrm{d}z$，式中 $C$ 为维维亚尼曲线 $x^2+y^2+z^2 = a^2, x^2+y^2 = ax$ ($z \geqslant 0, a > 0$)，若从 $Ox$ 轴的正向 ($x > a$) 看去，沿逆时针方向为正．
+\end{prob}
+
+\begin{prob}[M]{4283}
+$\displaystyle\int_C (y^2-z^2)\,\mathrm{d}x + (z^2-x^2)\,\mathrm{d}y + (x^2-y^2)\,\mathrm{d}z$，式中 $C$ 为球面的一部分 $x^2+y^2+z^2 = 1, x \geqslant 0, y \geqslant 0, z \geqslant 0$ 的边界，当沿着它的正向移动时，这部分球面的外侧面保持在左方．
+\end{prob}
+
+\probgroup{计算下列全微分的曲线积分：}
+
+\begin{prob}[S]{4284}
+$\displaystyle\int_{(1,1,1)}^{(2,3,-4)} x\,\mathrm{d}x + y^2\,\mathrm{d}y - z^3\,\mathrm{d}z$．
+\end{prob}
+
+\begin{prob}[S]{4285}
+$\displaystyle\int_{(1,2,3)}^{(6,1,1)} yz\,\mathrm{d}x + xz\,\mathrm{d}y + xy\,\mathrm{d}z$．
+\end{prob}
+
+\begin{prob}[M]{4286}
+$\displaystyle\int_{(x_1,y_1,z_1)}^{(x_2,y_2,z_2)} \frac{x\,\mathrm{d}x + y\,\mathrm{d}y + z\,\mathrm{d}z}{\sqrt{x^2+y^2+z^2}}$，其中点 $(x_1,y_1,z_1)$ 位于球面 $x^2+y^2+z^2 = a^2$ 之上，而点 $(x_2,y_2,z_2)$ 位于球面 $x^2+y^2+z^2 = b^2$ 之上 ($a > 0, b > 0$)．
+\end{prob}
+
+\begin{prob}[S]{4287}
+$\displaystyle\int_{(x_1,y_1,z_1)}^{(x_2,y_2,z_2)} \varphi(x)\,\mathrm{d}x + \psi(y)\,\mathrm{d}y + \chi(z)\,\mathrm{d}z$，式中 $\varphi, \psi, \chi$ 为连续函数．
+\end{prob}
+
+\begin{prob}[S]{4288}
+$\displaystyle\int_{(x_1,y_1,z_1)}^{(x_2,y_2,z_2)} f(x+y+z)(\mathrm{d}x + \mathrm{d}y + \mathrm{d}z)$，其中 $f$ 为连续函数．
+\end{prob}
+
+\begin{prob}[S]{4289}
+$\displaystyle\int_{(x_1,y_1,z_1)}^{(x_2,y_2,z_2)} f(\sqrt{x^2+y^2+z^2})(x\,\mathrm{d}x + y\,\mathrm{d}y + z\,\mathrm{d}z)$，式中 $f$ 为连续函数．
+\end{prob}
+
+\probgroup{求原函数 $u$，若}
+
+\begin{prob}[S]{4290}
+$\mathrm{d}u = (x^2 - 2yz)\,\mathrm{d}x + (y^2 - 2xz)\,\mathrm{d}y + (z^2 - 2xy)\,\mathrm{d}z$．
+\end{prob}
+
+\begin{prob}[S]{4291}
+$\mathrm{d}u = \left(1 - \frac{1}{y} + \frac{y}{z}\right)\,\mathrm{d}x + \left(\frac{x}{z} + \frac{x}{y^2}\right)\,\mathrm{d}y - \frac{xy}{z^2}\,\mathrm{d}z$．
+\end{prob}
+
+\begin{prob}[S]{4292}
+$\mathrm{d}u = \frac{(x+y-z)\,\mathrm{d}x + (x+y-z)\,\mathrm{d}y + (x+y+z)\,\mathrm{d}z}{x^2+y^2+z^2+2xy}$．
+\end{prob}
+
+\begin{prob}[M]{4293}
+求当质量为 $m$ 的点从位置 $(x_1,y_1,z_1)$ 移动到位置 $(x_2,y_2,z_2)$ 时，重力所作的功（$Oz$ 轴的方向是竖直向上）．
+\end{prob}
+
+\begin{prob}[M]{4294}
+弹性力指向坐标原点，力的大小与质点到坐标原点的距离成正比．设此点依逆时针方向描绘出椭圆 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 的正四分之一，求弹性力所作的功．
+\end{prob}
+
+\begin{prob}[M]{4295}
+当单位质量从点 $M_1(x_1,y_1,z_1)$ 移动到点 $M_2(x_2,y_2,z_2)$ 时，求引力 $F = \frac{G}{r^2}$（其中 $r = \sqrt{x^2+y^2+z^2}$）对它所作的功，其中 $G$ 是引力常量．
+\end{prob}
+
+\probsec{§12. 格林公式}
+
+\begin{prob}[M]{4296}
+利用格林公式变换曲线积分
+\[
+I = \oint_C \sqrt{x^2 + y^2}\,\mathrm{d}x + y \left[ xy + \ln\left( x + \sqrt{x^2 + y^2} \right) \right] \mathrm{d}y,
+\]
+式中围线 $C$ 是有界区域 $S$ 的边界.
+\end{prob}
+
+\begin{prob}[M]{4297}
+应用格林公式，计算曲线积分
+\[
+I = \oint_K (x + y)^2\,\mathrm{d}x - (x^2 + y^2)\,\mathrm{d}y,
+\]
+其中 $K$ 是以 $A(1,1)$, $B(3,2)$, $C(2,5)$ 为顶点的三角形围线 $ABC$，并且积分时的环绕方向为正. 直接计算积分，以验证所求得的结果.
+\end{prob}
+
+\probgroup{应用格林公式，计算下列曲线积分：}
+
+\begin{prob}[S]{4298}
+$\oint_C xy^2\,\mathrm{d}y - x^2 y\,\mathrm{d}x$，式中 $C$ 为圆周 $x^2 + y^2 = a^2$.
+\end{prob}
+
+\begin{prob}[S]{4299}
+$\oint_C (x + y)\,\mathrm{d}x - (x - y)\,\mathrm{d}y$，式中 $C$ 为椭圆 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$.
+\end{prob}
+
+\begin{prob}[M]{4300}
+$\oint_C \mathrm{e}^x [(1 - \cos y)\,\mathrm{d}x - (y - \sin y)\,\mathrm{d}y]$，其中 $C$ 为区域 $0 < x < \pi$, $0 < y < \sin x$ 的边界，并且积分时的环绕方向为正.
+\end{prob}
+
+\begin{prob}[S]{4301}
+$\oint_{x^2+y^2=R^2} \mathrm{e}^{-(x^2-y^2)} (\cos 2xy\,\mathrm{d}x + \sin 2xy\,\mathrm{d}y)$.
+\end{prob}
+
+\begin{prob}[M]{4302}
+设 $AmB$ 为连接点 $A(1,1)$ 和点 $B(2,6)$ 的直线段，$AnB$ 是连接点 $A, B$ 及坐标原点的抛物线段，且该抛物线的轴垂直于 $x$ 轴. 积分
+\[
+I_1 = \int_{AmB} (x + y)^2\,\mathrm{d}x - (x - y)^2\,\mathrm{d}y, \quad I_2 = \int_{AnB} (x + y)^2\,\mathrm{d}x - (x - y)^2\,\mathrm{d}y
+\]
+相差多少？
+\end{prob}
+
+\begin{prob}[M]{4303}
+计算曲线积分
+\[
+\int_{AmO} (\mathrm{e}^x \sin y - my)\,\mathrm{d}x + (\mathrm{e}^x \cos y - m)\,\mathrm{d}y,
+\]
+其中 $AmO$ 为由点 $A(a,0)$ 至点 $O(0,0)$ 的上半圆周 $x^2 + y^2 = ax$.
+\probhint{用 $Ox$ 轴的直线段 $OA$ 与路径 $AmO$ 相连组成封闭围线.}
+\end{prob}
+
+\begin{prob}[M]{4304}
+计算曲线积分
+\[
+\int_{AmB} [\varphi(y)\mathrm{e}^x - my]\,\mathrm{d}x + [\varphi'(y)\mathrm{e}^x - m]\,\mathrm{d}y,
+\]
+式中 $\varphi(y)$ 和 $\varphi'(y)$ 为连续函数，$AmB$ 为连接点 $A(x_1, y_1)$ 和点 $B(x_2, y_2)$ 的任意路径，但要求此路径与线段 $AB$ 一起围成具有已知面积 $S$ 的区域 $AmBA$.
+\end{prob}
+
+\begin{prob}[M]{4305}
+求二阶可微的二个连续函数 $P(x,y)$ 和 $Q(x,y)$，使得曲线积分
+\[
+I = \oint_C P(x + \alpha, y + \beta)\,\mathrm{d}x + Q(x + \alpha, y + \beta)\,\mathrm{d}y
+\]
+对于任何封闭围线 $C$ 与常数 $\alpha$ 和 $\beta$ 无关.
+\end{prob}
+
+\begin{prob}[M]{4306}
+为了使曲线积分
+\[
+\int_{AmB} F(x,y)(y\,\mathrm{d}x + x\,\mathrm{d}y)
+\]
+与积分路径的形状无关，可微函数 $F(x,y)$ 应满足怎样的条件？
+\end{prob}
+
+\begin{prob}[M]{4307}
+计算
+\[
+I = \oint_C \frac{x\,\mathrm{d}y - y\,\mathrm{d}x}{x^2 + y^2},
+\]
+其中 $C$ 不经过坐标原点的简单封闭围线，且积分时的环绕方向为正.
+\probhint{研究两种情况：1) 坐标原点在围线之外；2) 围线 $C$ 包围坐标原点.}
+\end{prob}
+
+\probgroup{利用曲线积分计算由下列曲线所围的面积：}
+
+\begin{prob}[S]{4308}
+$x = a\cos t$, $y = b\sin t$ ($0 \leqslant t \leqslant 2\pi$) (椭圆).
+\end{prob}
+
+\begin{prob}[S]{4309}
+$x = a\cos^3 t$, $y = b\sin^3 t$ ($0 \leqslant t \leqslant 2\pi$) (星形线).
+\end{prob}
+
+\begin{prob}[S]{4310}
+轴 $Ox$ 与 $(x + y)^2 = ax$ ($a > 0$) (抛物线).
+\end{prob}
+
+\begin{prob}[S]{4311}
+$x^3 + y^3 = 3axy$ ($a > 0$) (笛卡儿叶形线).
+\probhint{令 $y = tx$.}
+\end{prob}
+
+\begin{prob}[S]{4312}
+$(x^2 + y^2)^2 = a^2(x^2 - y^2)$ (双纽线).
+\probhint{令 $y = x\tan\varphi$.}
+\end{prob}
+
+\begin{prob}[S]{4313}
+曲线 $x^3 + y^3 = x^2 + y^2$ 及坐标轴.
+\end{prob}
+
+\begin{prob}[M]{4314}
+计算由曲线
+\[
+(x + y)^{n+m+1} = ax^n y^m \quad (a > 0, n > 0, m > 0)
+\]
+所围的面积.
+\end{prob}
+
+\begin{prob}[M]{4315}
+计算由曲线
+\[
+\left( \frac{x}{a} \right)^n + \left( \frac{y}{b} \right)^n = 1 \quad (a > 0, b > 0, n > 0)
+\]
+和坐标轴所围的面积.
+\probhint{令 $\dfrac{x}{a} = \cos^{\frac{2}{n}}\varphi$, $\dfrac{y}{b} = \sin^{\frac{2}{n}}\varphi$.}
+\end{prob}
+
+\begin{prob}[M]{4316}
+计算由曲线
+\[
+\left( \frac{x}{a} \right)^n + \left( \frac{y}{b} \right)^n = \left( \frac{x}{a} \right)^{n-1} + \left( \frac{y}{b} \right)^{n-1} \quad (a > 0, b > 0, n > 1)
+\]
+和坐标轴所围的面积.
+\end{prob}
+
+\begin{prob}[M]{4317}
+计算由曲线
+\[
+\left( \frac{x}{a} \right)^{2n+1} + \left( \frac{y}{b} \right)^{2n+1} = c \left( \frac{x}{a} \right)^n \left( \frac{y}{b} \right)^n \quad (a > 0, b > 0, c > 0, n > 0)
+\]
+所围的面积.
+\end{prob}
+
+\begin{prob}[M]{4318}
+一半径为 $r$ 的圆周沿半径为 $R$ 的固定圆周外部滚动而无滑动，动圆周上的一点所描绘的曲线称为外摆线.
+
+假定比值 $\dfrac{R}{r} = n$ 是整数 ($n \geqslant 1$)，求外摆线所围的面积.
+
+研究特殊情况 $r = R$ (心脏线).
+\end{prob}
+
+\begin{prob}[M]{4319}
+一个半径为 $r$ 的圆周沿半径为 $R$ 的固定圆周内部滚动而无滑动时，动圆周上的一点所描绘的曲线称为内摆线.
+
+假定比值 $\dfrac{R}{r} = n$ 是整数 ($n \geqslant 2$)，求内摆线所围的面积.
+
+研究特殊情况 $r = \dfrac{R}{4}$ (星形线).
+\end{prob}
+
+\begin{prob}[M]{4320.1}
+计算圆柱面 $x^2 + y^2 = ax$ 被曲面 $x^2 + y^2 + z^2 = a^2$ 所截那部分的面积.
+\end{prob}
+
+\begin{prob}[M]{4320.2}
+一简单封闭围线 $C$ 位于上半平面 $y \geqslant 0$，它在绕 $Ox$ 轴旋转时确定了一个旋转体，证明：此旋转体的体积为
+\[
+V = -\pi \oint_C y^2\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{4321}
+计算
+\[
+I = \frac{1}{2\pi} \oint_C \frac{X\,\mathrm{d}Y - Y\,\mathrm{d}X}{X^2 + Y^2},
+\]
+若 $X = ax + by, Y = cx + dy$，且 $C$ 为包围坐标原点的简单封闭围线 ($ad - bc \neq 0$).
+\end{prob}
+
+\begin{prob}[M]{4322}
+若简单的围线 $C$ 包围坐标原点，$X = \varphi(x,y), Y = \psi(x,y)$，而曲线 $\varphi(x,y) = 0$ 和 $\psi(x,y) = 0$ 在围线 $C$ 以内有几个单交点，计算积分 $I$ (参阅前题).
+\end{prob}
+
+\begin{prob}[M]{4323}
+证明：若 $C$ 为封闭围线，$\boldsymbol{l}$ 为任意的方向，则有
+\[
+\oint_C \cos(\boldsymbol{l}, \boldsymbol{n})\,\mathrm{d}s = 0,
+\]
+式中 $\boldsymbol{n}$ 为围线 $C$ 的外法向量.
+\end{prob}
+
+\begin{prob}[M]{4324}
+求积分
+\[
+I = \oint_C [x\cos(\boldsymbol{n}, x) + y\cos(\boldsymbol{n}, y)]\,\mathrm{d}s
+\]
+之值，式中 $C$ 是有界区域 $S$ 的边界，它是简单封闭曲线，而 $\boldsymbol{n}$ 是它的外法向量.
+\end{prob}
+
+\begin{prob}[M]{4325}
+求
+\[
+\lim_{d(S) \to 0} \frac{1}{S} \oint_C (\boldsymbol{F} \cdot \boldsymbol{n})\,\mathrm{d}s,
+\]
+其中 $S$ 为包围点 $(x_0, y_0)$ 的围线 $C$ 所围的面积，$d(S)$ 为区域 $S$ 的直径，$\boldsymbol{n}$ 为围线 $C$ 的单位外法向量，$\boldsymbol{F}\{X, Y\}$ 为 $S + C$ 上的连续可微向量.
+\end{prob}
+
+\probsec{§13. 曲线积分在物理学上的应用}
+
+\begin{prob}[M]{4326}
+均匀分布在圆 $x^2 + y^2 = a^2, y \geqslant 0$ 的上半部的质量 $M$ 以怎样的力吸引位于 $(0,0)$ 质量为 $m$ 的质点？
+\end{prob}
+
+\begin{prob}[M]{4327}
+计算单层的对数势
+\[
+u(x,y) = \oint_C \kappa \ln \frac{1}{r}\,\mathrm{d}s,
+\]
+式中 $\kappa = \text{常数}$，$r = \sqrt{(\xi - x)^2 + (\eta - y)^2}$，设围线 $C$ 是圆周 $\xi^2 + \eta^2 = R^2$.
+\end{prob}
+
+\begin{prob}[M]{4328}
+采用极坐标 $\rho$ 和 $\varphi$，计算单层的对数势
+\[
+I_1 = \int_0^{2\pi} \cos m\psi \ln \frac{1}{r}\,\mathrm{d}\psi \quad \text{和} \quad I_2 = \int_0^{2\pi} \sin m\psi \ln \frac{1}{r}\,\mathrm{d}\psi,
+\]
+式中 $r$ 为点 $(\rho, \varphi)$ 与动点 $(1, \psi)$ 间的距离，$m$ 为正整数.
+\end{prob}
+
+\begin{prob}[M]{4329}
+计算高斯积分
+\[
+u(x,y) = \oint_C \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r}\,\mathrm{d}s,
+\]
+式中 $r = \sqrt{(\xi - x)^2 + (\eta - y)^2}$ 为向量 $\boldsymbol{r}$ 的长度，此向量连接点 $A(x,y)$ 和简单封闭光滑围线 $C$ 上的动点 $M(\xi, \eta)$，$(\boldsymbol{r}, \boldsymbol{n})$ 为向量 $\boldsymbol{r}$ 与曲线 $C$ 在点 $M$ 的外法向量 $\boldsymbol{n}$ 之间的夹角.
+\end{prob}
+
+\begin{prob}[M]{4330}
+采用极坐标 $\rho$ 和 $\varphi$，计算双层的对数势
+\[
+K_1 = \int_0^{2\pi} \cos m\psi \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r}\,\mathrm{d}\psi, \quad K_2 = \int_0^{2\pi} \sin m\psi \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r}\,\mathrm{d}\psi,
+\]
+式中 $r$ 为点 $A(\rho, \varphi)$ 和动点 $M(1, \psi)$ 之间的距离，$(\boldsymbol{r}, \boldsymbol{n})$ 为方向 $\overrightarrow{AM} = \boldsymbol{r}$ 与引自点 $O(0,0)$ 的半径 $\overrightarrow{OM} = \boldsymbol{n}$ 之间的夹角，$m$ 为正整数.
+\end{prob}
+
+\begin{prob}[M]{4331}
+若 $\Delta u \equiv \dfrac{\partial^2 u}{\partial x^2} + \dfrac{\partial^2 u}{\partial y^2} = 0$，则称二阶可微函数 $u = u(x,y)$ 为调和函数. 证明：当且仅当以下条件成立时 $u$ 才是调和函数：
+\[
+\oint_C \frac{\partial u}{\partial n}\,\mathrm{d}s = 0,
+\]
+式中 $C$ 为任意封闭围线，$\dfrac{\partial u}{\partial n}$ 为沿此围线之外法线方向的导数.
+\end{prob}
+
+\begin{prob}[M]{4332}
+证明：
+\[
+\iint_S \left[ \left( \frac{\partial u}{\partial x} \right)^2 + \left( \frac{\partial u}{\partial y} \right)^2 \right] \mathrm{d}x\,\mathrm{d}y = -\iint_S u \Delta u\,\mathrm{d}x\,\mathrm{d}y + \oint_C u \frac{\partial u}{\partial n}\,\mathrm{d}s,
+\]
+式中光滑围线 $C$ 是有界区域 $S$ 的边界.
+\end{prob}
+
+\begin{prob}[M]{4333}
+证明：若一函数在有界区域 $S$ 内及其边界 $C$ 上为调和函数，则此函数单值地由它在边界 $C$ 上的值确定 (参考习题 4332).
+\end{prob}
+
+\begin{prob}[M]{4334}
+证明平面上的格林第二公式：
+\[
+\iint_S \begin{vmatrix} \Delta u & \Delta v \\ u & v \end{vmatrix} \mathrm{d}x\,\mathrm{d}y = \oint_C \begin{vmatrix} \dfrac{\partial u}{\partial n} & \dfrac{\partial v}{\partial n} \\ u & v \end{vmatrix} \mathrm{d}s,
+\]
+式中光滑围线 $C$ 是有界区域 $S$ 的边界，$\dfrac{\partial}{\partial n}$ 为沿 $C$ 的外法线方向的导数.
+\end{prob}
+
+\begin{prob}[M]{4335}
+利用格林第二公式证明：若 $u = u(x,y)$ 是有界闭区域 $S$ 内的调和函数，则
+\[
+u(x,y) = \frac{1}{2\pi} \oint_C \left( u \frac{\partial \ln r}{\partial n} - \ln r \frac{\partial u}{\partial n} \right) \mathrm{d}s,
+\]
+式中 $C$ 为区域 $S$ 的边界，$\boldsymbol{n}$ 为围线 $C$ 的外法向量，$(x,y)$ 为区域 $S$ 的内点，
+\[
+r = \sqrt{(\xi - x)^2 + (\eta - y)^2}
+\]
+为点 $(x,y)$ 与围线 $C$ 上的动点 $(\xi, \eta)$ 之间的距离.
+\probhint{从区域 $S$ 中除去点 $(x,y)$ 与该点的无穷小圆形邻域，并对区域 $S$ 的剩余部分应用格林第二公式.}
+\end{prob}
+
+\begin{prob}[M]{4336}
+证明对于调和函数 $u(M) = u(x,y)$ 的中值定理：
+\[
+u(M) = \frac{1}{2\pi} \oint_C u(\xi, \eta)\,\mathrm{d}s,
+\]
+式中 $C$ 是以点 $M$ 为中心的圆周.
+\end{prob}
+
+\begin{prob}[M]{4337}
+证明：有界闭区域内的非常数调和函数 $u(x,y)$ 在此区域内的点不能达到其最大或最小值 (极大值原理).
+\end{prob}
+
+\begin{prob}[M]{4338}
+证明黎曼公式：
+\[
+\iint_S \begin{vmatrix} L[u] & M[v] \\ u & v \end{vmatrix} \mathrm{d}x\,\mathrm{d}y = \oint_C P\,\mathrm{d}x + Q\,\mathrm{d}y,
+\]
+式中
+\[
+L[u] = \frac{\partial^2 u}{\partial x \partial y} + a \frac{\partial u}{\partial x} + b \frac{\partial u}{\partial y} + cu, \quad M[v] = \frac{\partial^2 v}{\partial x \partial y} - a \frac{\partial v}{\partial x} - b \frac{\partial v}{\partial y} + cv
+\]
+($a, b, c$ 为常数)，$P$ 和 $Q$ 为某些确定的函数，围线 $C$ 是有界区域 $S$ 的边界.
+\end{prob}
+
+\begin{prob}[M]{4339}
+设 $u = u(x,y)$ 和 $v = v(x,y)$ 为定常流的速度分量，$C$ 为区域 $S$ 的边界，求区域 $S$ 内的流体质量的变化率. 若流体是不可压缩的，且在区域 $S$ 内没有源和汇，则函数 $u$ 和 $v$ 满足怎样的方程？
+\end{prob}
+
+\begin{prob}[M]{4340}
+根据毕奥–萨瓦尔定律，通过导线元 $\mathrm{d}\boldsymbol{s}$ 的电流 $i$ 在空间的点 $M(x,y,z)$ 处所对应的磁场强度为
+\[
+\mathrm{d}\boldsymbol{H} = ki \frac{(\boldsymbol{r} \times \mathrm{d}\boldsymbol{s})}{r^3},
+\]
+其中 $\boldsymbol{r}$ 为连接导线元 $\mathrm{d}\boldsymbol{s}$ 与点 $M$ 的向量，$k$ 为比例系数.
+
+对于封闭导线 $C$ 的情形，求点 $M$ 的磁场强度 $\boldsymbol{H}$ 的投影 $H_x, H_y$ 和 $H_z$.
+\end{prob}
+
+\probsec{§14. 曲面积分}
+
+\begin{prob}[M]{4341}
+两个积分
+\[
+I_1 = \iint\limits_S (x^2 + y^2 + z^2)\,\mathrm{d}S, \quad I_2 = \iint\limits_P (x^2 + y^2 + z^2)\,\mathrm{d}P
+\]
+(式中 $S$ 为球面 $x^2 + y^2 + z^2 = a^2$，$P$ 为其内接八面体的表面 $|x| + |y| + |z| = a$) 相差若何？
+\end{prob}
+
+\begin{prob}[M]{4342}
+计算 $\iint\limits_S z\,\mathrm{d}S$，式中 $S$ 为曲面 $x^2 + z^2 = 2az$ ($a > 0$) 被曲面 $z = \sqrt{x^2 + y^2}$ 所割下的部分.
+\end{prob}
+
+\probgroup{计算下列第一型曲面积分：}
+
+\begin{prob}[S]{4343}
+$\iint\limits_S (x + y + z)\,\mathrm{d}S$，式中 $S$ 为曲面 $x^2 + y^2 + z^2 = a^2, z \geqslant 0$.
+\end{prob}
+
+\begin{prob}[S]{4344}
+$\iint\limits_S (x^2 + y^2)\,\mathrm{d}S$，式中 $S$ 为区域 $\sqrt{x^2 + y^2} \leqslant z \leqslant 1$ 的边界.
+\end{prob}
+
+\begin{prob}[S]{4345}
+$\iint\limits_S \frac{\,\mathrm{d}S}{(1 + x + y)^2}$，式中 $S$ 为四面体 $x + y + z \leqslant 1, x \geqslant 0, y \geqslant 0, z \geqslant 0$ 的边界.
+\end{prob}
+
+\begin{prob}[S]{4346}
+$\iint\limits_S |xyz|\,\mathrm{d}S$，式中 $S$ 为曲面 $z = x^2 + y^2$ 被平面 $z = 1$ 所截下的部分.
+\end{prob}
+
+\begin{prob}[M]{4347}
+$\iint\limits_S \frac{\,\mathrm{d}S}{h}$，式中 $S$ 为椭球面，$h$ 为椭球中心到与椭球面微元 $\,\mathrm{d}S$ 相切的平面的距离.
+\end{prob}
+
+\begin{prob}[M]{4348}
+$\iint\limits_S z\,\mathrm{d}S$，式中 $S$ 为螺旋面的一部分：$x = u\cos v, y = u\sin v, z = v$ ($0 < u < a; 0 < v < 2\pi$).
+\end{prob}
+
+\begin{prob}[M]{4349}
+$\iint\limits_S z^2\,\mathrm{d}S$，式中 $S$ 为圆锥面的一部分：$x = r\cos\varphi\sin\alpha, y = r\sin\varphi\sin\alpha, z = r\cos\alpha$ ($0 \leqslant r \leqslant a; 0 \leqslant \varphi \leqslant 2\pi$)，$\alpha$ 为常数 $\left(0 < \alpha < \frac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[M]{4350}
+$\iint\limits_S (xy + yz + zx)\,\mathrm{d}S$，式中 $S$ 为圆锥面 $z = \sqrt{x^2 + y^2}$ 被曲面 $x^2 + y^2 = 2ax$ 所割下的部分.
+\end{prob}
+
+\begin{prob}[M]{4351}
+证明泊松公式：
+\[
+\iint\limits_S f(ax + by + cz)\,\mathrm{d}S = 2\pi \int_{-1}^{1} f(u\sqrt{a^2 + b^2 + c^2})\,\mathrm{d}u,
+\]
+式中 $S$ 是球面 $x^2 + y^2 + z^2 = 1$.
+\end{prob}
+
+\begin{prob}[M]{4352.1}
+求抛物面壳
+\[
+z = \frac{1}{2}(x^2 + y^2) \quad (0 \leqslant z \leqslant 1)
+\]
+的质量，此壳的面密度按规律 $\rho = z$ 而变.
+\end{prob}
+
+\begin{prob}[M]{4352.2}
+求半球面
+\[
+x^2 + y^2 + z^2 = a^2 \quad (z \geqslant 0)
+\]
+的质量，其面密度在半球面上每一点 $M(x,y,z)$ 等于 $\frac{x}{a}$.
+\end{prob}
+
+\begin{prob}[M]{4352.3}
+求均质三角形板
+\[
+x + y + z = a \quad (x \geqslant 0, y \geqslant 0, z \geqslant 0)
+\]
+对坐标平面的静矩.
+\end{prob}
+
+\begin{prob}[M]{4353}
+求密度为 $\rho_0$ 的均质球面壳
+\[
+x^2 + y^2 + z^2 = a^2 \quad (z \geqslant 0)
+\]
+对 $Oz$ 轴的转动惯量.
+\end{prob}
+
+\begin{prob}[M]{4354}
+求密度为 $\rho_0$ 的均质锥面壳
+\[
+\frac{x^2}{a^2} + \frac{y^2}{a^2} - \frac{z^2}{b^2} = 0 \quad (0 \leqslant z \leqslant b)
+\]
+对直线
+\[
+\frac{x}{1} = \frac{y}{0} = \frac{z - b}{0}
+\]
+的转动惯量.
+\end{prob}
+
+\begin{prob}[M]{4355}
+求下列均质曲面的质心坐标：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item 曲面 $z = \sqrt{x^2 + y^2}$ 被曲面 $x^2 + y^2 = ax$ 所割下的部分；
+    \item 曲面 $z = \sqrt{a^2 - x^2 - y^2}$ ($x \geqslant 0; y \geqslant 0; x + y \leqslant a$).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4356.1}
+求下列曲面 $S$ 的极转动惯量 $I_0 = \iint\limits_S (x^2 + y^2 + z^2)\,\mathrm{d}S$：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+    \item 立方体表面 $\max\{|x|, |y|, |z|\} = a$；
+    \item 圆柱体 $x^2 + y^2 \leqslant R^2, 0 \leqslant z \leqslant H$ 的全部表面.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4356.2}
+求均质三角形板
+\[
+x + y + z = 1 \quad (x \geqslant 0; y \geqslant 0; z \geqslant 0)
+\]
+对坐标平面的转动惯量.
+\end{prob}
+
+\begin{prob}[M]{4357}
+密度为 $\rho_0$ 的均质截圆锥面
+\[
+x = r\cos\varphi, \quad y = r\sin\varphi, \quad z = r \quad (0 \leqslant \varphi \leqslant 2\pi, 0 < b \leqslant r \leqslant a)
+\]
+以怎样的力吸引质量为 $m$ 位于该圆锥面顶点的质点？
+\end{prob}
+
+\begin{prob}[M]{4358}
+求密度为 $\rho_0$ 的均质球面 $S: x^2 + y^2 + z^2 = a^2$ 在点 $M_0(x_0, y_0, z_0)$ 的势，即计算积分
+\[
+u = \iint\limits_S \frac{\rho_0\,\mathrm{d}S}{r},
+\]
+式中 $r = \sqrt{(x - x_0)^2 + (y - y_0)^2 + (z - z_0)^2}$.
+\end{prob}
+
+\begin{prob}[L]{4359}
+计算
+\[
+F(t) = \iint\limits_{x + y + z = t} f(x, y, z)\,\mathrm{d}S,
+\]
+式中
+\[
+f(x, y, z) = \begin{cases} 1 - x^2 - y^2 - z^2, & x^2 + y^2 + z^2 \leqslant 1, \\ 0, & x^2 + y^2 + z^2 > 1. \end{cases}
+\]
+作出函数 $u = F(t)$ 的图像.
+\end{prob}
+
+\begin{prob}[M]{4360}
+计算积分
+\[
+F(t) = \iint\limits_{x^2 + y^2 + z^2 = t^2} f(x, y, z)\,\mathrm{d}S,
+\]
+式中
+\[
+f(x, y, z) = \begin{cases} x^2 + y^2, & z \geqslant \sqrt{x^2 + y^2}, \\ 0, & z < \sqrt{x^2 + y^2}. \end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{4361}
+计算积分
+\[
+F(x, y, z, t) = \iint\limits_S f(\xi, \eta, \zeta)\,\mathrm{d}S,
+\]
+式中 $S$ 为变球面
+\[
+(\xi - x)^2 + (\eta - y)^2 + (\zeta - z)^2 = t^2,
+\]
+\[
+f(\xi, \eta, \zeta) = \begin{cases} 1, & \xi^2 + \eta^2 + \zeta^2 < a^2, \\ 0, & \xi^2 + \eta^2 + \zeta^2 \geqslant a^2, \end{cases}
+\]
+且假设 $r = \sqrt{x^2 + y^2 + z^2} > a > 0$.
+\end{prob}
+
+\probgroup{计算下列第二型曲面积分：}
+
+\begin{prob}[S]{4362}
+$\iint\limits_S (x\,\mathrm{d}y\,\mathrm{d}z + y\,\mathrm{d}z\,\mathrm{d}x + z\,\mathrm{d}x\,\mathrm{d}y)$，式中 $S$ 为球面 $x^2 + y^2 + z^2 = a^2$ 的外侧.
+\end{prob}
+
+\begin{prob}[S]{4363}
+$\iint\limits_S f(x)\,\mathrm{d}y\,\mathrm{d}z + g(y)\,\mathrm{d}z\,\mathrm{d}x + h(z)\,\mathrm{d}x\,\mathrm{d}y$，式中 $f(x), g(y), h(z)$ 为连续函数，$S$ 为平行六面体 $0 \leqslant x \leqslant a; 0 \leqslant y \leqslant b; 0 \leqslant z \leqslant c$ 的外表面.
+\end{prob}
+
+\begin{prob}[S]{4364}
+$\iint\limits_S (y - z)\,\mathrm{d}y\,\mathrm{d}z + (z - x)\,\mathrm{d}z\,\mathrm{d}x + (x - y)\,\mathrm{d}x\,\mathrm{d}y$，式中 $S$ 为圆锥面 $x^2 + y^2 = z^2$ ($0 \leqslant z \leqslant h$) 的外侧.
+\end{prob}
+
+\begin{prob}[S]{4365}
+$\iint\limits_S \left(\frac{\,\mathrm{d}y\,\mathrm{d}z}{x} + \frac{\,\mathrm{d}z\,\mathrm{d}x}{y} + \frac{\,\mathrm{d}x\,\mathrm{d}y}{z}\right)$，式中 $S$ 为椭球面 $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ 的外侧.
+\end{prob}
+
+\begin{prob}[S]{4366}
+$\iint\limits_S x^2\,\mathrm{d}y\,\mathrm{d}z + y^2\,\mathrm{d}z\,\mathrm{d}x + z^2\,\mathrm{d}x\,\mathrm{d}y$，式中 $S$ 为球面 $(x - a)^2 + (y - b)^2 + (z - c)^2 = R^2$ 的外侧.
+\end{prob}
+
+\probsec{§15. 斯托克斯公式}
+
+\begin{prob}[M]{4367}
+应用斯托克斯公式，计算曲线积分
+\[
+\oint\limits_C y\,\mathrm{d}x + z\,\mathrm{d}y + x\,\mathrm{d}z,
+\]
+其中 $C$ 为圆周 $x^2 + y^2 + z^2 = a^2, x + y + z = 0$，并且从 $Ox$ 轴的正向来看，积分时此圆周的环绕方向是逆时针的. 用直接计算法检验结果.
+\end{prob}
+
+\begin{prob}[M]{4368}
+计算积分
+\[
+\oint\limits_{AmB} (x^2 - yz)\,\mathrm{d}x + (y^2 - xz)\,\mathrm{d}y + (z^2 - xy)\,\mathrm{d}z,
+\]
+此积分是从点 $A(a, 0, 0)$ 至点 $B(a, 0, h)$ 沿着螺旋线 $x = a\cos\varphi, y = a\sin\varphi, z = \frac{h}{2\pi}\varphi$ 进行的.
+\probhint{以直接段与曲线 $AmB$ 相连并应用斯托克斯公式.}
+\end{prob}
+
+\begin{prob}[M]{4369}
+设 $C$ 为平面 $x\cos\alpha + y\cos\beta + z\cos\gamma - p = 0$ ($\cos\alpha, \cos\beta, \cos\gamma$ 为平面之法线的方向余弦) 上的封闭围线，所围面积为 $S$，求
+\[
+\oint\limits_C \begin{vmatrix} \,\mathrm{d}x & \,\mathrm{d}y & \,\mathrm{d}z \\ \cos\alpha & \cos\beta & \cos\gamma \\ x & y & z \end{vmatrix},
+\]
+积分沿围线 $C$ 的正方向进行.
+\end{prob}
+
+\probgroup{应用斯托克斯公式，计算积分：}
+
+\begin{prob}[M]{4370}
+$\oint\limits_C (y + z)\,\mathrm{d}x + (z + x)\,\mathrm{d}y + (x + y)\,\mathrm{d}z$，式中 $C$ 为椭圆周 $x = a\sin^2 t, y = 2a\sin t\cos t, z = a\cos^2 t$ ($0 \leqslant t \leqslant \pi$)，并且以参数 $t$ 增大的方向为积分时的正方向.
+\end{prob}
+
+\begin{prob}[M]{4371}
+$\oint\limits_C (y - z)\,\mathrm{d}x + (z - x)\,\mathrm{d}y + (x - y)\,\mathrm{d}z$，式中 $C$ 为椭圆周 $x^2 + y^2 = a^2, \frac{x}{a} + \frac{y}{h} = 1$ ($a > 0, h > 0$). 并且若从 $Ox$ 轴正向看去，积分是沿此椭圆依逆时针方向进行的.
+\end{prob}
+
+\begin{prob}[M]{4372}
+$\oint\limits_C (y^2 + z^2)\,\mathrm{d}x + (x^2 + z^2)\,\mathrm{d}y + (x^2 + y^2)\,\mathrm{d}z$，式中 $C$ 是曲线 $x^2 + y^2 + z^2 = 2Rx, x^2 + y^2 = 2rx$ ($0 < r < R, z > 0$)，并且在沿此曲线进行积分时，球面 $x^2 + y^2 + z^2 = 2Rx$ 外侧被该曲线所围的最小区域始终位于左边.
+\end{prob}
+
+\begin{prob}[M]{4373}
+$\oint\limits_C (y^2 - z^2)\,\mathrm{d}x + (z^2 - x^2)\,\mathrm{d}y + (x^2 - y^2)\,\mathrm{d}z$，式中 $C$ 为用平面 $x + y + z = \frac{3}{2}a$ 截立方体 $0 \leqslant x \leqslant a, 0 \leqslant y \leqslant a, 0 \leqslant z \leqslant a$ 所得截面的边界，并且若从 $Ox$ 轴的正向看去，积分是沿 $C$ 依逆时针方向进行的.
+\end{prob}
+
+\begin{prob}[M]{4374}
+$\oint\limits_C y^2z^2\,\mathrm{d}x + z^2x^2\,\mathrm{d}y + x^2y^2\,\mathrm{d}z$，式中 $C$ 为封闭曲线 $x = a\cos t, y = a\cos 2t, z = a\cos 3t$，并且以参数 $t$ 增大的方向为积分时的正方向.
+\end{prob}
+
+\begin{prob}[M]{4375}
+有函数
+\[
+W(x, y, z) = ki \iint\limits_S \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r^2}\,\mathrm{d}S \quad (k = \text{常数}).
+\]
+其中曲面 $S$ 的边界为围线 $C$，$\boldsymbol{n}$ 为曲面 $S$ 的法向量，$\boldsymbol{r}$ 为连接空间的点 $M(x, y, z)$ 与围线 $C$ 上的动点 $A(\xi, \eta, \zeta)$ 所成之径向量. 证明：此函数为通过围线 $C$ 的电流 $i$ 所产生磁场 $\boldsymbol{H}$ 的势 (参阅习题 4340).
+\end{prob}
+
+\probsec{§16. 奥斯特罗格拉茨基公式}
+
+\probgroup{应用奥斯特罗格拉茨基公式变换下列曲面积分，设光滑曲面 $S$ 是有界区域 $V$ 的边界，$\cos\alpha, \cos\beta, \cos\gamma$ 为曲面 $S$ 的外法线的方向余弦：}
+
+\begin{prob}[S]{4376}
+\[\iint_{S} x^{3}\,\mathrm{d}y\,\mathrm{d}z + y^{3}\,\mathrm{d}z\,\mathrm{d}x + z^{3}\,\mathrm{d}x\,\mathrm{d}y.\]
+\end{prob}
+
+\begin{prob}[S]{4377}
+\[\iint_{S} yz\,\mathrm{d}y\,\mathrm{d}z + zx\,\mathrm{d}z\,\mathrm{d}x + xy\,\mathrm{d}x\,\mathrm{d}y.\]
+\end{prob}
+
+\begin{prob}[S]{4378}
+\[\iint_{S} \frac{x\cos\alpha + y\cos\beta + z\cos\gamma}{\sqrt{x^{2}+y^{2}+z^{2}}}\,\mathrm{d}S.\]
+\end{prob}
+
+\begin{prob}[S]{4379}
+\[\iint_{S} \left(\frac{\partial u}{\partial x}\cos\alpha + \frac{\partial u}{\partial y}\cos\beta + \frac{\partial u}{\partial z}\cos\gamma\right)\mathrm{d}S.\]
+\end{prob}
+
+\begin{prob}[S]{4380}
+\[\iint_{S} \left[\left(\frac{\partial R}{\partial y} - \frac{\partial Q}{\partial z}\right)\cos\alpha + \left(\frac{\partial P}{\partial z} - \frac{\partial R}{\partial x}\right)\cos\beta + \left(\frac{\partial Q}{\partial x} - \frac{\partial P}{\partial y}\right)\cos\gamma\right]\mathrm{d}S.\]
+\end{prob}
+
+\begin{prob}[M]{4381}
+证明：若 $S$ 为封闭的简单曲面而 $\boldsymbol{l}$ 为任意的固定方向，则
+\[\iint_{S} \cos(\boldsymbol{n}, \boldsymbol{l})\,\mathrm{d}S = 0,\]
+式中 $\boldsymbol{n}$ 为曲面 $S$ 的外法向量。
+\end{prob}
+
+\begin{prob}[M]{4382}
+证明：以曲面 $S$ 为界的物体的体积等于：
+\[V = \frac{1}{3} \iint_{S} (x\cos\alpha + y\cos\beta + z\cos\gamma)\,\mathrm{d}S,\]
+式中 $\cos\alpha, \cos\beta, \cos\gamma$ 为曲面 $S$ 的外法线的方向余弦。
+\end{prob}
+
+\begin{prob}[M]{4383}
+证明：以光滑锥面 $F(x,y,z)=0$ 和平面 $Ax+By+Cz+D=0$ 为界的锥体的体积等于
+\[V = \frac{1}{3}SH,\]
+式中 $S$ 为位于该平面上的锥底之面积，$H$ 为锥体的高。
+\end{prob}
+
+\begin{prob}[M]{4384}
+求以曲面 $z = \pm c$ 及
+\[\begin{cases} x = a\cos u\cos v + b\sin u\sin v, \\ y = a\cos u\sin v - b\sin u\cos v, \\ z = c\sin u \end{cases}\]
+为界的物体的体积。
+\end{prob}
+
+\begin{prob}[M]{4385.1}
+求以曲面 $x = u\cos v, y = u\sin v, z = -u + a\cos v\ (u \geqslant 0)$ 及平面 $x = 0, x = a\ (a > 0)$ 为界的物体的体积。
+\end{prob}
+
+\begin{prob}[M]{4385.2}
+求环面
+\[\begin{cases} x = (b + a\cos\psi)\cos\varphi, \\ y = (b + a\cos\psi)\sin\varphi, \quad (0 < a \leqslant b) \\ z = a\sin\psi \end{cases}\]
+所围区域的体积。
+\end{prob}
+
+\begin{prob}[M]{4386}
+证明公式：
+\[\begin{aligned}
+&\frac{\mathrm{d}}{\mathrm{d}t}\left\{\iiint_{x^{2}+y^{2}+z^{2}\leqslant t^{2}} f(x,y,z,t)\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z\right\} \\
+&= \iint_{x^{2}+y^{2}+z^{2}=t^{2}} f(x,y,z,t)\,\mathrm{d}S + \iiint_{x^{2}+y^{2}+z^{2}\leqslant t^{2}} \frac{\partial f}{\partial t}\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z \quad (t > 0).
+\end{aligned}\]
+\end{prob}
+
+\probgroup{利用奥斯特罗格拉茨基公式计算下列曲面积分：}
+
+\begin{prob}[S]{4387}
+$\displaystyle \iint_{S} x^{2}\,\mathrm{d}y\,\mathrm{d}z + y^{2}\,\mathrm{d}z\,\mathrm{d}x + z^{2}\,\mathrm{d}x\,\mathrm{d}y$，式中 $S$ 为立方体 $0 \leqslant x \leqslant a, 0 \leqslant y \leqslant a, 0 \leqslant z \leqslant a$ 的外表面。
+\end{prob}
+
+\begin{prob}[S]{4388}
+$\displaystyle \iint_{S} x^{3}\,\mathrm{d}y\,\mathrm{d}z + y^{3}\,\mathrm{d}z\,\mathrm{d}x + z^{3}\,\mathrm{d}x\,\mathrm{d}y$，式中 $S$ 为球 $x^{2}+y^{2}+z^{2}=a^{2}$ 的外表面。
+\end{prob}
+
+\begin{prob}[M]{4389}
+$\displaystyle \iint_{S} (x-y+z)\,\mathrm{d}y\,\mathrm{d}z + (y-z+x)\,\mathrm{d}z\,\mathrm{d}x + (z-x+y)\,\mathrm{d}x\,\mathrm{d}y$，式中 $S$ 为曲面 $|x-y+z| + |y-z+x| + |z-x+y| = 1$ 的外侧。
+\end{prob}
+
+\begin{prob}[M]{4390}
+计算
+\[\iint_{S} (x^{2}\cos\alpha + y^{2}\cos\beta + z^{2}\cos\gamma)\,\mathrm{d}S,\]
+式中 $S$ 为部分圆锥面 $x^{2}+y^{2}=z^{2}\ (0 \leqslant z \leqslant h)$，$\cos\alpha, \cos\beta, \cos\gamma$ 为此曲面外法线的方向余弦。
+\probhint{与部分平面 $z = h, x^{2}+y^{2}\leqslant h^{2}$ 组成封闭曲面。}
+\end{prob}
+
+\begin{prob}[M]{4391}
+证明公式：
+\[\iiint_{V} \frac{\mathrm{d}\xi\,\mathrm{d}\eta\,\mathrm{d}\zeta}{r} = \frac{1}{2} \iint_{S} \cos(\boldsymbol{r}, \boldsymbol{n})\,\mathrm{d}S,\]
+其中封闭曲面 $S$ 为区域 $V$ 的表面，$\boldsymbol{n}$ 为曲面 $S$ 上的点 $(\xi, \eta, \zeta)$ 处的外法向量，$r = \sqrt{(\xi-x)^{2}+(\eta-y)^{2}+(\zeta-z)^{2}}$，$\boldsymbol{r}$ 为从点 $(x,y,z)$ 到点 $(\xi, \eta, \zeta)$ 的径向量。
+\end{prob}
+
+\begin{prob}[M]{4392}
+计算高斯积分
+\[I(x,y,z) = \iint_{S} \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r^{2}}\,\mathrm{d}S,\]
+式中 $S$ 为简单封闭光滑曲面，它是区域 $V$ 的边界，$\boldsymbol{n}$ 为曲面 $S$ 上在点 $(\xi, \eta, \zeta)$ 处的外法向量，$\boldsymbol{r}$ 为连接点 $(x,y,z)$ 和点 $(\xi, \eta, \zeta)$ 的径向量，
+\[r = \sqrt{(\xi-x)^{2}+(\eta-y)^{2}+(\zeta-z)^{2}}.\]
+研究两种情形：
+
+(a) 曲面 $S$ 不包围点 $(x,y,z)$；\qquad (b) 曲面 $S$ 包围点 $(x,y,z)$。
+\end{prob}
+
+\begin{prob}[L]{4393}
+证明：若
+\[\Delta u \equiv \frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}} + \frac{\partial^{2} u}{\partial z^{2}},\]
+有界区域 $V$ 的边界 $S$ 为光滑曲面，则成立下列公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \iint_{S} \frac{\partial u}{\partial n}\,\mathrm{d}S = \iiint_{V} \Delta u\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$；
+\item $\displaystyle \iint_{S} u \frac{\partial u}{\partial n}\,\mathrm{d}S = \iiint_{V} \left[\left(\frac{\partial u}{\partial x}\right)^{2} + \left(\frac{\partial u}{\partial y}\right)^{2} + \left(\frac{\partial u}{\partial z}\right)^{2}\right]\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z + \iiint_{V} u \Delta u\,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z$，
+\end{enumerate}
+式中 $u$ 及其一阶和二阶偏导数是在区域 $V+S$ 内连续的函数，$\dfrac{\partial u}{\partial n}$ 为沿曲面 $S$ 的外法线的导数。
+\end{prob}
+
+\begin{prob}[M]{4394}
+证明三维情形的格林第二公式：
+\[\iiint_{V} \begin{vmatrix} \Delta u & \Delta v \\ u & v \end{vmatrix} \mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z = \iint_{S} \begin{vmatrix} \dfrac{\partial u}{\partial n} & \dfrac{\partial v}{\partial n} \\ u & v \end{vmatrix} \mathrm{d}S,\]
+式中区域 $V$ 以曲面 $S$ 为界，$\boldsymbol{n}$ 是曲面 $S$ 的外法向量，而函数 $u = u(x,y,z), v = v(x,y,z)$ 在区域 $V+S$ 内二阶可微。
+\end{prob}
+
+\begin{prob}[L]{4395}
+设函数 $u = u(x,y,z)$ 在某区域内具有连续的一阶和二阶导数，若
+\[\Delta u \equiv \frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}} + \frac{\partial^{2} u}{\partial z^{2}} = 0,\]
+则 $u(x,y,z)$ 称为此区域内的调和函数。
+
+证明：若有界闭区域 $V$ 以光滑曲面 $S$ 为界，$u$ 是此区域内的调和函数，则成立下列公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \iint_{S} \frac{\partial u}{\partial n}\,\mathrm{d}S = 0$；
+\item $\displaystyle \iiint_{V} \left[\left(\frac{\partial u}{\partial x}\right)^{2} + \left(\frac{\partial u}{\partial y}\right)^{2} + \left(\frac{\partial u}{\partial z}\right)^{2}\right]\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z = \iint_{S} u \frac{\partial u}{\partial n}\,\mathrm{d}S$，
+\end{enumerate}
+式中 $\boldsymbol{n}$ 为曲面 $S$ 的外法向量。
+
+用公式 (b) 证明：区域 $V$ 内的调和函数由它在边界 $S$ 上的值唯一地确定。
+\end{prob}
+
+\begin{prob}[M]{4396}
+证明：若函数 $u = u(x,y,z)$ 是以光滑曲面 $S$ 为界的有界闭区域 $V$ 内的调和函数，则
+\[u(x,y,z) = \frac{1}{4\pi} \iint_{S} \left[u \frac{\cos(\boldsymbol{r}, \boldsymbol{n})}{r^{2}} + \frac{1}{r}\frac{\partial u}{\partial n}\right]\mathrm{d}S,\]
+式中 $\boldsymbol{r}$ 是从区域 $V$ 的内点 $(x,y,z)$ 引至曲面 $S$ 上的点 $(\xi, \eta, \zeta)$ 的径向量，$r = \sqrt{(\xi-x)^{2}+(\eta-y)^{2}+(\zeta-z)^{2}}$，$\boldsymbol{n}$ 为曲面 $S$ 在点 $(\xi, \eta, \zeta)$ 的外法向量。
+\end{prob}
+
+\begin{prob}[M]{4397}
+证明：若半径为 $R$ 的球的球心位于点 $(x_{0}, y_{0}, z_{0})$，$u = u(x,y,z)$ 为此球内的调和函数，则
+\[u(x_{0}, y_{0}, z_{0}) = \frac{1}{4\pi R^{2}} \iint_{S} u(x,y,z)\,\mathrm{d}S\]
+（中值定理）。
+\end{prob}
+
+\begin{prob}[M]{4398}
+证明：若有界闭区域 $V$ 内的连续函数 $u = u(x,y,z)$ 在此区域内部是调和函数，并且它不是常数，则此函数在区域内的点不能达到最大值和最小值（极大值原理）。
+\end{prob}
+
+\begin{prob}[M]{4399}
+设物体 $V$ 全部浸于液体中，利用帕斯卡定律证明：液体的浮力等于物体所排开的液体的重量，其方向是竖直向上（阿基米德定律）。
+\end{prob}
+
+\begin{prob}[L]{4400}
+设 $S_{t}$ 是动球面 $(\xi-x)^{2}+(\eta-y)^{2}+(\zeta-z)^{2}=t^{2}$，而函数 $f(\xi, \eta, \zeta)$ 是连续的，证明：函数
+\[u(x,y,z,t) = \frac{1}{4\pi} \iint_{S_{t}} \frac{f(\xi, \eta, \zeta)}{t}\,\mathrm{d}S_{t}\]
+满足波动方程
+\[\frac{\partial^{2} u}{\partial x^{2}} + \frac{\partial^{2} u}{\partial y^{2}} + \frac{\partial^{2} u}{\partial z^{2}} = \frac{\partial^{2} u}{\partial t^{2}}\]
+和初始条件 $\left. u \right|_{t=0} = 0, \left. \dfrac{\partial u}{\partial t} \right|_{t=0} = f(x,y,z)$。
+\probhint{用三重积分表示导数 $\dfrac{\partial u}{\partial t}$。}
+\end{prob}
+
+\probsec{§17. 场论初步}
+
+\begin{prob}[L]{4401.1}
+求场 $u = x^2 + 2y^2 + 3z^2 + xy + 3x - 2y - 6z$ 在下列各点的梯度的大小和方向：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $O(0, 0, 0)$；
+  \item $A(1, 1, 1)$；
+  \item $B(2, 1, 1)$.
+\end{enumerate}
+在场中怎样的点，梯度等于零？
+\end{prob}
+
+\begin{prob}[M]{4401.2}
+设
+\[
+u = xy - z^2,
+\]
+求 $\operatorname{grad} u$ 在点 $M(-9, 12, 10)$ 的大小和方向. 沿坐标角 $xOy$ 的等分线方向的导数 $\dfrac{\partial u}{\partial l}$ 等于什么？
+\end{prob}
+
+\begin{prob}[L]{4402}
+在空间 $Oxyz$ 的哪些点，场
+\[
+u = x^3 + y^3 + z^3 - 3xyz
+\]
+的梯度：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 垂直于 $Oz$ 轴；
+  \item 平行于 $Oz$ 轴；
+  \item 等于零？
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{4403}
+给定标量场
+\[
+u = \ln \frac{1}{r},
+\]
+其中 $r = \sqrt{(x - a)^2 + (y - b)^2 + (z - c)^2}$. 在空间 $Oxyz$ 的哪些点成立等式
+\[
+|\operatorname{grad} u| = 1\text{？}
+\]
+\end{prob}
+
+\begin{prob}[M]{4404}
+作标量场
+\[
+u = \sqrt{x^2 + y^2 + (z + 8)^2} + \sqrt{x^2 + y^2 + (z - 8)^2}
+\]
+的等值面. 求通过点 $M(9, 12, 28)$ 的等值面. 在区域 $x^2 + y^2 + z^2 \leqslant 36$ 内 $\max u$ 等于什么？
+\end{prob}
+
+\begin{prob}[M]{4405}
+求场
+\[
+u = \frac{x}{x^2 + y^2 + z^2}
+\]
+在点 $A(1, 2, 2)$ 及 $B(-3, 1, 0)$ 的梯度之间的夹角 $\varphi$.
+\end{prob}
+
+\begin{prob}[M]{4406}
+设已知标量场
+\[
+u = \frac{z}{\sqrt{x^2 + y^2 + z^2}},
+\]
+作出场的等值面和梯度的等模面.
+求区域 $1 < z < 2$ 内的 $\inf u$, $\sup u$, $\inf |\operatorname{grad} u|$, $\sup |\operatorname{grad} u|$.
+\end{prob}
+
+\begin{prob}[M]{4407}
+精确到高阶无穷小量，求在点 $M_0(x_0, y_0, z_0)$ 处之二无限接近的等值面
+\[
+u(x, y, z) = c \quad \text{及} \quad u(x, y, z) = c + \Delta c
+\]
+之间的距离，其中 $u(x_0, y_0, z_0) = c$ ($\operatorname{grad} u(x_0, y_0, z_0) \neq 0$).
+\end{prob}
+
+\begin{prob}[L]{4408}
+证明公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\operatorname{grad}(u + c) = \operatorname{grad} u$ ($c$ 为常数)；
+  \item $\operatorname{grad} cu = c \operatorname{grad} u$ ($c$ 为常数)；
+  \item $\operatorname{grad}(u + v) = \operatorname{grad} u + \operatorname{grad} v$；
+  \item $\operatorname{grad}(uv) = u \operatorname{grad} v + v \operatorname{grad} u$；
+  \item $\operatorname{grad}(u^2) = 2u \operatorname{grad} u$；
+  \item $\operatorname{grad} f(u) = f'(u) \operatorname{grad} u$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{4409}
+计算：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\operatorname{grad} r$；
+  \item $\operatorname{grad} r^2$；
+  \item $\operatorname{grad} \dfrac{1}{r}$，其中 $r = \sqrt{x^2 + y^2 + z^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{4410}
+求 $\operatorname{grad} f(r)$，其中 $r = \sqrt{x^2 + y^2 + z^2}$.
+\end{prob}
+
+\begin{prob}[S]{4411}
+求 $\operatorname{grad}(\boldsymbol{c} \cdot \boldsymbol{r})$，其中 $\boldsymbol{c}$ 为常向量，$\boldsymbol{r}$ 为引自坐标原点的径向量.
+\end{prob}
+
+\begin{prob}[S]{4412}
+求 $\operatorname{grad}\{|\boldsymbol{c} \times \boldsymbol{r}|^2\}$ ($\boldsymbol{c}$ 为常向量).
+\end{prob}
+
+\begin{prob}[M]{4413}
+证明公式：
+\[
+\operatorname{grad} f(u, v) = \frac{\partial f}{\partial u} \operatorname{grad} u + \frac{\partial f}{\partial v} \operatorname{grad} v.
+\]
+\end{prob}
+
+\begin{prob}[M]{4414.1}
+证明公式：
+\[
+\begin{gathered}
+\nabla^2(uv) = u \nabla^2 v + v \nabla^2 u + 2 \nabla u \nabla v, \\
+\nabla = \boldsymbol{i}\frac{\partial}{\partial x} + \boldsymbol{j}\frac{\partial}{\partial y} + \boldsymbol{k}\frac{\partial}{\partial z}, \\
+\nabla^2 = \nabla \cdot \nabla = \frac{\partial^2}{\partial x^2} + \frac{\partial^2}{\partial y^2} + \frac{\partial^2}{\partial z^2}.
+\end{gathered}
+\]
+\end{prob}
+
+\begin{prob}[M]{4414.2}
+证明：若函数 $u = u(x, y, z)$ 在凸区域 $\Omega$ 内可微，且 $|\operatorname{grad} u| \leqslant M$，其中 $M$ 为常数，则对于 $\Omega$ 中任意二点 $A, B$ 有：
+\[
+|u(A) - u(B)| \leqslant M \rho(A, B),
+\]
+式中 $\rho(A, B)$ 为 $A$ 与 $B$ 二点之间的距离.
+\end{prob}
+
+\begin{prob}[M]{4415}
+对于函数 $u = u(x, y, z)$，写出 $\operatorname{grad} u$ 在下列坐标系中的表达式：(a) 圆柱坐标系；\qquad (b) 球坐标系.
+\end{prob}
+
+\begin{prob}[M]{4416}
+求场 $u = \dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2}$ 在已知点 $M(x, y, z)$ 处沿此点的径向量 $\boldsymbol{r}$ 之方向的导数. 在怎样的情况下，此导数等于梯度的大小？
+\end{prob}
+
+\begin{prob}[M]{4417}
+求场 $u = \dfrac{1}{r}$（其中 $r = \sqrt{x^2 + y^2 + z^2}$）在方向 $\boldsymbol{l}\{\cos\alpha, \cos\beta, \cos\gamma\}$ 上的导数. 在怎样的情况下，此导数等于零？
+\end{prob}
+
+\begin{prob}[M]{4418}
+求场 $u = u(x, y, z)$ 在场 $v = v(x, y, z)$ 的梯度方向的导数. 在怎样的情况下，此导数等于零？
+\end{prob}
+
+\begin{prob}[M]{4419}
+设
+\[
+u = \arctan \frac{z}{\sqrt{x^2 + y^2}}, \quad \boldsymbol{c} = \boldsymbol{i} + \boldsymbol{j} + \boldsymbol{k},
+\]
+写出
+\[
+\boldsymbol{a} = \boldsymbol{c} \times \operatorname{grad} u
+\]
+通过单位向量 $\boldsymbol{i}, \boldsymbol{j}, \boldsymbol{k}$ 的表达式.
+\end{prob}
+
+\begin{prob}[M]{4420}
+确定向量场
+\[
+\boldsymbol{a} = x\boldsymbol{i} + y\boldsymbol{j} + 2z\boldsymbol{k}
+\]
+的向量线.
+\end{prob}
+
+\begin{prob}[M]{4421}
+用直接计算的方法证明：向量 $\boldsymbol{a}$ 的散度与直角坐标系的选择无关.
+\end{prob}
+
+\begin{prob}[M]{4422}
+证明：
+\[
+\operatorname{div} \boldsymbol{a}(M) = \lim_{d(S) \to 0} \frac{1}{V} \iint_S a_n \,\mathrm{d}S,
+\]
+其中 $S$ 表示围绕点 $M$ 的封闭曲面，$V$ 是该曲面所围区域的体积，$\boldsymbol{n}$ 为曲面 $S$ 的外法向量，$d(S)$ 为曲面 $S$ 的直径.
+\end{prob}
+
+\begin{prob}[M]{4423.1}
+求场 $\boldsymbol{a} = \dfrac{-\boldsymbol{i}x + \boldsymbol{j}y + \boldsymbol{k}z}{\sqrt{x^2 + y^2}}$ 在点 $M(3, 4, 5)$ 的散度. 向量 $\boldsymbol{a}$ 通过无穷小球面 $(x - 3)^2 + (y - 4)^2 + (z - 5)^2 = \varepsilon^2$ 的通量 $\Pi$ 近似地等于什么？
+\end{prob}
+
+\begin{prob}[S]{4423.2}
+求
+\[
+\operatorname{div} \begin{vmatrix}
+\boldsymbol{i} & \boldsymbol{j} & \boldsymbol{k} \\
+\dfrac{\partial}{\partial x} & \dfrac{\partial}{\partial y} & \dfrac{\partial}{\partial z} \\
+\omega_x & \omega_y & \omega_z
+\end{vmatrix}.
+\]
+\end{prob}
+
+\begin{prob}[L]{4424}
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\operatorname{div}(\boldsymbol{a} + \boldsymbol{b}) = \operatorname{div} \boldsymbol{a} + \operatorname{div} \boldsymbol{b}$；
+  \item $\operatorname{div}(u\boldsymbol{c}) = \boldsymbol{c} \operatorname{grad} u$ ($\boldsymbol{c}$ 为常向量，$u$ 为标量)；
+  \item $\operatorname{div}(u\boldsymbol{a}) = u \operatorname{div} \boldsymbol{a} + \boldsymbol{a} \cdot \operatorname{grad} u$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{4425}
+求 $\operatorname{div}(\operatorname{grad} u)$.
+\end{prob}
+
+\begin{prob}[M]{4426}
+求 $\operatorname{div}[\operatorname{grad} f(r)]$，其中 $r = \sqrt{x^2 + y^2 + z^2}$. 在什么情况下 $\operatorname{div}[\operatorname{grad} f(r)] = 0$？
+\end{prob}
+
+\begin{prob}[M]{4427}
+计算：(a) $\operatorname{div} \boldsymbol{r}$； \qquad (b) $\operatorname{div} \dfrac{\boldsymbol{r}}{r}$.
+\end{prob}
+
+\begin{prob}[S]{4428}
+计算：$\operatorname{div}[f(r)\boldsymbol{c}]$，式中 $\boldsymbol{c}$ 为常向量.
+\end{prob}
+
+\begin{prob}[M]{4429}
+求 $\operatorname{div}[f(r)\boldsymbol{r}]$. 在什么情形下该散度等于零？
+\end{prob}
+
+\begin{prob}[M]{4430}
+求：(a) $\operatorname{div}(u \operatorname{grad} u)$； \qquad (b) $\operatorname{div}(u \operatorname{grad} v)$.
+\end{prob}
+
+\begin{prob}[M]{4431}
+设流体充满空间并以恒定的角速度 $\omega$ 沿逆时针方向绕 $Oz$ 轴旋转，求速度向量 $\boldsymbol{v}$ 和加速度向量 $\boldsymbol{w}$ 在已知时刻在空间点 $M(x, y, z)$ 处的散度.
+\end{prob}
+
+\begin{prob}[M]{4432}
+求包含多个引力中心的有限系统所产生的引力场之散度.
+\end{prob}
+
+\begin{prob}[M]{4433}
+求由极坐标 $r$ 与 $\varphi$ 表示的平面向量 $\boldsymbol{a} = \boldsymbol{a}(r, \varphi)$ 之散度的表达式.
+\end{prob}
+
+\begin{prob}[L]{4434}
+设
+\[
+x = f(u, v, w), \quad y = g(u, v, w), \quad z = h(u, v, w),
+\]
+用正交曲线坐标 $u, v, w$ 表示 $\operatorname{div} \boldsymbol{a}(x, y, z)$.
+
+作为特殊的情形，求用柱坐标和球坐标表示 $\operatorname{div} \boldsymbol{a}$ 的表达式.
+\probhint{研究向量 $\boldsymbol{a}$ 通过以曲面 $u = \text{常数}$，$v = \text{常数}$，$w = \text{常数}$ 为界的无穷小平行六面体表面的通量.}
+\end{prob}
+
+\begin{prob}[M]{4435}
+证明：
+(a) $\operatorname{rot}(\boldsymbol{a} + \boldsymbol{b}) = \operatorname{rot} \boldsymbol{a} + \operatorname{rot} \boldsymbol{b}$； \qquad (b) $\operatorname{rot}(u\boldsymbol{a}) = u \operatorname{rot} \boldsymbol{a} + \operatorname{grad} u \times \boldsymbol{a}$.
+\end{prob}
+
+\begin{prob}[M]{4436.1}
+求：(a) $\operatorname{rot} \boldsymbol{r}$； \qquad (b) $\operatorname{rot}[f(r)\boldsymbol{r}]$.
+\end{prob}
+
+\begin{prob}[M]{4436.2}
+设
+\[
+\boldsymbol{a} = \frac{y}{z}\boldsymbol{i} + \frac{z}{x}\boldsymbol{j} + \frac{x}{y}\boldsymbol{k},
+\]
+求 $\operatorname{rot} \boldsymbol{a}$ 在点 $M(1, 2, -2)$ 的大小和方向.
+\end{prob}
+
+\begin{prob}[M]{4437}
+求：(a) $\operatorname{rot}[\boldsymbol{c} f(r)]$； \qquad (b) $\operatorname{rot}[\boldsymbol{c} \times f(r)\boldsymbol{r}]$ ($\boldsymbol{c}$ 为常向量).
+\end{prob}
+
+\begin{prob}[M]{4438}
+证明：$\operatorname{div}(\boldsymbol{a} \times \boldsymbol{b}) = \boldsymbol{b} \cdot \operatorname{rot} \boldsymbol{a} - \boldsymbol{a} \cdot \operatorname{rot} \boldsymbol{b}$.
+\end{prob}
+
+\begin{prob}[M]{4439}
+求：(a) $\operatorname{rot}(\operatorname{grad} u)$； \qquad (b) $\operatorname{div}(\operatorname{rot} \boldsymbol{a})$.
+\end{prob}
+
+\begin{prob}[M]{4440}
+设流体充满空间并以恒定的角速度 $\omega$ 围绕轴 $\boldsymbol{l}\{\cos\alpha, \cos\beta, \cos\gamma\}$ 旋转. 求速度向量 $\boldsymbol{v}$ 在已知时刻在空间点 $M(x, y, z)$ 处的旋度.
+\end{prob}
+
+\begin{prob}[M]{4441.1}
+求由极坐标 $r$ 和 $\varphi$ 表示的平面向量 $\boldsymbol{a} = \boldsymbol{a}(r, \varphi)$ 的旋度的表达式.
+\end{prob}
+
+\begin{prob}[M]{4441.2}
+写出 $\operatorname{rot} \boldsymbol{a}(x, y, z)$ 在下列坐标系中的表达式：
+(a) 圆柱坐标系； \qquad (b) 球坐标系.
+\end{prob}
+
+\begin{prob}[M]{4442.1}
+求径向量 $\boldsymbol{r}$ 的通量：(a) 通过圆锥体 $x^2 + y^2 \leqslant z^2$ ($0 \leqslant z \leqslant h$) 的侧表面；(b) 通过此圆锥体的底面.
+\end{prob}
+
+\begin{prob}[M]{4442.2}
+求向量 $\boldsymbol{a} = \boldsymbol{i}yz + \boldsymbol{j}xz + \boldsymbol{k}xy$ 的通量：(a) 通过圆柱体 $x^2 + y^2 \leqslant a^2$ ($0 \leqslant z \leqslant h$) 的侧表面；(b) 通过此圆柱的全表面.
+\end{prob}
+
+\begin{prob}[M]{4443}
+求径向量 $\boldsymbol{r}$ 通过曲面
+\[
+z = 1 - \sqrt{x^2 + y^2} \quad (0 \leqslant z \leqslant 1)
+\]
+的通量.
+\end{prob}
+
+\begin{prob}[M]{4444}
+求向量 $\boldsymbol{a} = x^2\boldsymbol{i} + y^2\boldsymbol{j} + z^2\boldsymbol{k}$ 通过正八分之一球面 $x^2 + y^2 + z^2 = 1, x \geqslant 0, y \geqslant 0, z \geqslant 0$ 的通量.
+\end{prob}
+
+\begin{prob}[M]{4445.1}
+求向量 $\boldsymbol{a} = y\boldsymbol{i} + z\boldsymbol{j} + x\boldsymbol{k}$ 通过以平面 $x = 0, y = 0, z = 0, x + y + z = a$ ($a > 0$) 为界的角锥的全表面的通量. 利用奥斯特罗格拉茨基公式验证结果.
+\end{prob}
+
+\begin{prob}[M]{4445.2}
+求向量 $\boldsymbol{a} = x^3\boldsymbol{i} + y^3\boldsymbol{j} + z^3\boldsymbol{k}$ 通过球面 $x^2 + y^2 + z^2 = x$ 的通量.
+\end{prob}
+
+\begin{prob}[M]{4446}
+证明：向量 $\boldsymbol{a}$ 通过由方程 $\boldsymbol{r} = \boldsymbol{r}(u, v)$ ($(u, v) \in \Omega$) 给出的曲面 $S$ 的通量等于
+\[
+\iint_S a_n \,\mathrm{d}S = \iint_\Omega \left( \boldsymbol{a} \frac{\partial \boldsymbol{r}}{\partial u} \frac{\partial \boldsymbol{r}}{\partial v} \right) \mathrm{d}u\,\mathrm{d}v,
+\]
+式中 $a_n = \boldsymbol{a} \cdot \boldsymbol{n}$，$\boldsymbol{n}$ 为曲面 $S$ 的单位法向量.
+\end{prob}
+
+\begin{prob}[M]{4447}
+求向量 $\boldsymbol{a} = m \dfrac{\boldsymbol{r}}{r^3}$ ($m$ 为常数) 通过围绕坐标原点的封闭曲面 $S$ 的通量.
+\end{prob}
+
+\begin{prob}[M]{4448}
+已知向量
+\[
+\boldsymbol{a}(\boldsymbol{r}) = \sum_{i=1}^n \operatorname{grad}\left( -\frac{e_i}{4\pi r_i} \right),
+\]
+其中 $e_i$ 为常数，$r_i$ 为点 $M_i$（点源）距动点 $M(\boldsymbol{r})$ 的距离. 求此向量通过围绕点 $M_i$ ($i = 1, 2, \cdots, n$) 的封闭曲面 $S$ 的通量.
+\end{prob}
+
+\begin{prob}[M]{4449}
+证明：
+\[
+\iint_S \frac{\partial u}{\partial n} \,\mathrm{d}S = \iiint_V \nabla^2 u \,\mathrm{d}x\,\mathrm{d}y\,\mathrm{d}z,
+\]
+其中曲面 $S$ 是区域 $V$ 的边界.
+\end{prob}
+
+\begin{prob}[M]{4450}
+在温度场 $u$ 内，在单位时间内通过面微元 $\mathrm{d}S$ 的热量等于：
+\[
+\mathrm{d}Q = -k \boldsymbol{n} \cdot \operatorname{grad} u \,\mathrm{d}S,
+\]
+其中 $k$ 为热导率，$\boldsymbol{n}$ 为曲面 $S$ 的单位法向量，求在单位时间内物体 $V$ 所吸收的热量. 研究温度上升的速度，从而推出物体温度所满足的方程（热传导方程）.
+\end{prob}
+
+\begin{prob}[M]{4451}
+处于运动状态的不可压缩流体充满区域 $V$. 假定在区域 $V$ 内没有源和汇，试推出连续性方程：
+\[
+\frac{\partial \rho}{\partial t} + \operatorname{div}(\rho \boldsymbol{v}) = 0,
+\]
+式中 $\rho = \rho(x, y, z, t)$ 为流体密度，$\boldsymbol{v}$ 为速度向量，$t$ 为时间.
+\probhint{研究流体通过包含在 $V$ 中的任意区域 $\omega$ 的流量.}
+\end{prob}
+
+\begin{prob}[M]{4452.1}
+求向量 $\boldsymbol{a} = \boldsymbol{r}$ 沿着一段螺旋线
+\[
+\boldsymbol{r} = \boldsymbol{i}a\cos t + \boldsymbol{j}a\sin t + \boldsymbol{k}bt \quad (0 \leqslant t \leqslant 2\pi)
+\]
+的环量.
+\end{prob}
+
+\begin{prob}[M]{4452.2}
+求场 $\boldsymbol{a} = \dfrac{1}{y}\boldsymbol{i} + \dfrac{1}{z}\boldsymbol{j} + \dfrac{1}{x}\boldsymbol{k}$ 沿 $M(1, 1, 1)$ 和 $N(2, 4, 8)$ 这两点之间的线段的环量.
+\end{prob}
+
+\begin{prob}[M]{4452.3}
+求场 $\boldsymbol{a} = \boldsymbol{i}\mathrm{e}^{y-z} + \boldsymbol{j}\mathrm{e}^{z-x} + \boldsymbol{k}\mathrm{e}^{x-y}$ 沿 $O(0, 0, 0)$ 和 $M(1, 3, 5)$ 这两点之间的线段的环量.
+\end{prob}
+
+\begin{prob}[M]{4453.1}
+求场 $\boldsymbol{a} = (y + z)\boldsymbol{i} + (z + x)\boldsymbol{j} + (x + y)\boldsymbol{k}$ 沿球面 $x^2 + y^2 + z^2 = 25$ 上连接 $M(3, 4, 0)$ 和 $N(0, 0, 5)$ 这两点的最短的一段大圆圆弧的环量.
+\end{prob}
+
+\begin{prob}[S]{4453.2}
+求向量 $\boldsymbol{a} = f(r)\boldsymbol{r}$（其中 $f$ 为连续函数）沿着弧 $AB$ 的环量.
+\end{prob}
+
+\begin{prob}[M]{4454.1}
+求向量 $\boldsymbol{a} = -y\boldsymbol{i} + x\boldsymbol{j} + c\boldsymbol{k}$ ($c$ 为常数) 的环量：(a) 沿着圆周 $x^2 + y^2 = 1, z = 0$；(b) 沿着圆周 $(x - 2)^2 + y^2 = 1, z = 0$.
+\end{prob}
+
+\begin{prob}[M]{4454.2}
+求向量 $\boldsymbol{a} = \operatorname{grad}\left(\arctan\dfrac{y}{x}\right)$ 沿着围线 $C$ 的环量 $\Gamma$：
+(a) $C$ 不围绕 $Oz$ 轴； \qquad (b) $C$ 围绕 $Oz$ 轴.
+\end{prob}
+
+\begin{prob}[M]{4455}
+已知向量场
+\[
+\boldsymbol{a} = \frac{y}{\sqrt{x}}\boldsymbol{i} - \frac{x}{\sqrt{z}}\boldsymbol{j} + \sqrt{xyz}\boldsymbol{k}.
+\]
+计算 $\operatorname{rot} \boldsymbol{a}$ 在点 $M(1, 1, 1)$ 的表达式，然后近似地求出向量场沿无穷小圆周
+\[
+\begin{cases}
+(x - 1)^2 + (y - 1)^2 + (z - 1)^2 = \varepsilon^2, \\
+(x - 1)\cos\alpha + (y - 1)\cos\beta + (z - 1)\cos\gamma = 0
+\end{cases}
+\]
+（其中 $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$）的环量 $\Gamma$.
+\end{prob}
+
+\begin{prob}[L]{4456}
+平面定常流由速度向量
+\[
+\boldsymbol{w} = u(x, y)\boldsymbol{i} + v(x, y)\boldsymbol{j}
+\]
+描述，试确定：(1) 通过区域 $S$ 的边界（封闭围线）$C$ 流出的流体的量 $Q$（流量）；(2) 速度向量沿着围线 $C$ 的环量 $\Gamma$. 若流体是不可压缩的且流场无旋，则函数 $u$ 和 $v$ 满足怎样的方程？
+\end{prob}
+
+\begin{prob}[M]{4457.1}
+证明：场
+\[
+\boldsymbol{a} = yz(2x+y+z)\boldsymbol{i} + xz(x+2y+z)\boldsymbol{j} + xy(x+y+2z)\boldsymbol{k}
+\]
+是有势场，并求这个场的势.
+\end{prob}
+
+\begin{prob}[M]{4457.2}
+确认场
+\[
+\boldsymbol{a} = \frac{2}{(y+z)^{\frac{1}{2}}}\boldsymbol{i} - \frac{x}{(y+z)^{\frac{3}{2}}}\boldsymbol{j} - \frac{x}{(y+z)^{\frac{3}{2}}}\boldsymbol{k}
+\]
+是有势场，并求该场沿着正八分之一球面上连接点 $M(1,1,3)$ 和 $N(2,4,5)$ 的路径的环量.
+\end{prob}
+
+\begin{prob}[S]{4458}
+求由位于坐标原点的质量 $m$ 所产生的引力场 $\boldsymbol{a} = -\frac{m}{r^3}\boldsymbol{r}$ 的势.
+\end{prob}
+
+\begin{prob}[S]{4459}
+设质量 $m_i\ (i=1,2,\cdots,n)$ 的质点位于点 $M_i\ (i=1,2,\cdots,n)$，求此质点系所产生的引力场的势.
+\end{prob}
+
+\begin{prob}[M]{4460}
+证明：场 $\boldsymbol{a} = f(r)\boldsymbol{r}$（其中 $f(r)$ 是单值连续函数）是有势场. 求这个场的势.
+\end{prob}
+
+\begin{prob}[M]{4461}
+证明公式：
+\[
+\operatorname{grad}_P \left\{ \iiint_V \rho(Q) \frac{\mathrm{d}V}{r} \right\} = -\iint_S \rho(Q)\boldsymbol{n}\frac{\mathrm{d}S}{r} + \iiint_V \operatorname{grad}_Q \rho(Q)\frac{\mathrm{d}V}{r},
+\]
+其中 $S$ 为区域 $V$ 的边界曲面，$\boldsymbol{n}$ 为曲面 $S$ 的外法向量，$r$ 为点 $P(x,y,z)$ 与点 $Q(\xi,\eta,\zeta)$ 之间的距离.
+\end{prob}
+
+\begin{prob}[M]{4462}
+证明：若 $\boldsymbol{a} = \operatorname{grad} u$，其中
+\begin{gather*}
+u(x,y,z) = -\frac{1}{4\pi} \iiint\limits_{-\infty}^{+\infty} \frac{\rho(\xi,\eta,\zeta)}{r} \,\mathrm{d}\xi\,\mathrm{d}\eta\,\mathrm{d}\zeta, \\
+r = \sqrt{(\xi-x)^2 + (\eta-y)^2 + (\zeta-z)^2},
+\end{gather*}
+则
+\[
+\operatorname{div}\boldsymbol{a} = \rho(x,y,z)
+\]
+（假设相应积分有意义）.
+\end{prob}

@@ -1,0 +1,145 @@
+\documentclass[12pt,a4paper,oneside,openany]{book}
+\usepackage[UTF8]{ctex}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{esint}
+\usepackage{geometry}
+\geometry{left=2.2cm,right=2.2cm,top=2.2cm,bottom=2.2cm}
+\usepackage{graphicx}
+\usepackage{fancyhdr}
+\usepackage{enumitem}
+\usepackage{needspace}
+\usepackage{etoolbox}
+\usepackage[colorlinks=true,linkcolor=black,bookmarksnumbered=true]{hyperref}
+
+% 常用数学算子补充
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\arccot}{arccot}
+\DeclareMathOperator{\arsinh}{arsinh}
+\DeclareMathOperator{\arcosh}{arcosh}
+\DeclareMathOperator{\artanh}{artanh}
+
+% 行距与断行微调（适配行内 \displaystyle 公式的舒适行距）
+\linespread{1.35}
+\setlength{\lineskiplimit}{3pt}
+\setlength{\lineskip}{4pt}
+\setlength{\parskip}{3pt plus 1pt minus 1pt}
+\setlength{\emergencystretch}{3em}
+\setlength{\headheight}{15pt}
+
+% 页眉页脚设置
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small\rightmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% 部、章与节标题（进入目录、书签与页眉）
+\newcommand{\probpart}[1]{%
+  \cleardoublepage
+  \thispagestyle{empty}
+  \vspace*{5cm}
+  \begin{center}
+    {\Huge\bfseries #1\par}
+  \end{center}
+  \addcontentsline{toc}{part}{#1}%
+  \clearpage
+}
+\newcommand{\probchapter}[1]{%
+  \chapter*{#1}%
+  \addcontentsline{toc}{chapter}{#1}%
+  \markboth{#1}{}%
+}
+\newcommand{\probsec}[1]{%
+  \par\bigskip
+  \needspace{8cm}%
+  \section*{#1}%
+  \addcontentsline{toc}{section}{#1}%
+  \markright{#1}%
+}
+
+% ============================================================
+% 做题本题目间距控制（可按需在此统一调整 S / M / L 三档留白）
+%   S: 简短计算/不等式/定义域/简单极限（约 3~4 题/页）
+%   M: 标准证明/中等计算/双小题（约 2~3 题/页）
+%   L: 多小题/长证明/复杂作图（约 1~2 题/页）
+% ============================================================
+\newlength{\probspaceS}
+\newlength{\probspaceM}
+\newlength{\probspaceL}
+\setlength{\probspaceS}{3.8cm}
+\setlength{\probspaceM}{6.2cm}
+\setlength{\probspaceL}{9.5cm}
+
+\newenvironment{prob}[2][M]{%
+  \def\probtier{#1}%
+  \par
+  \ifstrequal{#1}{S}{\needspace{5.2cm}}{%
+  \ifstrequal{#1}{L}{\needspace{11.0cm}}{%
+    \needspace{7.6cm}}}%
+  \noindent\textbf{#2.}\enspace\ignorespaces
+}{%
+  \par
+  \ifstrequal{\probtier}{S}{\vspace{\probspaceS}}{%
+  \ifstrequal{\probtier}{L}{\vspace{\probspaceL}}{%
+    \vspace{\probspaceM}}}%
+  \pagebreak[1]%
+}
+
+% 共用题干（与后续首题尽量保持同页）
+\newcommand{\probgroup}[1]{%
+  \par\medskip
+  \needspace{6.5cm}%
+  \noindent\textbf{#1}\par\smallskip
+}
+
+% 题目提示
+\newcommand{\probhint}[1]{%
+  \par\smallskip
+  \noindent{\small\textit{提示：}#1}%
+}
+
+% 题目插图
+\newcommand{\probfig}[2]{%
+  \begin{center}
+    \includegraphics[width=0.38\linewidth,height=0.26\textheight,keepaspectratio]{figures/#1}\\[3pt]
+    {\small #2}
+  \end{center}
+}
+
+\begin{document}
+
+% 封面页
+\begin{titlepage}
+  \centering
+  \vspace*{4.5cm}
+  {\Huge\bfseries 吉米多维奇数学分析习题集\par}
+  \vspace{1.2cm}
+  {\LARGE 做题本\par}
+  \vspace{2.5cm}
+  {\large 全八章（共 4562 题）\par}
+  \vfill
+  {\normalsize 根据 2010 年俄文版中译本整理 \quad 仅含习题与必要提示、题图\par}
+  \vspace*{1.5cm}
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+\everymath{\displaystyle}
+\probpart{第一部分\quad 一元函数}
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+
+\probpart{第二部分\quad 多元函数}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\input{chapters/chapter8.tex}
+
+\end{document}

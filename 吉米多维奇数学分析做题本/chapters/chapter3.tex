@@ -1,0 +1,2509 @@
+\probchapter{第三章\quad 不定积分}
+
+\probsec{§1. 最简单的不定积分}
+
+\probgroup{利用最简积分表，求下列积分：}
+
+\begin{prob}[S]{1628}
+$\displaystyle\int (3 - x^2)^3 \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1629}
+$\displaystyle\int x^2 (5 - x)^4 \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1630}
+$\displaystyle\int (1 - x)(1 - 2x)(1 - 3x) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1631}
+$\displaystyle\int \left(\frac{1 - x}{x}\right)^2 \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1632}
+$\displaystyle\int \left(\frac{a}{x} + \frac{a^2}{x^2} + \frac{a^3}{x^3}\right) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1633}
+$\displaystyle\int \frac{x + 1}{\sqrt{x}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1634}
+$\displaystyle\int \frac{\sqrt{x} - 2\sqrt[3]{x^2} + 1}{\sqrt[4]{x}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1635}
+$\displaystyle\int \frac{(1 - x)^3}{x\sqrt[3]{x}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1636}
+$\displaystyle\int \left(1 - \frac{1}{x^2}\right)\sqrt{x\sqrt{x}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1637}
+$\displaystyle\int \frac{(\sqrt{2x} - \sqrt[3]{3x})^2}{x} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1638}
+$\displaystyle\int \frac{\sqrt{x^4 + x^{-4} + 2}}{x^3} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1639}
+$\displaystyle\int \frac{x^2 \,\mathrm{d}x}{1 + x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1640}
+$\displaystyle\int \frac{x^2 \,\mathrm{d}x}{1 - x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1641}
+$\displaystyle\int \frac{x^2 + 3}{x^2 - 1} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1642}
+$\displaystyle\int \frac{\sqrt{1 + x^2} + \sqrt{1 - x^2}}{\sqrt{1 - x^4}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1643}
+$\displaystyle\int \frac{\sqrt{x^2 + 1} - \sqrt{x^2 - 1}}{\sqrt{x^4 - 1}} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1644}
+$\displaystyle\int (2^x + 3^x)^2 \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1645}
+$\displaystyle\int \frac{2^{x+1} - 5^{x-1}}{10^x} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1646}
+$\displaystyle\int \frac{\mathrm{e}^{3x} + 1}{\mathrm{e}^x + 1} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1647}
+$\displaystyle\int (1 + \sin x + \cos x) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1648}
+$\displaystyle\int \sqrt{1 - \sin 2x} \,\mathrm{d}x \quad (0 \leqslant x \leqslant \pi).$
+\end{prob}
+
+\begin{prob}[S]{1649}
+$\displaystyle\int \cot^2 x \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1650}
+$\displaystyle\int \tan^2 x \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1651}
+$\displaystyle\int (a\sinh x + b\cosh x) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1652}
+$\displaystyle\int \tanh^2 x \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1653}
+$\displaystyle\int \coth^2 x \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[M]{1654}
+证明：若
+\[
+\int f(x)\,\mathrm{d}x = F(x) + C,
+\]
+则
+\[
+\int f(ax + b)\,\mathrm{d}x = \frac{1}{a}F(ax + b) + C \quad (a \neq 0).
+\]
+\end{prob}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{1655}
+$\displaystyle\int \frac{\mathrm{d}x}{x + a}.$
+\end{prob}
+
+\begin{prob}[S]{1656}
+$\displaystyle\int (2x - 3)^{10} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1657}
+$\displaystyle\int \sqrt[3]{1 - 3x} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1658}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{2 - 5x}}.$
+\end{prob}
+
+\begin{prob}[S]{1659}
+$\displaystyle\int \frac{\mathrm{d}x}{(5x - 2)^{\frac{5}{2}}}.$
+\end{prob}
+
+\begin{prob}[S]{1660}
+$\displaystyle\int \frac{\sqrt[5]{1 - 2x + x^2}}{1 - x} \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1661}
+$\displaystyle\int \frac{\mathrm{d}x}{2 + 3x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1662}
+$\displaystyle\int \frac{\mathrm{d}x}{2 - 3x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1663}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{2 - 3x^2}}.$
+\end{prob}
+
+\begin{prob}[S]{1664}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{3x^2 - 2}}.$
+\end{prob}
+
+\begin{prob}[S]{1665}
+$\displaystyle\int (\mathrm{e}^{-x} + \mathrm{e}^{-2x}) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1666}
+$\displaystyle\int (\sin 5x - \sin 5\alpha) \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1667}
+$\displaystyle\int \frac{\mathrm{d}x}{\sin^2\left(2x + \frac{\pi}{4}\right)}.$
+\end{prob}
+
+\begin{prob}[S]{1668}
+$\displaystyle\int \frac{\mathrm{d}x}{1 + \cos x}.$
+\end{prob}
+
+\begin{prob}[S]{1669}
+$\displaystyle\int \frac{\mathrm{d}x}{1 - \cos x}.$
+\end{prob}
+
+\begin{prob}[S]{1670}
+$\displaystyle\int \frac{\mathrm{d}x}{1 + \sin x}.$
+\end{prob}
+
+\begin{prob}[S]{1671}
+$\displaystyle\int [\sinh(2x + 1) + \cosh(2x - 1)] \,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1672}
+$\displaystyle\int \frac{\mathrm{d}x}{\cosh^2 \frac{x}{2}}.$
+\end{prob}
+
+\begin{prob}[S]{1673}
+$\displaystyle\int \frac{\mathrm{d}x}{\sinh^2 \frac{x}{2}}.$
+\end{prob}
+
+\probgroup{用适当地变换被积函数的方法求下列积分：}
+
+\begin{prob}[S]{1674}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{\sqrt{1 - x^2}}.$
+\end{prob}
+
+\begin{prob}[S]{1675}
+$\displaystyle\int x^2\sqrt[3]{1 + x^3}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1676}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{3 - 2x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1677}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{(1 + x^2)^2}.$
+\end{prob}
+
+\begin{prob}[S]{1678}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{4 + x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1679}
+$\displaystyle\int \frac{x^3\,\mathrm{d}x}{x^8 - 2}.$
+\end{prob}
+
+\begin{prob}[S]{1680}
+$\displaystyle\int \frac{\mathrm{d}x}{(1 + x)\sqrt{x}}.$
+\probhint{$\frac{\mathrm{d}x}{\sqrt{x}} = 2\,\mathrm{d}(\sqrt{x})$.}
+\end{prob}
+
+\begin{prob}[S]{1681}
+$\displaystyle\int \sin\frac{1}{x} \cdot \frac{\mathrm{d}x}{x^2}.$
+\end{prob}
+
+\begin{prob}[S]{1682}
+$\displaystyle\int \frac{\mathrm{d}x}{x\sqrt{x^2 + 1}}.$
+\end{prob}
+
+\begin{prob}[S]{1683}
+$\displaystyle\int \frac{\mathrm{d}x}{x\sqrt{x^2 - 1}}.$
+\end{prob}
+
+\begin{prob}[S]{1684}
+$\displaystyle\int \frac{\mathrm{d}x}{(x^2 + 1)^{\frac{3}{2}}}.$
+\end{prob}
+
+\begin{prob}[S]{1685}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{(x^2 - 1)^{\frac{3}{2}}}.$
+\end{prob}
+
+\begin{prob}[S]{1686}
+$\displaystyle\int \frac{x^2\,\mathrm{d}x}{(8x^3 + 27)^{\frac{2}{3}}}.$
+\end{prob}
+
+\begin{prob}[S]{1687}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{x(1 + x)}}.$
+\end{prob}
+
+\begin{prob}[S]{1688}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{x(1 - x)}}.$
+\end{prob}
+
+\begin{prob}[S]{1689}
+$\displaystyle\int x\mathrm{e}^{-x^2}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1690}
+$\displaystyle\int \frac{\mathrm{e}^x\,\mathrm{d}x}{2 + \mathrm{e}^x}.$
+\end{prob}
+
+\begin{prob}[S]{1691}
+$\displaystyle\int \frac{\mathrm{d}x}{\mathrm{e}^x + \mathrm{e}^{-x}}.$
+\end{prob}
+
+\begin{prob}[S]{1692}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{1 + \mathrm{e}^{2x}}}.$
+\end{prob}
+
+\begin{prob}[S]{1693}
+$\displaystyle\int \frac{\ln^2 x}{x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1694}
+$\displaystyle\int \frac{\mathrm{d}x}{x\ln x\ln(\ln x)}.$
+\end{prob}
+
+\begin{prob}[S]{1695}
+$\displaystyle\int \sin^5 x\cos x\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1696}
+$\displaystyle\int \frac{\sin x}{\sqrt{\cos^3 x}}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1697}
+$\displaystyle\int \tan x\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1698}
+$\displaystyle\int \cot x\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1699}
+$\displaystyle\int \frac{\sin x + \cos x}{\sqrt[3]{\sin x - \cos x}}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[L]{1700}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\int \frac{\sin x\cos x}{\sqrt{a^2\sin^2 x + b^2\cos^2 x}}\,\mathrm{d}x;$
+\item $\displaystyle\int \frac{\sin x}{\sqrt{\cos 2x}}\,\mathrm{d}x;$
+\item $\displaystyle\int \frac{\cos x}{\sqrt{\cos 2x}}\,\mathrm{d}x;$
+\item $\displaystyle\int \frac{\sinh x}{\sqrt{\cosh 2x}}\,\mathrm{d}x.$
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{1701}
+$\displaystyle\int \frac{\mathrm{d}x}{\sin^2 x\sqrt[4]{\cot x}}.$
+\end{prob}
+
+\begin{prob}[S]{1702}
+$\displaystyle\int \frac{\mathrm{d}x}{\sin^2 x + 2\cos^2 x}.$
+\end{prob}
+
+\begin{prob}[S]{1703}
+$\displaystyle\int \frac{\mathrm{d}x}{\sin x}.$
+\end{prob}
+
+\begin{prob}[S]{1704}
+$\displaystyle\int \frac{\mathrm{d}x}{\cos x}.$
+\end{prob}
+
+\begin{prob}[S]{1705}
+$\displaystyle\int \frac{\mathrm{d}x}{\sinh x}.$
+\end{prob}
+
+\begin{prob}[S]{1706}
+$\displaystyle\int \frac{\mathrm{d}x}{\cosh x}.$
+\end{prob}
+
+\begin{prob}[S]{1707}
+$\displaystyle\int \frac{\sinh x\cosh x}{\sqrt{\sinh^4 x + \cosh^4 x}}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1708}
+$\displaystyle\int \frac{\mathrm{d}x}{\cosh^2 x\sqrt[3]{\tanh^2 x}}.$
+\end{prob}
+
+\begin{prob}[S]{1709}
+$\displaystyle\int \frac{\arctan x}{1 + x^2}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1710}
+$\displaystyle\int \frac{\mathrm{d}x}{(\arcsin x)^2\sqrt{1 - x^2}}.$
+\end{prob}
+
+\begin{prob}[S]{1711}
+$\displaystyle\int \sqrt{\frac{\ln(x + \sqrt{1 + x^2})}{1 + x^2}}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1712}
+$\displaystyle\int \frac{x^2 + 1}{x^4 + 1}\,\mathrm{d}x.$
+\probhint{$\left(1 + \frac{1}{x^2}\right)\,\mathrm{d}x = \mathrm{d}\left(x - \frac{1}{x}\right)$.}
+\end{prob}
+
+\begin{prob}[S]{1713}
+$\displaystyle\int \frac{x^2 - 1}{x^4 + 1}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1714}
+$\displaystyle\int \frac{x^4\,\mathrm{d}x}{(x^5 + 1)^4}.$
+\end{prob}
+
+\begin{prob}[S]{1715}
+$\displaystyle\int \frac{x^{\frac{n}{2}}\,\mathrm{d}x}{\sqrt{1 + x^{n+2}}}.$
+\end{prob}
+
+\begin{prob}[S]{1716}
+$\displaystyle\int \frac{1}{1 - x^2}\ln\frac{1 + x}{1 - x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1717}
+$\displaystyle\int \frac{\cos x\,\mathrm{d}x}{\sqrt{2 + \cos 2x}}.$
+\end{prob}
+
+\begin{prob}[S]{1718}
+$\displaystyle\int \frac{\sin x\cos x}{\sin^4 x + \cos^4 x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1719}
+$\displaystyle\int \frac{2^x \cdot 3^x}{9^x - 4^x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1720}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{\sqrt{1 + x^2 + \sqrt{(1 + x^2)^3}}}.$
+\end{prob}
+
+\probgroup{用分项积分法计算下列积分：}
+
+\begin{prob}[M]{1721}
+(a) $\displaystyle\int x^2(2 - 3x^2)^2\,\mathrm{d}x;$ \qquad (b) $\displaystyle\int x(1 - x)^{10}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1722}
+$\displaystyle\int \frac{1 + x}{1 - x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1723}
+$\displaystyle\int \frac{x^2}{1 + x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1724}
+$\displaystyle\int \frac{x^3}{3 + x}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1725}
+$\displaystyle\int \frac{(1 + x)^2}{1 + x^2}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1726}
+$\displaystyle\int \frac{(2 - x)^2}{2 - x^2}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1727}
+$\displaystyle\int \frac{x^2}{(1 - x)^{100}}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1728}
+$\displaystyle\int \frac{x^5}{x + 1}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1729}
+$\displaystyle\int \frac{\mathrm{d}x}{\sqrt{x + 1} + \sqrt{x - 1}}.$
+\end{prob}
+
+\begin{prob}[S]{1730}
+$\displaystyle\int x\sqrt{2 - 5x}\,\mathrm{d}x.$
+\probhint{$x \equiv -\frac{1}{5}(2 - 5x) + \frac{2}{5}$.}
+\end{prob}
+
+\begin{prob}[S]{1731}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{\sqrt[3]{1 - 3x}}.$
+\end{prob}
+
+\begin{prob}[S]{1732}
+$\displaystyle\int x^3\sqrt[3]{1 + x^2}\,\mathrm{d}x.$
+\end{prob}
+
+\begin{prob}[S]{1733}
+$\displaystyle\int \frac{\mathrm{d}x}{(x - 1)(x + 3)}.$
+\probhint{$1 \equiv \frac{1}{4}[(x + 3) - (x - 1)]$.}
+\end{prob}
+
+\begin{prob}[S]{1734}
+$\displaystyle\int \frac{\mathrm{d}x}{x^2 + x - 2}.$
+\end{prob}
+
+\begin{prob}[S]{1735}
+$\displaystyle\int \frac{\mathrm{d}x}{(x^2 + 1)(x^2 + 2)}.$
+\end{prob}
+
+\begin{prob}[S]{1736}
+$\displaystyle\int \frac{\mathrm{d}x}{(x^2 - 2)(x^2 + 3)}.$
+\end{prob}
+
+\begin{prob}[S]{1737}
+$\displaystyle\int \frac{x\,\mathrm{d}x}{(x + 2)(x + 3)}.$
+\end{prob}
+
+\begin{prob}[S]{1738}
+$\int \frac{x\,\mathrm{d}x}{x^4 + 3x^2 + 2}$.
+\end{prob}
+
+\begin{prob}[S]{1739}
+$\int \frac{\mathrm{d}x}{(x + a)^2(x + b)^2} \quad (a \neq b)$.
+\end{prob}
+
+\begin{prob}[S]{1740}
+$\int \frac{\mathrm{d}x}{(x^2 + a^2)(x^2 + b^2)} \quad (a^2 \neq b^2)$.
+\end{prob}
+
+\begin{prob}[S]{1741}
+$\int \sin^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1742}
+$\int \cos^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1743}
+$\int \sin x \sin(x + \alpha)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1744}
+$\int \sin 3x \cdot \sin 5x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1745}
+$\int \cos\frac{x}{2} \cdot \cos\frac{x}{3}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1746}
+$\int \sin\left(2x - \frac{\pi}{6}\right)\cos\left(3x + \frac{\pi}{4}\right)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1747}
+$\int \sin^3 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1748}
+$\int \cos^3 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1749}
+$\int \sin^4 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1750}
+$\int \cos^4 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1751}
+$\int \cot^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1752}
+$\int \tan^3 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1753}
+$\int \sin^2 3x \sin^3 2x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1754}
+$\int \frac{\mathrm{d}x}{\sin^2 x \cos^2 x}$.
+\probhint{$1 \equiv \sin^2 x + \cos^2 x$.}
+\end{prob}
+
+\begin{prob}[S]{1755}
+$\int \frac{\mathrm{d}x}{\sin^2 x \cos x}$.
+\end{prob}
+
+\begin{prob}[S]{1756}
+$\int \frac{\mathrm{d}x}{\sin x \cos^3 x}$.
+\end{prob}
+
+\begin{prob}[S]{1757}
+$\int \frac{\cos^3 x}{\sin x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1758}
+$\int \frac{\mathrm{d}x}{\cos^4 x}$.
+\end{prob}
+
+\begin{prob}[S]{1759}
+$\int \frac{\mathrm{d}x}{1 + \mathrm{e}^x}$.
+\end{prob}
+
+\begin{prob}[S]{1760}
+$\int \frac{(1 + \mathrm{e}^x)^2}{1 + \mathrm{e}^{2x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1761}
+$\int \sinh^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1762}
+$\int \cosh^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1763}
+$\int \sinh x \sinh 2x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1764}
+$\int \cosh x \cdot \cosh 3x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1765}
+$\int \frac{\mathrm{d}x}{\sinh^2 x \cosh^2 x}$.
+\end{prob}
+
+\probgroup{用适当的代换，求下列积分：}
+
+\begin{prob}[S]{1766}
+$\int x^2 \sqrt[3]{1 - x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1767}
+$\int x^3 (1 - 5x^2)^{10}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1768}
+$\int \frac{x^2}{\sqrt{2 - x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1769}
+$\int \frac{x^5}{\sqrt{1 - x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1770}
+$\int x^5 (2 - 5x^3)^{\frac{2}{3}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1771}
+$\int \cos^5 x \cdot \sqrt{\sin x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1772}
+$\int \frac{\sin x \cos^3 x}{1 + \cos^2 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1773}
+$\int \frac{\sin^2 x}{\cos^6 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1774}
+$\int \frac{\ln x\,\mathrm{d}x}{x\sqrt{1 + \ln x}}$.
+\end{prob}
+
+\begin{prob}[S]{1775}
+$\int \frac{\mathrm{d}x}{\mathrm{e}^{\frac{x}{2}} + \mathrm{e}^x}$.
+\end{prob}
+
+\begin{prob}[S]{1776}
+$\int \frac{\mathrm{d}x}{\sqrt{1 + \mathrm{e}^x}}$.
+\end{prob}
+
+\begin{prob}[S]{1777}
+$\int \frac{\arctan\sqrt{x}}{\sqrt{x}} \cdot \frac{\mathrm{d}x}{1 + x}$.
+\end{prob}
+
+\probgroup{用三角函数代换 $x = a\sin t, x = a\tan t, x = a\sin^2 t$ 等，求下列积分（参数为正的）：}
+
+\begin{prob}[S]{1778}
+$\int \frac{\mathrm{d}x}{(1 - x^2)^{\frac{3}{2}}}$.
+\end{prob}
+
+\begin{prob}[S]{1779}
+$\int \frac{x^2\,\mathrm{d}x}{\sqrt{x^2 - 2}}$.
+\end{prob}
+
+\begin{prob}[S]{1780}
+$\int \sqrt{1 - x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1781}
+$\int \frac{\mathrm{d}x}{(x^2 + a^2)^{\frac{3}{2}}}$.
+\end{prob}
+
+\begin{prob}[S]{1782}
+$\int \sqrt{\frac{a + x}{a - x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1783}
+$\int x\sqrt{\frac{x}{2a - x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1784}
+$\int \frac{\mathrm{d}x}{\sqrt{(x - a)(b - x)}}$.
+\probhint{用代换 $x - a = (b - a)\sin^2 t$.}
+\end{prob}
+
+\begin{prob}[S]{1785}
+$\int \sqrt{(x - a)(b - a)}\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{用双曲函数代换 $x = a\sinh t, x = a\cosh t$ 等，求下列积分（参数为正的）：}
+
+\begin{prob}[S]{1786}
+$\int \sqrt{a^2 + x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1787}
+$\int \frac{x^2\,\mathrm{d}x}{\sqrt{a^2 + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1788}
+$\int \sqrt{\frac{x - a}{x + a}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1789}
+$\int \frac{\mathrm{d}x}{\sqrt{(x + a)(x + b)}}$.
+\end{prob}
+
+\begin{prob}[S]{1790}
+$\int \sqrt{(x + a)(x + b)}\,\mathrm{d}x$.
+\probhint{令 $x + a = (b - a)\sinh^2 t$.}
+\end{prob}
+
+\probgroup{用分部积分法，求下列积分：}
+
+\begin{prob}[S]{1791}
+$\int \ln x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1792}
+$\int x^n \ln x\,\mathrm{d}x \quad (n \neq -1)$.
+\end{prob}
+
+\begin{prob}[S]{1793}
+$\int \left(\frac{\ln x}{x}\right)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1794}
+$\int \sqrt{x}\ln^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1795}
+$\int x\mathrm{e}^{-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1796}
+$\int x^2 \mathrm{e}^{-2x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1797}
+$\int x^3 \mathrm{e}^{-x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1798}
+$\int x\cos x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1799}
+$\int x^2 \sin 2x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1800}
+$\int x\sinh x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1801}
+$\int x^3 \cosh 3x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1802}
+$\int \arctan x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1803}
+$\int \arcsin x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1804}
+$\int x\arctan x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1805}
+$\int x^2 \arccos x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1806}
+$\int \frac{\arcsin x}{x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1807}
+$\int \ln(x + \sqrt{1 + x^2})\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1808}
+$\int x\ln\frac{1 + x}{1 - x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1809}
+$\int \arctan\sqrt{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1810}
+$\int \sin x \cdot \ln(\tan x)\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{1811}
+$\int x^5 \mathrm{e}^{x^3}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1812}
+$\int (\arcsin x)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1813}
+$\int x(\arctan x)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1814}
+$\int x^2 \ln\frac{1 - x}{1 + x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1815}
+$\int \frac{x\ln(x + \sqrt{1 + x^2})}{\sqrt{1 + x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1816}
+$\int \frac{x^2}{(1 + x^2)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1817}
+$\int \frac{\mathrm{d}x}{(a^2 + x^2)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1818}
+$\int \sqrt{a^2 - x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1819}
+$\int \sqrt{x^2 + a}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1820}
+$\int x^2 \sqrt{a^2 + x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1821}
+$\int x\sin^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1822}
+$\int \mathrm{e}^{\sqrt{x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1823}
+$\int x\sin\sqrt{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1824}
+$\int \frac{x\mathrm{e}^{\arctan x}}{(1 + x^2)^{\frac{3}{2}}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1825}
+$\int \frac{\mathrm{e}^{\arctan x}}{(1 + x^2)^{\frac{3}{2}}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1826}
+$\int \sin(\ln x)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1827}
+$\int \cos(\ln x)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1828}
+$\int \mathrm{e}^{ax} \cos bx\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1829}
+$\int \mathrm{e}^{ax} \sin bx\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1830}
+$\int \mathrm{e}^{2x} \sin^2 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1831}
+$\int (\mathrm{e}^x - \cos x)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1832}
+$\int \frac{\operatorname{arccot} \mathrm{e}^x}{\mathrm{e}^x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1833}
+$\int \frac{\ln(\sin x)}{\sin^2 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1834}
+$\int \frac{x\,\mathrm{d}x}{\cos^2 x}$.
+\end{prob}
+
+\begin{prob}[S]{1835}
+$\int \frac{x\mathrm{e}^x}{(x + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{1836}
+$\int \frac{\mathrm{d}x}{a + bx^2} \quad (ab \neq 0)$.
+\end{prob}
+
+\begin{prob}[S]{1837}
+$\int \frac{\mathrm{d}x}{x^2 - x + 2}$.
+\end{prob}
+
+\begin{prob}[S]{1838}
+$\int \frac{\mathrm{d}x}{3x^2 - 2x - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1839}
+$\int \frac{x\,\mathrm{d}x}{x^4 - 2x^2 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1840}
+$\int \frac{x + 1}{x^2 + x + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1841}
+$\int \frac{x\,\mathrm{d}x}{x^2 - 2x\cos\alpha + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1842}
+$\int \frac{x^3\,\mathrm{d}x}{x^4 - x^2 + 2}$.
+\end{prob}
+
+\begin{prob}[S]{1843}
+$\int \frac{x^5\,\mathrm{d}x}{x^6 - x^3 - 2}$.
+\end{prob}
+
+\begin{prob}[S]{1844}
+$\int \frac{\mathrm{d}x}{3\sin^2 x - 8\sin x\cos x + 5\cos^2 x}$.
+\end{prob}
+
+\begin{prob}[S]{1845}
+$\int \frac{\mathrm{d}x}{\sin x + 2\cos x + 3}$.
+\end{prob}
+
+\begin{prob}[S]{1846}
+$\int \frac{\mathrm{d}x}{\sqrt{a + bx^2}} \quad (b \neq 0)$.
+\end{prob}
+
+\begin{prob}[S]{1847}
+$\int \frac{\mathrm{d}x}{\sqrt{1 - 2x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1848}
+$\int \frac{\mathrm{d}x}{\sqrt{x + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1849}
+$\int \frac{\mathrm{d}x}{\sqrt{2x^2 - x + 2}}$.
+\end{prob}
+
+\begin{prob}[M]{1850}
+证明：若
+\[
+y = ax^2 + bx + c \quad (a \neq 0),
+\]
+则
+\begin{align*}
+\text{当 } a > 0 \text{ 时，} & \int \frac{\mathrm{d}x}{\sqrt{y}} = \frac{1}{\sqrt{a}} \ln\left|\frac{y'}{2} + \sqrt{ay}\right| + C, \\
+\text{当 } a < 0 \text{ 时，} & \int \frac{\mathrm{d}x}{\sqrt{y}} = \frac{1}{\sqrt{-a}} \arcsin \frac{-y'}{\sqrt{b^2 - 4ac}} + C.
+\end{align*}
+\end{prob}
+
+\begin{prob}[S]{1851}
+$\int \frac{x\,\mathrm{d}x}{\sqrt{5 + x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1852}
+$\int \frac{x + 1}{\sqrt{x^2 + x + 1}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{1853}
+(a) $\int \frac{x\,\mathrm{d}x}{\sqrt{1 - 3x^2 - 2x^4}}$; \qquad (b) $\int \frac{\cos x\,\mathrm{d}x}{\sqrt{1 + \sin x + \cos^2 x}}$.
+\end{prob}
+
+\begin{prob}[S]{1854}
+$\int \frac{x^3\,\mathrm{d}x}{\sqrt{x^4 - 2x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1855}
+$\int \frac{x + x^3}{\sqrt{1 + x^2 - x^4}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1856}
+$\int \frac{\mathrm{d}x}{x\sqrt{x^2 + x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1857}
+$\int \frac{\mathrm{d}x}{x^2\sqrt{x^2 + x - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1858}
+$\int \frac{\mathrm{d}x}{(x + 1)\sqrt{x^2 + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1859}
+$\int \frac{\mathrm{d}x}{(x - 1)\sqrt{x^2 - 2}}$.
+\end{prob}
+
+\begin{prob}[S]{1860}
+$\int \frac{\mathrm{d}x}{(x + 2)^2 \sqrt{x^2 + 2x - 5}}$.
+\end{prob}
+
+\begin{prob}[S]{1861}
+$\int \sqrt{2 + x - x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1862}
+$\int \sqrt{2 + x + x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1863}
+$\int \sqrt{x^4 + 2x^2 - 1}\,x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1864}
+$\int \frac{1 - x + x^2}{x\sqrt{1 + x - x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1865}
+$\int \frac{x^2 + 1}{x\sqrt{x^4 + 1}}\,\mathrm{d}x$.
+\end{prob}
+
+\probsec{§2. 有理函数的积分法}
+
+\probgroup{利用待定系数法，求下列积分：}
+
+\begin{prob}[S]{1866}
+$\int \frac{2x + 3}{(x - 2)(x + 5)}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1867}
+$\int \frac{x\,\mathrm{d}x}{(x + 1)(x + 2)(x + 3)}$.
+\end{prob}
+
+\begin{prob}[S]{1868}
+$\int \frac{x^{10}\,\mathrm{d}x}{x^2 + x - 2}$.
+\end{prob}
+
+\begin{prob}[S]{1869}
+$\int \frac{x^3 + 1}{x^3 - 5x^2 + 6x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1870}
+$\int \frac{x^4}{x^4 + 5x^2 + 4}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1871}
+$\int \frac{x\,\mathrm{d}x}{x^3 - 3x + 2}$.
+\end{prob}
+
+\begin{prob}[S]{1872}
+$\int \frac{x^2 + 1}{(x + 1)^2 (x - 1)}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1873}
+$\int \left(\frac{x}{x^2 - 3x + 2}\right)^2\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1874}
+$\int \frac{\mathrm{d}x}{(x + 1)(x + 2)^2 (x + 3)^3}$.
+\end{prob}
+
+\begin{prob}[S]{1875}
+$\int \frac{\mathrm{d}x}{x^5 + x^4 - 2x^3 - 2x^2 + x + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1876}
+$\int \frac{x^2 + 5x + 4}{x^4 + 5x^2 + 4}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1877}
+$\int \frac{\mathrm{d}x}{(x + 1)(x^2 + 1)}$.
+\end{prob}
+
+\begin{prob}[S]{1878}
+$\int \frac{\mathrm{d}x}{(x^2 - 4x + 4)(x^2 - 4x + 5)}$.
+\end{prob}
+
+\begin{prob}[S]{1879}
+$\int \frac{x\,\mathrm{d}x}{(x - 1)^2 (x^2 + 2x + 2)}$.
+\end{prob}
+
+\begin{prob}[S]{1880}
+$\int \frac{\mathrm{d}x}{x(1 + x)(1 + x + x^2)}$.
+\end{prob}
+
+\begin{prob}[S]{1881}
+$\int \frac{\mathrm{d}x}{x^3 + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1882}
+$\int \frac{x\,\mathrm{d}x}{x^3 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1883}
+$\int \frac{\mathrm{d}x}{x^4 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1884}
+$\int \frac{\mathrm{d}x}{x^4 + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1885}
+$\int \frac{\mathrm{d}x}{x^4 + x^2 + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1886}
+$\int \frac{\mathrm{d}x}{x^6 + 1}$.
+\end{prob}
+
+\begin{prob}[S]{1887}
+$\int \frac{\mathrm{d}x}{(1 + x)(1 + x^2)(1 + x^3)}$.
+\end{prob}
+
+\begin{prob}[S]{1888}
+$\int \frac{\mathrm{d}x}{x^5 - x^4 + x^3 - x^2 + x - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1889}
+$\int \frac{x^2\,\mathrm{d}x}{x^4 + 3x^3 + \frac{9}{2}x^2 + 3x + 1}$.
+\end{prob}
+
+\begin{prob}[M]{1890}
+在什么条件下，积分
+\[
+\int \frac{ax^2 + bx + c}{x^3(x - 1)^2}\,\mathrm{d}x
+\]
+为有理函数？
+\end{prob}
+
+\probgroup{利用奥斯特罗格拉茨基方法求积分：}
+
+\begin{prob}[S]{1891}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(x - 1)^2(x + 1)^3}$.
+\end{prob}
+
+\begin{prob}[S]{1892}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^3 + 1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1893}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^2 + 1)^3}$.
+\end{prob}
+
+\begin{prob}[S]{1894}
+$\displaystyle \int \frac{x^2\,\mathrm{d}x}{(x^2 + 2x + 2)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1895}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^4 + 1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1896}
+$\displaystyle \int \frac{x^2 + 3x - 2}{(x - 1)(x^2 + x + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1897}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^4 - 1)^3}$.
+\end{prob}
+
+\probgroup{分出下列积分的代数部分：}
+
+\begin{prob}[S]{1898}
+$\displaystyle \int \frac{x^2 + 1}{(x^4 + x^2 + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1899}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^3 + x + 1)^3}$.
+\end{prob}
+
+\begin{prob}[S]{1900}
+$\displaystyle \int \frac{4x^5 - 1}{(x^5 + x + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{1901}
+计算积分
+\[
+\int \frac{\mathrm{d}x}{x^4 + 2x^3 + 3x^2 + 2x + 1}.
+\]
+\end{prob}
+
+\begin{prob}[M]{1902}
+在什么条件下，积分
+\[
+\int \frac{\alpha x^2 + 2\beta x + \gamma}{(ax^2 + 2bx + c)^2}\,\mathrm{d}x
+\]
+为有理函数？
+\end{prob}
+
+\probgroup{利用不同方法，计算下列积分：}
+
+\begin{prob}[S]{1903}
+$\displaystyle \int \frac{x^3}{(x - 1)^{100}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1904}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{x^8 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{1905}
+$\displaystyle \int \frac{x^3\,\mathrm{d}x}{x^8 + 3}$.
+\end{prob}
+
+\begin{prob}[S]{1906}
+$\displaystyle \int \frac{x^2 + x}{x^6 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1907}
+$\displaystyle \int \frac{x^4 - 3}{x(x^8 + 3x^4 + 2)}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1908}
+$\displaystyle \int \frac{x^4\,\mathrm{d}x}{(x^{10} - 10)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1909}
+$\displaystyle \int \frac{x^{11}\,\mathrm{d}x}{x^8 + 3x^4 + 2}$.
+\end{prob}
+
+\begin{prob}[S]{1910}
+$\displaystyle \int \frac{x^9\,\mathrm{d}x}{(x^{10} + 2x^5 + 2)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1911}
+$\displaystyle \int \frac{x^{2n - 1}}{x^n + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1912}
+$\displaystyle \int \frac{x^{3n - 1}}{(x^{2n} + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1913}
+$\displaystyle \int \frac{\mathrm{d}x}{x(x^{10} + 2)}$.
+\end{prob}
+
+\begin{prob}[S]{1914}
+$\displaystyle \int \frac{\mathrm{d}x}{x(x^{10} + 1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{1915}
+$\displaystyle \int \frac{1 - x^7}{x(1 + x^7)}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1916}
+$\displaystyle \int \frac{x^4 - 1}{x(x^4 - 5)(x^5 - 5x + 1)}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1917}
+$\displaystyle \int \frac{x^2 + 1}{x^4 + x^2 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1918}
+$\displaystyle \int \frac{x^2 - 1}{x^4 + x^3 + x^2 + x + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1919}
+$\displaystyle \int \frac{x^5 - x}{x^8 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1920}
+$\displaystyle \int \frac{x^4 + 1}{x^6 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{1921}
+试导出用于计算积分
+\[
+I_n = \int \frac{\mathrm{d}x}{(ax^2 + bx + c)^n} \quad (a \neq 0)
+\]
+的递推公式。利用这个公式计算：
+\[
+I_3 = \int \frac{\mathrm{d}x}{(x^2 + x + 1)^3}.
+\]
+\probhint{利用恒等式 $4a(ax^2 + bx + c) \equiv (2ax + b)^2 + (4ac - b^2)$。}
+\end{prob}
+
+\begin{prob}[M]{1922}
+利用代换 $t = \dfrac{x + a}{x + b}$ 计算积分：
+\[
+I = \int \frac{\mathrm{d}x}{(x + a)^m (x + b)^n} \quad (m \text{ 和 } n \text{ 为正整数}).
+\]
+利用这个代换，求
+\[
+\int \frac{\mathrm{d}x}{(x - 2)^2(x + 3)^3}.
+\]
+\end{prob}
+
+\begin{prob}[M]{1923}
+若 $P_n(x)$ 为 $x$ 的 $n$ 次多项式，计算
+\[
+\int \frac{P_n(x)}{(x - a)^{n + 1}}\,\mathrm{d}x.
+\]
+\probhint{利用泰勒公式。}
+\end{prob}
+
+\begin{prob}[M]{1924}
+设 $R(x) = R^*(x^2)$，其中 $R^*$ 为有理函数。函数 $R(x)$ 分解为有理公式时有什么特性？
+\end{prob}
+
+\begin{prob}[M]{1925}
+计算
+\[
+\int \frac{\mathrm{d}x}{1 + x^{2n}},
+\]
+式中 $n$ 为正整数。
+\end{prob}
+
+\probsec{§3. 无理函数的积分法}
+
+\probgroup{利用化被积函数为有理函数的方法，求下列积分：}
+
+\begin{prob}[S]{1926}
+$\displaystyle \int \frac{\mathrm{d}x}{1 + \sqrt{x}}$.
+\end{prob}
+
+\begin{prob}[S]{1927}
+$\displaystyle \int \frac{\mathrm{d}x}{x(1 + 2\sqrt{x} + \sqrt[3]{x})}$.
+\end{prob}
+
+\begin{prob}[S]{1928}
+$\displaystyle \int \frac{x\sqrt[3]{2 + x}}{x + \sqrt[3]{2 + x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1929}
+$\displaystyle \int \frac{1 - \sqrt{x + 1}}{1 + \sqrt[3]{x + 1}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1930}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt{x}(1 + \sqrt[4]{x})^3}$.
+\end{prob}
+
+\begin{prob}[S]{1931}
+$\displaystyle \int \frac{\sqrt{x + 1} - \sqrt{x - 1}}{\sqrt{x + 1} + \sqrt{x - 1}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1932}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt[3]{(x + 1)^2(x - 1)^4}}$.
+\end{prob}
+
+\begin{prob}[S]{1933}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{\sqrt[4]{x^3(a - x)}} \quad (a > 0)$.
+\end{prob}
+
+\begin{prob}[S]{1934}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt[n]{(x - a)^{n + 1}(x - b)^{n - 1}}} \quad (n \text{ 为正整数})$.
+\end{prob}
+
+\begin{prob}[M]{1935}
+$\displaystyle \int \frac{\mathrm{d}x}{1 + \sqrt{x} + \sqrt{1 + x}}$.
+\probhint{令 $x = \left(\dfrac{u^2 - 1}{2u}\right)^2$。}
+\end{prob}
+
+\begin{prob}[M]{1936}
+考虑积分
+\[
+\int R\left[x(x - a)^{\frac{p}{n}}, (x - b)^{\frac{q}{n}}\right] \mathrm{d}x,
+\]
+其中 $R$ 为有理函数，$p, q, n$ 为整数。证明：若 $p + q = kn$，其中 $k$ 为整数，则该积分为初等函数。
+\end{prob}
+
+\probgroup{求最简单二次无理式的积分：}
+
+\begin{prob}[S]{1937}
+$\displaystyle \int \frac{x^2}{\sqrt{1 + x + x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1938}
+$\displaystyle \int \frac{\mathrm{d}x}{(x + 1)\sqrt{x^2 + x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1939}
+$\displaystyle \int \frac{\mathrm{d}x}{(1 - x)^2\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1940}
+$\displaystyle \int \frac{\sqrt{x^2 + 2x + 2}}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1941}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(1 + x)\sqrt{1 - x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1942}
+$\displaystyle \int \frac{1 - x + x^2}{\sqrt{1 + x - x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{利用公式
+\[
+\int \frac{P_n(x)}{y}\,\mathrm{d}x = Q_{n - 1}(x)y + \lambda \int \frac{\mathrm{d}x}{y},
+\]
+式中 $y = \sqrt{ax^2 + bx + c}$，$P_n(x)$ 为 $n$ 次多项式，$Q_{n - 1}(x)$ 为 $n - 1$ 次多项式，$\lambda$ 为常数，求下列积分：}
+
+\begin{prob}[S]{1943}
+$\displaystyle \int \frac{x^3}{\sqrt{1 + 2x - x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1944}
+$\displaystyle \int \frac{x^{10}\,\mathrm{d}x}{\sqrt{1 + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1945}
+$\displaystyle \int x^4\sqrt{a^2 - x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1946}
+$\displaystyle \int \frac{x^3 - 6x^2 + 11x - 6}{\sqrt{x^2 + 4x + 3}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1947}
+$\displaystyle \int \frac{\mathrm{d}x}{x^3\sqrt{x^2 + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1948}
+$\displaystyle \int \frac{\mathrm{d}x}{x^4\sqrt{x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1949}
+$\displaystyle \int \frac{\mathrm{d}x}{(x - 1)^3\sqrt{x^2 + 3x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1950}
+$\displaystyle \int \frac{\mathrm{d}x}{(x + 1)^5\sqrt{x^2 + 2x}}$.
+\end{prob}
+
+\begin{prob}[M]{1951}
+在什么条件下，积分
+\[
+\int \frac{a_1 x^2 + b_1 x + c_1}{\sqrt{ax^2 + bx + c}}\,\mathrm{d}x
+\]
+是代数函数？
+\end{prob}
+
+\probgroup{分解有理函数 $\dfrac{P(x)}{Q(x)}$ 为最简分式，求积分 $\displaystyle \int \frac{P(x)}{Q(x)y}\,\mathrm{d}x$，式中 $y = \sqrt{ax^2 + bx + c}$：}
+
+\begin{prob}[S]{1952}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(x - 1)^2\sqrt{1 + 2x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1953}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(x^2 - 1)\sqrt{x^2 - x - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1954}
+$\displaystyle \int \frac{\sqrt{x^2 + x + 1}}{(x + 1)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1955}
+$\displaystyle \int \frac{x^3}{(1 + x)\sqrt{1 + 2x - x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1956}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(x^2 - 3x + 2)\sqrt{x^2 - 4x + 3}}$.
+\end{prob}
+
+\begin{prob}[S]{1957}
+$\displaystyle \int \frac{\mathrm{d}x}{(1 + x^2)\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1958}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^2 + 1)\sqrt{x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1959}
+$\displaystyle \int \frac{\mathrm{d}x}{(1 - x^4)\sqrt{1 + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1960}
+$\displaystyle \int \frac{\sqrt{x^2 + 2}}{x^2 + 1}\,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{化二次三项式为标准形式，计算下列积分：}
+
+\begin{prob}[S]{1961}
+$\displaystyle \int \frac{\mathrm{d}x}{(x^2 + x + 1)\sqrt{x^2 + x - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1962}
+$\displaystyle \int \frac{x^2\,\mathrm{d}x}{(4 - 2x + x^2)\sqrt{2 + 2x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1963}
+$\displaystyle \int \frac{(x + 1)\,\mathrm{d}x}{(x^2 + x + 1)\sqrt{x^2 + x + 1}}$.
+\end{prob}
+
+\begin{prob}[M]{1964}
+利用分式线性代换 $x = \dfrac{\alpha + \beta t}{1 + t}$ 计算积分：
+\[
+\int \frac{\mathrm{d}x}{(x^2 - x + 1)\sqrt{x^2 + x + 1}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{1965}
+求
+\[
+\int \frac{\mathrm{d}x}{(x^2 + 2)\sqrt{2x^2 - 2x + 5}}.
+\]
+\end{prob}
+
+\probgroup{利用欧拉代换：\\
+(1) 若 $a > 0$，$\sqrt{ax^2 + bx + c} = \pm\sqrt{a}x + z$；\\
+(2) 若 $c > 0$，$\sqrt{ax^2 + bx + c} = xz \pm \sqrt{c}$；\\
+(3) $\sqrt{a(x - x_1)(x - x_2)} = z(x - x_1)$，\\
+求下列积分：}
+
+\begin{prob}[S]{1966}
+$\displaystyle \int \frac{\mathrm{d}x}{x + \sqrt{x^2 + x + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1967}
+$\displaystyle \int \frac{\mathrm{d}x}{1 + \sqrt{1 - 2x - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1968}
+$\displaystyle \int x\sqrt{x^2 - 2x + 2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1969}
+$\displaystyle \int \frac{x - \sqrt{x^2 + 3x + 2}}{x + \sqrt{x^2 + 3x + 2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1970}
+$\displaystyle \int \frac{\mathrm{d}x}{\left[1 + \sqrt{x(1 + x)}\right]^2}$.
+\end{prob}
+
+\probgroup{利用不同方法，计算下列积分：}
+
+\begin{prob}[S]{1971}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt{x^2 + 1} - \sqrt{x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1972}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{(1 - x^3)\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1973}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt{2} + \sqrt{1 - x} + \sqrt{1 + x}}$.
+\end{prob}
+
+\begin{prob}[S]{1974}
+$\displaystyle \int \frac{x + \sqrt{1 + x + x^2}}{1 + x + \sqrt{1 + x + x^2}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1975}
+$\displaystyle \int \frac{\sqrt{x(x + 1)}}{\sqrt{x} + \sqrt{x + 1}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1976}
+$\displaystyle \int \frac{(x^2 - 1)\,\mathrm{d}x}{(x^2 + 1)\sqrt{x^4 + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1977}
+$\displaystyle \int \frac{(x^2 + 1)\,\mathrm{d}x}{(x^2 - 1)\sqrt{x^4 + 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1978}
+$\displaystyle \int \frac{\mathrm{d}x}{x\sqrt{x^4 + 2x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{1979}
+$\displaystyle \int \frac{(x^2 + 1)\,\mathrm{d}x}{x\sqrt{x^4 + x^2 + 1}}$.
+\end{prob}
+
+\begin{prob}[M]{1980}
+证明：积分
+\[
+\int R(x, \sqrt{ax + b}, \sqrt{cx + d})\,\mathrm{d}x \quad (R \text{ 为有理函数})
+\]
+的求法归结为有理函数的积分法。
+\end{prob}
+
+\probgroup{计算下列积分：}
+
+\begin{prob}[S]{1981}
+$\displaystyle \int \sqrt{x^3 + x^4}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1982}
+$\displaystyle \int \frac{\sqrt{x}}{(1 + \sqrt[3]{x})^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1983}
+$\displaystyle \int \frac{x\,\mathrm{d}x}{\sqrt{1 + \sqrt[3]{x^2}}}$.
+\end{prob}
+
+\begin{prob}[S]{1984}
+$\displaystyle \int \frac{x^5\,\mathrm{d}x}{\sqrt{1 - x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{1985}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt[3]{1 + x^3}}$.
+\end{prob}
+
+\begin{prob}[S]{1986}
+$\displaystyle \int \frac{\mathrm{d}x}{\sqrt[4]{1 + x^4}}$.
+\end{prob}
+
+\begin{prob}[S]{1987}
+$\displaystyle \int \frac{\mathrm{d}x}{x\sqrt[6]{1 + x^6}}$.
+\end{prob}
+
+\begin{prob}[S]{1988}
+$\displaystyle \int \frac{\mathrm{d}x}{x^3\sqrt[5]{1 + \frac{1}{x}}}$.
+\end{prob}
+
+\begin{prob}[S]{1989}
+$\displaystyle \int \sqrt[3]{3x - x^3}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{1990}
+在什么情形下，积分
+\[
+\int \sqrt{1 + x^m}\,\mathrm{d}x \quad (m \text{ 为有理数})
+\]
+为初等函数？
+\end{prob}
+
+\probsec{§4. 三角函数的积分法}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{1991}
+$\displaystyle \int \cos^5 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1992}
+$\displaystyle \int \sin^6 x\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1993}
+$\int \cos^6 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1994}
+$\int \sin^2 x \cos^4 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1995}
+$\int \sin^4 x \cos^5 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1996}
+$\int \sin^5 x \cos^5 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1997}
+$\int \frac{\sin^3 x}{\cos^4 x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1998}
+$\int \frac{\cos^4 x}{\sin^3 x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{1999}
+$\int \frac{\mathrm{d}x}{\sin^3 x}$.
+\end{prob}
+
+\begin{prob}[S]{2000}
+$\int \frac{\mathrm{d}x}{\cos^3 x}$.
+\end{prob}
+
+\begin{prob}[S]{2001}
+$\int \frac{\mathrm{d}x}{\sin^4 x \cos^4 x}$.
+\end{prob}
+
+\begin{prob}[S]{2002}
+$\int \frac{\mathrm{d}x}{\sin^3 x \cos^5 x}$.
+\end{prob}
+
+\begin{prob}[S]{2003}
+$\int \frac{\mathrm{d}x}{\sin x \cos^4 x}$.
+\end{prob}
+
+\begin{prob}[S]{2004}
+$\int \tan^5 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2005}
+$\int \cot^6 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2006}
+$\int \frac{\sin^4 x}{\cos^6 x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2007}
+$\int \frac{\mathrm{d}x}{\sqrt{\sin^3 x \cos^5 x}}$.
+\end{prob}
+
+\begin{prob}[S]{2008}
+$\int \frac{\mathrm{d}x}{\cos x \sqrt[3]{\sin^2 x}}$.
+\end{prob}
+
+\begin{prob}[S]{2009}
+$\int \frac{\mathrm{d}x}{\sqrt{\tan x}}$.
+\end{prob}
+
+\begin{prob}[S]{2010}
+$\int \frac{\mathrm{d}x}{\sqrt[3]{\tan x}}$.
+\end{prob}
+
+\begin{prob}[M]{2011}
+推出下列积分的递推公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $I_n = \int \sin^n x \,\mathrm{d}x$;
+\item $K_n = \int \cos^n x \,\mathrm{d}x \quad (n > 2)$.
+\end{enumerate}
+利用这些公式计算
+\[
+\int \sin^6 x \,\mathrm{d}x \quad \text{和} \quad \int \cos^8 x \,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2012}
+推出下列积分的递推公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $I_n = \int \frac{\mathrm{d}x}{\sin^n x}$;
+\item $K_n = \int \frac{\mathrm{d}x}{\cos^n x} \quad (n > 2)$.
+\end{enumerate}
+利用这些公式计算
+\[
+\int \frac{\mathrm{d}x}{\sin^5 x} \quad \text{和} \quad \int \frac{\mathrm{d}x}{\cos^7 x}.
+\]
+\end{prob}
+
+\probgroup{为了计算下面的积分，可以运用公式：\\[3pt]
+I. $\sin\alpha \sin\beta = \frac{1}{2}[\cos(\alpha - \beta) - \cos(\alpha + \beta)]$;\\[3pt]
+II. $\cos\alpha \cos\beta = \frac{1}{2}[\cos(\alpha - \beta) + \cos(\alpha + \beta)]$;\\[3pt]
+III. $\sin\alpha \cos\beta = \frac{1}{2}[\sin(\alpha - \beta) + \sin(\alpha + \beta)]$.\\[3pt]
+求积分：}
+
+\begin{prob}[S]{2013}
+$\int \sin 5x \cos x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2014}
+$\int \cos x \cos 2x \cos 3x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2015}
+$\int \sin x \sin \frac{x}{2} \sin \frac{x}{3} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2016}
+$\int \sin x \sin(x + a) \sin(x + b) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2017}
+$\int \cos^2 ax \cos^2 bx \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2018}
+$\int \sin^3 2x \cdot \cos^2 3x \,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{为了计算下面的积分，可以运用恒等式：\\[3pt]
+$\sin(\alpha - \beta) \equiv \sin[(x + \alpha) - (x + \beta)]$,\\[3pt]
+$\cos(\alpha - \beta) \equiv \cos[(x + \alpha) - (x + \beta)]$.\\[3pt]
+求积分：}
+
+\begin{prob}[S]{2019}
+$\int \frac{\mathrm{d}x}{\sin(x + a)\sin(x + b)}$.
+\end{prob}
+
+\begin{prob}[S]{2020}
+$\int \frac{\mathrm{d}x}{\sin(x + a)\cos(x + b)}$.
+\end{prob}
+
+\begin{prob}[S]{2021}
+$\int \frac{\mathrm{d}x}{\cos(x + a)\cos(x + b)}$.
+\end{prob}
+
+\begin{prob}[S]{2022}
+$\int \frac{\mathrm{d}x}{\sin x - \sin a}$.
+\end{prob}
+
+\begin{prob}[S]{2023}
+$\int \frac{\mathrm{d}x}{\cos x + \cos a}$.
+\end{prob}
+
+\begin{prob}[S]{2024}
+$\int \tan x \tan(x + a) \,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{形如 $\int R(\sin x, \cos x)\,\mathrm{d}x$ ($R$ 为有理函数) 的积分，在一般情形下可利用代换 $\tan\frac{x}{2} = t$ 化为有理函数的积分。\\[3pt]
+(a) 若等式 $R(-\sin x, \cos x) \equiv -R(\sin x, \cos x)$ 或 $R(\sin x, -\cos x) \equiv -R(\sin x, \cos x)$ 成立，则最好利用相应的代换 $\cos x = t$ 或 $\sin x = t$.\\[3pt]
+(b) 若等式 $R(-\sin x, -\cos x) \equiv R(\sin x, \cos x)$ 成立，则最好利用代换 $\tan x = t$.\\[3pt]
+求积分：}
+
+\begin{prob}[S]{2025}
+$\int \frac{\mathrm{d}x}{2\sin x - \cos x + 5}$.
+\end{prob}
+
+\begin{prob}[S]{2026}
+$\int \frac{\mathrm{d}x}{(2 + \cos x)\sin x}$.
+\end{prob}
+
+\begin{prob}[S]{2027}
+$\int \frac{\sin^2 x}{\sin x + 2\cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2028}
+$\int \frac{\mathrm{d}x}{1 + \varepsilon \cos x}$, \quad (a) $0 < \varepsilon < 1$; \qquad (b) $\varepsilon > 1$.
+\end{prob}
+
+\begin{prob}[S]{2029}
+$\int \frac{\sin^2 x}{1 + \sin^2 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2030}
+$\int \frac{\mathrm{d}x}{a^2 \sin^2 x + b^2 \cos^2 x}$.
+\end{prob}
+
+\begin{prob}[S]{2031}
+$\int \frac{\cos^2 x \,\mathrm{d}x}{(a^2 \sin^2 x + b^2 \cos^2 x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2032}
+$\int \frac{\sin x \cos x}{\sin x + \cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2033}
+$\int \frac{\mathrm{d}x}{(a\sin x + b\cos x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2034}
+$\int \frac{\sin x \,\mathrm{d}x}{\sin^3 x + \cos^3 x}$.
+\end{prob}
+
+\begin{prob}[S]{2035}
+$\int \frac{\mathrm{d}x}{\sin^4 x + \cos^4 x}$.
+\end{prob}
+
+\begin{prob}[S]{2036}
+$\int \frac{\sin^2 x \cos^2 x}{\sin^8 x + \cos^8 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2037}
+$\int \frac{\sin^2 x - \cos^2 x}{\sin^4 x + \cos^4 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2038}
+$\int \frac{\sin x \cos x}{1 + \sin^4 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2039}
+$\int \frac{\mathrm{d}x}{\sin^6 x + \cos^6 x}$.
+\end{prob}
+
+\begin{prob}[S]{2040}
+$\int \frac{\mathrm{d}x}{(\sin^2 x + 2\cos^2 x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2041}
+把分母化为对数的形式，求积分
+\[
+\int \frac{\mathrm{d}x}{a\sin x + b\cos x}.
+\]
+\end{prob}
+
+\begin{prob}[M]{2042}
+证明：
+\[
+\int \frac{a_1 \sin x + b_1 \cos x}{a\sin x + b\cos x}\,\mathrm{d}x = Ax + B\ln |a\sin x + b\cos x| + C,
+\]
+式中 $A, B, C$ 为常数。
+\probhint{令 $a_1 \sin x + b_1 \cos x = A(a\sin x + b\cos x) + B(a\cos x - b\sin x)$，式中 $A$ 和 $B$ 为常数。}
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[M]{2043}
+(a) $\int \frac{\sin x - \cos x}{\sin x + 2\cos x}\,\mathrm{d}x$; \qquad (b) $\int \frac{\sin x}{\sin x - 3\cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2044}
+$\int \frac{\mathrm{d}x}{3 + 5\tan x}$.
+\end{prob}
+
+\begin{prob}[S]{2045}
+$\int \frac{a_1 \sin x + b_1 \cos x}{(a\sin x + b\cos x)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2046}
+证明：
+\[
+\int \frac{a_1 \sin x + b_1 \cos x + c_1}{a\sin x + b\cos x + c}\,\mathrm{d}x = Ax + B\ln |a\sin x + b\cos x + c| + C\int \frac{\mathrm{d}x}{a\sin x + b\cos x + c},
+\]
+式中 $A, B, C$ 都是常系数。
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2047}
+$\int \frac{\sin x + 2\cos x - 3}{\sin x - 2\cos x + 3}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2048}
+$\int \frac{\sin x}{\sqrt{2} + \sin x + \cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2049}
+$\int \frac{2\sin x + \cos x}{3\sin x + 4\cos x - 2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2050}
+证明：
+\[
+\int \frac{a_1 \sin^2 x + 2b_1 \sin x \cos x + c_1 \cos^2 x}{a\sin x + b\cos x}\,\mathrm{d}x = A\sin x + B\cos x + C\int \frac{\mathrm{d}x}{a\sin x + b\cos x},
+\]
+式中 $A, B, C$ 都是常系数。
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2051}
+$\int \frac{\sin^2 x - 4\sin x \cos x + 3\cos^2 x}{\sin x + \cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2052}
+$\int \frac{\sin^2 x - \sin x \cos x + 2\cos^2 x}{\sin x + 2\cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2053}
+证明：若 $(a - c)^2 + b^2 \neq 0$，则
+\[
+\int \frac{a_1 \sin x + b_1 \cos x}{a\sin^2 x + 2b\sin x \cos x + c\cos^2 x}\,\mathrm{d}x = A\int \frac{\mathrm{d}u_1}{k_1 u_1^2 + \lambda_1} + B\int \frac{\mathrm{d}u_2}{k_2 u_2^2 + \lambda_2},
+\]
+式中 $A, B$ 为待定系数，$\lambda_1, \lambda_2$ 为方程
+\[
+\begin{vmatrix}
+a - \lambda & b \\
+b & c - \lambda
+\end{vmatrix} = 0 \quad (\lambda_1 \neq \lambda_2)
+\]
+的根，而
+\[
+u_i = (a - \lambda_i)\sin x + b\cos x, \quad k_i = \frac{1}{a - \lambda_i} \quad (i = 1, 2).
+\]
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2054}
+$\int \frac{2\sin x - \cos x}{3\sin^2 x + 4\cos^2 x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2055}
+$\int \frac{(\sin x + \cos x)\,\mathrm{d}x}{2\sin^2 x - 4\sin x \cos x + 5\cos^2 x}$.
+\end{prob}
+
+\begin{prob}[S]{2056}
+$\int \frac{\sin x - 2\cos x}{1 + 4\sin x \cos x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2057}
+证明：
+\[
+\int \frac{\mathrm{d}x}{(a\sin x + b\cos x)^n} = \frac{A\sin x + B\cos x}{(a\sin x + b\cos x)^{n-1}} + C\int \frac{\mathrm{d}x}{(a\sin x + b\cos x)^{n-2}},
+\]
+式中 $A, B, C$ 为待定系数。
+\end{prob}
+
+\begin{prob}[S]{2058}
+求 $\int \frac{\mathrm{d}x}{(\sin x + 2\cos x)^3}$.
+\end{prob}
+
+\begin{prob}[M]{2059}
+若 $n$ 为大于 $1$ 的正整数，证明：
+\[
+\int \frac{\mathrm{d}x}{(a + b\cos x)^n} = \frac{A\sin x}{(a + b\cos x)^{n-1}} + B\int \frac{\mathrm{d}x}{(a + b\cos x)^{n-1}} + C\int \frac{\mathrm{d}x}{(a + b\cos x)^{n-2}},
+\]
+其中 $|a| \neq |b|$，并求出系数 $A, B$ 和 $C$。
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2060}
+$\int \frac{\sin x \,\mathrm{d}x}{\cos x \sqrt{1 + \sin^2 x}}$.
+\end{prob}
+
+\begin{prob}[S]{2061}
+$\int \frac{\sin^2 x}{\cos^2 x \sqrt{\tan x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2062}
+$\int \frac{\sin x \,\mathrm{d}x}{\sqrt{2 + \sin 2x}}$.
+\end{prob}
+
+\begin{prob}[S]{2063}
+$\int \frac{\mathrm{d}x}{(1 + \varepsilon \cos x)^2} \quad (0 < \varepsilon < 1)$.
+\end{prob}
+
+\begin{prob}[M]{2064}
+$\int \frac{\cos^{n-1} \frac{x + a}{2}}{\sin^{n+1} \frac{x - a}{2}}\,\mathrm{d}x$.
+\probhint{令 $t = \frac{\cos \frac{x + a}{2}}{\sin \frac{x - a}{2}}$。}
+\end{prob}
+
+\begin{prob}[M]{2065}
+推出积分
+\[
+I_n = \int \left(\frac{\sin \frac{x - a}{2}}{\sin \frac{x + a}{2}}\right)^n \mathrm{d}x \quad (n \text{ 为正整数})
+\]
+的递推公式。
+\end{prob}
+
+\probsec{§5. 各种超越函数的积分法}
+
+\begin{prob}[M]{2066}
+证明：若 $P(x)$ 为 $n$ 次多项式，则
+\[
+\int P(x)\mathrm{e}^{ax}\,\mathrm{d}x = \mathrm{e}^{ax}\left[\frac{P(x)}{a} - \frac{P'(x)}{a^2} + \cdots + (-1)^n \frac{P^{(n)}(x)}{a^{n+1}}\right] + C.
+\]
+\end{prob}
+
+\begin{prob}[M]{2067}
+证明：若 $P(x)$ 为 $n$ 次多项式，则
+\begin{align*}
+\int P(x)\cos ax\,\mathrm{d}x &= \frac{\sin ax}{a}\left[P(x) - \frac{P''(x)}{a^2} + \frac{P^{(4)}(x)}{a^4} - \cdots\right] \\
+&\quad + \frac{\cos ax}{a^2}\left[P'(x) - \frac{P'''(x)}{a^2} + \frac{P^{(5)}(x)}{a^4} - \cdots\right] + C, \\
+\int P(x)\sin ax\,\mathrm{d}x &= -\frac{\cos ax}{a}\left[P(x) - \frac{P''(x)}{a^2} + \frac{P^{(4)}(x)}{a^4} - \cdots\right] \\
+&\quad + \frac{\sin ax}{a^2}\left[P'(x) - \frac{P'''(x)}{a^2} + \frac{P^{(5)}(x)}{a^4} - \cdots\right] + C.
+\end{align*}
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2068}
+$\int x^3 \mathrm{e}^{3x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2069}
+$\int (x^2 - 2x + 2)\mathrm{e}^{-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2070}
+$\int x^5 \sin 5x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2071}
+$\int (1 + x^2)^2 \cos x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2072}
+$\int x^7 \mathrm{e}^{-x^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2073}
+$\int x^2 \mathrm{e}^{\sqrt{x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2074}
+$\int \mathrm{e}^{ax} \cos^2 bx \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2075}
+$\int \mathrm{e}^{ax} \sin^3 bx \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2076}
+$\int x \mathrm{e}^x \sin x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2077}
+$\int x^2 \mathrm{e}^x \cos x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2078}
+$\int x \mathrm{e}^x \sin^2 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2079}
+$\int (x - \sin x)^3 \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2080}
+$\int \cos^2 \sqrt{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2081}
+证明：若 $R$ 为有理函数，数 $a_1, a_2, \cdots, a_n$ 为可公约的，则积分
+\[
+\int R(\mathrm{e}^{a_1 x}, \mathrm{e}^{a_2 x}, \cdots, \mathrm{e}^{a_n x})\,\mathrm{d}x
+\]
+是初等函数。
+\end{prob}
+
+\probgroup{求下列积分：}
+
+\begin{prob}[S]{2082}
+$\int \frac{\mathrm{d}x}{(1 + \mathrm{e}^x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2083}
+$\int \frac{\mathrm{e}^{2x}}{1 + \mathrm{e}^x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2084}
+$\int \frac{\mathrm{d}x}{\mathrm{e}^{2x} + \mathrm{e}^x - 2}$.
+\end{prob}
+
+\begin{prob}[S]{2085}
+$\int \frac{\mathrm{d}x}{1 + \mathrm{e}^{\frac{x}{2}} + \mathrm{e}^{\frac{x}{3}} + \mathrm{e}^{\frac{x}{6}}}$.
+\end{prob}
+
+\begin{prob}[S]{2086}
+$\int \frac{1 + \mathrm{e}^{\frac{x}{2}}}{\left(1 + \mathrm{e}^{\frac{x}{4}}\right)^2}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2087}
+$\int \frac{\mathrm{d}x}{\sqrt{\mathrm{e}^x - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{2088}
+$\int \sqrt{\frac{\mathrm{e}^x - 1}{\mathrm{e}^x + 1}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2089}
+$\int \sqrt{\mathrm{e}^{2x} + 4\mathrm{e}^x - 1} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2090}
+$\int \frac{\mathrm{d}x}{\sqrt{1 + \mathrm{e}^x} + \sqrt{1 - \mathrm{e}^x}}$.
+\end{prob}
+
+\begin{prob}[M]{2091}
+证明: 若 $R$ 为有理函数, 其分母仅有实根, 则积分
+\[
+\int R(x)\mathrm{e}^{ax} \,\mathrm{d}x
+\]
+可用初等函数和超越函数
+\[
+\int \frac{\mathrm{e}^{ax}}{x} \,\mathrm{d}x = \operatorname{li}(\mathrm{e}^{ax}) + C, \quad \text{式中 } \operatorname{li} x = \int \frac{\mathrm{d}x}{\ln x}
+\]
+来表示.
+\end{prob}
+
+\begin{prob}[M]{2092}
+若 $P\left(\frac{1}{x}\right) = a_0 + \frac{a_1}{x} + \cdots + \frac{a_n}{x^n}$, $a_0, a_1, \cdots, a_n$ 为常数, 则在什么情形下, 积分
+\[
+\int P\left(\frac{1}{x}\right) \mathrm{e}^x \,\mathrm{d}x
+\]
+为初等函数?
+\end{prob}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2093}
+$\int \left(1 - \frac{2}{x}\right)^2 \mathrm{e}^x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2094}
+$\int \left(1 - \frac{1}{x}\right) \mathrm{e}^{-x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2095}
+$\int \frac{\mathrm{e}^{2x}}{x^2 - 3x + 2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2096}
+$\int \frac{x\mathrm{e}^x}{(x + 1)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2097}
+$\int \frac{x^4 \mathrm{e}^{2x}}{(x - 2)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\probgroup{求含有 $\ln f(x)$, $\arctan f(x)$, $\arcsin f(x)$, $\arccos f(x)$ 等函数的积分, 其中 $f(x)$ 为代数函数：}
+
+\begin{prob}[S]{2098}
+$\int \ln^n x \,\mathrm{d}x \ (n \text{ 为正整数})$.
+\end{prob}
+
+\begin{prob}[S]{2099}
+$\int x^3 \ln^3 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2100}
+$\int \left(\frac{\ln x}{x}\right)^3 \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2101}
+$\int \ln \left[(x + a)^{x + a}(x + b)^{x + b}\right] \frac{\mathrm{d}x}{(x + a)(x + b)}$.
+\end{prob}
+
+\begin{prob}[S]{2102}
+$\int \ln^2(x + \sqrt{1 + x^2}) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2103}
+$\int \ln(\sqrt{1 - x} + \sqrt{1 + x}) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2104}
+$\int \frac{\ln x}{(1 + x^2)^{\frac{3}{2}}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2105}
+$\int x \arctan(x + 1) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2106}
+$\int \sqrt{x} \arctan \sqrt{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2107}
+$\int x \arcsin(1 - x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2108}
+$\int \arcsin \sqrt{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2109}
+$\int x \arccos \frac{1}{x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2110}
+$\int \arcsin \frac{2\sqrt{x}}{1 + x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2111}
+$\int \frac{\arccos x}{(1 - x^2)^{\frac{3}{2}}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2112}
+$\int \frac{x \arccos x}{(1 - x^2)^{\frac{3}{2}}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2113}
+$\int x \arctan x \ln(1 + x^2) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2114}
+$\int x \ln \frac{1 + x}{1 - x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2115}
+$\int \frac{\ln(x + \sqrt{1 + x^2}) \,\mathrm{d}x}{(1 + x^2)^{\frac{3}{2}}}$.
+\end{prob}
+
+\probgroup{求含有双曲函数的积分：}
+
+\begin{prob}[S]{2116}
+$\int \sinh^2 x \cosh^2 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2117}
+$\int \cosh^4 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2118}
+$\int \sinh^3 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2119}
+$\int \sinh x \sinh 2x \sinh 3x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2120}
+$\int \tanh x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2121}
+$\int \coth^2 x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2122}
+$\int \sqrt{\tanh x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[L]{2123}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\int \frac{\mathrm{d}x}{\sinh x + 2\cosh x}$;
+  \item $\int \frac{\mathrm{d}x}{\sinh^2 x - 4\sinh x \cosh x + 9\cosh^2 x}$;
+  \item $\int \frac{\mathrm{d}x}{0.1 + \cosh x}$;
+  \item $\int \frac{\cosh x \,\mathrm{d}x}{3\sinh x - 4\cosh x}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2124}
+$\int \sinh ax \sin bx \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2125}
+$\int \sinh ax \cos bx \,\mathrm{d}x$.
+\end{prob}
+
+\probsec{§6. 求函数积分的各种例子}
+
+\probgroup{求积分：}
+
+\begin{prob}[S]{2126}
+$\int \frac{\mathrm{d}x}{x^6(1 + x^2)}$.
+\end{prob}
+
+\begin{prob}[S]{2127}
+$\int \frac{x^2 \,\mathrm{d}x}{(1 - x^2)^3}$.
+\end{prob}
+
+\begin{prob}[S]{2128}
+$\int \frac{\mathrm{d}x}{1 + x^4 + x^8}$.
+\end{prob}
+
+\begin{prob}[S]{2129}
+$\int \frac{\mathrm{d}x}{\sqrt{x} + \sqrt[3]{x}}$.
+\end{prob}
+
+\begin{prob}[S]{2130}
+$\int x^2 \sqrt{\frac{x}{1 - x}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2131}
+$\int \frac{x + 2}{x^2 \sqrt{1 - x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2132}
+$\int \sqrt{\frac{x}{1 - x\sqrt{x}}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2133}
+$\int \frac{x^5 \,\mathrm{d}x}{\sqrt{1 + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2134}
+$\int \frac{\mathrm{d}x}{\sqrt[3]{x^2(1 - x)}}$.
+\end{prob}
+
+\begin{prob}[S]{2135}
+$\int \frac{\mathrm{d}x}{x\sqrt{1 + x^3 + x^6}}$.
+\end{prob}
+
+\begin{prob}[S]{2136}
+$\int \frac{\mathrm{d}x}{x\sqrt{x^4 - 2x^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{2137}
+$\int \frac{1 + \sqrt{1 - x^2}}{1 - \sqrt{1 - x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2138}
+$\int \frac{(1 + x) \,\mathrm{d}x}{x + \sqrt{x + x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2139}
+$\int \frac{\ln(1 + x + x^2)}{(1 + x)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2140}
+$\int (2x + 3)\arccos(2x - 3) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2141}
+$\int x \ln(4 + x^4) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2142}
+$\int \frac{\arcsin x}{x^2} \cdot \frac{1 + x^2}{\sqrt{1 - x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2143}
+$\int \frac{x \ln(1 + \sqrt{1 + x^2})}{\sqrt{1 + x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2144}
+$\int x\sqrt{x^2 + 1} \ln\sqrt{x^2 - 1} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2145}
+$\int \frac{x}{\sqrt{1 - x^2}} \ln \frac{x}{\sqrt{1 - x}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2146}
+$\int \frac{\mathrm{d}x}{(2 + \sin x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2147}
+$\int \frac{\sin 4x}{\sin^8 x + \cos^8 x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2148}
+$\int \frac{\mathrm{d}x}{\sin x \sqrt{1 + \cos x}}$.
+\end{prob}
+
+\begin{prob}[S]{2149}
+$\int \frac{ax^2 + b}{x^2 + 1} \arctan x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2150}
+$\int \frac{ax^2 + b}{x^2 - 1} \ln \left|\frac{x - 1}{x + 1}\right| \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2151}
+$\int \frac{x \ln x}{(1 + x^2)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2152}
+$\int \frac{x \arctan x}{\sqrt{1 + x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2153}
+$\int \frac{\sin 2x}{\sqrt{1 + \cos^4 x}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2154}
+$\int \frac{x^3 \arccos x}{\sqrt{1 - x^2}} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2155}
+$\int \frac{x^4 \arctan x}{1 + x^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2156}
+$\int \frac{x \arctan x}{(1 + x^2)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2157}
+$\int \frac{x \ln(x + \sqrt{1 + x^2})}{(1 - x^2)^2} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2158}
+$\int \sqrt{1 - x^2} \arcsin x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2159}
+$\int x(1 + x^2)\operatorname{arccot} x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2160}
+$\int x^x(1 + \ln x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2161}
+$\int \frac{\arcsin \mathrm{e}^x}{\mathrm{e}^x} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2162}
+$\int \frac{\arctan \mathrm{e}^{\frac{x}{2}}}{\mathrm{e}^{\frac{x}{2}}(1 + \mathrm{e}^x)} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2163}
+$\int \frac{\mathrm{d}x}{(\mathrm{e}^{x + 1} + 1)^2 - (\mathrm{e}^{x - 1} + 1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2164}
+$\int \sqrt{\tanh^2 x + 1} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2165}
+$\int \frac{1 + \sin x}{1 + \cos x} \mathrm{e}^x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2166}
+$\int |x| \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2167}
+$\int x|x| \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2168}
+$\int (x + |x|)^2 \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2169}
+$\int \{|1 + x| - |1 - x|\} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2170}
+$\int \mathrm{e}^{-|x|} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2171}
+$\int \max(1, x^2) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{2172}
+$\int \varphi(x) \,\mathrm{d}x$, 其中 $\varphi(x)$ 为数 $x$ 到最近整数的距离.
+\end{prob}
+
+\begin{prob}[M]{2173}
+$\int [x]|\sin \pi x| \,\mathrm{d}x \ (x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[M]{2174}
+$\int f(x) \,\mathrm{d}x$, 其中
+$f(x) = \begin{cases} 1 - x^2, & |x| \leqslant 1, \\ 1 - |x|, & |x| > 1. \end{cases}$
+\end{prob}
+
+\begin{prob}[M]{2175}
+$\int f(x) \,\mathrm{d}x$, 式中
+$f(x) = \begin{cases} 1, & -\infty < x < 0, \\ x + 1, & 0 \leqslant x \leqslant 1, \\ 2x, & 1 < x < +\infty. \end{cases}$
+\end{prob}
+
+\begin{prob}[S]{2176}
+求 $\int x f''(x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2177}
+求 $\int f'(2x) \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2178}
+设 $f'(x^2) = \frac{1}{x} \ (x > 0)$, 求 $f(x)$.
+\end{prob}
+
+\begin{prob}[M]{2179}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 设 $f'(\sin^2 x) = \cos^2 x$, 求 $f(x)$.
+  \item 设 $f'(\ln x) = \begin{cases} 1, & 0 < x \leqslant 1, \\ x, & 1 < x < +\infty, \end{cases}$ 且 $f(0) = 0$, 求 $f(x)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2180}
+设 $f(x)$ 为单调的连续函数, $f^{-1}(x)$ 为其反函数. 证明: 若
+\[
+\int f(x) \,\mathrm{d}x = F(x) + C,
+\]
+则
+\[
+\int f^{-1}(x) \,\mathrm{d}x = x f^{-1}(x) - F(f^{-1}(x)) + C.
+\]
+研究例子:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $f(x) = x^n \ (n > 0)$;
+  \item $f(x) = \mathrm{e}^x$;
+  \item $f(x) = \arcsin x$;
+  \item $f(x) = \operatorname{artanh} x$.
+\end{enumerate}
+\end{prob}

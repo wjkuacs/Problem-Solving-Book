@@ -1,0 +1,3360 @@
+\probchapter{第五章\quad 级数}
+
+\probsec{§1. 数项级数. 同号级数收敛性的判别法}
+
+\probgroup{直接证明下列级数的收敛性并求它们的和：}
+
+\begin{prob}[S]{2546}
+$1 - \dfrac{1}{2} + \dfrac{1}{4} - \dfrac{1}{8} + \cdots + \dfrac{(-1)^{n-1}}{2^{n-1}} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2547}
+$\left(\dfrac{1}{2} + \dfrac{1}{3}\right) + \left(\dfrac{1}{2^2} + \dfrac{1}{3^2}\right) + \cdots + \left(\dfrac{1}{2^n} + \dfrac{1}{3^n}\right) + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2548}
+$\dfrac{1}{2} + \dfrac{3}{2^2} + \dfrac{5}{2^3} + \cdots + \dfrac{2n - 1}{2^n} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2549}
+$\dfrac{1}{1 \cdot 2} + \dfrac{1}{2 \cdot 3} + \dfrac{1}{3 \cdot 4} + \cdots + \dfrac{1}{n(n+1)} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2550}
+$\dfrac{1}{1 \cdot 4} + \dfrac{1}{4 \cdot 7} + \cdots + \dfrac{1}{(3n - 2)(3n + 1)} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2551}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $q\sin\alpha + q^2\sin 2\alpha + \cdots + q^n\sin n\alpha + \cdots$ ($|q| < 1$);
+  \item $q\cos\alpha + q^2\cos 2\alpha + \cdots + q^n\cos n\alpha + \cdots$ ($|q| < 1$).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2552}
+$\sum_{n=1}^{\infty} (\sqrt{n+2} - 2\sqrt{n+1} + \sqrt{n})$.
+\end{prob}
+
+\begin{prob}[M]{2553}
+研究级数 $\sum_{n=1}^{\infty} \sin nx$ 的收敛性.
+\probhint{证明：当 $x \neq k\pi$ ($k$ 是整数) 时，要 $\sin nx \to 0$ ($n \to \infty$) 是不可能的.}
+\end{prob}
+
+\begin{prob}[M]{2554}
+证明：若级数 $\sum_{n=1}^{\infty} a_n$ 收敛，则把该级数的各项在不变更其先后次序的情况下分别组合起来，所得级数
+\[
+\sum_{n=1}^{\infty} A_n \quad \left(\text{其中 } A_n = \sum_{i=p_n}^{p_{n+1}-1} a_i \ (p_1 = 1, p_1 < p_2 < \cdots)\right),
+\]
+也收敛且有相同的和. 反之不真. 举出例子.
+\end{prob}
+
+\begin{prob}[M]{2555}
+证明：若级数 $\sum_{n=1}^{\infty} a_n$ 的各项是正的，且把这级数的各项分别组合而得到的级数 $\sum_{n=1}^{\infty} A_n$ 收敛，则原来的级数 $\sum_{n=1}^{\infty} a_n$ 也收敛.
+\end{prob}
+
+\probgroup{研究下列级数的收敛性：}
+
+\begin{prob}[S]{2556}
+$1 - 1 + 1 - 1 + 1 - 1 + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2557}
+$0.001 + \sqrt{0.001} + \sqrt[3]{0.001} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2558}
+$\dfrac{1}{1!} + \dfrac{1}{2!} + \dfrac{1}{3!} + \cdots + \dfrac{1}{n!} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2559}
+$1 + \dfrac{1}{3} + \dfrac{1}{5} + \dfrac{1}{7} + \cdots + \dfrac{1}{2n - 1} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2560}
+$\dfrac{1}{1001} + \dfrac{1}{2001} + \dfrac{1}{3001} + \cdots + \dfrac{1}{1000n + 1} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2561}
+$1 + \dfrac{2}{3} + \dfrac{3}{5} + \cdots + \dfrac{n}{2n - 1} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2562}
+$1 + \dfrac{1}{3^2} + \dfrac{1}{5^2} + \cdots + \dfrac{1}{(2n - 1)^2} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2563}
+$\dfrac{1}{\sqrt{2}} + \dfrac{1}{2\sqrt{3}} + \dfrac{1}{3\sqrt{4}} + \cdots + \dfrac{1}{n\sqrt{n+1}} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2564}
+$\dfrac{1}{\sqrt{1 \cdot 3}} + \dfrac{1}{\sqrt{3 \cdot 5}} + \cdots + \dfrac{1}{\sqrt{(2n - 1)(2n + 1)}} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2565}
+证明：由等差数列各项的倒数组成的级数是发散的.
+\end{prob}
+
+\begin{prob}[M]{2566}
+证明：若级数 $\sum_{n=1}^{\infty} a_n$ (A) 及 $\sum_{n=1}^{\infty} b_n$ (B) 皆收敛且 $a_n \leqslant c_n \leqslant b_n$ ($n = 1, 2, \cdots$)，则级数 $\sum_{n=1}^{\infty} c_n$ (C) 也收敛. 若级数 (A) 和 (B) 皆发散，问级数 (C) 的收敛性若何？
+\end{prob}
+
+\begin{prob}[M]{2567}
+设已知二发散级数
+\[
+\sum_{n=1}^{\infty} a_n \quad \text{及} \quad \sum_{n=1}^{\infty} b_n
+\]
+的各项不为负数，问下列级数的收敛性若何：
+(a) $\sum_{n=1}^{\infty} \min(a_n, b_n)$ 及 (b) $\sum_{n=1}^{\infty} \max(a_n, b_n)$？
+\end{prob}
+
+\begin{prob}[M]{2568}
+证明：若级数 $\sum_{n=1}^{\infty} a_n$ ($a_n \geqslant 0$) 收敛，则级数 $\sum_{n=1}^{\infty} a_n^2$ 也收敛. 逆命题不成立，举出例子.
+\end{prob}
+
+\begin{prob}[M]{2569}
+证明：若级数 $\sum_{n=1}^{\infty} a_n^2$ 及 $\sum_{n=1}^{\infty} b_n^2$ 收敛，则级数
+\[
+\sum_{n=1}^{\infty} |a_n b_n|, \quad \sum_{n=1}^{\infty} (a_n + b_n)^2, \quad \sum_{n=1}^{\infty} \frac{|a_n|}{n}
+\]
+也收敛.
+\end{prob}
+
+\begin{prob}[M]{2570}
+证明：若
+\[
+\lim_{n \to \infty} n a_n = a \neq 0,
+\]
+则级数 $\sum_{n=1}^{\infty} a_n$ 发散.
+\end{prob}
+
+\begin{prob}[M]{2571}
+证明：若各项为正且其值单调递减的级数 $\sum_{n=1}^{\infty} a_n$ 收敛，则
+\[
+\lim_{n \to \infty} n a_n = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{2572}
+若当 $p = 1, 2, 3, \cdots$ 时 $\lim_{n \to \infty} (a_{n+1} + a_{n+2} + \cdots + a_{n+p}) = 0$，问级数 $\sum_{n=1}^{\infty} a_n$ 是否收敛？
+\end{prob}
+
+\probgroup{利用柯西准则，证明下列正项级数的收敛性：}
+
+\begin{prob}[S]{2573}
+$a_0 + \dfrac{a_1}{10} + \cdots + \dfrac{a_n}{10^n} + \cdots$ ($|a_n| < 10$).
+\end{prob}
+
+\begin{prob}[S]{2574}
+$\dfrac{\sin x}{2} + \dfrac{\sin 2x}{2^2} + \cdots + \dfrac{\sin nx}{2^n} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2575.1}
+$\dfrac{\cos x - \cos 2x}{1} + \dfrac{\cos 2x - \cos 3x}{2} + \cdots + \dfrac{\cos nx - \cos(n+1)x}{n} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2575.2}
+$\dfrac{\cos x}{1^2} + \dfrac{\cos x^2}{2^2} + \cdots + \dfrac{\cos x^n}{n^2} + \cdots$.
+\probhint{利用不等式
+\[
+\frac{1}{n^2} < \frac{1}{n(n-1)} = \frac{1}{n-1} - \frac{1}{n} \quad (n = 2, 3, \cdots).
+\]}
+\end{prob}
+
+\probgroup{利用柯西准则，证明下列级数的发散性：}
+
+\begin{prob}[S]{2576}
+$1 + \dfrac{1}{2} + \dfrac{1}{3} + \cdots + \dfrac{1}{n} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2577}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $1 + \dfrac{1}{2} - \dfrac{1}{3} + \dfrac{1}{4} + \dfrac{1}{5} - \dfrac{1}{6} + \cdots$;
+  \item $\dfrac{1}{\sqrt{1 \cdot 2}} + \dfrac{1}{\sqrt{2 \cdot 3}} + \cdots + \dfrac{1}{\sqrt{n(n+1)}} + \cdots$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{运用比较判别法、达朗贝尔判别法或柯西判别法，研究下列级数的收敛性：}
+
+\begin{prob}[S]{2578}
+$\dfrac{1000}{1!} + \dfrac{1000^2}{2!} + \dfrac{1000^3}{3!} + \cdots + \dfrac{1000^n}{n!} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2579}
+$\dfrac{(1!)^2}{2!} + \dfrac{(2!)^2}{4!} + \cdots + \dfrac{(n!)^2}{(2n)!} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2580}
+$\dfrac{1!}{1} + \dfrac{2!}{2^2} + \dfrac{3!}{3^3} + \cdots + \dfrac{n!}{n^n} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2581}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\dfrac{2 \cdot 1!}{1} + \dfrac{2^2 \cdot 2!}{2^2} + \dfrac{2^3 \cdot 3!}{3^3} + \cdots + \dfrac{2^n n!}{n^n} + \cdots$;
+  \item $\dfrac{3 \cdot 1!}{1} + \dfrac{3^2 \cdot 2!}{2^2} + \dfrac{3^3 \cdot 3!}{3^3} + \cdots + \dfrac{3^n n!}{n^n} + \cdots$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2582}
+$\dfrac{(1!)^2}{2} + \dfrac{(2!)^2}{2^4} + \dfrac{(3!)^2}{2^9} + \cdots + \dfrac{(n!)^2}{2^{n^2}} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2583}
+$\dfrac{1000}{1} + \dfrac{1000 \cdot 1001}{1 \cdot 3} + \dfrac{1000 \cdot 1001 \cdot 1002}{1 \cdot 3 \cdot 5} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2584}
+$\dfrac{4}{2} + \dfrac{4 \cdot 7}{2 \cdot 6} + \dfrac{4 \cdot 7 \cdot 10}{2 \cdot 6 \cdot 10} + \cdots$.
+\end{prob}
+
+\begin{prob}[L]{2585}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\sum_{n=1}^{\infty} (\sqrt{2} - \sqrt[3]{2})(\sqrt{2} - \sqrt[5]{2}) \cdots (\sqrt{2} - \sqrt[2n+1]{2})$;
+  \item $\sum_{n=1}^{\infty} a_n$，其中 $a_n = \begin{cases} \dfrac{1}{n}, & n = m^2, \\ \dfrac{1}{n^2}, & n \neq m^2 \end{cases}$ ($m$ 为正整数);
+  \item $\sum_{n=1}^{\infty} nx \prod_{k=1}^{n} \dfrac{\sin^2 k\alpha}{1 + x^2 + \cos^2 k\alpha}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2586}
+$\sum_{n=1}^{\infty} \dfrac{n^2}{\left(2 + \dfrac{1}{n}\right)^n}$.
+\end{prob}
+
+\begin{prob}[S]{2587}
+$\sum_{n=1}^{\infty} \dfrac{n^{n + \frac{1}{n}}}{\left(n + \dfrac{1}{n}\right)^n}$.
+\end{prob}
+
+\begin{prob}[S]{2588}
+$\sum_{n=1}^{\infty} \dfrac{1}{\sqrt[n]{\ln n}}$.
+\end{prob}
+
+\begin{prob}[L]{2589}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\sum_{n=1}^{\infty} \dfrac{n^{n-1}}{(2n^2 + n + 1)^{\frac{n+1}{2}}}$;
+  \item $\sum_{n=1}^{\infty} \dfrac{n^5}{2^n + 3^n}$;
+  \item $\sum_{n=2}^{\infty} \left(\dfrac{n - 1}{n + 1}\right)^{n(n-1)}$;
+  \item $\sqrt{2} + \sqrt{2 - \sqrt{2}} + \sqrt{2 - \sqrt{2 + \sqrt{2}}} + \sqrt{2 - \sqrt{2 + \sqrt{2 + \sqrt{2}}}} + \cdots$.
+\end{enumerate}
+\probhint{$\sqrt{2} = 2\cos\dfrac{\pi}{4}$.}
+\end{prob}
+
+\begin{prob}[M]{2590}
+证明：若
+\[
+\lim_{n \to \infty} \frac{a_{n+1}}{a_n} = q \quad (a_n > 0),
+\]
+则 $a_n = o(q_1^n)$，其中 $q_1 > q$.
+\end{prob}
+
+\begin{prob}[M]{2591.1}
+设正项级数 $\sum_{n=1}^{\infty} a_n$ ($a_n > 0$) 的各项在 $n \geqslant n_0$ 时满足不等式
+\[
+\frac{a_{n+1}}{a_n} \leqslant \rho < 1.
+\]
+证明：对于级数的余项
+\[
+R_n = a_{n+1} + a_{n+2} + \cdots
+\]
+在 $n \geqslant n_0$ 时有以下估计：
+\[
+R_n \leqslant a_{n_0} \cdot \frac{\rho^{n - n_0 + 1}}{1 - \rho}.
+\]
+\end{prob}
+
+\begin{prob}[M]{2591.2}
+已知级数
+\[
+\sum_{n=1}^{\infty} \frac{[(2n)!!]^2}{(4n)!!},
+\]
+其中 $(2n)!! = 2 \cdot 4 \cdots 2n$. 为使此级数的和与部分和 $S_n$ 之差小于 $\varepsilon = 10^{-6}$, 应取多少项方可?
+\end{prob}
+
+\begin{prob}[M]{2592}
+证明: 若
+\[
+\overline{\lim}_{n\to\infty} \frac{a_{n+1}}{a_n} = q < 1 \quad (a_n > 0),
+\]
+则级数 $\sum_{n=1}^{\infty} a_n$ 收敛.
+
+逆命题不成立. 研究例子
+\[
+\frac{1}{2} + \frac{1}{3} + \frac{1}{2^2} + \frac{1}{3^2} + \frac{1}{2^3} + \frac{1}{3^3} + \cdots.
+\]
+\end{prob}
+
+\begin{prob}[M]{2593}
+证明: 若对于级数 $\sum_{n=1}^{\infty} a_n$ ($a_n > 0$) 存在极限
+\[
+\lim_{n\to\infty} \frac{a_{n+1}}{a_n} = q, \tag{A}
+\]
+则
+\[
+\lim_{n\to\infty} \sqrt[n]{a_n} = q \tag{B}
+\]
+也存在.
+
+逆命题不成立: 若极限 (B) 存在, 则极限 (A) 可以不存在. 研究例子
+\[
+\sum_{n=1}^{\infty} \frac{3 + (-1)^n}{2^{n+1}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{2594}
+证明: 若
+\[
+\overline{\lim}_{n\to\infty} \sqrt[n]{a_n} = q \quad (a_n \geqslant 0),
+\]
+则 (a) 当 $q < 1$ 时级数 $\sum_{n=1}^{\infty} a_n$ 收敛; (b) 当 $q > 1$ 时该级数发散 (柯西判别法的推广).
+\end{prob}
+
+\probgroup{研究下列级数的收敛性：}
+
+\begin{prob}[S]{2595}
+$\sum_{n=1}^{\infty} \frac{2 + (-1)^n}{2^n}$.
+\end{prob}
+
+\begin{prob}[S]{2596}
+$\sum_{n=1}^{\infty} \frac{n \cos^2 \frac{n\pi}{3}}{2^n}$.
+\end{prob}
+
+\begin{prob}[M]{2597}
+(a) $\sum_{n=1}^{\infty} \frac{n^3 [\sqrt{2} + (-1)^n]^n}{3^n}$; \qquad (b) $\sum_{n=1}^{\infty} \left(\frac{1 + \cos n}{2 + \cos n}\right)^{2n - \ln n}$.
+\end{prob}
+
+\probgroup{利用拉比判别法和高斯判别法，研究下列级数的收敛性：}
+
+\begin{prob}[S]{2598}
+$\left(\frac{1}{2}\right)^p + \left(\frac{1 \cdot 3}{2 \cdot 4}\right)^p + \left(\frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6}\right)^p + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2599}
+$\frac{a}{b} + \frac{a(a+d)}{b(b+d)} + \frac{a(a+d)(a+2d)}{b(b+d)(b+2d)} + \cdots$ ($a > 0, b > 0, d > 0$).
+\end{prob}
+
+\begin{prob}[S]{2600}
+$\sum_{n=1}^{\infty} \frac{n!\mathrm{e}^n}{n^{n+p}}$.
+\end{prob}
+
+\begin{prob}[S]{2601}
+$\sum_{n=1}^{\infty} \frac{\sqrt{n!}}{(2+\sqrt{1})(2+\sqrt{2})\cdots(2+\sqrt{n})}$.
+\end{prob}
+
+\begin{prob}[S]{2602}
+$\sum_{n=1}^{\infty} \frac{n! n^{-p}}{q(q+1)\cdots(q+n)}$ ($p > 0, q > 0$).
+\end{prob}
+
+\begin{prob}[S]{2603}
+$\sum_{n=1}^{\infty} \frac{p(p+1)\cdots(p+n-1)}{n!} \cdot \frac{1}{n^q}$ ($p > 0, q > 0$).
+\end{prob}
+
+\begin{prob}[S]{2604}
+$\sum_{n=1}^{\infty} \left[\frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2n)}\right]^p \cdot \frac{1}{n^q}$ ($p > 0, q > 0$).
+\end{prob}
+
+\begin{prob}[S]{2605}
+$\sum_{n=1}^{\infty} \left[\frac{p(p+1)\cdots(p+n-1)}{q(q+1)\cdots(q+n-1)}\right]^{\alpha}$ ($p > 0, q > 0$).
+\end{prob}
+
+\begin{prob}[M]{2606}
+证明: 对于正项级数 $\sum_{n=1}^{\infty} a_n$ ($a_n > 0$), 若在 $n \to \infty$ 时成立条件
+\[
+\frac{a_n}{a_{n+1}} = 1 + \frac{p}{n} + o\left(\frac{1}{n}\right),
+\]
+则
+\[
+a_n = o\left(\frac{1}{n^{p-\varepsilon}}\right),
+\]
+其中 $\varepsilon > 0$ 是任意小量; 并且若 $p > 0$, 则当 $n \to \infty$ 时 $a_n \downarrow 0$, 即从 $n \geqslant n_0$ 开始, $a_n$ 单调递减, 且在 $n \to \infty$ 时 $a_n \to 0$.
+\end{prob}
+
+\probgroup{求出通项 $a_n$ 的减小的阶，从而研究级数 $\sum_{n=1}^{\infty} a_n$ 的收敛性：}
+
+\begin{prob}[S]{2607}
+$a_n = \frac{n^p + a_1 n^{p-1} + \cdots + a_p}{n^q + b_1 n^{q-1} + \cdots + b_q}$, 其中 $n^q + b_1 n^{q-1} + \cdots + b_q > 0$.
+\end{prob}
+
+\begin{prob}[S]{2608}
+$a_n = \frac{1}{n^p} \sin \frac{\pi}{n}$.
+\end{prob}
+
+\begin{prob}[S]{2609}
+$a_n = (\sqrt{n+1} - \sqrt{n})^p \ln \frac{n-1}{n+1}$ ($n > 1$).
+\end{prob}
+
+\begin{prob}[S]{2610}
+$a_n = \ln^p \left(\sec \frac{\pi}{n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2611}
+$a_n = \log_{b^n} \left(1 + \frac{\sqrt[n]{a}}{n}\right)$ ($a > 0, b > 0$).
+\end{prob}
+
+\begin{prob}[S]{2612}
+$a_n = \left[\mathrm{e} - \left(1 + \frac{1}{n}\right)^n\right]^p$.
+\end{prob}
+
+\begin{prob}[M]{2613}
+(a) $a_n = \frac{1}{n^{1+\frac{k}{\ln n}}}$; \qquad (b) $a_n = \frac{1}{n^{1+\frac{1}{n}}}$.
+\end{prob}
+
+\begin{prob}[M]{2614}
+证明热梅判别法: 对于正项级数 $\sum_{n=1}^{\infty} a_n$ ($a_n > 0$), 若当 $n > n_0$ 时
+\[
+(1 - \sqrt[n]{a_n}) \frac{n}{\ln n} \geqslant p > 1,
+\]
+则此级数收敛; 若当 $n > n_0$ 时
+\[
+(1 - \sqrt[n]{a_n}) \frac{n}{\ln n} \leqslant 1,
+\]
+则此级数发散.
+\end{prob}
+
+\begin{prob}[M]{2615}
+证明: 若存在 $\alpha > 0$ 使当 $n \geqslant n_0$ 时 $\frac{\ln \frac{1}{a_n}}{\ln n} \geqslant 1 + \alpha$ ($a_n > 0$), 则级数 $\sum_{n=1}^{\infty} a_n$ ($a_n > 0$) 收敛; 若 $n \geqslant n_0$ 时 $\frac{\ln \frac{1}{a_n}}{\ln n} \leqslant 1$, 则此级数发散 (对数差别法).
+\end{prob}
+
+\probgroup{研究具有如下通项的级数的收敛性：}
+
+\begin{prob}[S]{2616}
+$a_n = n^{\ln x}$ ($x > 0$).
+\end{prob}
+
+\begin{prob}[S]{2617}
+$a_n = \frac{1}{(\ln \ln n)^{\ln n}}$ ($n > 1$).
+\end{prob}
+
+\begin{prob}[S]{2618}
+$a_n = \frac{1}{(\ln n)^{\ln \ln n}}$ ($n > 1$).
+\end{prob}
+
+\begin{prob}[M]{2619}
+利用柯西积分判别法, 研究具有如下通项的级数的收敛性:
+
+(a) $a_n = \frac{1}{n \ln^p n}$ ($n > 1$); \qquad (b) $a_n = \frac{1}{n (\ln n)^p (\ln \ln n)^q}$ ($n > 2$).
+\end{prob}
+
+\begin{prob}[L]{2620}
+研究下列级数的收敛性:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sum_{n=1}^{\infty} \frac{\ln 2 \cdot \ln 3 \cdots \ln(n+1)}{\ln(2+p) \cdot \ln(3+p) \cdots \ln(n+1+p)}$ ($p > 0$);
+\item $\sum_{n=1}^{\infty} \frac{\nu(n)}{n^2}$, 其中 $\nu(n)$ 为数 $n$ 的位数;
+\item $\sum_{n=2}^{\infty} \frac{1}{\ln(n!)}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2621}
+设 $\lambda_n$ ($n = 1, 2, \cdots$) 依次是方程 $\tan x = x$ 的各个正根. 研究级数 $\sum_{n=1}^{\infty} \lambda_n^{-2}$ 的收敛性.
+\end{prob}
+
+\begin{prob}[M]{2622}
+证明: 设正项级数 $\sum_{n=1}^{\infty} a_n$ 的项单调递减, 则级数 $\sum_{n=1}^{\infty} a_n$ 与级数 $\sum_{n=0}^{\infty} 2^n a_{2^n}$ 同时收敛或同时发散.
+\end{prob}
+
+\begin{prob}[M]{2623}
+设 $f(x)$ 为单调不增的正值函数. 证明: 若级数 $\sum_{n=1}^{\infty} f(n)$ 收敛, 则对于它的余项 $R_n = \sum_{k=n+1}^{\infty} f(k)$ 有以下估计:
+\[
+\int_{n+1}^{+\infty} f(x)\,\mathrm{d}x \leqslant R_n \leqslant f(n+1) + \int_{n+1}^{+\infty} f(x)\,\mathrm{d}x.
+\]
+利用此式, 求级数 $\sum_{n=1}^{\infty} \frac{1}{n^3}$ 的和, 精确到 $0.01$.
+\end{prob}
+
+\begin{prob}[M]{2624}
+证明叶尔马科夫判别法: 若 $f(x)$ 为单调递减的正值函数, 且
+\[
+\lim_{x\to+\infty} \frac{\mathrm{e}^x f(\mathrm{e}^x)}{f(x)} = \lambda.
+\]
+则级数 $\sum_{n=1}^{\infty} f(n)$ 在 $\lambda < 1$ 时收敛, 在 $\lambda > 1$ 时发散.
+\end{prob}
+
+\begin{prob}[M]{2625}
+证明罗巴切夫斯基判别法: 若正项级数 $\sum_{n=1}^{\infty} a_n$ 的项单调趋于零, 则级数 $\sum_{n=1}^{\infty} a_n$ 与级数 $\sum_{m=0}^{\infty} p_m \cdot 2^{-m}$ 同时收敛或者同时发散, 其中 $p_m$ 是满足不等式
+\[
+a_n \geqslant 2^{-m} \quad (n = 1, 2, \cdots, p_m)
+\]
+的项 $a_n$ 的最大的序号.
+\end{prob}
+
+\probgroup{研究下列级数的收敛性：}
+
+\begin{prob}[S]{2626}
+$\sum_{n=2}^{\infty} \frac{\sqrt{n+2} - \sqrt{n-2}}{n^{\alpha}}$.
+\end{prob}
+
+\begin{prob}[S]{2627}
+$\sum_{n=1}^{\infty} (\sqrt{n+a} - \sqrt[4]{n^2+n+b})$.
+\end{prob}
+
+\begin{prob}[S]{2628}
+$\sum_{n=1}^{\infty} \left(\cot \frac{n\pi}{4n-2} - \sin \frac{n\pi}{2n+1}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2629}
+$\sum_{n=1}^{\infty} \left(\frac{1}{\sqrt{n}} - \sqrt{\ln \frac{n+1}{n}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2630}
+$\sum_{n=1}^{\infty} \frac{\ln(n!)}{n^{\alpha}}$.
+\end{prob}
+
+\begin{prob}[S]{2631}
+$\sum_{n=1}^{\infty} \mathrm{e}^{-\sqrt[3]{n}}$.
+\end{prob}
+
+\begin{prob}[S]{2632}
+$\sum_{n=1}^{\infty} n^2 \mathrm{e}^{-\sqrt{n}}$.
+\end{prob}
+
+\begin{prob}[S]{2633}
+$\sum_{n=1}^{\infty} (n^{\frac{1}{n^2+1}} - 1)$.
+\end{prob}
+
+\begin{prob}[S]{2634}
+$\sum_{n=1}^{\infty} \mathrm{e}^{\frac{a\ln n + b}{c\ln n + d}}$.
+\end{prob}
+
+\begin{prob}[S]{2635}
+$\sum_{n=1}^{\infty} \frac{1}{\ln^2 \left(\sin \frac{1}{n}\right)}$.
+\end{prob}
+
+\begin{prob}[S]{2636}
+$\sum_{n=1}^{\infty} \left(\cos \frac{a}{n}\right)^{n^3}$.
+\end{prob}
+
+\begin{prob}[S]{2637}
+$\sum_{n=3}^{\infty} \ln \left(\frac{\cosh \frac{\pi}{n}}{\cos \frac{\pi}{n}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2638}
+$\sum_{n=1}^{\infty} \frac{n!}{n^{\sqrt{n}}}$.
+\end{prob}
+
+\begin{prob}[S]{2639}
+$\sum_{n=2}^{\infty} \frac{n^{\ln n}}{(\ln n)^n}$.
+\end{prob}
+
+\begin{prob}[S]{2640}
+$\sum_{n=1}^{\infty} \left(a^{\frac{1}{n}} - \frac{b^{\frac{1}{n}} + c^{\frac{1}{n}}}{2}\right)$ ($a > 0, b > 0, c > 0$).
+\end{prob}
+
+\begin{prob}[S]{2641}
+$\sum_{n=1}^{\infty} (n^{n^{\alpha}} - 1)$.
+\end{prob}
+
+\begin{prob}[S]{2642}
+$\sum_{n=1}^{\infty} \left[\ln \frac{1}{n^{\alpha}} - \ln \left(\sin \frac{1}{n^{\alpha}}\right)\right]$.
+\end{prob}
+
+\begin{prob}[S]{2643}
+$\sum_{n=1}^{\infty} a^{-(b\ln n + c\ln^2 n)}$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[S]{2644}
+$\sum_{n=1}^{\infty} \frac{n^{2n}}{(n+a)^{n+b}(n+b)^{n+a}}$ ($a > 0, b > 0$).
+\end{prob}
+
+\begin{prob}[S]{2645}
+$\sum_{n=1}^{\infty} \frac{[(n+1)!]^n}{2! \cdot 4 \cdots (2n)!}$.
+\end{prob}
+
+\probgroup{研究级数 $\sum_{n=1}^{\infty} u_n$ 的收敛性，其通项如下：}
+
+\begin{prob}[S]{2646}
+$u_n = \int_0^{\frac{1}{n}} \frac{\sqrt{x}\,\mathrm{d}x}{1 + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2647}
+$u_n = \frac{1}{\int_0^n \sqrt[4]{1 + x^4}\,\mathrm{d}x}$.
+\end{prob}
+
+\begin{prob}[S]{2648}
+$u_n = \int_{n\pi}^{(n+1)\pi} \frac{\sin^2 x}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2649}
+$u_n = \int_n^{n+1} \mathrm{e}^{-\sqrt{x}}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2650}
+$u_n = \int_0^{\frac{\pi}{n}} \frac{\sin^3 x}{1 + x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{2651}
+$u_n = \frac{1! + 2! + \cdots + n!}{(2n)!}$.
+\end{prob}
+
+\begin{prob}[S]{2652}
+$u_n = \frac{\sum_{k=1}^n \ln^2 k}{n^{\alpha}}$.
+\end{prob}
+
+\probgroup{用相应的级数来代替数列 $x_n$ ($n = 1, 2, \cdots$)，然后研究它们的收敛性，设：}
+
+\begin{prob}[S]{2653}
+$x_n = 1 + \frac{1}{\sqrt{2}} + \cdots + \frac{1}{\sqrt{n}} - 2\sqrt{n}$.
+\end{prob}
+
+\begin{prob}[S]{2654}
+$x_n = \sum_{k=1}^n \frac{\ln k}{k} - \frac{(\ln n)^2}{2}$.
+\end{prob}
+
+\begin{prob}[L]{2655}
+对于下列级数:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sum_{n=1}^{\infty} \frac{1}{n^2}$;
+\item $\sum_{n=1}^{\infty} \frac{2^n}{(n+1)!}$;
+\item $\sum_{n=1}^{\infty} \frac{1}{(2n-1)!}$,
+\end{enumerate}
+大约应取多少项来求级数的和方可精确到 $10^{-5}$?
+\end{prob}
+
+\probsec{§2. 变号级数收敛性的判别法}
+
+\begin{prob}[M]{2656}
+证明：可把非绝对收敛级数的各项在不变更其顺序的情况下分别组合起来，使所得的新级数绝对收敛。
+\end{prob}
+
+\begin{prob}[M]{2657}
+设有级数 $\sum_{n=1}^{\infty} a_n$，若 (a) 当 $n \to \infty$ 时，此级数的通项 $a_n$ 趋于零；(b) 在不变更其顺序的情况下分别组合该级数的各项，所得级数 $\sum_{n=1}^{\infty} A_n$ 收敛；(c) 在项 $A_n = \sum_{i=p_n}^{p_{n+1}-1} a_i$ ($1 = p_1 < p_2 < \cdots$) 中相加项 $a_i$ 的数目是有界的，证明：级数 $\sum_{n=1}^{\infty} a_n$ 是收敛的。
+\end{prob}
+
+\begin{prob}[M]{2658}
+证明：若将收敛级数的各项重新排列，使每一项离开原有的位置不超过 $m$ 个位置（$m$ 为预先给定的数），则级数的和不变。
+\end{prob}
+
+\probgroup{证明下列级数的收敛性并求它们的和：}
+
+\begin{prob}[S]{2659}
+$1 - \frac{3}{2} + \frac{5}{4} - \frac{7}{8} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2660}
+$1 + \frac{1}{2} - \frac{1}{4} + \frac{1}{8} + \frac{1}{16} - \frac{1}{32} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2661}
+$1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \frac{1}{6} + \cdots$.
+\probhint{运用公式 $1 + \frac{1}{2} + \cdots + \frac{1}{n} = C + \ln n + \varepsilon_n$，其中 $C$ 为欧拉常数，并且 $\lim_{n \to \infty} \varepsilon_n = 0$。}
+\end{prob}
+
+\begin{prob}[M]{2662}
+已知 $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} = \ln 2$。将该级数的各项重排，得到下列级数：
+
+(a) $1 + \frac{1}{3} - \frac{1}{2} + \frac{1}{5} + \frac{1}{7} - \frac{1}{4} + \cdots$； \qquad (b) $1 - \frac{1}{2} - \frac{1}{4} + \frac{1}{3} - \frac{1}{6} - \frac{1}{8} + \cdots$。
+
+求这些级数的和。
+\end{prob}
+
+\begin{prob}[M]{2663}
+把收敛级数 $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{\sqrt{n}}$ 的各项重排，使它成为发散的。
+\end{prob}
+
+\probgroup{研究下列变号级数的收敛性：}
+
+\begin{prob}[S]{2664}
+$\sum_{n=1}^{\infty} \frac{(-1)^{\frac{n(n-1)}{2}}}{2^n}$.
+\end{prob}
+
+\begin{prob}[M]{2665}
+(a) $\sum_{n=1}^{\infty} (-1)^n \left(\frac{2n+100}{3n+1}\right)^n$； \qquad (b) $1 + \frac{1}{2} + \frac{1}{3} - \frac{1}{4} - \frac{1}{5} - \frac{1}{6} + \frac{1}{7} + \frac{1}{8} + \frac{1}{9} - \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2666}
+设
+\[\sum_{n=1}^{\infty} (-1)^n b_n, \tag{1}\]
+其中 $b_n > 0$，且当 $n \to \infty$ 时 $b_n \to 0$。由此是否可知级数 $(1)$ 收敛？考察例子
+\[\sum_{n=1}^{\infty} (-1)^n \cdot \frac{2 + (-1)^n}{n}.\]
+\end{prob}
+
+\probgroup{研究下列变号级数的收敛性：}
+
+\begin{prob}[S]{2667}
+$\sum_{n=1}^{\infty} \frac{\ln^{100} n}{n} \sin \frac{n\pi}{4}$.
+\end{prob}
+
+\begin{prob}[S]{2668}
+$\sum_{n=1}^{\infty} (-1)^n \frac{\sin^2 n}{n}$.
+\end{prob}
+
+\begin{prob}[S]{2669}
+$\sum_{n=1}^{\infty} (-1)^n \frac{\sqrt{n}}{n+100}$.
+\end{prob}
+
+\begin{prob}[S]{2670}
+$\sum_{n=2}^{\infty} \frac{(-1)^n}{\sqrt{n} + (-1)^n}$.
+\end{prob}
+
+\begin{prob}[S]{2671}
+$\sum_{n=1}^{\infty} \sin \left(\pi \sqrt{n^2 + k^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2672}
+$\sum_{n=1}^{\infty} \frac{(-1)^{[\sqrt{n}]}}{n}$.
+\end{prob}
+
+\begin{prob}[M]{2673}
+(a) $\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt[n]{n}}$； \qquad (b) $\sum_{n=2}^{\infty} \frac{1}{\ln^2 n} \cos \frac{\pi n^2}{n+1}$.
+\end{prob}
+
+\begin{prob}[M]{2674}
+证明：若
+\[\frac{b_n}{b_{n+1}} = 1 + \frac{p}{n} + o\left(\frac{1}{n}\right),\]
+其中 $p > 0$（参阅习题 2606），则交错级数 $b_1 - b_2 + b_3 - b_4 + \cdots + (-1)^{n-1} b_n + \cdots$（$b_n > 0$）收敛。
+\end{prob}
+
+\probgroup{研究下列级数的绝对收敛性（除了习题 2690）和条件收敛性：}
+
+\begin{prob}[S]{2675}
+$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^p}$.
+\end{prob}
+
+\begin{prob}[S]{2676}
+$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^{p + \frac{1}{n}}}$.
+\end{prob}
+
+\begin{prob}[S]{2677}
+$\sum_{n=2}^{\infty} \ln \left[1 + \frac{(-1)^n}{n^p}\right]$.
+\end{prob}
+
+\begin{prob}[S]{2678}
+$\sum_{n=1}^{\infty} (-1)^{n-1} \frac{2^n \sin^{2n} x}{n}$.
+\end{prob}
+
+\begin{prob}[S]{2679}
+$\sum_{n=1}^{\infty} \frac{(-1)^n}{x + n}$.
+\end{prob}
+
+\begin{prob}[S]{2680}
+$\sum_{n=2}^{\infty} \frac{(-1)^n}{[n + (-1)^n]^p}$.
+\end{prob}
+
+\begin{prob}[S]{2681}
+$\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{[\sqrt{n} + (-1)^{n-1}]^p}$.
+\end{prob}
+
+\begin{prob}[S]{2682}
+$\sum_{n=1}^{\infty} \frac{\sin \frac{n\pi}{4}}{n^p + \sin \frac{n\pi}{4}}$.
+\end{prob}
+
+\begin{prob}[S]{2683}
+$\sum_{n=1}^{\infty} (-1)^n \frac{n-1}{n+1} \frac{1}{\sqrt[100]{n}}$.
+\end{prob}
+
+\begin{prob}[S]{2684}
+$\sum_{n=1}^{\infty} (-1)^{\frac{n(n-1)}{2}} \frac{n^{100}}{2^n}$.
+\end{prob}
+
+\begin{prob}[S]{2685}
+$\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt[n^2]{n}}$.
+\end{prob}
+
+\begin{prob}[S]{2686}
+$\sum_{n=2}^{\infty} \frac{\sin \frac{n\pi}{12}}{\ln n}$.
+\end{prob}
+
+\begin{prob}[S]{2687}
+$\sum_{n=1}^{\infty} \frac{(-1)^{[\sqrt{n}]}}{n^p}$.
+\end{prob}
+
+\begin{prob}[S]{2688}
+$\sum_{n=1}^{\infty} \frac{(-1)^{[\ln n]}}{n}$.
+\end{prob}
+
+\begin{prob}[S]{2689}
+$\sum_{n=1}^{\infty} (-1)^{n-1} \left[\frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2n)}\right]^p$.
+\end{prob}
+
+\begin{prob}[S]{2690}
+$\sum_{n=1}^{\infty} \frac{\sin n \cdot \sin n^2}{n}$.
+\end{prob}
+
+\begin{prob}[M]{2691}
+$\sum_{n=1}^{\infty} \sin n^2$.
+\probhint{证明 $\lim_{n \to \infty} \sin n^2 \neq 0$。}
+\end{prob}
+
+\begin{prob}[M]{2692}
+设
+\[R(x) = \frac{a_0 x^p + a_1 x^{p-1} + \cdots + a_p}{b_0 x^q + b_1 x^{q-1} + \cdots + b_q}\]
+为有理函数，式中 $a_0 \neq 0, b_0 \neq 0$，且当 $x \geqslant n_0$ 时 $|b_0 x^q + b_1 x^{q-1} + \cdots + b_q| > 0$。研究级数
+\[\sum_{n=n_0}^{\infty} (-1)^n R(n)\]
+的绝对收敛性和条件收敛性。
+\end{prob}
+
+\probgroup{研究下列级数的收敛性：}
+
+\begin{prob}[S]{2693}
+$\frac{1}{1^p} - \frac{1}{2^q} + \frac{1}{3^p} - \frac{1}{4^q} + \frac{1}{5^p} - \frac{1}{6^q} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2694}
+$1 + \frac{1}{3^p} - \frac{1}{2^p} + \frac{1}{5^p} + \frac{1}{7^p} - \frac{1}{4^p} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2695}
+(a) $1 + \frac{1}{3^p} - \frac{1}{1^p} + \frac{1}{5^p} + \frac{1}{7^p} - \frac{1}{3^p} + \frac{1}{9^p} + \frac{1}{11^p} - \frac{1}{5^p} + \cdots$；
+
+(b) $1 - \frac{2}{2^q} + \frac{1}{3^p} + \frac{1}{4^p} - \frac{2}{5^q} + \frac{1}{6^p} + \frac{1}{7^p} - \frac{2}{8^q} + \frac{1}{9^p} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{2696}
+证明：级数
+
+(a) $\sin x + \frac{\sin 2x}{2} + \frac{\sin 3x}{3} + \cdots$； \qquad (b) $\cos x + \frac{\cos 2x}{2} + \frac{\cos 3x}{3} + \cdots$
+
+在区间 $(0, \pi)$ 内不绝对收敛。
+\end{prob}
+
+\begin{prob}[M]{2697}
+对于级数
+\[\sum_{n=1}^{\infty} \frac{\cos nx}{n^p}, \qquad \sum_{n=1}^{\infty} \frac{\sin nx}{n^p} \quad (0 < x < \pi)\]
+对全体参数 $(p, x)$ 定出：(a) 绝对收敛域；(b) 非绝对收敛域。
+\end{prob}
+
+\begin{prob}[L]{2698}
+研究下列级数的收敛性：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sum_{n=2}^{\infty} \frac{(-1)^n \sqrt[n]{n}}{\ln n}$；
+\item $\sum_{n=2}^{\infty} \frac{\sin\left(n + \frac{1}{n}\right)}{\ln(\ln n)}$；
+\item $\sum_{n=10}^{\infty} \frac{\sin n}{n + 10 \sin n}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2699}
+对于级数
+\[\sum_{n=1}^{\infty} (-1)^{n-1} \frac{(1+p)(2+p)\cdots(n+p)}{n! n^q}\]
+定出：(a) 绝对收敛域；(b) 条件收敛域。
+\end{prob}
+
+\begin{prob}[M]{2700}
+研究级数
+\[\sum_{n=1}^{\infty} \binom{m}{n}\]
+的收敛性，其中 $\binom{m}{n} = \frac{m(m-1)\cdots(m-n+1)}{n!}$。
+\end{prob}
+
+\begin{prob}[M]{2701}
+若级数 $\sum_{n=1}^{\infty} a_n$ 收敛且
+\[\lim_{n \to \infty} \frac{b_n}{a_n} = 1,\]
+则可否断定级数 $\sum_{n=1}^{\infty} b_n$ 也收敛？研究例子
+\[\sum_{n=1}^{\infty} \frac{(-1)^n}{\sqrt{n}} \quad \text{和} \quad \sum_{n=1}^{\infty} \left[\frac{(-1)^n}{\sqrt{n}} + \frac{1}{n}\right].\]
+\end{prob}
+
+\begin{prob}[M]{2702.1}
+设 $\sum_{n=1}^{\infty} a_n$ 为非绝对收敛的级数，
+\[P_n = \sum_{i=1}^{n} \frac{|a_i| + a_i}{2}, \qquad N_n = \sum_{i=1}^{n} \frac{|a_i| - a_i}{2}.\]
+证明：
+\[\lim_{n \to \infty} \frac{N_n}{P_n} = 1.\]
+\end{prob}
+
+\begin{prob}[M]{2702.2}
+证明：对于每一个 $p > 0$，级数
+\[\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^p}\]
+的和在 $\frac{1}{2}$ 与 $1$ 之间。
+\end{prob}
+
+\begin{prob}[M]{2703}
+在下列级数中：
+
+(a) $\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{\sqrt{n^2 + 1}}$； \qquad (b) $\sum_{n=1}^{\infty} \frac{\sin n}{\sqrt{n}}$，
+
+应取多少项来计算级数的和，方可使其精度达到 $\varepsilon = 10^{-6}$？
+\end{prob}
+
+\begin{prob}[M]{2704}
+证明：若把级数
+\[1 - \frac{1}{2} + \frac{1}{3} - \frac{1}{4} + \frac{1}{5} - \cdots\]
+的各项重排，使依次 $p$ 个正项的一组与依次 $q$ 个负项的一组相交替，则新级数的和为
+\[\ln 2 + \frac{1}{2} \ln \frac{p}{q}.\]
+\end{prob}
+
+\begin{prob}[M]{2705}
+证明：若改变调和级数
+\[1 + \frac{1}{2} + \frac{1}{3} + \frac{1}{4} + \cdots,\]
+部分项的符号，使得 $p$ 个正项之后跟随着 $q$ 个负项（$p \neq q$），但不变更原来的顺序，则此级数仍是发散的。仅当 $p = q$ 时得到收敛级数。
+\end{prob}
+
+\probsec{§3. 级数的运算}
+
+\begin{prob}[M]{2706}
+若两个级数，(a) 一个收敛，而另一个发散；(b) 两个都发散，则关于这两个级数的和可下何种断言？
+\end{prob}
+
+\begin{prob}[M]{2707}
+求二级数的和：
+\[\sum_{n=1}^{\infty} \left[\frac{1}{3^n} + \frac{(-1)^n}{n^3}\right] + \sum_{n=1}^{\infty} \left[\frac{1}{3^{n+1}} + \frac{(-1)^{n+1}}{n^3}\right].\]
+\end{prob}
+
+\probgroup{求下列级数的和：}
+
+\begin{prob}[S]{2708}
+$\sum_{n=1}^{\infty} \left[\frac{1}{2^n} + \frac{(-1)^n}{3^n}\right]$.
+\end{prob}
+
+\begin{prob}[S]{2709}
+$\sum_{n=1}^{\infty} \frac{\cos \frac{2n\pi}{3}}{2^n}$.
+\end{prob}
+
+\begin{prob}[S]{2710}
+$\sum_{n=0}^{\infty} x^{\left[\frac{n}{2}\right]} y^{\left[\frac{n+1}{2}\right]}$ ($|xy| < 1$).
+\end{prob}
+
+\begin{prob}[M]{2711}
+证明：
+\[\sum_{n=0}^{\infty} \frac{1}{n!} \cdot \sum_{n=0}^{\infty} \frac{(-1)^n}{n!} = 1.\]
+\end{prob}
+
+\begin{prob}[M]{2712}
+证明：
+\[\left(\sum_{n=0}^{\infty} q^n\right)^2 = \sum_{n=0}^{\infty} (n+1) q^n \quad (|q| < 1).\]
+\end{prob}
+
+\begin{prob}[M]{2713}
+证明：收敛级数
+\[\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{\sqrt{n}}\]
+的平方是发散级数。
+\end{prob}
+
+\begin{prob}[M]{2714}
+证明：下面二收敛级数
+\[\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^\alpha} \quad (\alpha > 0) \quad \text{及} \quad \sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{n^\beta} \quad (\beta > 0)\]
+之积当 $\alpha + \beta > 1$ 时是收敛级数，而当 $\alpha + \beta < 1$ 时是发散级数。
+\end{prob}
+
+\begin{prob}[M]{2715}
+验证下面二发散级数
+\[1 - \sum_{n=1}^{\infty} \left(\frac{3}{2}\right)^n \quad \text{和} \quad 1 + \sum_{n=1}^{\infty} \left(\frac{3}{2}\right)^{n-1} \left(2^n + \frac{1}{2^{n+1}}\right)\]
+之积是绝对收敛级数。
+\end{prob}
+
+\probsec{§4. 函数项级数}
+
+\probgroup{定出下列函数项级数的绝对收敛域和条件收敛域.}
+
+\begin{prob}[S]{2716}
+$\sum_{n=1}^{\infty} \frac{n}{x^n}$.
+\end{prob}
+
+\begin{prob}[S]{2717}
+$\sum_{n=1}^{\infty} \frac{(-1)^n}{2n-1}\left(\frac{1-x}{1+x}\right)^n$.
+\end{prob}
+
+\begin{prob}[S]{2718}
+$\sum_{n=1}^{\infty} \frac{n}{n+1}\left(\frac{x}{2x+1}\right)^n$.
+\end{prob}
+
+\begin{prob}[S]{2719}
+$\sum_{n=1}^{\infty} \frac{1\cdot 3\cdot\cdots\cdot (2n-1)}{2\cdot 4\cdots (2n)}\left(\frac{2x}{1+x^2}\right)^n$.
+\end{prob}
+
+\begin{prob}[S]{2720}
+$\sum_{n=1}^{\infty} \frac{n\cdot 3^{2n}}{2^n}x^n(1-x)^n$.
+\end{prob}
+
+\begin{prob}[S]{2721}
+$\sum_{n=1}^{\infty} \frac{2^n \sin^n x}{n^2}$.
+\end{prob}
+
+\begin{prob}[S]{2722}
+$\sum_{n=1}^{\infty} \frac{(-1)^n}{(x+n)^p}$.
+\end{prob}
+
+\begin{prob}[S]{2723}
+$\sum_{n=1}^{\infty} \frac{n^p \sin nx}{1+n^q} \ (q > 0;\ 0 < x < \pi)$.
+\end{prob}
+
+\begin{prob}[S]{2724}
+$\sum_{n=1}^{\infty} \frac{x^n}{1-x^n}$ (兰伯特级数).
+\end{prob}
+
+\begin{prob}[S]{2725}
+$\sum_{n=1}^{\infty} \left[\frac{x(x+n)}{n}\right]^n$.
+\end{prob}
+
+\begin{prob}[S]{2726}
+$\sum_{n=1}^{\infty} \frac{x^n}{1+x^{2n}}$.
+\end{prob}
+
+\begin{prob}[S]{2727}
+$\sum_{n=1}^{\infty} \frac{x^n}{(1+x)(1+x^2)\cdots (1+x^n)}$.
+\end{prob}
+
+\begin{prob}[S]{2728}
+$\sum_{n=1}^{\infty} n\mathrm{e}^{-nx}$.
+\end{prob}
+
+\begin{prob}[S]{2729}
+$\sum_{n=1}^{\infty} \frac{1}{\sqrt[n]{n!}}\cdot \frac{1}{1+a^{2n}x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2730}
+$\sum_{n=1}^{\infty} (2-x)(2-x^{\frac{1}{2}})(2-x^{\frac{1}{3}})\cdots (2-x^{\frac{1}{n}}) \ (x > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2731}
+$\sum_{n=1}^{\infty} \frac{(n+x)^n}{n^{n+x}}$.
+\end{prob}
+
+\begin{prob}[S]{2732}
+$\sum_{n=1}^{\infty} \frac{x^n y^n}{x^n+y^n} \ (x > 0;\ y > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2733}
+$\sum_{n=1}^{\infty} \frac{x^n}{n+y^n} \ (y \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2734}
+$\sum_{n=1}^{\infty} \sqrt[n]{|x|^{n^2}+|y|^{n^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2735}
+$\sum_{n=1}^{\infty} \frac{\ln(1+x^n)}{n^y} \ (x \geqslant 0)$.
+\end{prob}
+
+\begin{prob}[S]{2736}
+$\sum_{n=1}^{\infty} \tan^n\left(x+\frac{y}{n}\right)$.
+\end{prob}
+
+\begin{prob}[M]{2737}
+证明: 若洛朗级数 $\sum_{n=-\infty}^{+\infty} a_n x^n$ 当 $x=x_1$ 和 $x=x_2$ ($|x_1| < |x_2|$) 时收敛, 则此级数当 $|x_1| < |x| < |x_2|$ 时也收敛.
+\end{prob}
+
+\begin{prob}[M]{2738}
+求洛朗级数
+\[
+\sum_{n=-\infty}^{+\infty} \frac{n}{2^{|n|}} x^n
+\]
+的收敛域并求它的和.
+\end{prob}
+
+\begin{prob}[L]{2739}
+求牛顿级数的绝对收敛域和条件收敛域:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sum_{n=1}^{\infty} \frac{x^{[n]}}{n!}$;
+\item $\sum_{n=1}^{\infty} \frac{1}{n^p}\frac{x^{[n]}}{n!}$;
+\item $\sum_{n=1}^{\infty} \frac{(\mathrm{e}x)^n y^{[n]}}{n^n}$.
+\end{enumerate}
+其中 $x^{[n]} = x(x-1)\cdots [x-(n-1)]$.
+\end{prob}
+
+\begin{prob}[M]{2740}
+证明: 若狄利克雷级数 $\sum_{n=1}^{\infty} \frac{a_n}{n^x}$ 当 $x=x_0$ 时收敛, 则此级数当 $x > x_0$ 时也收敛.
+\end{prob}
+
+\begin{prob}[M]{2741}
+证明: 序列 $f_n(x)$ ($n=1,2,\cdots$) 在集合 $X$ 上一致收敛于极限函数 $f(x)$ 的充分必要条件是
+\[
+\lim_{n\to\infty} \left\{\sup_{x\in X} r_n(x)\right\} = 0,
+\]
+式中 $r_n(x) = |f(x)-f_n(x)|$.
+\end{prob}
+
+\begin{prob}[L]{2742}
+序列 $f_n(x)$ ($n=1,2,\cdots$):
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 在区间 $(x_0, +\infty)$ 上收敛;
+\item 在每一个有限的区间 $(a,b) \subset (x_0, +\infty)$ 上一致收敛;
+\item 在区间 $(x_0, +\infty)$ 上一致收敛,
+\end{enumerate}
+这分别是什么意思?
+\end{prob}
+
+\begin{prob}[M]{2743}
+对于序列
+\[
+f_n(x) = x^n \ (n=1,2,\cdots) \ (0 < x < 1),
+\]
+求出其项的最小序号 $N=N(\varepsilon, x)$, 使从这项起序列的项在已知点 $x$ 与极限函数的差不超过 $0.001$, 设 $x = \frac{1}{10}, \frac{1}{\sqrt{10}}, \cdots, \frac{1}{\sqrt[m]{10}}, \cdots$. 此序列在区间 $(0,1)$ 内是否一致收敛?
+\end{prob}
+
+\begin{prob}[L]{2744}
+应当取级数
+\[
+\sum_{n=1}^{\infty} \frac{\sin nx}{n(n+1)}
+\]
+的多少项方可使部分和 $S_n(x)$ 当 $-\infty < x < +\infty$ 时与级数的和之差小于 $\varepsilon$? 对于下列 $\varepsilon$ 值, 给出具体的计算结果:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\varepsilon = 0.1$;
+\item $\varepsilon = 0.01$;
+\item $\varepsilon = 0.001$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2745}
+对怎样的 $n$, 不等式
+\[
+\left|\mathrm{e}^x - \sum_{i=0}^{n} \frac{x^i}{i!}\right| < 0.001 \quad (0 \leqslant x \leqslant 10)
+\]
+能保证成立?
+\end{prob}
+
+\probgroup{研究序列在所给区间上的一致收敛性:}
+
+\begin{prob}[M]{2746}
+$f_n(x) = x^n$; (a) $0 \leqslant x \leqslant \frac{1}{2}$; \qquad (b) $0 \leqslant x \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{2747}
+$f_n(x) = x^n - x^{n+1}$; $0 \leqslant x \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{2748}
+$f_n(x) = x^n - x^{2n}$; $0 \leqslant x \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{2749}
+$f_n(x) = \frac{1}{x+n}$; $0 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2750}
+$f_n(x) = \frac{nx}{1+n+x}$; $0 \leqslant x \leqslant 1$.
+\end{prob}
+
+\begin{prob}[L]{2751}
+$f_n(x) = \frac{x^n}{1+x^n}$;
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $0 \leqslant x \leqslant 1-\varepsilon$;
+\item $1-\varepsilon \leqslant x \leqslant 1+\varepsilon$;
+\item $1+\varepsilon \leqslant x < +\infty$, 其中 $\varepsilon > 0$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2752}
+$f_n(x) = \frac{2nx}{1+n^2 x^2}$; (a) $0 \leqslant x \leqslant 1$; \qquad (b) $1 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2753}
+$f_n(x) = \sqrt{x^2+\frac{1}{n^2}}$; $-\infty < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2754}
+$f_n(x) = n\left(\sqrt{x+\frac{1}{n}}-\sqrt{x}\right)$; $1 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[M]{2755}
+(a) $f_n(x) = \frac{\sin nx}{n}$; $-\infty < x < +\infty$; \qquad (b) $f_n(x) = \sin\frac{x}{n}$; $-\infty < x < +\infty$.
+\end{prob}
+
+\begin{prob}[M]{2756}
+(a) $f_n(x) = \arctan nx$; $0 < x < +\infty$; \qquad (b) $f_n(x) = x\arctan nx$; $0 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2757}
+$f_n(x) = \mathrm{e}^{n(x-1)}$; $0 < x < 1$.
+\end{prob}
+
+\begin{prob}[M]{2758}
+$f_n(x) = \mathrm{e}^{-(x-n)^2}$; (a) $-l < x < l$, 其中 $l$ 为任意正数; \qquad (b) $-\infty < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2759}
+$f_n(x) = \frac{x}{n}\ln\frac{x}{n}$; $0 < x < 1$.
+\end{prob}
+
+\begin{prob}[M]{2760}
+$f_n(x) = \left(1+\frac{x}{n}\right)^n$; (a) 在有限的区间 $(a,b)$ 上; \qquad (b) 在区间 $(-\infty, +\infty)$ 上.
+\end{prob}
+
+\begin{prob}[S]{2761}
+$f_n(x) = n\left(x^{\frac{1}{n}}-1\right)$; $1 \leqslant x \leqslant a$.
+\end{prob}
+
+\begin{prob}[S]{2762}
+$f_n(x) = \sqrt[n]{1+x^n}$; $0 \leqslant x \leqslant 2$.
+\end{prob}
+
+\begin{prob}[M]{2763}
+$f_n(x) = \begin{cases} n^2 x, & 0 \leqslant x \leqslant \dfrac{1}{n}, \\ n^2\left(\dfrac{2}{n}-x\right), & \dfrac{1}{n} < x < \dfrac{2}{n}, \\ 0, & x \geqslant \dfrac{2}{n}; \end{cases}$ 在闭区间 $0 \leqslant x \leqslant 1$ 上.
+\end{prob}
+
+\begin{prob}[M]{2764}
+设 $f(x)$ 为定义于闭区间 $[a,b]$ 上的任意函数, 且
+\[
+f_n(x) = \frac{[nf(x)]}{n} \ (n=1,2,\cdots),
+\]
+证明: 当 $n\to\infty$ 时
+\[
+f_n(x) \rightrightarrows f(x) \ (a \leqslant x \leqslant b).
+\]
+\end{prob}
+
+\begin{prob}[M]{2765}
+设函数 $f(x)$ 在区间 $(a,b)$ 内有连续的导数 $f'(x)$, 且
+\[
+f_n(x) = n\left[f\left(x+\frac{1}{n}\right) - f(x)\right].
+\]
+证明: 在闭区间 $\alpha \leqslant x \leqslant \beta$ 上 (其中 $a < \alpha < \beta < b$), $f_n(x) \rightrightarrows f'(x)$.
+\end{prob}
+
+\begin{prob}[M]{2766}
+设 $f_n(x) = \sum_{i=0}^{n-1} \frac{1}{n} f\left(x+\frac{i}{n}\right)$, 其中 $f(x)$ 为 $(-\infty, +\infty)$ 上的连续函数. 证明: 序列 $f_n(x)$ 在任何有限闭区间 $[a,b]$ 上一致收敛.
+\end{prob}
+
+\probgroup{研究下列级数的收敛性:}
+
+\begin{prob}[M]{2767}
+$\sum_{n=0}^{\infty} x^n$; (a) 在区间 $|x| < q$ 内, 此外 $q < 1$; \qquad (b) 在区间 $|x| < 1$ 内.
+\end{prob}
+
+\begin{prob}[M]{2768}
+(a) $\sum_{n=1}^{\infty} \frac{x^n}{n^2}$; 在闭区间 $-1 \leqslant x \leqslant 1$ 上; \qquad (b) $\sum_{n=0}^{\infty} \frac{x^n}{n!}$; 在区间 $(0, +\infty)$ 内.
+\end{prob}
+
+\begin{prob}[S]{2769}
+$\sum_{n=0}^{\infty} (1-x)x^n$; 在闭区间 $0 \leqslant x \leqslant 1$ 上.
+\end{prob}
+
+\begin{prob}[S]{2770}
+$\sum_{n=1}^{\infty} \left(\frac{x^n}{n} - \frac{x^{n+1}}{n+1}\right)$; $-1 \leqslant x \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{2771}
+$\sum_{n=1}^{\infty} \frac{x}{[(n-1)x+1](nx+1)}$; $0 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[S]{2772}
+$\sum_{n=1}^{\infty} \frac{1}{(x+n)(x+n+1)}$; $0 < x < +\infty$.
+\end{prob}
+
+\begin{prob}[M]{2773}
+$\sum_{n=1}^{\infty} \frac{nx}{(1+x)(1+2x)\cdots (1+nx)}$; (a) $0 \leqslant x \leqslant \varepsilon$, 其中 $\varepsilon > 0$; \qquad (b) $\varepsilon \leqslant x < +\infty$.
+\end{prob}
+
+\begin{prob}[L]{2774}
+利用魏尔斯特拉斯判别法, 证明下列函数项级数在所指区间内的一致收敛性:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\sum_{n=1}^{\infty} \frac{1}{x^2+n^2}$, $-\infty < x < +\infty$;
+\item $\sum_{n=1}^{\infty} \frac{(-1)^n}{x+2^n}$, $-2 < x < +\infty$;
+\item $\sum_{n=1}^{\infty} \frac{x}{1+n^4 x^2}$, $0 \leqslant x < +\infty$;
+\item $\sum_{n=1}^{\infty} \frac{nx}{1+n^5 x^2}$, $|x| < +\infty$;
+\item $\sum_{n=1}^{\infty} \frac{n^2}{\sqrt{n!}}(x^n+x^{-n})$, $\frac{1}{2} \leqslant |x| \leqslant 2$;
+\item $\sum_{n=1}^{\infty} \frac{x^n}{\left[\frac{n}{2}\right]!}$, $|x| < a$, $a$ 为任意正数;
+\item $\sum_{n=1}^{\infty} \frac{\sin nx}{\sqrt[3]{n^4+x^4}}$, $|x| < +\infty$;
+\item $\sum_{n=1}^{\infty} \frac{\cos nx}{n^2}$, $|x| < +\infty$;
+\end{enumerate}
+\begin{enumerate}[label=(\alph*), start=9, itemsep=2pt, topsep=3pt]
+  \item $\displaystyle\sum_{n=1}^{\infty} \frac{\sin nx}{n\sqrt{n}}$，$ |x| < +\infty $；
+  \item $\displaystyle\sum_{n=2}^{\infty} \ln\left(1 + \frac{x^2}{n\ln^2 n}\right)$，$ |x| < a $；
+  \item $\displaystyle\sum_{n=1}^{\infty} x^2 \mathrm{e}^{-nx}$，$ 0 \leqslant x < +\infty $；
+  \item $\displaystyle\sum_{n=1}^{\infty} \arctan\frac{2x}{x^2+n^3}$，$ |x| < +\infty $。
+\end{enumerate}
+\end{prob}
+
+\probgroup{研究下列函数项级数在指定区间上的一致收敛性：}
+
+\begin{prob}[M]{2775}
+$\displaystyle\sum_{n=1}^{\infty} \frac{\sin nx}{n}$；(a) 在闭区间 $\varepsilon \leqslant x \leqslant 2\pi - \varepsilon$ 上，其中 $\varepsilon > 0$；(b) 在闭区间 $0 \leqslant x \leqslant 2\pi$ 上。
+\end{prob}
+
+\begin{prob}[S]{2776}
+$\displaystyle\sum_{n=1}^{\infty} 2^n \sin\frac{1}{3^n x}$；$0 < x < +\infty$。
+\end{prob}
+
+\begin{prob}[M]{2777}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^n}{x+n}$；$0 < x < +\infty$。
+\probhint{估计级数的余项。}
+\end{prob}
+
+\begin{prob}[S]{2778}
+$\displaystyle\sum_{n=2}^{\infty} \frac{(-1)^n}{n+\sin x}$；$0 \leqslant x \leqslant 2\pi$。
+\end{prob}
+
+\begin{prob}[S]{2779}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^{\frac{n(n-1)}{2}}}{\sqrt[3]{n^2+\mathrm{e}^x}}$；$|x| \leqslant 10$。
+\end{prob}
+
+\begin{prob}[S]{2780}
+$\displaystyle\sum_{n=1}^{\infty} \frac{\cos\frac{2n\pi}{3}}{\sqrt{n^2+x^2}}$；$-\infty < x < +\infty$。
+\end{prob}
+
+\begin{prob}[S]{2781}
+$\displaystyle\sum_{n=1}^{\infty} \frac{\sin x \sin nx}{\sqrt{n+x}}$；$0 \leqslant x < +\infty$。
+\end{prob}
+
+\begin{prob}[S]{2782}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^{[\sqrt{n}]}}{\sqrt{n(n+x)}}$；$0 \leqslant x < +\infty$。
+\end{prob}
+
+\begin{prob}[M]{2783}
+不连续函数序列可否一致收敛于连续函数？研究例子
+\[
+f_n(x) = \frac{1}{n}\psi(x) \quad (n=1,2,\cdots),
+\]
+其中
+\[
+\psi(x) =
+\begin{cases}
+0, & x\text{ 为无理数}, \\
+1, & x\text{ 为有理数}.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[M]{2784}
+证明：若级数
+\[
+\sum_{n=1}^{\infty} |f_n(x)|
+\]
+在 $[a,b]$ 上一致收敛，则级数
+\[
+\sum_{n=1}^{\infty} f_n(x)
+\]
+在 $[a,b]$ 上也一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2785}
+若级数
+\[
+\sum_{n=1}^{\infty} f_n(x)
+\]
+在 $[a,b]$ 上绝对并一致收敛，则级数
+\[
+\sum_{n=1}^{\infty} |f_n(x)|
+\]
+在 $[a,b]$ 上是否必定一致收敛？研究例子
+\[
+\sum_{n=0}^{\infty} (-1)^n (1-x)x^n,
+\]
+其中 $0 \leqslant x \leqslant 1$。
+\end{prob}
+
+\begin{prob}[M]{2786}
+证明：绝对且一致收敛的级数
+\[
+\sum_{n=1}^{\infty} f_n(x) \quad (0 \leqslant x \leqslant 1),
+\]
+其中
+\[
+f_n(x) =
+\begin{cases}
+0, & 0 \leqslant x \leqslant 2^{-(n+1)}, \\
+\dfrac{1}{n}\sin^2(2^{n+1}\pi x), & 2^{-(n+1)} < x < 2^{-n}, \\
+0, & 2^{-n} \leqslant x \leqslant 1,
+\end{cases}
+\]
+不能用非负项的收敛数项级数作为其强级数。
+\end{prob}
+
+\begin{prob}[M]{2787}
+证明：若函数项级数
+\[
+\sum_{n=1}^{\infty} \varphi_n(x)
+\]
+的各项是闭区间 $[a,b]$ 上的单调函数，此级数在闭区间 $[a,b]$ 的两个端点绝对收敛，则此级数在闭区间 $[a,b]$ 上绝对并一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2788}
+证明：幂级数
+\[
+\sum_{n=0}^{\infty} a_n x^n
+\]
+在全部位于其收敛区间内的任何闭区间上一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2789}
+设 $a_n \to \infty$ 且级数 $\displaystyle\sum_{n=1}^{\infty} \left|\frac{1}{a_n}\right|$ 收敛。证明：级数
+\[
+\sum_{n=1}^{\infty} \frac{1}{x - a_n}
+\]
+在不包含点 $a_n$ $(n=1,2,\cdots)$ 的任何有界闭集合上绝对并一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2790}
+证明：若级数 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛，则狄利克雷级数
+\[
+\sum_{n=1}^{\infty} \frac{a_n}{n^x}
+\]
+在 $x \geqslant 0$ 时一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2791}
+设级数 $\displaystyle\sum_{n=1}^{\infty} a_n$ 收敛。证明：级数
+\[
+\sum_{n=1}^{\infty} a_n \mathrm{e}^{-nx}
+\]
+在区域 $x \geqslant 0$ 内一致收敛。
+\end{prob}
+
+\begin{prob}[M]{2792}
+证明：函数
+\[
+f(x) = \sum_{n=1}^{\infty} \frac{\sin nx}{n^3}
+\]
+在区域 $-\infty < x < +\infty$ 内连续并有连续的导数。
+\end{prob}
+
+\begin{prob}[M]{2793}
+证明：函数
+\[
+f(x) = \sum_{n=-\infty}^{+\infty} \frac{1}{(n-x)^2}
+\]
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 在除整数点 $x = 0, \pm 1, \pm 2, \cdots$ 外的一切点有定义并且连续；
+  \item 为周期函数，其周期等于 $1$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2794}
+证明：级数
+\[
+\sum_{n=1}^{\infty} \left[ nx\mathrm{e}^{-nx} - (n-1)x\mathrm{e}^{-(n-1)x} \right]
+\]
+在闭区间 $0 \leqslant x \leqslant 1$ 上收敛但不一致收敛，而它的和是此区间上的连续函数。
+\end{prob}
+
+\begin{prob}[L]{2795}
+确定函数 $f(x)$ 的存在域并研究其连续性，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle f(x) = \sum_{n=1}^{\infty} \left(x + \frac{1}{n}\right)^n$；
+  \item $\displaystyle f(x) = \sum_{n=1}^{\infty} \frac{x + n(-1)^n}{x^2 + n^2}$；
+  \item $\displaystyle f(x) = \sum_{n=1}^{\infty} \frac{x}{(1 + x^2)^n}$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2796}
+设 $r_k$ $(k=1,2,\cdots)$ 是闭区间 $[0,1]$ 上的有理数。证明函数
+\[
+f(x) = \sum_{k=1}^{\infty} \frac{|x - r_k|}{3^k} \quad (0 \leqslant x \leqslant 1)
+\]
+具有下列性质：1) 连续；2) 在无理点可微而在有理点不可微。
+\end{prob}
+
+\begin{prob}[M]{2797}
+证明：黎曼 $\zeta$ 函数
+\[
+\zeta(x) = \sum_{n=1}^{\infty} \frac{1}{n^x}
+\]
+在区域 $x > 1$ 内是连续的并且在此区域内有连续的各阶导数。
+\end{prob}
+
+\begin{prob}[M]{2798}
+证明：$\theta$ 函数
+\[
+\theta(x) = \sum_{n=-\infty}^{+\infty} \mathrm{e}^{-\pi n^2 x}
+\]
+当 $x > 0$ 时有定义并无穷多次可微。
+\end{prob}
+
+\begin{prob}[M]{2799}
+确定函数 $f(x)$ 的存在域并研究它们的可微性，设：
+(a) $\displaystyle f(x) = \sum_{n=1}^{\infty} \frac{(-1)^n x}{n+x}$； \qquad (b) $\displaystyle f(x) = \sum_{n=1}^{\infty} \frac{|x|}{n^2 + x^2}$。
+\end{prob}
+
+\begin{prob}[M]{2800}
+证明：序列
+\[
+f_n(x) = \frac{1}{n}\arctan x^n \quad (n=1,2,\cdots)
+\]
+在区间 $(-\infty, +\infty)$ 内一致收敛，但
+\[
+\left[ \lim_{n\to\infty} f_n(x) \right]_{x=1}' \neq \lim_{n\to\infty} f_n'(1).
+\]
+\end{prob}
+
+\begin{prob}[M]{2801}
+证明：序列
+\[
+f_n(x) = x^2 + \frac{1}{n}\sin n\left(x + \frac{\pi}{2}\right)
+\]
+在区间 $(-\infty, +\infty)$ 内一致收敛，但
+\[
+\left[ \lim_{n\to\infty} f_n(x) \right]' \neq \lim_{n\to\infty} f_n'(x).
+\]
+\end{prob}
+
+\begin{prob}[L]{2802}
+试确定参数 $\alpha$ 取何值时下列命题为真：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 序列
+  \[
+  f_n(x) = n^\alpha x \mathrm{e}^{-nx} \quad (n=1,2,\cdots) \tag{1}
+  \]
+  $(n=1,2,\cdots)$ 在闭区间 $[0,1]$ 上收敛；
+  \item 序列 $(1)$ 在 $[0,1]$ 上一致收敛；
+  \item $\displaystyle\lim_{n\to\infty} \int_0^1 f_n(x)\,\mathrm{d}x$ 可在积分号下取极限。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2803}
+证明：序列
+\[
+f_n(x) = nx\mathrm{e}^{-nx^2} \quad (n=1,2,\cdots)
+\]
+在闭区间 $[0,1]$ 上收敛，但
+\[
+\int_0^1 \left[ \lim_{n\to\infty} f_n(x) \right]\,\mathrm{d}x \neq \lim_{n\to\infty} \int_0^1 f_n(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2804}
+证明：序列
+\[
+f_n(x) = nx(1-x)^n \quad (n=1,2,\cdots)
+\]
+在闭区间 $[0,1]$ 上收敛而不一致收敛，但
+\[
+\lim_{n\to\infty} \int_0^1 f_n(x)\,\mathrm{d}x = \int_0^1 \lim_{n\to\infty} f_n(x)\,\mathrm{d}x.
+\]
+\end{prob}
+
+\begin{prob}[M]{2805}
+在表达式
+\[
+\lim_{n\to\infty} \int_0^1 \frac{nx}{1 + n^2 x^4}\,\mathrm{d}x
+\]
+中，在积分符号下取极限是否合理？
+\end{prob}
+
+\probgroup{求极限：}
+
+\begin{prob}[S]{2806}
+$\displaystyle\lim_{x\to 1-0} \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n} \cdot \frac{x^n}{x^n + 1}$。
+\end{prob}
+
+\begin{prob}[S]{2807}
+$\displaystyle\lim_{x\to 1-0} \sum_{n=1}^{\infty} (x^n - x^{n+1})$。
+\end{prob}
+
+\begin{prob}[M]{2808}
+(a) $\displaystyle\lim_{x\to +0} \sum_{n=1}^{\infty} \frac{1}{2^n n^x}$； \qquad (b) $\displaystyle\lim_{x\to \infty} \sum_{n=1}^{\infty} \frac{x^2}{1 + n^2 x^2}$。
+\end{prob}
+
+\begin{prob}[S]{2809}
+逐项微分级数 $\displaystyle\sum_{n=1}^{\infty} \arctan\frac{x}{n^2}$ 合理否？
+\end{prob}
+
+\begin{prob}[M]{2810}
+在闭区间 $[0,1]$ 上逐项积分级数
+\[
+\sum_{n=1}^{\infty} \left( x^{\frac{1}{2n+1}} - x^{\frac{1}{2n-1}} \right)
+\]
+合理否？
+\end{prob}
+
+\begin{prob}[M]{2811.1}
+设 $f(x)$ $(-\infty < x < +\infty)$ 是无穷多次可微的函数，且其导数 $f^{(n)}(x)$ $(n=1,2,\cdots)$ 的序列在每一个有限区间 $(a,b)$ 内一致收敛于函数 $\varphi(x)$。证明：$\varphi(x) = C\mathrm{e}^x$，其中 $C$ 为常数。考察例子 $f_n(x) = \mathrm{e}^{-(x-n)^2}$，$n=1,2,\cdots$。
+\end{prob}
+
+\begin{prob}[M]{2811.2}
+设函数 $f_n(x)$ $(n=1,2,\cdots)$ 在 $(-\infty, +\infty)$ 上有定义且有界，且在任何闭区间 $[a,b]$ 上 $f_n(x) \rightrightarrows \varphi(x)$。由此是否可知
+\[
+\lim_{n\to\infty} \sup_x f_n(x) = \sup_x \varphi(x) ?
+\]
+\end{prob}
+
+\probsec{§5. 幂级数}
+
+\probgroup{求下列幂级数的收敛半径和收敛区间并研究其在收敛区间端点的性质：}
+
+\begin{prob}[S]{2812}
+$\displaystyle\sum_{n=1}^{\infty} \frac{x^n}{n^p}$.
+\end{prob}
+
+\begin{prob}[S]{2813}
+$\displaystyle\sum_{n=1}^{\infty} \frac{3^n + (-2)^n}{n}(x+1)^n$.
+\end{prob}
+
+\begin{prob}[S]{2814}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(n!)^2}{(2n)!}x^n$.
+\end{prob}
+
+\begin{prob}[S]{2815}
+$\displaystyle\sum_{n=1}^{\infty} \alpha^{n^2}x^n \ (0 < \alpha < 1)$.
+\end{prob}
+
+\begin{prob}[S]{2816}
+$\displaystyle\sum_{n=1}^{\infty} \left(1 + \frac{1}{n}\right)^{n^2} x^n$.
+\end{prob}
+
+\begin{prob}[S]{2817}
+$\displaystyle\sum_{n=1}^{\infty} \frac{n!}{a^{n^2}}x^n \ (a > 1)$.
+\end{prob}
+
+\begin{prob}[S]{2818}
+$\displaystyle\sum_{n=1}^{\infty} \left[\frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2n)}\right]^p \left(\frac{x-1}{2}\right)^n$.
+\end{prob}
+
+\begin{prob}[S]{2819}
+$\displaystyle\sum_{n=1}^{\infty} (-1)^n \left[\frac{2^n(n!)^2}{(2n+1)!}\right]^p x^n$.
+\end{prob}
+
+\begin{prob}[S]{2820}
+$\displaystyle\sum_{n=1}^{\infty} \frac{m(m-1)\cdots(m-n+1)}{n!}x^n$.
+\end{prob}
+
+\begin{prob}[S]{2821}
+$\displaystyle\sum_{n=1}^{\infty} \left(\frac{a^n}{n} + \frac{b^n}{n^2}\right)x^n \ (a > 0, b > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2822}
+$\displaystyle\sum_{n=1}^{\infty} \frac{x^n}{a^n + b^n} \ (a > 0, b > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2823}
+$\displaystyle\sum_{n=1}^{\infty} \frac{x^n}{a^{\sqrt{n}}} \ (a > 0)$.
+\end{prob}
+
+\begin{prob}[S]{2824}
+$\displaystyle\sum_{n=1}^{\infty} \frac{3^{-\sqrt{n}}x^n}{\sqrt{n^2+1}}$.
+\end{prob}
+
+\begin{prob}[S]{2825}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(2n)!!}{(2n+1)!!}x^n$.
+\end{prob}
+
+\begin{prob}[S]{2826}
+$\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^n}{n!}\left(\frac{n}{\mathrm{e}}\right)^n x^n$.
+\end{prob}
+
+\begin{prob}[S]{2827}
+$\displaystyle\sum_{n=1}^{\infty} \left(1 + \frac{1}{2} + \cdots + \frac{1}{n}\right)x^n$.
+\end{prob}
+
+\begin{prob}[S]{2828}
+$\displaystyle\sum_{n=1}^{\infty} \frac{[3 + (-1)^n]^n}{n}x^n$.
+\end{prob}
+
+\begin{prob}[S]{2829}
+$\displaystyle\sum_{n=2}^{\infty} \frac{\left(1 + 2\cos\frac{\pi n}{4}\right)^n}{\ln n}x^n$.
+\end{prob}
+
+\begin{prob}[S]{2830}
+$\displaystyle\sum_{n=1}^{\infty} \frac{x^{n^2}}{2^n}$.
+\end{prob}
+
+\begin{prob}[L]{2831}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^{[\sqrt{n}]}}{n}x^n$ (普林斯海姆级数).
+\item $\displaystyle\sum_{n=1}^{\infty} \frac{10^{\nu(n)}}{n}(1-x)^n$, 其中 $\nu(n)$ 为数 $n$ 的位数;
+\item $\displaystyle\sum_{n=1}^{\infty} \left(\frac{x}{\sin n}\right)^n$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2832}
+求超几何级数
+\[
+1 + \frac{\alpha \cdot \beta}{1 \cdot \gamma}x + \frac{\alpha(\alpha+1)\beta(\beta+1)}{1 \cdot 2 \cdot \gamma(\gamma+1)}x^2 + \cdots + \frac{\alpha(\alpha+1)\cdots(\alpha+n-1)\beta(\beta+1)\cdots(\beta+n-1)}{1 \cdot 2 \cdots n \cdot \gamma(\gamma+1)\cdots(\gamma+n-1)}x^n + \cdots
+\]
+的收敛域.
+\end{prob}
+
+\probgroup{求下列广义幂级数的收敛域：}
+
+\begin{prob}[S]{2833}
+$\displaystyle\sum_{n=0}^{\infty} \frac{1}{2n+1}\left(\frac{1-x}{1+x}\right)^n$.
+\end{prob}
+
+\begin{prob}[S]{2834}
+$\displaystyle\sum_{n=1}^{\infty} \frac{1}{x^n}\sin\frac{\pi}{2^n}$.
+\end{prob}
+
+\begin{prob}[S]{2835}
+$\displaystyle\sum_{n=-\infty}^{\infty} \frac{x^n}{2^{n^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2836}
+$\displaystyle\sum_{n=1}^{\infty} \left(1 + \frac{1}{n}\right)^{-n^2} \mathrm{e}^{-nx}$.
+\end{prob}
+
+\begin{prob}[S]{2837}
+$\displaystyle\sum_{n=1}^{\infty} \frac{3^{3n}(n!)^3}{(3n)!}\tan^n x$.
+\end{prob}
+
+\begin{prob}[S]{2838}
+按二项式 $x+1$ 的非负整数次幂展开函数
+\[
+f(x) = x^3.
+\]
+\end{prob}
+
+\begin{prob}[L]{2839}
+把函数
+\[
+f(x) = \frac{1}{a-x} \quad (a \neq 0)
+\]
+按以下方式展开为幂级数：(a) 依 $x$ 的幂展开；(b) 依二项式 $x-b$ 的幂展开，此处 $b \neq a$；(c) 依 $\frac{1}{x}$ 的幂展开. 求出相应的收敛域.
+\end{prob}
+
+\begin{prob}[M]{2840}
+按差 $x-1$ 的非负整数次幂展开函数 $f(x) = \ln x$，并说明展开式的收敛区间. 求级数 $\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n}$ 的和.
+\end{prob}
+
+\probgroup{写出下列函数按变量 $x$ 的非负整数次幂的展开式，并求出相应的收敛区间：}
+
+\begin{prob}[S]{2841}
+$f(x) = \sinh x$.
+\end{prob}
+
+\begin{prob}[S]{2842}
+$f(x) = \cosh x$.
+\end{prob}
+
+\begin{prob}[S]{2843}
+$f(x) = \sin^2 x$.
+\end{prob}
+
+\begin{prob}[S]{2844}
+$f(x) = a^x \ (a > 0, a \neq 1)$.
+\end{prob}
+
+\begin{prob}[S]{2845}
+$f(x) = \sin(\mu \arcsin x)$.
+\end{prob}
+
+\begin{prob}[S]{2846}
+$f(x) = \cos(\mu \arcsin x)$.
+\end{prob}
+
+\begin{prob}[S]{2847}
+写出函数 $f(x) = x^x$ 按差 $x-1$ 的非负整数次幂展开式的前三项.
+\end{prob}
+
+\begin{prob}[M]{2848}
+写出函数 $f(x) = (1+x)^{\frac{1}{x}} \ (x \neq 0)$ 和 $f(0) = \mathrm{e}$ 按变量 $x$ 的非负整数次幂展开式的前三项.
+\end{prob}
+
+\begin{prob}[S]{2849}
+将函数 $\sin(x+h)$ 和 $\cos(x+h)$ 按变量 $h$ 的非负整数次幂展开.
+\end{prob}
+
+\begin{prob}[M]{2850.1}
+不进行实际的展开工作而求函数 $f(x) = \frac{x}{x^2 - 5x + 6}$ 的幂级数展开式的收敛区间：(a) 依 $x$ 的幂展开；(b) 依二项式 $x-5$ 的幂展开.
+\end{prob}
+
+\begin{prob}[M]{2850.2}
+能否下结论说：在 $(-\infty, +\infty)$ 上当 $N \to \infty$ 时
+\[
+\sum_{n=1}^{N} (-1)^{n-1}\frac{x^{2n-1}}{(2n-1)!} \rightrightarrows \sin x ?
+\]
+\end{prob}
+
+\probgroup{利用基本展开式 $\mathrm{I}-\mathrm{V}$，写出下列函数关于 $x$ 的幂级数展开式：}
+
+\begin{prob}[S]{2851}
+$\mathrm{e}^{-x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2852}
+$\cos^2 x$.
+\end{prob}
+
+\begin{prob}[S]{2853}
+$\sin^3 x$.
+\end{prob}
+
+\begin{prob}[S]{2854}
+$\frac{x^{10}}{1-x}$.
+\end{prob}
+
+\begin{prob}[S]{2855}
+$\frac{1}{(1-x)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2856}
+$\frac{x}{\sqrt{1-2x}}$.
+\end{prob}
+
+\begin{prob}[S]{2857}
+$\ln\sqrt{\frac{1+x}{1-x}}$.
+\end{prob}
+
+\begin{prob}[S]{2858}
+$\frac{x}{1+x-2x^2}$.
+\probhint{把所给分式分解为简单分式.}
+\end{prob}
+
+\begin{prob}[S]{2859}
+$\frac{12-5x}{6-5x-x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2860}
+$\frac{x}{(1-x)(1-x^2)}$.
+\end{prob}
+
+\begin{prob}[S]{2861}
+$\frac{1}{1-x-x^2}$.
+\end{prob}
+
+\begin{prob}[M]{2862}
+(a) $\frac{1}{1+x+x^2}$; \qquad (b) $f(x) = \frac{1}{1+x+x^2+x^3}$. 计算 $f^{(1000)}(0)$.
+\end{prob}
+
+\begin{prob}[S]{2863}
+$\frac{x\cos\alpha - x^2}{1 - 2x\cos\alpha + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2864}
+$\frac{x\sin\alpha}{1 - 2x\cos\alpha + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2865}
+$\frac{x\sinh\alpha}{1 - 2x\cosh\alpha + x^2}$.
+\end{prob}
+
+\begin{prob}[S]{2866}
+$\frac{1}{(1-x^2)\sqrt{1-x^2}}$.
+\end{prob}
+
+\begin{prob}[S]{2867}
+$\ln(1+x+x^2+x^3)$.
+\end{prob}
+
+\begin{prob}[S]{2868}
+$\mathrm{e}^{x\cos\alpha}\cos(x\sin\alpha)$. \probhint{运用欧拉公式.}
+\end{prob}
+
+\probgroup{首先展开导数，然后用逐项积分的方法求下列函数的幂级数展开式.}
+
+\begin{prob}[M]{2869}
+$f(x) = \arctan x$. 求级数 $\displaystyle\sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{2n-1}$ 的和.
+\end{prob}
+
+\begin{prob}[S]{2870}
+$f(x) = \arcsin x$.
+\end{prob}
+
+\begin{prob}[S]{2871}
+$f(x) = \ln\left(x + \sqrt{1+x^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{2872}
+$f(x) = \ln\left(1 - 2x\cos\alpha + x^2\right)$.
+\end{prob}
+
+\begin{prob}[L]{2873}
+利用不同方法，求下列函数的幂级数展开式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = (1+x)\ln(1+x)$;
+\item $f(x) = \frac{1}{4}\ln\frac{1+x}{1-x} + \frac{1}{2}\arctan x$;
+\item $f(x) = \arctan\frac{2-2x}{1+4x}$;
+\item $f(x) = \arctan\frac{2x}{2-x^2}$;
+\item $f(x) = x\arctan x - \ln\sqrt{1+x^2}$;
+\item $f(x) = \arccos(1-2x^2)$;
+\item $f(x) = x\arcsin x + \sqrt{1-x^2}$;
+\item $f(x) = x\ln\left(x+\sqrt{1+x^2}\right) - \sqrt{1+x^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{2874}
+利用展开式
+\[
+f(x+h) - f(x) = hf'(x) + \frac{h^2}{2!}f''(x) + \cdots
+\]
+的唯一性，求下列函数的 $n$ 阶导数：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x) = \mathrm{e}^{x^2}$;
+\item $f(x) = \mathrm{e}^{\frac{a}{x}}$;
+\item $f(x) = \arctan x$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{2875}
+依二项式 $x+1$ 的正整数次幂展开函数
+\[
+f(x) = \ln\frac{1}{2+2x+x^2}.
+\]
+\end{prob}
+
+\begin{prob}[S]{2876}
+把函数
+\[
+f(x) = \frac{1}{1-x}
+\]
+按变量 $x$ 的负整数次幂展开成幂级数.
+\end{prob}
+
+\begin{prob}[S]{2877}
+把函数
+\[
+f(x) = \ln x
+\]
+按分式 $\frac{x-1}{x+1}$ 的正整数次幂展开成幂级数.
+\end{prob}
+
+\begin{prob}[S]{2878}
+把函数
+\[
+f(x) = \frac{x}{\sqrt{1+x}}
+\]
+按分式 $\frac{x}{1+x}$ 的正整数次幂展开成幂级数.
+\end{prob}
+
+\begin{prob}[M]{2879}
+设
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{x^n}{n!},
+\]
+直接证明：
+\[
+f(x)f(y) = f(x+y).
+\]
+\end{prob}
+
+\begin{prob}[M]{2880}
+若我们定义
+\[
+\sin x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n+1}}{(2n+1)!}, \quad \cos x = \sum_{n=0}^{\infty} (-1)^n \frac{x^{2n}}{(2n)!},
+\]
+证明：(a) $\sin x\cos x = \frac{1}{2}\sin 2x$; (b) $\sin^2 x + \cos^2 x = 1$.
+\end{prob}
+
+\begin{prob}[M]{2881}
+写出函数 $f(x) = \left[\displaystyle\sum_{n=0}^{\infty} \left(\frac{x^n}{n+1}\right)\right]^{-1}$ 的幂级数展开式中的若干项.
+\end{prob}
+
+\probgroup{对幂级数进行相应的运算，从而求出下列函数的幂级数展开式：}
+
+\begin{prob}[S]{2882}
+$f(x) = (1+x)\mathrm{e}^{-x}$.
+\end{prob}
+
+\begin{prob}[S]{2883}
+$f(x) = (1-x)^2\cosh\sqrt{x}$.
+\end{prob}
+
+\begin{prob}[S]{2884}
+$f(x) = \ln^2(1-x)$.
+\end{prob}
+
+\begin{prob}[S]{2885}
+$f(x) = (1+x^2)\arctan x$.
+\end{prob}
+
+\begin{prob}[S]{2886}
+$f(x) = \mathrm{e}^x\cos x$.
+\end{prob}
+
+\begin{prob}[S]{2887}
+$f(x) = \mathrm{e}^x\sin x$.
+\end{prob}
+
+\begin{prob}[S]{2888}
+$f(x) = \frac{\ln(1+x)}{1+x}$.
+\end{prob}
+
+\begin{prob}[S]{2889}
+$f(x) = (\arctan x)^2$.
+\end{prob}
+
+\begin{prob}[S]{2890}
+$f(x) = \left(\frac{\arcsin x}{x}\right)^2$.
+\end{prob}
+
+\probgroup{将下列函数按变量 $x$ 的正整数次幂展开成幂级数，写出展开式 (异于零) 的前三项：}
+
+\begin{prob}[S]{2891}
+$f(x) = \tan x$.
+\end{prob}
+
+\begin{prob}[S]{2892}
+$f(x) = \tanh x$.
+\end{prob}
+
+\begin{prob}[S]{2893}
+$f(x) = \cot x - \frac{1}{x}$.
+\end{prob}
+
+\begin{prob}[M]{2894}
+设 $\sec x$ 的展开式写为以下形式：
+\[
+\sec x = \sum_{n=0}^{\infty} \frac{E_n}{(2n)!}x^{2n},
+\]
+求出系数 $E_n$ (欧拉数)的递推公式.
+\end{prob}
+
+\begin{prob}[S]{2895}
+把函数
+\[
+f(x) = \frac{1}{\sqrt{1 - 2tx + x^2}} \quad (|x| < 1)
+\]
+展开成幂级数.
+\end{prob}
+
+\begin{prob}[M]{2896}
+设 $f(x) = \displaystyle\sum_{n=0}^{\infty} a_n x^n$. 写出函数
+\[
+F(x) = \frac{f(x)}{1-x}
+\]
+的展开式.
+\end{prob}
+
+\begin{prob}[M]{2897}
+若级数 $\displaystyle\sum_{n=0}^{\infty} a_n x^n$ 有收敛半径为 $R_1$，而级数 $\displaystyle\sum_{n=0}^{\infty} b_n x^n$ 有收敛半径 $R_2$，则级数：
+\[
+\text{(a) } \sum_{n=0}^{\infty} (a_n \pm b_n)x^n; \qquad \text{(b) } \sum_{n=0}^{\infty} a_n b_n x^n
+\]
+的收敛半径 $R$ 是怎样的？
+\end{prob}
+
+\begin{prob}[M]{2898}
+设
+\[
+l = \varliminf_{n \to \infty} \left|\frac{a_n}{a_{n+1}}\right| \quad \text{和} \quad L = \varlimsup_{n \to \infty} \left|\frac{a_n}{a_{n+1}}\right|,
+\]
+证明：幂级数 $\displaystyle\sum_{n=0}^{\infty} a_n x^n$ 的收敛半径 $R$ 满足不等式
+\[
+l \leqslant R \leqslant L.
+\]
+\end{prob}
+
+\begin{prob}[M]{2899.1}
+证明：若函数 $f(x) = \displaystyle\sum_{n=0}^{\infty} a_n x^n$ 且 $|n!a_n| < M \ (n=1,2,\cdots)$，其中 $M$ 是常数，则：(1) $f(x)$ 在任何点 $a$ 无穷次可微；(2) 下述展开式成立：
+\[
+f(x) = \sum_{n=0}^{\infty} \frac{f^{(n)}(a)}{n!}(x-a)^n \quad (|x| < +\infty).
+\]
+\end{prob}
+
+\begin{prob}[M]{2899.2}
+设 $f(x) \in C^{(\infty)}(a, b)$，且当 $x \in (a, b)$ 时 $|f^{(n)}(x)| \leqslant c^n$ ($n = 0, 1, 2, \cdots$)，证明：函数 $f(x)$ 可展开为幂级数
+\[
+f(x) = \sum_{n=0}^{\infty} a_n (x - x_0)^n \quad (x_0 \in (a, b)),
+\]
+此幂级数在区间 $(a, b)$ 上收敛．
+\end{prob}
+
+\begin{prob}[M]{2899.3}
+设 $f(x) \in C^{(\infty)}[-1, 1]$，且当 $x \in [-1, 1]$ 时 $f^{(n)}(x) \geqslant 0$ ($n = 0, 1, 2, \cdots$)．证明：函数 $f(x)$ 在区间 $(-1, 1)$ 内可展开为幂级数
+\[
+f(x) = \sum_{n=0}^{\infty} a_n x^n.
+\]
+\probhint{对于函数 $f(x)$ 的泰勒级数余项 $R_n(x)$，利用导数 $f^{(n)}(x)$ 的单调性得到以下估计：
+\[
+|R_n(x)| \leqslant |x|^{n+1} f(1).
+\]}
+\end{prob}
+
+\begin{prob}[M]{2900}
+证明：若 1) $a_n \geqslant 0$；2) 存在
+\[
+\lim_{x \to R - 0} \sum_{n=0}^{\infty} a_n x^n = S, \quad \text{则 } \sum_{n=0}^{\infty} a_n R^n = S.
+\]
+\end{prob}
+
+\probgroup{将下列函数展开成幂级数：}
+
+\begin{prob}[S]{2901}
+$\displaystyle \int_0^x \mathrm{e}^{-t^2} \,\mathrm{d}t$．
+\end{prob}
+
+\begin{prob}[S]{2902}
+$\displaystyle \int_0^x \frac{\,\mathrm{d}t}{\sqrt{1 - t^4}}$．
+\end{prob}
+
+\begin{prob}[S]{2903}
+$\displaystyle \int_0^x \frac{\sin t}{t} \,\mathrm{d}t$．
+\end{prob}
+
+\begin{prob}[S]{2904}
+$\displaystyle \int_0^x \frac{\arctan t}{t} \,\mathrm{d}t$．
+\end{prob}
+
+\begin{prob}[S]{2905}
+$\displaystyle \int_0^x \frac{t \,\mathrm{d}t}{\ln(1 + t)}$（写出四项）．
+\end{prob}
+
+\probgroup{运用逐项微分法计算下列级数的和：}
+
+\begin{prob}[S]{2906}
+$\displaystyle x + \frac{x^3}{3} + \frac{x^5}{5} + \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2907}
+$\displaystyle x - \frac{x^3}{3} + \frac{x^5}{5} - \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2908}
+$\displaystyle 1 + \frac{x^2}{2!} + \frac{x^4}{4!} + \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2909}
+$\displaystyle \frac{x}{1 \cdot 2} + \frac{x^2}{2 \cdot 3} + \frac{x^3}{3 \cdot 4} + \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2910}
+$\displaystyle 1 + \frac{1}{2} x + \frac{1 \cdot 3}{2 \cdot 4} x^2 + \frac{1 \cdot 3 \cdot 5}{2 \cdot 4 \cdot 6} x^3 + \cdots$．
+\probhint{以 $1 - x$ 乘级数的导数．}
+\end{prob}
+
+\probgroup{运用逐项积分法计算下列级数的和：}
+
+\begin{prob}[S]{2911}
+$x + 2x^2 + 3x^3 + \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2912}
+$x - 4x^2 + 9x^3 - 16x^4 + \cdots$．
+\end{prob}
+
+\begin{prob}[S]{2913}
+$1 \cdot 2x + 2 \cdot 3x^2 + 3 \cdot 4x^3 + \cdots$．
+\end{prob}
+
+\begin{prob}[M]{2914}
+证明：级数
+\[
+y = \sum_{n=0}^{\infty} \frac{x^{4n}}{(4n)!}
+\]
+满足方程
+\[
+y^{(4)} = y.
+\]
+\end{prob}
+
+\begin{prob}[M]{2915}
+证明：级数
+\[
+y = \sum_{n=0}^{\infty} \frac{x^n}{(n!)^2}
+\]
+满足方程
+\[
+x y'' + y' - y = 0.
+\]
+\end{prob}
+
+\probgroup{求在复域内（$z = x + \mathrm{i}y$）下列幂级数的收敛半径及收敛圆：}
+
+\begin{prob}[S]{2916}
+$\displaystyle \sum_{n=1}^{\infty} \frac{(z - 1 - \mathrm{i})^n}{n \cdot 2^n}$．
+\end{prob}
+
+\begin{prob}[S]{2917}
+$\displaystyle \sum_{n=1}^{\infty} \frac{(1 + \mathrm{i})^n z^n}{(n + 1)(n + 2)}$．
+\end{prob}
+
+\begin{prob}[S]{2918}
+$\displaystyle \sum_{n=1}^{\infty} \frac{n! z^n}{(1 + \mathrm{i})(1 + 2\mathrm{i}) \cdots (1 + n\mathrm{i})}$．
+\end{prob}
+
+\begin{prob}[S]{2919}
+$\displaystyle \sum_{n=1}^{\infty} \frac{z^n}{n^{\alpha + \mathrm{i}\beta}}$．
+\end{prob}
+
+\begin{prob}[S]{2920}
+$\displaystyle \sum_{n=1}^{\infty} \frac{(z - \mathrm{e}^{\mathrm{i}\alpha})^n}{n(1 - \mathrm{e}^{\mathrm{i}\alpha})^n}$．
+\end{prob}
+
+\begin{prob}[M]{2921}
+利用牛顿二项式公式近似地计算 $\sqrt[3]{9}$，并且估计当只取展开式三项时的误差．
+\end{prob}
+
+\begin{prob}[L]{2922}
+近似地计算并估计相应误差：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\arctan 1.2$；
+  \item $\sqrt[10]{1000}$；
+  \item $\displaystyle \frac{1}{\sqrt{\mathrm{e}}}$；
+  \item $\ln 1.25$．
+\end{enumerate}
+\end{prob}
+
+\probgroup{利用适当的展开式，计算下列函数的值：}
+
+\begin{prob}[S]{2923}
+$\sin 18^\circ$，精确到 $10^{-5}$．
+\end{prob}
+
+\begin{prob}[S]{2924}
+$\cos 1^\circ$，精确到 $10^{-6}$．
+\end{prob}
+
+\begin{prob}[S]{2925}
+$\tan 9^\circ$，精确到 $10^{-3}$．
+\end{prob}
+
+\begin{prob}[S]{2926}
+$\mathrm{e}$，精确到 $10^{-6}$．
+\end{prob}
+
+\begin{prob}[S]{2927}
+$\ln 1.2$，精确到 $10^{-4}$．
+\end{prob}
+
+\begin{prob}[M]{2928}
+由等式
+\[
+\frac{\pi}{6} = \arcsin \frac{1}{2}
+\]
+求数 $\pi$，精确到 $10^{-4}$．
+\end{prob}
+
+\begin{prob}[M]{2929}
+利用等式
+\[
+\frac{\pi}{4} = \arctan \frac{1}{2} + \arctan \frac{1}{3},
+\]
+计算数 $\pi$，精确到 $0.001$．
+\end{prob}
+
+\begin{prob}[M]{2930}
+利用等式
+\[
+\frac{\pi}{4} = 4\arctan \frac{1}{5} - \arctan \frac{1}{239},
+\]
+求数 $\pi$，精确到 $10^{-9}$．
+\end{prob}
+
+\begin{prob}[M]{2931}
+利用公式
+\[
+\ln(n + 1) = \ln n + 2\left[\frac{1}{2n + 1} + \frac{1}{3(2n + 1)^3} + \cdots\right],
+\]
+求 $\ln 2$ 和 $\ln 3$，精确到 $10^{-5}$．
+\end{prob}
+
+\begin{prob}[L]{2932}
+将被积函数展开成级数，从而计算下列积分之值，精确到 $0.001$：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item $\displaystyle \int_0^1 \mathrm{e}^{-x^2} \,\mathrm{d}x$；
+  \item $\displaystyle \int_2^4 \mathrm{e}^{\frac{1}{x}} \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^2 \frac{\sin x}{x} \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^1 \cos x^2 \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^1 \frac{\sinh x}{x} \,\mathrm{d}x$；
+  \item $\displaystyle \int_2^{+\infty} \frac{\,\mathrm{d}x}{1 + x^3}$；
+  \item $\displaystyle \int_0^{\frac{1}{3}} \frac{\,\mathrm{d}x}{\sqrt[3]{1 - x^2}}$；
+  \item $\displaystyle \int_0^1 \frac{\,\mathrm{d}x}{\sqrt{1 + x^4}}$；
+  \item $\displaystyle \int_{10}^{100} \frac{\ln(1 + x)}{x} \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^{\frac{1}{2}} \frac{\arctan x}{x} \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^{\frac{1}{2}} \frac{\arcsin x}{x} \,\mathrm{d}x$；
+  \item $\displaystyle \int_0^1 x^x \,\mathrm{d}x$．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{2933}
+求一段正弦曲线
+\[
+y = \sin x \quad (0 \leqslant x \leqslant \pi)
+\]
+之弧长，精确到 $0.01$．
+\end{prob}
+
+\begin{prob}[M]{2934}
+椭圆之半轴为 $a = 1$ 及 $b = \frac{1}{2}$，求椭圆的周长，并精确到 $0.01$．
+\end{prob}
+
+\begin{prob}[M]{2935}
+两根电线杆相距 $2l = 20\,\mathrm{m}$，电线成抛物线的形状\footnote{严格地说，若不计电线的伸长，电线形状应为悬链线．请读者研究抛物线近似的误差．——译注}．若电线下垂高度 $h = 40\,\mathrm{cm}$，计算电线的长度，并精确到 $1\,\mathrm{cm}$．
+\end{prob}
+
+\probsec{§6. 傅里叶级数}
+
+\begin{prob}[M]{2936}
+将函数
+\[
+f(x) = \sin^4 x
+\]
+展开成傅里叶级数．
+\end{prob}
+
+\begin{prob}[M]{2937}
+三角多项式
+\[
+P_n(x) = \sum_{i=0}^{n} (\alpha_i \cos ix + \beta_i \sin ix)
+\]
+的傅里叶级数是怎样的？
+\end{prob}
+
+\begin{prob}[L]{2938}
+将函数
+\[
+f(x) = \operatorname{sgn} x \quad (-\pi < x < \pi)
+\]
+展开成傅里叶级数．绘出函数的图像及此函数之傅里叶级数之若干部分和的图像．
+
+利用该展开式，求莱布尼茨级数
+\[
+\sum_{n=1}^{\infty} \frac{(-1)^{n-1}}{2n - 1}.
+\]
+的和．
+\end{prob}
+
+\probgroup{把下列函数展开为傅里叶级数：}
+
+\begin{prob}[M]{2939}
+在区间 $(0, 2l)$ 内展开 $f(x) = \begin{cases} A, & 0 < x < l, \\ 0, & l < x < 2l, \end{cases}$ 其中 $A$ 为常数．
+\end{prob}
+
+\begin{prob}[S]{2940}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = x$．
+\end{prob}
+
+\begin{prob}[S]{2941}
+在区间 $(0, 2\pi)$ 内展开 $f(x) = \frac{\pi - x}{2}$．
+\end{prob}
+
+\begin{prob}[S]{2942}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = |x|$．
+\end{prob}
+
+\begin{prob}[M]{2943}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = \begin{cases} ax, & -\pi < x < 0, \\ bx, & 0 < x < \pi, \end{cases}$ 其中 $a$ 和 $b$ 为常数．
+\end{prob}
+
+\begin{prob}[S]{2944}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = \pi^2 - x^2$．
+\end{prob}
+
+\begin{prob}[S]{2945}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = \cos ax$（$a$ 不是整数）．
+\end{prob}
+
+\begin{prob}[S]{2946}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = \sin ax$（$a$ 不是整数）．
+\end{prob}
+
+\begin{prob}[S]{2947}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = \sinh ax$．
+\end{prob}
+
+\begin{prob}[S]{2948}
+在区间 $(-h, h)$ 内展开 $f(x) = \mathrm{e}^{ax}$．
+\end{prob}
+
+\begin{prob}[S]{2949}
+在区间 $(a, a + 2l)$ 内展开 $f(x) = x$．
+\end{prob}
+
+\begin{prob}[S]{2950}
+在区间 $(-\pi, \pi)$ 内展开 $f(x) = x \sin x$．
+\end{prob}
+
+\begin{prob}[S]{2951}
+在区间 $\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)$ 内展开 $f(x) = x \cos x$．
+\end{prob}
+
+\probgroup{将下列周期函数展开成傅里叶级数：}
+
+\begin{prob}[S]{2952}
+$f(x) = \operatorname{sgn}(\cos x)$．
+\end{prob}
+
+\begin{prob}[S]{2953}
+$f(x) = \arcsin(\sin x)$．
+\end{prob}
+
+\begin{prob}[S]{2954}
+$f(x) = \arcsin(\cos x)$．
+\end{prob}
+
+\begin{prob}[S]{2955}
+$f(x) = x - [x]$．
+\end{prob}
+
+\begin{prob}[S]{2956}
+$f(x) = (x)$，其中 $(x)$ 是 $x$ 到与它最近的整数的距离．
+\end{prob}
+
+\begin{prob}[S]{2957}
+$f(x) = |\sin x|$．
+\end{prob}
+
+\begin{prob}[S]{2958}
+$f(x) = |\cos x|$．
+\end{prob}
+
+\begin{prob}[S]{2959}
+$\displaystyle f(x) = \sum_{n=1}^{\infty} \alpha^n \frac{\sin nx}{\sin x}$ ($|\alpha| < 1$)．
+\end{prob}
+
+\begin{prob}[M]{2960}
+把函数
+\[
+f(x) = \sec x \quad \left(\frac{-\pi}{4} < x < \frac{\pi}{4}\right)
+\]
+展开为傅里叶级数．
+\probhint{推出系数 $a_n$ 与 $a_{n-2}$ 之间的关系．}
+\end{prob}
+
+\begin{prob}[L]{2961}
+将函数 $f(x) = x^2$ 展开成傅里叶级数：(a) 在区间 $(-\pi, \pi)$ 内按倍角的余弦展开；(b) 在区间 $(0, \pi)$ 内按倍角的正弦展开；(c) 在区间 $(0, 2\pi)$ 内展开．绘出函数的图像及情形 (a)，(b) 与 (c) 的傅里叶级数之和的图像．
+
+利用这些展开式，求下列级数的和：
+\[
+\sum_{n=1}^{\infty} \frac{1}{n^2}, \quad \sum_{n=1}^{\infty} \frac{(-1)^{n+1}}{n^2} \quad \text{及} \quad \sum_{n=1}^{\infty} \frac{1}{(2n - 1)^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{2962}
+由展开式
+\[
+x = 2\sum_{n=1}^{\infty} (-1)^{n+1} \frac{\sin nx}{n} \quad (-\pi < x < \pi)
+\]
+用逐项积分的方法，求函数 $x^2, x^3$ 和 $x^4$ 在区间 $(-\pi, \pi)$ 内的傅里叶级数．
+\end{prob}
+
+\begin{prob}[L]{2963}
+写出函数
+\[
+f(x) = \begin{cases} 1, & |x| < \alpha, \\ 0, & \alpha < |x| < \pi \end{cases}
+\]
+的李雅普诺夫等式．利用李雅普诺夫等式，求下列级数之和：
+\[
+\sum_{n=1}^{\infty} \frac{\sin^2 n\alpha}{n^2} \quad \text{及} \quad \sum_{n=1}^{\infty} \frac{\cos^2 n\alpha}{n^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{2964}
+将函数
+\[
+f(x) = \begin{cases}
+x, & 0 \leqslant x \leqslant 1, \\
+1, & 1 < x < 2, \\
+3 - x, & 2 \leqslant x \leqslant 3
+\end{cases}
+\]
+展开成傅里叶级数.
+\end{prob}
+
+\probgroup{利用公式
+\[
+\cos x = \frac{1}{2}(t + \bar{t}), \quad \sin x = \frac{1}{2\mathrm{i}}(t - \bar{t}),
+\]
+式中 $t = \mathrm{e}^{\mathrm{i}x}$ 及 $\bar{t} = \mathrm{e}^{-\mathrm{i}x}$.}
+
+\begin{prob}[S]{2965}
+$\cos^{2m} x$ ($m$ 为正整数).
+\end{prob}
+
+\begin{prob}[S]{2966}
+$\dfrac{q\sin x}{1 - 2q\cos x + q^2}$ ($|q| < 1$).
+\end{prob}
+
+\begin{prob}[S]{2967}
+$\dfrac{1 - q^2}{1 - 2q\cos x + q^2}$ ($|q| < 1$).
+\end{prob}
+
+\begin{prob}[S]{2968}
+$\dfrac{1 - q\cos x}{1 - 2q\cos x + q^2}$ ($|q| < 1$).
+\end{prob}
+
+\begin{prob}[S]{2969}
+$\ln(1 - 2q\cos x + q^2)$ ($|q| < 1$).
+\end{prob}
+
+\probgroup{将下列无界周期函数展开成傅里叶级数：}
+
+\begin{prob}[S]{2970}
+$f(x) = \ln\left|\sin\dfrac{x}{2}\right|$.
+\end{prob}
+
+\begin{prob}[S]{2971}
+$f(x) = \ln\left|\cos\dfrac{x}{2}\right|$.
+\end{prob}
+
+\begin{prob}[S]{2972}
+$f(x) = \ln\left|\tan\dfrac{x}{2}\right|$.
+\end{prob}
+
+\begin{prob}[M]{2973}
+将函数
+\[
+f(x) = \int_0^x \ln\sqrt{\left|\cot\frac{t}{2}\right|}\,\mathrm{d}t \quad (-\pi \leqslant x \leqslant \pi)
+\]
+展开成傅里叶级数.
+\end{prob}
+
+\begin{prob}[M]{2974}
+函数
+\[
+x = x(s), \quad y = y(s) \quad (0 \leqslant s \leqslant 4a)
+\]
+是正方形 $0 \leqslant x \leqslant a, \, 0 \leqslant y \leqslant a$ 的围线的参数方程，其中 $s$ 为依逆时针方向从点 $O(0,0)$ 起计算的弧长. 试将这两个函数展开成傅里叶级数.
+\end{prob}
+
+\begin{prob}[M]{2975}
+应当如何把给定在区间 $\left(0, \dfrac{\pi}{2}\right)$ 内的可积函数 $f(x)$ 延拓到区间 $(-\pi, \pi)$ 内，使得它展开成傅里叶级数后具有以下形式：
+\[
+f(x) = \sum_{n=1}^{\infty} a_n \cos(2n-1)x \quad (-\pi < x < \pi)?
+\]
+\end{prob}
+
+\begin{prob}[M]{2976}
+应当如何把给定在区间 $\left(0, \dfrac{\pi}{2}\right)$ 内的可积函数 $f(x)$ 延拓到区间 $(-\pi, \pi)$ 内，使得它展开成傅里叶级数后具有以下形式：
+\[
+f(x) = \sum_{n=1}^{\infty} b_n \sin(2n-1)x \quad (-\pi < x < \pi)?
+\]
+\end{prob}
+
+\begin{prob}[L]{2977}
+在区间 $\left(0, \dfrac{\pi}{2}\right)$ 内把函数
+\[
+f(x) = x\left(\frac{\pi}{2} - x\right)
+\]
+展开：(a) 依角的奇倍数的余弦展开；(b) 依角的奇倍数的正弦展开. 给出情形 (a) 与 (b) 的傅里叶级数之和的图像.
+\end{prob}
+
+\begin{prob}[M]{2978}
+设 $f(x)$ 是以 $\pi$ 为周期的反周期函数，即
+\[
+f(x + \pi) \equiv -f(x).
+\]
+问此函数在区间 $(-\pi, \pi)$ 内的傅里叶级数具有怎样的特性？
+\end{prob}
+
+\begin{prob}[M]{2979}
+若 $f(x + \pi) \equiv f(x)$，则函数 $f(x)$ 在区间 $(-\pi, \pi)$ 内的傅里叶级数具有怎样的特性？
+\end{prob}
+
+\begin{prob}[M]{2980}
+对于一个周期为 $2\pi$ 的函数 $y = f(x)$，若函数的图像：(a) 以点 $(0,0)$，$\left(\pm\dfrac{\pi}{2}, 0\right)$ 为对称中心；(b) 以坐标原点为对称中心并以 $x = \pm\dfrac{\pi}{2}$ 为对称轴，问其傅里叶系数 $a_n, b_n$ ($n = 1, 2, \cdots$) 具有怎样的特性？
+\end{prob}
+
+\begin{prob}[M]{2981}
+若
+\[
+\varphi(-x) \equiv \psi(x),
+\]
+问函数 $\varphi(x)$ 与 $\psi(x)$ 的傅里叶系数 $a_n, b_n$ 与 $\alpha_n, \beta_n$ ($n = 0, 1, 2, \cdots$) 之间有何关系？
+\end{prob}
+
+\begin{prob}[M]{2982}
+若
+\[
+\varphi(-x) \equiv -\psi(x),
+\]
+问函数 $\varphi(x)$ 与 $\psi(x)$ 的傅里叶系数 $a_n, b_n$ 与 $\alpha_n, \beta_n$ ($n = 0, 1, 2, \cdots$) 之间有何关系？
+\end{prob}
+
+\begin{prob}[M]{2983}
+已知周期为 $2\pi$ 的可积函数 $f(x)$ 的傅里叶系数为 $a_n, b_n$ ($n = 0, 1, 2, \cdots$)，试计算“平移”后的函数 $f(x+h)$ ($h$ 为常数) 的傅里叶系数 $\bar{a}_n, \bar{b}_n$ ($n = 0, 1, 2, \cdots$).
+\end{prob}
+
+\begin{prob}[M]{2984}
+已知周期为 $2\pi$ 的可积函数 $f(x)$ 的傅里叶系数为 $a_n, b_n$ ($n = 0, 1, 2, \cdots$)，试计算斯捷克洛夫函数
+\[
+f_h(x) = \frac{1}{2h} \int_{x-h}^{x+h} f(\xi)\,\mathrm{d}\xi
+\]
+的傅里叶系数 $A_n, B_n$ ($n = 0, 1, 2, \cdots$).
+\end{prob}
+
+\begin{prob}[L]{2985}
+设 $f(x)$ 是以 $2\pi$ 为周期的连续函数，而 $a_n, b_n$ ($n = 0, 1, 2, \cdots$) 为其傅里叶系数. 求卷积函数
+\[
+F(x) = \frac{1}{\pi} \int_{-\pi}^{\pi} f(t)f(x+t)\,\mathrm{d}t
+\]
+的傅里叶系数 $A_n, B_n$ ($n = 0, 1, 2, \cdots$).
+
+利用所得的结果，推出李雅普诺夫等式.
+\end{prob}
+
+\probsec{§7. 级数求和法}
+
+\probgroup{求下列级数的和：}
+
+\begin{prob}[S]{2986}
+$\dfrac{1}{1\cdot 3} + \dfrac{1}{3\cdot 5} + \dfrac{1}{5\cdot 7} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2987}
+$\dfrac{1}{1\cdot 2\cdot 3} + \dfrac{1}{2\cdot 3\cdot 4} + \dfrac{1}{3\cdot 4\cdot 5} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2988}
+$\dfrac{1}{1\cdot 2} - \dfrac{1}{2\cdot 3} + \dfrac{1}{3\cdot 4} - \dfrac{1}{4\cdot 5} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2989}
+$\sum\limits_{n=1}^{\infty} \dfrac{n}{(n+1)(n+2)(n+3)}$.
+\end{prob}
+
+\begin{prob}[S]{2990}
+$\sum\limits_{n=1}^{\infty} \dfrac{1}{n(n+m)}$ ($m$ 为正整数).
+\end{prob}
+
+\begin{prob}[S]{2991}
+$\dfrac{1}{1\cdot 2\cdot 3} + \dfrac{1}{3\cdot 4\cdot 5} + \dfrac{1}{5\cdot 6\cdot 7} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{2992}
+$\sum\limits_{n=2}^{\infty} \dfrac{1}{n^2 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{2993}
+$\sum\limits_{n=1}^{\infty} \dfrac{2n+1}{n^2(n+1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2994}
+$\sum\limits_{n=1}^{\infty} \dfrac{1}{n(2n+1)}$.
+\end{prob}
+
+\begin{prob}[S]{2995}
+$\sum\limits_{n=1}^{\infty} \dfrac{n^2}{n!}$.
+\end{prob}
+
+\begin{prob}[S]{2996}
+$\sum\limits_{n=0}^{\infty} \dfrac{2^n(n+1)}{n!}$.
+\end{prob}
+
+\begin{prob}[S]{2997}
+$\sum\limits_{n=1}^{\infty} \dfrac{1}{n^2(n+1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2998}
+$\sum\limits_{n=1}^{\infty} \dfrac{1}{n^2(n+1)^2(n+2)^2}$.
+\end{prob}
+
+\begin{prob}[S]{2999}
+$\sum\limits_{n=0}^{\infty} \dfrac{(-1)^n n}{(2n+1)!}$.
+\end{prob}
+
+\begin{prob}[S]{3000}
+$\sum\limits_{n=2}^{\infty} \dfrac{(-1)^n}{n^2 + n - 2}$.
+\end{prob}
+
+\begin{prob}[M]{3001}
+设 $P(x) = a_0 + a_1 x + \cdots + a_m x^m$. 求级数 $\sum\limits_{n=1}^{\infty} \dfrac{P(n)}{n!} x^n$ 的和.
+\end{prob}
+
+\probgroup{求下列级数的和：}
+
+\begin{prob}[S]{3002}
+$\sum\limits_{n=0}^{\infty} \dfrac{n^2 + 1}{2^n n!} x^n$.
+\end{prob}
+
+\begin{prob}[S]{3003}
+$\sum\limits_{n=0}^{\infty} \dfrac{(-1)^n n^3}{(n+1)!} x^n$.
+\end{prob}
+
+\begin{prob}[S]{3004}
+$\sum\limits_{n=0}^{\infty} \dfrac{(-1)^n(2n^2 + 1)}{(2n)!} x^{2n}$.
+\end{prob}
+
+\begin{prob}[S]{3005}
+$\sum\limits_{n=0}^{\infty} \dfrac{n^2 x^n}{(2n+1)!}$.
+\end{prob}
+
+\probgroup{利用逐项微分法求级数的和：}
+
+\begin{prob}[S]{3006}
+$\sum\limits_{n=1}^{\infty} \dfrac{x^n}{n}$.
+\end{prob}
+
+\begin{prob}[S]{3007}
+$\sum\limits_{n=1}^{\infty} \dfrac{(-1)^{n-1} x^{2n}}{n(2n-1)}$.
+\end{prob}
+
+\begin{prob}[S]{3008}
+$\sum\limits_{n=0}^{\infty} \dfrac{x^{4n+1}}{4n+1}$.
+\end{prob}
+
+\begin{prob}[M]{3009}
+$\sum\limits_{n=1}^{\infty} \dfrac{a(a+d)\cdots [a+(n-1)d]}{d \cdot 2d \cdots nd} x^n$ ($d > 0$). \probhint{用 $1-x$ 去乘级数的导数.}
+\end{prob}
+
+\begin{prob}[S]{3010}
+$\dfrac{1}{3} \cdot \dfrac{x}{2} + \dfrac{1\cdot 4}{3\cdot 6} \cdot \left(\dfrac{x}{2}\right)^2 + \dfrac{1\cdot 4\cdot 7}{3\cdot 6\cdot 9} \cdot \left(\dfrac{x}{2}\right)^3 + \cdots$.
+\end{prob}
+
+\probgroup{利用逐项积分法求级数的和：}
+
+\begin{prob}[S]{3011}
+$\sum\limits_{n=1}^{\infty} n^2 x^{n-1}$.
+\end{prob}
+
+\begin{prob}[S]{3012}
+$\sum\limits_{n=1}^{\infty} n(n+2) x^n$.
+\end{prob}
+
+\begin{prob}[S]{3013}
+$\sum\limits_{n=0}^{\infty} \dfrac{(2n+1)x^{2n}}{n!}$.
+\end{prob}
+
+\probgroup{利用阿贝尔方法，求下列级数的和：}
+
+\begin{prob}[S]{3014}
+$1 - \dfrac{1}{4} + \dfrac{1}{7} - \dfrac{1}{10} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{3015}
+$1 - \dfrac{1}{3} + \dfrac{1}{5} - \dfrac{1}{7} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{3016}
+$1 - \dfrac{1}{2} + \dfrac{1\cdot 3}{2\cdot 4} - \dfrac{1\cdot 3\cdot 5}{2\cdot 4\cdot 6} + \cdots$.
+\end{prob}
+
+\begin{prob}[S]{3017}
+$1 + \dfrac{1}{2} \cdot \dfrac{1}{3} + \dfrac{1\cdot 3}{2\cdot 4} \cdot \dfrac{1}{5} + \cdots$.
+\end{prob}
+
+\probgroup{求下列三角级数的和：}
+
+\begin{prob}[S]{3018}
+$\sum\limits_{n=1}^{\infty} \dfrac{\sin nx}{n}$.
+\end{prob}
+
+\begin{prob}[S]{3019}
+$\sum\limits_{n=1}^{\infty} \dfrac{\cos nx}{n}$.
+\end{prob}
+
+\begin{prob}[S]{3020}
+$\sum\limits_{n=1}^{\infty} \dfrac{\sin n\alpha \sin nx}{n}$.
+\end{prob}
+
+\begin{prob}[S]{3021}
+$\sum\limits_{n=1}^{\infty} \dfrac{\sin^2 n\alpha \sin nx}{n}$ $\left(0 < \alpha < \dfrac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3022}
+$\sum\limits_{n=1}^{\infty} \dfrac{\sin(2n-1)x}{2n-1}$.
+\end{prob}
+
+\begin{prob}[S]{3023}
+$\sum\limits_{n=2}^{\infty} (-1)^n \dfrac{\cos nx}{n^2 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{3024}
+$\sum\limits_{n=1}^{\infty} \dfrac{\cos(2n-1)x}{(2n-1)^2}$.
+\end{prob}
+
+\begin{prob}[S]{3025}
+$\sum\limits_{n=1}^{\infty} (-1)^{n-1} \dfrac{\sin nx}{n(n+1)}$.
+\end{prob}
+
+\begin{prob}[S]{3026}
+$\sum\limits_{n=0}^{\infty} \dfrac{\cos nx}{n!}$.
+\end{prob}
+
+\begin{prob}[M]{3027}
+画出曲线 $\sum\limits_{n=1}^{\infty} \dfrac{\sin nx \cdot \sin ny}{n^2} = 0$.
+\end{prob}
+
+\probgroup{求下列级数的和：}
+
+\begin{prob}[S]{3028}
+$\sum\limits_{n=1}^{\infty} \dfrac{[(n-1)!]^2}{(2n)!} (2x)^{2n}$.
+\end{prob}
+
+\begin{prob}[S]{3029}
+$\sum\limits_{n=0}^{\infty} \dfrac{(n!)^2}{(2n)!} x^n$.
+\end{prob}
+
+\begin{prob}[S]{3030}
+$\dfrac{1!}{x+1} + \dfrac{2!}{(x+1)(x+2)} + \dfrac{3!}{(x+1)(x+2)(x+3)} + \cdots$.
+\end{prob}
+
+\begin{prob}[M]{3031}
+$\dfrac{a_1}{a_2 + x} + \dfrac{a_1}{a_2 + x} \cdot \dfrac{a_2}{a_3 + x} + \cdots$，在 $x > 0, \, a_n > 0$ ($n = 1, 2, \cdots$)，且级数 $\sum\limits_{n=1}^{\infty} \dfrac{1}{a_n}$ 发散的条件下.
+\end{prob}
+
+\begin{prob}[M]{3032}
+$\dfrac{x}{1-x^2} + \dfrac{x^2}{1-x^4} + \dfrac{x^4}{1-x^8} + \cdots$，若 (a) $|x| < 1$；(b) $|x| > 1$.
+\end{prob}
+
+\begin{prob}[M]{3033}
+$\sum\limits_{n=1}^{\infty} \dfrac{x^{n+1}}{(1-x^n)(1-x^{n+1})}$，若 (a) $|x| < 1$；(b) $|x| > 1$.
+\end{prob}
+
+\probsec{§8. 利用级数求定积分}
+
+\probgroup{利用被积函数的级数展开式计算下列积分：}
+
+\begin{prob}[S]{3034}
+$\int_0^1 \ln\dfrac{1}{1-x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3035}
+$\int_0^1 \dfrac{\ln(x + \sqrt{1+x^2})}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3036}
+$\int_0^1 \dfrac{\ln(1+x)}{x}\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3037}
+$\int_0^1 x^{p-1} \ln(1 - x^q)\,\mathrm{d}x$ ($p > 0, \, q > 0$).
+\end{prob}
+
+\begin{prob}[S]{3038}
+$\int_0^1 \ln x \cdot \ln(1-x)\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3039}
+$\int_0^{+\infty} \dfrac{x\,\mathrm{d}x}{\mathrm{e}^{2\pi x} - 1}$.
+\end{prob}
+
+\begin{prob}[S]{3040}
+$\int_0^{+\infty} \dfrac{x\,\mathrm{d}x}{\mathrm{e}^x + 1}$.
+\end{prob}
+
+\begin{prob}[M]{3041}
+按模数 $k$ ($0 \leqslant k < 1$) 的正整数次幂展开第一类完全椭圆积分
+\[
+F(k) = \int_0^{\frac{\pi}{2}} \frac{\mathrm{d}\varphi}{\sqrt{1 - k^2 \sin^2\varphi}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3042}
+按模数 $k$ ($0 \leqslant k < 1$) 的正整数次幂展开第二类完全椭圆积分
+\[
+E(k) = \int_0^{\frac{\pi}{2}} \sqrt{1 - k^2 \sin^2\varphi}\,\mathrm{d}\varphi.
+\]
+\end{prob}
+
+\begin{prob}[M]{3043}
+利用按椭圆离心率的正整数次幂展开的级数表示椭圆
+\[
+x = a\cos t, \quad x = b\sin t \quad (0 \leqslant t \leqslant 2\pi)
+\]
+的弧长.
+\end{prob}
+
+\probgroup{证明下列等式：}
+
+\begin{prob}[S]{3044}
+$\displaystyle \int_{0}^{1} \frac{\mathrm{d}x}{x^{x}} = \sum_{n=1}^{\infty} \frac{1}{n^{n}}$.
+\end{prob}
+
+\begin{prob}[S]{3045}
+$\displaystyle \int_{0}^{+\infty} \mathrm{e}^{-x^{2}} \sin ax\,\mathrm{d}x = \frac{1}{2} \sum_{n=0}^{\infty} \frac{(-1)^{n} n!}{(2n+1)!} a^{2n+1}$.
+\end{prob}
+
+\begin{prob}[S]{3046}
+$\displaystyle \int_{0}^{2\pi} \mathrm{e}^{\cos x} \cos(\sin x) \cos nx\,\mathrm{d}x = \frac{\pi}{n!} \ (n = 0, 1, 2, \cdots)$.
+\end{prob}
+
+\probgroup{求：}
+
+\begin{prob}[S]{3047}
+$\displaystyle \int_{0}^{2\pi} \mathrm{e}^{a\cos x} \cos(a\sin x - nx)\,\mathrm{d}x$ ($n$ 是正整数).
+\end{prob}
+
+\begin{prob}[M]{3048}
+$\displaystyle \int_{0}^{\pi} \frac{x\sin x}{1 - 2\alpha\cos x + \alpha^{2}}\,\mathrm{d}x$. \probhint{参考习题 2864.}
+\end{prob}
+
+\begin{prob}[S]{3049}
+$\displaystyle \int_{0}^{\pi} \ln(1 - 2\alpha\cos x + \alpha^{2})\,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3050}
+证明公式：
+\[
+\int_{0}^{+\infty} \frac{\mathrm{e}^{-x}}{a+x}\,\mathrm{d}x = \frac{1}{a} - \frac{1!}{a^{2}} + \frac{2!}{a^{3}} - \cdots + (-1)^{n-1} \frac{(n-1)!}{a^{n}} + (-1)^{n} \frac{\theta_{n} n!}{a^{n+1}}, \qquad (1)
+\]
+其中 $a > 0$ 且 $0 < \theta_{n} < 1$. 若于公式 (1) 中取两项来表示积分
+\[
+\int_{0}^{+\infty} \frac{\mathrm{e}^{-x}}{100+x}\,\mathrm{d}x,
+\]
+其精确程度如何？
+\end{prob}
+
+\probsec{§9. 无穷乘积}
+
+\probgroup{证明下列等式：}
+
+\begin{prob}[S]{3051}
+$\displaystyle \prod_{n=2}^{\infty} \left(1 - \frac{1}{n^{2}}\right) = \frac{1}{2}$.
+\end{prob}
+
+\begin{prob}[S]{3052}
+$\displaystyle \prod_{n=2}^{\infty} \frac{n^{3}-1}{n^{3}+1} = \frac{2}{3}$.
+\end{prob}
+
+\begin{prob}[S]{3053}
+$\displaystyle \prod_{n=2}^{\infty} \left[1 - \frac{2}{n(n+1)}\right] = \frac{1}{3}$.
+\end{prob}
+
+\begin{prob}[S]{3054}
+$\displaystyle \prod_{n=0}^{\infty} \left[1 + \left(\frac{1}{2}\right)^{2^{n}}\right] = 2$.
+\end{prob}
+
+\begin{prob}[S]{3055}
+$\displaystyle \prod_{n=1}^{\infty} \cos \frac{\pi}{2^{n+1}} = \frac{2}{\pi}$.
+\end{prob}
+
+\begin{prob}[S]{3056}
+$\displaystyle \prod_{n=1}^{\infty} \cos \frac{x}{2^{n}} = \frac{\sin x}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3057}
+$\displaystyle \prod_{n=1}^{\infty} \cosh \frac{x}{2^{n}} = \frac{\sinh x}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3058}
+$\displaystyle \prod_{n=0}^{\infty} \left(1 + x^{2^{n}}\right) = \frac{1}{1-x} \ (|x| < 1)$.
+\end{prob}
+
+\begin{prob}[S]{3059}
+$\displaystyle \frac{\pi}{2} = \frac{2}{\sqrt{2}} \cdot \frac{2}{\sqrt{2+\sqrt{2}}} \cdot \frac{2}{\sqrt{2+\sqrt{2+\sqrt{2}}}} \cdots$.
+\end{prob}
+
+\begin{prob}[S]{3060}
+$\displaystyle \prod_{n=1}^{\infty} \frac{3n}{3n-1} \cdot \frac{3n}{3n+1} = \frac{2\pi}{3\sqrt{3}}$.
+\end{prob}
+
+\probgroup{试证下列无穷乘积的收敛性并求出其值：}
+
+\begin{prob}[S]{3061}
+$\displaystyle \prod_{n=3}^{\infty} \frac{n^{2}-4}{n^{2}-1}$.
+\end{prob}
+
+\begin{prob}[S]{3062}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{1}{n(n+2)}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3063}
+$\displaystyle \prod_{n=1}^{\infty} \frac{(2n+1)(2n+7)}{(2n+3)(2n+5)}$.
+\end{prob}
+
+\begin{prob}[S]{3064}
+$\displaystyle \prod_{n=1}^{\infty} a^{\frac{(-1)^{n}}{n}} \ (a > 0)$.
+\end{prob}
+
+\begin{prob}[L]{3065}
+可否由乘积 $\displaystyle \prod_{n=1}^{\infty} p_{n}$ 与 $\displaystyle \prod_{n=1}^{\infty} q_{n}$ 的收敛性得出下列乘积：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle \prod_{n=1}^{\infty} (p_{n} + q_{n})$;
+\item $\displaystyle \prod_{n=1}^{\infty} p_{n}^{2}$;
+\item $\displaystyle \prod_{n=1}^{\infty} p_{n} q_{n}$;
+\item $\displaystyle \prod_{n=1}^{\infty} \frac{p_{n}}{q_{n}}$
+\end{enumerate}
+的收敛性？
+\end{prob}
+
+\probgroup{研究下列无穷乘积的收敛性：}
+
+\begin{prob}[S]{3066}
+$\displaystyle \prod_{n=1}^{\infty} \frac{1}{n}$.
+\end{prob}
+
+\begin{prob}[S]{3067}
+$\displaystyle \prod_{n=1}^{\infty} \frac{(n+1)^{2}}{n(n+2)}$.
+\end{prob}
+
+\begin{prob}[S]{3068}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 + \frac{1}{n^{p}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3069}
+$\displaystyle \prod_{n=2}^{\infty} \left(1 - \frac{1}{n}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3070}
+$\displaystyle \prod_{n=2}^{\infty} \left(\frac{n^{2}-1}{n^{2}+1}\right)^{p}$.
+\end{prob}
+
+\begin{prob}[M]{3071}
+$\displaystyle \prod_{n=n_{0}}^{\infty} \frac{n^{2} + a_{1}n + b_{1}}{n^{2} + an + b}$，其中当 $n \geqslant n_{0}$ 时 $n^{2} + an + b > 0$.
+\end{prob}
+
+\begin{prob}[M]{3072}
+$\displaystyle \prod_{n=n_{0}}^{\infty} \frac{(n-a_{1})(n-a_{2})\cdots(n-a_{p})}{(n-b_{1})(n-b_{2})\cdots(n-b_{p})}$，其中 $n_{0} > b_{i} \ (i = 1, 2, \cdots, p)$.
+\end{prob}
+
+\begin{prob}[S]{3073}
+$\displaystyle \prod_{n=0}^{\infty} \sqrt{\frac{n+1}{n+2}}$.
+\end{prob}
+
+\begin{prob}[S]{3074}
+$\displaystyle \prod_{n=1}^{\infty} \frac{n}{\sqrt{n^{2}+1}}$.
+\end{prob}
+
+\begin{prob}[S]{3075}
+$\displaystyle \prod_{n=1}^{\infty} \sqrt[n]{1 + \frac{1}{n}}$.
+\end{prob}
+
+\begin{prob}[S]{3076}
+$\displaystyle \prod_{n=1}^{\infty} \sqrt[n^{2}]{n}$.
+\end{prob}
+
+\begin{prob}[S]{3077}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 + \frac{x}{n}\right) \mathrm{e}^{-\frac{x}{n}}$.
+\end{prob}
+
+\begin{prob}[M]{3078}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 - \frac{x}{c+n}\right) \mathrm{e}^{\frac{x}{n}}$，其中 $c > 0$.
+\end{prob}
+
+\begin{prob}[S]{3079}
+$\displaystyle \prod_{n=1}^{\infty} (1 - x^{n})$.
+\end{prob}
+
+\begin{prob}[S]{3080}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 + \frac{x^{n}}{2^{n}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3081}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{\left(1 + \frac{1}{n}\right)^{n^{2}}}{x^{n}}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3082}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 - \frac{x}{\sqrt{n}}\right) \mathrm{e}^{\frac{x}{\sqrt{n}} + \frac{x^{2}}{2n}}$.
+\end{prob}
+
+\begin{prob}[S]{3083}
+$\displaystyle \prod_{n=1}^{\infty} \left(1 + \frac{x^{n}}{n^{p}}\right) \cos \frac{x^{n}}{n^{q}}$.
+\end{prob}
+
+\begin{prob}[S]{3084}
+$\displaystyle \prod_{n=1}^{\infty} \left(\frac{\sin \frac{x}{n}}{\frac{x}{n}}\right)^{p}$.
+\end{prob}
+
+\begin{prob}[S]{3085}
+$\displaystyle \prod_{n=1}^{\infty} \sqrt[n]{\ln(n+x) - \ln n}$.
+\end{prob}
+
+\begin{prob}[M]{3086}
+证明：若级数 $\displaystyle \sum_{n=1}^{\infty} x_{n}^{2}$ 收敛，则乘积 $\displaystyle \prod_{n=1}^{\infty} \cos x_{n}$ 收敛.
+\end{prob}
+
+\begin{prob}[M]{3087}
+证明：若级数 $\displaystyle \sum_{n=1}^{\infty} \alpha_{n}$ 绝对收敛，则乘积 $\displaystyle \prod_{n=1}^{\infty} \tan\left(\frac{\pi}{4} + \alpha_{n}\right) \ \left(|\alpha_{n}| < \frac{\pi}{4}\right)$ 收敛.
+\end{prob}
+
+\probgroup{研究下列无穷乘积的绝对收敛性和条件收敛性：}
+
+\begin{prob}[S]{3088}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{(-1)^{n+1}}{n}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3089}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{(-1)^{n+1}}{\sqrt{n}}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3090}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{(-1)^{n+1}}{n^{p}}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3091}
+$\displaystyle \prod_{n=2}^{\infty} \left[1 + \frac{(-1)^{n}}{\ln n}\right]$.
+\end{prob}
+
+\begin{prob}[S]{3092}
+$\displaystyle \prod_{n=2}^{\infty} \frac{\sqrt{n}}{\sqrt{n} + (-1)^{n}}$.
+\end{prob}
+
+\begin{prob}[S]{3093}
+$\displaystyle \prod_{n=1}^{\infty} n^{(-1)^{n}}$.
+\end{prob}
+
+\begin{prob}[S]{3094}
+$\displaystyle \prod_{n=1}^{\infty} \sqrt[n]{n^{(-1)^{n}}}$.
+\end{prob}
+
+\begin{prob}[S]{3095}
+$\displaystyle \prod_{n=1}^{\infty} \left[1 + \frac{(-1)^{\frac{n(n-1)}{2}}}{n}\right]$.
+\end{prob}
+
+\begin{prob}[M]{3096}
+$\displaystyle \left(1 + \frac{1}{\sqrt{1}}\right)\left(1 - \frac{1}{\sqrt{3}}\right)\left(1 - \frac{1}{\sqrt{5}}\right)\left(1 + \frac{1}{\sqrt{2}}\right)\left(1 - \frac{1}{\sqrt{7}}\right)\left(1 - \frac{1}{\sqrt{9}}\right)\left(1 + \frac{1}{\sqrt{3}}\right)\cdots$.
+\end{prob}
+
+\begin{prob}[M]{3097}
+$\displaystyle \left(1 + \frac{1}{1^{\alpha}}\right)\left(1 - \frac{1}{2^{\alpha}}\right)^{2}\left(1 + \frac{1}{3^{\alpha}}\right)\left(1 + \frac{1}{4^{\alpha}}\right)\left(1 - \frac{1}{5^{\alpha}}\right)^{2}\left(1 + \frac{1}{6^{\alpha}}\right)\cdots$.
+\end{prob}
+
+\begin{prob}[M]{3098}
+证明：乘积
+\[
+\left(1 + \frac{1}{\sqrt{2}} + \frac{1}{2}\right)\left(1 - \frac{1}{\sqrt{2}}\right)\left(1 + \frac{1}{\sqrt{3}} + \frac{1}{3}\right)\left(1 - \frac{1}{\sqrt{3}}\right)\cdots
+\]
+收敛，尽管级数
+\[
+\left(\frac{1}{\sqrt{2}} + \frac{1}{2}\right) + \left(-\frac{1}{\sqrt{2}}\right) + \left(\frac{1}{\sqrt{3}} + \frac{1}{3}\right) + \left(-\frac{1}{\sqrt{3}}\right) + \cdots
+\]
+发散.
+\end{prob}
+
+\begin{prob}[M]{3099}
+证明：乘积 $\displaystyle \prod_{n=1}^{\infty} (1 + \alpha_{n})$ 收敛，其中
+\[
+\alpha_{n} = \begin{cases}
+\dfrac{-1}{\sqrt{k}}, & n = 2k-1, \\
+\dfrac{1}{\sqrt{k}} + \dfrac{1}{k} + \dfrac{1}{k\sqrt{k}}, & n = 2k,
+\end{cases}
+\]
+尽管级数 $\displaystyle \sum_{n=1}^{\infty} \alpha_{n}$ 和 $\displaystyle \sum_{n=1}^{\infty} \alpha_{n}^{2}$ 二者发散.
+\end{prob}
+
+\begin{prob}[M]{3100}
+设
+\[
+\zeta(x) = \sum_{n=1}^{\infty} \frac{1}{n^{x}}
+\]
+（黎曼 $\zeta$ 函数），而 $p_{n} \ (n = 1, 2, \cdots)$ 是素数数列. 证明：
+\[
+\prod_{n=1}^{\infty} \left(1 - \frac{1}{p_{n}^{x}}\right)^{-1} = \zeta(x).
+\]
+\end{prob}
+
+\begin{prob}[M]{3101}
+设 $p_{n} \ (n = 1, 2, \cdots)$ 是素数数列，证明：乘积
+\[
+\prod_{n=1}^{\infty} \left(1 - \frac{1}{p_{n}}\right)^{-1}
+\]
+和级数
+\[
+\sum_{n=1}^{\infty} \frac{1}{p_{n}}
+\]
+发散（欧拉）.
+\end{prob}
+
+\begin{prob}[M]{3102}
+设 $a_{n} > 0 \ (n = 1, 2, \cdots)$，且
+\[
+\frac{a_{n}}{a_{n+1}} = 1 + \frac{p}{n} + O\left(\frac{1}{n^{1+\varepsilon}}\right) \quad (\varepsilon > 0),
+\]
+证明：
+\[
+a_{n} = O^{*}\left(\frac{1}{n^{p}}\right).
+\]
+\probhint{研究
+\[
+\lim_{n\to\infty} a_{n} n^{p} = a_{1} \prod_{n=1}^{\infty} \frac{a_{n+1}}{a_{n}} \left(1 + \frac{1}{n}\right)^{p}.
+\]}
+\end{prob}
+
+\begin{prob}[S]{3103}
+利用沃利斯公式证明：
+\[
+\frac{1 \cdot 3 \cdot 5 \cdots (2n-1)}{2 \cdot 4 \cdot 6 \cdots (2n)} \sim \frac{1}{\sqrt{\pi n}}.
+\]
+\end{prob}
+
+\begin{prob}[L]{3104}
+证明：表达式
+\[
+a_{n} = \frac{n!\mathrm{e}^{n}}{n^{n+\frac{1}{2}}}
+\]
+当 $n \to \infty$ 时有异于零的极限 $A$. 由此推出斯特林公式
+\[
+n! = A n^{n+\frac{1}{2}} \mathrm{e}^{-n} (1 + \varepsilon_{n}),
+\]
+其中 $\lim_{n\to\infty} \varepsilon_{n} = 0$，$A = \sqrt{2\pi}$.
+\probhint{把所求极限表示为无穷乘积的形式：
+\[
+A = \lim_{n\to\infty} a_{n} = a_{1} \prod_{n=1}^{\infty} \frac{a_{n+1}}{a_{n}}.
+\]
+为了确定常数 $A$，可利用沃利斯公式.}
+\end{prob}
+
+\begin{prob}[L]{3105}
+根据欧拉的定义，$\Gamma$ 函数 $\Gamma(x)$ 由下面的公式来确定：
+\[
+\Gamma(x) = \lim_{n\to\infty} \frac{n! n^{x}}{x(x+1)\cdots(x+n)}.
+\]
+由这个公式出发：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 把函数 $\Gamma(x)$ 表示为无穷乘积的形式；
+\item 证明：$\Gamma(x)$ 对于不为负整数的一切实数 $x$ 皆有意义；
+\item 推出下面这个性质：$\Gamma(x+1) = x\Gamma(x)$；
+\item 对于正整数 $n$ 求 $\Gamma(n)$ 之值.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3106}
+设函数 $f(x)$ 在闭区间 $[a, b]$ 上可积，且
+\[
+\delta_{n} = \frac{b-a}{n}, \quad f_{in} = f(a + i\delta_{n}) \quad (i = 1, 2, \cdots, n),
+\]
+证明：
+\[
+\lim_{n\to\infty} \prod_{i=1}^{n} (1 + \delta_{n} f_{in}) = \mathrm{e}^{\int_{a}^{b} f(x)\,\mathrm{d}x}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3107}
+证明:
+\[
+\lim_{n \to \infty} \frac{\sqrt[n]{\displaystyle\sum_{i=0}^{n-1} (a + ib)}}{\displaystyle\sum_{i=0}^{n-1} (a + ib)} n = \frac{2}{\mathrm{e}},
+\]
+其中 $a > 0$ 和 $b > 0$.
+\end{prob}
+
+\begin{prob}[M]{3108}
+设 $f_n(x)$ ($n = 1, 2, \cdots$) 在区间 $(a, b)$ 内为连续函数且 $|f_n(x)| \leqslant c_n$ ($n = 1, 2, \cdots$), 其中级数 $\sum_{n=1}^{\infty} c_n$ 收敛. 证明: 函数
+\[
+F(x) = \prod_{n=1}^{\infty} [1 + f_n(x)] \quad (|f_n(x)| < 1)
+\]
+在区间 $(a, b)$ 上是连续的.
+\end{prob}
+
+\begin{prob}[M]{3109}
+求函数
+\[
+F(x) = \prod_{n=1}^{\infty} [1 + f_n(x)]
+\]
+的导数之表达式. $F'(x)$ 存在的充分条件为何?
+\end{prob}
+
+\begin{prob}[M]{3110}
+证明: 若 $0 < x < y$, 则
+\[
+\lim_{n \to \infty} \frac{x(x+1)\cdots(x+n)}{y(y+1)\cdots(y+n)} = 0.
+\]
+\end{prob}
+
+\probsec{§10. 斯特林公式}
+
+\probgroup{利用斯特林公式，近似地计算：}
+
+\begin{prob}[S]{3111}
+$\lg 100!$.
+\end{prob}
+
+\begin{prob}[S]{3112}
+$1 \cdot 3 \cdot 5 \cdots 1999$.
+\end{prob}
+
+\begin{prob}[S]{3113}
+$\dfrac{1 \cdot 3 \cdot 5 \cdots 99}{2 \cdot 4 \cdot 6 \cdots 100}$.
+\end{prob}
+
+\begin{prob}[S]{3114}
+$\mathrm{C}_{100}^{40}$.
+\end{prob}
+
+\begin{prob}[S]{3115}
+$\dfrac{100!}{20!30!50!}$.
+\end{prob}
+
+\begin{prob}[S]{3116}
+$\displaystyle\int_{0}^{1} (1 - x^2)^{50} \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[S]{3117}
+$\displaystyle\int_{0}^{2\pi} \sin^{200} x \,\mathrm{d}x$.
+\end{prob}
+
+\begin{prob}[M]{3118}
+推出乘积
+\[
+(2n - 1)!! = 1 \cdot 3 \cdot 5 \cdots (2n - 1)
+\]
+的渐近公式.
+\end{prob}
+
+\begin{prob}[S]{3119}
+若 $n$ 甚大，近似地计算 $\mathrm{C}_{2n}^{n}$.
+\end{prob}
+
+\begin{prob}[L]{3120}
+利用斯特林公式求下列极限:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\displaystyle\lim_{n \to \infty} \sqrt[n^2]{n!}$;
+\item $\displaystyle\lim_{n \to \infty} \frac{n}{\sqrt[n]{n!}}$;
+\item $\displaystyle\lim_{n \to \infty} \frac{n}{\sqrt[n]{(2n-1)!!}}$;
+\item $\displaystyle\lim_{n \to \infty} \frac{\ln n!}{\ln n^n}$.
+\end{enumerate}
+\end{prob}
+
+\probsec{§11. 用多项式逼近连续函数}
+
+\begin{prob}[M]{3121}
+求在给定点按下表取值的最低次的 $n$ 次多项式 $P_n(x)$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+$x$ & $-2$ & $0$ & $4$ & $5$ \\
+\hline
+$y$ & $5$ & $1$ & $-3$ & $1$ \\
+\hline
+\end{tabular}
+\end{center}
+$P_n(-1), P_n(1), P_n(6)$ 近似地等于什么?
+\end{prob}
+
+\begin{prob}[M]{3122}
+写出经过 $A(x_0 - h, y_{-1}), B(x_0, y_0), C(x_0 + h, y_1)$ 这三点的抛物线方程
+\[
+y = ax^2 + bx + c.
+\]
+\end{prob}
+
+\begin{prob}[M]{3123}
+利用数值 $x_0 = 1, y_0 = 1$; $x_1 = 25, y_1 = 5$; $x_2 = 100, y_2 = 10$ 推出开平方根 $y = \sqrt{x}$ ($1 \leqslant x \leqslant 100$) 的近似公式.
+\end{prob}
+
+\begin{prob}[M]{3124}
+利用数值
+\[
+\sin 0^\circ = 0, \quad \sin 30^\circ = \frac{1}{2}, \quad \sin 90^\circ = 1
+\]
+推出如下形式的近似公式:
+\[
+\sin x^\circ \approx ax + bx^3 \quad (0 \leqslant x \leqslant 90; x = \operatorname{arc} x^\circ)
+\]
+利用这个公式，近似地求:
+\[
+\sin 20^\circ, \quad \sin 40^\circ, \quad \sin 80^\circ
+\]
+\end{prob}
+
+\begin{prob}[M]{3125}
+取点 $x_i = 0, \pm \dfrac{1}{2}, \pm 1$ 为拉格朗日多项式的插值节点，对函数 $f(x) = |x|$ 作出在闭区间 $[-1, 1]$ 上的拉格朗日插值多项式.
+\end{prob}
+
+\begin{prob}[M]{3126}
+以拉格朗日多项式代换函数 $y(x)$，近似地计算
+\[
+\int_{0}^{2} y(x) \,\mathrm{d}x
+\]
+其中
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+$x$ & $0$ & $0.5$ & $1$ & $1.5$ & $2$ \\
+\hline
+$y(x)$ & $5$ & $4.5$ & $3$ & $2.5$ & $5$ \\
+\hline
+\end{tabular}
+\end{center}
+\end{prob}
+
+\begin{prob}[M]{3127}
+对于函数 $x, x^2, x^3$，试在闭区间 $[0, 1]$ 上作出伯恩斯坦多项式 $B_n(x)$.
+\end{prob}
+
+\begin{prob}[M]{3128}
+对于在闭区间 $[a, b]$ 上的已知函数 $f(x)$ 写出伯恩斯坦多项式 $B_n(x)$ 的公式.
+\end{prob}
+
+\begin{prob}[M]{3129}
+在闭区间 $[-1, 1]$ 上用伯恩斯坦多项式 $B_4(x)$ 逼近函数 $f(x) = \dfrac{|x| + x}{2}$. 作出函数 $y = \dfrac{|x| + x}{2}$ 和 $y = B_4(x)$ 的图像.
+\end{prob}
+
+\begin{prob}[M]{3130}
+在 $-1 \leqslant x \leqslant 1$ 时用偶数次伯恩斯坦多项式逼近函数，
+\[
+f(x) = |x|.
+\]
+\end{prob}
+
+\begin{prob}[M]{3131}
+对于函数
+\[
+f(x) = \mathrm{e}^{kx} \quad (a \leqslant x \leqslant b)
+\]
+写出伯恩斯坦多项式 $B_n(x)$.
+\end{prob}
+
+\begin{prob}[M]{3132}
+在闭区间 $-\dfrac{\pi}{2} \leqslant x \leqslant \dfrac{\pi}{2}$ 上，对于函数 $f(x) = \cos x$ 计算多项式 $B_n(x)$.
+\end{prob}
+
+\begin{prob}[M]{3133.1}
+证明: 在闭区间 $[-1, 1]$ 上 $|x| = \lim_{n \to \infty} P_n(x)$，其中
+\[
+P_n(x) = 1 - \frac{1 - x^2}{2} - \sum_{i=2}^{n} \frac{1 \cdot 3 \cdots (2i - 3)}{2 \cdot 4 \cdots (2i)} (1 - x^2)^i.
+\]
+\end{prob}
+
+\begin{prob}[M]{3133.2}
+设 $f(x) \in C[a, b]$，且
+\[
+M_k = \int_{a}^{b} x^k f(x) \,\mathrm{d}x = 0 \quad (k = 0, 1, 2, \cdots),
+\]
+证明: 当 $x \in [a, b]$ 时有 $f(x) \equiv 0$.
+\probhint{利用关于用多项式逼近连续函数的魏尔斯特拉斯定理.}
+\end{prob}
+
+\begin{prob}[L]{3134}
+设 $f(x)$ 是以 $2\pi$ 为周期的函数，并且在闭区间 $-\pi \leqslant x \leqslant \pi$ 上连续，而 $a_n, b_n$ ($n = 0, 1, 2, \cdots$) 是它的傅里叶系数. 证明: 费耶尔三角多项式
+\[
+\sigma_n(x) = \frac{a_0}{2} + \sum_{i=1}^{n-1} \left(1 - \frac{i}{n}\right) (a_i \cos ix + b_i \sin ix)
+\]
+在区间 $[-\pi, \pi]$ 上一致收敛于函数 $f(x)$.
+\end{prob}
+
+\begin{prob}[S]{3135}
+对于函数
+\[
+-\pi \leqslant x \leqslant \pi
+\]
+作出费耶尔多项式 $\sigma_{2n-1}(x)$.
+\end{prob}

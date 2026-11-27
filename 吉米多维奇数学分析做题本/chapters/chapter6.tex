@@ -1,0 +1,3618 @@
+\probchapter{第六章\quad 多元函数微分学}
+
+\probsec{§1. 函数的极限. 连续性}
+
+\probgroup{确定并画出下列函数的存在域：}
+
+\begin{prob}[S]{3136}
+$u = x + \sqrt{y}$.
+\end{prob}
+
+\begin{prob}[S]{3137}
+$u = \sqrt{1 - x^2} + \sqrt{y^2 - 1}$.
+\end{prob}
+
+\begin{prob}[S]{3138}
+$u = \sqrt{1 - x^2 - y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3139}
+$u = \dfrac{1}{\sqrt{x^2 + y^2 - 1}}$.
+\end{prob}
+
+\begin{prob}[S]{3140}
+$u = \sqrt{(x^2 + y^2 - 1)(4 - x^2 - y^2)}$.
+\end{prob}
+
+\begin{prob}[S]{3141}
+$u = \sqrt{\dfrac{x^2 + y^2 - x}{2x - x^2 - y^2}}$.
+\end{prob}
+
+\begin{prob}[S]{3142}
+$u = \sqrt{1 - (x^2 + y^2)}$.
+\end{prob}
+
+\begin{prob}[S]{3143}
+$u = \ln(-x - y)$.
+\end{prob}
+
+\begin{prob}[S]{3144}
+$u = \arcsin \dfrac{y}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3145}
+$u = \arccos \dfrac{x}{x + y}$.
+\end{prob}
+
+\begin{prob}[S]{3146}
+$u = \arcsin \dfrac{x}{y^2} + \arcsin(1 - y)$.
+\end{prob}
+
+\begin{prob}[S]{3147}
+$u = \sqrt{\sin(x^2 + y^2)}$.
+\end{prob}
+
+\begin{prob}[S]{3148}
+$u = \arccos \dfrac{z}{\sqrt{x^2 + y^2}}$.
+\end{prob}
+
+\begin{prob}[S]{3149}
+$u = \ln(xyz)$.
+\end{prob}
+
+\begin{prob}[S]{3150}
+$u = \ln(-1 - x^2 - y^2 + z^2)$.
+\end{prob}
+
+\probgroup{作出下列函数的等值线：}
+
+\begin{prob}[S]{3151}
+$z = x + y$.
+\end{prob}
+
+\begin{prob}[S]{3152}
+$z = x^2 + y^2$.
+\end{prob}
+
+\begin{prob}[S]{3153}
+$z = x^2 - y^2$.
+\end{prob}
+
+\begin{prob}[S]{3154}
+$z = (x + y)^2$.
+\end{prob}
+
+\begin{prob}[S]{3155}
+$z = \dfrac{y}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3156}
+$z = \dfrac{1}{x^2 + 2y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3157}
+$z = \sqrt{xy}$.
+\end{prob}
+
+\begin{prob}[S]{3158}
+$z = |x| + y$.
+\end{prob}
+
+\begin{prob}[L]{3159}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $z = |x| + |y| - |x + y|$;
+\item $z = \min(x, y)$;
+\item $z = \max(|x|, |y|)$;
+\item $z = \min(x^2, y)$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{3160}
+$z = \mathrm{e}^{\frac{2x}{x^2 + y^2}}$.
+\end{prob}
+
+\begin{prob}[S]{3161}
+$z = x^y \ (x > 0)$.
+\end{prob}
+
+\begin{prob}[S]{3162}
+$z = x^y \mathrm{e}^{-x} \ (x > 0)$.
+\end{prob}
+
+\begin{prob}[S]{3163}
+$z = \ln\sqrt{\dfrac{(x - a)^2 + y^2}{(x + a)^2 + y^2}} \ (a > 0)$.
+\end{prob}
+
+\begin{prob}[S]{3164}
+$z = \arctan \dfrac{2ay}{x^2 + y^2 - a^2} \ (a > 0)$.
+\end{prob}
+
+\begin{prob}[S]{3165}
+$z = \operatorname{sgn}(\sin x \sin y)$.
+\end{prob}
+
+\probgroup{求下列函数的等值面：}
+
+\begin{prob}[S]{3166}
+$u = x + y + z$.
+\end{prob}
+
+\begin{prob}[S]{3167}
+$u = x^2 + y^2 + z^2$.
+\end{prob}
+
+\begin{prob}[S]{3168}
+$u = x^2 + y^2 - z^2$.
+\end{prob}
+
+\begin{prob}[S]{3169}
+$u = (x + y)^2 + z^2$.
+\end{prob}
+
+\begin{prob}[S]{3170}
+$u = \operatorname{sgn}\sin(x^2 + y^2 + z^2)$.
+\end{prob}
+
+\probgroup{根据曲面的已知方程研究其性质：}
+
+\begin{prob}[S]{3171}
+$z = f(y - ax)$.
+\end{prob}
+
+\begin{prob}[S]{3172}
+$z = f(\sqrt{x^2 + y^2})$.
+\end{prob}
+
+\begin{prob}[S]{3173}
+$z = xf\left(\dfrac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3174}
+$z = f\left(\dfrac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[M]{3175}
+作出函数
+\[
+F(t) = f(\cos t, \sin t)
+\]
+的图像，式中
+\[
+f(x, y) = \begin{cases}
+1, & y \geqslant x, \\
+0, & y < x.
+\end{cases}
+\]
+\end{prob}
+
+\begin{prob}[S]{3176}
+若
+\[
+f(x, y) = \frac{2xy}{x^2 + y^2},
+\]
+求 $f\left(1, \dfrac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3177}
+若
+\[
+f\left(\frac{y}{x}\right) = \frac{\sqrt{x^2 + y^2}}{x} \quad (x > 0),
+\]
+求 $f(x)$.
+\end{prob}
+
+\begin{prob}[S]{3178}
+设
+\[
+z = \sqrt{y} + f(\sqrt{x} - 1).
+\]
+若当 $y = 1$ 时 $z = x$，求函数 $f$ 和 $z$.
+\end{prob}
+
+\begin{prob}[S]{3179}
+设
+\[
+z = x + y + f(x - y).
+\]
+若当 $y = 0$ 时 $z = x^2$，求函数 $f$ 和 $z$.
+\end{prob}
+
+\begin{prob}[S]{3180}
+若 $f\left(x + y, \dfrac{y}{x}\right) = x^2 - y^2$，求 $f(x, y)$.
+\end{prob}
+
+\begin{prob}[M]{3181}
+证明：对于函数
+\[
+f(x, y) = \frac{x - y}{x + y},
+\]
+有
+\[
+\lim_{x \to 0} \left\{ \lim_{y \to 0} f(x, y) \right\} = 1, \qquad \lim_{y \to 0} \left\{ \lim_{x \to 0} f(x, y) \right\} = -1,
+\]
+从而 $\lim\limits_{\substack{x \to 0 \\ y \to 0}} f(x, y)$ 不存在.
+\end{prob}
+
+\begin{prob}[M]{3182}
+证明：对于函数
+\[
+f(x, y) = \frac{x^2 y^2}{x^2 y^2 + (x - y)^2},
+\]
+有
+\[
+\lim_{x \to 0} \left\{ \lim_{y \to 0} f(x, y) \right\} = \lim_{y \to 0} \left\{ \lim_{x \to 0} f(x, y) \right\} = 0,
+\]
+然而 $\lim\limits_{\substack{x \to 0 \\ y \to 0}} f(x, y)$ 不存在.
+\end{prob}
+
+\begin{prob}[M]{3183.1}
+证明：对于函数
+\[
+f(x, y) = (x + y)\sin\frac{1}{x}\sin\frac{1}{y},
+\]
+累次极限 $\lim\limits_{x \to 0} \left\{ \lim\limits_{y \to 0} f(x, y) \right\}$ 和 $\lim\limits_{y \to 0} \left\{ \lim\limits_{x \to 0} f(x, y) \right\}$ 不存在，但存在 $\lim\limits_{\substack{x \to 0 \\ y \to 0}} f(x, y) = 0$.
+\end{prob}
+
+\begin{prob}[S]{3183.2}
+是否存在极限
+\[
+\lim_{\substack{x \to 0 \\ y \to 0}} \frac{2xy}{x^2 + y^2}?
+\]
+\end{prob}
+
+\begin{prob}[M]{3183.3}
+当 $t \to +\infty$ 时，函数
+\[
+f(x, y) = x^2 \mathrm{e}^{-(x^2 - y)}
+\]
+沿任意射线 $x = t\cos\alpha, y = t\sin\alpha$ ($0 \leqslant t < +\infty$) 的极限等于什么？当 $x \to +\infty, y \to +\infty$ 时，可否称此函数为无穷小量？
+\end{prob}
+
+\begin{prob}[L]{3184}
+求 $\lim\limits_{x \to a} \left\{ \lim\limits_{y \to b} f(x, y) \right\}$ 及 $\lim\limits_{y \to b} \left\{ \lim\limits_{x \to a} f(x, y) \right\}$，设：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $f(x, y) = \dfrac{x^2 + y^2}{x^2 + y^4}, \ a = \infty, b = \infty$;
+\item $f(x, y) = \dfrac{x^y}{1 + x^y}, \ a = \infty, b = +0$;
+\item $f(x, y) = \sin\dfrac{\pi x}{2x + y}, \ a = \infty, b = \infty$;
+\item $f(x, y) = \dfrac{1}{xy}\tan\dfrac{xy}{1 + xy}, \ a = 0, b = \infty$;
+\item $f(x, y) = \log_x(x + y), \ a = 1, b = 0$.
+\end{enumerate}
+\end{prob}
+
+\probgroup{求下列二重极限：}
+
+\begin{prob}[S]{3185}
+$\lim\limits_{\substack{x \to \infty \\ y \to \infty}} \dfrac{x + y}{x^2 - xy + y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3186}
+$\lim\limits_{\substack{x \to \infty \\ y \to \infty}} \dfrac{x^2 + y^2}{x^4 + y^4}$.
+\end{prob}
+
+\begin{prob}[S]{3187}
+$\lim\limits_{\substack{x \to 0 \\ y \to a}} \dfrac{\sin xy}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3188}
+$\lim\limits_{\substack{x \to +\infty \\ y \to +\infty}} (x^2 + y^2)\mathrm{e}^{-(x + y)}$.
+\end{prob}
+
+\begin{prob}[S]{3189}
+$\lim\limits_{\substack{x \to +\infty \\ y \to +\infty}} \left(\dfrac{xy}{x^2 + y^2}\right)^{x^2}$.
+\end{prob}
+
+\begin{prob}[S]{3190}
+$\lim\limits_{\substack{x \to 0 \\ y \to 0}} (x^2 + y^2)^{x^2 y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3191}
+$\lim\limits_{\substack{x \to \infty \\ y \to a}} \left(1 + \dfrac{1}{x}\right)^{\frac{x^2}{x + y}}$.
+\end{prob}
+
+\begin{prob}[S]{3192}
+$\lim\limits_{\substack{x \to 1 \\ y \to 0}} \dfrac{\ln(x + \mathrm{e}^y)}{\sqrt{x^2 + y^2}}$.
+\end{prob}
+
+\begin{prob}[M]{3193}
+若 $x = \rho\cos\varphi, y = \rho\sin\varphi$，问沿怎样的方向 $\varphi$ 存在有限的极限值：
+
+(a) $\lim\limits_{\rho \to +0} \mathrm{e}^{\frac{x}{x^2 + y^2}}$; \qquad (b) $\lim\limits_{\rho \to +\infty} \mathrm{e}^{x^2 - y^2} \cdot \sin 2xy$.
+\end{prob}
+
+\probgroup{求下列函数的间断点：}
+
+\begin{prob}[S]{3194}
+$u = \dfrac{1}{\sqrt{x^2 + y^2}}$.
+\end{prob}
+
+\begin{prob}[S]{3195}
+$u = \dfrac{xy}{x + y}$.
+\end{prob}
+
+\begin{prob}[S]{3196}
+$u = \dfrac{x + y}{x^3 + y^3}$.
+\end{prob}
+
+\begin{prob}[S]{3197}
+$u = \sin\dfrac{1}{xy}$.
+\end{prob}
+
+\begin{prob}[S]{3198}
+$u = \dfrac{1}{\sin x \sin y}$.
+\end{prob}
+
+\begin{prob}[S]{3199}
+$u = \ln(1 - x^2 - y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3200}
+$u = \dfrac{1}{xyz}$.
+\end{prob}
+
+\begin{prob}[S]{3201}
+$u = \ln\dfrac{1}{\sqrt{(x - a)^2 + (y - b)^2 + (z - c)^2}}$.
+\end{prob}
+
+\begin{prob}[L]{3202}
+证明：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 函数
+\[
+f(x, y) = \begin{cases}
+\dfrac{2xy}{x^2 + y^2}, & x^2 + y^2 \neq 0, \\
+0, & x^2 + y^2 = 0
+\end{cases}
+\]
+分别对每一个变量 $x$ 或 $y$（当另一变量的值固定时）是连续的，但对这些变量的总体不是连续的；
+\item 函数
+\[
+f(x, y) = \begin{cases}
+\dfrac{x^2 y}{x^4 + y^4}, & x^2 + y^2 \neq 0, \\
+0, & x^2 + y^2 = 0
+\end{cases}
+\]
+在点 $O(0, 0)$ 处沿过此点的每一射线
+\[
+x = t\cos\alpha, \quad y = t\sin\alpha \quad (0 \leqslant t < +\infty)
+\]
+连续，即存在
+\[
+\lim_{t \to 0} f(t\cos\alpha, t\sin\alpha) = f(0, 0),
+\]
+但此函数在点 $(0, 0)$ 并非连续的.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3203.1}
+研究线性函数
+\[
+u = 2x - 3y + 5
+\]
+在平面 $E^2 = \{|x| < +\infty, |y| < +\infty\}$ 上的一致连续性.
+\end{prob}
+
+\begin{prob}[M]{3203.2}
+研究函数
+\[
+u = \sqrt{x^2 + y^2}
+\]
+在平面 $E^2 = \{|x| < +\infty, |y| < +\infty\}$ 上的一致连续性.
+\end{prob}
+
+\begin{prob}[M]{3203.3}
+函数
+\[
+f(x, y) = \sin\frac{\pi}{1 - x^2 - y^2}
+\]
+在区域 $x^2 + y^2 < 1$ 内是否一致连续？
+\end{prob}
+
+\begin{prob}[M]{3203.4}
+给定函数
+\[
+u = \arcsin\frac{x}{y}.
+\]
+此函数在其定义域 $E$ 内是否连续？是否一致连续？
+\end{prob}
+
+\begin{prob}[M]{3204}
+证明：函数
+\[
+f(x, y) = \begin{cases}
+x\sin\dfrac{1}{y}, & y \neq 0, \\
+0, & y = 0
+\end{cases}
+\]
+的间断点的集合不是闭集.
+\end{prob}
+
+\begin{prob}[M]{3205}
+证明：若函数 $f(x, y)$ 在某区域 $G$ 内对变量 $x$ 是连续的，而关于 $x$ 对变量 $y$ 是一致连续的，则此函数在该区域内是连续的.
+\end{prob}
+
+\begin{prob}[M]{3206}
+证明：若在某区域 $G$ 内函数 $f(x, y)$ 对变量 $x$ 是连续的，并满足对变量 $y$ 的利普希茨条件，即
+\[
+|f(x, y') - f(x, y'')| \leqslant L|y' - y''|,
+\]
+式中 $(x, y') \in G, (x, y'') \in G$，而 $L$ 为常数，则此函数在该区域内是连续的.
+\end{prob}
+
+\begin{prob}[M]{3207}
+证明：若函数 $f(x, y)$ 分别对每一个变量 $x$ 和 $y$ 是连续的，并对其中的一个是单调的，则此函数对两个变量的总体是连续的（杨定理）.
+\end{prob}
+
+\begin{prob}[M]{3208}
+设函数 $f(x, y)$ 在区域 $a \leqslant x \leqslant A, b \leqslant y \leqslant B$ 上是连续的，而函数序列 $\varphi_n(x)$ ($n = 1, 2, \cdots$) 在 $[a, A]$ 上一致收敛并满足条件 $b \leqslant \varphi_n(x) \leqslant B$. 证明：函数序列
+\[
+F_n(x) = f(x, \varphi_n(x)) \quad (n = 1, 2, \cdots)
+\]
+也在 $[a, A]$ 上一致收敛.
+\end{prob}
+
+\begin{prob}[M]{3209}
+设：1) 函数 $f(x, y)$ 在区域 $R$ ($a < x < A; b < y < B$) 内连续；2) 函数 $\varphi(x)$ 在区间 $(a, A)$ 内连续，且函数值属于区间 $(b, B)$. 证明：函数
+\[
+F(x) = f(x, \varphi(x))
+\]
+在区间 $(a, A)$ 内连续.
+\end{prob}
+
+\begin{prob}[M]{3210}
+设：1) 函数 $f(x,y)$ 在区域 $R$ ($a < x < A; b < y < B$) 内连续；2) 函数 $x = \varphi(u,v)$ 及 $y = \psi(u,v)$ 在区域 $R'$ ($a' < u < A'; b' < v < B'$) 内连续，且函数值分别属于区间 $(a, A)$ 和 $(b, B)$．证明：函数
+\[
+F(u,v) = f(\varphi(u,v), \psi(u,v))
+\]
+在区域 $R'$ 内连续．
+\end{prob}
+
+\probsec{§2. 偏导数. 函数的微分}
+
+\begin{prob}[S]{3211.1}
+证明：
+\[
+f'_x(x,b) = \frac{\mathrm{d}}{\mathrm{d}x}[f(x,b)].
+\]
+\end{prob}
+
+\begin{prob}[M]{3211.2}
+设
+\[
+f(x,y) = x + (y-1)\arcsin\sqrt{\frac{x}{y}},
+\]
+求 $f'_x(x,1)$．
+\end{prob}
+
+\begin{prob}[M]{3212.1}
+设 $f(x,y) = \sqrt[3]{xy}$，求 $f'_x(0,0)$ 和 $f'_y(0,0)$．此函数在点 $O(0,0)$ 是否可微？
+\end{prob}
+
+\begin{prob}[S]{3212.2}
+函数 $f(x,y) = \sqrt[3]{x^3 + y^3}$ 在点 $O(0,0)$ 是否可微？
+\end{prob}
+
+\begin{prob}[M]{3212.3}
+研究函数
+\[
+f(x,y) = \begin{cases} \mathrm{e}^{-\frac{1}{x^2+y^2}}, & x^2+y^2 > 0, \\ 0, & x^2+y^2 = 0 \end{cases}
+\]
+在点 $O(0,0)$ 的可微性．
+\end{prob}
+
+\probgroup{求下列函数的一阶和二阶偏导数：}
+
+\begin{prob}[S]{3213}
+$u = x^4 + y^4 - 4x^2 y^2$．
+\end{prob}
+
+\begin{prob}[S]{3214}
+$u = xy + \dfrac{x}{y}$．
+\end{prob}
+
+\begin{prob}[S]{3215}
+$u = \dfrac{x}{y^2}$．
+\end{prob}
+
+\begin{prob}[S]{3216}
+$u = \dfrac{x}{\sqrt{x^2+y^2}}$．
+\end{prob}
+
+\begin{prob}[S]{3217}
+$u = x\sin(x+y)$．
+\end{prob}
+
+\begin{prob}[S]{3218}
+$u = \dfrac{\cos x^2}{y}$．
+\end{prob}
+
+\begin{prob}[S]{3219}
+$u = \tan\dfrac{x^2}{y}$．
+\end{prob}
+
+\begin{prob}[S]{3220}
+$u = x^y$．
+\end{prob}
+
+\begin{prob}[S]{3221}
+$u = \ln(x+y^2)$．
+\end{prob}
+
+\begin{prob}[S]{3222}
+$u = \arctan\dfrac{y}{x}$．
+\end{prob}
+
+\begin{prob}[S]{3223}
+$u = \arctan\dfrac{x+y}{1-xy}$．
+\end{prob}
+
+\begin{prob}[S]{3224}
+$u = \arcsin\dfrac{x}{\sqrt{x^2+y^2}}$．
+\end{prob}
+
+\begin{prob}[S]{3225}
+$u = \dfrac{1}{\sqrt{x^2+y^2+z^2}}$．
+\end{prob}
+
+\begin{prob}[S]{3226}
+$u = \left(\dfrac{x}{y}\right)^z$．
+\end{prob}
+
+\begin{prob}[S]{3227}
+$u = x^{\frac{y}{z}}$．
+\end{prob}
+
+\begin{prob}[S]{3228}
+$u = x^{y^z}$．
+\end{prob}
+
+\begin{prob}[L]{3229}
+设
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $u = x^2 - 2xy - 3y^2$；
+\item $u = x^{y^2}$；
+\item $u = \arccos\sqrt{\dfrac{x}{y}}$，
+\end{enumerate}
+验证等式
+\[
+\frac{\partial^2 u}{\partial x\partial y} = \frac{\partial^2 u}{\partial y\partial x}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3230.1}
+设
+\[
+f(x,y) = \begin{cases} xy\dfrac{x^2-y^2}{x^2+y^2}, & x^2+y^2 \neq 0, \\ 0, & x^2+y^2 = 0. \end{cases}
+\]
+证明：
+\[
+f''_{xy}(0,0) \neq f''_{yx}(0,0).
+\]
+\end{prob}
+
+\begin{prob}[M]{3230.2}
+设
+\[
+f(x,y) = \begin{cases} \dfrac{2xy}{x^2+y^2}, & x^2+y^2 > 0, \\ 0, & x^2+y^2 = 0, \end{cases}
+\]
+是否存在 $f''_{xy}(0,0)$？
+\end{prob}
+
+\begin{prob}[L]{3231}
+设 $u = f(x,y,z)$ 为 $n$ 次齐次函数，就下列各题验证关于齐次函数的欧拉定理：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $u = (x-2y+3z)^2$；
+\item $u = \dfrac{x}{\sqrt{x^2+y^2+z^2}}$；
+\item $u = \left(\dfrac{x}{y}\right)^{\frac{y}{x}}$．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3232}
+证明：若可微函数 $u = f(x,y,z)$ 满足方程
+\[
+x\frac{\partial u}{\partial x} + y\frac{\partial u}{\partial y} + z\frac{\partial u}{\partial z} = nu,
+\]
+则它为 $n$ 次齐次函数．
+\probhint{研究辅助函数
+\[
+F(t) = \frac{f(tx,ty,tz)}{t^n}.
+\]}
+\end{prob}
+
+\begin{prob}[M]{3233}
+证明：若 $f(x,y,z)$ 是可微的 $n$ 次齐次函数，则其偏导数 $f'_x(x,y,z)$，$f'_y(x,y,z)$，$f'_z(x,y,z)$ 是 $n-1$ 次齐次函数．
+\end{prob}
+
+\begin{prob}[M]{3234}
+设 $u = f(x,y,z)$ 是二阶可微的 $n$ 次齐次函数，证明：
+\[
+\left(x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y} + z\frac{\partial}{\partial z}\right)^2 u = n(n-1)u.
+\]
+\end{prob}
+
+\probgroup{求下列函数的一阶和二阶微分（$x,y,z$ 为自变量）：}
+
+\begin{prob}[S]{3235}
+$u = x^m y^n$．
+\end{prob}
+
+\begin{prob}[S]{3236}
+$u = \dfrac{x}{y}$．
+\end{prob}
+
+\begin{prob}[S]{3237}
+$u = \sqrt{x^2+y^2}$．
+\end{prob}
+
+\begin{prob}[S]{3238}
+$u = \ln\sqrt{x^2+y^2}$．
+\end{prob}
+
+\begin{prob}[S]{3239}
+$u = \mathrm{e}^{xy}$．
+\end{prob}
+
+\begin{prob}[S]{3240}
+$u = xy + yz + zx$．
+\end{prob}
+
+\begin{prob}[S]{3241}
+$u = \dfrac{z}{x^2+y^2}$．
+\end{prob}
+
+\begin{prob}[M]{3242}
+设 $f(x,y,z) = \sqrt[z]{\dfrac{x}{y}}$，求 $\mathrm{d}f(1,1,1)$ 及 $\mathrm{d}^2 f(1,1,1)$．
+\end{prob}
+
+\begin{prob}[M]{3243}
+证明：若 $u = \sqrt{x^2+y^2+z^2}$，则 $\mathrm{d}^2 u \geqslant 0$．
+\end{prob}
+
+\begin{prob}[L]{3244}
+假设 $x, y$ 的绝对值很小，对下列各式推出近似公式：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $(1+x)^m (1+y)^n$；
+\item $\ln(1+x)\cdot \ln(1+y)$；
+\item $\arctan\dfrac{x+y}{1+xy}$．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{3245}
+用微分来代替函数的增量，近似地计算：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $1.002 \cdot 2.003^2 \cdot 3.004^3$；
+\item $\dfrac{1.03^2}{\sqrt[3]{0.98} \cdot \sqrt[4]{1.05^3}}$；
+\item $\sqrt{1.02^3 + 1.97^3}$；
+\item $\sin 29^\circ \cdot \tan 46^\circ$；
+\item $0.97^{1.05}$．
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3246}
+设矩形的边 $x = 6\,\mathrm{m}$ 和 $y = 8\,\mathrm{m}$，若第一个边增加 $2\,\mathrm{mm}$，而第二个边减少 $5\,\mathrm{mm}$，则矩形的对角线和面积变化多少？
+\end{prob}
+
+\begin{prob}[M]{3247}
+扇形的中心角 $\alpha = 60^\circ$ 增加 $\Delta\alpha = 1^\circ$，为了使扇形的面积仍然不变，则应当把扇形的半径 $R = 20\,\mathrm{cm}$ 减少多少？
+\end{prob}
+
+\begin{prob}[M]{3248}
+证明：乘积的相对误差近似地等于乘数的相对误差之和．
+\end{prob}
+
+\begin{prob}[M]{3249}
+当测量圆柱的底半径 $R$ 和高 $H$ 时得到以下结果：
+\[
+R = 2.5\,\mathrm{m} \pm 0.1\,\mathrm{m}; \quad H = 4.0\,\mathrm{m} \pm 0.2\,\mathrm{m},
+\]
+则所计算出的圆柱体积会有怎样的绝对误差 $\Delta$ 和相对误差 $\delta$？
+\end{prob}
+
+\begin{prob}[M]{3250}
+三角形的边 $a = 200\,\mathrm{m} \pm 2\,\mathrm{m}$，$b = 300\,\mathrm{m} \pm 5\,\mathrm{m}$，它们之间的角 $C = 60^\circ \pm 1^\circ$．则所计算出的三角形第三边 $c$ 会有怎样的绝对误差？
+\end{prob}
+
+\begin{prob}[M]{3251}
+证明：在点 $(0,0)$ 连续的函数
+\[
+f(x,y) = \sqrt{|xy|},
+\]
+在点 $(0,0)$ 有两个偏导数 $f'_x(0,0)$ 和 $f'_y(0,0)$，但在点 $(0,0)$ 并非可微的．
+
+说明导数 $f'_x(x,y)$ 和 $f'_y(x,y)$ 在点 $(0,0)$ 的邻域中的性质．
+\end{prob}
+
+\begin{prob}[M]{3252}
+证明：函数
+\[
+f(x,y) = \begin{cases} \dfrac{xy}{\sqrt{x^2+y^2}}, & x^2+y^2 \neq 0, \\ 0, & x^2+y^2 = 0 \end{cases}
+\]
+在点 $(0,0)$ 的邻域中连续且有界的偏导数 $f'_x(x,y)$ 和 $f'_y(x,y)$，但此函数在点 $(0,0)$ 不可微．
+\end{prob}
+
+\begin{prob}[M]{3253}
+证明：函数
+\[
+f(x,y) = \begin{cases} (x^2+y^2)\sin\dfrac{1}{x^2+y^2}, & x^2+y^2 \neq 0, \\ 0, & x^2+y^2 \neq 0 \end{cases}
+\]
+在点 $(0,0)$ 的邻域中有偏导数 $f'_x(x,y)$ 和 $f'_y(x,y)$，这些偏导数在点 $(0,0)$ 是不连续的，且在此点的任何邻域中是无界的；然而，此函数在点 $(0,0)$ 可微．
+\end{prob}
+
+\begin{prob}[M]{3254}
+证明：在某凸区域 $E$ 内具有有界偏导数 $f'_x(x,y)$ 和 $f'_y(x,y)$ 的函数 $f(x,y)$ 在此区域 $E$ 内一致连续．
+\end{prob}
+
+\begin{prob}[M]{3255}
+证明：若函数 $f(x,y)$ 对变量 $x$ 连续（对每一个固定的值 $y$）且有对变量 $y$ 的有界的导数 $f'_y(x,y)$，则此函数对变量 $x$ 和 $y$ 的总体是连续的．
+\end{prob}
+
+\probgroup{在下列问题中求所列偏导数：}
+
+\begin{prob}[M]{3256}
+$\dfrac{\partial^4 u}{\partial x^4}$，$\dfrac{\partial^4 u}{\partial x^3 \partial y}$，$\dfrac{\partial^4 u}{\partial x^2 \partial y^2}$，若
+\[
+u = x - y + x^2 + 2xy + y^2 + x^3 - 3x^2 y - y^3 + x^4 - 4x^2 y^2 + y^4.
+\]
+\end{prob}
+
+\begin{prob}[S]{3257}
+$\dfrac{\partial^3 u}{\partial x^2 \partial y}$，若 $u = x\ln(xy)$．
+\end{prob}
+
+\begin{prob}[S]{3258}
+$\dfrac{\partial^6 u}{\partial x^3 \partial y^3}$，若 $u = x^3 \sin y + y^3 \sin x$．
+\end{prob}
+
+\begin{prob}[M]{3259}
+$\dfrac{\partial^3 u}{\partial x\partial y\partial z}$，若 $u = \arctan\dfrac{x+y+z-xyz}{1-xy-xz-yz}$．
+\end{prob}
+
+\begin{prob}[S]{3260}
+$\dfrac{\partial^3 u}{\partial x\partial y\partial z}$，若 $u = \mathrm{e}^{xyz}$．
+\end{prob}
+
+\begin{prob}[M]{3261}
+$\dfrac{\partial^4 u}{\partial x\partial y\partial\xi\partial\eta}$，若 $u = \ln\dfrac{1}{\sqrt{(x-\xi)^2 + (y-\eta)^2}}$．
+\end{prob}
+
+\begin{prob}[S]{3262}
+$\dfrac{\partial^{p+q} u}{\partial x^p \partial y^q}$，若 $u = (x-x_0)^p (y-y_0)^q$．
+\end{prob}
+
+\begin{prob}[S]{3263}
+$\dfrac{\partial^{m+n} u}{\partial x^m \partial y^n}$，若 $u = \dfrac{x+y}{x-y}$．
+\end{prob}
+
+\begin{prob}[S]{3264}
+$\dfrac{\partial^{m+n} u}{\partial x^m \partial y^n}$，若 $u = (x^2+y^2)\mathrm{e}^{x+y}$．
+\end{prob}
+
+\begin{prob}[S]{3265}
+$\dfrac{\partial^{p+q+r} u}{\partial x^p \partial y^q \partial z^r}$，若 $u = xyz\mathrm{e}^{x+y+z}$．
+\end{prob}
+
+\begin{prob}[S]{3266}
+若 $f(x,y) = \mathrm{e}^x \sin y$，求 $f^{(m+n)}_{x^m y^n}(0,0)$．
+\end{prob}
+
+\begin{prob}[M]{3267}
+证明：若 $u = f(xyz)$，则 $\dfrac{\partial^3 u}{\partial x\partial y\partial z} = F(t)$，式中 $t = xyz$，并求函数 $F$．
+\end{prob}
+
+\begin{prob}[M]{3268}
+设
+\[
+u = x^4 - 2x^3 y - 2xy^3 + y^4 + x^3 - 3x^2 y - 3xy^2 + y^3 + 2x^2 - xy + 2y^2 + x + y + 1,
+\]
+求 $\mathrm{d}^4 u$．导数 $\dfrac{\partial^4 u}{\partial x^4}$，$\dfrac{\partial^4 u}{\partial x^3 \partial y}$，$\dfrac{\partial^4 u}{\partial x^2 \partial y^2}$，$\dfrac{\partial^4 u}{\partial x\partial y^3}$ 和 $\dfrac{\partial^4 u}{\partial y^4}$ 等于什么？
+\end{prob}
+
+\probgroup{在下列各题中求所指出的阶的全微分：}
+
+\begin{prob}[S]{3269}
+$\mathrm{d}^3 u$，若 $u = x^3 + y^3 - 3xy(x-y)$．
+\end{prob}
+
+\begin{prob}[S]{3270}
+$\mathrm{d}^3 u$，若 $u = \sin(x^2+y^2)$．
+\end{prob}
+
+\begin{prob}[S]{3271}
+$\mathrm{d}^{10} u$，若 $u = \ln(x+y)$．
+\end{prob}
+
+\begin{prob}[S]{3272}
+$\mathrm{d}^6 u$，若 $u = \cos x \cosh y$．
+\end{prob}
+
+\begin{prob}[S]{3273}
+$\mathrm{d}^3 u$，若 $u = xyz$．
+\end{prob}
+
+\begin{prob}[S]{3274}
+$\mathrm{d}^4 u$，若 $u = \ln(x^x y^y z^z)$．
+\end{prob}
+
+\begin{prob}[S]{3275}
+$\mathrm{d}^n u$，若 $u = \mathrm{e}^{ax+by}$．
+\end{prob}
+
+\begin{prob}[S]{3276}
+$\mathrm{d}^n u$，若 $u = X(x)Y(y)$．
+\end{prob}
+
+\begin{prob}[S]{3277}
+$\mathrm{d}^n u$，若 $u = f(x+y+z)$．
+\end{prob}
+
+\begin{prob}[S]{3278}
+$\mathrm{d}^n u$，若 $u = \mathrm{e}^{ax+by+cz}$．
+\end{prob}
+
+\begin{prob}[M]{3279}
+设 $P_n(x,y,z)$ 为 $n$ 次齐次多项式．证明：
+\[
+\mathrm{d}^n P_n(x,y,z) = n! P_n(\mathrm{d}x, \mathrm{d}y, \mathrm{d}z).
+\]
+\end{prob}
+
+\begin{prob}[M]{3280}
+设
+\[
+Au = x\frac{\partial u}{\partial x} + y\frac{\partial u}{\partial y}.
+\]
+求 $Au$ 和 $A^2 u = A(Au)$，若 (a) $u = \dfrac{x}{x^2+y^2}$；\qquad (b) $u = \ln\sqrt{x^2+y^2}$．
+\end{prob}
+
+\begin{prob}[M]{3281}
+设
+\[
+\Delta u = \frac{\partial^2 u}{\mathrm{d}x^2} + \frac{\partial^2 u}{\partial y^2},
+\]
+求 $\Delta u$, 若 (a) $u = \sin x \cosh y$; (b) $u = \ln \sqrt{x^2 + y^2}$.
+\end{prob}
+
+\begin{prob}[M]{3282}
+设
+\[
+\Delta_1 u = \left(\frac{\partial u}{\partial x}\right)^2 + \left(\frac{\partial u}{\partial y}\right)^2 + \left(\frac{\partial u}{\partial z}\right)^2, \quad \Delta_2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}.
+\]
+求 $\Delta_1 u$ 和 $\Delta_2 u$, 若 (a) $u = x^3 + y^3 + z^3 - 3xyz$; (b) $u = \dfrac{1}{\sqrt{x^2 + y^2 + z^2}}$.
+\end{prob}
+
+\probgroup{求下列复合函数的一阶和二阶导数：}
+
+\begin{prob}[S]{3283}
+$u = f(x^2 + y^2 + z^2)$.
+\end{prob}
+
+\begin{prob}[S]{3284}
+$u = f\left(x, \frac{x}{y}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3285}
+$u = f(x, xy, xyz)$.
+\end{prob}
+
+\begin{prob}[S]{3286}
+设 $u = f(x + y, xy)$, 求 $\frac{\partial^2 u}{\partial x \partial y}$.
+\end{prob}
+
+\begin{prob}[S]{3287}
+设 $u = f(x + y + z, x^2 + y^2 + z^2)$, 求 $\Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}$.
+\end{prob}
+
+\probgroup{求下列复合函数的一阶和二阶全微分 ($x, y$ 及 $z$ 为自变量)：}
+
+\begin{prob}[S]{3288}
+$u = f(t)$, 其中 $t = x + y$.
+\end{prob}
+
+\begin{prob}[S]{3289}
+$u = f(t)$, 其中 $t = \frac{y}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3290}
+$u = f(\sqrt{x^2 + y^2})$.
+\end{prob}
+
+\begin{prob}[S]{3291}
+$u = f(t)$, 其中 $t = xyz$.
+\end{prob}
+
+\begin{prob}[S]{3292}
+$u = f(x^2 + y^2 + z^2)$.
+\end{prob}
+
+\begin{prob}[S]{3293}
+$u = f(\xi, \eta)$, 其中 $\xi = ax, \eta = by$.
+\end{prob}
+
+\begin{prob}[S]{3294}
+$u = f(\xi, \eta)$, 其中 $\xi = x + y, \eta = x - y$.
+\end{prob}
+
+\begin{prob}[S]{3295}
+$u = f(\xi, \eta)$, 其中 $\xi = xy, \eta = \frac{x}{y}$.
+\end{prob}
+
+\begin{prob}[S]{3296}
+$u = f(x + y, z)$.
+\end{prob}
+
+\begin{prob}[S]{3297}
+$u = f(x + y + z, x^2 + y^2 + z^2)$.
+\end{prob}
+
+\begin{prob}[S]{3298}
+$u = f\left(\frac{x}{y}, \frac{y}{z}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3299}
+$u = f(x, y, z)$, 其中 $x = t, y = t^2, z = t^3$.
+\end{prob}
+
+\begin{prob}[S]{3300}
+$u = f(\xi, \eta, \zeta)$, 其中 $\xi = ax, \eta = by, \zeta = cz$.
+\end{prob}
+
+\begin{prob}[S]{3301}
+$u = f(\xi, \eta, \zeta)$, 其中 $\xi = x^2 + y^2, \eta = x^2 - y^2, \zeta = 2xy$.
+\end{prob}
+
+\probgroup{求 $\mathrm{d}^n u$, 设：}
+
+\begin{prob}[S]{3302}
+$u = f(ax + by + cz)$.
+\end{prob}
+
+\begin{prob}[S]{3303}
+$u = f(ax, by, cz)$.
+\end{prob}
+
+\begin{prob}[M]{3304}
+$u = f(\xi, \eta, \zeta)$, 其中
+\[
+\xi = a_1 x + b_1 y + c_1 z, \quad \eta = a_2 x + b_2 y + c_2 z, \quad \zeta = a_3 x + b_3 y + c_3 z.
+\]
+\end{prob}
+
+\begin{prob}[M]{3305}
+设 $u = f(r)$, 其中 $r = \sqrt{x^2 + y^2 + z^2}$ 和 $f$ 为二阶可微的函数. 证明:
+\[
+\Delta u = F(r),
+\]
+其中 $\Delta u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}$, $\Delta$ 为拉普拉斯算子, 并求函数 $F$.
+\end{prob}
+
+\begin{prob}[M]{3306}
+设 $u$ 和 $v$ 为二阶可微的函数, $\Delta$ 为拉普拉斯算子 (参阅习题 3305). 证明:
+\[
+\Delta(uv) = u\Delta v + v\Delta u + 2\Delta(u, v),
+\]
+其中
+\[
+\Delta(u, v) = \frac{\partial u}{\partial x}\frac{\partial v}{\partial x} + \frac{\partial u}{\partial y}\frac{\partial v}{\partial y} + \frac{\partial u}{\partial z}\frac{\partial v}{\partial z}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3307}
+证明: 函数
+\[
+u = \ln\sqrt{(x - a)^2 + (y - b)^2}
+\]
+($a$ 和 $b$ 为常数) 满足拉普拉斯方程
+\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3308}
+证明: 若函数 $u = u(x, y)$ 满足拉普拉斯方程 (参阅习题 3307), 则函数
+\[
+v = u\left(\frac{x}{x^2 + y^2}, \frac{y}{x^2 + y^2}\right)
+\]
+也满足此方程.
+\end{prob}
+
+\begin{prob}[M]{3309}
+证明: 函数
+\[
+u = \frac{1}{2a\sqrt{\pi t}}\mathrm{e}^{-\frac{(x - b)^2}{4a^2 t}}
+\]
+($a$ 和 $b$ 为常数) 满足热传导方程
+\[
+\frac{\partial u}{\partial t} = a^2\frac{\partial^2 u}{\partial x^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3310}
+证明: 若函数 $u = u(x, t)$ 满足热传导方程 (参阅 3309 题), 则函数
+\[
+v = \frac{1}{a\sqrt{t}}\mathrm{e}^{-\frac{x^2}{4a^2 t}} u\left(\frac{x}{a^2 t}, -\frac{1}{a^4 t}\right) \quad (t > 0)
+\]
+也满足该方程.
+\end{prob}
+
+\begin{prob}[M]{3311}
+证明: 函数
+\[
+u = \frac{1}{r} \quad \left(\text{式中 } r = \sqrt{(x - a)^2 + (y - b)^2 + (z - c)^2}\right)
+\]
+当 $r \neq 0$ 时满足拉普拉斯方程
+\[
+\Delta u \equiv \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3312}
+证明: 若函数 $u = u(x, y, z)$ 满足拉普拉斯方程 (参阅 3311 题), 则函数
+\[
+v = \frac{1}{r} u\left(\frac{k^2 x}{r^2}, \frac{k^2 y}{r^2}, \frac{k^2 z}{r^2}\right)
+\]
+(式中 $k$ 为常数, $r = \sqrt{x^2 + y^2 + z^2}$) 也满足该方程.
+\end{prob}
+
+\begin{prob}[M]{3313}
+证明: 函数
+\[
+u = \frac{C_1\mathrm{e}^{-ar} + C_2\mathrm{e}^{ar}}{r}
+\]
+(式中 $r = \sqrt{x^2 + y^2 + z^2}$, $C_1, C_2$ 为常数) 满足亥姆霍兹方程
+\[
+\frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2} = a^2 u.
+\]
+\end{prob}
+
+\begin{prob}[M]{3314}
+设函数 $u_1 = u_1(x, y, z)$ 及 $u_2 = u_2(x, y, z)$ 满足拉普拉斯方程 $\Delta u = 0$. 证明: 函数
+\[
+v = u_1(x, y, z) + (x^2 + y^2 + z^2) u_2(x, y, z)
+\]
+满足双调和方程
+\[
+\Delta(\Delta v) = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3315}
+设 $f(x, y, z)$ 是 $m$ 阶可微的 $n$ 次齐次函数. 证明:
+\[
+\left(x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y} + z\frac{\partial}{\partial z}\right)^m f(x, y, z) = n(n - 1)\cdots(n - m + 1) f(x, y, z).
+\]
+\end{prob}
+
+\begin{prob}[M]{3316}
+若
+\[
+z = \sin y + f(\sin x - \sin y),
+\]
+其中 $f$ 为可微函数, 试简化表达式
+\[
+\sec x\frac{\partial z}{\partial x} + \sec y\frac{\partial z}{\partial y}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3317}
+证明: 函数
+\[
+z = x^n f\left(\frac{y}{x^2}\right)
+\]
+(其中 $f$ 为任意的可微函数) 满足方程
+\[
+x\frac{\partial z}{\partial x} + 2y\frac{\partial z}{\partial y} = nz.
+\]
+\end{prob}
+
+\begin{prob}[M]{3318}
+证明:
+\[
+z = y f(x^2 - y^2)
+\]
+(其中 $f$ 为任意的可微函数) 满足方程
+\[
+y^2\frac{\partial z}{\partial x} + xy\frac{\partial z}{\partial y} = xz.
+\]
+\end{prob}
+
+\begin{prob}[M]{3319}
+若
+\[
+u = \frac{1}{12}x^4 - \frac{1}{6}x^3(y + z) + \frac{1}{2}x^2 yz + f(y - x, z - x),
+\]
+其中 $f$ 为可微函数, 试简化表达式
+\[
+\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3320}
+设
+\[
+x^2 = vw, \quad y^2 = uw, \quad z^2 = uv,
+\]
+\[
+f(x, y, z) = F(u, v, w),
+\]
+证明:
+\[
+x f'_x + y f'_y + z f'_z = u F'_u + v F'_v + w F'_w.
+\]
+\end{prob}
+
+\probgroup{假定任意函数 $\varphi, \psi$ 等为足够多次可微的函数, 验证下列等式：}
+
+\begin{prob}[S]{3321}
+$y\frac{\partial z}{\partial x} - x\frac{\partial z}{\partial y} = 0$, 若 $z = \varphi(x^2 + y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3322}
+$x^2\frac{\partial z}{\partial x} - xy\frac{\partial z}{\partial y} + y^2 = 0$, 若 $z = \frac{y^2}{3x} + \varphi(xy)$.
+\end{prob}
+
+\begin{prob}[S]{3323}
+$(x^2 - y^2)\frac{\partial z}{\partial x} + xy\frac{\partial z}{\partial y} = xyz$, 若 $z = \mathrm{e}^y \varphi\left(y\mathrm{e}^{\frac{x^2}{2y^2}}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3324}
+$x\frac{\partial u}{\partial x} + \alpha y\frac{\partial u}{\partial y} + \beta z\frac{\partial u}{\partial z} = nu$, 若 $u = x^n \varphi\left(\frac{y}{x^\alpha}, \frac{z}{x^\beta}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3325}
+$x\frac{\partial u}{\partial x} + y\frac{\partial u}{\partial y} + z\frac{\partial u}{\partial z} = u + \frac{xy}{z}$, 若 $u = \frac{xy}{z}\ln x + x\varphi\left(\frac{y}{x}, \frac{z}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3326}
+$\frac{\partial^2 u}{\partial t^2} = a^2\frac{\partial^2 u}{\partial x^2}$, 若 $u = \varphi(x - at) + \psi(x + at)$.
+\end{prob}
+
+\begin{prob}[S]{3327}
+$\frac{\partial^2 u}{\partial x^2} - 2\frac{\partial^2 u}{\partial x\partial y} + \frac{\partial^2 u}{\partial y^2} = 0$, 若 $u = x\varphi(x + y) + y\psi(x + y)$.
+\end{prob}
+
+\begin{prob}[S]{3328}
+$x^2\frac{\partial^2 u}{\partial x^2} + 2xy\frac{\partial^2 u}{\partial x\partial y} + y^2\frac{\partial^2 u}{\partial y^2} = 0$, 若 $u = \varphi\left(\frac{y}{x}\right) + x\psi\left(\frac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3329}
+$x^2\frac{\partial^2 u}{\partial x^2} + 2xy\frac{\partial^2 u}{\partial x\partial y} + y^2\frac{\partial^2 u}{\partial y^2} = n(n - 1)u$, 若 $u = x^n\varphi\left(\frac{y}{x}\right) + x^{1 - n}\psi\left(\frac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3330}
+$\frac{\partial u}{\partial x}\frac{\partial^2 u}{\partial x\partial y} = \frac{\partial u}{\partial y}\frac{\partial^2 u}{\partial x^2}$, 若 $u = \varphi[x + \psi(y)]$.
+\end{prob}
+
+\probgroup{用逐次微分的方法消去任意函数 $\varphi$ 和 $\psi$：}
+
+\begin{prob}[S]{3331}
+$z = x + \varphi(xy)$.
+\end{prob}
+
+\begin{prob}[S]{3332}
+$z = x\varphi\left(\frac{x}{y^2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3333}
+$z = \varphi(\sqrt{x^2 + y^2})$.
+\end{prob}
+
+\begin{prob}[S]{3334}
+$u = \varphi(x - y, y - z)$.
+\end{prob}
+
+\begin{prob}[S]{3335}
+$u = \varphi\left(\frac{x}{y}, \frac{y}{x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3336}
+$z = \varphi(x) + \psi(y)$.
+\end{prob}
+
+\begin{prob}[S]{3337}
+$z = \varphi(x)\psi(y)$.
+\end{prob}
+
+\begin{prob}[S]{3338}
+$z = \varphi(x + y) + \psi(x - y)$.
+\end{prob}
+
+\begin{prob}[S]{3339}
+$z = x\varphi\left(\frac{x}{y}\right) + y\psi\left(\frac{x}{y}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3340}
+$z = \varphi(xy) + \psi\left(\frac{x}{y}\right)$.
+\end{prob}
+
+\begin{prob}[M]{3341}
+求函数
+\[
+z = x^2 - y^2
+\]
+在点 $M(1, 1)$ 沿与 $Ox$ 轴的正向组成角 $\alpha = 60^\circ$ 的方向 $l$ 的导数.
+\end{prob}
+
+\begin{prob}[L]{3342}
+求函数
+\[
+z = x^2 - xy + y^2
+\]
+在点 $M(1, 1)$ 沿与 $Ox$ 轴的正向组成 $\alpha$ 角的方向 $l$ 的导数. 在怎样的方向上此导数: (a) 有最大值; (b) 有最小值; (c) 等于 $0$.
+\end{prob}
+
+\begin{prob}[M]{3343}
+求函数
+\[
+z = \ln(x^2 + y^2)
+\]
+在点 $M(x_0, y_0)$ 沿与过此点的等值线垂直方向的导数.
+\end{prob}
+
+\begin{prob}[M]{3344}
+求函数
+\[
+z = 1 - \left(\frac{x^2}{a^2} + \frac{y^2}{b^2}\right)
+\]
+在点 $M\left(\frac{a}{\sqrt{2}}, \frac{b}{\sqrt{2}}\right)$ 沿曲线 $\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1$ 在此点的内法线方向的导数.
+\end{prob}
+
+\begin{prob}[M]{3345}
+求函数
+\[
+u = xyz
+\]
+在点 $M(1, 1, 1)$ 沿方向 $l\{\cos\alpha, \cos\beta, \cos\gamma\}$ 的导数. 函数在该点的梯度的大小是什么?
+\end{prob}
+
+\begin{prob}[M]{3346}
+求函数
+\[
+u = \frac{1}{r}
+\]
+(式中 $r = \sqrt{x^2 + y^2 + z^2}$) 在点 $M_0(x_0, y_0, z_0)$ 的梯度的大小和方向.
+\end{prob}
+
+\begin{prob}[M]{3347}
+求函数
+\[
+u = x^2 + y^2 - z^2
+\]
+在点 $A(\varepsilon, 0, 0)$ 及 $B(0, \varepsilon, 0)$ 二点的梯度之间的角度.
+\end{prob}
+
+\begin{prob}[M]{3348}
+函数
+\[
+u = x + y + z
+\]
+和
+\[
+v = x + y + z + 0.001\sin\left(10^6\pi\sqrt{x^2 + y^2 + z^2}\right)
+\]
+的梯度的大小相差多少?
+\end{prob}
+
+\begin{prob}[M]{3349}
+证明: 函数
+\[
+u = ax^2 + by^2 + cz^2
+\]
+和
+\[
+v = ax^2 + by^2 + cz^2 + 2mx + 2ny + 2pz
+\]
+($a, b, c, m, n, p$ 为常数且 $a^2 + b^2 + c^2 \neq 0$) 在点 $M_0(x_0, y_0, z_0)$ 的梯度之间的角度当点 $M_0$ 无限远移时趋于零.
+\end{prob}
+
+\begin{prob}[M]{3350}
+设 $u = f(x, y, z)$ 为二阶可微的函数. 若 $\cos\alpha, \cos\beta, \cos\gamma$ 为方向 $l$ 的方向余弦, 求 $\frac{\partial^2 u}{\partial l^2} = \frac{\partial}{\partial l}\left(\frac{\partial u}{\partial l}\right)$.
+\end{prob}
+
+\begin{prob}[M]{3351}
+设 $u = f(x, y, z)$ 为二阶可微的函数,
+\[
+l_1\{\cos\alpha_1, \cos\beta_1, \cos\gamma_1\}, \quad l_2\{\cos\alpha_2, \cos\beta_2, \cos\gamma_2\}, \quad l_3\{\cos\alpha_3, \cos\beta_3, \cos\gamma_3\}
+\]
+为三个互相垂直的方向. 证明:
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $\left(\frac{\partial u}{\partial l_1}\right)^2 + \left(\frac{\partial u}{\partial l_2}\right)^2 + \left(\frac{\partial u}{\partial l_3}\right)^2 = \left(\frac{\partial u}{\partial x}\right)^2 + \left(\frac{\partial u}{\partial y}\right)^2 + \left(\frac{\partial u}{\partial z}\right)^2$;
+\item $\frac{\partial^2 u}{\partial l_1^2} + \frac{\partial^2 u}{\partial l_2^2} + \frac{\partial^2 u}{\partial l_3^2} = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3352}
+设 $u = u(x, y)$ 为可微的函数, 且当 $y = x^2$ 时有
+\[
+u(x, y) = 1, \quad \frac{\partial u}{\partial x} = x,
+\]
+求当 $y = x^2$ 时的 $\frac{\partial u}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3353}
+设函数 $u = u(x, y)$ 满足方程
+\[
+\frac{\partial^2 u}{\partial x^2} - \frac{\partial^2 u}{\partial y^2} = 0,
+\]
+以及下列条件:
+\[
+u(x, 2x) = x, \quad u'_x(x, 2x) = x^2.
+\]
+求 $u''_{xx}(x, 2x), u''_{xy}(x, 2x), u''_{yy}(x, 2x)$.
+\end{prob}
+
+\probgroup{假设 $z = z(x, y)$, 解下列方程：}
+
+\begin{prob}[S]{3354}
+$\frac{\partial^2 z}{\partial x^2} = 0$.
+\end{prob}
+
+\begin{prob}[S]{3355}
+$\frac{\partial^2 z}{\partial x\partial y} = 0$.
+\end{prob}
+
+\begin{prob}[S]{3356}
+$\frac{\partial^n z}{\partial y^n} = 0$.
+\end{prob}
+
+\begin{prob}[S]{3357}
+假定 $u = u(x, y, z)$ 解方程
+\[
+\frac{\partial^3 u}{\partial x \partial y \partial z} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3358}
+求方程
+\[
+\frac{\partial z}{\partial y} = x^2 + 2y
+\]
+的解 $z = z(x, y)$，使它满足条件 $z(x, x^2) = 1$。
+\end{prob}
+
+\begin{prob}[M]{3359}
+求方程
+\[
+\frac{\partial^2 z}{\partial y^2} = 2
+\]
+的解 $z = z(x, y)$，使它满足条件 $z(x, 0) = 1$，$z'_y(x, 0) = x$。
+\end{prob}
+
+\begin{prob}[M]{3360}
+求方程
+\[
+\frac{\partial^2 z}{\partial x \partial y} = x + y
+\]
+的解 $z = z(x, y)$，使它满足条件 $z(x, 0) = x$，$z(0, y) = y^2$。
+\end{prob}
+
+\probsec{§3. 隐函数的微分法}
+
+\begin{prob}[M]{3361}
+证明：在每一点都不连续的狄利克雷函数
+\[
+y(x) = \begin{cases}
+1, & x\text{ 为有理数}, \\
+0, & x\text{ 为无理数}
+\end{cases}
+\]
+满足方程 $y^2 - y = 0$。
+\end{prob}
+
+\begin{prob}[M]{3362}
+设函数 $f(x)$ 定义于区间 $(a, b)$ 内。在怎样的情况下，方程
+\[
+f(x)y = 0
+\]
+在 $a < x < b$ 时有唯一连续的解 $y = 0$？
+\end{prob}
+
+\begin{prob}[M]{3363}
+设函数 $f(x)$ 和 $g(x)$ 在区间 $(a, b)$ 内有定义且连续。在怎样的情况下，方程
+\[
+f(x)y = g(x)
+\]
+在区间 $(a, b)$ 内有唯一连续的解？
+\end{prob}
+
+\begin{prob}[L]{3364}
+已知方程
+\[
+x^2 + y^2 = 1, \tag{1}
+\]
+设
+\[
+y = y(x) \quad (-1 \leqslant x \leqslant 1) \tag{2}
+\]
+为满足方程 (1) 的单值函数。
+\begin{enumerate}[label=\arabic*), itemsep=2pt, topsep=3pt]
+  \item 有多少单值函数 (2) 满足方程 (1)？
+  \item 有多少单值连续函数 (2) 满足方程 (1)？
+  \item 设：(a) $y(0) = 1$；(b) $y(1) = 0$，则有多少单值连续函数 (2) 满足方程 (1)？
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{3365}
+已知方程
+\[
+x^2 = y^2, \tag{1}
+\]
+设
+\[
+y = y(x) \quad (-\infty < x < +\infty) \tag{2}
+\]
+是满足方程 (1) 的单值函数。
+\begin{enumerate}[label=\arabic*), itemsep=2pt, topsep=3pt]
+  \item 有多少单值函数 (2) 满足方程 (1)？
+  \item 有多少单值连续函数 (2) 满足方程 (1)？
+  \item 有多少单值可微函数 (2) 满足方程 (1)？
+  \item 设：(a) $y(1) = 1$；(b) $y(0) = 0$，则有多少单值连续函数 (2) 满足方程 (1)？
+  \item 设 $y(1) = 1$，且 $\delta$ 为充分小的数，则有多少单值连续函数 $y = y(x)\ (1 - \delta < x < 1 + \delta)$ 满足方程 (1)？
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[L]{3366}
+方程
+\[
+x^2 + y^2 = x^4 + y^4
+\]
+定义出多值函数 $y(x)$。函数在怎样的区域内：1) 单值，2) 有二个值，3) 有三个值，4) 有四个值？求此函数的分支点及单值连续的各分支。
+\end{prob}
+
+\begin{prob}[M]{3367}
+求由方程
+\[
+(x^2 + y^2)^2 = x^2 - y^2
+\]
+定义的多值函数 $y$ 的分支点和单值连续的各分支 $y = y(x)\ (-1 \leqslant x \leqslant 1)$。
+\end{prob}
+
+\begin{prob}[L]{3368}
+设函数 $f(x)$ 当 $a < x < b$ 时连续，函数 $\varphi(y)$ 当 $c < y < d$ 时单调增加而且连续。在怎样的条件下，方程
+\[
+\varphi(y) = f(x)
+\]
+定义出单值函数
+\[
+y = \varphi^{-1}(f(x))?
+\]
+研究例子：(a) $\sin y + \sinh y = x$；\qquad (b) $\mathrm{e}^{-y} = -\sin^2 x$。
+\end{prob}
+
+\begin{prob}[M]{3369}
+设
+\[
+x = y + \varphi(y), \tag{1}
+\]
+其中 $\varphi(0) = 0$，且当 $-a < y < a$ 时 $|\varphi'(y)| \leqslant k < 1$。证明：当 $-\varepsilon < x < \varepsilon$ 时存在唯一的可微函数 $y = y(x)$ 满足方程 (1) 且 $y(0) = 0$。
+\end{prob}
+
+\begin{prob}[M]{3370}
+设 $y = y(x)$ 为由方程
+\[
+x = ky + \varphi(y)
+\]
+定义的隐函数，其中常数 $k \neq 0$，$\varphi(y)$ 为以 $\omega$ 为周期的周期函数，且 $|\varphi'(y)| < |k|$。证明：
+\[
+y = \frac{x}{k} + \psi(x),
+\]
+其中 $\psi(x)$ 为以 $|k|\omega$ 为周期的周期函数。
+\end{prob}
+
+\probgroup{对于由下列各方程定义的函数 $y$，求 $y'$ 和 $y''$：}
+
+\begin{prob}[S]{3371}
+$x^2 + 2xy - y^2 = a^2$。
+\end{prob}
+
+\begin{prob}[S]{3372}
+$\ln\sqrt{x^2 + y^2} = \arctan\dfrac{y}{x}$。
+\end{prob}
+
+\begin{prob}[S]{3373}
+$y - \varepsilon\sin y = x\ (0 < \varepsilon < 1)$。
+\end{prob}
+
+\begin{prob}[S]{3374}
+$x^y = y^x\ (x \neq y)$。
+\end{prob}
+
+\begin{prob}[S]{3375}
+$y = 2x\arctan\dfrac{y}{x}$。
+\end{prob}
+
+\begin{prob}[M]{3376}
+证明：若
+\[
+1 + xy = k(x - y),
+\]
+式中 $k$ 为常数，则成立等式
+\[
+\frac{\mathrm{d}x}{1 + x^2} = \frac{\mathrm{d}y}{1 + y^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3377}
+证明：若
+\[
+x^2 y^2 + x^2 + y^2 - 1 = 0,
+\]
+则当 $xy > 0$ 时成立等式
+\[
+\frac{\mathrm{d}x}{\sqrt{1 - x^4}} + \frac{\mathrm{d}y}{\sqrt{1 - y^4}} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3378}
+证明：方程
+\[
+(x^2 + y^2)^2 = a^2(x^2 - y^2) \quad (a \neq 0)
+\]
+在点 $x = 0, y = 0$ 的邻域中定义出两个可微函数：$y = y_1(x)$ 和 $y = y_2(x)$。求 $y_1'(0)$ 及 $y_2'(0)$。
+\end{prob}
+
+\begin{prob}[M]{3379}
+设
+\[
+(x^2 + y^2)^2 = 3x^2 y - y^3,
+\]
+求 $y'$ 当 $x = 0$ 和 $y = 0$ 时的值。
+\end{prob}
+
+\begin{prob}[S]{3380}
+设 $x^2 + xy + y^2 = 3$，求 $y', y''$ 及 $y'''$。
+\end{prob}
+
+\begin{prob}[M]{3381}
+设
+\[
+x^2 - xy + 2y^2 + x - y - 1 = 0,
+\]
+求 $y', y''$ 及 $y'''$ 当 $x = 0, y = 1$ 时的值。
+\end{prob}
+
+\begin{prob}[M]{3382}
+证明：对于二次曲线
+\[
+ax^2 + 2bxy + cy^2 + 2dx + 2ey + f = 0
+\]
+成立等式
+\[
+\frac{\mathrm{d}^3}{\mathrm{d}x^3}\left[(y'')^{-\frac{2}{3}}\right] = 0.
+\]
+\end{prob}
+
+\probgroup{求函数 $z = z(x, y)$ 的一阶和二阶偏导数，设：}
+
+\begin{prob}[S]{3383}
+$x^2 + y^2 + z^2 = a^2$。
+\end{prob}
+
+\begin{prob}[S]{3384}
+$z^3 - 3xyz = a^3$。
+\end{prob}
+
+\begin{prob}[S]{3385}
+$x + y + z = \mathrm{e}^z$。
+\end{prob}
+
+\begin{prob}[S]{3386}
+$z = \sqrt{x^2 - y^2}\cdot\tan\dfrac{x}{\sqrt{x^2 - y^2}}$。
+\end{prob}
+
+\begin{prob}[S]{3387}
+$x + y + z = \mathrm{e}^{-(x + y + z)}$。
+\end{prob}
+
+\begin{prob}[M]{3388}
+设
+\[
+x^2 + y^2 + z^2 - 3xyz = 0 \tag{1}
+\]
+且
+\[
+f(x, y, z) = xy^2 z^3.
+\]
+求 $f'_x(1, 1, 1)$，若：(a) $z = z(x, y)$ 是由方程 (1) 定义的隐函数，(b) 若 $y = y(x, z)$ 是由方程 (1) 定义的隐函数。说明为什么这些导数相异。
+\end{prob}
+
+\begin{prob}[M]{3389}
+设 $x^2 + 2y^2 + 3z^2 + xy - z - 9 = 0$，求 $\dfrac{\partial^2 z}{\partial x^2}, \dfrac{\partial^2 z}{\partial x \partial y}, \dfrac{\partial^2 z}{\partial y^2}$ 当 $x = 1, y = -2, z = 1$ 时的值。
+\end{prob}
+
+\probgroup{求 $\mathrm{d}z$ 和 $\mathrm{d}^2 z$，设}
+
+\begin{prob}[S]{3390}
+$\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$。
+\end{prob}
+
+\begin{prob}[S]{3391}
+$xyz = x + y + z$。
+\end{prob}
+
+\begin{prob}[S]{3392}
+$\dfrac{x}{z} = \ln\dfrac{z}{y} + 1$。
+\end{prob}
+
+\begin{prob}[S]{3393}
+$z = x + \arctan\dfrac{y}{z - x}$。
+\end{prob}
+
+\begin{prob}[S]{3394}
+设 $u^3 - 3(x + y)u^2 + z^3 = 0$，求 $\mathrm{d}u$。
+\end{prob}
+
+\begin{prob}[S]{3395}
+设 $F(x + y + z, x^2 + y^2 + z^2) = 0$，求 $\dfrac{\partial^2 z}{\partial x \partial y}$。
+\end{prob}
+
+\begin{prob}[S]{3396}
+设 $F(x - y, y - z, z - x) = 0$，求 $\dfrac{\partial z}{\partial x}$ 和 $\dfrac{\partial z}{\partial y}$。
+\end{prob}
+
+\begin{prob}[S]{3397}
+设 $F(x, x + y, x + y + z) = 0$，求 $\dfrac{\partial z}{\partial x}, \dfrac{\partial z}{\partial y}$ 和 $\dfrac{\partial^2 z}{\partial x^2}$。
+\end{prob}
+
+\begin{prob}[S]{3398.1}
+设 $F(xz, yz) = 0$，求 $\dfrac{\partial^2 z}{\partial x^2}$。
+\end{prob}
+
+\begin{prob}[M]{3398.2}
+设 (a) $F(x + z, y + z) = 0$；\qquad (b) $F\left(\dfrac{x}{z}, \dfrac{y}{z}\right) = 0$，求 $\mathrm{d}^2 z$。
+\end{prob}
+
+\begin{prob}[M]{3399}
+设 $z = z(x, y)$ 为由方程 $z^3 - xz + y = 0$ 定义的可微函数，且当 $x = 3, y = -2$ 时 $z = 2$。求 $\mathrm{d}z(3, -2)$ 和 $\mathrm{d}^2 z(3, -2)$。
+\end{prob}
+
+\begin{prob}[M]{3400}
+设 $x = x(y, z), y = y(x, z), z = z(x, y)$ 为由方程 $F(x, y, z) = 0$ 定义的函数。证明：
+\[
+\frac{\partial x}{\partial y}\frac{\partial y}{\partial z}\frac{\partial z}{\partial x} = -1.
+\]
+\end{prob}
+
+\begin{prob}[S]{3401}
+设 $x + y + z = 0, x^2 + y^2 + z^2 = 1$，求 $\dfrac{\mathrm{d}x}{\mathrm{d}z}$ 和 $\dfrac{\mathrm{d}y}{\mathrm{d}z}$。
+\end{prob}
+
+\begin{prob}[M]{3402}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+  \item 设 $x^2 + y^2 = \dfrac{1}{2}z^2, x + y + z = 2$，求 $\dfrac{\mathrm{d}x}{\mathrm{d}z}, \dfrac{\mathrm{d}y}{\mathrm{d}z}, \dfrac{\mathrm{d}^2 x}{\mathrm{d}z^2}$ 和 $\dfrac{\mathrm{d}^2 y}{\mathrm{d}z^2}$ 当 $x = 1, y = -1, z = 2$ 时的值。
+  \item 设 $xu - yv = 0, yu + xv = 1$，求 $\dfrac{\partial u}{\partial x}, \dfrac{\partial u}{\partial y}, \dfrac{\partial v}{\partial x}$ 和 $\dfrac{\partial v}{\partial y}$。
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3403}
+设由方程组
+\[
+\begin{cases}
+x\mathrm{e}^{u + v} + 2uv = 1, \\
+y\mathrm{e}^{u - v} - \dfrac{u}{1 + v} = 2x
+\end{cases}
+\]
+定义的可微函数 $u = u(x, y)$ 和 $v = v(x, y)$ 满足 $u(1, 2) = 0$ 和 $v(1, 2) = 0$，求 $\mathrm{d}u(1, 2)$ 和 $\mathrm{d}v(1, 2)$。
+\end{prob}
+
+\begin{prob}[S]{3404}
+设 $u + v = x + y,\quad \dfrac{\sin u}{\sin v} = \dfrac{x}{y}$，求 $\mathrm{d}u, \mathrm{d}v, \mathrm{d}^2 u$ 和 $\mathrm{d}^2 v$。
+\end{prob}
+
+\begin{prob}[M]{3405}
+设
+\[
+\mathrm{e}^{\frac{u}{x}}\cos\frac{v}{y} = \frac{x}{\sqrt{2}}, \quad \mathrm{e}^{\frac{u}{x}}\sin\frac{v}{y} = \frac{y}{\sqrt{2}},
+\]
+求 $\mathrm{d}u, \mathrm{d}v, \mathrm{d}^2 u$ 和 $\mathrm{d}^2 v$ 当 $x = 1, y = 1, u = 0, v = \dfrac{\pi}{4}$ 时的表达式。
+\end{prob}
+
+\begin{prob}[M]{3406}
+设
+\[
+x = t + t^{-1}, \quad y = t^2 + t^{-2}, \quad z = t^3 + t^{-3},
+\]
+求 $\frac{\mathrm{d}y}{\mathrm{d}x}, \frac{\mathrm{d}z}{\mathrm{d}x}, \frac{\mathrm{d}^2 y}{\mathrm{d}x^2}$ 和 $\frac{\mathrm{d}^2 z}{\mathrm{d}x^2}$.
+\end{prob}
+
+\begin{prob}[M]{3407}
+在 $Oxy$ 平面上怎样的区域内，方程组
+\[
+x = u + v, \quad y = u^2 + v^2, \quad z = u^3 + v^3
+\]
+（式中参数 $u$ 和 $v$ 取一切可能的实数值）定义 $z$ 为变量 $x$ 和 $y$ 的函数？求导数 $\frac{\partial z}{\partial x}$ 和 $\frac{\partial z}{\partial y}$.
+\end{prob}
+
+\begin{prob}[L]{3408}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 设
+\[
+\begin{cases}
+x = u + \ln v, \\
+y = v - \ln u, \\
+z = 2u + v,
+\end{cases}
+\]
+求 $\frac{\partial z}{\partial x}$ 和 $\frac{\partial x}{\partial y}$ 在点 $u = 1, v = 1$ 的值.
+\item 设
+\[
+\begin{cases}
+x = u + v^2, \\
+y = u^2 - v^3, \\
+z = 2uv,
+\end{cases}
+\]
+求 $\frac{\partial^2 x}{\partial x \partial y}$ 在点 $u = 2, v = 1$ 的值.
+\item 设 $x = \cos\varphi\cos\psi, y = \cos\varphi\sin\psi, z = \sin\varphi$，求 $\frac{\partial^2 z}{\partial x^2}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{3409}
+设 $x = u\cos v, y = u\sin v, z = v$，求 $\frac{\partial^2 z}{\partial x^2}, \frac{\partial^2 z}{\partial x\partial y}$ 及 $\frac{\partial^2 z}{\partial y^2}$.
+\end{prob}
+
+\begin{prob}[M]{3410}
+设函数 $z = z(x, y)$ 由方程组
+\[
+\begin{cases}
+x = \mathrm{e}^{u+v}, \\
+y = \mathrm{e}^{u-v}, \\
+z = uv
+\end{cases}
+\]
+（$u$ 及 $v$ 为参数）定义，求当 $u = 0$ 及 $v = 0$ 时的 $\mathrm{d}z$ 及 $\mathrm{d}^2 z$.
+\end{prob}
+
+\begin{prob}[S]{3411}
+设 $z = x^2 + y^2$，其中 $y = y(x)$ 为由方程 $x^2 - xy + y^2 = 1$ 定义的函数，求 $\frac{\mathrm{d}z}{\mathrm{d}x}$ 及 $\frac{\mathrm{d}^2 z}{\mathrm{d}x^2}$.
+\end{prob}
+
+\begin{prob}[S]{3412}
+设 $u = \frac{x+z}{y+z}$，其中 $z$ 为由方程 $z\mathrm{e}^z = x\mathrm{e}^x + y\mathrm{e}^y$ 定义的函数，求 $\frac{\partial u}{\partial x}$ 及 $\frac{\partial u}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3413}
+设方程
+\[
+x = \varphi(u, v), \quad y = \psi(u, v), \quad z = \chi(u, v)
+\]
+定义 $z$ 为 $x$ 和 $y$ 的函数. 求 $\frac{\partial z}{\partial x}$ 和 $\frac{\partial z}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3414}
+设
+\[
+x = \varphi(u, v), \quad y = \psi(u, v),
+\]
+求反函数 $u = u(x, y)$ 和 $v = v(x, y)$ 的一阶和二阶偏导数.
+\end{prob}
+
+\begin{prob}[M]{3415}
+设 (a) $x = u\cos\frac{v}{u}, y = u\sin\frac{v}{u}$；\qquad (b) $x = \mathrm{e}^u + u\sin v, y = \mathrm{e}^u - u\cos v$，求 $\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}, \frac{\partial v}{\partial x}, \frac{\partial v}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3416}
+函数 $u = u(x)$ 由方程组
+\[
+\begin{cases}
+u = f(x, y, z), \\
+g(x, y, z) = 0, \\
+h(x, y, z) = 0
+\end{cases}
+\]
+定义，求 $\frac{\mathrm{d}u}{\mathrm{d}x}$ 和 $\frac{\mathrm{d}^2 u}{\mathrm{d}x^2}$.
+\end{prob}
+
+\begin{prob}[M]{3417}
+函数 $u = u(x, y)$ 由方程组
+\[
+\begin{cases}
+u = f(x, y, z, t), \\
+g(y, z, t) = 0, \\
+h(z, t) = 0
+\end{cases}
+\]
+定义，求 $\frac{\partial u}{\partial x}$ 和 $\frac{\partial u}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3418}
+设
+\[
+x = f(u, v, w), \quad y = g(u, v, w), \quad z = h(u, v, w),
+\]
+求 $\frac{\partial u}{\partial x}, \frac{\partial u}{\partial y}$ 和 $\frac{\partial u}{\partial z}$.
+\end{prob}
+
+\begin{prob}[M]{3419}
+设函数 $z = z(x, y)$ 满足方程组
+\[
+\begin{cases}
+f(x, y, z, t) = 0, \\
+g(x, y, z, t) = 0,
+\end{cases}
+\]
+式中 $t$ 为参变量，求 $\mathrm{d}z$.
+\end{prob}
+
+\begin{prob}[L]{3420}
+设 $u = f(z)$，其中 $z = z(x, y)$ 为由方程 $z = x + y\varphi(z)$ 定义的隐函数. 证明拉格朗日公式：
+\[
+\frac{\partial^n u}{\partial y^n} = \frac{\partial^{n-1}}{\partial x^{n-1}}\left\{[\varphi(z)]^n \frac{\partial u}{\partial x}\right\}.
+\]
+\probhint{对 $n = 1$ 证明公式并运用数学归纳法.}
+\end{prob}
+
+\begin{prob}[M]{3421}
+证明：由方程
+\[
+\Phi(x - az, y - bz) = 0 \qquad (1)
+\]
+（其中 $\Phi(u, v)$ 是变量 $u, v$ 的任意可微函数，$a$ 和 $b$ 为常数）定义的函数 $z = z(x, y)$ 为方程
+\[
+a\frac{\partial z}{\partial x} + b\frac{\partial z}{\partial y} = 1
+\]
+的解. 说明曲面 $(1)$ 的几何性质.
+\end{prob}
+
+\begin{prob}[M]{3422}
+证明：由方程
+\[
+\Phi\left(\frac{x - x_0}{z - z_0}, \frac{y - y_0}{z - z_0}\right) = 0 \qquad (2)
+\]
+（其中 $\Phi(u, v)$ 是变量 $u$ 和 $v$ 的任意可微函数）定义的函数 $z = z(x, y)$ 满足方程
+\[
+(x - x_0)\frac{\partial z}{\partial x} + (y - y_0)\frac{\partial z}{\partial y} = z - z_0.
+\]
+说明曲面 $(2)$ 的几何性质.
+\end{prob}
+
+\begin{prob}[M]{3423}
+证明：由方程
+\[
+ax + by + cz = \Phi(x^2 + y^2 + z^2) \qquad (3)
+\]
+（其中 $\Phi(u)$ 是变量 $u$ 的任意可微函数，$a, b$ 和 $c$ 为常数）定义的函数 $z = z(x, y)$ 满足方程
+\[
+(cy - bz)\frac{\partial z}{\partial x} + (az - cx)\frac{\partial z}{\partial y} = bx - ay.
+\]
+说明曲面 $(3)$ 的几何性质.
+\end{prob}
+
+\begin{prob}[M]{3424}
+函数 $z = z(x, y)$ 由方程
+\[
+x^2 + y^2 + z^2 = yf\left(\frac{z}{y}\right)
+\]
+给出，证明：
+\[
+(x^2 - y^2 - z^2)\frac{\partial z}{\partial x} + 2xy\frac{\partial z}{\partial y} = 2xz.
+\]
+\end{prob}
+
+\begin{prob}[M]{3425}
+函数 $z = z(x, y)$ 由方程
+\[
+F(x + zy^{-1}, y + zx^{-1}) = 0
+\]
+给出. 证明：
+\[
+x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = z - xy.
+\]
+\end{prob}
+
+\begin{prob}[M]{3426}
+证明：由方程组
+\[
+\begin{cases}
+x\cos\alpha + y\sin\alpha + \ln z = f(\alpha), \\
+-x\sin\alpha + y\cos\alpha = f'(\alpha)
+\end{cases}
+\]
+（其中 $\alpha = \alpha(x, y)$ 为参变量，$f(\alpha)$ 为任意可微函数）定义的函数 $z = z(x, y)$ 满足方程
+\[
+\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2 = z^2.
+\]
+\end{prob}
+
+\begin{prob}[M]{3427}
+证明：由方程组
+\[
+\begin{cases}
+z = \alpha x + \dfrac{y}{\alpha} + f(\alpha), \\
+0 = x - \dfrac{y}{\alpha^2} + f'(\alpha)
+\end{cases}
+\]
+给出的函数 $z = z(x, y)$ 满足方程
+\[
+\frac{\partial z}{\partial x}\frac{\partial z}{\partial y} = 1.
+\]
+\end{prob}
+
+\begin{prob}[M]{3428}
+证明：由方程组
+\[
+\begin{cases}
+[z - f(\alpha)]^2 = x^2(y^2 - \alpha^2), \\
+[z - f(\alpha)] f'(\alpha) = \alpha x^2
+\end{cases}
+\]
+给出的函数 $z = z(x, y)$ 满足方程
+\[
+\frac{\partial z}{\partial x}\frac{\partial z}{\partial y} = xy.
+\]
+\end{prob}
+
+\begin{prob}[M]{3429}
+证明：由方程组
+\[
+\begin{cases}
+z = \alpha x + y\varphi(\alpha) + \psi(\alpha), \\
+0 = x + y\varphi'(\alpha) + \psi'(\alpha)
+\end{cases}
+\]
+给出的函数 $z = z(x, y)$ 满足方程
+\[
+\frac{\partial^2 z}{\partial x^2}\frac{\partial^2 z}{\partial y^2} - \left(\frac{\partial^2 z}{\partial x\partial y}\right)^2 = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3430}
+证明：由方程
+\[
+y = x\varphi(z) + \psi(z)
+\]
+定义的隐函数 $z = z(x, y)$ 满足方程
+\[
+\left(\frac{\partial z}{\partial y}\right)^2 \frac{\partial^2 z}{\partial x^2} - 2\frac{\partial z}{\partial x}\frac{\partial z}{\partial y}\frac{\partial^2 z}{\partial x\partial y} + \left(\frac{\partial z}{\partial x}\right)^2 \frac{\partial^2 z}{\partial y^2} = 0.
+\]
+\end{prob}
+
+\probsec{§4. 变量代换}
+
+\begin{prob}[S]{3431}
+把 $y$ 看作新的自变量，变换方程
+\[
+y'y''' - 3y''^2 = x.
+\]
+\end{prob}
+
+\begin{prob}[S]{3432}
+用同样的方法变换方程
+\[
+y'^2 y^{(4)} - 10y'y''y''' + 15y''^3 = 0.
+\]
+\end{prob}
+
+\begin{prob}[S]{3433}
+把 $x$ 看作函数，把 $t = xy$ 看作自变量，变换方程
+\[
+y'' + \frac{2}{x}y' + y = 0.
+\]
+\end{prob}
+
+\probgroup{引入新变量，变换下列常微分方程：}
+
+\begin{prob}[S]{3434}
+$x^2 y'' + xy' + y = 0$，若 $x = \mathrm{e}^t$.
+\end{prob}
+
+\begin{prob}[S]{3435}
+$y''' = \frac{6y}{x^3}$，若 $t = \ln |x|$.
+\end{prob}
+
+\begin{prob}[S]{3436}
+$(1 - x^2)y'' - xy' + n^2 y = 0$，若 $x = \cos t$.
+\end{prob}
+
+\begin{prob}[S]{3437}
+$y'' + y'\tanh x + \frac{m^2}{\cosh^2 x}y = 0$，若 $x = \ln\tan\frac{t}{2}$.
+\end{prob}
+
+\begin{prob}[S]{3438}
+$y'' + p(x)y' + q(x)y = 0$，若 $y = u\mathrm{e}^{-\frac{1}{2}\int_{x_0}^x p(\xi)\,\mathrm{d}\xi}$，其中 $p(x) \in C^{(1)}$.
+\end{prob}
+
+\begin{prob}[S]{3439}
+$x^4 y'' + xyy' - 2y^2 = 0$，若 $x = \mathrm{e}^t, y = u\mathrm{e}^{2t}$，其中 $u = u(t)$.
+\end{prob}
+
+\begin{prob}[S]{3440}
+$(1 + x^2)^2 y'' = y$，若 $x = \tan t, y = \frac{u}{\cos t}$，其中 $u = u(t)$.
+\end{prob}
+
+\begin{prob}[S]{3441}
+$(1 - x^2)^2 y'' = -y$，若 $x = \tanh t, y = \frac{u}{\cosh t}$，其中 $u = u(t)$.
+\end{prob}
+
+\begin{prob}[S]{3442}
+$y'' + (x + y)(1 + y')^3 = 0$，若 $x = u + t, y = u - t$，其中 $u = u(t)$.
+\end{prob}
+
+\begin{prob}[S]{3443}
+$y''' - x^3 y'' + xy' - y = 0$，若 $x = \frac{1}{t}, y = \frac{u}{t}$，其中 $u = u(t)$.
+\end{prob}
+
+\begin{prob}[M]{3444}
+令
+\[
+u = \frac{y}{x - b}, \quad t = \ln\left|\frac{x - a}{x - b}\right|,
+\]
+并把 $u$ 看作变量 $t$ 的函数，以变换斯托克斯方程
+\[
+y'' = \frac{Ay}{(x - a)^2 (x - b)^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3445}
+证明：若方程
+\[
+\frac{\mathrm{d}^2 y}{\mathrm{d}x^2} + p(x)\frac{\mathrm{d}y}{\mathrm{d}x} + q(x)y = 0
+\]
+由代换 $x = \varphi(\xi)$ 变换为方程
+\[
+\frac{\mathrm{d}^2 y}{\mathrm{d}\xi^2} + P(\xi)\frac{\mathrm{d}y}{\mathrm{d}\xi} + Q(\xi)y = 0,
+\]
+即
+\[
+[2P(\xi)Q(\xi) + Q'(\xi)][Q(\xi)]^{-\frac{3}{2}} = [2p(x)q(x) + q'(x)][q(x)]^{-\frac{3}{2}}.
+\]
+\end{prob}
+
+\begin{prob}[S]{3446}
+在方程
+\[
+\Phi(y, y', y'') = 0
+\]
+（其中 $\Phi$ 为变量 $y, y', y''$ 的齐次函数）中令 $y = \mathrm{e}^{\int_{x_0}^x u\,\mathrm{d}x}$.
+\end{prob}
+
+\begin{prob}[M]{3447}
+在方程
+\[
+F(x^2 y'', xy', y) = 0
+\]
+(其中 $F$ 为其自变量的齐次函数) 中令 $u = x\frac{y'}{y}$.
+\end{prob}
+
+\begin{prob}[L]{3448}
+证明: 方程 $y'''(1+y'^2)-3y'y''^2=0$ 的形式在单应变换
+\[
+x = \frac{a_1\xi+b_1\eta+c_1}{a\xi+b\eta+c}, \quad y = \frac{a_2\xi+b_2\eta+c_2}{a\xi+b\eta+c}
+\]
+下保持不变.
+\probhint{该变换是由以下最简单的变换构成的:
+\[
+x = \alpha X + \beta Y + \gamma, \quad y = Y;
+\]
+\[
+X = \frac{1}{X_1}, \quad Y = \frac{Y_1}{X_1};
+\]
+\[
+X_1 = a\xi + b\eta + c, \quad Y_1 = a_2\xi + b_2\eta + c_2.
+\]}
+\end{prob}
+
+\begin{prob}[M]{3449}
+证明: 施瓦茨函数
+\[
+S[x(t)] = \frac{x'''(t)}{x'(t)} - \frac{3}{2}\left[\frac{x''(t)}{x'(t)}\right]^2
+\]
+的值在分式线性变换
+\[
+y = \frac{ax(t)+b}{cx(t)+d} \quad (ad - bc \neq 0)
+\]
+下保持不变.
+\end{prob}
+
+\probgroup{令 $x = r\cos\varphi, y = r\sin\varphi$, 写出下列方程在极坐标 $r, \varphi$ 下的形式:}
+
+\begin{prob}[S]{3450}
+$\frac{\mathrm{d}y}{\mathrm{d}x} = \frac{x+y}{x-y}$.
+\end{prob}
+
+\begin{prob}[S]{3451}
+$(xy'-y)^2 = 2xy(1+y'^2)$.
+\end{prob}
+
+\begin{prob}[S]{3452}
+$(x^2+y^2)^2 y'' = (x+yy')^3$.
+\end{prob}
+
+\begin{prob}[S]{3453}
+写出表达式 $\frac{x+yy'}{xy'-y}$ 在极坐标下的形式.
+\end{prob}
+
+\begin{prob}[M]{3454}
+把平面曲线的曲率
+\[
+K = \frac{|y''_{xx}|}{(1+y'^2_x)^{\frac{3}{2}}}
+\]
+用极坐标 $r$ 和 $\varphi$ 表示出来.
+\end{prob}
+
+\begin{prob}[M]{3455}
+写出方程组
+\[
+\frac{\mathrm{d}x}{\mathrm{d}t} = y + kx(x^2+y^2), \quad \frac{\mathrm{d}y}{\mathrm{d}t} = -x + ky(x^2+y^2)
+\]
+在极坐标下的形式.
+\end{prob}
+
+\begin{prob}[M]{3456}
+引入新函数 $r = \sqrt{x^2+y^2}, \varphi = \arctan\frac{y}{x}$, 以便变换表达式
+\[
+W = x\frac{\mathrm{d}^2 y}{\mathrm{d}t^2} - y\frac{\mathrm{d}^2 x}{\mathrm{d}t^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3457}
+在勒让德变换中, 曲线 $y=y(x)$ 的每一点 $(x, y)$ 对应于点 $(X, Y)$, 其中
+\[
+X = y', \quad Y = xy' - y.
+\]
+求 $Y', Y''$ 及 $Y'''$.
+\end{prob}
+
+\probgroup{引入新变量 $\xi$ 及 $\eta$, 解下列方程:}
+
+\begin{prob}[S]{3458}
+$\frac{\partial z}{\partial x} = \frac{\partial z}{\partial y}$, 令 $\xi = x+y$ 和 $\eta = x-y$.
+\end{prob}
+
+\begin{prob}[S]{3459}
+$y\frac{\partial z}{\partial x} - x\frac{\partial z}{\partial y} = 0$, 令 $\xi = x, \eta = x^2+y^2$.
+\end{prob}
+
+\begin{prob}[S]{3460}
+$a\frac{\partial z}{\partial x} + b\frac{\partial z}{\partial y} = 1$ ($a \neq 0$), 令 $\xi = x, \eta = y - bz$.
+\end{prob}
+
+\begin{prob}[S]{3461}
+$x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = z$, 令 $\xi = x$ 及 $\eta = \frac{y}{x}$.
+\end{prob}
+
+\probgroup{把 $u$ 与 $v$ 看作新的自变量, 变换下列方程:}
+
+\begin{prob}[S]{3462}
+$x\frac{\partial z}{\partial x} + \sqrt{1+y^2}\frac{\partial z}{\partial y} = xy$, 若 $u = \ln x, v = \ln(y+\sqrt{1+y^2})$.
+\end{prob}
+
+\begin{prob}[S]{3463}
+$(x+y)\frac{\partial z}{\partial x} - (x-y)\frac{\partial z}{\partial y} = 0$, 若 $u = \ln\sqrt{x^2+y^2}, v = \arctan\frac{y}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3464}
+$x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = z + \sqrt{x^2+y^2+z^2}$, 若 $u = \frac{y}{x}, v = z + \sqrt{x^2+y^2+z^2}$.
+\end{prob}
+
+\begin{prob}[S]{3465}
+$x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = \frac{x}{z}$, 若 $u = 2x - z^2, v = \frac{y}{z}$.
+\end{prob}
+
+\begin{prob}[S]{3466}
+$(x+z)\frac{\partial z}{\partial x} + (y+z)\frac{\partial z}{\partial y} = x+y+z$, 若 $u = x+z, v = y+z$.
+\end{prob}
+
+\begin{prob}[M]{3467}
+取
+\[
+\xi = y + z\mathrm{e}^{-x}, \quad \eta = x + z\mathrm{e}^{-y}
+\]
+作为新的自变量, 变换表达式
+\[
+(z+\mathrm{e}^x)\frac{\partial z}{\partial x} + (z+\mathrm{e}^y)\frac{\partial z}{\partial y} - (z^2 - \mathrm{e}^{x+y}).
+\]
+\end{prob}
+
+\begin{prob}[M]{3468}
+令
+\[
+x = uv, \quad y = \frac{1}{2}(u^2 - v^2),
+\]
+变换表达式
+\[
+\left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2.
+\]
+\end{prob}
+
+\begin{prob}[M]{3469}
+令 $\xi = x, \eta = y - x, \zeta = z - x$, 变换方程
+\[
+\frac{\partial u}{\partial x} + \frac{\partial u}{\partial y} + \frac{\partial u}{\partial z} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3470}
+取 $x$ 作为函数, 而 $y$ 和 $z$ 作为自变量, 变换方程
+\[
+(x-z)\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3471}
+取 $x$ 作为函数, 而 $u = y-z, v = y+z$ 作为自变量, 变换方程
+\[
+(y-z)\frac{\partial z}{\partial x} + (y+z)\frac{\partial z}{\partial y} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3472}
+取 $x$ 作为函数, 而 $u = xz, v = yz$ 作为自变量, 变换表达式
+\[
+A = \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2.
+\]
+\end{prob}
+
+\begin{prob}[M]{3473}
+令 $\mathrm{e}^{\xi} = x - u, \mathrm{e}^{\eta} = y - u, \mathrm{e}^{\zeta} = z - u$, 变换方程
+\[
+(y+z+u)\frac{\partial u}{\partial x} + (x+z+u)\frac{\partial u}{\partial y} + (x+y+u)\frac{\partial u}{\partial z} = x+y+z.
+\]
+\end{prob}
+
+\probgroup{在下列方程中, 代入新的变量 $u, v, w$, 其中 $w = w(u, v)$:}
+
+\begin{prob}[S]{3474}
+$y\frac{\partial z}{\partial x} - x\frac{\partial z}{\partial y} = (y-x)z$, 令 $u = x^2+y^2, v = \frac{1}{x} + \frac{1}{y}, w = \ln z - (x+y)$.
+\end{prob}
+
+\begin{prob}[S]{3475}
+$x^2\frac{\partial z}{\partial x} + y^2\frac{\partial z}{\partial y} = z^2$, 令 $u = x, v = \frac{1}{y} - \frac{1}{x}, w = \frac{1}{z} - \frac{1}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3476}
+$(xy+z)\frac{\partial z}{\partial x} + (1-y^2)\frac{\partial z}{\partial y} = x+yz$, 令 $u = yz-x, v = xz-y, w = xy-z$.
+\end{prob}
+
+\begin{prob}[S]{3477}
+$\left(x\frac{\partial z}{\partial x}\right)^2 + \left(y\frac{\partial z}{\partial y}\right)^2 = z^2 \frac{\partial z}{\partial x}\cdot\frac{\partial z}{\partial y}$, 令 $x = u\mathrm{e}^w, y = v\mathrm{e}^w, z = w\mathrm{e}^w$.
+\end{prob}
+
+\begin{prob}[M]{3478}
+令 $u = \ln\sqrt{x^2+y^2}, v = \arctan z, w = x+y+z$, 其中 $w = w(u, v)$, 变换表达式
+\[
+\frac{x-y}{\dfrac{\partial z}{\partial x} - \dfrac{\partial z}{\partial y}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3479}
+令 $u = x\mathrm{e}^z, v = y\mathrm{e}^z, w = z\mathrm{e}^z$, 其中 $w = w(u, v)$, 变换表达式
+\[
+A = \frac{\dfrac{\partial z}{\partial x}}{\dfrac{\partial z}{\partial y}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3480}
+令 $\xi = \frac{x}{z}, \eta = \frac{y}{z}, \zeta = z, w = \frac{u}{z}$, 其中 $w = w(\xi, \eta, \zeta)$, 变换方程
+\[
+x\frac{\partial u}{\partial x} + y\frac{\partial u}{\partial y} + z\frac{\partial u}{\partial z} = u + \frac{xy}{z}.
+\]
+\end{prob}
+
+\probgroup{令 $x = r\cos\varphi, y = r\sin\varphi$, 写出下列各式在极坐标 $r$ 和 $\varphi$ 下的形式:}
+
+\begin{prob}[S]{3481}
+$w = x\frac{\partial u}{\partial y} - y\frac{\partial u}{\partial x}$.
+\end{prob}
+
+\begin{prob}[S]{3482}
+$w = x\frac{\partial u}{\partial x} + y\frac{\partial u}{\partial y}$.
+\end{prob}
+
+\begin{prob}[S]{3483}
+$w = \left(\frac{\partial u}{\partial x}\right)^2 + \left(\frac{\partial u}{\partial y}\right)^2$.
+\end{prob}
+
+\begin{prob}[S]{3484}
+$w = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3485}
+$w = x^2\frac{\partial^2 u}{\partial x^2} + 2xy\frac{\partial^2 u}{\partial x\partial y} + y^2\frac{\partial^2 u}{\partial y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3486}
+$w = y^2\frac{\partial^2 z}{\partial x^2} - 2xy\frac{\partial^2 z}{\partial x\partial y} + x^2\frac{\partial^2 z}{\partial y^2} - \left(x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y}\right)$.
+\end{prob}
+
+\begin{prob}[M]{3487}
+令 $x = r\cos\varphi, y = r\sin\varphi$, 变换表达式
+\[
+I = \frac{\partial u}{\partial x}\frac{\partial v}{\partial y} - \frac{\partial u}{\partial y}\frac{\partial v}{\partial x}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3488}
+引入新的自变量
+\[
+\xi = x - at, \quad \eta = x + at,
+\]
+解方程
+\[
+\frac{\partial^2 u}{\partial t^2} = a^2\frac{\partial^2 u}{\partial x^2}.
+\]
+\end{prob}
+
+\probgroup{取 $u$ 及 $v$ 作新的自变量, 变换下列方程:}
+
+\begin{prob}[S]{3489}
+$2\frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial x\partial y} - \frac{\partial^2 z}{\partial y^2} + \frac{\partial z}{\partial x} + \frac{\partial z}{\partial y} = 0$, 设 $u = x + 2y + 2$ 及 $v = x - y - 1$.
+\end{prob}
+
+\begin{prob}[S]{3490}
+$(1+x^2)\frac{\partial^2 z}{\partial x^2} + (1+y^2)\frac{\partial^2 z}{\partial y^2} + x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} = 0$, 设 $u = \ln(x+\sqrt{1+x^2})$ 及 $v = \ln(y+\sqrt{1+y^2})$.
+\end{prob}
+
+\begin{prob}[S]{3491}
+$ax^2\frac{\partial^2 z}{\partial x^2} + 2bxy\frac{\partial^2 z}{\partial x\partial y} + cy^2\frac{\partial^2 z}{\partial y^2} = 0$ ($a, b, c$ 为常数), 设 $u = \ln x, v = \ln y$.
+\end{prob}
+
+\begin{prob}[S]{3492}
+$\frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial y^2} = 0$, 设 $u = \frac{x}{x^2+y^2}, v = -\frac{y}{x^2+y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3493}
+$\frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial y^2} + m^2 z = 0$, 设 $x = \mathrm{e}^u\cos v, y = \mathrm{e}^u\sin v$.
+\end{prob}
+
+\begin{prob}[S]{3494}
+$\frac{\partial^2 z}{\partial x^2} - y\frac{\partial^2 z}{\partial y^2} = \frac{1}{2}\frac{\partial z}{\partial y}$ ($y > 0$), 设 $u = x - 2\sqrt{y}$ 及 $v = x + 2\sqrt{y}$.
+\end{prob}
+
+\begin{prob}[S]{3495}
+$x^2\frac{\partial^2 z}{\partial x^2} - y^2\frac{\partial^2 z}{\partial y^2} = 0$, 设 $u = xy, v = \frac{x}{y}$.
+\end{prob}
+
+\begin{prob}[S]{3496}
+$x^2\frac{\partial^2 z}{\partial x^2} - (x^2+y^2)\frac{\partial^2 z}{\partial x\partial y} + y^2\frac{\partial^2 z}{\partial y^2} = 0$, 设 $u = x+y, v = \frac{1}{x} + \frac{1}{y}$.
+\end{prob}
+
+\begin{prob}[S]{3497}
+$xy\frac{\partial^2 z}{\partial x^2} - (x^2+y^2)\frac{\partial^2 z}{\partial x\partial y} + xy\frac{\partial^2 z}{\partial y^2} + y\frac{\partial z}{\partial x} + x\frac{\partial z}{\partial y} = 0$, 设 $u = \frac{1}{2}(x^2+y^2), v = xy$.
+\end{prob}
+
+\begin{prob}[S]{3498}
+$x^2\frac{\partial^2 z}{\partial x^2} - 2x\sin y\frac{\partial^2 z}{\partial x\partial y} + \sin^2 y\frac{\partial^2 z}{\partial y^2} = 0$, 设 $u = x\tan\frac{y}{2}, v = x$.
+\end{prob}
+
+\begin{prob}[S]{3499}
+$x\frac{\partial^2 z}{\partial x^2} - y\frac{\partial^2 z}{\partial y^2} = 0$ ($x > 0, y > 0$), 设 $x = (u+v)^2$ 及 $y = (u-v)^2$.
+\end{prob}
+
+\begin{prob}[S]{3500}
+$\frac{\partial^2 z}{\partial x\partial y} = \left(1+\frac{\partial z}{\partial y}\right)^3$, 设 $u = x$ 及 $v = y+z$.
+\end{prob}
+
+\begin{prob}[M]{3501}
+利用线性变换
+\[
+\xi = x + \lambda_1 y, \quad \eta = x + \lambda_2 y,
+\]
+把方程
+\[
+A\frac{\partial^2 u}{\partial x^2} + 2B\frac{\partial^2 u}{\partial x\partial y} + C\frac{\partial^2 u}{\partial y^2} = 0 \tag{1}
+\]
+(其中 $A, B$ 和 $C$ 为常数, 且 $AC - B^2 < 0$) 变换为以下形式:
+\[
+\frac{\partial^2 u}{\partial\xi\partial\eta} = 0.
+\]
+求满足方程 (1) 的函数的一般形式.
+\end{prob}
+
+\begin{prob}[M]{3502}
+证明: 拉普拉斯方程
+\[
+\Delta z \equiv \frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial y^2} = 0
+\]
+的形式在满足条件
+\[
+\frac{\partial \varphi}{\partial u} = \frac{\partial \psi}{\partial v}, \quad \frac{\partial \varphi}{\partial v} = -\frac{\partial \psi}{\partial u}
+\]
+的任何非退化变换
+\[
+x = \varphi(u, v), \quad y = \psi(u, v)
+\]
+下保持不变.
+\end{prob}
+
+\begin{prob}[M]{3503}
+令 $u = f(r)$, 其中 $r = \sqrt{x^2+y^2}$, 变换方程:
+
+(a) $\Delta u \equiv \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} = 0$; \qquad (b) $\Delta(\Delta u) = 0$.
+\end{prob}
+
+\begin{prob}[M]{3504}
+若令
+\[
+w = f(u)
+\]
+其中 $u = (x-x_0)(y-y_0)$, 则方程
+\[
+\frac{\partial^2 w}{\partial x\partial y} + cw = 0
+\]
+化为何种形式?
+\end{prob}
+
+\begin{prob}[M]{3505}
+令
+\[
+x+y = X, \quad y = XY,
+\]
+变换表达式
+\[
+A = x\frac{\partial^2 u}{\partial x^2} + y\frac{\partial^2 u}{\partial x\partial y} + \frac{\partial u}{\partial x}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3506}
+证明: 方程
+\[
+\frac{\partial^2 z}{\partial x^2} + 2xy^2\frac{\partial z}{\partial x} + 2(y-y^3)\frac{\partial z}{\partial y} + x^2 y^2 z = 0
+\]
+的形式在变换
+\[
+x = uv, \quad y = \frac{1}{v}
+\]
+下保持不变.
+\end{prob}
+
+\begin{prob}[M]{3507}
+证明: 方程
+\[
+\frac{\partial^2 z}{\partial x^2} + 2\frac{\partial^2 z}{\partial x\partial y} + \frac{\partial^2 z}{\partial y^2} = 0
+\]
+的形式在变换
+\[
+u = x+z, \quad v = y+z
+\]
+下保持不变.
+\end{prob}
+
+\begin{prob}[M]{3508}
+令
+\[
+x = \eta\zeta, \quad y = \xi\zeta, \quad z = \xi\eta,
+\]
+变换方程
+\[
+xy\frac{\partial^2 u}{\partial x\partial y} + yz\frac{\partial^2 u}{\partial y\partial z} + xz\frac{\partial^2 u}{\partial x\partial z} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3509}
+令
+\[
+y_1 = x_2+x_3-x_1, \quad y_2 = x_1+x_3-x_2, \quad y_3 = x_1+x_2-x_3,
+\]
+变换方程
+\[
+\frac{\partial^2 z}{\partial x_1^2} + \frac{\partial^2 z}{\partial x_2^2} + \frac{\partial^2 z}{\partial x_3^2} + \frac{\partial^2 z}{\partial x_1\partial x_2} + \frac{\partial^2 z}{\partial x_1\partial x_3} + \frac{\partial^2 z}{\partial x_2\partial x_3} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3510}
+令
+\[
+\xi = \frac{y}{x}, \quad \eta = \frac{z}{x}, \quad \zeta = y - z,
+\]
+变换方程
+\[
+x^2\frac{\partial^2 u}{\partial x^2} + y^2\frac{\partial^2 u}{\partial y^2} + z^2\frac{\partial^2 u}{\partial z^2} + 2xy\frac{\partial^2 u}{\partial x\partial y} + 2xz\frac{\partial^2 u}{\partial x\partial z} + 2yz\frac{\partial^2 u}{\partial y\partial z} = 0.
+\]
+\probhint{把方程写为 $A^2 u - Au = 0$ 的形式，其中
+\[
+A = x\frac{\partial}{\partial x} + y\frac{\partial}{\partial y} + z\frac{\partial}{\partial z}.
+\]}
+\end{prob}
+
+\begin{prob}[M]{3511}
+令
+\[
+x = r\sin\theta\cos\varphi, \quad y = r\sin\theta\sin\varphi, \quad z = r\cos\theta,
+\]
+把表达式
+\[
+\Delta_1 u = \left(\frac{\partial u}{\partial x}\right)^2 + \left(\frac{\partial u}{\partial y}\right)^2 + \left(\frac{\partial u}{\partial z}\right)^2, \quad \Delta_2 u = \frac{\partial^2 u}{\partial x^2} + \frac{\partial^2 u}{\partial y^2} + \frac{\partial^2 u}{\partial z^2}
+\]
+变换为球坐标下的形式.
+\probhint{变换由两个特殊的变换构成：
+\[
+\begin{aligned}
+x &= R\cos\varphi, & y &= R\sin\varphi, & z &= z; \\
+R &= r\sin\theta, & \varphi &= \varphi, & z &= r\cos\theta.
+\end{aligned}
+\]}
+\end{prob}
+
+\begin{prob}[M]{3512}
+引入新函数 $w$，令 $w = z^2$，变换方程
+\[
+z\left(\frac{\partial^2 z}{\partial x^2} + \frac{\partial^2 z}{\partial y^2}\right) = \left(\frac{\partial z}{\partial x}\right)^2 + \left(\frac{\partial z}{\partial y}\right)^2.
+\]
+\end{prob}
+
+\probgroup{取 $u$ 和 $v$ 为新的自变量，而 $w = w(u, v)$ 为新函数，变换下列方程：}
+
+\begin{prob}[S]{3513}
+$y\dfrac{\partial^2 z}{\partial y^2} + 2\dfrac{\partial z}{\partial y} = \dfrac{2}{x}$，设 $u = \dfrac{x}{y}, v = x, w = xz - y$.
+\end{prob}
+
+\begin{prob}[S]{3514}
+$\dfrac{\partial^2 z}{\partial x^2} - 2\dfrac{\partial^2 z}{\partial x\partial y} + \dfrac{\partial^2 z}{\partial y^2} = 0$，设 $u = x + y, v = \dfrac{y}{x}, w = \dfrac{z}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3515}
+$\dfrac{\partial^2 z}{\partial x^2} + 2\dfrac{\partial^2 z}{\partial x\partial y} + \dfrac{\partial^2 z}{\partial y^2} = 0$，设 $u = x + y, v = x - y, w = xy - z$.
+\end{prob}
+
+\begin{prob}[S]{3516}
+$\dfrac{\partial^2 z}{\partial x^2} + \dfrac{\partial^2 z}{\partial x\partial y} + \dfrac{\partial z}{\partial x} = z$，设 $u = \dfrac{x+y}{2}, v = \dfrac{x-y}{2}, w = z\mathrm{e}^y$.
+\end{prob}
+
+\begin{prob}[S]{3517}
+$\dfrac{\partial^2 z}{\partial x^2} - 2\dfrac{\partial^2 z}{\partial x\partial y} + \left(1 + \dfrac{y}{x}\right)\dfrac{\partial^2 z}{\partial y^2} = 0$，设 $u = x, v = x + y, w = x + y + z$.
+\end{prob}
+
+\begin{prob}[S]{3518}
+$(1 - x^2)\dfrac{\partial^2 z}{\partial x^2} + (1 - y^2)\dfrac{\partial^2 z}{\partial y^2} = x\dfrac{\partial z}{\partial x} + y\dfrac{\partial z}{\partial y}$，设 $x = \sin u, y = \sin v, z = \mathrm{e}^w$.
+\end{prob}
+
+\begin{prob}[M]{3519}
+$(1 - x^2)\dfrac{\partial^2 z}{\partial x^2} - \dfrac{\partial^2 z}{\partial y^2} - 2x\dfrac{\partial z}{\partial x} - \dfrac{1}{4}z = 0$ ($|x| < 1$)，设
+\[
+u = \frac{1}{2}(y + \arccos x), \quad v = \frac{1}{2}(y - \arccos x), \quad w = z\sqrt[4]{1 - x^2}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3520}
+$\dfrac{\partial^2 z}{\partial x^2} + \dfrac{\partial^2 z}{\partial y^2} = 2\dfrac{x\dfrac{\partial z}{\partial x} - y\dfrac{\partial z}{\partial y}}{x^2 - y^2} - \dfrac{3(x^2 + y^2)z}{(x^2 - y^2)^2}$ ($|x| > |y|$)，设
+\[
+u = x + y, \quad v = x - y, \quad w = \frac{z}{\sqrt{x^2 - y^2}}.
+\]
+\end{prob}
+
+\begin{prob}[M]{3521}
+证明：任何方程
+\[
+\frac{\partial^2 z}{\partial x\partial y} + a\frac{\partial z}{\partial x} + b\frac{\partial z}{\partial y} + cz = 0
+\]
+($a, b, c$ 为常数) 用代换
+\[
+z = u\mathrm{e}^{\alpha x + \beta y}
+\]
+(其中 $\alpha$ 与 $\beta$ 为常量，$u = u(x, y)$) 可以化为以下形式：
+\[
+\frac{\partial^2 u}{\partial x\partial y} + c_1 u = 0 \quad (c_1 \text{ 为常数}).
+\]
+\end{prob}
+
+\begin{prob}[M]{3522}
+证明：方程
+\[
+\frac{\partial^2 u}{\partial x^2} = \frac{\partial u}{\partial y}
+\]
+的形式在变换
+\[
+x' = \frac{x}{y}, \quad y' = -\frac{1}{y}, \quad u' = \frac{u}{\sqrt{y}}\mathrm{e}^{-\frac{x^2}{4y}}
+\]
+($u'$ 为变量 $x'$ 与 $y'$ 的函数) 下保持不变.
+\end{prob}
+
+\begin{prob}[M]{3523}
+令 $u = x + z, v = y + z, w = x + y + z$，且认为 $w = w(u, v)$，变换方程
+\[
+q(1 + q)\frac{\partial^2 z}{\partial x^2} - (1 + p + q + 2pq)\frac{\partial^2 z}{\partial x\partial y} + p(1 + p)\frac{\partial^2 z}{\partial y^2} = 0,
+\]
+其中 $p = \dfrac{\partial z}{\partial x}, q = \dfrac{\partial z}{\partial y}$.
+\end{prob}
+
+\begin{prob}[M]{3524}
+令 $x = \mathrm{e}^\xi, y = \mathrm{e}^\eta, z = \mathrm{e}^\zeta, u = \mathrm{e}^w$，其中 $w = w(\xi, \eta, \zeta)$，变换方程
+\[
+x^2\frac{\partial^2 u}{\partial x^2} + y^2\frac{\partial^2 u}{\partial y^2} + z^2\frac{\partial^2 u}{\partial z^2} = \left(x\frac{\partial u}{\partial x}\right)^2 + \left(y\frac{\partial u}{\partial y}\right)^2 + \left(z\frac{\partial u}{\partial z}\right)^2.
+\]
+\end{prob}
+
+\begin{prob}[M]{3525}
+证明：方程
+\[
+\frac{\partial^2 z}{\partial x^2}\frac{\partial^2 z}{\partial y^2} - \left(\frac{\partial^2 z}{\partial x\partial y}\right)^2 = 0
+\]
+的形式与变量 $x, y$ 和 $z$ 所分别担任的角色无关.
+\end{prob}
+
+\begin{prob}[M]{3526}
+取 $x$ 作为变量 $y$ 和 $z$ 的函数，解方程
+\[
+\left(\frac{\partial z}{\partial y}\right)^2 \frac{\partial^2 z}{\partial x^2} - 2\frac{\partial z}{\partial x}\frac{\partial z}{\partial y}\frac{\partial^2 z}{\partial x\partial y} + \left(\frac{\partial z}{\partial x}\right)^2 \frac{\partial^2 z}{\partial y^2} = 0.
+\]
+\end{prob}
+
+\begin{prob}[M]{3527}
+运用勒让德变换
+\[
+X = \frac{\partial z}{\partial x}, \quad Y = \frac{\partial z}{\partial y}, \quad Z = x\frac{\partial z}{\partial x} + y\frac{\partial z}{\partial y} - z,
+\]
+其中 $Z = Z(X, Y)$，变换方程
+\[
+A\left(\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y}\right)\frac{\partial^2 z}{\partial x^2} + 2B\left(\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y}\right)\frac{\partial^2 z}{\partial x\partial y} + C\left(\frac{\partial z}{\partial x}, \frac{\partial z}{\partial y}\right)\frac{\partial^2 z}{\partial y^2} = 0.
+\]
+\end{prob}
+
+\probsec{§5. 几何上的应用}
+
+\probgroup{写出下列曲线在已知点的切线和法平面方程：}
+
+\begin{prob}[S]{3528}
+$x = a\cos\alpha\cos t, y = a\sin\alpha\cos t, z = a\sin t$；在点 $t = t_0$.
+\end{prob}
+
+\begin{prob}[S]{3529}
+$x = a\sin^2 t, y = b\sin t\cos t, z = c\cos^2 t$；在点 $t = \dfrac{\pi}{4}$.
+\end{prob}
+
+\begin{prob}[S]{3530}
+$y = x, z = x^2$；在点 $M(1, 1, 1)$.
+\end{prob}
+
+\begin{prob}[S]{3531}
+$x^2 + z^2 = 10, y^2 + z^2 = 10$；在点 $M(1, 1, 3)$.
+\end{prob}
+
+\begin{prob}[S]{3532}
+$x^2 + y^2 + z^2 = 6, x + y + z = 0$；在点 $M(1, -2, 1)$.
+\end{prob}
+
+\begin{prob}[M]{3533}
+在曲线 $x = t, y = t^2, z = t^3$ 上求一点，此处的切线平行于平面 $x + 2y + z = 4$.
+\end{prob}
+
+\begin{prob}[M]{3534}
+证明：螺旋线 $x = a\cos t, y = a\sin t, z = bt$ 的切线与 $Oz$ 轴形成定角.
+\end{prob}
+
+\begin{prob}[M]{3535}
+证明：曲线 $x = a\mathrm{e}^t\cos t, y = a\mathrm{e}^t\sin t, z = a\mathrm{e}^t$ 与锥面 $x^2 + y^2 = z^2$ 的各母线相交的角度相同.
+\end{prob}
+
+\begin{prob}[M]{3536}
+证明：斜驶线
+\[
+\tan\left(\frac{\pi}{4} + \frac{\psi}{2}\right) = \mathrm{e}^{k\varphi} \quad (k = \text{常数})
+\]
+(其中 $\varphi$ 是地球上点的经度，$\psi$ 是地球上点的纬度) 与地球的一切子午线相交成定角.
+\end{prob}
+
+\begin{prob}[M]{3537}
+求曲线
+\[
+z = f(x, y), \quad \frac{x - x_0}{\cos\alpha} = \frac{y - y_0}{\sin\alpha}
+\]
+(其中 $f$ 为可微函数) 在点 $M_0(x_0, y_0)$ 的切线与 $Oxy$ 平面所成角的正切.
+\end{prob}
+
+\begin{prob}[M]{3538}
+求函数
+\[
+u = \frac{x}{\sqrt{x^2 + y^2 + z^2}}
+\]
+在点 $M(1, 2, -2)$ 沿曲线
+\[
+x = t, \quad y = 2t^2, \quad z = -2t^4
+\]
+在此点的切线方向的导数.
+\end{prob}
+
+\probgroup{写出下列曲面在点 $M_0$ 的切面和法线方程：}
+
+\begin{prob}[S]{3539}
+$z = x^2 + y^2$；$M_0(1, 2, 5)$.
+\end{prob}
+
+\begin{prob}[S]{3540}
+$x^2 + y^2 + z^2 = 169$；$M_0(3, 4, 12)$.
+\end{prob}
+
+\begin{prob}[S]{3541}
+$z = \arctan\dfrac{y}{x}$；$M_0\left(1, 1, \dfrac{\pi}{4}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3542}
+$ax^2 + by^2 + cz^2 = 1$；$M_0(x_0, y_0, z_0)$.
+\end{prob}
+
+\begin{prob}[S]{3543}
+$z = y + \ln\dfrac{x}{z}$；$M_0(1, 1, 1)$.
+\end{prob}
+
+\begin{prob}[S]{3544}
+$2^{\frac{x}{z}} + 2^{\frac{y}{z}} = 8$；$M_0(2, 2, 1)$.
+\end{prob}
+
+\begin{prob}[S]{3545}
+$x = a\cos\psi\cos\varphi, y = b\cos\psi\sin\varphi, z = c\sin\psi$；$M_0(\varphi_0, \psi_0)$.
+\end{prob}
+
+\begin{prob}[S]{3546}
+$x = r\cos\varphi, y = r\sin\varphi, z = r\cot\alpha$；$M_0(\varphi_0, r_0)$.
+\end{prob}
+
+\begin{prob}[S]{3547}
+$x = u\cos v, y = u\sin v, z = av$；$M_0(u_0, v_0)$.
+\end{prob}
+
+\begin{prob}[M]{3548}
+求曲面
+\[
+x = u + v, \quad y = u^2 + v^2, \quad z = u^3 + v^3
+\]
+的切平面当切点 $M(u, v) (u \neq v)$ 无限接近于曲面的边界线 $u = v$ 上的点 $M_0(u_0, v_0)$ 时的极限位置.
+\end{prob}
+
+\begin{prob}[M]{3549}
+在曲面
+\[
+x^2 + 2y^2 + 3z^2 + 2xy + 2xz + 4yz = 8
+\]
+上求出切平面平行于坐标平面的诸切点.
+\end{prob}
+
+\begin{prob}[M]{3550}
+在椭球面
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1
+\]
+上怎样的点，椭球面的法线与各坐标轴成等角？
+\end{prob}
+
+\begin{prob}[M]{3551}
+求曲面
+\[
+x^2 + 2y^2 + 3z^2 = 21
+\]
+的平行于平面 $x + 4y + 6z = 0$ 的各切平面.
+\end{prob}
+
+\begin{prob}[M]{3552}
+证明：曲面 $xyz = a^3$ ($a > 0$) 的切平面与坐标面形成体积一定的四面体.
+\end{prob}
+
+\begin{prob}[M]{3553}
+证明：曲面
+\[
+\sqrt{x} + \sqrt{y} + \sqrt{z} = \sqrt{a} \quad (a > 0)
+\]
+的切平面在坐标轴上割下的诸线段，其和为常量.
+\end{prob}
+
+\begin{prob}[M]{3554}
+证明：锥面
+\[
+z = x f\left(\frac{y}{x}\right)
+\]
+的切平面经过其顶点.
+\end{prob}
+
+\begin{prob}[M]{3555}
+证明：旋转面
+\[
+z = f(\sqrt{x^2 + y^2}) \quad (f' \neq 0)
+\]
+的法线与旋转轴相交.
+\end{prob}
+
+\begin{prob}[M]{3556}
+求椭球面
+\[
+x^2 + y^2 + z^2 - xy = 1
+\]
+在坐标面上的投影.
+\end{prob}
+
+\begin{prob}[M]{3557}
+分正方形 $\{0 \leqslant x \leqslant 1, 0 \leqslant y \leqslant 1\}$ 为直径不大于 $\delta$ 的有限个部分 $\sigma$. 若曲面
+\[
+z = 1 - x^2 - y^2
+\]
+在属于同一部分 $\sigma$ 的任何两点 $P(x, y)$ 及 $P_1(x_1, y_1)$ 的法线方向相差小于 $1^\circ$，求数 $\delta$ 的上界.
+\end{prob}
+
+\begin{prob}[L]{3558}
+设
+\[
+z = f(x, y), \quad \text{其中 } (x, y) \in D \tag{1}
+\]
+为曲面的方程，$\varphi(P_1, P)$ 为曲面 (1) 在点 $P(x, y) \in D$ 及 $P_1(x_1, y_1) \in D$ 二点的法线之间的夹角. 证明：若 $D$ 为有界闭区域，函数 $f(x, y)$ 在区域 $D$ 内具有有界的二阶导数，则李雅普诺夫不等式
+\[
+\varphi(P_1, P) < C\rho(P_1, P) \tag{2}
+\]
+成立，其中 $C$ 为常数，$\rho(P_1, P)$ 为点 $P$ 与 $P_1$ 之间的距离.
+\end{prob}
+
+\begin{prob}[M]{3559}
+圆柱面 $x^2 + y^2 = a^2$ 与曲面 $bz = xy$ 在公共点 $M_0(x_0, y_0, z_0)$ 相交成怎样的角？
+\end{prob}
+
+\begin{prob}[M]{3560}
+证明：球坐标的坐标面 $x^2 + y^2 + z^2 = r^2, y = x\tan\varphi, x^2 + y^2 = z^2\tan^2\theta$ 两两正交.
+\end{prob}
+
+\begin{prob}[M]{3561}
+证明：球面
+\[
+x^2 + y^2 + z^2 = 2ax, \quad x^2 + y^2 + z^2 = 2by, \quad x^2 + y^2 + z^2 = 2cz
+\]
+形成三重正交坐标系.
+\end{prob}
+
+\begin{prob}[M]{3562}
+当 $\lambda = \lambda_1, \lambda = \lambda_2, \lambda = \lambda_3$ 时，经过每一点 $M(x, y, z)$ 有三个二次曲面：
+\[
+\frac{x^2}{a^2 - \lambda^2} + \frac{y^2}{b^2 - \lambda^2} + \frac{z^2}{c^2 - \lambda^2} = -1 \quad (a > b > c > 0).
+\]
+证明：这些曲面是正交的.
+\end{prob}
+
+\begin{prob}[L]{3563}
+求函数 $u = x + y + z$ 沿球面 $x^2 + y^2 + z^2 = 1$ 在点 $M_0(x_0, y_0, z_0)$ 的外法线方向的导数. 在球面上怎样的点，函数 $u$ 的上述法向导数有：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 最大值，
+\item 最小值，
+\item 等于零？
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3564}
+求函数 $u = x^2 + y^2 + z^2$ 沿椭球面 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$ 在点 $M_0(x_0, y_0, z_0)$ 的外法线方向的导数.
+\end{prob}
+
+\begin{prob}[M]{3565}
+设 $\dfrac{\partial u}{\partial n}$ 和 $\dfrac{\partial v}{\partial n}$ 为函数 $u$ 和 $v$ 在曲面 $F(x, y, z) = 0$ 上的点的法向导数. 证
+明：
+\[
+\frac{\partial}{\partial n}(uv) = u\frac{\partial v}{\partial n} + v\frac{\partial u}{\partial n}.
+\]
+\end{prob}
+
+\probgroup{求含一个参变量的平面曲线族的包络线：}
+
+\begin{prob}[S]{3566}
+$x\cos\alpha + y\sin\alpha = p$ ($p = \text{常数}$).
+\end{prob}
+
+\begin{prob}[S]{3567}
+$(x - a)^2 + y^2 = \dfrac{a^2}{2}$.
+\end{prob}
+
+\begin{prob}[S]{3568}
+$y = kx + \dfrac{a}{k}$ ($a = \text{常数}$).
+\end{prob}
+
+\begin{prob}[S]{3569}
+$y^2 = 2px + p^2$.
+\end{prob}
+
+\begin{prob}[M]{3570}
+设有长为 $l$ 的线段，其两端点沿坐标轴滑动，求如此产生的线段族的包络线.
+\end{prob}
+
+\begin{prob}[M]{3571}
+求面积 $S$ 为常数的椭圆族 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1$ 的包络线.
+\end{prob}
+
+\begin{prob}[M]{3572}
+炮弹在真空中以初速度 $v_0$ 射出，当投射角 $\alpha$ 在竖直平面中变化时，求炮弹轨迹的包络线.
+\end{prob}
+
+\begin{prob}[M]{3573}
+证明：平面曲线的法线的包络线是此曲线的渐屈线.
+\end{prob}
+
+\begin{prob}[L]{3574}
+研究下列曲线族的判别曲线的性质（$c$ 是参变量）：
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item 立方抛物线 $y = (x - c)^3$；
+\item 半立方抛物线 $y^2 = (x - c)^3$；
+\item 尼尔抛物线 $y^3 = (x - c)^2$；
+\item 环索线 $(y - c)^2 = x^2\dfrac{a - x}{a + x}$.
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[M]{3575}
+求半径为 $r$，中心在圆周 $x = R\cos t, y = R\sin t, z = 0$（$t$ 是参数，$R > r$）上的球族的包络面.
+\end{prob}
+
+\begin{prob}[M]{3576}
+求球族
+\[
+(x - t\cos\alpha)^2 + (y - t\cos\beta)^2 + (z - t\cos\gamma)^2 = 1
+\]
+（其中 $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$，$t$ 是参变量）的包络面.
+\end{prob}
+
+\begin{prob}[M]{3577}
+求相应体积 $V$ 是常数的椭球面族 $\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} + \dfrac{z^2}{c^2} = 1$ 的包络面.
+\end{prob}
+
+\begin{prob}[M]{3578}
+求半径为 $\rho$，中心在圆锥面 $x^2 + y^2 = z^2$ 上的球族的包络面.
+\end{prob}
+
+\begin{prob}[M]{3579}
+有一发光点位于坐标原点．若 $x_0^2 + y_0^2 + z_0^2 > R^2$，求由球
+\[
+(x - x_0)^2 + (y - y_0)^2 + (z - z_0)^2 \leqslant R^2
+\]
+投影所生成的阴影圆锥.
+\end{prob}
+
+\begin{prob}[M]{3580}
+若参量 $p$ 和 $q$ 满足方程
+\[
+p^2 + q^2 = 1,
+\]
+求平面族
+\[
+z - z_0 = p(x - x_0) + q(y - y_0)
+\]
+的包络面.
+\end{prob}
+
+\probsec{§6. 泰勒公式}
+
+\begin{prob}[M]{3581}
+在点 $A(1, -2)$ 的邻域内根据泰勒公式展开函数
+\[
+f(x, y) = 2x^2 - xy - y^2 - 6x - 3y + 5.
+\]
+\end{prob}
+
+\begin{prob}[M]{3582}
+在点 $A(1, 1, 1)$ 的邻域内根据泰勒公式展开函数
+\[
+f(x, y, z) = x^3 + y^3 + z^3 - 3xyz.
+\]
+\end{prob}
+
+\begin{prob}[M]{3583}
+当自变量值从 $x = 1, y = -1$ 变到 $x_1 = 1 + h, y_1 = -1 + k$ 时，求函数 $f(x, y) = x^2 y + xy^2 - 2xy$ 的增量.
+\end{prob}
+
+\begin{prob}[M]{3584}
+设
+\[
+f(x, y, z) = Ax^2 + By^2 + Cz^2 + 2Dxy + 2Exz + 2Fyz,
+\]
+按数 $h, k$ 和 $l$ 的正整数次幂展开 $f(x + h, y + k, z + l)$.
+\end{prob}
+
+\begin{prob}[M]{3585}
+写出函数
+\[
+f(x, y) = x^y
+\]
+在点 $A(1, 1)$ 的邻域内的展开式，到二次项为止.
+\end{prob}
+
+\begin{prob}[M]{3586}
+根据麦克劳林公式展开函数
+\[
+f(x, y) = \sqrt{1 - x^2 - y^2},
+\]
+到四次项为止.
+\end{prob}
+
+\begin{prob}[M]{3587}
+若 $|x|$ 和 $|y|$ 同 $1$ 比较为很小的量，对于下列表达式
+(a) $\dfrac{\cos x}{\cos y}$；\qquad (b) $\arctan\dfrac{1 + x + y}{1 - x + y}$
+推出精确到二次项的近似公式.
+\end{prob}
+
+\begin{prob}[M]{3588}
+假定 $x, y, z$ 的绝对值是很小的量，简化表达式
+\[
+\cos(x + y + z) - \cos x \cos y \cos z.
+\]
+\end{prob}
+
+\begin{prob}[M]{3589}
+按 $h$ 的幂次展开函数
+\[
+F(x, y) = \frac{1}{4}[f(x + h, y) + f(x, y + h) + f(x - h, y) + f(x, y - h)] - f(x, y),
+\]
+精确到 $h^4$.
+\end{prob}
+
+\begin{prob}[M]{3590}
+已知中心在点 $P(x, y)$ 半径为 $\rho$ 的圆周，设 $f(P) = f(x, y)$ 及 $P_i(x_i, y_i)$（$i = 1, 2, 3$）为该圆周的内接正三角形的顶点，并且 $x_1 = x + \rho, y_1 = y$．按 $\rho$ 的正整数次幂展开函数
+\[
+F(\rho) = \frac{1}{3}[f(P_1) + f(P_2) + f(P_3)],
+\]
+精确到 $\rho^2$.
+\end{prob}
+
+\begin{prob}[M]{3591}
+按 $h$ 与 $k$ 的幂次展开函数
+\[
+\Delta_{xy}f(x, y) = f(x + h, y + k) - f(x + h, y) - f(x, y + k) + f(x, y).
+\]
+\end{prob}
+
+\begin{prob}[M]{3592}
+依 $\rho$ 的幂次展开函数
+\[
+F(\rho) = \frac{1}{2\pi}\int_{0}^{2\pi} f(x + \rho\cos\varphi, y + \rho\sin\varphi)\,\mathrm{d}\varphi.
+\]
+\end{prob}
+
+\probgroup{将下列函数展开成麦克劳林级数：}
+
+\begin{prob}[S]{3593}
+$f(x, y) = (1 + x)^m (1 + y)^n$.
+\end{prob}
+
+\begin{prob}[S]{3594}
+$f(x, y) = \ln(1 + x + y)$.
+\end{prob}
+
+\begin{prob}[S]{3595}
+$f(x, y) = \mathrm{e}^x \sin y$.
+\end{prob}
+
+\begin{prob}[S]{3596}
+$f(x, y) = \mathrm{e}^x \cos y$.
+\end{prob}
+
+\begin{prob}[S]{3597}
+$f(x, y) = \sin x \sinh y$.
+\end{prob}
+
+\begin{prob}[S]{3598}
+$f(x, y) = \cos x \cosh y$.
+\end{prob}
+
+\begin{prob}[S]{3599}
+$f(x, y) = \sin(x^2 + y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3600}
+$f(x, y) = \ln(1 + x)\ln(1 + y)$.
+\end{prob}
+
+\begin{prob}[M]{3601}
+写出函数
+\[
+f(x, y) = \int_{0}^{1} (1 + x)^{t^2 y}\,\mathrm{d}t
+\]
+的麦克劳林级数的前三项.
+\end{prob}
+
+\begin{prob}[M]{3602}
+按二项式 $x - 1$ 和 $y + 1$ 的正整数次幂将函数 $\mathrm{e}^{x + y}$ 展开成幂级数.
+\end{prob}
+
+\begin{prob}[M]{3603}
+写出函数 $f(x, y) = \dfrac{x}{y}$ 在点 $M(1, 1)$ 的邻域内的泰勒级数展开式.
+\end{prob}
+
+\begin{prob}[M]{3604}
+设 $z$ 为由方程 $z^3 - 2xz + y = 0$ 定义的 $x$ 和 $y$ 的隐函数，且当 $x = 1$ 和 $y = 1$ 时 $z = 1$．写出函数 $z$ 按二项式 $x - 1$ 和 $y - 1$ 的升幂排列的展开式中的若干项.
+\end{prob}
+
+\probgroup{研究下列曲线的奇点的种类并大略地画出这些曲线：}
+
+\begin{prob}[S]{3605}
+$y^2 = ax^2 + x^3$.
+\end{prob}
+
+\begin{prob}[S]{3606}
+$x^3 + y^3 - 3xy = 0$.
+\end{prob}
+
+\begin{prob}[S]{3607}
+$x^2 + y^2 = x^4 + y^4$.
+\end{prob}
+
+\begin{prob}[S]{3608}
+$x^2 + y^4 = x^6$.
+\end{prob}
+
+\begin{prob}[S]{3609}
+$(x^2 + y^2)^2 = a^2(x^2 - y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3610}
+$(y - x^2)^2 = x^5$.
+\end{prob}
+
+\begin{prob}[S]{3611}
+$(a + x)y^2 = (a - x)x^2$.
+\end{prob}
+
+\begin{prob}[M]{3612}
+研究参变量 $a, b, c$ ($a \leqslant b \leqslant c$) 的值与曲线 $y^2 = (x - a)(x - b)(x - c)$ 的形状之关系.
+\end{prob}
+
+\probgroup{研究超越曲线的奇点：}
+
+\begin{prob}[S]{3613}
+$y^2 = 1 - \mathrm{e}^{-x^2}$.
+\end{prob}
+
+\begin{prob}[S]{3614}
+$y^2 = 1 - \mathrm{e}^{-x^3}$.
+\end{prob}
+
+\begin{prob}[S]{3615}
+$y = x\ln x$.
+\end{prob}
+
+\begin{prob}[S]{3616}
+$y = \dfrac{x}{1 + \mathrm{e}^{\frac{1}{x}}}$.
+\end{prob}
+
+\begin{prob}[S]{3617}
+$y = \arctan\left(\dfrac{1}{\sin x}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3618}
+$y^2 = \sin\dfrac{\pi}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3619}
+$y^2 = \sin x^2$.
+\end{prob}
+
+\begin{prob}[S]{3620}
+$y^2 = \sin^3 x$.
+\end{prob}
+
+\probsec{§7. 多元函数的极值}
+
+\probgroup{研究下列多元函数的极值：}
+
+\begin{prob}[S]{3621}
+$z = x^2 + (y - 1)^2$.
+\end{prob}
+
+\begin{prob}[S]{3622}
+$z = x^2 - (y - 1)^2$.
+\end{prob}
+
+\begin{prob}[S]{3623}
+$z = (x - y + 1)^2$.
+\end{prob}
+
+\begin{prob}[S]{3624}
+$z = x^2 - xy + y^2 - 2x + y$.
+\end{prob}
+
+\begin{prob}[S]{3625}
+$z = x^2 y^3(6 - x - y)$.
+\end{prob}
+
+\begin{prob}[S]{3626}
+$z = x^3 + y^3 - 3xy$.
+\end{prob}
+
+\begin{prob}[M]{3627}
+(a) $z = x^4 + y^4 - x^2 - 2xy - y^2$；\qquad (b) $z = 2x^4 + y^4 - x^2 - 2y^2$.
+\end{prob}
+
+\begin{prob}[S]{3628}
+$z = xy + \dfrac{50}{x} + \dfrac{20}{y}$ ($x > 0, y > 0$).
+\end{prob}
+
+\begin{prob}[S]{3629}
+$z = xy\sqrt{1 - \dfrac{x^2}{a^2} - \dfrac{y^2}{b^2}}$ ($a > 0, b > 0$).
+\end{prob}
+
+\begin{prob}[S]{3630}
+$z = \dfrac{ax + by + c}{\sqrt{x^2 + y^2 + 1}}$ ($a^2 + b^2 + c^2 \neq 0$).
+\end{prob}
+
+\begin{prob}[S]{3631}
+$z = 1 - \sqrt{x^2 + y^2}$.
+\end{prob}
+
+\begin{prob}[S]{3632}
+$z = \mathrm{e}^{2x + 3y}(8x^2 - 6xy + 3y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3633}
+$z = \mathrm{e}^{x^2 - y}(5 - 2x + y)$.
+\end{prob}
+
+\begin{prob}[S]{3634}
+$z = (5x + 7y - 25)\mathrm{e}^{-(x^2 + xy + y^2)}$.
+\end{prob}
+
+\begin{prob}[S]{3635}
+$z = x^2 + xy + y^2 - 4\ln x - 10\ln y$.
+\end{prob}
+
+\begin{prob}[S]{3636}
+$z = \sin x + \cos y + \cos(x - y)$ $\left(0 \leqslant x \leqslant \dfrac{\pi}{2}; 0 \leqslant y \leqslant \dfrac{\pi}{2}\right)$.
+\end{prob}
+
+\begin{prob}[S]{3637}
+$z = \sin x \sin y \sin(x + y)$ ($0 \leqslant x \leqslant \pi; 0 \leqslant y \leqslant \pi$).
+\end{prob}
+
+\begin{prob}[S]{3638}
+$z = x - 2y + \ln\sqrt{x^2 + y^2} + 3\arctan\dfrac{y}{x}$.
+\end{prob}
+
+\begin{prob}[S]{3639}
+$z = xy\ln(x^2 + y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3640}
+$z = x + y + 4\sin x \sin y$.
+\end{prob}
+
+\begin{prob}[S]{3641}
+$z = (x^2 + y^2)\mathrm{e}^{-(x^2 + y^2)}$.
+\end{prob}
+
+\begin{prob}[S]{3642}
+$u = x^2 + y^2 + z^2 + 2x + 4y - 6z$.
+\end{prob}
+
+\begin{prob}[S]{3643}
+$u = x^3 + y^2 + z^2 + 12xy + 2z$.
+\end{prob}
+
+\begin{prob}[S]{3644}
+$u = x + \dfrac{y^2}{4x} + \dfrac{x^2}{y} + \dfrac{2}{x}$ ($x > 0, y > 0, z > 0$).
+\end{prob}
+
+\begin{prob}[S]{3645}
+$u = xy^2 z^3(a - x - 2y - 3z)$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[S]{3646}
+$u = \dfrac{a^2}{x} + \dfrac{x^2}{y} + \dfrac{y^2}{z} + \dfrac{z^2}{b}$ ($x > 0, y > 0, z > 0, a > 0, b > 0$).
+\end{prob}
+
+\begin{prob}[S]{3647}
+$u = \sin x + \sin y + \sin z - \sin(x + y + z)$ ($0 \leqslant x \leqslant \pi; 0 \leqslant y \leqslant \pi; 0 \leqslant z \leqslant \pi$).
+\end{prob}
+
+\begin{prob}[S]{3648}
+$u = x_1 x_2^2 \cdots x_n^n (1 - x_1 - 2x_2 - \cdots - nx_n)$ ($x_1 > 0, x_2 > 0, \dots, x_n > 0$).
+\end{prob}
+
+\begin{prob}[S]{3649}
+$u = x_1 + \dfrac{x_2}{x_1} + \dfrac{x_3}{x_2} + \cdots + \dfrac{x_n}{x_{n-1}} + \dfrac{2}{x_n}$ ($x_i > 0, i = 1, 2, \dots, n$).
+\end{prob}
+
+\begin{prob}[M]{3650}
+惠更斯问题．在 $a$ 和 $b$ 二正数间插入 $n$ 个数 $x_1, x_2, \dots, x_n$，使分数
+\[
+u = \frac{x_1 x_2 \cdots x_n}{(a + x_1)(x_1 + x_2)\cdots(x_n + b)}
+\]
+的值最大.
+\end{prob}
+
+\probgroup{求变量 $x$ 和 $y$ 的隐函数 $z$ 的极值：}
+
+\begin{prob}[S]{3651}
+$x^2 + y^2 + z^2 - 2x + 2y - 4z - 10 = 0$.
+\end{prob}
+
+\begin{prob}[S]{3652}
+$x^2 + y^2 + z^2 - xz - yz + 2x + 2y + 2z - 2 = 0$.
+\end{prob}
+
+\begin{prob}[S]{3653}
+$(x^2 + y^2 + z^2)^2 = a^2(x^2 + y^2 - z^2)$.
+\end{prob}
+
+\probgroup{求下列函数的条件极值点：}
+
+\begin{prob}[S]{3654}
+$z = xy$, 若 $x + y = 1$.
+\end{prob}
+
+\begin{prob}[S]{3655}
+$z = \frac{x}{a} + \frac{y}{b}$, 若 $x^2 + y^2 = 1$.
+\end{prob}
+
+\begin{prob}[S]{3656}
+$z = x^2 + y^2$, 若 $\frac{x}{a} + \frac{y}{b} = 1$.
+\end{prob}
+
+\begin{prob}[M]{3657}
+(a) $z = Ax^2 + 2Bxy + Cy^2$, 若 $x^2 + y^2 = 1$; \qquad (b) $z = x^2 + 12xy + 2y^2$, 若 $4x^2 + y^2 = 25$.
+\end{prob}
+
+\begin{prob}[S]{3658}
+$z = \cos^2 x + \cos^2 y$, 若 $x - y = \frac{\pi}{4}$.
+\end{prob}
+
+\begin{prob}[S]{3659}
+$u = x - 2y + 2z$, 若 $x^2 + y^2 + z^2 = 1$.
+\end{prob}
+
+\begin{prob}[S]{3660}
+$u = x^m y^n z^p$, 若 $x + y + z = a$ ($m > 0, n > 0, p > 0, a > 0$).
+\end{prob}
+
+\begin{prob}[S]{3661}
+$u = x^2 + y^2 + z^2$, 若 $\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1$ ($a > b > c > 0$).
+\end{prob}
+
+\begin{prob}[S]{3662}
+$u = xy^2 z^3$, 若 $x + 2y + 3z = a$ ($x > 0, y > 0, z > 0, a > 0$).
+\end{prob}
+
+\begin{prob}[M]{3663}
+\begin{enumerate}[label=(\alph*), itemsep=2pt, topsep=3pt]
+\item $u = xyz$, 若 $x^2 + y^2 + z^2 = 1, x + y + z = 0$;
+\item $u = xy + yz$, 若 $x^2 + y^2 = 2, y + z = 2$ ($x > 0, y > 0, z > 0$).
+\end{enumerate}
+\end{prob}
+
+\begin{prob}[S]{3664}
+$u = \sin x \sin y \sin z$, 若 $x + y + z = \frac{\pi}{2}$ ($x > 0, y > 0, z > 0$).
+\end{prob}
+
+\begin{prob}[M]{3665}
+$u = \frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2}$, 若 $x^2 + y^2 + z^2 = 1, x\cos\alpha + y\cos\beta + z\cos\gamma = 0$ ($a > b > c > 0, \cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$).
+\end{prob}
+
+\begin{prob}[M]{3666}
+$u = (x - \xi)^2 + (y - \eta)^2 + (z - \zeta)^2$, 若 $Ax + By + Cz = 0, x^2 + y^2 + z^2 = R^2, \frac{\xi}{\cos\alpha} = \frac{\eta}{\cos\beta} = \frac{\zeta}{\cos\gamma}$, 其中 $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$.
+\end{prob}
+
+\begin{prob}[S]{3667}
+$u = x_1^2 + x_2^2 + \cdots + x_n^2$, 若 $\frac{x_1}{a_1} + \frac{x_2}{a_2} + \cdots + \frac{x_n}{a_n} = 1$ ($a_i > 0; i = 1, 2, \cdots, n$).
+\end{prob}
+
+\begin{prob}[S]{3668}
+$u = x_1^p + x_2^p + \cdots + x_n^p$ ($p > 1$), 若 $x_1 + x_2 + \cdots + x_n = a$ ($a > 0$).
+\end{prob}
+
+\begin{prob}[M]{3669}
+$u = \frac{\alpha_1}{x_1} + \frac{\alpha_2}{x_2} + \cdots + \frac{\alpha_n}{x_n}$, 若 $\beta_1 x_1 + \beta_2 x_2 + \cdots + \beta_n x_n = 1$ ($\alpha_i > 0, \beta_i > 0, x_i > 0; i = 1, 2, \cdots, n$).
+\end{prob}
+
+\begin{prob}[S]{3670}
+$u = x_1^{\alpha_1} x_2^{\alpha_2} \cdots x_n^{\alpha_n}$, 若 $x_1 + x_2 + \cdots + x_n = a$ ($a > 0, \alpha_i > 1, i = 1, 2, \cdots, n$).
+\end{prob}
+
+\begin{prob}[M]{3671}
+在 $\sum_{i=1}^{n} x_i^2 = 1$ 的条件下, 求二次型 $u = \sum_{i,j=1}^{n} a_{ij} x_i x_j$ ($a_{ij} = a_{ji}$) 的极值.
+\end{prob}
+
+\begin{prob}[M]{3672}
+若 $n \geqslant 1$ 及 $x \geqslant 0, y \geqslant 0$, 证明不等式: $\frac{x^n + y^n}{2} \geqslant \left(\frac{x+y}{2}\right)^n$.
+\probhint{在 $x + y = S$ 的条件下, 求函数 $z = \frac{1}{2}(x^n + y^n)$ 的极小值.}
+\end{prob}
+
+\begin{prob}[M]{3673}
+证明赫尔德不等式:
+\[
+\sum_{i=1}^{n} a_i x_i \leqslant \left(\sum_{i=1}^{n} a_i^k\right)^{\frac{1}{k}} \left(\sum_{i=1}^{n} x_i^{k'}\right)^{\frac{1}{k'}}
+\]
+\[
+\left(a_i \geqslant 0, x_i \geqslant 0, i = 1, 2, \cdots, n; k > 1, \frac{1}{k} + \frac{1}{k'} = 1\right).
+\]
+\probhint{在 $\sum_{i=1}^{n} a_i x_i = A$ 的条件下, 求函数
+\[
+u = \left(\sum_{i=1}^{n} a_i^k\right)^{\frac{1}{k}} \left(\sum_{i=1}^{n} x_i^{k'}\right)^{\frac{1}{k'}}
+\]
+的极小值.}
+\end{prob}
+
+\begin{prob}[M]{3674}
+对于 $n$ 阶行列式 $A = |a_{ij}|$, 证明阿达马不等式:
+\[
+A^2 \leqslant \prod_{i=1}^{n} \left(\sum_{j=1}^{n} a_{ij}^2\right).
+\]
+\probhint{在关系式
+\[
+\sum_{j=1}^{n} a_{ij}^2 = S_i \quad (i = 1, 2, \cdots, n)
+\]
+存在的条件下, 研究行列式 $A = |a_{ij}|$ 的极值.}
+\end{prob}
+
+\probgroup{求下列函数在指定区域内的上确界 ($\sup$) 和下确界 ($\inf$)：}
+
+\begin{prob}[S]{3675}
+$z = x - 2y - 3$, 若 $0 \leqslant x \leqslant 1, 0 \leqslant y \leqslant 1, 0 \leqslant x + y \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{3676}
+$z = x^2 + y^2 - 12x + 16y$, 若 $x^2 + y^2 \leqslant 25$.
+\end{prob}
+
+\begin{prob}[S]{3677}
+$z = x^2 - xy + y^2$, 若 $|x| + |y| \leqslant 1$.
+\end{prob}
+
+\begin{prob}[S]{3678}
+$u = x^2 + 2y^2 + 3z^2$, 若 $x^2 + y^2 + z^2 \leqslant 100$.
+\end{prob}
+
+\begin{prob}[S]{3679}
+$u = x + y + z$, 若 $x^2 + y^2 \leqslant z \leqslant 1$.
+\end{prob}
+
+\begin{prob}[M]{3680}
+求函数
+\[
+u = (x + y + z)\mathrm{e}^{-(x + 2y + 3z)}
+\]
+在区域 $x > 0, y > 0, z > 0$ 内的下确界 ($\inf$) 与上确界 ($\sup$).
+\end{prob}
+
+\begin{prob}[M]{3681}
+证明: 函数 $z = (1 + \mathrm{e}^y)\cos x - y\mathrm{e}^y$ 有无穷多个极大值而无一极小值.
+\end{prob}
+
+\begin{prob}[M]{3682}
+函数 $f(x, y)$ 在点 $M_0(x_0, y_0)$ 有极小值的充分条件是否为此函数在通过点 $M_0$ 的每一条直线上有极小值呢? 研究例子 $f(x, y) = (x - y^2)(2x - y^2)$.
+\end{prob}
+
+\begin{prob}[S]{3683}
+分解已知正数 $a$ 为 $n$ 个正的因数, 使得它们的倒数的和为最小.
+\end{prob}
+
+\begin{prob}[S]{3684}
+分解已知正数 $a$ 为 $n$ 个相加数, 使得它们的平方和为最小.
+\end{prob}
+
+\begin{prob}[S]{3685}
+分解已知正数 $a$ 为 $n$ 个正的因数, 使得它们的已知正数次幂的和为最小.
+\end{prob}
+
+\begin{prob}[M]{3686}
+已知在平面上的 $n$ 个质点 $P_1(x_1, y_1), P_2(x_2, y_2), \cdots, P_n(x_n, y_n)$, 其质量分别为 $m_1, m_2, \cdots, m_n$. 点 $P(x, y)$ 位于何处时, 该质点系对此点的转动惯量为最小?
+\end{prob}
+
+\begin{prob}[S]{3687}
+容积为 $V$ 的无盖长方浴盆在何种尺寸下有最小的表面积?
+\end{prob}
+
+\begin{prob}[M]{3688}
+横截面为半圆形的无盖柱形浴盆, 其表面积等于 $S$, 在何种尺寸下此盆有最大的容积?
+\end{prob}
+
+\begin{prob}[M]{3689}
+在球面 $x^2 + y^2 + z^2 = 1$ 上求一点, 这点到 $n$ 个已知点 $M_i(x_i, y_i, z_i)$ ($i = 1, 2, \cdots, n$) 距离的平方和为最小.
+\end{prob}
+
+\begin{prob}[M]{3690}
+底面相同的直圆柱体与直圆锥体拼接在一起构成一个物体, 其总表面积 $Q$ 取给定值. 为了使此物体的体积为最大, 求其尺寸大小.
+\end{prob}
+
+\begin{prob}[M]{3691}
+一长方体的上下两底均为正方形, 分别与同样的两个正四角锥体拼接在一起构成一个物体, 其体积 $V$ 取给定值. 当四角锥的侧面对它们的底成怎样的倾角时, 该物体的总表面积为最小?
+\end{prob}
+
+\begin{prob}[M]{3692}
+将周长为 $2p$ 的矩形绕其一边旋转, 矩形所扫过的区域构成一旋转体, 求使该旋转体体积为最大的那个矩形.
+\end{prob}
+
+\begin{prob}[M]{3693}
+将周长为 $2p$ 的三角形绕其一边旋转, 三角形所扫过的区域构成一旋转体, 求使该旋转体体积为最大的那个三角形.
+\end{prob}
+
+\begin{prob}[S]{3694}
+在半径为 $R$ 的半球内作出具有最大体积的内接长方体.
+\end{prob}
+
+\begin{prob}[S]{3695}
+在已知的直圆锥内作出具有最大体积的内接长方体.
+\end{prob}
+
+\begin{prob}[M]{3696}
+在椭球
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} = 1
+\]
+内作出具有最大体积的内接长方体.
+\end{prob}
+
+\begin{prob}[M]{3697}
+直圆锥的母线 $l$ 与底面成倾角 $\alpha$, 试在此直圆锥中作出具有最大全表面积的内接长方体.
+\end{prob}
+
+\begin{prob}[M]{3698}
+在椭圆抛物面 $\frac{z}{c} = \frac{x^2}{a^2} + \frac{y^2}{b^2}$ 和 $z = c$ 所围区域内作出具有最大体积的内接长方体.
+\end{prob}
+
+\begin{prob}[S]{3699}
+求点 $M_0(x_0, y_0, z_0)$ 至平面 $Ax + By + Cz + D = 0$ 上的点的最短距离.
+\end{prob}
+
+\begin{prob}[M]{3700}
+求空间二直线
+\[
+\frac{x - x_1}{m_1} = \frac{y - y_1}{n_1} = \frac{z - z_1}{p_1}, \quad \frac{x - x_2}{m_2} = \frac{y - y_2}{n_2} = \frac{z - z_2}{p_2}
+\]
+之间的最短距离.
+\end{prob}
+
+\begin{prob}[S]{3701}
+求抛物线 $y = x^2$ 和直线 $x - y - 2 = 0$ 之间的最短距离.
+\end{prob}
+
+\begin{prob}[M]{3702}
+求有心二次曲线
+\[
+Ax^2 + 2Bxy + Cy^2 = 1
+\]
+的半轴.
+\end{prob}
+
+\begin{prob}[M]{3703}
+求有心二次曲面
+\[
+Ax^2 + By^2 + Cz^2 + 2Dxy + 2Eyz + 2Fxz = 1
+\]
+的半轴.
+\end{prob}
+
+\begin{prob}[M]{3704}
+求用平面
+\[
+Ax + By + Cz = 0
+\]
+与柱体
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} \leqslant 1
+\]
+相交所成椭圆的面积.
+\end{prob}
+
+\begin{prob}[M]{3705}
+求用平面
+\[
+x\cos\alpha + y\cos\beta + z\cos\gamma = 0
+\]
+(其中 $\cos^2\alpha + \cos^2\beta + \cos^2\gamma = 1$) 与椭球
+\[
+\frac{x^2}{a^2} + \frac{y^2}{b^2} + \frac{z^2}{c^2} \leqslant 1
+\]
+相交所成截面的面积.
+\end{prob}
+
+\begin{prob}[M]{3706}
+根据费马原理, 光在最短时间内从一点传播至另一点.
+
+假定这两点位于交界面为平面的不同的光介质中, 并且光的传播速度在第一种介质中等于 $v_1$, 而在第二种介质中等于 $v_2$, 试推出光的折射定律.
+\end{prob}
+
+\begin{prob}[M]{3707}
+一折射棱镜的折射角\footnote{折射棱镜的折射角指两折射面之间的二面角. —— 译注}为 $\alpha$, 折射率为 $n$. 光线以怎样的入射角射向此棱镜侧面, 其偏向角 (即入射光线与出射光线之间的角) 为最小? 求此最小偏向角.
+\end{prob}
+
+\begin{prob}[M]{3708}
+变量 $x$ 和 $y$ 满足系数待定的线性方程
+\[
+y = ax + b.
+\]
+经过一系列精度相同的测量, 对于量 $x$ 和 $y$ 得到值 $x_i, y_i$ ($i = 1, 2, \cdots, n$). 利用最小二乘法, 求系数 $a$ 和 $b$ 的最可靠数值.
+\probhint{根据最小二乘法, 系数 $a$ 和 $b$ 的最可靠数值所对应的误差的平方和
+\[
+\sum_{i=1}^{n} \Delta_i^2 = \sum_{i=1}^{n} (ax_i + b - y_i)^2
+\]
+为最小.}
+\end{prob}
+
+\begin{prob}[M]{3709}
+在平面上已知 $n$ 个点 $M_i(x_i, y_i)$ ($i = 1, 2, \cdots, n$). 直线
+\[
+x\cos\alpha + y\sin\alpha - p = 0
+\]
+在怎样的位置时, 这些点与此直线的偏差的平方和为最小?
+\end{prob}
+
+\begin{prob}[M]{3710}
+在区间 $(1, 3)$ 内用线性函数 $ax + b$ 来近似地代替函数 $x^2$, 使得绝对偏差
+\[
+\Delta = \sup |x^2 - (ax + b)| \quad (1 \leqslant x \leqslant 3)
+\]
+为最小.
+\end{prob}
