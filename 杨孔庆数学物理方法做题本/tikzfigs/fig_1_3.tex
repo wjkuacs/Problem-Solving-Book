@@ -1,0 +1,9 @@
+\begin{tikzpicture}[scale=1]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (4.5,0);
+  \coordinate (B) at (1.8,2.1);
+  \draw[vec] (O) -- (A) node[midway,below] {$\boldsymbol{r}_1$};
+  \draw[vec] (O) -- (B) node[midway,above left] {$\boldsymbol{r}_2$};
+  \draw[vec] (B) -- (A) node[midway,above right] {$\boldsymbol{r}_3$};
+  \pic[draw,angle radius=6mm,angle eccentricity=1.35,"$\theta$"] {angle=A--O--B};
+\end{tikzpicture}

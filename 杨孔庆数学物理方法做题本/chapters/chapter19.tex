@@ -1,0 +1,74 @@
+\chapter{其他求解方法及方程}
+
+\problem{19.1}{分别用 Fourier 变换法和 Laplace 变换法求解下面一维无界空间中的输运问题，
+\[
+  \left\{\begin{aligned}
+    &u_t - a^2 u_{xx} = 0,\qquad -\infty<x<\infty \\
+    &u\big|_{t=0} = \varphi(x),
+  \end{aligned}\right.
+\]}
+\answerarea
+
+\problem{19.2}{用 Fourier 变换法求解一维无界弦的受迫振动问题
+\[
+  \left\{\begin{aligned}
+    &u_{tt} - a^2 u_{xx} = f(x,t) \\
+    &u\big|_{t=0} = \varphi(x) \\
+    &u_t\big|_{t=0} = \nu(x)
+  \end{aligned}\right.
+\]}
+\answerarea
+\clearpage
+
+\problem{19.3}{设有两根匀质同质的半无界杆，侧面均绝热，温度分别为 $0$ 和 $u_0$，在 $t=0$ 时刻，将两杆的端点相接，求 $t>0$ 时杆中各点的温度分布。}
+\answerarea
+
+\problem{19.4}{无界静止弦在 $t=0$ 时刻，在 $x=x_0$ 处受到冲量为 $I$ 的冲击作用，试求解弦的振动。
+
+（提示：由 $t=0^-$ 到 $t=0$ 时刻动量的变化等于冲量，可得 $u_t\big|_{t=0}=\dfrac{I}{\rho}\delta(x-x_0)$，并可由 D'Alembert 公式求解。）}
+\answerarea
+\clearpage
+
+\problem{19.5}{场量 $u(x,t)$ 满足下列方程，可设方程有行波解 $u(\xi)$，其中 $\xi=x-at$，试把下列方程化为行波变量 $\xi$ 的常微分方程
+\begin{enumerate}
+  \item $\dfrac{\partial u}{\partial t} + u\dfrac{\partial u}{\partial x} + \beta\dfrac{\partial^3 u}{\partial x^3} = 0$
+  \item $\dfrac{\partial u}{\partial t} + u\dfrac{\partial u}{\partial x} + \alpha\dfrac{\partial^2 u}{\partial x^2} + \beta\dfrac{\partial^3 u}{\partial x^3} + \gamma\dfrac{\partial^4 u}{\partial x^4} = 0$
+  \item $\dfrac{\partial u}{\partial t} - \alpha\dfrac{\partial^2 u}{\partial x^2} - \gamma u(1-u) = 0$
+  \item $\dfrac{\partial^2 u}{\partial t^2} - a^2\dfrac{\partial^2 u}{\partial x^2} + \alpha u^2 = 0$
+  \item $\dfrac{\partial^2 u}{\partial t^2} - a^2\dfrac{\partial^2 u}{\partial x^2} - \alpha\dfrac{\partial^4 u}{\partial x^4} - \beta\dfrac{\partial^2 u^2}{\partial x^2} = 0$
+\end{enumerate}}
+\answerarea
+
+\problem{19.6}{
+\begin{enumerate}
+  \item 请把 $x^{2k},\,k=0,1,2,\cdots,$ 展成 Hermite 多项式的偶次项级数
+  \[
+    x^{2k} = \frac{(2k)!}{2^{2k}}\sum_{n=0}^{k}\frac{\mathrm{H}_{2n}(x)}{(2n)!(k-n)!}
+  \]
+  \item 请把 $x^{2k+1},\,k=0,1,2,\cdots,$ 展成 Hermite 多项式的奇次项级数
+  \[
+    x^{2k+1} = \frac{(2k+1)!}{2^{2k+1}}\sum_{n=0}^{k}\frac{\mathrm{H}_{2n+1}(x)}{(2n+1)!(k-n)!}
+  \]
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{19.7}{请证明：
+\begin{enumerate}
+  \item $\displaystyle\int_{-\infty}^{\infty} \mathrm{H}_n(x)\mathrm{e}^{-\frac{1}{2}x^2}\,\mathrm{d}x = \begin{cases}
+    \dfrac{2\pi n!}{\left(\dfrac{n}{2}\right)!}, & n\text{ 为偶数} \\[12pt]
+    0, & n\text{ 为奇数}
+  \end{cases}$
+  \item $\displaystyle\int_{-\infty}^{\infty} x\mathrm{H}_n(x)\mathrm{e}^{-\frac{1}{2}x^2}\,\mathrm{d}x = \begin{cases}
+    0, & n\text{ 为偶数} \\[6pt]
+    \dfrac{2\pi (n+1)!}{\left(\dfrac{n+1}{2}\right)!}, & n\text{ 为奇数}
+  \end{cases}$
+\end{enumerate}}
+\answerarea
+
+\problem{19.8}{请证明：
+\[
+  \int_{-\infty}^{\infty} x^2\mathrm{e}^{-x^2}\mathrm{H}_n(x)\mathrm{H}_n(x)\,\mathrm{d}x = \sqrt{\pi}\,2^n n!\left(n+\frac{1}{2}\right)
+\]}
+\answerarea
+\clearpage

@@ -1,0 +1,70 @@
+\chapter{波动方程、输运方程、Poisson（泊松）方程及其定解问题}
+
+\problem{13.1}{一均匀材质做成的细长弹性圆杆，长为 $l$，截面积为 $S$，静止放置在水平 $x$ 轴上，在 $t=0$ 时刻，给杆一个沿杆的纵向扰动，使杆产生了纵向的微小位移，试推导杆的纵向振动方程。
+
+如果在 $t=0$ 时刻，该扰动使杆的纵振动各点离开平衡位置的分布为 $u(x,0)=A\sin\dfrac{\pi x}{l}$，$A$ 为常数，且 $u_t(x,0)=0$，分别对如下四种边界状况，写出相应的杆的振动定解问题。
+\begin{enumerate}
+  \item 杆的两个端点 $x=0$ 和 $x=l$ 点刚性固定；
+  \item $x=0$ 点固定，$x=l$ 点为自由端；
+  \item 在 $x=0$ 点按 $A\sin\omega t$ 运动，在 $x=l$ 点按 $A\cos\omega t$ 运动，$A,\omega$ 均为常数；
+  \item 两个端点为弹性固定，端点受到了与位移成正比（比例系数为 $k$）但与位移方向相反的纵向作用力。
+\end{enumerate}}
+\answerarea
+
+\problem{13.2}{一根长为 $l$ 的匀质弦，放置于介质中，当弦振动时，受到介质的阻尼力，请对阻尼力建立一个合理的模型，并推导弦在此介质中有阻尼的弦的振动方程。
+
+请你给出恰当的初始条件，写出相应的四种不同的弦（任给出四种不同的边界条件）的阻尼振动的定解问题。}
+\answerarea
+\clearpage
+
+\problem{13.3}{用匀质材料做成的细圆锥杆（指圆锥角很小，即锥体的长度很长而底部的圆形截面半径很小），试推导此圆锥杆的纵振动方程。
+
+把所得的方程与 13.1 题的细长圆杆的纵振动方程进行比较，说明两个方程之间的差异。}
+\answerarea
+
+\problem{13.4}{一电阻率为 $\gamma$，截面均为 $S$ 的匀质导线，通有电流密度为 $j$ 的均匀分布的直流电，设该材质的导热系数为 $\kappa$，比热容为 $c$，密度为 $\rho$，设导线的侧面均为绝热的，试推导该导线上的热传导方程。}
+\answerarea
+\clearpage
+
+\problem{13.5}{设一匀质金属球，其半径为 $a$，以球心为坐标原点，请写出球坐标下的热传导方程（设导热系数为 $\kappa$）。
+
+若把球的表面涂黑，置于阳光下，设球面附近阳光的热流强度为 $M$（设阳光为平行光，在垂直于阳光的单位面积上，在单位时间内流经这一单位面积上的太阳光的热量为 $M$），而球外环境的温度为 $0\,^\circ\mathrm{C}$，金属球表面同时按牛顿冷却定律散热。设在 $t=0$ 时刻，金属球的温度为 $T_0$，试给出该定解问题。}
+\answerarea
+
+\problem{13.6}{在铀块中，除了中子的扩散运动（扩散系数为 $D$）外，还存在中子的吸收和增殖反应过程。设在单位时间内，单位体积中吸收和增殖的中子数正比于该时刻该处中子的浓度 $u(\boldsymbol{r},t)$，即 $\beta u(\boldsymbol{r},t)$，$\beta$ 为比例常数（或称为净增殖系数）。若我们选取的铀块是匀质的球状铀块，铀块的半径为 $a$。试在球坐标下导出中子浓度 $u(\boldsymbol{r},t)$ 扩散所满足的方程。
+
+若球状铀块的表面边界满足如下几种不同的条件，请写出相应条件下的定解问题。（初始条件请做个合理的假设。）
+\begin{enumerate}
+  \item 铀块表面的中子浓度为零；
+  \item 没有中子从铀块表面逸出（或是从铀块表面逸出的中子数目与回到铀块表面的中子数目相等）；
+  \item 铀块表面的中子浓度不随时间变化。
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{13.7}{写出静电场中电介质表面静电场的衔接条件。}
+\answerarea
+
+\problem{13.8}{一根导热杆由两段 $l_1$ 与 $l_2$ 相衔接构成，两端的导热系数、比热和密度分别为 $\kappa_1,c_1,\rho_1$ 和 $\kappa_2,c_2,\rho_2$。设杆的初始温度为 $u_0$，保持杆的两个端点的温度为 $0\,^\circ\mathrm{C}$。试写出该导热杆的热传导的定解问题（假定导热杆的侧面均为绝热的）。}
+\answerarea
+\clearpage
+
+\problem{13.9}{在均匀介质区域 $\Omega$ 内，对在稳定的热流分布 $f(\boldsymbol{r})$ 产生的温度场 $u(\boldsymbol{r})$ 满足 Poisson 方程 $\nabla^2 u(\boldsymbol{r})=-f(\boldsymbol{r})$，其中 $f(\boldsymbol{r})=\dfrac{F(\boldsymbol{r})}{\kappa}$，$\kappa$ 为导热系数，$F(\boldsymbol{r})$ 是热流密度。
+\begin{enumerate}
+  \item 试说明第一，二，三类边界条件在此问题中的物理意义；
+  \item 试说明第二类边界条件存在的必要条件。
+\end{enumerate}}
+\answerarea
+
+\problem{13.10}{在真空区域 $\Omega$ 内，有稳定的电荷分布 $\rho(\boldsymbol{r})$，则在 $\Omega$ 中存在稳定的电势分布，电势 $u(\boldsymbol{r})$ 满足 Poisson 方程
+\[
+  \nabla^2 u(\boldsymbol{r}) = -\frac{1}{\varepsilon_0}\rho(\boldsymbol{r})
+\]
+其中 $\varepsilon_0$ 为真空介电常数。若 $\Omega$ 的边界 $\partial\Omega$ 是一导体壳，当
+\begin{enumerate}
+  \item 导体壳接地；
+  \item 导体壳不接地。
+\end{enumerate}
+分别对这两种情况，说明第一类和第二类边界条件的物理意义。}
+\answerarea
+\clearpage

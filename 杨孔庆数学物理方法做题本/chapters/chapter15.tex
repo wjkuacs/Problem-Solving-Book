@@ -1,0 +1,143 @@
+\chapter{曲线坐标系下方程的分离变量}
+
+\problem{15.1}{试用平面极坐标 $(\rho,\varphi)$，把二维波动方程分离变量。}
+\answerarea
+
+\problem{15.2}{在量子物理学中氢原子满足的定态 Schrödinger 方程
+\[
+  -\frac{\hbar^2}{2m}\nabla^2 u(\boldsymbol{r}) - \frac{e^2}{r}u(\boldsymbol{r}) = E u(\boldsymbol{r})
+\]
+其中 $\hbar,m,e,E$ 都为常数，试用球坐标将此方程分离变量。}
+\answerarea
+\clearpage
+
+\problem{15.3}{在 $x=0$ 的邻域内求下列方程的两个独立的级数解，并对这两个方程的级数解进行比较
+\begin{enumerate}
+  \item $y''-xy'=0$；
+  \item $y''-x^2y'=0$。
+\end{enumerate}}
+\answerarea
+
+\problem{15.4}{在 $x=0$ 的邻域内求解方程
+\[
+  (x^2-1)y'' + xy' - y = 0
+\]
+的两个独立的级数解。}
+\answerarea
+\clearpage
+
+\problem{15.5}{在 $x=0$ 的邻域内求 Chebyshev（切比雪夫）方程
+\[
+  (1-x^2)y'' - xy' + n^2 y = 0\quad (n\text{ 为正整数})
+\]
+的级数解。}
+\answerarea
+
+\problem{15.6}{在 $x=0$ 的邻域内，用级数展开法求解 Euler-Cauchy 方程
+\[
+  x^2 y'' + 2x y' = 0
+\]}
+\answerarea
+\clearpage
+
+\problem{15.7}{在 $x=0$ 的邻域内求方程
+\[
+  xy'' - xy' + y = 0
+\]
+的两个独立的级数解。}
+\answerarea
+
+\problem{15.8}{在 $z=0$ 的邻域内求解下列方程的两个独立级数解，并对这两个方程的级数解进行比较
+\begin{enumerate}
+  \item $\dfrac{\mathrm{d}^2 u(z)}{\mathrm{d}z^2} + \dfrac{2}{z}\dfrac{\mathrm{d}u(z)}{\mathrm{d}z} + m^2 u(z) = 0$；
+  \item $\dfrac{\mathrm{d}^2 u(z)}{\mathrm{d}z^2} + \dfrac{1}{z}\dfrac{\mathrm{d}u(z)}{\mathrm{d}z} - m^2 u(z) = 0$。
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{15.9}{对二阶齐次常微分方程
+\[
+  y'' + p(x)y' + q(x)y = 0
+\]
+设 $y_1$ 和 $y_2$ 是它的两个线性独立的解，并可定义 Wronske（朗斯基）行列式 $W(x)$
+\[
+  W(x) = y_1 y_2' - y_1' y_2 = \begin{vmatrix} y_1 & y_2 \\ y_1' & y_2' \end{vmatrix}
+\]
+\begin{enumerate}
+  \item 试证明 $W(x)$ 满足
+  \[
+    W'(x) = -p(x)W(x)
+  \]
+  \item $W(x)$ 可写为
+  \[
+    W(x) = y_1^2 \frac{\mathrm{d}}{\mathrm{d}x}\left(\frac{y_2}{y_1}\right)
+  \]
+  试证明：两个解 $y_1(x)$ 和 $y_2(x)$ 有如下关系
+  \[
+    y_2(x) = C y_1(x) \int_b^x \frac{\mathrm{e}^{-\int_a^{x'} p(x'')\,\mathrm{d}x''}}{[y_1(x')]^2}\,\mathrm{d}x'
+  \]
+  其中 $a,b$ 为任意常数，$C$ 为积分常数，它与 $a,b$ 的选取有关。上式表明，对于本题所给定的二阶齐次常微分方程的形式，当已知一个解 $y_1(x)$ 时，可通过上式求出另一个线性独立的解 $y_2(x)$。
+\end{enumerate}}
+\answerarea
+
+\problem{15.10}{利用 15.9 题的结果，已知下列方程的一个解，求出另一个线性独立的解，
+\begin{enumerate}
+  \item 已知方程
+  \[
+    \frac{\mathrm{d}^2 y}{\mathrm{d}x^2} + y = 0
+  \]
+  的一个解 $y_1=\sin x$，求另一个解 $y_2$。
+  \item 已知方程
+  \[
+    \frac{\mathrm{d}^2 R(r)}{\mathrm{d}r^2} + \frac{1}{r}\frac{\mathrm{d}R(r)}{\mathrm{d}r} - \frac{m^2}{r^2}R(r) = 0
+  \]
+  的一个解 $R_1(r)=r^m$，求另一个解 $R_2(r)$。
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{15.11}{考虑 Sturm-Liouville 本征值的问题：对于方程
+\[
+  \frac{1}{w(x)}\frac{\mathrm{d}}{\mathrm{d}x}\left[w(x)a(x)\frac{\mathrm{d}u(x)}{\mathrm{d}x}\right] + [c(x)-\lambda]u(x) = 0,\quad x\in[a,b]
+\]
+其中函数 $w(x),a(x)$ 和 $c(x)$ 满足如下条件：
+\begin{gather*}
+  a(x) = a_0 + a_1 x + a_2 x^2 \\
+  \frac{1}{w(x)}\frac{\mathrm{d}}{\mathrm{d}x}[w(x)a(x)] = b_0 + b_1 x \\
+  c(x) = c_0 \\
+  [w(x)a(x)]_{x=a} = [w(x)a(x)]_{x=b} = 0
+\end{gather*}
+且 $w(x)a(x)$ 在区间 $(a,b)$ 内不为零。$a_0,a_1,a_2,b_0,b_1,c_0$ 均为实数。
+
+请证明：对于给定的本征值 $\{\lambda_n\}$
+\[
+  \lambda_n = n(n-1)a_2 + nb_1 + c_0,\quad n=0,1,2,3,\cdots
+\]
+\begin{enumerate}
+  \item 总存在非平凡的多项式解
+  \[
+    u_n(x) = \sum_{k=0}^n \alpha_k^{(n)} x^k
+  \]
+  其中 $\alpha_k^{(n)}$ 为 $n$ 次多项式的展开系数。
+  \item 这些多项式具有正交性
+  \[
+    \int_a^b u_m^*(x)u_n(x)w(x)\,\mathrm{d}x = 0,\quad m\neq n
+  \]
+\end{enumerate}}
+\answerarea
+
+\problem{15.12}{在 $x=0$ 点邻域内，求 Laguerre（拉盖尔）方程
+\[
+  xy'' + (1-x)y' + \lambda y = 0
+\]
+的级数解。当 $\lambda$ 取什么值时，可使级数退化为多项式？这些多项式乘以适当的常数使最高幂次项成为 $(-x)^n$ 的形式，此时的多项式称为 Laguerre 多项式，记为 $L_n(x)$，写出 $L_n(x)$ 的前三项。}
+\answerarea
+\clearpage
+
+\problem{15.13}{在 $x=0$ 点邻域内，求解 Gauss 方程（超几何级数方程），
+\[
+  x(x-1)y'' + [(1+\alpha+\beta)x-\gamma]y' + \alpha\beta y = 0
+\]
+的级数解。}
+\answerarea
+\clearpage

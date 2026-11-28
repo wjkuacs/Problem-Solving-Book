@@ -1,0 +1,114 @@
+\chapter{$\mathbf{R}^3$ 空间的向量分析}
+
+\problem{1.1}{$\boldsymbol{C}$ 为 $\mathbf{R}^3$ 空间的已知向量，若有向量 $\boldsymbol{A}$ 和 $\boldsymbol{B}$，且 $\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{C}$ 和 $\boldsymbol{A}-\boldsymbol{B}=\boldsymbol{C}$，求 $\boldsymbol{A},\boldsymbol{B}$ 向量。}
+\answerarea
+
+\problem{1.2}{$\boldsymbol{C}$ 和 $\boldsymbol{D}$ 为 $\mathbf{R}^3$ 空间的已知向量，若有向量 $\boldsymbol{A}$ 和 $\boldsymbol{B}$，且 $\boldsymbol{A}+\boldsymbol{B}=\boldsymbol{C}$ 和 $\boldsymbol{A}-\boldsymbol{B}=\boldsymbol{D}$，求 $\boldsymbol{A},\boldsymbol{B}$ 向量。
+
+如果在笛卡儿坐标系中 $\boldsymbol{C}=c_i\boldsymbol{e}_i,\,\boldsymbol{D}=d_i\boldsymbol{e}_i\ (i=1,2,3)$，请写出 $\boldsymbol{A},\boldsymbol{B}$ 向量的具体表达式。}
+\answerarea
+\clearpage
+
+\problemfig[0.36]{1.3}{有向量 $\boldsymbol{r}_1,\boldsymbol{r}_2$ 和 $\boldsymbol{r}_3$ 如习题 1.3 图所示，请证明余弦定理
+\[
+  r_3^2 = r_1^2 + r_2^2 - 2r_1r_2\cos\theta
+\]
+其中 $|\boldsymbol{r}_1|=r_1,\,|\boldsymbol{r}_2|=r_2,\,|\boldsymbol{r}_3|=r_3$。}{1_3}
+\answerarea
+
+\problem{1.4}{请用向量运算（不用坐标系）直接证明
+\[
+  (\boldsymbol{A}+\boldsymbol{B})\cdot(\boldsymbol{A}-\boldsymbol{B}) = A^2 - B^2
+\]
+请用 Cartesian 坐标系再证明一遍上述结论。}
+\answerarea
+\clearpage
+
+\problem{1.5}{在 $\mathbf{R}^3$ 空间中，在空间转动 $\boldsymbol{A}$ 的变换下（即直角坐标系的转动变换），向量 $\boldsymbol{X}$ 变为 $\boldsymbol{X}'$：
+\[
+  \boldsymbol{X}' = \boldsymbol{A}\boldsymbol{X}
+\]
+且满足 $\boldsymbol{A}\cdot\boldsymbol{A}^{\mathrm{T}}=\boldsymbol{I}$，$\boldsymbol{A}^{\mathrm{T}}$ 为 $\boldsymbol{A}$ 的转置，$\boldsymbol{I}$ 为单位矩阵，请证明：两个向量 $\boldsymbol{X}$ 和 $\boldsymbol{Y}$ 的标量积 $\boldsymbol{X}\cdot\boldsymbol{Y}$ 在此转动变换下为不变量。}
+\answerarea
+
+\problem{1.6}{请证明，在 $\mathbf{R}^3$ 空间中向量 $\boldsymbol{A}$ 和 $\boldsymbol{B}$ 满足
+\[
+  (\boldsymbol{A}\times\boldsymbol{B})\cdot(\boldsymbol{A}\times\boldsymbol{B}) = A^2B^2 - (\boldsymbol{A}\cdot\boldsymbol{B})^2
+\]}
+\answerarea
+\clearpage
+
+\problem{1.7}{在 $\mathbf{R}^3$ 空间中证明
+\begin{enumerate}
+  \item $\nabla\cdot\boldsymbol{r}=3$；
+  \item $\nabla\times\boldsymbol{r}=0$；
+  \item $\nabla\cdot(\boldsymbol{A}+\boldsymbol{B})=\nabla\cdot\boldsymbol{A}+\nabla\cdot\boldsymbol{B}$；
+  \item $\nabla\times(\boldsymbol{A}+\boldsymbol{B})=\nabla\times\boldsymbol{A}+\nabla\times\boldsymbol{B}$。
+\end{enumerate}}
+\answerarea
+
+\problem{1.8}{请证明：静电场是一个无旋场，静磁场是一个无源（点源）场。}
+\answerarea
+\clearpage
+
+\problem{1.9}{若 $\varphi(\boldsymbol{r})$ 为 $\mathbf{R}^3$ 空间中的标量函数，$\boldsymbol{A}(\boldsymbol{r})$ 和 $\boldsymbol{B}(\boldsymbol{r})$ 为此空间中的向量函数，请证明：
+\begin{enumerate}
+  \item $\nabla\cdot(\varphi\boldsymbol{A})=\boldsymbol{A}\cdot(\nabla\varphi)+\varphi\nabla\cdot\boldsymbol{A}$；
+  \item $\nabla\times(\varphi\boldsymbol{A})=\varphi\nabla\times\boldsymbol{A}-\boldsymbol{A}\times(\nabla\varphi)$；
+  \item $\nabla\times(\boldsymbol{A}\times\boldsymbol{B})=(\boldsymbol{B}\cdot\nabla)\boldsymbol{A}-\boldsymbol{B}(\nabla\cdot\boldsymbol{A})-(\boldsymbol{A}\cdot\nabla)\boldsymbol{B}+\boldsymbol{A}(\nabla\cdot\boldsymbol{B})$；
+  \item $\nabla(\boldsymbol{A}\cdot\boldsymbol{B})=(\boldsymbol{B}\cdot\nabla)\boldsymbol{A}+(\boldsymbol{A}\cdot\nabla)\boldsymbol{B}+\boldsymbol{B}\times\nabla\times\boldsymbol{A}+\boldsymbol{A}\times\nabla\times\boldsymbol{B}$。
+\end{enumerate}}
+\answerarea
+
+\problem{1.10}{请计算：
+\[
+  \nabla^2\frac{1}{r}
+\]
+其中 $r=|\boldsymbol{r}|$。}
+\answerarea
+\clearpage
+
+\problem{1.11}{在 $\mathbf{R}^3$ 空间中，对于定义在单连通区域 $\Omega$ 上的向量场 $\boldsymbol{A}(\boldsymbol{r})$，若 $\boldsymbol{A}$ 在 $\Omega$ 的边界 $\partial\Omega$ 上的法向值完全确定，且 $\boldsymbol{A}$ 在 $\Omega$ 上的散度和旋度存在：
+\[
+  \nabla\cdot\boldsymbol{A}=q,\qquad \nabla\times\boldsymbol{A}=\boldsymbol{H}
+\]
+请证明，在 $\Omega$ 上这样的向量场 $\boldsymbol{A}$ 是唯一的。这一结论被称为 Helmholtz 定理。（提示：设另一个与 $\boldsymbol{A}$ 完全满足相同条件的向量场 $\boldsymbol{B}$，证明 $\boldsymbol{B}=\boldsymbol{A}$。）}
+\answerarea
+
+\problem{1.12}{若刚体以恒定角速度 $\boldsymbol{\omega}$ 转动，有一粒子固定于刚体以速度 $\boldsymbol{v}$ 运动，求证
+\[
+  \nabla\times\boldsymbol{v}=2\boldsymbol{\omega}
+\]
+（提示：由 $\boldsymbol{v}=\boldsymbol{v}_C+\boldsymbol{\omega}\times\boldsymbol{r}$，取质心 $C$ 为参考点，建立坐标系，在此坐标系中 $\boldsymbol{v}_C=0$，进行运算。）}
+\answerarea
+\clearpage
+
+\problem{1.13}{由 Ampere（安培）定律
+\[
+  \int_S \boldsymbol{J}\cdot\mathrm{d}\boldsymbol{\sigma} = \int_{\partial S}\boldsymbol{H}\cdot\mathrm{d}\boldsymbol{l}
+\]
+其中 $\boldsymbol{J}$ 为穿过空间曲面 $S$ 的电流密度向量，$\mathrm{d}\boldsymbol{\sigma}$ 为 $S$ 的有向面元，其法向正向由右手定则确定，$\boldsymbol{H}$ 为磁场强度向量，$\mathrm{d}\boldsymbol{l}$ 为 $S$ 的边界 $\partial S$ 的线元，其方向由右手定则确定，它与 $\mathrm{d}\boldsymbol{\sigma}$ 的定向自洽。
+
+请证明：$\nabla\times\boldsymbol{H}=\boldsymbol{J}$。（提示：应用 Stokes 公式证明。）}
+\answerarea
+
+\problem{1.14}{有一物理体系，它由三个向量场 $\boldsymbol{E},\boldsymbol{H},\boldsymbol{A}$ 和一个实标量场 $V$ 来描述，并且 $\boldsymbol{E},\boldsymbol{H},\boldsymbol{A}$ 和 $V$ 满足如下关系：
+\[
+  \nabla\cdot\boldsymbol{E}=-\mu^2 V,\quad \boldsymbol{E}=\frac{\partial\boldsymbol{A}}{\partial t}-\nabla V,\quad \boldsymbol{H}=\nabla\times\boldsymbol{A},\quad \nabla\times\boldsymbol{H}=\frac{\partial\boldsymbol{E}}{\partial t}-\mu^2\boldsymbol{A}
+\]
+其中 $\mu$ 为正的常数。求证：
+\begin{enumerate}
+  \item $\nabla\cdot\boldsymbol{A}+\dfrac{\partial V}{\partial t}=0$；
+  \item $\nabla^2 V-\mu^2 V+\dfrac{\partial^2 V}{\partial t^2}=0$；
+  \item 当我们考虑在区域 $\Omega$ 中，$V$ 与时间无关，且在 $\Omega$ 的边界 $\partial\Omega$ 上有 $V\big|_{\partial\Omega}=0$ 时，请证明：在 $\Omega$ 中 $V=0$。
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{1.15}{若定义算符 $\hat{\boldsymbol{p}}=-\mathrm{i}\hbar\nabla$，$\hat{\boldsymbol{B}}=\nabla\times\boldsymbol{A}$，其中 $\mathrm{i}$ 为虚数单位，$\hbar$ 为常数，$\boldsymbol{A}$ 为向量场。请证明：
+\[
+  (\hat{\boldsymbol{p}}-e\boldsymbol{A})\times(\hat{\boldsymbol{p}}-e\boldsymbol{A})=\mathrm{i}e\hbar\hat{\boldsymbol{B}}
+\]
+其中 $e$ 为常数。}
+\answerarea
+\clearpage

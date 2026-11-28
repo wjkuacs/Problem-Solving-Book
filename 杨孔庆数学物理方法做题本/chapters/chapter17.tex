@@ -1,0 +1,109 @@
+\chapter{柱函数}
+
+\problem{17.1}{试证明
+\begin{gather*}
+  \cos x = \mathrm{J}_0(x) + 2\sum_{m=1}^{\infty}(-1)^m\mathrm{J}_{2m}(x) \\
+  \sin x = 2\sum_{m=0}^{\infty}(-1)^m\mathrm{J}_{2m+1}(x)
+\end{gather*}
+（提示：对整数阶 Bessel 函数的生成函数 $\mathrm{e}^{\frac{x}{2}\left(z-\frac{1}{z}\right)}$ 取 $z=\mathrm{i}$ 进行展开运算。）}
+\answerarea
+
+\problem{17.2}{试证明
+\begin{gather*}
+  \frac{1}{\pi}\int_0^\pi \cos(x\sin\theta)\cos m\theta\,\mathrm{d}\theta = \begin{cases} \mathrm{J}_m(x), & m\text{ 为偶数} \\ 0, & m\text{ 为奇数} \end{cases} \\
+  \frac{1}{\pi}\int_0^\pi \sin(x\sin\theta)\sin m\theta\,\mathrm{d}\theta = \begin{cases} 0, & m\text{ 为偶数} \\ \mathrm{J}_m(x), & m\text{ 为奇数} \end{cases}
+\end{gather*}
+并进一步证明
+\[
+  \mathrm{J}_m(x) = \frac{1}{\pi}\int_0^\pi \cos(m\theta-x\sin\theta)\,\mathrm{d}\theta,\quad m=0,1,2,\cdots
+\]
+（提示：对整数阶 Bessel 函数的生成函数 $\mathrm{e}^{\frac{x}{2}\left(z-\frac{1}{z}\right)}$ 取 $z=\mathrm{e}^{\mathrm{i}\theta}$ 进行展开运算。）}
+\answerarea
+\clearpage
+
+\problem{17.3}{试证明
+\[
+  1 = [\mathrm{J}_0(x)]^2 + 2\sum_{m=1}^{\infty}[\mathrm{J}_m(x)]^2
+\]
+因此有结论 $|\mathrm{J}_0(x)|^2\leqslant 1,\quad |\mathrm{J}_m(x)|\leqslant\dfrac{1}{\sqrt{2}}$
+
+（提示：对整数阶 Bessel 函数的生成函数 $\mathrm{e}^{\frac{x}{2}\left(z-\frac{1}{z}\right)}$ 和 $\mathrm{e}^{\frac{x}{2}\left[(-z)-\frac{1}{(-z)}\right]}$ 相乘可证。）}
+\answerarea
+
+\problem{17.4}{用整数阶 Bessel 函数的生成函数证明
+\[
+  \mathrm{J}_m(x) = (-1)^m\mathrm{J}_m(-x)
+\]
+这说明整数阶 Bessel 函数的对称性，当 $m$ 为奇数时为奇对称，当 $m$ 为偶数时为偶对称。注意：此关系式由 $\mathrm{J}_m(x)$ 的级数表达式可直接得到。}
+\answerarea
+\clearpage
+
+\problem{17.5}{计算下列积分
+\begin{enumerate}
+  \item $\displaystyle\int_0^b \mathrm{J}_0(x)\,\mathrm{d}x$ \qquad
+  \item $\displaystyle\int_0^b \mathrm{J}_1(x)\,\mathrm{d}x$
+  \item $\displaystyle\int_0^b x\mathrm{J}_0(x)\,\mathrm{d}x$ \qquad
+  \item $\displaystyle\int_0^b x^3\mathrm{J}_0(x)\,\mathrm{d}x$
+  \item $\displaystyle\int_0^b x^4\mathrm{J}_1(x)\,\mathrm{d}x$ \qquad
+  \item $\displaystyle\int_0^b \mathrm{J}_3(x)\,\mathrm{d}x$
+\end{enumerate}}
+\answerarea
+
+\problem{17.6}{在 $\rho\in(0,b)$ 的区间上，在第一类齐次边界条件下，在由零阶 Bessel 函数所构成的本征函数空间中（该空间的基向量为 $\left\{\mathrm{J}_0\!\left[\dfrac{x_n^{(0)}}{b}\rho\right],\,n=1,2,\cdots\right\}$，$x_n^{(0)}$ 为 $\mathrm{J}_0$ 的第 $n$ 个零点），把函数 $f(\rho)=1$ 展开。}
+\answerarea
+\clearpage
+
+\problem{17.7}{在高为 $h$，半径为 $b$ 的柱体内，取柱坐标的原点在下底的圆心，对于边界条件为
+\[
+  \left\{\begin{aligned}
+    &Z(z)\big|_{z=0} = Z(z)\big|_{z=h} = 0 \\
+    &R(\rho)\big|_{\rho=b} = 0
+  \end{aligned}\right.
+\]
+求解稳定场 $u(\rho,\varphi,z)$ 满足方程 $\nabla^2 u(\rho,\varphi,z)=f(\rho,\varphi,z)$ 的场的分布，并对解得结果说明其物理图像。
+
+求解输运方程
+\[
+  \frac{\partial u}{\partial t} - a^2\nabla^2 u = f(\rho,\varphi,z)
+\]
+并对解得结果说明其物理图像。}
+\answerarea
+
+\problem{17.8}{边缘固定半径为 $R$ 的圆形膜，初始形状为旋转抛物面
+\[
+  u\big|_{t=0} = \left(1-\frac{\rho^2}{R^2}\right)H\quad (H\text{ 为常数})
+\]
+且初速度为零，求此膜的振动。}
+\answerarea
+\clearpage
+
+\problem{17.9}{高为 $h$，半径为 $b$，导热系数为 $\kappa$ 的圆柱体，其下底面保持零度，上底面的温度为 $\rho$ 的函数 $f(\rho)$，其侧面在零度的环境中自由冷却（满足牛顿冷却定律），冷却系数为 $H$，求柱内温度场的稳定分布。}
+\answerarea
+
+\problem{17.10}{半径为 $b$ 介电常数为 $\varepsilon$ 的长直均质介质圆柱，放入均匀电场 $\boldsymbol{E}_0$ 中，圆柱的轴线与 $\boldsymbol{E}_0$ 垂直，求解柱体内外的电场。}
+\answerarea
+\clearpage
+
+\problem{17.11}{由圆弧 $\rho=a$ 和 $\rho=b\,(b>a)$，和矢径角度 $\varphi=0$ 与 $\varphi=\alpha$ 围成的扇形区域内（如习题 17.11 图所示），求解 Laplace 方程
+\[
+  \nabla^2 u = 0
+\]
+使场 $u(\rho,\varphi)$ 的分布满足边界条件
+\[
+  \left\{\begin{aligned}
+    &u\big|_{\rho=a} = 0,\quad u\big|_{\rho=b} = u_0 \\
+    &u\big|_{\varphi=0} = u\big|_{\varphi=\alpha} = 0
+  \end{aligned}\right.
+\]
+\fig[0.42]{17_11}
+分别以角度 $\varphi$ 的方程的本征值问题和以径向 $\rho$ 的方程的本征值问题进行求解，比较这两种解法的差异。}
+\answerarea
+
+\problem{17.12}{半径为 $r_0$ 的均质球，球面始终保持零度，初始时刻球内温度分布为：
+\begin{enumerate}
+  \item $u\big|_{t=0}=f(r)$
+  \item $u\big|_{t=0}=f(r)\cos\theta$
+\end{enumerate}
+分别求解这两种初始条件下球内温度分布的变化，当 $t\to\infty$ 时，这两种情况解得的结果进行比较，说明其物理图像。}
+\answerarea
+\clearpage

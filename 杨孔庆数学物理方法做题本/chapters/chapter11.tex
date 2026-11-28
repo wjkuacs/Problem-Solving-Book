@@ -1,0 +1,61 @@
+\chapter{$\delta$ 函数}
+
+\problem{11.1}{若函数 $\delta_\varepsilon(x)$ 的定义为
+\[
+  \delta_\varepsilon = \begin{cases}
+    0 & x>\varepsilon,\ x<0 \\[4pt]
+    \dfrac{1}{\varepsilon} & 0\leqslant x<\varepsilon
+  \end{cases}
+\]
+请验证 $\lim_{\varepsilon\to 0}\delta_\varepsilon(x)=\delta(x)$}
+\answerarea
+
+\problem{11.2}{请验证
+\[
+  \lim_{n\to\infty}\sqrt{\frac{n}{\pi}}\mathrm{e}^{-nx^2} = \delta(x)
+\]}
+\answerarea
+\clearpage
+
+\problem{11.3}{请验证
+\[
+  \lim_{n\to\infty}\frac{1}{\pi}\int_0^n \cos kx\,\mathrm{d}k = \lim_{n\to\infty}\frac{\sin nx}{\pi x} = \delta(x)
+\]}
+\answerarea
+
+\problem{11.4}{设函数 $f(t)=\cos xt$ 的 Laplace 变换为 $F(p)$，即
+\[
+  F(p) \doteqdot \cos xt
+\]
+请验证
+\[
+  \lim_{p\to 0}\frac{1}{\pi}F(p) = \delta(x)
+\]}
+\answerarea
+\clearpage
+
+\problem{11.5}{对 Heaviside 函数
+\[
+  H(t-\tau) = \begin{cases}
+    1 & t\geqslant\tau \\
+    0 & t<\tau
+  \end{cases}
+\]
+请验证
+\[
+  H'(t-\tau) = \delta(t-\tau)
+\]
+并以此求 $\delta(t-\tau)$ 的 Laplace 变换的像函数。}
+\answerarea
+
+\problem{11.6}{已知某一频谱为：
+\[
+  f(\omega) = \frac{2A\omega_0}{\pi(\omega^2-\omega_0^2)}\sin\!\left(\frac{\omega}{\omega_0}2\pi N\right)
+\]
+请验证
+\[
+  \lim_{N\to\infty} f(\omega) = A\delta(\omega-\omega_0) - A\delta(\omega+\omega_0)
+\]
+其中 $A,\omega_0$ 为正的常数，$N$ 为正整数。}
+\answerarea
+\clearpage

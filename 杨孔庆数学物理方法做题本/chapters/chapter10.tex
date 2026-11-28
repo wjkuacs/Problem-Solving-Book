@@ -1,0 +1,66 @@
+\chapter{Laplace（拉普拉斯）变换}
+
+\problem{10.1}{求下列函数的 Laplace 变换的像函数。
+\begin{enumerate}
+  \item $\sinh\omega t$ \qquad
+  \item $\cosh\omega t$
+  \item $\cos(\omega t+\alpha)$ \qquad
+  \item $\cos^2\omega t$
+  \item $\mathrm{e}^{-\alpha t}\sin\omega t,\quad \alpha>0$ \qquad
+  \item $\dfrac{\cos at-\cos bt}{b^2-a^2},\quad a^2\neq b^2$
+\end{enumerate}}
+\answerarea
+
+\problem{10.2}{若一函数 $f(t)$，其 Laplace 的像函数为 $F(p)$，请证明：
+\[
+  \lim_{t\to 0^+} f(t) = \lim_{p\to\infty} pF(p)
+\]}
+\answerarea
+\clearpage
+
+\problem{10.3}{已知下列 Laplace 变换的像函数 $F(p)$，求原函数 $f(t)$：
+\begin{enumerate}
+  \item $F(p)=\dfrac{1}{(p+a)(p+b)},\quad a\neq b$ \qquad
+  \item $F(p)=\dfrac{3p}{p^2-1}$
+  \item $F(p)=\dfrac{E}{Lp^2+Rp+\dfrac{1}{C}},\quad E,L,R,C\text{ 都为大于零的实常数}$
+  \item $F(p)=\dfrac{1}{(p^2+a^2)(p^2+b^2)},\quad a^2\neq b^2$
+  \item $F(p)=\dfrac{\mathrm{e}^{-\alpha p}}{p^2},\quad \alpha>0$ \qquad
+  \item $F(p)=\dfrac{1}{p}\cdot\dfrac{\mathrm{e}^{-\alpha p}}{1-\mathrm{e}^{-\alpha p}},\quad \alpha>0$
+\end{enumerate}}
+\answerarea
+
+\problem{10.4}{已知误差函数的定义为：
+\[
+  \erf(x) = \frac{2}{\sqrt{\pi}}\int_0^x \mathrm{e}^{-\tau^2}\,\mathrm{d}\tau
+\]
+试求 $\erf(\sqrt{t})$ 的像函数。}
+\answerarea
+\clearpage
+
+\problem{10.5}{用 Laplace 变换求下列积分：
+\begin{enumerate}
+  \item $f(t)=\displaystyle\int_0^\infty \frac{\sin tx}{x}\,\mathrm{d}x$ \qquad
+  \item $f(t)=\displaystyle\int_0^\infty \frac{\sin tx}{x(x^2+1)}\,\mathrm{d}x$
+  \item $\displaystyle\int_0^\infty \mathrm{e}^{-\sqrt{x}}\,\mathrm{d}x$
+\end{enumerate}}
+\answerarea
+
+\problem{10.6}{用 Laplace 变换求解下列常微分方程，其中 $y=y(t),\,z=z(t)$
+\begin{enumerate}
+  \item $\left\{\begin{aligned} &y''-4y=0 \\ &y(0)=-1,\ y'(0)=1 \end{aligned}\right.$ \qquad
+  \item $\left\{\begin{aligned} &y'''-y''+4y'-4y=t \\ &y(0)=0,\ y'(0)=0,\ y''(0)=1 \end{aligned}\right.$
+  \item $\left\{\begin{aligned} &y'''+3y''+3y'+y=6\mathrm{e}^{-t} \\ &y(0)=0,\ y'(0)=0,\ y''(0)=0 \end{aligned}\right.$ \qquad
+  \item $\left\{\begin{aligned} &y'+y+2z'+2z=\mathrm{e}^{-t} \\ &3y'-y+4z'+z=0 \\ &y(0)=-1 \\ &z(0)=0 \end{aligned}\right.$
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{10.7}{用 Laplace 变换求解 $T(t)$ 的方程
+\begin{enumerate}
+  \item $\left\{\begin{aligned} &T''+\frac{\pi^2 a^2}{l^2}T=A\sin\omega t \\ &T(0)=0,\ T'(0)=0 \end{aligned}\right.$ \\
+  其中 $a,A,\omega$ 均为正的常数。
+  \item $\left\{\begin{aligned} &T'+\omega^2 a^2 T=g(t) \\ &T(0)=0 \end{aligned}\right.$ \\
+  其中 $g(t)$ 为已知函数，$\omega,a$ 为正的常数。
+\end{enumerate}}
+\answerarea
+\clearpage

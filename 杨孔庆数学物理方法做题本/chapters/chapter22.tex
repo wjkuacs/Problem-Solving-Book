@@ -1,0 +1,56 @@
+\chapter{变分原理}
+
+\problem{22.1}{对于 $y'=\dfrac{\mathrm{d}y}{\mathrm{d}x}\neq 0$，请证明以下两种形式的 Euler-Lagrange 方程
+\[
+  \frac{\partial f}{\partial x} - \frac{\mathrm{d}}{\mathrm{d}x}\frac{\partial f}{\partial y'} = 0
+\]
+和
+\[
+  \frac{\partial f}{\partial y} - \frac{\mathrm{d}}{\mathrm{d}x}\left(f - y'\frac{\partial f}{\partial y'}\right) = 0
+\]
+是等价的。（Euler-Lagrange 方程具有多种形式。）}
+\answerarea
+
+\problem{22.2}{对常参数 $\alpha$ 的泛函
+\[
+  I(\alpha) = \int_{x_0}^{x_1} f[y(x,\alpha),\,y_x(x,\alpha),\,x]\,\mathrm{d}x
+\]
+把被积函数 $f$ 在 $\alpha=0$ 点展成参数 $\alpha$ 的 Taylor 级数，由泛函极值的条件 $\dfrac{\partial I(\alpha)}{\partial\alpha}=0$，请导出 Euler-Lagrange 方程。}
+\answerarea
+\clearpage
+
+\problem{22.3}{求下列泛函取极值的 Euler-Lagrange 方程，并对方程进行求解。
+\begin{enumerate}
+  \item $I=\displaystyle\int_{x_0}^{x_1} \frac{x}{x+y'}\,\mathrm{d}x$ \qquad
+  \item $I=\displaystyle\int_{x_0}^{x_1} \sqrt{1+x}\sqrt{1+{y'}^2}\,\mathrm{d}x$
+\end{enumerate}}
+\answerarea
+
+\problem{22.4}{求下列不含 $x$ 的泛函取极值时的 Euler-Lagrange 方程，并对方程进行求解。
+\begin{enumerate}
+  \item $I=\displaystyle\int_{x_0}^{x_1} \sqrt{1+y^2{y'}^2}\,\mathrm{d}x$ \qquad
+  \item $I=\displaystyle\int_{x_0}^{x_1} (y^2+{y'}^2)\,\mathrm{d}x$
+\end{enumerate}}
+\answerarea
+\clearpage
+
+\problem{22.5}{请写出粒子作自由落体下落的 Hamilton 量，并给出这一系统的正则方程，说明这一正则方程与牛顿力学中自由落体运动方程的等价性。}
+\answerarea
+
+\problem{22.6}{请写出线性谐振子的 Hamilton 量，并求出这一系统的 Hamilton 正则方程。进一步说明这一正则方程与牛顿力学中得到的线性谐振子的运动方程的等价性。}
+\answerarea
+\clearpage
+
+\problem{22.7}{对于广义动能
+\[
+  T = \alpha_{ij}\dot{q}_i\dot{q}_j,\qquad \alpha_{ij}=\alpha_{ji},
+\]
+请证明：
+\[
+  \frac{\partial T}{\partial\dot{q}_i}\dot{q}_i = 2T
+\]}
+\answerarea
+
+\problem{22.8}{试构造一个简单的物理系统的作用量，当该系统对时间 $t$ 进行无穷小平移变换时，若系统的作用量保持不变，请证明这一系统的能量是个守恒量。}
+\answerarea
+\clearpage

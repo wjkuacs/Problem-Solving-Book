@@ -1,0 +1,62 @@
+\chapter{Fourier（傅里叶）变换}
+
+\problem{9.1}{如果 $f(x)$ 是实函数，即 $f(x)=f^*(x)$，当 $f(x)$ 展成如下形式的 Fourier 级数时
+\[
+  f(x) = \sum_{n=-\infty}^{\infty} c_n \mathrm{e}^{\mathrm{i}nx}
+\]
+系数 $c_n$ 要满足什么条件，请证明。}
+\answerarea
+
+\problem{9.2}{请证明：
+\[
+  \sum_{n=1}^{\infty} (-1)^{n+1}\frac{\sin nx}{n} = \frac{x}{2}
+\]}
+\answerarea
+\clearpage
+
+\problem{9.3}{将如下函数展成 Fourier 级数
+\begin{enumerate}
+  \item $f(x)=x,\quad x\in[0,2l]$ 展成以 $2l$ 为周期的 Fourier 级数。
+  \item $f(x)=x,\quad x\in[0,l]$ 展成以 $2l$ 为周期的 Fourier 级数。
+  \item $f(x)=|x|,\quad x\in[-l,l]$ 展成以 $2l$ 为周期的 Fourier 级数。
+\end{enumerate}}
+\answerarea
+
+\problem{9.4}{电压模式为 $E(t)=E_0\sin\omega t$（$E_0$ 为常数）的交流电。
+\begin{enumerate}
+  \item 经过半波整流后，其电压的模式为：
+  \[
+    E(t) = \begin{cases}
+      0 & t\in\left[-\dfrac{\pi}{\omega},\,0\right] \\[8pt]
+      E_0\sin\omega t & t\in\left[0,\,\dfrac{\pi}{\omega}\right]
+    \end{cases}
+  \]
+  \item 经过全波整流后，其电压模式为
+  \[
+    E(t) = E_0|\sin\omega t|
+  \]
+\end{enumerate}
+试把以上这两种整流后的电压模式，展成 Fourier 级数，并对这两种展开的结果，从直流成分、基波成分及高次谐波部分等几方面进行比较。}
+\answerarea
+\clearpage
+
+\problem{9.5}{把振幅按双曲线衰减的振动
+\[
+  f(t) = \frac{1}{t}\sin\omega t
+\]
+展成 Fourier 积分，并作出原函数与像函数的简单示意图。}
+\answerarea
+
+\problem{9.6}{把定义在 $(0,\infty)$ 上的函数 $f(x)=\mathrm{e}^{-ax},\ (a>0)$，在边界为 $f(0)=0$ 的条件下，展成 Fourier 积分。}
+\answerarea
+\clearpage
+
+\problem{9.7}{把定义在 $(0,\infty)$ 上的函数 $f(x)=1-H(x-a),\ (a>0)$，在边界为 $f'(0)=0$ 的条件下，展成 Fourier 积分。}
+\answerarea
+
+\problem{9.8}{试用 Fourier 变换，求解有阻尼的谐振子方程
+\[
+  \ddot{x}(t) + \beta\dot{x}(t) + \omega_0^2 x(t) = f(t)
+\]}
+\answerarea
+\clearpage

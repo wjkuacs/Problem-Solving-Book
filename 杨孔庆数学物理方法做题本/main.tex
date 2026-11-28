@@ -1,0 +1,126 @@
+\documentclass[UTF8,a4paper,12pt,oneside,openany,fontset=fandol]{ctexbook}
+\usepackage{amsmath,amssymb,amsthm,bm,esint,graphicx,geometry,fancyhdr,enumitem,array}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,calc,angles,quotes}
+\tikzset{
+  vec/.style={thick,-{Stealth[length=5pt,width=3.5pt]}},
+  dim/.style={very thin,{Stealth[length=3.5pt,width=2.5pt]}-{Stealth[length=3.5pt,width=2.5pt]}},
+  dashedaux/.style={thin,dashed}
+}
+\usepackage[unicode,hidelinks]{hyperref}
+
+\DeclareMathOperator{\tr}{tr}
+\DeclareMathOperator{\erf}{erf}
+\DeclareMathOperator{\sh}{sh}
+\DeclareMathOperator{\ch}{ch}
+\DeclareMathOperator{\tg}{tg}
+
+\geometry{left=22mm,right=22mm,top=20mm,bottom=20mm,headheight=16pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small 杨孔庆数学物理方法做题本}
+\fancyhead[R]{\small\nouppercase{\leftmark}}
+\fancyfoot[C]{\thepage}
+\renewcommand{\chaptermark}[1]{\markboth{第\thechapter 章\quad #1}{}}
+
+\setlength{\parindent}{2em}
+\setlength{\emergencystretch}{3em}
+\linespread{1.15}
+\ctexset{
+  part={name={第,篇},number=\chinese{part}},
+  chapter={beforeskip=8pt,afterskip=16pt}
+}
+\setlist[enumerate]{label=（\arabic*）,leftmargin=2.5em,itemsep=2pt,topsep=3pt}
+
+\newcommand{\problem}[2]{%
+  \par\phantomsection\pdfbookmark[2]{题 #1}{problem-#1}%
+  \noindent\textbf{#1}\quad #2\par
+}
+\newcommand{\sproblem}[2]{%
+  \par\phantomsection\pdfbookmark[2]{*题 #1}{problem-#1}%
+  \noindent\textbf{\textsuperscript{*}#1}\quad #2\par
+}
+
+\newsavebox{\figbox}
+\newlength{\maxfigheight}
+\newcommand{\drawfig}[2]{%
+  \begingroup
+  \setlength{\maxfigheight}{42mm}%
+  \sbox{\figbox}{\resizebox{#1\linewidth}{!}{\input{tikzfigs/fig_#2.tex}}}%
+  \ifdim\dimexpr\ht\figbox+\dp\figbox\relax>\maxfigheight
+    \resizebox{!}{\maxfigheight}{\usebox{\figbox}}%
+  \else
+    \usebox{\figbox}%
+  \fi
+  \endgroup
+}
+\def\figlabel#1_#2\relax{#1.#2}
+\newcommand{\fig}[2][0.48]{%
+  \par\addvspace{4pt}%
+  {\centering\drawfig{#1}{#2}\par\vspace{2pt}{\footnotesize 习题\ \figlabel#2\relax\ 图}\par}%
+  \addvspace{2pt}%
+}
+\newcommand{\problemfig}[4][0.36]{%
+  \par\phantomsection\pdfbookmark[2]{题 #2}{problem-#2}%
+  \noindent\begin{minipage}[t]{\dimexpr\linewidth-#1\linewidth-6mm\relax}%
+    \vspace{0pt}\textbf{#2}\quad #3%
+  \end{minipage}\hfill%
+  \begin{minipage}[t]{#1\linewidth}%
+    \vspace{0pt}\centering\drawfig{1}{#4}\par\vspace{2pt}{\footnotesize 习题\ \figlabel#4\relax\ 图}%
+  \end{minipage}\par
+}
+
+\newcommand{\answerarea}{\par\vfill}
+
+\begin{document}
+\begin{titlepage}
+  \centering
+  \vspace*{.24\textheight}
+  {\Huge\bfseries 杨孔庆《数学物理方法》\\[0.6em]做题本\par}
+  \vspace{1.8cm}
+  {\Large 习题整理与作答空间\par}
+  \vspace{0.8cm}
+  {\large 第一至十一、十三至十九、二十二章\quad 每页两题\par}
+  \vfill
+  {\large 姓名：\underline{\hspace{4cm}}\quad 日期：\underline{\hspace{3cm}}\par}
+\end{titlepage}
+
+\frontmatter
+\tableofcontents
+\clearpage
+
+\mainmatter
+\part{线性空间及线性算子}
+\input{chapters/chapter1.tex}
+\input{chapters/chapter2.tex}
+\input{chapters/chapter3.tex}
+
+\part{复变函数}
+\input{chapters/chapter4.tex}
+\input{chapters/chapter5.tex}
+\input{chapters/chapter6.tex}
+\input{chapters/chapter7.tex}
+\input{chapters/chapter8.tex}
+
+\part{积分变换与 $\delta$ 函数}
+\input{chapters/chapter9.tex}
+\input{chapters/chapter10.tex}
+\input{chapters/chapter11.tex}
+% \input{chapters/chapter12.tex} % *第十二章 小波变换初步（无习题）
+
+\part{数学物理方程}
+\setcounter{chapter}{12}
+\input{chapters/chapter13.tex}
+\input{chapters/chapter14.tex}
+\input{chapters/chapter15.tex}
+\input{chapters/chapter16.tex}
+\input{chapters/chapter17.tex}
+\input{chapters/chapter18.tex}
+\input{chapters/chapter19.tex}
+% \input{chapters/chapter20.tex} % *第二十章 非线性数学物理方程初步
+
+\part{变分法初步}
+% \input{chapters/chapter21.tex} % 第二十一章 泛函的变分（无习题）
+\setcounter{chapter}{21}
+\input{chapters/chapter22.tex}
+\end{document}

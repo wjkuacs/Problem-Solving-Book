@@ -1,0 +1,22 @@
+\begin{tikzpicture}[scale=1]
+  \def\ra{1.6}
+  \def\rb{3.0}
+  \def\ang{38}
+  % Shaded annular sector
+  \fill[gray!18] (\ra,0) arc (0:\ang:\ra) -- (\ang:\rb) arc (\ang:0:\rb) -- cycle;
+  % Axes and rays
+  \draw[vec] (0,0) -- (4.0,0) node[below] {$\rho$};
+  \draw[vec] (0,0) -- (\ang:3.6);
+  % Arcs
+  \draw[thick] (\ra,0) arc (0:\ang:\ra);
+  \draw[thick] (\rb,0) arc (0:\ang:\rb);
+  \draw[thick] (\ra,0) -- (\rb,0);
+  \draw[thick] (\ang:\ra) -- (\ang:\rb);
+  % Angle arc
+  \draw (0.65,0) arc (0:\ang:0.65);
+  \node at (19:0.9) {$\alpha$};
+  % Labels
+  \node[below left] at (0,0) {$O$};
+  \node[below] at (\ra,0) {$a$};
+  \node[below] at (\rb,0) {$b$};
+\end{tikzpicture}
