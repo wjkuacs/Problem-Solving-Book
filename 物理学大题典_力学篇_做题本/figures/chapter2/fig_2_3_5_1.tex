@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate axes
+  \coordinate (O) at (0,0);
+  \draw[->] (O) -- (0,3.2) node[right] {$z$};
+  \draw[->] (O) -- (2.9,0) node[below] {$y$};
+  \draw[->] (O) -- (-1.65,-1.14) node[above left=-1pt] {$x$};
+
+  % Pyramid vertices
+  \coordinate (M1) at (-2.05,1.22);
+  \coordinate (M2) at (-0.75,2.12);
+  \coordinate (M3) at (2.35,2.12);
+  \coordinate (M4) at (1.05,1.22);
+
+  % Pyramid rods
+  \draw (M1) -- (M2) -- (M3) -- (M4) -- cycle;
+  \draw (M2) -- (M4);
+  \draw (O) -- (M1);
+  \draw (O) -- (M2);
+  \draw (O) -- (M3);
+  \draw (O) -- (M4);
+
+  % Point masses and labels
+  \fill (O) circle (2pt) node[left=3pt] {$O$} node[below right=1pt] {$5m$};
+  \fill (M1) circle (2pt) node[left=2pt] {$m$};
+  \fill (M2) circle (2pt) node[above left=1pt] {$2m$};
+  \fill (M3) circle (2pt) node[right=2pt] {$3m$};
+  \fill (M4) circle (2pt) node[above=2pt] {$4m$};
+\end{tikzpicture}

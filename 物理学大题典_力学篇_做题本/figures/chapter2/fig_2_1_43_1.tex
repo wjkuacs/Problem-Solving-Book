@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Circular hoop
+  \draw (0,0) circle (1.6);
+
+  % Vertical rotation axis
+  \draw (0,-1.6) -- (0,2.35);
+
+  % Rotation arrow omega
+  \draw[->] (-0.28,2.08) arc (140:395:0.42 and 0.14);
+  \node[right=2pt] at (0.38,2.14) {$\omega$};
+
+  % Radius to bead m at angle theta = 40 deg from downward vertical
+  \draw (0,0) -- (-50:1.6);
+  \fill (-50:1.6) circle (3pt) node[below right=1pt] {$m$};
+  \node at (0.30,-0.68) {$\theta$};
+\end{tikzpicture}

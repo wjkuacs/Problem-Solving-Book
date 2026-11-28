@@ -1,0 +1,71 @@
+\begin{tikzpicture}[>=Stealth, thick,
+    res/.style={draw, fill=white, minimum width=0.66cm, minimum height=0.20cm, inner sep=0pt},
+    vres/.style={draw, fill=white, minimum width=0.20cm, minimum height=0.66cm, inner sep=0pt}]
+    % Outer loop (broken at bottom center between coupled coils)
+    \draw (2.35,0) -- (0,0) -- (0,3.4) -- (5.4,3.4) -- (5.4,0) -- (3.05,0);
+
+    % Center branch down to splitter for L_2 and L_3
+    \draw (2.7,3.4) -- (2.7,1.75);
+    \draw (2.35,1.75) -- (3.05,1.75);
+    \draw (2.35,1.75) -- (2.35,0);
+    \draw (3.05,1.75) -- (3.05,0);
+
+    % Junction dots
+    \fill (2.7,3.4) circle (1.8pt);
+    \fill (2.7,1.75) circle (1.8pt);
+    \fill (2.35,0) circle (1.8pt);
+    \fill (3.05,0) circle (1.8pt);
+
+    % Left AC source epsilon
+    \draw[fill=white] (0,1.7) circle (0.34);
+    \node at (0,1.7) {$\sim$};
+    \node[right, font=\small] at (0.32,2.06) {$+$};
+    \node[right, font=\small] at (0.32,1.34) {$-$};
+    \node[right] at (0.38,1.7) {$\varepsilon$};
+
+    % Top-left R_1 and L_1
+    \node[res, label=above:$R_1$] at (0.85,3.4) {};
+    \draw[fill=white, draw=none] (1.45,3.2) rectangle (2.35,3.6);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.1mm, amplitude=1.4mm}] (1.45,3.4) -- (2.35,3.4);
+    \node[below] at (1.9,3.2) {$L_1$};
+
+    % Top-right capacitor C_2
+    \draw[fill=white, draw=none] (3.92,3.2) rectangle (4.18,3.6);
+    \draw (3.96,3.18) -- (3.96,3.62);
+    \draw (4.14,3.18) -- (4.14,3.62);
+    \node[below] at (4.05,3.16) {$C_2$};
+
+    % Right R_4 and L_4
+    \node[vres, label=right:$R_4$] at (5.4,2.4) {};
+    \draw[fill=white, draw=none] (5.2,0.65) rectangle (5.6,1.55);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.1mm, amplitude=1.4mm}] (5.4,1.55) -- (5.4,0.65);
+    \node[right] at (5.58,1.1) {$L_4$};
+
+    % Bottom R_2 and R_3
+    \node[res, label=above:$R_2$] at (1.15,0) {};
+    \node[res, label=above:$R_3$] at (4.25,0) {};
+
+    % Middle capacitor C_1
+    \draw[fill=white, draw=none] (2.5,2.45) rectangle (2.9,2.71);
+    \draw (2.48,2.67) -- (2.92,2.67);
+    \draw (2.48,2.49) -- (2.92,2.49);
+    \node[right] at (2.94,2.58) {$C_1$};
+
+    % Coupled inductors L_2 and L_3 with mutual inductance M
+    \draw[fill=white, draw=none] (2.15,0.45) rectangle (2.55,1.45);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.1mm, amplitude=1.4mm}] (2.35,1.45) -- (2.35,0.45);
+    \node[left] at (2.15,0.95) {$L_2$};
+
+    \draw[fill=white, draw=none] (2.85,0.45) rectangle (3.25,1.45);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.1mm, amplitude=1.4mm}] (3.05,0.45) -- (3.05,1.45);
+    \node[right] at (3.25,0.95) {$L_3$};
+
+    \node at (2.7,0.22) {$M$};
+
+    % Mesh current arrows
+    \draw[->] (0.92,1.55) .. controls (1.20,2.45) and (1.98,2.30) .. (1.68,1.10);
+    \node at (1.92,2.05) {$\dot{q}_1$};
+
+    \draw[->] (3.62,1.55) .. controls (3.90,2.45) and (4.75,2.30) .. (4.45,1.10);
+    \node at (4.70,2.05) {$\dot{q}_2$};
+\end{tikzpicture}

@@ -1,0 +1,56 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\alphaDeg{30}
+  \def\W{4.2}
+  \pgfmathsetmacro{\H}{\W*tan(\alphaDeg)}
+  \def\r{0.72}
+  \def\s{3.1}
+  \pgfmathsetmacro{\Px}{\s*cos(\alphaDeg)}
+  \pgfmathsetmacro{\Py}{\s*sin(\alphaDeg)}
+  \pgfmathsetmacro{\Ox}{\Px - \r*sin(\alphaDeg)}
+  \pgfmathsetmacro{\Oy}{\Py + \r*cos(\alphaDeg)}
+
+  % Ground
+  \draw (-0.5,0) -- (4.9,0);
+
+  % Wedge
+  \coordinate (V0) at (0,0);
+  \coordinate (V1) at (\W,0);
+  \coordinate (V2) at (\W,\H);
+  \draw (V0) -- (V1) -- (V2) -- cycle;
+  \pic[draw, angle radius=0.7cm, angle eccentricity=1.35, "$\alpha$"] {angle = V1--V0--V2};
+
+  % Cylinder
+  \coordinate (P) at (\Px,\Py);
+  \coordinate (O) at (\Ox,\Oy);
+  \draw (O) circle (\r);
+  \node[above right=1pt] at (O) {$O$};
+
+  % Coordinate axes at O
+  \draw[->] (O) -- ++(1.85,0) node[right] {$x$};
+  \draw[->] (O) -- ++(0,1.7) node[above] {$y$};
+  \draw[->] (O) -- ++({\alphaDeg-180}:1.8) node[below left] {$x'$};
+  \draw[->] (O) -- ++({\alphaDeg+90}:1.8) node[above left] {$y'$};
+
+  % Normal force N on cylinder (from contact point P to O)
+  \draw[->] (P) -- (O);
+  \node[left=2pt] at ($(O)+({\alphaDeg+90}:0.22)$) {$N$};
+
+  % Weight mg on cylinder
+  \draw[->] (O) -- ++(0,-1.18) node[right=1pt, pos=0.88] {$mg$};
+
+  % Rotation arrow omega
+  \draw[->] ($(O)+(138:\r+0.25)$) arc (138:192:\r+0.25);
+  \node at ($(O)+(165:\r+0.55)$) {$\omega$};
+
+  % Friction force mu N on cylinder and reaction on wedge
+  \draw[->] ($(P)+({\alphaDeg+90}:0.08)$) -- ++(\alphaDeg:0.85) node[below right=0pt] {$\mu N$};
+  \draw[->] ($(P)+(\alphaDeg:0.65)+({\alphaDeg-90}:0.09)$) -- ++({\alphaDeg-180}:0.65) node[midway, below right=2pt] {$\mu N$};
+
+  % Normal reaction N on wedge (drawn near right side)
+  \draw[->] (\W-0.65, 1.15) -- ++({\alphaDeg-90}:0.75) node[midway, below left=-1pt] {$N$};
+
+  % Forces on wedge from ground: R, mu R, mg
+  \draw[->] (2.55,0) -- (2.55,0.85) node[pos=0.75, right=1pt] {$R$};
+  \draw[->] (2.45,0.22) -- (1.45,0.22) node[midway, above=1pt] {$\mu R$};
+  \draw[->] (3.0,0.75) -- (3.0,-0.4) node[right=1pt, pos=0.82] {$mg$};
+\end{tikzpicture}

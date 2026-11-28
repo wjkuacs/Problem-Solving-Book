@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\R{1.5}
+  \def\th{40}
+
+  % Ground / x-axis
+  \draw[->, thick] (-2.0,0) -- (4.0,0) node[below=2pt] {$x$};
+  \foreach \x in {-1.8,-1.5,...,3.6} {
+    \draw (\x,0) -- (\x-0.22,-0.24);
+  }
+
+  % Sphere
+  \coordinate (C) at (0,\R);
+  \draw[thick] (C) circle (\R);
+  \fill (C) circle (1.6pt);
+
+  % y-axis
+  \draw[->, thick] (0,0) -- (0,3.6) node[left=2pt] {$y$};
+  \node[left=2pt] at (0,2.35) {$R$};
+
+  % Particle on sphere at angle th from top vertical
+  \coordinate (Top) at (0,2*\R);
+  \coordinate (P) at ($(C)+({90-\th}:\R)$);
+  \draw[thick] (C) -- (P);
+  \fill (P) circle (2pt);
+
+  % Angle theta
+  \pic[draw, angle radius=0.55cm, angle eccentricity=1.35, "$\theta$"] {angle=P--C--Top};
+
+  % Force & velocity arrows at P
+  \draw[->, thick] (P) -- ($(P)+({90-\th}:0.62)$) node[right=1pt] {$N$};
+  \draw[->, thick] (P) -- ($(P)+(0,-0.72)$) node[below=1pt] {$mg$};
+  \draw[->, thick] (P) -- ($(P)+(-\th:0.75)$) node[above right=0pt] {$v$};
+
+  % Parabolic trajectory after leaving sphere
+  \draw[dashed, thick] (P) .. controls ($(P)+(-\th:0.95)$) and ($(P)+(1.45,-1.25)$) .. (3.15,0);
+\end{tikzpicture}

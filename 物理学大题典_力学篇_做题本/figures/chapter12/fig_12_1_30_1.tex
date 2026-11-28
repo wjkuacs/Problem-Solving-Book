@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Moving contracted ruler (top)
+  \draw (0,0.82) rectangle (3.22,1.04);
+  \draw[->] (3.32,0.93) -- (4.15,0.93) node[midway, above=2pt] {$v$};
+
+  % Top length dimension (clear of top ruler edge)
+  \draw[thin] (0,1.22) -- (0,1.92);
+  \draw[thin] (3.22,1.22) -- (3.22,1.92);
+  \draw[<->] (0,1.58) -- (3.22,1.58)
+    node[midway, fill=white, inner sep=2pt] {$l_0\sqrt{1-\left(\frac{v}{c}\right)^2}$};
+
+  % Rest ruler (bottom)
+  \draw (0,0) rectangle (4.60,0.22);
+
+  % Bottom length dimension
+  \draw[thin] (0,-0.15) -- (0,-0.55);
+  \draw[thin] (4.60,-0.15) -- (4.60,-0.55);
+  \draw[<->] (0,-0.35) -- (4.60,-0.35) node[midway, fill=white, inner sep=3pt] {$l_0$};
+\end{tikzpicture}

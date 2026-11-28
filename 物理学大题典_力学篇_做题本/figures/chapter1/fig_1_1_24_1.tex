@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\R{2.0}
+  \def\phiang{42}
+  \coordinate (O) at (0,0);
+  \coordinate (Lend) at (-\R,0);
+  \coordinate (Rend) at (\R,0);
+  \coordinate (A) at (235:\R);
+  \coordinate (B) at (\phiang:\R);
+
+  % Circle
+  \draw[thick] (O) circle (\R);
+
+  % Base axis (基轴) and dashed left radius
+  \draw[dashed, thick] (Lend) -- (O);
+  \draw[thick] (O) -- (\R+0.8, 0) node[below=2pt] {\small 基轴};
+  \node[below left=1pt] at (O) {$O$};
+  \node[below=2pt] at (0.85, 0) {$R$};
+
+  % Dashed chord from leftmost point to B
+  \draw[dashed, thick] (Lend) -- (B);
+
+  % Radius vector OB
+  \draw[->, thick] (O) -- (B);
+  \node[right=3pt] at (B) {$B$};
+
+  % Angle phi arc
+  \draw[->] (1.05,0) arc (0:\phiang:1.05);
+  \node at (0.5*\phiang:1.28) {$\varphi$};
+
+  % Line LM at t=0 passing through A and (R,0)
+  \draw[thick] ($(A)!-0.45!(Rend)$) -- ($(A)!1.38!(Rend)$);
+  \coordinate (Pzero) at ($(A)!0.48!(Rend)$);
+  \draw[<-, thick] ($(Pzero)+(-60:0.15)$) -- ++(-60:0.65) node[below right=-2pt] {\small $t=0$ 时的 $LM$};
+
+  % Current line LM passing through A and B
+  \draw[thick] ($(A)!-0.32!(B)$) node[below right=1pt] {$L$} -- ($(A)!1.38!(B)$) node[above left=1pt] {$M$};
+  \node[below right=2pt] at (A) {$A$};
+
+  % Angles psi
+  \node at ($(Lend)+(10:1.12)$) {$\psi$};
+  \node at ($(A)+(38:1.25)$) {$\psi$};
+\end{tikzpicture}

@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \coordinate (O) at (0,0);
+  \coordinate (L) at (-3.2, 0);
+
+  % Horizontal reference line and center O
+  \draw (L) -- (O) node[below right, inner sep=2pt] {$O$};
+
+  % Scattering trajectory curve
+  \draw (-2.7, 1.85) .. controls (-0.6, 1.45) and (1.15, 0.95) .. (1.28, 0.05)
+    .. controls (1.35, -0.55) and (1.1, -1.15) .. (0.8, -1.75);
+
+  % Position vector r at angle alpha
+  \coordinate (P) at (-1.38, 1.54);
+  \draw (O) -- (P) node[midway, above right, inner sep=1pt] {$r$};
+
+  % Angle alpha arc
+  \draw (180:0.65) arc (180:132:0.65);
+  \node at (156:0.9) {$\alpha$};
+\end{tikzpicture}

@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Rubber pad depression and hatching
+  \fill[pattern=north east lines]
+    (-2.05,0.42) .. controls (-1.60,0.62) and (-1.15,0.35) .. (-0.92,0)
+    -- (0.92,0)
+    .. controls (1.15,0.35) and (1.60,0.62) .. (2.05,0.42)
+    -- (2.05,-0.25) -- (-2.05,-0.25) -- cycle;
+  \draw[line width=0.8pt]
+    (-2.05,0.42) .. controls (-1.60,0.62) and (-1.15,0.35) .. (-0.92,0)
+    -- (0.92,0)
+    .. controls (1.15,0.35) and (1.60,0.62) .. (2.05,0.42);
+
+  % Motor pedestal and concentric circles
+  \draw (-0.75,0) -- (-0.54,0.66);
+  \draw (0.75,0) -- (0.54,0.66);
+  \draw[fill=white] (0,1.42) circle (0.95);
+  \draw (0,1.42) circle (0.48);
+
+  % 10cm depth dimension on the right
+  \draw[thin] (1.02,0) -- (2.55,0);
+  \draw[thin] (1.72,0.50) -- (2.55,0.50);
+  \draw[<->] (2.36,0) -- (2.36,0.50);
+  \node[right=2pt, rotate=90, anchor=north] at (2.42,0.25) {$10\,\mathrm{cm}$};
+\end{tikzpicture}

@@ -1,0 +1,94 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  % Scale: 1 cm in problem = 0.22 cm in TikZ
+  % O=(0, 3.08), A=(1.76, 3.08), O1=(2.20, 0), B=(5.28, 0.44), alpha=-36.87 deg
+  \def\s{0.22}
+  \coordinate (O) at (0, {14*\s});
+  \coordinate (A) at ({8*\s}, {14*\s});
+  \coordinate (O1) at ({10*\s}, 0);
+  \coordinate (B) at ({24*\s}, {2*\s});
+  \def\alphaang{-36.87}
+
+  % Reference dashed lines
+  \draw[dashed] (O) -- (0, -0.35);
+  \draw[dashed] (-0.35, 0) -- (O1);
+
+  % Dimension 14cm (vertical)
+  \draw (-0.85, 0) -- (-0.42, 0);
+  \draw (-0.85, {14*\s}) -- (-0.42, {14*\s});
+  \draw[<->] (-0.7, 0) -- (-0.7, {14*\s}) node[midway, left, inner sep=2pt] {$14\,\mathrm{cm}$};
+
+  % Dimension 10cm (horizontal)
+  \draw (0, -0.45) -- (0, -0.82);
+  \draw ({10*\s}, -0.45) -- ({10*\s}, -0.82);
+  \draw[<->] (0, -0.68) -- ({10*\s}, -0.68) node[midway, above, inner sep=2pt] {$10\,\mathrm{cm}$};
+
+  % Dimension 8cm (above OA)
+  \draw (0, {14*\s+0.25}) -- (0, {14*\s+0.65});
+  \draw ({8*\s}, {14*\s+0.25}) -- ({8*\s}, {14*\s+0.65});
+  \draw[<->] (0, {14*\s+0.50}) -- ({8*\s}, {14*\s+0.50}) node[midway, above, inner sep=2pt] {$8\,\mathrm{cm}$};
+
+  % Wall support at O
+  \draw (-0.22, {14*\s+0.28}) -- (-0.22, {14*\s-0.28});
+  \foreach \y in {-0.22, -0.10, 0.02, 0.14, 0.26} {
+    \draw (-0.22, {14*\s+\y}) -- (-0.34, {14*\s+\y-0.10});
+  }
+  \draw (-0.22, {14*\s+0.16}) -- (0, {14*\s+0.16}) arc (90:-90:0.16) -- (-0.22, {14*\s-0.16});
+
+  % Rod AB (dashed inside/before sleeve, solid protruding tip at B)
+  \coordinate (Sstart) at ($(A)!0.26!(B)$);
+  \coordinate (Send) at ($(A)!0.76!(B)$);
+  \draw[dashed] ($(A)+(\alphaang+90:0.06)$) -- ($(Send)+(\alphaang+90:0.06)$);
+  \draw[dashed] ($(A)+(\alphaang-90:0.06)$) -- ($(Send)+(\alphaang-90:0.06)$);
+  \draw[fill=white]
+    ($(Send)+(\alphaang+90:0.05)$) -- ($(B)+(\alphaang+90:0.05)$)
+    arc (\alphaang+90:\alphaang-90:0.05) -- ($(Send)+(\alphaang-90:0.05)$) -- cycle;
+
+  % Sleeve on C
+  \draw
+    ($(Sstart)+(\alphaang+90:0.14)$) -- ($(Send)+(\alphaang+90:0.14)$) --
+    ($(Send)+(\alphaang-90:0.14)$) -- ($(Sstart)+(\alphaang-90:0.14)$) -- cycle;
+
+  % Triangular plate C connected to sleeve and pivot O1
+  \coordinate (C1) at ($(Sstart)!0.20!(Send)+(\alphaang-90:0.14)$);
+  \coordinate (C2) at ($(Sstart)!0.72!(Send)+(\alphaang-90:0.14)$);
+  \draw (C1) -- ($(O1)+(143:0.18)$) arc (143:323:0.18) -- (C2);
+
+  % Ground bracket at O1
+  \draw ($(O1)+(-0.22,-0.32)$) -- ($(O1)+(-0.22,-0.02)$) arc (180:0:0.22) -- ($(O1)+(0.22,-0.32)$);
+  \draw ($(O1)+(-0.38,-0.32)$) -- ($(O1)+(0.38,-0.32)$);
+  \foreach \x in {-0.30, -0.18, -0.06, 0.06, 0.18, 0.30} {
+    \draw ($(O1)+(\x,-0.32)$) -- ($(O1)+(\x-0.10,-0.44)$);
+  }
+  \draw[fill=white] (O1) circle (2.2pt);
+
+  % Crank OA
+  \draw[fill=white]
+    (0, {14*\s+0.08}) -- ({8*\s}, {14*\s+0.08})
+    arc (90:-90:0.08) -- (0, {14*\s-0.08}) -- cycle;
+  \draw[fill=white] (O) circle (2.4pt);
+  \draw[fill=white] (A) circle (2.4pt);
+
+  % Angular velocity arrows Omega and omega
+  \draw[->] ($(O)+(0.8, 0.32)$) arc (35:-35:0.55) node[below right, inner sep=1pt] {$\Omega$};
+  \draw[->] ($(O1)+(-25:0.32)$) arc (-25:105:0.32) node[above, inner sep=2pt] {$\omega$};
+
+  % Dimension 20cm (along AB)
+  \draw ($(A)+(\alphaang+90:0.22)$) -- ($(A)+(\alphaang+90:0.82)$);
+  \draw ($(B)+(\alphaang+90:0.22)$) -- ($(B)+(\alphaang+90:0.82)$);
+  \draw[<->] ($(A)+(\alphaang+90:0.65)$) -- ($(B)+(\alphaang+90:0.65)$)
+    node[midway, above right, inner sep=1pt] {$20\,\mathrm{cm}$};
+
+  % Dimension 10cm (perpendicular distance from O1 to AB)
+  \draw[dashed] ($(O1)+(\alphaang:0.45)$) -- ($(O1)+(\alphaang:2.85)$);
+  \draw ($(B)+(\alphaang:0.18)$) -- ($(B)+(\alphaang:0.65)$);
+  \coordinate (Pdim) at ($(O1)+(\alphaang:2.65)$);
+  \coordinate (Bdim) at ($(Pdim)+(\alphaang+90:{10*\s})$);
+  \draw[<->] (Pdim) -- (Bdim) node[midway, below right, inner sep=2pt] {$10\,\mathrm{cm}$};
+
+  % Labels
+  \node[above left, inner sep=2pt] at ($(O)+(-0.15, 0.2)$) {$O$};
+  \node[above right, inner sep=3pt] at (A) {$A$};
+  \node[above right, inner sep=3pt] at (B) {$B$};
+  \node[above left, inner sep=1pt] at ($(O1)+(-0.22, 0.03)$) {$O_1$};
+  \node at ($(O1)+(0.45, 0.72)$) {$C$};
+\end{tikzpicture}

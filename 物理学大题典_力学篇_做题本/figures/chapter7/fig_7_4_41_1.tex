@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  \coordinate (O) at (0,0);
+  \coordinate (Op) at (1.1,1.4);
+  \coordinate (M) at (3.9,2.6);
+
+  % Frame O axes
+  \draw[->, thick] (O) -- (0,2.7);
+  \draw[->, thick] (O) -- (2.8,0);
+  \node[below left] at (O) {$O$};
+
+  % Frame O' axes
+  \draw[->, thick] (Op) -- (1.1,3.7);
+  \draw[->, thick] (Op) -- (3.9,1.4);
+  \node[below right] at (Op) {$O'$};
+
+  % Position vectors
+  \draw[->, thick] (O) -- (Op) node[midway, left] {$\boldsymbol{r}_{O'}$};
+  \draw[->, thick] (Op) -- (M) node[midway, above left] {$\boldsymbol{r}_i'$};
+  \draw[->, thick] (O) -- (M) node[midway, below right] {$\boldsymbol{r}_i$};
+
+  % Mass element label
+  \node[above right] at (M) {$\boldsymbol{m}_i$};
+\end{tikzpicture}

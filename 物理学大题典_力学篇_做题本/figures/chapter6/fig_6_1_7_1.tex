@@ -1,0 +1,79 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ground with hatching
+  \draw (-0.3,0) -- (5.2,0);
+  \foreach \x in {-0.15,0.10,...,5.10} {
+    \draw[thin] (\x,0) -- (\x-0.16,-0.16);
+  }
+
+  % Truck body
+  % Flatbed, cab, and hood outline
+  \draw (0.05,0.52) -- (0.05,1.12) -- (2.75,1.12)
+        -- (2.82,1.68) .. controls (2.85,1.88) and (3.00,1.92) .. (3.25,1.92)
+        -- (3.55,1.92) .. controls (3.72,1.92) and (3.80,1.75) .. (3.86,1.45)
+        -- (4.55,1.42) .. controls (4.78,1.40) and (4.85,1.22) .. (4.86,0.92)
+        -- (4.96,0.92) -- (4.96,0.72) -- (4.86,0.72) -- (4.86,0.52) -- cycle;
+
+  % Cab window and door details
+  \draw (3.12,1.12) -- (3.12,1.66) .. controls (3.12,1.76) and (3.22,1.80) .. (3.38,1.80)
+        -- (3.54,1.80) .. controls (3.64,1.80) and (3.70,1.68) .. (3.70,1.52)
+        -- (3.70,1.12);
+  \draw (3.12,1.44) -- (3.70,1.44);
+
+  % Wheel arch above front wheel
+  \fill[white] (4.25,0.42) ++(162:0.53) arc[start angle=162, end angle=18, radius=0.53] -- cycle;
+  \draw (4.25,0.42) ++(165:0.52) arc[start angle=165, end angle=15, radius=0.52];
+
+  % Wheels (white fill covers chassis bottom line cleanly)
+  \foreach \wx in {0.88,1.98,4.25} {
+    \fill[white] (\wx,0.42) circle (0.42);
+    \draw (\wx,0.42) circle (0.42);
+    \draw (\wx,0.42) circle (0.17);
+  }
+
+  % Crane pedestal on flatbed
+  \draw (0.55,1.12) rectangle (1.62,1.34);
+  \draw (0.38,1.34) rectangle (1.78,1.44);
+  \draw (0.56,1.44) -- (0.56,2.04) (0.68,1.44) -- (0.68,2.04);
+
+  % Hydraulic cylinder
+  \draw (0.68,2.05) -- (1.15,1.72);
+  \draw (1.02,1.85) -- (1.42,1.57) -- (1.35,1.48) -- (0.95,1.76) -- cycle;
+
+  % Pivot O and boom L (angle 18 deg)
+  \coordinate (O) at (0.62,2.10);
+  \def\ang{18}
+  \coordinate (C) at ($(O)+(\ang:3.05)$);
+  \coordinate (E) at ($(O)+(\ang:3.36)$);
+
+  % Boom double lines
+  \draw ($(O)+(\ang+90:0.045)$) -- ($(O)+(\ang:2.74)+(\ang+90:0.045)$);
+  \draw ($(O)+(\ang-90:0.045)$) -- ($(O)+(\ang:2.74)+(\ang-90:0.045)$);
+  \node[below] at ($(O)+(\ang:1.55)+(\ang-90:0.12)$) {$L$};
+
+  % Pivot circle
+  \fill[white] (O) circle (0.08);
+  \draw (O) circle (0.08);
+  \node[below left] at (O) {$O$};
+
+  % Cradle K and center of mass C
+  \begin{scope}[shift={(C)}, rotate=\ang]
+    \draw (-0.31,-0.19) rectangle (0.31,0.19);
+    \draw (0,0) circle (0.065);
+    \draw (0.12,0.065) -- (0.24,0.065) (0.12,-0.065) -- (0.24,-0.065);
+    \node[below=6pt] at (0,-0.16) {$C$};
+    \node[right=4pt] at (0.31,0) {$K$};
+  \end{scope}
+
+  % Dimension lines (3.5 m to C, 4 m to end E)
+  \coordinate (O1) at ($(O)+(\ang+90:0.55)$);
+  \coordinate (O2) at ($(O)+(\ang+90:0.95)$);
+  \coordinate (C2) at ($(C)+(\ang+90:0.95)$);
+  \coordinate (E1) at ($(E)+(\ang+90:0.55)$);
+
+  \draw[thin] ($(O)+(\ang+90:0.16)$) -- ($(O)+(\ang+90:1.08)$);
+  \draw[thin] ($(C)+(\ang+90:0.22)$) -- ($(C)+(\ang+90:1.08)$);
+  \draw[thin] ($(E)+(\ang+90:0.22)$) -- ($(E)+(\ang+90:0.68)$);
+
+  \draw[<->, thin] (O2) -- (C2) node[midway, above, rotate=\ang] {$3.5\mathrm{m}$};
+  \draw[<->, thin] (O1) -- (E1) node[midway, above, rotate=\ang] {$4\mathrm{m}$};
+\end{tikzpicture}

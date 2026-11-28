@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ceiling with hatching
+  \fill[pattern=north east lines] (-0.5, 3.0) rectangle (3.7, 3.28);
+  \draw (-0.5, 3.0) -- (3.7, 3.0);
+
+  % Two parallel suspension strings
+  \draw (0.3, 3.0) -- (0.3, 0.32);
+  \draw (2.9, 3.0) -- (2.9, 0.32);
+
+  % Homogeneous horizontal rod
+  \draw (0.3, 0.18) rectangle (2.9, 0.32);
+
+  % Vertical symmetry axis (dashed) and angular velocity arrow omega
+  \draw[dashed] (1.6, -0.15) -- (1.6, 1.5);
+  \draw[->] (1.35, 1.05) arc[start angle=140, end angle=385, x radius=0.35, y radius=0.18]
+    node[right=2pt] {$\omega$};
+
+  % Vertical dimension 2a
+  \draw[thin] (2.98, 3.0) -- (3.55, 3.0);
+  \draw[thin] (2.98, 0.18) -- (3.55, 0.18);
+  \draw[<->] (3.35, 0.18) -- (3.35, 3.0)
+    node[midway, fill=white, inner sep=2pt] {$2a$};
+
+  % Horizontal dimension 2a
+  \draw[thin] (0.3, 0.10) -- (0.3, -0.45);
+  \draw[thin] (2.9, 0.10) -- (2.9, -0.45);
+  \draw[<->] (0.3, -0.28) -- (2.9, -0.28)
+    node[midway, fill=white, inner sep=2pt] {$2a$};
+\end{tikzpicture}

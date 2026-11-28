@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\a{0.44}
+
+  % Coordinate axes
+  \draw[->, thick] ({-2*pi*\a - 0.30}, 0) -- ({2*pi*\a + 0.35}, 0) node[below=2pt] {$x$};
+  \draw[->, thick] (0, 0.42) -- (0, {-4*\a - 0.55}) node[right=2pt] {$y$};
+  \node[above left=1pt] at (0, 0) {$O$};
+
+  % Left and right cycloid barriers
+  \draw[thick, domain=0:360, samples=72, smooth]
+    plot ({-\a*(\x*pi/180 - sin(\x))}, {-\a*(1 - cos(\x))});
+  \draw[thick, domain=0:360, samples=72, smooth]
+    plot ({\a*(\x*pi/180 - sin(\x))}, {-\a*(1 - cos(\x))});
+
+  % Bob trajectory (involute cycloid)
+  \draw[dashed, thick, domain=-180:180, samples=72, smooth]
+    plot ({\a*(\x*pi/180 + sin(\x))}, {-\a*(3 + cos(\x))});
+
+  % Length 4a annotation
+  \draw[thin] (-0.42, {-4*\a}) -- (0.12, {-4*\a});
+  \draw[<->, thin] (-0.24, 0) -- (-0.24, {-4*\a}) node[pos=0.58, left=2pt, fill=white, inner sep=1pt] {$4a$};
+\end{tikzpicture}

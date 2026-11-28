@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Frame S' axes and velocity v
+    \draw[->] (-1.15, 0) -- (-2.15, 0) node[midway, above=2pt] {$v$};
+    \draw[->] (-1.15, 0) -- (2.75, 0) node[below=2pt] {$x'$};
+    \draw[->] (0, 0) -- (0, 2.05) node[left=2pt] {$y'$};
+
+    % Apparent Milky Way arc around the spacecraft
+    \draw (45:1.15) arc (45:315:1.15);
+    \node[above left=2pt] at (-0.95, 0.95) {\small 银河系};
+
+    % Dashed line of sight and angle theta'
+    \draw[dashed] (142:1.15) -- (-38:1.15);
+    \draw (0:0.42) arc (0:142:0.42);
+    \node at (58:0.65) {$\theta'$};
+
+    % Pointer to spacecraft at origin
+    \draw[->] (-0.65, -1.55) -- (-0.06, -0.14);
+    \node[below=2pt] at (-0.65, -1.55) {\small 宇宙飞船};
+
+    % Frame label
+    \node at (1.85, 1.55) {\small $S'\text{（飞船参考系）}$};
+\end{tikzpicture}

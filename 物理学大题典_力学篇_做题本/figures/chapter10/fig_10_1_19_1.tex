@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ceiling with hatching
+  \fill[pattern=north east lines] (-0.8, 0) rectangle (3.8, 0.25);
+  \draw (-0.8, 0) -- (3.8, 0);
+
+  % Pivots and vertical reference lines
+  \coordinate (P1) at (0, 0);
+  \coordinate (P2) at (2.8, 0);
+  \coordinate (V1) at (0, -2.7);
+  \coordinate (V2) at (2.8, -2.7);
+  \draw[dashed, thin] (P1) -- (V1);
+  \draw[dashed, thin] (P2) -- (V2);
+
+  % Masses (length l = 2.45, angle = 24 deg)
+  \coordinate (M1) at ($(P1) + (-66:2.45)$);
+  \coordinate (M2) at ($(P2) + (-66:2.45)$);
+
+  % Strings
+  \draw (P1) -- (M1) node[pos=0.45, right=2pt] {$l$};
+  \draw (P2) -- (M2) node[pos=0.45, right=2pt] {$l$};
+
+  % Angle arcs
+  \draw[thin] (P1) ++(-90:0.75) arc (-90:-66:0.75);
+  \node[font=\small, fill=white, inner sep=0.5pt] at ($(P1) + (-78:1.05)$) {$\theta_1$};
+  \draw[thin] (P2) ++(-90:0.75) arc (-90:-66:0.75);
+  \node[font=\small, fill=white, inner sep=0.5pt] at ($(P2) + (-78:1.05)$) {$\theta_2$};
+
+  % Spring connecting M1 and M2
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6.5pt, amplitude=4.5pt, pre length=0.55cm, post length=0.95cm}]
+    (M1) -- (M2);
+  \node[above=6pt] at ($(M1)!0.43!(M2)$) {$k$};
+
+  % Mass bobs
+  \fill (M1) circle (2.3pt) node[below=3pt] {$m$};
+  \fill (M2) circle (2.3pt) node[below=3pt] {$M$};
+\end{tikzpicture}

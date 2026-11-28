@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick, line cap=round, line join=round]
+  \coordinate (In) at (0, 0);
+  \coordinate (O)  at (2.5, 0);
+  \coordinate (F)  at (5.0, 0);
+  \coordinate (Nu) at (4.7, 1.25);
+  \coordinate (Mu) at (4.5, -1.0);
+
+  % 入射介子
+  \draw[postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}]
+    (In) -- (O);
+  \node[below=2pt] at (0.85, 0) {$\pi^+$};
+
+  % 原方向虚线延长线
+  \draw[dashed] (O) -- (F);
+
+  % 衰变出射粒子
+  \draw[->] (O) -- (Nu) node[above left=-1pt and 1pt] {$\nu$};
+  \draw[->] (O) -- (Mu) node[below=2pt] {$\mu^+$};
+
+  % 衰变角标注
+  \pic[draw, thin, angle radius=0.95cm, angle eccentricity=1.35, "$\theta$"] {angle=F--O--Nu};
+  \pic[draw, thin, angle radius=0.95cm, angle eccentricity=1.35, "$\alpha$"] {angle=Mu--O--F};
+\end{tikzpicture}

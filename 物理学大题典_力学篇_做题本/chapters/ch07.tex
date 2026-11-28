@@ -1,0 +1,1487 @@
+\chapter{刚体动力学}
+
+\section{刚体的平衡和平动}
+
+\begin{problem}{7.1.1}
+轴 $AB$ 与铅直的 $\zeta$ 轴成 $\alpha$ 角, 长度为 $a$ 的悬臂 $CD$ 垂直地固连在轴上, $CD$ 与铅直面 $\zeta AB$ 成 $\theta$ 角, 如图7.1所示. 一铅直向下的力 $P$ 作用于 $D$ 点, 求此力对 $AB$ 轴的力矩.
+\begin{center}
+\input{figures/chapter7/fig_7_1_1_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.2}
+一个力系由三个力组成: $F_{1} = 3i + 2j + ak$ , 作用于原点; $F_{2} = -i + 3j - 2k$ , 作用于 $(2,1,0)$ 点; $F_{3} = 2i - j + 5k$ , 作用于 $(0, -1, -2)$ 点, 力的单位为牛顿, 坐标取米为单位. 问 $a$ 取何值时, 可等效于一个单力, 该等效的单力作用线在何处?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.3}
+一条螺旋线的弧形的金属丝, 螺旋线的方程为 $x = a\cos \theta, y = a\sin \theta, z = a\theta \tan \alpha, \theta$ 由 0 变到 $\frac{\pi}{2}$ , 金属丝每一线元 ds 受外力, 大小为 $pds$ , 方向从线元作 $z$ 轴的垂线离开 $z$ 轴的指向. 证明整个金属丝所受的力等效于一个力螺旋的作用, 作用线为 $x = y, z = \frac{1}{4}\pi a\tan \alpha$ , 并求这个力螺旋的螺距 (螺距为沿作用线的主矩与主矢之比, 力矩的正方向规定与主矢的正方向一致).
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.4}
+证明一个力系总能简化为通过一给定点 $O$ 的一个力和作用在任一个给定的不包含 $O$ 点的平面上的一个力.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.5}
+一个力系由四个力组成, 其作用线组成四面体 $ABCD$ , 这四个力 $f_{1} = k \overrightarrow{AB}, f_{2} = k \overrightarrow{BC}, f_{3} = k \overrightarrow{CD}, f_{4} = k \overrightarrow{DA}$ , 其中 $k$ 是一常量. 证明这个力系等效于一个力偶, 其大小为 $\frac{6kV}{d}$ , 其中 $V$ 是四面体的体积, $d$ 是两条边 $AC$ 和 $BD$ 间的最短距离.
+
+提示:任意两条直线 $l_{1}$ 、 $l_{2}$ ，若分别通过 $M_{1}$ 、 $M_{2}$ 点，方向矢量分别为 $S_{1}$ 、 $S_{2}$ ，则此两直线间的最短距离为
+
+\[
+d = \frac {\mid \overrightarrow {M _ {1} M _ {2}} \cdot (S _ {1} \times S _ {2}) \mid}{\mid S _ {1} \times S _ {2} \mid}
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.6}
+两个相同的长度为 $2a$ 、质量为 $M$ 的均质梯子 $AB$ 和 $BC$ 在 $B$ 点光滑铰接在一起，端点 $A, C$ 静置于粗糙的水平面上，梯子与水平面间摩擦因数为 $\mu, \angle ABC = 2\alpha$ . 一个质量为 $m$ 的人要能爬到 $B$ 点，求 $\mu$ 需满足的条件.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.7}
+两个相同的质量为 $M$ 、半径为 $a$ 的粗糙的均质圆柱体置于粗糙的水平面上，两轴线相距 $2\sqrt{2} a$ . 第三个半径为 $a$ 、质量为 $2M$ 的粗糙均质圆柱体对称地置于上述两个圆柱体上面. 证明: 要能平衡, 圆柱体间的摩擦因数必须大于 $\tan \frac{\pi}{8}$ , 圆柱体与平面间的摩擦因数必须大于 $\frac{1}{2} \tan \frac{\pi}{8}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.8}
+一个均质的梯子靠在粗糙的地板和同样粗糙的墙上, 摩擦角为 $\varepsilon$ , 处于平衡的极限状态, 求梯子与水平线间的夹角.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.9}
+长为 $l$ 的均质重杆 $AB$ 的 $A$ 端能在一光滑的铅垂线上运动， $B$ 端能沿一条粗糙的水平直线运动，两条直线间的最短距离为 $a, a < l, B$ 端
+
+与水平直线间的静摩擦因数为 $\mu$ ，若 $l > a\sqrt{1 + \mu^2}$ ， $A$ 端高于 $B$ 端，证明杆在位置
+
+\[
+\arcsin \frac {a}{l} \leqslant \theta \leqslant \arccos \left[ \sqrt {\frac {l ^ {2} - a ^ {2} (1 + \mu^ {2})}{l ^ {2} (1 + 4 \mu^ {2})}} \right]
+\]
+
+(其中 $\theta$ 是 AB 杆与竖直向下直线间的夹角) 平衡.
+\begin{center}
+\input{figures/chapter7/fig_7_1_9_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.10}
+一圆筒形玻璃杯盛满了冰,重量为空杯时的六倍.若空杯时质心位于离底面四分之一高度处,问将冰装到什么高度杯子最不容易倾倒.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.11}
+杆 $BC, BD, CD, CE, CG, DG$ 由铰链连接，位于立方体的边和对角线上，如图7.10所示。铰链 $B, E, G$ 是固定的，各杆不计质量，在节点 $D$ 有作用力 $Q$ 沿对角线 $ED$ 方向，在节点 $C$ 有作用力 $P$ 沿 $CG$ 方向，处于平衡状态，求各杆的内力。
+\begin{center}
+\input{figures/chapter7/fig_7_1_11_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.12}
+一桁架由 11 根等长的杆组成, $A, B, \cdots, G$ 是铰链, 如图 7.13 所示. $A$ 点刚性固定, $G$ 点只在竖直方向支撑住, 忽略杆的重量, 一重物 $W$ 挂在 $E$ 处, 求 $A, G$ 点的竖直
+
+支撑力和每根杆的内力.
+\begin{center}
+\input{figures/chapter7/fig_7_1_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.13}
+一桁架结构及负荷情况如图 7.15 所示, 所有的杆质量不计, 用光滑铰链连接, 求 CE、ED、FD 三杆的内力.
+
+由于结构及负荷具有对称性，A、B处底座的支撑力 $N_{Ay}=N_{By}, N_{Ax}+N_{Bx}=0$ 。这里取y轴竖直向上，x轴水平向右，
+
+\[
+N _ {A y} = N _ {B y} = \frac {1}{2} \left(7 Q + 2 \times \frac {Q}{2}\right) = 4 Q
+\]
+
+取结构中 AEF 部分为系统, 受力情况如图 7.16 所示,
+
+\[
+\begin{array}{r l} & E F = \frac {3}{8} l \tan 3 0 ^ {\circ} = \frac {\sqrt {3}}{8} l \\ & E D = \sqrt {E F ^ {2} + F D ^ {2}} = \sqrt {\frac {3}{6 4} l ^ {2} + \frac {1}{6 4} l ^ {2}} = \frac {1}{4} l \\ & \sin \theta = \frac {F D}{E D} = \frac {1}{2}, \quad \theta = 3 0 ^ {\circ} \end{array}
+\]
+
+这个桁架结构安装得好,可使 $N_{Ax}=N_{Bx}=0$ , 安装
+
+不好, $N_{Ax}$ 可取任何值,变成静不定问题,这里考虑理想情况, $N_{Ax}=N_{Bx}=0$ .
+
+平衡方程为
+
+\[
+S _ {F D} + S _ {C E} \cos 3 0 ^ {\circ} + S _ {E D} \sin 3 0 ^ {\circ} = 0\tag{1}
+\]
+
+\[
+4 Q + S _ {C E} \sin 3 0 ^ {\circ} - S _ {E D} \cos 3 0 ^ {\circ} - \frac {7}{2} Q = 0\tag{2}
+\]
+
+\[
+M _ {E} = S _ {F D} \cdot E F + Q \cdot \frac {l}{8} + Q \cdot \frac {l}{4} - \left(4 Q - \frac {Q}{2}\right) \cdot \frac {3}{8} l = 0
+\]
+
+代入 $EF = \frac{\sqrt{3}}{8} l$ ，由上式可解出
+
+\[
+S _ {F D} = \frac {5}{2} \sqrt {3} Q\tag{3}
+\]
+
+由式(1)、(2)、(3)可得
+
+\[
+S _ {C E} = - 4 Q, \quad S _ {E D} = - \sqrt {3} Q
+\]
+
+作为验证,再算 $M_{D}=0$ ,
+
+\[
+\begin{array}{r l} M _ {D} & = Q \cdot \frac {1}{8} l + Q \cdot \frac {1}{4} l + Q \cdot \frac {3}{8} l - \frac {7}{2} Q \cdot \frac {1}{2} l \\ & - S _ {C E} \cos 6 0 ^ {\circ} \cdot \frac {l}{8} - S _ {C E} \cos 3 0 ^ {\circ} \cdot \frac {\sqrt {3}}{8} l = 0 \end{array}
+\]
+
+可得 $S_{CE} = -4Q$ ，结果相同，说明计算正确。
+\begin{center}
+\input{figures/chapter7/fig_7_1_13_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter7/fig_7_1_13_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.1.14}
+一根质量为 $M$ 的刚性细杆由两个距离为 $a$ 的快速旋转的转轮支撑着. 设开始时细杆不对称地静止地放在此两轮上, 转轮与细杆之间的动摩擦因数为 $\mu$ .
+
+(1) 设转轮的旋转方向互为反向, 如图 7.17(a) 所示, 试写出杆的运动微分方程, 并由此解出杆的质心相对于转轮 1 的位移 $x(t)$ , 设开始时 $x(0) = x_0$ , $\dot{x}(0) = 0$ ;
+
+(a)
+
+(b)
+
+(2) 如两转轮的转向都反向, 如图 7.17(b) 所示, 再计算 $x(t)$ , 仍设 $x(0) = x_0$ , $\dot{x}(0) = 0$ .
+\begin{center}
+\input{figures/chapter7/fig_7_1_14_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter7/fig_7_1_14_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\section{转动惯量和惯量张量}
+
+\begin{problem}{7.2.1}
+两个金属圆盘具有相同的质量 $M$ 和相同的厚度 $t$ , 都是均质的, 盘 1 的密度为 $\rho_{1}$ , 盘 2 的密度为 $\rho_{2}$ , 且 $\rho_{2} < \rho_{1}$ . 问哪个盘的转动惯量较大?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.2}
+已知一个均质立方体对于通过其质心和一个面的中心的轴的转动惯量为 $I_{0}$ ，求对通过质心和一个角的轴的转动惯量。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.3}
+一半径为 $R$ 、质量为 $M$ 的均质薄圆盘，另有一点质量 $m = \frac{5}{4} M$ 附在它的边缘上，取图7.19的坐标（ $z$ 轴垂直纸面向上）. 求：
+
+(1) 圆盘与点质量系统关于 A 点的惯量张量；
+
+(2) 关于 A 点的惯量主轴和主转动惯量.
+\begin{center}
+\input{figures/chapter7/fig_7_2_3_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.4}
+如图 7.20 所示, 四个质量均为 $m$ 的质点位于 $xy$ 平面上, 坐标分别为 $(a,0)$ 、 $(-a,0)$ 、 $(0,2a)$ 、 $(0,-2a)$ , 它们被可不计质量的杆连成一刚体, 求:
+
+(1) 对原点的惯量张量；
+
+(2) 绕过原点的与 x、y、z 轴的夹角都相等的轴的转动惯量；
+
+(3) 在某时刻沿(2)问所述的轴转动, 求此时刚体对原点的角动量矢量和该轴的夹角.
+\begin{center}
+\input{figures/chapter7/fig_7_2_4_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.5}
+一个质点系由位于点 $(a, -a, a)$ 质量为 $4m$ 的质点、位于点 $(-a, a, a)$ 质量为 $3m$ 的质点和位于点 $(a, a, a)$ 质量为 $2m$ 的质点组成.
+
+(1) 求关于坐标原点的惯量张量；
+
+(2) 用(1)问的结果求通过原点、单位方向矢量 $n = \frac{1}{\sqrt{2}} i + \frac{1}{\sqrt{2}} j$ 的轴的转动惯量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.6}
+一个质点系包括位于点 $(a, -a, 0)$ 质量为 $4m$ 的质点、位于 $(-a, a, 0)$ 质量为 $3m$ 的质点和位于 $(a, a, 0)$ 质量为 $2m$ 的质点. 求：
+
+(1) 关于坐标原点的惯量张量；
+
+(2) 关于原点的主转动惯量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.7}
+求底面半径为 $r$ 、高为 $h$ 、质量为 $m$ 的均质圆锥体相对于底面中心的惯量张量。当 $r$ 与 $h$ 之比为何值时，过此点的任何轴都是惯量主轴，并在此情况下，找出质心的位置以及关于质心的主转动惯量。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.8}
+半径为 R 的非均匀圆球, 在距中心 r 处的密度可用下式表示:
+
+\[
+\rho = \rho_ {0} \left(1 - a \frac {r ^ {2}}{R ^ {2}}\right)
+\]
+
+式中 $\rho_0$ 及 $a$ 为常量. 试求：
+
+(1) 绕过球心的任何轴的转动惯量；
+
+(2) 关于球面上一点的三个主转动惯量；
+
+(3) 关于球面上一点的惯量张量, 要用下列坐标表达它, 取 x、y、z 坐标后, 球心的坐
+
+标为 $(R\cos\alpha,R\cos\beta,R\cos\gamma)$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.9}
+质量为 m 的均质椭球, 椭球方程为
+
+\[
+\frac {x ^ {2}}{a ^ {2}} + \frac {y ^ {2}}{b ^ {2}} + \frac {z ^ {2}}{c ^ {2}} = 1
+\]
+
+试求此椭球绕过其质心的三个惯量主轴的转动惯量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.10}
+上题如不取三个惯量主轴为坐标,而取上述坐标绕 z 轴转 $\alpha$ 角的 x、y、z 坐标,求关于质心的惯量张量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.11}
+一个质量为 $m$ 、边长为 $a$ 的均质立方体，试求：
+
+(1) 关于质心的惯量张量；
+
+(2) 关于一个顶点取过此点的三条边为 x、y、z 轴时的惯量张量；
+
+(3) 关于一个顶点的三个主转动惯量；
+
+(4) 写出(2)、(3)问两种取法时的惯量椭球方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.12}
+上题所述的立方体,取一个角为坐标系原点,三条边为 x、y、z 轴,求绕过原点方向矢量为 $n=\left(\frac{\sqrt{3}}{3},\frac{\sqrt{2}}{2},\frac{\sqrt{6}}{6}\right)$ 的轴的转动惯量,并给出此轴与惯量椭球面交点的坐标.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.13}
+考虑一薄板位于 $x - y$ 平面，证明对板上任何一点的惯量张量有如下形式：
+
+\[
+\left( \begin{array}{c c c} A & - C & 0 \\ - C & B & 0 \\ 0 & 0 & A + B \end{array} \right)
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.14}
+若上题的坐标改用绕 z 轴旋转 $\theta$ 角后的坐标, 证明惯量张量为
+
+\[
+\left( \begin{array}{c c c} A ^ {\prime} & - C ^ {\prime} & 0 \\ - C ^ {\prime} & B ^ {\prime} & 0 \\ 0 & 0 & A ^ {\prime} + B ^ {\prime} \end{array} \right)
+\]
+
+其中
+
+\[
+\begin{array}{l} {A ^ {\prime} = A \cos^ {2}   \theta + B \sin^ {2}   \theta - C \sin 2 \theta} \\ {B ^ {\prime} = A \sin^ {2}   \theta + B \cos^ {2}   \theta + C \sin 2 \theta} \\ {C ^ {\prime} = C \cos 2 \theta - \frac {1}{2} (B - A) \sin 2 \theta} \end{array}
+\]
+
+并由此证明:如转角
+
+\[
+\theta = \frac {1}{2} \arctan \left(\frac {2 C}{B - A}\right)
+\]
+
+转后的 x、y 轴为惯量主轴.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.15}
+如图 7.22 所示, 一个质量为 $m$ 的均质圆锥, 其底面边缘的方程为 $(x - a)^2 + z^2 = a^2$ 和 $y = 0$ , 顶点位于 $(a, ka, 0)$ . 求关于原点的惯量张量.
+\begin{center}
+\input{figures/chapter7/fig_7_2_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.16}
+证明:(1) 对于过一点的三个互相垂直的轴的转动惯量,对任一个轴的转动惯量都不能超过对另两个轴的转动惯量之和;
+
+(2) 在刚体上取 $Oxyz$ 与 $Ox'y'z'$ 两坐标系, 如两坐标系不仅有公共的原点, $x, y, x'$ , $y'$ 轴还在同一平面上, 则刚体对各轴的转动惯量有下列关系:
+
+\[
+I _ {x x} + I _ {y y} = I _ {x ^ {\prime} x ^ {\prime}} + I _ {y ^ {\prime} y ^ {\prime}}
+\]
+
+并给予物理解释.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.2.17}
+如图 7.24 所示, 质量为 $m$ 的均质薄片, 由 $x$ 轴、 $y$ 轴及圆心在 $(R, R)$ 、半径为 $R$ 的圆弧围成它的边界. 求绕过原点的、在 $xy$ 平面上与 $x$ 轴夹角为 $30^\circ$ 的轴的转动惯量.
+\begin{center}
+\input{figures/chapter7/fig_7_2_17_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\section{刚体的定轴转动}
+
+\begin{problem}{7.3.1}
+一质量为 $300\mathrm{kg}$ 、直径为 $1\mathrm{m}$ 厚度均匀的均质圆盘状的飞轮以每分钟1200转的转速旋转，为了使它在2分钟内停下来，所需的不变的力矩多大？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.2}
+一个扭摆由一根竖直的金属丝下挂一个物体组成, 物体可绕此竖直的金属丝在金属丝的扭转力矩作用下转动. 现有三个扭摆, 它们由相同的金属丝和相同的均质实心立方体组成, 一个挂在立方体的角上, 一个挂在一个面的中心, 还有一个挂在一条棱边的中点, 如图 7.26 所示. 求三个扭摆转动时的周期之比.
+\begin{center}
+\input{figures/chapter7/fig_7_3_2_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.3}
+求两扭摆的周期之比, 它们之间的不同仅在于其中之一粘上两个圆柱, 每个圆柱的半径和圆盘半径之比为 $\frac{1}{4}$ , 每个圆柱和圆盘均是均质的, 质量为 $M$ , 如图 7.27 所示.
+\begin{center}
+\input{figures/chapter7/fig_7_3_3_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.4}
+一个正常身材的人以每秒钟走一步的自然摆动的步频行走是很舒服的,试图以较快或较慢的步频行走都会感到不舒服,略去膝关节的效应,试利用一种最简单的模型来估算一下决定该步频频率的与人腿的那种特征有关.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.5}
+一质量为 M、半径为 R 的均质圆环悬挂在一铅垂面内，支撑物是安置在圆周内侧上一点的刀刃，求圆环做小振动的角频率。（图 7.28）
+\begin{center}
+\input{figures/chapter7/fig_7_3_5_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.6}
+一个人想用杆子打在岩石上的办法把杆子折断. 他用手拿住杆子一端, 让杆子绕该端做无位移转动, 如图 7.29 所示. 这个人希望杆子打在岩石上的瞬时手不受到较大力的冲击, 问杆子的哪一点打在岩石上为好? (不考虑重力).
+\begin{center}
+\input{figures/chapter7/fig_7_3_6_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.7}
+一半径为 $R$ 、质量为 $m$ 的均质轮子可绕通过其轮心的、垂直于轮子的水平轴自由转动，一根不可伸长的轻绳绕在轮边，一端固定在轮上，另一端挂着一质量为 $M$ 的物体，如图 7.31 所示，问物体下落时绳中张力多大？
+\begin{center}
+\input{figures/chapter7/fig_7_3_7_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.8}
+两飞轮半径 $R_{1} = 2R_{2}$ , 可绕彼此平行的对称轴无摩擦转动, 转动惯量 $I_{1} = 16I_{2}$ , 开始时两轮无接触, 大轮的转速为 $n_{0} = 2000 \mathrm{r} / \mathrm{min}$ . 小轮静止. 如果移动这两根平行轴使两飞轮接触, 求达到稳定 (即接触点无滑动, 两飞轮转速不再变化) 后小轮的角速度.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.9}
+两个均质的圆柱体环绕各自的对称轴自由转动, 若两圆柱体的半径分别为 $r_1$ 和 $r_2$ , 质量分别为 $m_1$ 和 $m_2$ , 如图 7.33 所示. 让它们互相靠拢直到互切并达到不再随时间变化的稳定运动状态, 求稳定运动后两圆柱体的角速度.
+\begin{center}
+\input{figures/chapter7/fig_7_3_9_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.10}
+三个全同的均质圆柱体以相同的角速度 $\Omega$ 围绕各自的对称轴(相互平行)转动,使圆柱体互相接触,保持轴平行,最后每个圆柱体和相邻的圆柱体间无滑动时达到稳定运动状态,问三个圆柱体的总动能最终还留下多少?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.11}
+一段曲率半径为 $R$ 的均质圆弧绕通过弧线中心并与纸面垂直的水平轴线无摩擦地摆动. 证明微振动周期与圆弧的长度无关, 并求作此微振动的圆弧的等值单摆长.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.12}
+半径为 R 的均质圆扇形面绕垂直于其平面, 且通过其中心角顶点的光滑水平轴做微振动. 扇形的角度多大时, 此摆的等值单摆长等于扇形弧长的一半(图 7.37).
+\begin{center}
+\input{figures/chapter7/fig_7_3_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.13}
+一个人用棒打垒球,打在何处才能在打击的瞬间,握棒的手不受到冲击力.设棒绕手做定轴转动时的转动惯量为 I, 棒的质量为 m, 棒的质心离手握住的一端的距离为 d.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.14}
+有一半径为 $r$ 、质量为 $M$ 的均质圆球，在球面处通过装在无摩擦的、质量可以不计的、大小相同的球壳内连接于长度为 $l$ 、质量为 $m$ 的均质杆的一端，杆的另一端由无摩擦的铰链悬挂于一固定点，杆可在竖直平面内运动形成一个摆。试求此摆做微振动的周期。若圆球与杆固连，微振动的周期多大？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.15}
+质量 $m$ 、长 $b$ 的均质细棒用一根不可伸长的轻绳拴在劲度系数为 $k$ 的弹簧上，弹簧的另一端固定，绳跨过一固定于 $P$ 点的光滑小滑轮。棒可无摩擦地绕 $A$ 端在竖直平面内转动。如图 7.38 所示， $-\pi < \theta < \pi$ ，当 $c = 0$ 时，弹簧为自然长度， $b < a$ ，求：
+
+(1) 系统处于平衡时的 $\theta$ 值, 讨论平衡的稳定性;
+
+(2) 稳定平衡位置附近的小振动的角频率(注意 PA 线是竖直的).
+\begin{center}
+\input{figures/chapter7/fig_7_3_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.16}
+质量为 $M$ 、半径为 $R$ 的均质细圆环在光滑的桌面上可绕枢轴无摩擦转动。一只质量为 $m$ 的甲虫相对于圆环以速率 $u$ 沿着圆环爬行，如图 7.39 所示。甲虫和圆环原来是静止的。当甲虫爬到与枢轴同一直径的另一端 $A$ 点时，甲虫相对于桌面的速率多大？
+\begin{center}
+\input{figures/chapter7/fig_7_3_16_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.17}
+如图 7.40, 一个高度为 $h$ 、底面半径为 $R$ 的正圆锥绕其竖直轴转动, 圆锥表面有一条从锥顶到锥底的光滑细直槽, 圆锥起初以角速度 $\omega_0$ 转动. 一个质量为 $m$ 的小珠在槽的顶端被释放, 在重力作用下滑下. 假设小珠只能在槽中运动, 圆锥绕轴的转动惯量为 $I$ , 求:
+
+(1) 小珠到达底部时圆锥的角速度；
+
+(2) 小珠刚离开圆锥时相对于实验室的速率.
+\begin{center}
+\input{figures/chapter7/fig_7_3_17_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.18}
+质量为 $M$ 、半径为 $R$ 的均质实心球，绕一固定的竖直的直径以角速度 $\omega$ 在空间自由转动，另有一个质量为 $m$ 的质点最初位于球的一极，以恒定速率 $v$ 沿球的一个大圆运动。证明：当质点到达另一极时球的转动被延迟的角度为
+
+\[
+\alpha = \frac {\pi R \omega}{v} \bigg (1 - \sqrt {\frac {2 M}{2 M + 5 m}} \bigg)
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.19}
+一个均质的立方体绕其对角线自由转动. 证明: 若一条边突然地被固定, 让其绕该边转动, 其动能损失了 $\frac{11}{12}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.20}
+一质量为 $m$ 的松鼠在一个半径为 $R$ 、转动惯量为 $I$ 的圆柱形活动鼠笼中以相对于鼠笼的匀速率 $v_0$ 奔跑，如图7.42所示。鼠笼受到的阻力矩和它的角速度成正比，与鼠笼的半径 $R$ 相比，可以略去松鼠的大小。若初始时刻鼠笼是静止的，松鼠从鼠笼的底部起跑。用松鼠相对于竖直方向的角度表示角位移。求在弱阻尼小振动情况下松鼠对静参考系的运动，无阻尼情况下松鼠的角速度，要有这种情况鼠笼应怎样设计？
+\begin{center}
+\input{figures/chapter7/fig_7_3_20_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.21}
+质量为 $m$ 的卫星以角速度 $\omega$ 绕质量为 $M$ 的行星沿轨道运行. 假定 $m \ll M$ , 卫星的自转可以忽略, 行星以角速度 $\Omega$ 自转, 自转轴垂直于卫星的轨道平面. $I$ 为行星绕其轴的转动惯量, $D$ 为卫星至行星中心的距离.
+
+(1) 求行星卫星系统关于其质心的总角动量 J 和总能量 E 的表达式, 从这两个表达式中消去 D;
+
+(2) 通常两个角速度 $\omega$ 和 $\Omega$ 是不相等的. 假定有一种机制, 例如潮汐摩擦在 $\omega \neq \Omega$ 时能使 $E$ 减少但角动量守恒. 从 $E$ 作为 $\omega$ 的函数考虑, 证明存在一初始条件范围使最终 $\omega = \Omega$ , 且为最后的稳定的位形.
+
+这一效应的著名例子出现在水星和它的卫星间还有金星和它的卫星间。(但是,在这些例子中是与较轻的物体的自转有关联的).
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.22}
+7.2.3 题所述的刚体被图 7.19 中 A 和 B 处的支点约束以角速度 $\omega = \omega j$ 绕 y 轴旋转，写出作为时间函数的对 A 点的角动量，并求出在 B 处所受的垂直于 y 轴的外力分量（不计重力）.
+\begin{center}
+\input{figures/chapter7/fig_7_3_22_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.23}
+一个高速转子由质量为 M、半径为 R、宽度为 2l 的均质圆盘组成，将它安装在一根轴上，轴的轴承相距 2d，两块质量均为 m 的附加质量块对称地安置在转子上，如图 7.43 所示。若转子以角速度 $\omega$ 高速旋转，求作用在轴承上的随时间变化的力（重力可以不计）。
+\begin{center}
+\input{figures/chapter7/fig_7_3_23_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter7/fig_7_3_23_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.24}
+一个 S 形曲柄由两个半径为 a、质量为 $\frac{1}{2}m$ 的均质半圆圈连成一个平面，中心与两端在一条直线上. 让它围绕与此直线相重合的光滑杆转动, 在时间 $\tau$ 内, 转动由静止状态以恒定的角加速度加速至角速度 $\Omega$ . 求为产生这种运动所必须给予的沿杆的方向的力矩以及杆给予曲轴的力矩.
+\begin{center}
+\input{figures/chapter7/fig_7_3_24_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.25}
+求 7.3.19 题前后两个定轴转动的角动量大小之比, 以及在固定过程中给予的外力矩之冲量的大小与原角动量大小之比.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.26}
+如图 7.47, 一个均质的正圆锥底面半径为 $r$ 、高为 $\sqrt{\frac{3}{2}} r$ , 其质心的位置以及关于质心的惯量张量可利用 7.2.7 题的结果. 此圆锥绕一条母线转动, 角速度为 $\Omega$ , 突然放开这条母线, 固定与此母线相交的底面的直径. 求此刻绕底面直径转动的角速度以及前后动能之比.
+\begin{center}
+\input{figures/chapter7/fig_7_3_26_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.27}
+长为 $l$ 、重 $P$ 的均匀直杆在铅垂平面内绕其上端 $O$ 自由摆动。试求当杆子处在与铅垂线成 $\varphi$ 角时，距 $O$ 点为 $x$ 处的杆子截面 $A$ 的弯曲力矩的大小，并问此时弯曲力矩具有最大值的截面在何处？
+
+提示:截面 A 处杆的两边除相互有作用力外,还有相互作用的力矩,现在要求的就是这相互作用的力矩.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.28}
+图 7.49 中画的是一个凸轮轴的简化抽象图, 质量为 m 和 2m 的四个质点固定在无质量的杆上, 并都处在一个平面内. 它以恒定的角速度 $\omega$ 绕 $OO'$ 轴转动, 轴承处无摩擦, 问:
+
+(1) 轴承施加的力对质心的力矩多大?
+
+(2) 绕质点所在平面中哪一个轴做定轴转动时不论 $\omega$ 多大轴承处没有附加压力？
+\begin{center}
+\input{figures/chapter7/fig_7_3_28_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.29}
+图 7.52 所示的曲轴由均质细杆组成, 曲轴以恒定的角速度 $\omega$ 绕固定轴无摩擦转动, 不计重力, 求作用在轴承上的合力, 在图中画出这些力和角动量的方向.
+\begin{center}
+\input{figures/chapter7/fig_7_3_29_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.30}
+哑铃由质量为 $m$ 的两个相同的质点固连在一根长度为 $2A$ 的无质量的刚杆两端组成，刚杆绕一通过杆的中心并与杆成 $\theta$ 角的轴旋转，取杆的中心为坐标原点， $z$ 轴沿转轴，角速度 $\omega$ 不随时间而变， $t = 0$ 时哑铃处于 $xz$ 平面内，如图7.55所示.
+
+(1) 计算关于 O 点的惯量张量；
+
+(2) 用算得的惯量张量, 求在实验室参考系中哑铃关于 O 点的角动量随时间变化的规律;
+
+(3) 用 $J = \sum_{i} r_{i} \times p_{i}$ 计算哑铃的角动量，并证明它与(2)问的答案一致；
+
+(4) 计算作用在轴上的力矩随时间变化的规律；
+
+(5) 计算哑铃的动能.
+\begin{center}
+\input{figures/chapter7/fig_7_3_30_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.31}
+一个均匀薄圆盘, 半径为 $a$ 、质量为 $m$ , 以匀角速度 $\omega$ 通过其中心的固定竖直轴无摩擦地自由转动, 转轴与圆盘对称轴的夹角为 $\alpha$ , 求圆盘和轴之间作用的力矩和净力的大小和方向.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.32}
+一块边长为 $a$ 与 $2a$ 质量为 $M$ 的均质薄矩形片以恒定的角速度 $\omega$ 绕其对角线定轴转动，转轴由对角上的轴承支撑，如图7.56所示，忽略重力与摩擦力。求出每个轴承施加在轴上的力与时间的关系。
+\begin{center}
+\input{figures/chapter7/fig_7_3_32_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter7/fig_7_3_32_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.33}
+一个边长为 $a$ 、质量为 $m$ 的均质薄正方形板绕一个与它的法线成 $\theta$ 角、通过中心的轴以恒定角速度 $\omega$ 转动。选取下列两组坐标：两个坐标系的原点均取在板的中心， $O\xi\eta\xi$ 是实验室坐标系，取转轴为 $\zeta$ 轴； $Oxyz$ 固连于薄板， $z$ 轴沿板的法线方向， $x$ 、 $y$ 轴在薄板平面上，取与 $\zeta$ 轴垂直的一个方向为 $y$ 轴， $x$ 、 $y$ 轴不必一定与正方形的边平行或垂直。 $t=0$ 时， $y$ 轴和 $\eta$ 轴重合，如图 7.58 所示。求：
+
+(1) 用两组坐标系表达的角动量；
+
+(2) 用两组坐标系表达的作用在轴上的力对 O 点的力矩.
+\begin{center}
+\input{figures/chapter7/fig_7_3_33_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.3.34}
+一根长 $l$ 、质量为 $m$ 的均质杆，其下端以与时间有正弦函数关系作振幅 $A$ 角频率 $\omega$ 的上下振动，如图7.59所示。适当选择参数 $m, l, A$ 和 $\omega$ ，此摆将围绕 $\theta = 0$ 这个在下端不动时的不稳定平衡位置作振动。
+
+(1) 列出作用于杆上的力的分量；
+
+(2) 杆的角动量守恒吗?
+
+(3) 杆的动量守恒吗?
+
+(4) 杆的能量守恒吗?
+
+(5) 求质心的加速度分量, 用 $\theta(t)$ 写成时间的函数;
+
+(6) 用作用于杆的力写出杆的角运动的微分方程；
+
+(7) 在实验室参考系中得到关于 $\theta(t)$ 的运动微分方程；
+
+(8) 在支端平动参考系中得到关于 $\theta(t)$ 的运动微分方程；
+
+(9) 定性说明当 A=0 时发生什么样的运动；
+
+(10) 从物理上解释为什么能发生竖直向上的摆动.
+
+(杆限于在图示的 xy 平面内运动).
+\begin{center}
+\input{figures/chapter7/fig_7_3_34_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\section{刚体的平面平行运动}
+
+\begin{problem}{7.4.1}
+质量为 10.0kg、半径为 0.070m 的均质圆柱体在一倾角为 $30^{\circ}$ 的斜坡上做纯滚动，一条不可伸长的轻绳缠绕在圆柱上，绳子跨过无摩擦的滑轮并在另一端连着一个 2.0kg 的重物，如图 7.61 所示。求：
+
+(1) 当重物下降 1.0m 时圆柱竖直向上运动的距离；
+
+(2) 圆柱中心的加速度；
+
+(3) 作用在接触点 P 上的静摩擦力.
+\begin{center}
+\input{figures/chapter7/fig_7_4_1_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.2}
+一均质圆柱质量为 M、半径为 r，放在完全光滑的斜面上，斜面的倾角为 $\alpha$ 。圆柱外卷有可以弯曲、无重量、不可伸长的绳子，此绳子沿着斜面经过一个质量可以忽略不计的滑轮后在下端悬一质量为 m 的重物。试求圆柱质心的加速度 a、重物的加速度 $a'$ ，圆柱的角加速度 $\beta$ 及绳子张力 T。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.3}
+一均质球以初速 $v_{0}$ 沿水平窄道抛出，开始做纯滑动，球的质量为 $m$ ，与地板间的静摩擦因数为 $\mu_{s}$ 、滑动摩擦因数为 $\mu_{d}$ ，忽略空气阻力的影响，求球开始做无滑滚动时的速度。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.4}
+一绕其对称轴以角速度 $\omega$ 旋转的半径为 $R$ 的硬币，让转轴处于水平地放置在水平面上。当它停止滑动以后，质心速度多大？
+\begin{center}
+\input{figures/chapter7/fig_7_4_4_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.5}
+一个质量为 M、半径为 R 的轮子以质心速度 $v_{0}$ 、角速度 $\omega_{0}$ 沿水平表面投射，如图 7.65 所示， $\omega_{0}$ 倾向于产生与 $v_{0}$ 相反方向的质心速度。轮子与表面间的摩擦因数为 $\mu$ 。
+
+(1) 经多长时间停止滑动；
+
+(2) 滑动停止时轮子的质心速度多大?
+\begin{center}
+\input{figures/chapter7/fig_7_4_5_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.6}
+一个半径为 R、质量为 M 的薄圆筒以质心速度 $v_{0}$ 、角速度 $\omega_{0}=\frac{2v_{0}}{R}$ 往回自转（如图 7.66 所示）在光滑的地板上运动，进入粗糙区域后继续沿直线运动，由于摩擦，它最终做纯滚动。求质心的末速度 $v_{f}$ 。
+\begin{center}
+\input{figures/chapter7/fig_7_4_6_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.7}
+一个 $100\mathrm{m}^2$ 的太阳能配电板连接到一个飞轮上，它把入射的太阳光能转换为机械的转动能，效率 $1\%$ 
+
+(1) 在这个太阳能配电板曝光 8h 后. 这个质量为 500kg、半径为 50cm 的实圆柱形飞轮将有多大的角速度(假定它开始是静止的)?
+
+在整个时间间隔中太阳常数为 $2 \, cal/cm^{2} \cdot \min(1 \, cal = 4.2J)$ .
+
+(2) 假如飞轮(它的轴是水平的)突然从它的固定轴承上被释放, 让它在一个滑动摩擦因数 $\mu=0.1$ 的水平面上开始运动, 在它停止滑动前走过多远?
+
+(3) 这时质心速度多大?
+
+(4) 以热的形式耗散了多少能量?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.8}
+一均质细圆环从倾角为 $\theta$ 的斜面上滚下，求使它不发生滑动的最小摩擦因数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.9}
+一质量为 m、半径为 R 的均质圆柱体放置在与水平面成 $\theta$ 角的斜面上，如图 7.68 所示。图中 a 表示圆柱体的轴沿斜面运动的加速度，圆柱体和斜面之间的摩擦因数为 $\mu$ ，当 $\theta$ 小于某个临界角 $\theta_{c}$ 时，圆柱体将无滑动地沿斜面滚下。
+
+(1) $\theta_{\mathrm{C}}$ 等于多少？
+
+(2) 当 $\theta < \theta_{\mathrm{C}}$ 时, $a$ 等于多少?
+\begin{center}
+\input{figures/chapter7/fig_7_4_9_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.10}
+一半径为 $r$ 、质量为 $m$ 、转动惯量 $I = mk^2$ （关于对称轴的）的轮子沿着水平面被拉着运动，水平拉力 $F$ 作用在一根从半径为 $b$ 的轴上展开的绳子上，如图7.69所示。假定轮和水平面间的摩擦力足以使轮作无滑动滚动， $I = mk^2$ 中 $k$ 为常量，具有长度的量纲。求：
+
+(1) 轮轴的加速度；
+
+(2) 作用在轮上的摩擦力.
+\begin{center}
+\input{figures/chapter7/fig_7_4_10_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.11}
+一质量 $m = 1.8\mathrm{kg}$ 、半径 $r = 0.2\mathrm{m}$ 的扁平均质圆盘平放在无摩擦的水平桌面上，一根缠绕在此盘的圆柱面上的绳子受到沿正北方向的3N的作用力，如图7.70所示. 求质心的加速度 $a$ (大小和方向) 和圆盘绕其质心的角加速度 $\beta, a = r\beta$ 吗? 为什么?
+\begin{center}
+\input{figures/chapter7/fig_7_4_11_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.12}
+两个均质圆盘质量分别为 $M_{1}$ 和 $M_{2}$ , 半径分别为 $R_{1}$ 和 $R_{2}$ , 由一根环绕它们各自圆周的、不可伸长的轻绳连结, 如图 7.71 所示. 圆盘 1 绕其水平的对称轴做无摩擦定轴转动, 两圆盘在同一竖直平面内, 让圆盘 2 自由下落. 列出可求其质心加速度的方程.
+\begin{center}
+\input{figures/chapter7/fig_7_4_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.13}
+质量为 M 的一种玩具由两个半径为 R、厚度为 t 的大圆盘和一根半径为 r、长度为 t 的圆棒固连而成，如图 7.72(a) 所示，假定各处密度均匀，求此玩具在重力作用下下落时（见图(b))无质量不可伸长的绳中的张力 T.
+\begin{center}
+\input{figures/chapter7/fig_7_4_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.14}
+一质量为 $M$ 、半径为 $R$ 的均质球置于某一卡车的平板上，此卡车自静止开始以恒定加速度 $A$ 运动。假定球无滑动滚动，求球的质心相对于卡车的加速度。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.15}
+半径为 r 的均质球做无滑滚动，要始终保持与环的轨道接触，最小的高于圆环顶端的高度 h 多大？(参看图 7.74)
+\begin{center}
+\input{figures/chapter7/fig_7_4_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.16}
+一个半径为 $b$ 的球，在 $\theta = 0$ 处静止在另一个半径为 $a (> b)$ 的固定不动的球上。在重力作用下上面的球因微扰而滚动（参看图7.75），静摩擦因数 $\mu_s > 0$ ，滑动摩擦因数 $\mu_d = 0$ 。
+
+（1）简单地描述球做滚动、滑动和分离的先后次序，并作解释；
+
+(2) 写出上面的球在下面的球上做纯滚动的约束方程；
+
+(3) 用 $\ddot{\theta}$ 和 $\theta$ 写出球做纯滚动时的运动微分方程；
+
+(4) 求有关 $\ddot{\theta}$ 和 $\theta$ 满足的方程；
+
+(5) 假定 $0 < \theta(0) \ll \theta(t)$ , 解出 $\theta(t)$ .
+
+提示: 可能用到如下的积分: $\int \frac{dx}{\sin \frac{x}{2}} = 2 \ln \tan \frac{x}{4}$ .
+\begin{center}
+\input{figures/chapter7/fig_7_4_16_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.17}
+一质量为 $m$ 、半径为 $a$ 的均质球在一半径为 $b (>a)$ 的固定圆柱体的顶端从静止状态开始无滑动地滚下. 求：
+
+(1) 此球脱离圆柱体的角度 $\theta_{max}$ ;
+
+(2) 当球脱离圆柱体的瞬间, 球心的速度.
+\begin{center}
+\input{figures/chapter7/fig_7_4_17_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.18}
+一个质量为 $m$ 、半径为 $r$ 的均质小球在一个半径为 $R$ 不动的大球的项部从静止开始运动，假定摩擦因数为 $\mu$ ，在何处小球开始出现滑动？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.19}
+一半径为 $r$ 的均质小球, 沿一半径为 $R + r$ 的竖直的固定的圆环内侧运动. 考虑两种情况: i) 纯滚动; ii) 无摩擦的纯滑动. 求:
+
+(1) 在每一种情况下, 为使小球达环顶部而不致落下, 在环底部时须具有的最小质心速度 $v_{1}$ .
+
+(2) 在纯滑动情况下, 若在环底部时质心速度比 $v_{1}$ 小 10\%, 小球在何处开始落下?
+\begin{center}
+\input{figures/chapter7/fig_7_4_19_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.20}
+一块长 $2a$ 的均质薄平板一端靠在光滑的竖直墙壁上, 另一端放在光滑的地板上, 与地板的夹角为 $\theta_0$ , 如图 7.79 所示. 当松开平板后, 平板在重力作用下下滑. 求:
+
+(1) 平板脱离墙壁前到达 $\theta$ 时的时间 $t(\theta)$ (可表为积分形式);
+
+(2) 平板脱离墙壁的 $\theta$ 值.
+\begin{center}
+\input{figures/chapter7/fig_7_4_20_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.21}
+一质量为 $m$ 的均质细杆下端置于光滑的桌面上，从与铅垂线成 $\theta_0$ 角静止释放，求释放后的瞬间桌子对杆的作用力.
+\begin{center}
+\input{figures/chapter7/fig_7_4_21_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.22}
+质量为 $m$ 、半径为 $r$ 的均质圆柱置于粗糙的斜面上，斜面倾角 $\alpha = 30^{\circ}$ 、质量为 $m$ ，置于粗糙的水平面上。圆柱与斜面间、斜面与水平面间的摩擦因数均为 $\mu = 0.1$ 。开始圆柱与斜面均从静止状态开始运动。求圆柱质心的运动学方程以及圆柱的角速度.
+\begin{center}
+\input{figures/chapter7/fig_7_4_22_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.23}
+一个质量为 $m$ 、半径为 $r$ 的均质实心圆柱体沿着一个楔的倾斜表面向下运动，楔的质量为 $M$ ，它可以沿一个光滑的水平面自由运动。
+
+(1) 如圆柱体与楔之间无摩擦, 圆柱体自静止开始下滑, 下降高度 h 时, 楔运动了多大距离?
+
+(2) 如圆柱体与楔之间有摩擦力, 圆柱体自静止开始纯滚动, 下降高度 $h$ 时, 楔运动了多大距离?
+
+(3) 比较两种情况,圆柱体到达楔底时哪种情况更快些?与圆柱的半径有无关系?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.24}
+长为 $2a$ 的均质棒 $AB, A$ 端连于固定的光滑铰链，棒自水平位置无初速地开始运动，当棒通过铅直位置时，铰链脱开。证明此后运动中棒的质心沿抛物线轨道运动，并求从脱开到质心再下降 $h$ 高度时棒转过的圈数。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.25}
+重 W 的均质棒两端用两条平行的绳悬挂, 棒在水平位置处于平衡(图
+
+7.83). 如其中一条绳断了, 求此瞬时另一绳子中的张力.
+\begin{center}
+\input{figures/chapter7/fig_7_4_25_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.26}
+两根相同的均质棒 $AB$ 和 $BC$ , 质量均为 $m, B$ 点用光滑铰链连接, $A$ 端被光滑铰链到一个固定点, 棒限于在竖直平面内, $A, C$ 原在同一水平线上, $\angle ABC = 90^\circ$ . 求刚释放时两棒的初角加速之比.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.27}
+一个质量为 $m$ 、半径为 $a$ 的均质实圆柱体在一个固定的、粗糙的、内半径为 $b$ 、轴线水平的空圆柱体内部做无滑滚动。若运动的圆柱体在最低位置的角速度为 $\Omega$ ，证明：如 $\Omega \geqslant \left[\frac{11}{3}(b - a)g\right]^{1/2} / a$ ，实圆柱体可通过最高位置绕空圆柱体做完全的转动，并求两圆柱体间的摩擦力。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.28}
+要使一个半径为 $a$ 的乒乓球在获得一个向前的质心初速度 $\bm{v}_0$ 和一个初角速度 $\omega_0$ 后，由于水平桌面的摩擦力作用，最终乒乓球有与初速度 $\bm{v}_0$ 方向相反的质心速度。问 $\bm{v}_0$ 和 $\omega_0$ 应有什么样的关系。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.29}
+一个半径为 $a$ 、质量为 $m$ 的均质圆环被投射到一个倾角为 $\alpha$ 的粗糙斜面上，开始有向下的质心速度 $v$ 和一个使环沿斜面向上运动倾向的角速度，开始环的位置距斜面底部的高度 $h$ 处，圆环保持在一个竖直平面内运动，如到达斜面底部时刚好处于静止，求：
+
+(1) 圆环与斜面间的摩擦因数；
+
+(2) 圆环的初始角速度.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.30}
+两个质量均为 $M$ 、半径均为 $a$ 的均质轮子，其质量均集中于轮子边缘，两根不计质量的杆 $O_{1}A, O_{2}B$ 分别固连于两个轮子，质量为 $m$ 的均质杆通过 $A, B$ 两个光滑轴承将两个轮子连接起来。 $O_{1}A = O_{2}B = b$ 。运动中， $O_{1}A // O_{2}B, O_{2}$ 处通过一个劲度系数为 $k$ 的水平弹簧连在一固定点，如图7.88所示， $AB$ 处于最低位置时，弹簧无形变。若轮子在水平面上的平衡位置附近做小振动（纯滚动），求振动周期。
+\begin{center}
+\input{figures/chapter7/fig_7_4_30_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.31}
+两个全同的均质球,一个以质心速度 v 无滑动地滚向处于静止状态的另一个球,发生正碰.假定碰撞时可忽略所有摩擦力,且可认为碰撞是完全弹性的.
+
+(1) 计算碰撞后两球最后变为纯滚动时的质心速度；
+
+(2) 计算后来由于摩擦力作用损失的机械能与初始能量之比.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.32}
+用一水平台球棒打击一半径为 R、质量为 M 的台球，击球点在台球桌面上方高 h 处，如图 7.89 所示，已知球绕对称轴的转动惯量为 $\frac{2}{5}MR^{2}$ ，求使台球做无滑动滚动的 h 值。
+\begin{center}
+\input{figures/chapter7/fig_7_4_32_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.33}
+光滑的水平面上有两根均质细杆 A 和 B，长度均为 1m，质量分别为 1kg 和 2kg，两杆彼此平行，杆 B 静止地放置在 y=0、x=0 到 x=1m 处，A 以 10m/s 的速度沿 y 方向运动，在与 B 碰撞前，一端保持在 $x=(-1+\varepsilon)(\mathrm{~m})$ 处，另一端保持在 $x=\varepsilon(\mathrm{~m})$ 处 (0 < $\varepsilon$ ≪ 1)。在 t=0 时，A 到达 y=0 处同 B 发生完全弹性碰撞。不计两杆再次碰撞的可能性，求碰后两杆的运动。
+\begin{center}
+\input{figures/chapter7/fig_7_4_33_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.34}
+一半径为 $a$ 的均质实心球以速度 $v$ 在水平面上滚动时遇到一个高度为 $h(< a)$ 的台阶, 若碰撞是完全非弹性的, 在碰撞点无滑动, 问球若要跃上台阶其速度 $v$ 需多大?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.35}
+一质量为 m 的质点以垂直于原静止的均质细杆的速度 v 在杆端与杆做弹性碰撞, 如图 7.92 所示. 碰撞后质点静止, 求细杆的质量 M.
+\begin{center}
+\input{figures/chapter7/fig_7_4_35_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.36}
+两个相同的梯子,一端用铰链连接起来,下部再用绳子连接,以 $60^{\circ}$ 角置于光滑的水平面上.如果绳子突然切断,求此瞬时铰链的加速度.通常把梯子抽象为均质薄板或细杆.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.37}
+一辆停放着的卡车的后门敞开着, 如图 7.94(a) 所示. 从时刻 $t = 0$ 开始, 卡车以恒定加速度 $a$ 加速运动. 在 $t$ 时刻, 后门在与原位置成 $\theta$ 角的位置, 如图 7.94(b) 所示. 假定后门是均质分布的, 质量为 $m$ 、宽度为 $L$ .
+
+(1) 写出 $\theta$ 及其对时间的导数与门轴上受力的两个分量 $F_{\parallel}, F_{\perp}$ (见图(b)) 相联系的动力学方程；
+
+(2) 用 $\theta, m, L$ 和 $a$ 表示 $\ddot{\theta}, F_{\parallel}$ 和 $F_{\perp}$ ;
+
+(3) 求从开始加速到后门关闭所需的时间的一个表达式(不必积分).
+\begin{center}
+\input{figures/chapter7/fig_7_4_37_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.38}
+一根质量为 $m$ 、长 $L$ 的均质细棒两端用两根无质量的、劲度系数分别为 $k_{1}$ 和 $k_{2}$ 的弹簧悬挂在两个固定点，平衡时棒是水平的，如图7.95所示，弹簧只做竖直方向的运动，分别两种情况： $k_{1} = k_{2}$ 和 $k_{1} \neq k_{2}$ ，求棒在平衡位置附近做小振动的振动角频率。
+\begin{center}
+\input{figures/chapter7/fig_7_4_38_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.39}
+一个质量为 $M$ 、边长为 $a$ 的均质立方体静置在一个光滑的水平桌面上，在通过它的质心且平行于两个竖直面的平面上有一根质量为 $\frac{1}{3} M$ 、长度为 $4a$ 的光滑均质杆，其一端放在光滑桌面上，另一端靠在立方体竖直面的最高点，在此位置释放这个系统。证明：
+
+(1) 当杆与立方体仍保持接触期间
+
+\[
+\dot {\theta} ^ {2} = \frac {3 g (1 - 4 \sin \theta)}{a (1 6 - 3 \sin^ {2} \theta)}
+\]
+
+其中 $\theta$ 是杆与水平面间的夹角；
+
+(2) 在 $\sin \theta$ 满足
+
+\[
+3 \sin^ {3} \theta - 4 8 \sin \theta + 8 = 0
+\]
+
+时，杆与立方体开始分离.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.40}
+匀质杆 $AB, BD$ 和 $DE$ 用光滑铰链 $B, D$ 连接，如图7.97所示。三杆长度分别为 $a, b, d$ ，质量均为 $m$ 。杆 $AB$ 和 $DE$ 分别可绕铅直的固定轴 $A$ 和 $E$ 在水平面上的某一范围内无摩擦摆动。设在图示时刻， $AB$ 与 $BD$ 成一直线， $BD \perp DE$ ，此时杆 $AB$ 的角速度为 $\omega$ ，角加速度为零，求此时 $BD$ 杆在 $B, D$ 端受到的外力。
+\begin{center}
+\input{figures/chapter7/fig_7_4_40_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.41}
+证明刚体做平面平行运动时关于瞬心的角动量定理还可以有下列形式：
+
+\[
+I _ {O ^ {\prime}} \frac {\mathrm{d} \omega}{\mathrm{d} t} = M _ {O ^ {\prime}} - \frac {\omega}{\omega} \cdot (m r _ {\mathrm{C}} ^ {\prime} \times \ddot {r} _ {O ^ {\prime}})
+\]
+
+其中 $O'$ 是刚体上为瞬心的那一点， $\ddot{r}_{\sigma}$ 是瞬心平动参考系原点 $O'$ 的加速度，即瞬心的加速度，
+
+\[
+\frac {\mathrm{d} (I _ {O ^ {\prime}} \omega)}{\mathrm{d} t} = M _ {O ^ {\prime}} - m \omega (\dot {\boldsymbol {r}} _ {O ^ {\prime}} \cdot \boldsymbol {r} _ {\mathrm{C}} ^ {\prime})
+\]
+
+其中 $O'$ 是与瞬心重合的空间点， $\dot{\bm{r}}_0$ 是随瞬心沿空间极迹平动的坐标系的速度.
+\begin{center}
+\input{figures/chapter7/fig_7_4_41_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.42}
+证明刚体做平面平行运动时关于瞬心的角动量定理还可以有如下形式：
+
+\[
+\frac {\mathrm{d} \left(I _ {O ^ {\prime}} \omega\right)}{\mathrm{d} t} = M _ {O ^ {\prime}} - \frac {\omega}{\omega} \cdot (\dot {\boldsymbol {r}} _ {O ^ {\prime}} \times m \dot {\boldsymbol {r}} _ {\mathrm{C}})
+\]
+
+其中 $O'$ 是与瞬心重合的空间点， $\dot{r}_{O'}$ 是随瞬心沿空间极迹平动的坐标系的速度；
+
+\[
+I _ {\mathcal {O}} \frac {\mathrm{d} \omega}{\mathrm{d} t} = M _ {\mathcal {O}} + m \omega (\dot {\boldsymbol {r}} _ {\mathcal {O}} \cdot \boldsymbol {r} _ {\mathrm{C}} ^ {\prime})
+\]
+
+其中 $O'$ 与 $\dot{r}_{O}$ 的物理意义与上式相同.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.43}
+长为 $2a$ 、质量为 $m$ 的均质杆在光滑的水平桌面上，由静止的竖直位置在重力的作用下倒下，试用几种方法列出关于 $\theta$ 满足的运动微分方程， $\theta$ 为杆与铅垂线的夹角。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.44}
+半径为 $r$ 的均质轮子沿着与水平面成 $\alpha$ 角的斜面无滑动地滚下. 问当滚动摩阻因数 $\delta$ 为何值时, 轮子质心做等速运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.45}
+一个半径为 R 的均质轮子(质量均分布在边缘)在铅直直径的上端施以水平力 F, 轮子与水平面间的滚动摩阻因数为 $\delta$ , 要在此力作用下轮子做纯滚动, 滑动摩擦因数应满足什么条件?
+
+\[
+m \ddot {x} = F - f
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.4.46}
+质量为 $M$ 、半径为 $R$ 的均质圆柱放在倾角为 $\alpha$ 的斜面上，吊有质量为 $m$ 的重物经不可伸长的轻绳跨过定滑轮系于圆柱的轴心上。圆柱、滑轮间的绳子与斜面平行，圆柱与斜面间的滚动摩阻因数为 $\delta$ ，问：
+
+(1) 要能维持圆柱体在斜面上处于平衡, 重物的质量 m 应满足什么条件?
+
+(2) 圆柱与斜面间的摩擦因数 $\mu$ 满足什么条件才能保持圆柱体平衡?
+\end{problem}
+\clearpage
+
+
+\section{刚体的定点转动、一般运动及其他}
+
+\begin{problem}{7.5.1}
+一回转仪的中心惯量椭球有旋转对称轴，且有 $I_{1} = I_{2} = 2I_{3}$ ，今绕质心做定点自由转动，其自转角速度为 $\omega_{1}$ ，自转轴与进动轴间的夹角 $\theta = 60^{\circ}$ ，求进动角速度 $\omega_{2}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.2}
+一个刚性轮子关于其质心的固连于它的三个主轴 $x_{1}, x_{2}, x_{3}$ 的转动惯量为 $I_{1} = I_{2} \neq I_{3}$ , 如图 7.105 所示. 轮子质心处装一轴承, 轴承可绕空间任何轴做无摩擦转动. 轮子处于“动平衡”, 即它以 $\omega \neq 0$ 的恒定角速度转动, 且它的轴承不受到力矩作用, $\omega$ 的分量必须满足什么条件? 概略说明允许的运动.
+\begin{center}
+\input{figures/chapter7/fig_7_5_2_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.3}
+在空间有一刚体,所有外界影响(包括重力)全可忽略.
+
+(1) 用牛顿定律证明角动量守恒；
+
+(2) 假设刚体的质心在一个惯性系中静止, 它的旋转轴一定要有一个固定方向吗?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.4}
+一个理想的自由回转仪, 即一个有旋转对称性的刚体(主转动惯量为 $I_{1} = I_{2} < I_{3}$ ), 能围绕它的质心自由地转动, 运动时不受到力矩作用. 设 $\bm{u}(t)$ 是 $t$ 时刻沿刚体的对称轴(与转动惯量 $I_{3}$ 相联系的轴)的单位矢量. 导出用 $t = 0$ 时的 $\bm{u}(0)$ 和初角速度 $\omega(0)$ 表达的 $\bm{J}(t)$ (关于质心的角动量)、 $\omega(t)$ 和 $\bm{u}(t)$ 的表达式.
+\begin{center}
+\input{figures/chapter7/fig_7_5_4_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.5}
+均匀圆盘绕其质心做定点自由转动, 开始时, 圆盘绕与圆盘的对称轴成 $45^{\circ}$ 的轴线转动, 角速度为 $\omega_0$ . 证明在以后的运动中, 圆盘的轴线绘出一个正圆锥面, 此圆锥面的轴线与初始转动轴的夹角为 $\arctan\left(\frac{1}{3}\right)$ , 并证明圆盘轴线以等角速 $\frac{1}{2}\sqrt{10}\omega_0$ 转动.
+\begin{center}
+\input{figures/chapter7/fig_7_5_5_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.6}
+一个质量为 $m$ 、半径为 $a$ 的均质圆盘绕通过质心与其垂线成 $\alpha$ 角的轴以角速度 $\Omega$ 转动，圆盘突然被释放，让其绕质心自由转动。
+
+(1) 证明转轴在空间描绘出一个圆锥, 相对于圆盘也描绘出一个圆锥;
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.7}
+一回转仪可绕其质心做定点自由转动, 若 $I_{1} = I_{2} = nI_{3}, t = 0$ 时, 对称轴与进动轴之间的夹角为 $\theta_{0}$ , 证明:
+
+(1) 刚体作规则进动；
+
+(2) 自转角速度 $\dot{\psi}$ 与进动角速度 $\dot{\varphi}$ 间有如下关系：
+
+\[
+\dot {\varphi} = (n - 1) \dot {\varphi} \cos \theta_ {0}
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.8}
+若刚体关于质心的三个主转动惯量不相等, 且 $I_{1} > I_{2} > I_{3}$ , 刚体绕质心做定点自由转动时, 如让刚体绕一惯量主轴转动, 它将继续围绕该轴转动. 如果初始的转轴非常接近某一惯量主轴但不与之成一直线, 以后转轴会不会远离这一惯量主轴, 如不远离, 围绕这惯量主轴的转动是稳定的, 用欧拉动力学方程证明: 绕与 $I_{1}$ 和 $I_{3}$ (它们分别是最大和最小的主转动惯量) 相应的惯量主轴的运动是稳定的.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.9}
+一个物体围绕其质心做定点自由转动, 主转动惯量 $I_{1} > I_{2} > I_{3}$ . 若开始时, $\omega_{z0} > 0, \omega_{x0} < 0$ , 且有 $J^{2} = 2I_{2}T$ , 其中 $J$ 是对固定点的角动量, $T$ 是动能. 证明:
+
+\[
+\begin{array}{r l} \omega_ {x} = - \frac {J}{I _ {2}} \left[ \frac {I _ {2} (I _ {2} - I _ {3})}{I _ {1} (I _ {1} - I _ {3})} \right] ^ {1 / 2} & \text { sech } \tau \\ \omega_ {y} = \frac {J}{I _ {2}} \tanh \tau \\ \omega_ {z} = \frac {J}{I _ {2}} \left[ \frac {I _ {2} (I _ {1} - I _ {3})}{I _ {3} (I _ {1} - I _ {3})} \right] ^ {1 / 2} & \text { sech } \tau \\ \tau = \frac {J}{I _ {2}} \left[ \frac {(I _ {1} - I _ {2}) (I _ {2} - I _ {3})}{I _ {1} I _ {3}} \right] ^ {1 / 2} t \end{array}
+\]
+
+其中
+
+当 $t$ 趋于无穷大时，将发生什么情况？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.10}
+一个直径为 $20\mathrm{cm}$ 、密度为 $5\mathrm{g/cm}^3$ 的球在自由空间以 $2\pi \mathrm{rad/s}$ 的角速度转动。有一只质量为 $10^{-3}\mathrm{g}$ 的聪明的小跳蚤居住在固定在球面上又在转轴上的一所无质量的小房子里，如图7.111所示，为了让小房子位于原赤道处，小跳蚤很快地跳到纬度 $45^{\circ}$ 处，呆在那里等适当的时间，问要等多长时间实现这种转移。
+
+(注意:忽略小跳蚤在球面上跳动期间发生的微小进动.)
+\begin{center}
+\input{figures/chapter7/fig_7_5_10_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.11}
+质量为 $M$ 、半径为 $R$ 的均质球固连在一根长度为 $l(l \gg R)$ 无质量的刚性杆的一端，球可以绕杆自转，被置于地球的均匀重力场中，球和杆可以围绕杆的另一端做无摩擦定点转动。若此杆和球绕竖直轴以不变的角速度 $\omega$ 转动，方向向上，没有章动，球和杆又绕杆以 $\Omega$ 的恒定角速度转动，方向沿杆指向外，求章动角 $\theta$ 。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.12}
+垃圾箱上有一锥形盖由一个安在盖中心的轴支承着. 假定使盖的圆锥倾斜, 并使它很快地绕自己的对称轴旋转, 如图 7.113 所示. 问对自旋方向 $\omega$ 而言, 盖进动的方向相同还是相反? 并求进动角速度.
+\begin{center}
+\input{figures/chapter7/fig_7_5_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.13}
+一个刚性、方形的无质量框架包含四个转动着的圆盘，如图7.115所示。每个圆盘的质量均为 $m$ 转动惯量均为 $I$ ，转动角速度均为 $\omega_0$ 。框架的一个角装上枢轴绕支座自由地转动时框架是水平的，求进动角速度。
+\begin{center}
+\input{figures/chapter7/fig_7_5_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.14}
+在北纬 $45^{\circ}$ 处，将一个回转仪安装在轴承上，轴承给予的约束使对称轴只能在水平面内运动，此外，无其他外力矩。考虑地球的自转，证明对称轴沿当地的南北方向时的运动是稳定的，假定转子可近似为一个薄圆环（即轮辐和其他部分的质量可忽略），求对称轴围绕这个南北方向的小振动周期。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.15}
+一个有固定点的重对称陀螺,以恒定的角速度 $\Omega$ 绕竖直轴进动,章动角为 $\theta_0$ 不变,陀螺质量为 $m$ ,质心离固定点的距离为 $h$ ,对固定点的三个主转动惯量为 $I_1,I_2 = I_1$ 和 $I_3$ ,求自转角速度 $\dot{\psi}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.16}
+六个质量均为 $m$ 的质点位于三个长度为 $2l$ 、互相正交的无质量的刚性杆的两端，如图7.118所示。绕 $O$ 点做无摩擦定点转动。要使此系统能绕竖直轴（即 $\theta = 0$ ）稳定地自转，其自转角速度 $s$ 应当多大？
+\begin{center}
+\input{figures/chapter7/fig_7_5_16_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.17}
+证明上题的转动系统围绕 O 点做规则进动时, 如章动角为 $60^{\circ}$ , 则角速度在
+
+对称轴上的分量不小于 $\sqrt{\frac{15g}{2l}}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.18}
+一个由四叶片螺旋桨推进的飞机,相对于惯性系以不变的角速度 $\Omega$ 在一个水平圆周上做逆时针飞行(从上方看),螺旋桨以不变的角速度 $\omega$ 做顺时针旋转(由驾驶员看).要保持这样的飞行,轴承加在螺旋桨上的力矩应多大?方向如何?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.19}
+一个高度为 $h$ 、底面半径为 $a$ 、质量为 $m$ 的均质正圆锥绕其顶点做规则进动，对称轴与铅垂线的夹角为 $\theta_0$ ，围绕对称轴的角速度为 $\Omega$ ，求进动角速度 $\omega_p$ .
+
+量
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.20}
+一个半径为 a 的均质圆盘围绕其对称轴的角速度为 $\Omega$ ，同时对称轴又在水平面内围绕竖直轴做进动，若圆盘的中心离固定点 O 的距离为 l，如图 7.121 所示，求进动角速度 $\omega_{p}$ .
+\begin{center}
+\input{figures/chapter7/fig_7_5_20_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.21}
+一个有旋转对称轴的刚体质量 $m = 1\mathrm{kg}$ , 绕对称轴上一点做定点转动, 对此点三个主转动惯量分别为 $I_{1} = I_{2} = 1\mathrm{kg}\mathrm{m}^{2}, I_{3} = 2\mathrm{kg}\mathrm{m}^{2}$ , 质心离固定点的距离 $l = 0.2\mathrm{m}, t = 0$ 时, $\dot{\varphi}_{0} = 0, \dot{\psi}_{0} = 100\mathrm{s}^{-1}, \dot{\theta}_{0} = 2\mathrm{s}^{-1}, \theta_{0} = 30^{\circ}$ , 质心位于固定点的上方, 求运动中章动角的上下边界, 并画出对称轴上一点在空间中描绘出的曲线的草图.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.22}
+求上题的刚体运动中最小的自转角速度及其相应的章动角.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.23}
+一个有旋转对称轴的刚体, 质量 $m = 10\mathrm{kg}$ , 绕对称轴上一点做定点转动, 对此点三个主转动惯量分别为 $I_{1} = I_{2} = 1\mathrm{kg}\mathrm{m}^{2}, I_{3} = 2\mathrm{kg}\mathrm{m}^{2}$ , 质心离固定点的距离 $l = 0.1\mathrm{m}$ , 位于固定点的上方, $t = 0$ 时, $\dot{\varphi}_{0} = -10\mathrm{s}^{-1}, \dot{\psi} = 100\mathrm{s}^{-1}, \dot{\theta}_{0} = 0, \theta_{0} = 30^{\circ}$ . 求运动中章动角的上下边界, 并画出对称轴上一点在空间中描绘出的曲线的草图.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.24}
+一个有旋转对称轴的刚体质量 m=1kg，绕对称轴上一点做定点转动，对此点三个主转动惯量分别为
+
+$I_{1}=I_{2}=1kgm^{2},I_{3}=2kgm^{2}$ ，质心离固定点的距离l=0.5m，位于固定点的上方，t=0时， $\dot{\varphi}_{0}=0,\dot{\psi}_{0}=100s^{-1},\dot{\theta}_{0}=10s^{-1},\theta_{0}=60^{\circ}$ . 求运动中进动角速度的最大值和最小值(考虑代数值)，它们相应的章动角为何值？在此两时刻，自转角速度多大？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.25}
+求上题运动过程中自转角速度的最大值.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.26}
+在一个绕铅直轴以恒定角速度 $\Omega$ 转动的水平面上, 置一个质量为 $m$ 、半径为 $a$ 、围绕过球心的任何轴转动的转动惯量均为 $I$ 的球, 球与水平面间的摩擦力使球在水平面上做纯滚动. 证明: 不论给球一个什么样的初始条件, 在静参考系中, 球心必做圆周运动, 且做此圆周运动的角速度 $\omega_{c}$ 仅与转动平面的角速度以及球的质量分布有关, 具有下式:
+
+\[
+\omega_ {c} = \frac {\Omega}{1 + \frac {m a ^ {2}}{I}}
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.27}
+半径为 $a$ 、质量为 $m$ 的球在半径为 $b$ 、内面粗糙的固定竖直圆柱内壁上做纯滚动。试证其在铅直方向的运动将是简谐振动。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.28}
+一质量为 m、长度为 2a 的均质棒被两根长度均为 2a 的、不可伸长的、平行的绳子系于两端悬挂起来，在水平位置处于平衡状态，突然给棒一个绕过其中心的竖直轴的角速度 $\omega$ ，如图 7.125 所示。求：
+
+(1) 棒上升的高度；
+
+(2) 每根绳子中的张力的初始增量.
+\begin{center}
+\input{figures/chapter7/fig_7_5_28_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.29}
+一根长 $2a$ 、质量为 $m$ 的均匀杆铰接于 $A$ ，可在图7.127所示的 $xz$ 平面内绕 $A$ 自由运动。在 $x$ 轴上的 $A$ 端随 $x$ 轴以恒定角速度 $\omega$ 绕竖直的 $z$ 轴做圆心为 $B$ 、半径为 $b$ 的水平的圆周运动，杆与竖直线的夹角为 $\theta$ ，地球的重力场在竖直方向。
+
+(1) 用 $\theta, \dot{\theta}, \omega$ 表示杆的动能和势能；
+
+(2) 找出杆的可能平衡位置的一般表达式；
+
+(3) 用图解法解(2)问中找到的表达式, 找出 $\theta$ 从 0 到 $2\pi$ 每个象限中的平衡位置.
+
+（4）哪些平衡位置是稳定的，哪些是不稳定的？对于 $\theta$ 的每个象限，平衡位置是否存在，与参量 $\omega, b$ 和 $a$ 有何关系？
+
+(5) 在 $\theta$ 的每个象限中画出受力图以定性证实平衡位置的存在和稳定性.
+\begin{center}
+\input{figures/chapter7/fig_7_5_29_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.30}
+由于两极处略扁,地球绕极轴的转动惯量比绕赤道轴的转动惯量稍大,假定极轴是旋转对称轴.
+
+(1) 证明在地球表面外的引力势(即单位质量质点具有的势能)的主要项可展成
+
+\[
+U = - \frac {G M _ {\mathrm{e}}}{r} \left[ 1 - \frac {C - A}{2 M _ {\mathrm{e}} a ^ {2}} \left(\frac {a}{r}\right) ^ {2} (3 \cos^ {2} \theta - 1) \right]
+\]
+
+其中 C 和 A 分别是地球绕极轴和赤道轴的转动惯量, $M_{e}$ 是地球质量, a 是地球的平均半径, r 是到地球质心的距离, $\theta$ 是 r 与极轴的夹角, 系数 $\frac{C-A}{M_{e}a^{2}} \sim 10^{-3}$ ;
+
+(2) 第二项对于围绕地球做圆周运动的卫星有什么长期效应?
+
+(3) 如果卫星的运动平面的法线与地球的极轴夹角为 $\alpha$ ，取圆形轨道的时间平均导出这个效应大小的表达式.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{7.5.31}
+(1) 一个有限的轴对称物体, 质量密度为 $\rho = \rho(x, y, z) = \rho(r, \theta)(r, \theta$ 为球坐标), 在距离物体比较远的地方, 引力势形式为
+
+\[
+U = - \frac {G M}{r} + \frac {f (\theta)}{r ^ {2}} + \dots
+\]
+
+其中
+
+\[
+\begin{array}{r l} M & = \int \rho (x ^ {\prime}, y ^ {\prime}, z ^ {\prime}) \mathrm{d} x ^ {\prime} \mathrm{d} y ^ {\prime} \mathrm{d} z ^ {\prime} \\ & = 2 \pi \int \rho (r ^ {\prime}, \theta^ {\prime}) r ^ {2} \sin \theta^ {\prime} \mathrm{d} r ^ {\prime} \mathrm{d} \theta^ {\prime} \end{array}
+\]
+
+是总质量. 求 $f(\theta)$ ;
+
+(2) 一个小的检验体, 密度为 $\sigma(x, y, z)$ , 被放置在引力势 $U(x, y, z)$ 的地方, 求小检验体的引力势能;
+
+(3) 若上述小检验体放在一个球对称的引力势 $U = -\frac{GM}{r}$ 的势场中, 使检验体的质心在 $(0,0,r_0)$ , 试证: $r_0$ 足够大处引力势能为
+
+\[
+V = - \frac {m M G}{r _ {0}} + \frac {d}{r _ {0} ^ {2}} + O (1 / r _ {0} ^ {3})
+\]
+
+其中 $m = \int_{\tau}\sigma (x,y,z)\mathrm{d}x\mathrm{d}y\mathrm{d}z$ ，并求 $d$
+\end{problem}
+\clearpage
+

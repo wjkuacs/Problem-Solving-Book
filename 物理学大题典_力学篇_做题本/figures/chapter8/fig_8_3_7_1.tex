@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Origin and horizontal reference line
+  \draw (0, 0) -- (2.3, 0);
+
+  % Curved channel arcs (center at (0,0), r_in=2.55, R=3.05, r_out=3.55 => width 2L=1.0)
+  \draw (25:2.55) arc (25:72:2.55);
+  \draw (25:3.05) arc (25:72:3.05);
+  \draw (25:3.55) arc (25:72:3.55);
+
+  % Jagged broken ends of channel
+  \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=1.6pt}] (25:2.55) -- (25:3.55);
+  \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=1.6pt}] (72:2.55) -- (72:3.55);
+
+  % Radius R to centerline
+  \draw[->] (0, 0) -- (52:3.05) node[pos=0.58, above left=-1pt] {$R$};
+
+  % Radius r to interior point
+  \coordinate (P) at (38:3.30);
+  \fill (P) circle (1.3pt);
+  \draw[->] (0, 0) -- (P) node[pos=0.55, above left=-2pt] {$r$};
+
+  % Angle phi
+  \draw[thin] (0.95, 0) arc (0:38:0.95);
+  \node at (19:1.18) {$\varphi$};
+
+  % Width 2L dimension near lower end
+  \draw[thin] (25:2.55) -- (19:2.55);
+  \draw[thin] (25:3.55) -- (19:3.55);
+  \draw[->] (19:2.15) -- (19:2.55);
+  \draw[->] (19:3.95) -- (19:3.55);
+  \node[right] at (19:3.95) {$2L$};
+\end{tikzpicture}

@@ -1,0 +1,80 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Top fixed pulley
+    \coordinate (Pt) at (1.50,4.05);
+    \draw (Pt) circle (0.50);
+    % Ceiling and hatching
+    \draw (0.85,4.80) -- (2.15,4.80);
+    \foreach \x in {0.95, 1.15, ..., 2.05} {
+        \draw[line width=0.45pt] (\x,4.80) -- (\x+0.12,4.94);
+    }
+    % Top pulley hanger bracket
+    \draw[fill=white] (1.44,3.99) rectangle (1.56,4.80);
+    \fill (Pt) circle (0.025);
+
+    % Drum I
+    \coordinate (D1) at (2.50,2.85);
+    \draw (D1) circle (0.50);
+    \node at (2.50,2.52) {$\mathrm{I}$};
+    % Drum I stand & floor
+    \draw (2.22,2.44) -- (2.08,2.16);
+    \draw (2.78,2.44) -- (2.92,2.16);
+    \draw (1.95,2.16) -- (3.05,2.16);
+    \foreach \x in {2.05, 2.20, ..., 3.00} {
+        \draw[line width=0.45pt] (\x,2.16) -- (\x-0.12,2.02);
+    }
+    % Moment M1
+    \draw[->] ($(D1)+(18:0.63)$) arc (18:88:0.63);
+    \node[above right, inner sep=1pt] at ($(D1)+(50:0.65)$) {$M_1$};
+
+    % Movable pulley B
+    \coordinate (B) at (1.00,2.35);
+    \draw (B) circle (0.50);
+    \draw[fill=white] (0.94,1.73) rectangle (1.06,2.97);
+    \fill (B) circle (0.025);
+    \node[left] at (0.45,2.47) {$B$};
+
+    % Drum II
+    \coordinate (D2) at (2.00,0.95);
+    \draw (D2) circle (0.50);
+    \node at (2.00,0.62) {$\mathrm{II}$};
+    % Drum II stand & floor
+    \draw (1.72,0.54) -- (1.58,0.26);
+    \draw (2.28,0.54) -- (2.42,0.26);
+    \draw (1.45,0.26) -- (2.55,0.26);
+    \foreach \x in {1.55, 1.70, ..., 2.50} {
+        \draw[line width=0.45pt] (\x,0.26) -- (\x-0.12,0.12);
+    }
+    % Moment M2
+    \draw[->] ($(D2)+(32:0.63)$) arc (32:102:0.63);
+    \node[above right, inner sep=1pt] at ($(D2)+(60:0.64)$) {$M_2$};
+
+    % Lower-left guide pulley
+    \coordinate (Cg) at (0.12,1.40);
+    \draw (Cg) circle (0.38);
+    \draw[fill=white] ($(Cg)+(-0.04,-0.04)$) -- ++(-0.42,0.42) -- ++(0.08,0.08) -- ++(0.42,-0.42) -- cycle;
+    \fill (Cg) circle (0.025);
+
+    % Ropes
+    \draw (2.00,4.05) -- (2.00,2.85);
+    \draw (1.00,4.05) -- (1.00,2.97);
+    \draw (1.50,2.35) -- (1.50,0.95);
+    \draw (0.50,2.35) -- (0.50,1.40);
+
+    % Incline (alpha = 22 deg) and ground
+    \draw (-1.90,0) -- (-0.42,0);
+    \foreach \x in {-1.80, -1.65, ..., -0.45} {
+        \draw[line width=0.45pt] (\x,0) -- (\x-0.12,-0.14);
+    }
+    \draw (-1.90,0) -- (-0.25,0.667);
+    \draw (-1.45,0) arc (0:22:0.45);
+    \node at (-1.28,0.12) {$\alpha$};
+
+    % Block A on incline and rope to guide pulley
+    \coordinate (Tg) at ($(Cg)+(-68:0.38)$);
+    \begin{scope}[shift={(-1.10,0.323)}, rotate=22]
+        \draw (0,0) rectangle (0.44,0.32);
+        \coordinate (Arope) at (0.44,0.16);
+    \end{scope}
+    \draw (Arope) -- (Tg);
+    \node[above] at (-1.00,0.72) {$A$};
+\end{tikzpicture}

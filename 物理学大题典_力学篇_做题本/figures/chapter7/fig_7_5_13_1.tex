@@ -1,0 +1,73 @@
+\begin{tikzpicture}[>=Stealth, scale=0.92]
+  % Perspective square frame vertices (horizontal diamond)
+  \coordinate (L) at (-2.1, 0.25);
+  \coordinate (T) at (-0.25, 1.55);
+  \coordinate (R) at (2.1, 0.45);
+  \coordinate (B) at (0.25, -0.85);
+  \coordinate (C) at (0, 0.35);
+
+  % Pivot support column at left corner L
+  \draw[thick] (-2.1,0.25) -- (-2.18,-0.02) -- (-2.18,-1.85);
+  \draw[thick] (-2.1,0.25) -- (-2.02,-0.02) -- (-2.02,-1.85);
+  \foreach \y in {-1.75, -1.55, ..., -0.15} {
+    \draw (-2.18,\y) -- (-2.02,\y+0.12);
+  }
+
+  % Outer and inner frame borders (double-line hollow frame)
+  \draw[thick] (L) -- (T) -- (R) -- (B) -- cycle;
+  \draw[thick] ($(L)+(0.20,0.01)$) -- ($(T)+(0.02,-0.14)$) -- ($(R)+(-0.20,-0.01)$) -- ($(B)+(-0.02,0.14)$) -- cycle;
+
+  % 1. Top-left disk (axis along L-T at 35 deg, front faces L)
+  \coordinate (M1) at ($(L)!0.5!(T)$);
+  \begin{scope}[shift={(M1)}, rotate=35]
+    \draw[thick, fill=white] (0.09,0) ellipse (0.25cm and 0.54cm);
+    \draw[thick, fill=white] (-0.07,0) ellipse (0.25cm and 0.54cm);
+    % Visible rod segment entering front face from L (-x direction)
+    \draw[thick, fill=white] (-0.31,-0.03) -- (-0.07,-0.03) -- (-0.07,0.03) -- (-0.31,0.03);
+    % Spin arrow outside on the right (inner) side
+    \draw[->, thick] (0.44,0.34) arc[start angle=30, end angle=-40, radius=0.62cm];
+  \end{scope}
+
+  % 2. Top-right disk (axis along T-R at -25 deg, front faces R)
+  \coordinate (M2) at ($(T)!0.5!(R)$);
+  \begin{scope}[shift={(M2)}, rotate=-25]
+    \draw[thick, fill=white] (-0.09,0) ellipse (0.25cm and 0.54cm);
+    \draw[thick, fill=white] (0.07,0) ellipse (0.25cm and 0.54cm);
+    % Visible rod segment entering front face from R (+x direction)
+    \draw[thick, fill=white] (0.31,-0.03) -- (0.07,-0.03) -- (0.07,0.03) -- (0.31,0.03);
+    % Spin arrow outside on the left (inner) side
+    \draw[->, thick] (-0.44,0.34) arc[start angle=150, end angle=220, radius=0.62cm];
+  \end{scope}
+
+  % 3. Bottom-left disk (axis along L-B at -25 deg, front faces B)
+  \coordinate (M3) at ($(L)!0.5!(B)$);
+  \begin{scope}[shift={(M3)}, rotate=-25]
+    \draw[thick, fill=white] (-0.09,0) ellipse (0.25cm and 0.54cm);
+    \draw[thick, fill=white] (0.07,0) ellipse (0.25cm and 0.54cm);
+    % Visible rod segment entering front face from B (+x direction)
+    \draw[thick, fill=white] (0.31,-0.03) -- (0.07,-0.03) -- (0.07,0.03) -- (0.31,0.03);
+    % Spin arrow outside on the left (outer) side
+    \draw[->, thick] (-0.44,0.34) arc[start angle=150, end angle=220, radius=0.62cm];
+  \end{scope}
+
+  % 4. Bottom-right disk (axis along B-R at 35 deg, front faces B)
+  \coordinate (M4) at ($(B)!0.5!(R)$);
+  \begin{scope}[shift={(M4)}, rotate=35]
+    \draw[thick, fill=white] (0.09,0) ellipse (0.25cm and 0.54cm);
+    \draw[thick, fill=white] (-0.07,0) ellipse (0.25cm and 0.54cm);
+    % Visible rod segment entering front face from B (-x direction)
+    \draw[thick, fill=white] (-0.31,-0.03) -- (-0.07,-0.03) -- (-0.07,0.03) -- (-0.31,0.03);
+    % Spin arrow outside on the right (outer) side
+    \draw[->, thick] (0.44,0.34) arc[start angle=30, end angle=-40, radius=0.62cm];
+  \end{scope}
+
+  % Center of mass C and gravity vector 4mg
+  \fill (C) circle (1.8pt);
+  \node[right] at ($(C)+(0.04,0.02)$) {$C$};
+  \draw[->, thick] (C) -- ++(0,-1.85) node[below] {$4mg$};
+
+  % Dimension D along bottom-right edge B-R
+  \draw ($(B)+(0.12,-0.08)$) -- ($(B)+(0.85,-0.58)$);
+  \draw ($(R)+(0.12,-0.08)$) -- ($(R)+(0.85,-0.58)$);
+  \draw[<->, thick] ($(B)+(0.68,-0.46)$) -- ($(R)+(0.68,-0.46)$) node[midway, below right] {$D$};
+\end{tikzpicture}

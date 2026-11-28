@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate axes
+  \draw[->] (-2.2, 0) -- (2.4, 0) node[below] {基轴};
+  \draw[->] (0, -1.8) -- (0, 1.9);
+
+  % Tilted ellipse and its principal axes
+  \begin{scope}[rotate=42]
+    \draw (0, 0) ellipse (2.05 and 0.88);
+    \draw[dashed] (-2.45, 0) -- (2.45, 0);
+    \draw[dashed] (0, -1.45) -- (0, 1.45);
+  \end{scope}
+\end{tikzpicture}

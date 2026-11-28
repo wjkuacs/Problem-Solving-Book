@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Coordinate axes
+    \draw[->, semithick] (0,0) -- (0,3.25) node[left=1pt, font=\small] {$y$};
+    \draw[->, semithick] (0,0) -- (4.30,0) node[below left=1pt, font=\small] {$x$};
+
+    % Dumbbell endpoints
+    \coordinate (P2) at (1.20,0.85);
+    \coordinate (P1) at (3.00,2.65);
+
+    % Horizontal dashed line and angle phi
+    \draw[dashed, semithick] (P2) -- (2.75,0.85);
+    \draw (P2) -- (P1) node[midway, above left=1pt, font=\small] {$l$};
+    \draw[semithick] ($(P2)+(0.82,0)$) arc (0:45:0.82);
+    \node[font=\small] at ($(P2)+({1.02*cos(22.5)}, {1.02*sin(22.5)})$) {$\varphi$};
+
+    % Mass 2 and Mass 1 circles
+    \draw[fill=white] (P2) circle (0.18);
+    \node[above left=2pt, font=\small] at (P2) {$\alpha_2$};
+    \node[below=5pt, font=\small] at (P2) {$(x_2, y_2)$};
+
+    \draw[fill=white] (P1) circle (0.18);
+    \node[above left=2pt, font=\small] at (P1) {$\alpha_1$};
+    \node[right=5pt, font=\small] at (P1) {$(x_1, y_1)$};
+\end{tikzpicture}

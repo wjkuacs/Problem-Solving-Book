@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (C) at (0,0);
+  \def\R{1.95}
+
+  % Hoop of mass M and radius R
+  \draw (C) circle (\R);
+  \node at (40:2.22) {$M$};
+
+  % Pivot O
+  \coordinate (O) at (115:\R);
+  \fill (O) circle (2pt) node[above left] {$O$};
+  \draw[dashed] (O) -- ++(0,-2.0);
+  \draw (O) -- (C);
+  \draw (O) ++(-90:0.55) arc (-90:-65:0.55);
+  \node at ($(O)+(-77.5:0.80)$) {$\theta$};
+
+  % Center dot and bead m
+  \fill (C) circle (1.8pt);
+  \draw[dashed] (C) -- (0,-1.65);
+  \coordinate (B) at (-45:\R);
+  \draw (C) -- (B) node[midway, above right=-1pt] {$R$};
+  \draw (0,-0.55) arc (-90:-45:0.55);
+  \node at (-67.5:0.80) {$\varphi$};
+
+  \draw[fill=white] (B) circle (3pt);
+  \node[below right=2pt] at (B) {$m$};
+\end{tikzpicture}

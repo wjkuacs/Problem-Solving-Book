@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Ceiling and pivot bracket
+  \fill[pattern=north east lines] (-1.2,2.80) rectangle (1.8,2.98);
+  \draw[line width=0.85pt] (-1.2,2.80) -- (1.8,2.80);
+  \draw (-0.22,2.80) arc (180:360:0.22);
+
+  % Vertical dashed reference line
+  \coordinate (O) at (0,2.52);
+  \draw[dashed] (O) -- (0,0.45);
+
+  % Angle theta
+  \draw (O) ++(-90:0.76) arc (-90:-68:0.76);
+  \node at ($(O) + (-79:1.03)$) {$\theta$};
+
+  % Tilted rigid rod, length dimension L, and crawling insect
+  \begin{scope}[shift={(O)}, rotate=22]
+    \draw[fill=white] (-0.045,0) rectangle (0.045,-2.60);
+    \draw[fill=white] (0,0) circle (0.06);
+
+    % Length dimension L
+    \draw[thin] (0.24,0) -- (0.58,0);
+    \draw[thin] (0.24,-2.60) -- (0.58,-2.60);
+    \draw[<->] (0.41,0) -- (0.41,-2.60) node[midway, fill=white, inner sep=2pt] {$L$};
+
+    % Tiny crawling insect near top of rod
+    \draw (0.19,-0.40) ellipse (0.045 and 0.065);
+    \draw (0.16,-0.34) -- (0.11,-0.30);
+    \draw (0.22,-0.34) -- (0.27,-0.30);
+    \draw (0.15,-0.40) -- (0.09,-0.40);
+    \draw (0.23,-0.40) -- (0.29,-0.40);
+    \draw (0.16,-0.46) -- (0.11,-0.51);
+    \draw (0.22,-0.46) -- (0.27,-0.51);
+  \end{scope}
+\end{tikzpicture}

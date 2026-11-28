@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Horizontal ground
+    \draw (0,0) -- (5.2,0);
+    \foreach \x in {0.15,0.4,...,5.05} {
+        \draw[thin] (\x,0) -- (\x-0.15,-0.16);
+    }
+
+    % Triangular wedge (right angle at bottom-left)
+    \coordinate (A) at (0.4,0);
+    \coordinate (B) at (4.4,0);
+    \coordinate (C) at (0.4,1.8);
+    \draw (A) -- (B) -- (C) -- cycle;
+
+    % Angle alpha at bottom-right corner
+    \pic[draw, thin, angle radius=0.65cm, angle eccentricity=1.35, "$\alpha$"] {angle = C--B--A};
+
+    % Sphere resting on inclined plane
+    % Slope vector: (4.0, -1.8), unit normal: (0.4104, 0.9119)
+    % Contact point at t = 0.25 from C to B: (1.4, 1.35)
+    % Radius R = 0.65 -> Center O = (1.67, 1.94)
+    \coordinate (O) at (1.67, 1.94);
+    \draw (O) circle (0.65);
+
+    % Dashed height reference line from sphere center
+    \draw[dashed, thin] (O) -- (5.0, 1.94);
+
+    % Height dimension arrow H
+    \draw[<->, thin] (4.8, 0) -- (4.8, 1.94) node[midway, right] {$H$};
+\end{tikzpicture}

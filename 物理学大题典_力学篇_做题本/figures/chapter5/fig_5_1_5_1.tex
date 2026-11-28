@@ -1,0 +1,100 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\Rgear{1.52}
+  \def\Dist{1.83}
+  \def\rcrank{0.76}
+  \def\cranktheta{50}
+
+  \coordinate (O1) at (0,0);
+  \coordinate (O) at (\Dist, 0);
+  \coordinate (A) at ({\Dist - \rcrank*cos(\cranktheta)}, {-\rcrank*sin(\cranktheta)});
+  \pgfmathsetmacro{\armang}{atan2(-\rcrank*sin(\cranktheta), \Dist - \rcrank*cos(\cranktheta))}
+
+  % Vertical rack B on the left (right face at x = -Rgear)
+  \def\xrack{-1.52}
+  \draw (\xrack-0.42, -1.65) -- (\xrack-0.42, 1.55);
+  \draw[dashed] (\xrack-0.12, -1.65) -- (\xrack-0.12, 1.55);
+  \draw (\xrack, -1.65) -- (\xrack, 1.55);
+  \node[left, inner sep=3pt] at (\xrack-0.42, 0.1) {$B$};
+
+  % Rack guide blocks (top and bottom, left and right)
+  \foreach \y in {-1.35, 1.25} {
+    % Left block
+    \draw (\xrack-0.66, \y-0.16) rectangle (\xrack-0.52, \y+0.16);
+    \foreach \dy in {-0.12, 0, 0.12} {
+      \draw (\xrack-0.66, \y+\dy-0.04) -- (\xrack-0.52, \y+\dy+0.08);
+    }
+    % Right block
+    \draw (\xrack+0.12, \y-0.16) rectangle (\xrack+0.26, \y+0.16);
+    \foreach \dy in {-0.12, 0, 0.12} {
+      \draw (\xrack+0.12, \y+\dy-0.04) -- (\xrack+0.26, \y+\dy+0.08);
+    }
+  }
+
+  % Sector gear and slotted arm centered at O1
+  \coordinate (ArmEnd) at (\armang:2.35);
+  \draw[fill=white]
+    (128:\Rgear) arc (128:205:\Rgear)
+    .. controls (-0.85, -0.45) and (-0.35, -0.25) .. ($(O1)+(\armang-90:0.16)$)
+    -- ($(ArmEnd)+(\armang-90:0.16)$) arc (\armang-90:\armang+90:0.16)
+    -- ($(O1)+(\armang+90:0.16)$)
+    .. controls (-0.1, 0.35) and (-0.2, 0.95) .. (128:\Rgear);
+
+  % Inner dashed pitch arc on sector gear
+  \draw[dashed] (132:{\Rgear-0.14}) arc (132:202:{\Rgear-0.14});
+
+  % Inner slot in arm
+  \coordinate (S1) at (\armang:0.85);
+  \coordinate (S2) at (\armang:2.18);
+  \draw
+    ($(S1)+(\armang+90:0.06)$) -- ($(S2)+(\armang+90:0.06)$)
+    arc (\armang+90:\armang-90:0.06) -- ($(S1)+(\armang-90:0.06)$)
+    arc (\armang-90:\armang-270:0.06) -- cycle;
+
+  % Fixed supports at O1 and O (ceiling-style above)
+  \draw (-0.18, 0.34) -- (O1) -- (0.04, 0.30);
+  \draw (-0.30, 0.36) -- (0.16, 0.28);
+  \foreach \t in {0, 0.2, 0.4, 0.6, 0.8, 1.0} {
+    \coordinate (Hpt) at ($(-0.30, 0.36)!\t!(0.16, 0.28)$);
+    \draw (Hpt) -- ++(45:0.12);
+  }
+  \draw[fill=white] (O1) circle (2.4pt);
+
+  \draw (\Dist-0.12, 0.35) -- (O) -- (\Dist+0.12, 0.35);
+  \draw (\Dist-0.25, 0.35) -- (\Dist+0.25, 0.35);
+  \foreach \x in {-0.20, -0.08, 0.04, 0.16} {
+    \draw (\Dist+\x, 0.35) -- (\Dist+\x+0.08, 0.46);
+  }
+
+  % Crank OA in front
+  \pgfmathsetmacro{\angOA}{180+\cranktheta}
+  \draw[fill=white]
+    ($(O)+(\angOA+90:0.06)$) -- ($(A)+(\angOA+90:0.06)$)
+    arc (\angOA+90:\angOA+270:0.06) -- ($(O)+(\angOA-90:0.06)$) -- cycle;
+  \draw[fill=white] (O) circle (2.4pt);
+  \fill (A) circle (1.8pt);
+
+  % Horizontal dashed line & angle theta at O
+  \draw[dashed] (O) -- (\Dist-0.95, 0);
+  \draw ($(O)+(180:0.42)$) arc (180:{180+\cranktheta}:0.42);
+  \node at ($(O)+(198:0.60)$) {$\theta$};
+
+  % Rotation arrow n on crank OA
+  \draw[->] ($(O)+(255:0.28)$) arc (255:190:0.28);
+  \node[below right, inner sep=1pt] at ($(O)+(260:0.30)$) {$n$};
+
+  % Vertical dashed reference lines and dimensions 152cm, 183cm
+  \draw[dashed] (\xrack, -1.65) -- (\xrack, -2.05);
+  \draw[dashed] (0, 0) -- (0, -2.05);
+  \draw[dashed] (\Dist, 0) -- (\Dist, -2.05);
+
+  \draw (\xrack, -2.1) -- (\xrack, -1.75);
+  \draw (0, -2.1) -- (0, -1.75);
+  \draw (\Dist, -2.1) -- (\Dist, -1.75);
+  \draw[<->] (\xrack, -1.92) -- (0, -1.92) node[midway, above, inner sep=3pt] {$152\,\mathrm{cm}$};
+  \draw[<->] (0, -1.92) -- (\Dist, -1.92) node[midway, above, inner sep=3pt] {$183\,\mathrm{cm}$};
+
+  % Labels O1, O, A
+  \node[above right, inner sep=2pt] at ($(O1)+(0.05, 0.02)$) {$O_1$};
+  \node[right, inner sep=3.5pt] at (O) {$O$};
+  \node[below, inner sep=3pt] at ($(A)+(0.08,-0.16)$) {$A$};
+\end{tikzpicture}

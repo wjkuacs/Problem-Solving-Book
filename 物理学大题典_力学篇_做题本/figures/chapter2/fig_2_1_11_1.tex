@@ -1,0 +1,37 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Hanging block m
+  \draw (-1.00,-2.35) rectangle (-0.08,-1.65);
+  \node at (-0.54,-2.00) {$m$};
+
+  % Vertical chain links from block up to rod
+  \foreach \y in {-1.55,-1.35,-1.15,-0.95,-0.75,-0.55,-0.35,-0.16} {
+    \draw[fill=white] (-0.54,\y) ellipse (0.065 and 0.105);
+  }
+
+  % Back passes of the chain behind the rod
+  \draw[fill=white] (-0.44,-0.02) ellipse (0.07 and 0.10);
+  \draw[fill=white] (-0.14,0.10) ellipse (0.07 and 0.10);
+
+  % Tilted horizontal rod
+  \begin{scope}[rotate=22]
+    \fill[white] (-2.1,-0.14) rectangle (1.9,0.14);
+    \draw (-2.1,0.14) -- (1.9,0.14);
+    \draw (-2.1,-0.14) -- (1.9,-0.14);
+  \end{scope}
+
+  % Front passes wrapping around the rod (1.25 turns)
+  \draw[fill=white, rotate around={-35:(-0.46,-0.10)}] (-0.46,-0.10) ellipse (0.065 and 0.10);
+  \draw[fill=white, rotate around={-35:(-0.32,0.04)}] (-0.32,0.04) ellipse (0.065 and 0.10);
+  \draw[fill=white, rotate around={-35:(-0.19,-0.12)}] (-0.19,-0.12) ellipse (0.065 and 0.10);
+  \draw[fill=white, rotate around={-35:(-0.06,0.03)}] (-0.06,0.03) ellipse (0.065 and 0.10);
+  \draw[fill=white] (-0.54,0.11) circle (0.07);
+  \draw[fill=white] (-0.23,0.18) circle (0.07);
+
+  % Rightward chain and pulling force F
+  \foreach \i in {0,...,9} {
+    \pgfmathsetmacro{\cx}{0.10 + \i*0.20}
+    \pgfmathsetmacro{\cy}{0.04 - \i*0.055}
+    \draw[fill=white, rotate around={-15.5:(\cx,\cy)}] (\cx,\cy) ellipse (0.105 and 0.055);
+  }
+  \draw[->] (2.08,-0.51) -- (2.80,-0.71) node[below=1pt] {$F$};
+\end{tikzpicture}

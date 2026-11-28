@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0]
+  \def\a{0.82}
+  % Axes
+  \draw[thick, ->] (0,0) -- (6*\a+0.45, 0) node[right=1pt] {$x$};
+  \draw[thick, ->] (0,0) -- (0, 1.55) node[left=1pt] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Bead coordinates
+  \coordinate (P0) at (0,0);
+  \coordinate (P1) at (\a, 0.88);
+  \coordinate (P2) at (2*\a, 0.48);
+  \coordinate (P3) at (3*\a, 0.72);
+  \coordinate (P4) at (4*\a, 0.46);
+  \coordinate (P5) at (5*\a, 0.72);
+  \coordinate (P6) at (6*\a, 0);
+
+  % String segments
+  \draw[thick] (P0) -- (P1) -- (P2) -- (P3) -- (P4) -- (P5) -- (P6);
+
+  % Beads, dashed vertical lines, and labels
+  \foreach \k/\yk/\lb in {1/0.88/y_1, 2/0.48/y_2, 3/0.72/y_3, 4/0.46/y_4} {
+    \fill (\k*\a, \yk) circle (2.2pt);
+    \node[above=2pt] at (\k*\a, \yk) {$\k$};
+    \draw[dashed] (\k*\a, \yk) -- (\k*\a, 0);
+    \node[right=1pt, font=\footnotesize] at (\k*\a, 0.45*\yk) {$\lb$};
+  }
+  \fill (5*\a, 0.72) circle (2.2pt);
+  \node[above=2pt] at (5*\a, 0.72) {$5$};
+  \draw[dashed] (5*\a, 0.72) -- (5*\a, 0);
+  \node[right=1pt, font=\footnotesize] at (5*\a, 0.28*0.72) {$y_5$};
+
+  % Interval ticks and dimension arrows
+  \foreach \k in {0,1,2,3,4,5,6} {
+    \draw (\k*\a, -0.06) -- (\k*\a, -0.44);
+  }
+  \foreach \k in {0,1,2,3,4,5} {
+    \draw[<->] (\k*\a, -0.25) -- ({(\k+1)*\a}, -0.25) node[midway, fill=white, inner sep=1.5pt] {$a$};
+  }
+\end{tikzpicture}

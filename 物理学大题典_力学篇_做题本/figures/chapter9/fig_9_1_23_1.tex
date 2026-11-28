@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    \def\R{2.20}
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (218:\R);
+    \coordinate (B) at (346:\R);
+    \coordinate (M) at ($(A)!0.5!(B)$);
+
+    % Spherical bowl arc
+    \draw (173:\R) arc (173:367:\R);
+
+    % Axes
+    \draw[->] (O) -- (3.10,0) node[below] {$x$};
+    \draw[->] (O) -- (0,-2.75) node[right] {$y$};
+
+    % Rod AB
+    \draw (A) -- (B);
+
+    % Radial dashed lines and normal forces
+    \draw[dashed] (O) -- (A);
+    \draw[->] (A) -- ($(A)!0.42!(O)$) node[above left, inner sep=2pt] {$N_A$};
+    \draw[dashed] (O) -- (B);
+    \draw[->] (B) -- ($(B)!0.42!(O)$);
+    \node[above, inner sep=2pt] at ($(B)!0.26!(O)+(0.04,0.06)$) {$N_B$};
+
+    % Dashed perpendicular from O to AB and dashed horizontal from A
+    \draw[dashed] (O) -- (M);
+    \draw[dashed] (A) -- ++(1.15,0) coordinate (AH);
+
+    % Gravity arrows P and Q
+    \draw[->] (A) -- ++(0,-0.92);
+    \node[right] at ($(A)+(0,-0.68)$) {$P$};
+    \draw[->] (B) -- ++(0,-0.88) node[midway, right] {$Q$};
+
+    % Angle arcs
+    \pic[draw, angle radius=0.80cm, "$\alpha$", angle eccentricity=1.30] {angle = AH--A--B};
+    \pic[draw, angle radius=0.72cm, "$\beta$", angle eccentricity=1.28] {angle = O--B--A};
+
+    % Dots and labels
+    \fill (A) circle (0.055);
+    \fill (B) circle (0.055);
+    \node[above] at (O) {$O$};
+    \node[left] at (A) {$A$};
+    \node[right] at (B) {$B$};
+\end{tikzpicture}

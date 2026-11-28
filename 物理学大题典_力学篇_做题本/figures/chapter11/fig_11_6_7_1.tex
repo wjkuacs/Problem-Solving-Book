@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Top and bottom fixed walls
+  \fill[pattern=north east lines] (-0.3,1.40) rectangle (4.7,1.58);
+  \draw[line width=0.85pt] (-0.3,1.40) -- (4.7,1.40);
+  \fill[pattern=north east lines] (-0.3,-1.58) rectangle (4.7,-1.40);
+  \draw[line width=0.85pt] (-0.3,-1.40) -- (4.7,-1.40);
+
+  % Horizontal guide line
+  \draw (-0.3,0) -- (4.7,0);
+
+  % Distance indicators a
+  \draw[<->] (0.20,0.03) -- (0.20,1.37) node[midway, fill=white, inner sep=2pt] {$a$};
+  \draw[<->] (0.20,-1.37) -- (0.20,-0.03) node[midway, fill=white, inner sep=2pt] {$a$};
+
+  % Two symmetric springs
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=5pt, amplitude=3.8pt, pre length=22pt, post length=18pt}]
+    (0.95,1.40) -- (3.75,0);
+  \node[above right=4pt] at (2.35,0.70) {$k$};
+
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=5pt, amplitude=3.8pt, pre length=22pt, post length=18pt}]
+    (0.95,-1.40) -- (3.75,0);
+  \node[below right=4pt] at (2.35,-0.70) {$k$};
+
+  % Particle mass m
+  \fill (3.75,0) circle (0.08) node[above right=2pt] {$m$};
+\end{tikzpicture}

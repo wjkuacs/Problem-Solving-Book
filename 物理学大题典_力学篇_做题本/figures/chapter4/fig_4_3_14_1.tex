@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \coordinate (O) at (0,0);
+
+  % Thin foil horizontal line
+  \draw (-2.3, 0) -- (2.3, 0);
+  \node[below left, inner sep=2pt] at (O) {$O$};
+
+  % Incoming particle beam
+  \draw[postaction={decorate}, decoration={markings, mark=at position 0.55 with {\arrow{>}}}]
+    (0, 2.0) -- (O);
+  \node[right, align=center] at (0.12, 1.15) {粒\\子\\束};
+
+  % Vertical dashed continuation
+  \draw[dashed] (O) -- (0, -2.0);
+
+  % Scattered ray to detector at angle alpha
+  \def\ang{-58}
+  \coordinate (Dfront) at (\ang:2.1);
+  \draw (O) -- (Dfront) node[midway, above right, inner sep=1pt] {$r$};
+
+  % Angle alpha
+  \draw (-90:0.6) arc (-90:\ang:0.6);
+  \node at ({(-90+\ang)/2}:0.9) {$\alpha$};
+
+  % Detector rectangle aligned with ray
+  \draw[fill=white] (Dfront) -- ++(\ang+90:0.16) -- ++(\ang:0.65) -- ++(\ang-90:0.32) -- ++(\ang+180:0.65) -- cycle;
+  \node[above right, inner sep=2pt] at ($(Dfront)+(\ang+90:0.16)$) {$A$};
+  \node[below, inner sep=2pt] at ($(Dfront)+(\ang:0.78)+(-90:0.15)$) {探测器};
+\end{tikzpicture}

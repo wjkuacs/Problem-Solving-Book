@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small}]
+  % Ground
+  \draw[thick] (-1.8, 0) -- (2.1, 0);
+  \fill[pattern=north east lines] (-1.8, -0.25) rectangle (2.1, 0);
+
+  % Three stacked blocks of mass m
+  \draw[thick] (-0.95, 0) rectangle (0.95, 0.75);
+  \node at (0, 0.375) {$m$};
+  \draw[thick] (-0.95, 0.75) rectangle (0.95, 1.5);
+  \node at (0, 1.125) {$m$};
+  \draw[thick] (-0.95, 1.5) rectangle (0.95, 2.25);
+  \node at (0, 1.875) {$m$};
+
+  % Force F on bottom block
+  \draw[->, thick] (0.95, 0.375) -- (2.05, 0.375) node[right] {$F$};
+\end{tikzpicture}

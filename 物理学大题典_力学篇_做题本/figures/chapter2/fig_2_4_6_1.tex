@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Smooth horizontal floor with hatching
+  \fill[pattern=north east lines] (0,-0.22) rectangle (5.6,0);
+  \draw (0,0) -- (5.6,0);
+
+  % Left cart of mass M with pole and pendulum
+  \draw (0.95,0.20) circle (0.20);
+  \draw (1.80,0.20) circle (0.20);
+  \draw (0.55,0.40) rectangle (2.20,1.20);
+  \node at (1.375,0.80) {$M$};
+
+  % Vertical pole and pendulum bob mu
+  \coordinate (P) at (1.32,2.35);
+  \coordinate (Bob) at (1.68,1.56);
+  \draw (1.32,1.20) -- (P);
+  \node[above=1pt] at (P) {$P$};
+  \draw (P) -- (Bob);
+  \fill (Bob) circle (2.2pt) node[right=2pt] {$\mu$};
+
+  % Velocity arrow v
+  \draw[->] (2.35,0.80) -- (2.98,0.80) node[midway, above=1pt] {$v$};
+
+  % Right stationary cart of mass m
+  \draw (3.85,0.20) circle (0.20);
+  \draw (4.70,0.20) circle (0.20);
+  \draw (3.45,0.40) rectangle (5.10,1.20);
+  \node at (4.275,0.80) {$m$};
+\end{tikzpicture}

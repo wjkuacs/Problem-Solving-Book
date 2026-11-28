@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Ceiling
+  \fill[pattern=north east lines] (-1.6, 3.6) rectangle (1.6, 3.85);
+  \draw[thick] (-1.6, 3.6) -- (1.6, 3.6);
+
+  % Spring and suspension rod
+  \draw[thick] (0, 3.6) -- (0, 3.25);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    (0, 3.25) -- (0, 2.3);
+  \node[right] at (0.12, 2.78) {$k$};
+  \draw[thick] (0, 2.3) -- (0, 1.75);
+
+  % Liquid surface
+  \draw[thick] (-1.9, 2.2) -- (1.9, 2.2);
+
+  % Liquid dashes (around plate)
+  \foreach \x/\y in {-1.6/1.9, -1.0/1.85, 0.7/1.9, 1.4/1.85,
+                     -1.5/1.45, -0.95/1.4, 1.05/1.45, 1.6/1.4,
+                     -1.65/1.0, -1.05/0.95, 1.05/1.0, 1.6/0.95,
+                     -1.5/0.55, -0.95/0.5, 1.1/0.55, 1.55/0.5,
+                     -1.55/0.1, -0.85/0.05, 1.05/0.1, 1.55/0.05} {
+    \draw[thick] (\x, \y) -- (\x + 0.22, \y);
+  }
+
+  % 3D thin rectangular plate (submerged)
+  % Front face: (-0.5, 1.85), (0.55, 1.45), (0.55, 0.05), (-0.5, 0.45)
+  % Back-top offset: (0.18, 0.1)
+  \fill[white] (-0.5, 1.85) -- (0.55, 1.45) -- (0.55, 0.05) -- (-0.5, 0.45) -- cycle;
+  \draw[thick] (-0.5, 1.85) -- (0.55, 1.45) -- (0.55, 0.05) -- (-0.5, 0.45) -- cycle;
+  % Side and top thickness edges
+  \draw[thick] (-0.5, 1.85) -- (-0.32, 1.95) -- (0.73, 1.55) -- (0.73, 0.15) -- (0.55, 0.05);
+  \draw[thick] (0.55, 1.45) -- (0.73, 1.55);
+
+  % Suspension rod visible down to attachment point on top face
+  \draw[thick] (0, 2.2) -- (0, 1.71);
+
+  % Labels on plate
+  \node at (0.02, 1.30) {$m$};
+  \node at (0.02, 0.78) {$A$};
+\end{tikzpicture}

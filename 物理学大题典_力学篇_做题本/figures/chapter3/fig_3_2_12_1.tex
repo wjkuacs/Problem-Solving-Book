@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Horizontal sliding rod
+  \draw[thick] (-2.6, 0) -- (2.6, 0);
+
+  % Left bearing guide
+  \draw[thick] (-2.2, 0.5) -- (-2.2, 0.1) -- (-1.35, 0.1) -- (-1.35, 0.5);
+  \draw[thick] (-2.2, -0.5) -- (-2.2, -0.1) -- (-1.35, -0.1) -- (-1.35, -0.5);
+
+  % Right bearing guide
+  \draw[thick] (1.35, 0.5) -- (1.35, 0.1) -- (2.2, 0.1) -- (2.2, 0.5);
+  \draw[thick] (1.35, -0.5) -- (1.35, -0.1) -- (2.2, -0.1) -- (2.2, -0.5);
+
+  % Pivot coordinate x_s
+  \draw[->, thick] (0, 0.35) -- (0.95, 0.35) node[above] {$x_s$};
+  \node[above left] at (0.05, 0.35) {$0$};
+
+  % Vertical dashed reference line
+  \coordinate (O) at (0, 0);
+  \coordinate (V) at (0, -2.9);
+  \draw[thick, dashed] (O) -- (V);
+
+  % Pendulum rod and bob (angle 24 deg from vertical)
+  \def\L{2.55}
+  \def\ang{24}
+  \coordinate (M) at ({\L*sin(\ang)}, {-\L*cos(\ang)});
+  \draw[thick] (O) -- node[midway, above right] {$l$} (M);
+  \filldraw[fill=white, draw=black, thick] (M) circle (0.18);
+  \node[right] at ($(M) + (0.2, 0)$) {$m$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.35, "$\theta$"] {angle=V--O--M};
+\end{tikzpicture}

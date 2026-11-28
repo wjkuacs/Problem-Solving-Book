@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth]
+  % Left and right walls
+  \fill[pattern=north east lines] (-0.22, -0.5) rectangle (0, 0.55);
+  \draw[thick] (0, -0.5) -- (0, 0.55);
+  \fill[pattern=north east lines] (4.8, -0.5) rectangle (5.02, 0.55);
+  \draw[thick] (4.8, -0.5) -- (4.8, 0.55);
+
+  % Taut string
+  \draw[thick] (0, 0) -- (4.8, 0);
+
+  % Point masses
+  \fill (1.2, 0) circle (2.2pt) node[below=2pt] {$m$};
+  \fill (3.6, 0) circle (2.2pt) node[below=2pt] {$m$};
+
+  % Force F and displacement x1 on left mass
+  \draw[thick] (1.2, 0) -- (1.2, 1.35) node[right=2pt] {$x_1$};
+  \draw[->, thick] (1.2, 0) -- (1.2, 0.72) node[right=2pt] {$F$};
+
+  % Displacement x2 on right mass
+  \draw[->, thick] (3.6, 0) -- (3.6, 1.35) node[right=2pt] {$x_2$};
+
+  % Horizontal distance labels a
+  \draw[<->] (0, 0.42) -- (1.2, 0.42) node[midway, above=1pt] {$a$};
+  \draw[<->] (3.6, 0.42) -- (4.8, 0.42) node[midway, above=1pt] {$a$};
+
+  % Total span 4a
+  \draw (0, -0.62) -- (0, -1.05);
+  \draw (4.8, -0.62) -- (4.8, -1.05);
+  \draw[<->] (0, -0.85) -- (4.8, -0.85) node[midway, above=1pt] {$4a$};
+\end{tikzpicture}

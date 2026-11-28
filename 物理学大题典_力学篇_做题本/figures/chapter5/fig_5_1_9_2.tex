@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth]
+  % Fixed cylinder of radius a = 0.85 centered at O, rolling cylinder of radius b = 1.90
+  \coordinate (O) at (0,0);
+  \coordinate (C) at (-0.860,-0.602);
+  \coordinate (T) at (0.696,0.488);
+  \coordinate (Q) at (-2.416,-1.692);
+  \coordinate (P) at (-1.950,-2.158);
+  \coordinate (U) at (0.214,0.937);
+
+  % Coordinate axes
+  \draw[->, thick] (0,-3.10) -- (0,2.20) node[left] {$y$};
+  \draw[->, thick] (0,0) -- (2.15,0) node[below=2pt] {$x$};
+  \node[below right=1pt] at (O) {$O$};
+
+  % Fixed inner cylinder
+  \draw[thick] (O) circle (0.85);
+
+  % Rolling cylinder at t = 0 (dashed) and time t (solid)
+  \draw[thick, dashed] (0,-1.05) circle (1.90);
+  \draw[thick] (C) circle (1.90);
+
+  % Radial line T - O - C - Q and diameter segment P - C - U
+  \draw[thick] (T) -- (Q);
+  \draw[thick] (P) -- (U);
+
+  % Angle theta from +y to OT
+  \draw (0,0.45) arc (90:35:0.45);
+  \node at (62:0.65) {$\theta$};
+
+  % Angle (a/b)*theta between CQ and CP
+  \draw ($(C)+(215:0.80)$) arc (215:235:0.80);
+  \node[below right=1pt] at ($(C)+(236:0.98)$) {$\frac{a}{b}\theta$};
+
+  % Point labels
+  \node[above left=1pt] at (C) {$C$};
+  \node[below left=1pt] at (Q) {$Q$};
+  \node[below left=1pt] at (P) {$P$};
+\end{tikzpicture}

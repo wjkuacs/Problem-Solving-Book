@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth]
+  % Broken spring ends for infinite chain
+  \draw[decorate, decoration={zigzag, segment length=3pt, amplitude=1.8pt}] (-2.85, 0) -- (-2.48, 0);
+  \draw[decorate, decoration={zigzag, segment length=3pt, amplitude=1.8pt}] (2.48, 0) -- (2.85, 0);
+
+  % Springs between masses
+  \foreach \i in {-4, -3, -2, 1, 2, 3} {
+    \draw[decorate, decoration={zigzag, segment length=3pt, amplitude=1.8pt, pre length=2pt, post length=2pt}]
+      (\i*0.62 + 0.055, 0) -- (\i*0.62 + 0.62 - 0.055, 0);
+    \node[above=5pt] at (\i*0.62 + 0.31, 0) {\small $K$};
+  }
+  \draw[decorate, decoration={zigzag, segment length=3pt, amplitude=1.8pt, pre length=2pt, post length=2pt}]
+    (-0.62 + 0.055, 0) -- (-0.13, 0);
+  \node[above=5pt] at (-0.31, 0) {\small $K$};
+  \draw[decorate, decoration={zigzag, segment length=3pt, amplitude=1.8pt, pre length=2pt, post length=2pt}]
+    (0.13, 0) -- (0.62 - 0.055, 0);
+  \node[above=5pt] at (0.31, 0) {\small $K$};
+
+  % Identical beads m
+  \foreach \i in {-4, -3, -2, -1, 1, 2, 3, 4} {
+    \fill (\i*0.62, 0) circle (1.8pt) node[below=3pt] {$m$};
+    \node[above=14pt] at (\i*0.62, 0) {\small $\i$};
+  }
+
+  % Special mass m_0 at index 0
+  \draw[fill=white, thick] (-0.13, -0.13) rectangle (0.13, 0.13);
+  \node[below=5pt] at (0, -0.10) {$m_0$};
+  \node[above=14pt] at (0, 0) {\small $0$};
+
+  % x-direction arrow
+  \draw[->] (1.65, -0.48) -- (2.90, -0.48) node[below] {$x$};
+\end{tikzpicture}

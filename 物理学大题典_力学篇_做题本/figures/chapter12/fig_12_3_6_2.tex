@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Axes in S (y horizontal right, x vertical down)
+    \draw[->] (-1.85, 0) -- (1.95, 0) node[below=2pt] {$y$};
+    \draw[->] (0, 1.85) -- (0, -1.95) node[right=2pt] {$x$};
+    \node[below left=2pt] at (0, 0) {$O$};
+
+    % Circular orbit of radius R, counterclockwise (a -> b -> c -> d -> e)
+    \draw[postaction={decorate}, decoration={markings, mark=at position 0.875 with {\arrow{Stealth}}}]
+        (0, 0) circle (1.25);
+    \node[below right=2pt] at (0.88, -0.88) {$v$};
+
+    % Radius vector R
+    \draw[->] (0, 0) -- (32:1.25);
+    \node[above left=1pt] at (32:0.68) {$R$};
+
+    % Marked points a, b, c, d, e
+    \fill (0, -1.25) circle (2pt) node[below right=1pt] {$ae$};
+    \fill (1.25, 0) circle (2pt) node[above right=1pt] {$b$};
+    \fill (0, 1.25) circle (2pt) node[above right=1pt] {$c$};
+    \fill (-1.25, 0) circle (2pt) node[below left=1pt] {$d$};
+
+    % Magnetic field B out of page (+z)
+    \draw (1.35, 1.55) circle (0.16);
+    \fill (1.35, 1.55) circle (1.8pt);
+    \node[right=3pt] at (1.51, 1.55) {$\pmb{B}$};
+\end{tikzpicture}

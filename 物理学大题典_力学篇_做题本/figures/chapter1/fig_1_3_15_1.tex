@@ -1,0 +1,111 @@
+\begin{tikzpicture}[>=Stealth, scale=0.18, every node/.style={font=\small}]
+  % Coordinates (1 unit = 1 cm in problem, scaled by 0.18 -> ~5.8 cm wide)
+  \coordinate (O) at (0, 14);
+  \coordinate (A) at (8, 14);
+  \coordinate (D) at (10, 0);
+  \coordinate (B) at (24, 2);
+
+  % Wall at O
+  \draw[thick] (-1.5, 10.5) -- (-1.5, 17.5);
+  \fill[pattern=north east lines] (-2.7, 10.5) rectangle (-1.5, 17.5);
+  % Bearing bracket at O
+  \draw[thick] (-1.5, 15.6) -- (0, 15.6) arc (90:-90:1.6) -- (-1.5, 12.4);
+  \draw[thick, fill=white] (O) circle (0.7);
+
+  % Crank OA (double-line bar)
+  \draw[thick] (0, 14.5) -- (8, 14.5);
+  \draw[thick] (0, 13.5) -- (8, 13.5);
+  \draw[thick, fill=white] (O) circle (0.55);
+  \draw[thick, fill=white] (A) circle (0.55);
+
+  % Angular velocity arrow around OA
+  \draw[->, thick] (1.6, 16.2) arc (65:-75:2.5);
+  \node at (4.4, 12.1) {$2\,\mathrm{rad/s}$};
+
+  % Ground and bearing bracket at D
+  \draw[thick] (6.5, -1.6) -- (13.8, -1.6);
+  \fill[pattern=north east lines] (6.5, -2.7) rectangle (13.8, -1.6);
+  \draw[thick] (8.1, -1.6) -- (8.1, 0) arc (180:0:1.9) -- (11.9, -1.6);
+  \draw[thick, fill=white] (D) circle (0.6);
+
+  % Rod AB and sliding sleeve C
+  % Direction of AB: angle -36.87 deg (cos=0.8, sin=-0.6)
+  % Sleeve spans from s=5.5 to s=14.5 along AB
+  \coordinate (S1) at ($(A)!0.275!(B)$);
+  \coordinate (S2) at ($(A)!0.725!(B)$);
+  \coordinate (perp) at (0.6, 0.8); % unit normal to AB pointing up-right
+
+  % Rod AB
+  \draw[thick] ($(A)+0.4*(perp)$) -- ($(S1)+0.4*(perp)$);
+  \draw[thick] ($(A)-0.4*(perp)$) -- ($(S1)-0.4*(perp)$);
+  \draw[thick] ($(S2)+0.4*(perp)$) -- ($(B)+0.4*(perp)$);
+  \draw[thick] ($(S2)-0.4*(perp)$) -- ($(B)-0.4*(perp)$);
+  \draw[thick] ($(B)+0.4*(perp)$) -- ($(B)-0.4*(perp)$);
+
+  % Sleeve around AB
+  \draw[thick] ($(S1)+0.85*(perp)$) -- ($(S2)+0.85*(perp)$)
+            -- ($(S2)-0.85*(perp)$) -- ($(S1)-0.85*(perp)$) -- cycle;
+  \draw[dashed] ($(S1)+0.4*(perp)$) -- ($(S2)+0.4*(perp)$);
+  \draw[dashed] ($(S1)-0.4*(perp)$) -- ($(S2)-0.4*(perp)$);
+  \draw[thick, fill=white] (A) circle (0.55);
+
+  % Rocker C arms from D to sleeve
+  \coordinate (M1) at ($(S1)!0.22!(S2) - 0.85*(perp)$);
+  \coordinate (M2) at ($(S1)!0.78!(S2) - 0.85*(perp)$);
+  \draw[thick] (D) -- (M1);
+  \draw[thick] (D) -- (M2);
+  \draw[thick, fill=white] (D) circle (0.55);
+
+  % Angular velocity arrow around D
+  \draw[->, thick] ($(D)+(-15:2.9)$) arc (-15:125:2.9);
+  \node at (10.7, 3.6) {$C$};
+  \node at ($(D)+(-12:4.1)$) {$\omega$};
+
+  % Dashed geometric lines
+  \draw[dashed] (A) -- (13.5, 14); % horizontal right from A
+  \draw[dashed] (A) -- (8, 5.5);   % vertical down from A
+  \draw[dashed] (A) -- (D);        % AD
+  \draw[dashed] (D) -- (B);        % DB
+
+  % Angle arcs alpha and beta
+  \draw (8, 8.5) arc (-90:-81.87:5.5);
+  \draw[->] (5.6, 8.3) to[bend right=25] (8.4, 8.8);
+  \node[left] at (5.6, 8.5) {$\alpha$};
+  \draw (11.5, 14) arc (0:-36.87:3.5);
+  \node at (12.6, 12.6) {$\beta$};
+
+  % Dimension: 8 cm
+  \draw (0, 16) -- (0, 19.5);
+  \draw (8, 15.5) -- (8, 19.5);
+  \draw[<->] (0, 18.5) -- node[above] {$8\,\mathrm{cm}$} (8, 18.5);
+
+  % Dimension: 14 cm
+  \draw (-4.5, 14) -- (-0.8, 14);
+  \draw (-4.5, 0) -- (7.5, 0);
+  \draw[<->] (-3.5, 0) -- node[left, rotate=90, anchor=south] {$14\,\mathrm{cm}$} (-3.5, 14);
+
+  % Dimension: 10 cm (horizontal O to D)
+  \draw (0, 11.5) -- (0, -5.6);
+  \draw (10, -2.9) -- (10, -5.6);
+  \draw[<->] (0, -4.8) -- node[below] {$10\,\mathrm{cm}$} (10, -4.8);
+
+  % Dimension: 20 cm (parallel to AB)
+  \draw ($(A)+1.2*(perp)$) -- ($(A)+5.8*(perp)$);
+  \draw ($(B)+1.2*(perp)$) -- ($(B)+5.8*(perp)$);
+  \draw[<->] ($(A)+4.8*(perp)$) -- node[above right, pos=0.5] {$20\,\mathrm{cm}$} ($(B)+4.8*(perp)$);
+
+  % Dimension: 10 cm (perpendicular from D to line AB)
+  \coordinate (D_ext) at ($(D) + 18*(0.8, -0.6)$);
+  \coordinate (B_ext) at ($(B) + 4.5*(0.8, -0.6)$);
+  \draw ($(D)+2.5*(0.8,-0.6)$) -- (D_ext);
+  \draw (B) -- (B_ext);
+  \draw[<->] ($(D) + 16.5*(0.8, -0.6)$) -- node[below right] {$10\,\mathrm{cm}$} ($(B) + 2.5*(0.8, -0.6)$);
+
+  % Point labels
+  \node[above right] at (8.2, 14.4) {$A$};
+  \node[above right] at (B) {$B$};
+  \draw[->] (1.4, 11.1) -- ($(O)+(0.2,-0.3)$);
+  \node[below] at (1.5, 11.1) {$O$};
+  \draw[->] (13.0, -3.6) -- ($(D)+(0.3,-0.4)$);
+  \node[below right] at (12.8, -3.4) {$D$};
+\end{tikzpicture}

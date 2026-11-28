@@ -1,0 +1,59 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinates: A at origin, zeta vertical, AB at angle alpha=36 deg from vertical (54 deg from +x)
+  \coordinate (A) at (0,0);
+  \coordinate (Ztop) at (0,3.85);
+  \coordinate (B) at (54:4.65);
+  \coordinate (C) at (54:2.55);
+  \coordinate (D) at ($(C) + (-66:1.35)$);
+
+  % Line perpendicular to AB through C in zeta-AB plane (direction 144 deg and -36 deg)
+  \coordinate (Zint) at ($(C) + (144:2.62)$);
+  \coordinate (PerpR) at ($(C) + (-36:1.35)$);
+
+  % Vertical zeta axis and inclined axis AB
+  \draw (A) -- (Ztop) node[above left] {$\zeta$};
+  \draw (A) -- (B) node[above right] {$B$};
+  \node at ($(A)+(0.36,-0.22)$) {$A$};
+
+  % Unit vector n along AB
+  \draw[->] (54:0.85) -- (54:1.62);
+  \node[below right] at (54:1.30) {$n$};
+
+  % Lower bearing at A
+  \begin{scope}[shift={(A)}, rotate=54]
+    \draw (-0.12,-0.25) -- (0.55,-0.25);
+    \draw (-0.12,0.25) -- (0.55,0.25);
+    \draw (-0.12,-0.48) -- (-0.12,0.48);
+    \foreach \t in {-0.10,0.08,0.26,0.44} {
+      \draw[thin] (\t,-0.25) -- (\t-0.14,-0.42);
+      \draw[thin] (\t,0.25) -- (\t-0.14,0.42);
+    }
+  \end{scope}
+
+  % Upper bearing along AB above C
+  \begin{scope}[shift={(54:3.45)}, rotate=54]
+    \draw (-0.35,-0.22) -- (0.35,-0.22);
+    \draw (-0.35,0.22) -- (0.35,0.22);
+    \foreach \t in {-0.30,-0.12,0.06,0.24} {
+      \draw[thin] (\t,-0.22) -- (\t-0.15,-0.42);
+      \draw[thin] (\t,0.22) -- (\t-0.15,0.42);
+    }
+  \end{scope}
+
+  % Dashed perpendicular line and cantilever CD
+  \draw[dashed] (Zint) -- (PerpR);
+  \draw (C) -- (D) node[midway, below left, inner sep=2pt] {$a$};
+  \node at ($(C)+(-0.08,0.28)$) {$C$};
+  \node[right] at (D) {$D$};
+
+  % Right-angle marks at C
+  \pic[draw, thin, angle radius=5.5pt] {right angle=A--C--Zint};
+  \pic[draw, thin, angle radius=5.5pt] {right angle=A--C--D};
+
+  % Angles alpha and theta
+  \pic[draw, thin, angle radius=24pt, "$\alpha$", angle eccentricity=1.25] {angle=B--A--Ztop};
+  \pic[draw, thin, angle radius=18pt, "$\theta$", angle eccentricity=1.3] {angle=D--C--PerpR};
+
+  % Vertical force P at D
+  \draw[->] (D) -- ++(0,-1.05) node[midway, right] {$P$};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Hatched channel walls
+  \fill[pattern=north east lines]
+    (-0.2, 1.45) .. controls (1.2, 0.92) and (2.6, 0.62) .. (4.0, 0.56)
+    -- (4.0, 0.80) .. controls (2.6, 0.86) and (1.2, 1.16) .. (-0.2, 1.69) -- cycle;
+  \draw (-0.2, 1.45) .. controls (1.2, 0.92) and (2.6, 0.62) .. (4.0, 0.56);
+
+  \fill[pattern=north east lines]
+    (-0.2, -1.45) .. controls (1.2, -0.92) and (2.6, -0.62) .. (4.0, -0.56)
+    -- (4.0, -0.80) .. controls (2.6, -0.86) and (1.2, -1.16) .. (-0.2, -1.69) -- cycle;
+  \draw (-0.2, -1.45) .. controls (1.2, -0.92) and (2.6, -0.62) .. (4.0, -0.56);
+
+  % Centerline x-axis
+  \coordinate (A) at (0, 0);
+  \coordinate (B) at (2.4, 0);
+  \draw[->] (A) -- (4.7, 0) node[below=2pt] {$x$};
+
+  % Points A, B and velocity vectors
+  \fill (A) circle (2pt) node[above=3pt] {$A$};
+  \fill (B) circle (2pt) node[above=3pt] {$B$};
+  \draw[->] (A) -- (0.85, 0) node[above=2pt, pos=0.75] {$v_A$};
+  \draw[->] (B) -- (3.85, 0) node[above=2pt, pos=0.75] {$v_B$};
+
+  % Dimension l
+  \draw[thin] (0, -1.55) -- (0, -2.18);
+  \draw[thin] (2.4, -0.92) -- (2.4, -2.18);
+  \draw[<->] (0, -1.96) -- (2.4, -1.96)
+    node[midway, fill=white, inner sep=2pt] {$l$};
+\end{tikzpicture}

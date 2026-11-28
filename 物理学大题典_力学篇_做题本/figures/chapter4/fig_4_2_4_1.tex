@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Earth circle of radius R
+  \draw (0, 0) circle (1.5);
+  \fill (0, 0) circle (1.4pt);
+
+  % Radius arrow R
+  \draw[->] (0, 0) -- (12:1.5) node[midway, below] {$R$};
+
+  % Radial line to maximum height H (solid inside Earth, dashed above surface)
+  \draw (0, 0) -- (62:1.5);
+  \draw[dashed] (62:1.5) -- (62:2.6) node[pos=0.35, right=2pt] {$H$};
+
+  % Rocket trajectory from surface up to smooth peak at (62:2.6) and curving down
+  \coordinate (P) at (62:2.6);
+  \draw (90:1.5) .. controls (76:2.15) and ($(P)+(152:0.28)$) .. (P)
+        .. controls ($(P)+(-28:0.28)$) and (48:2.25) .. (40:1.82);
+\end{tikzpicture}

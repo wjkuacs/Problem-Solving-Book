@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\R{1.85}
+  \def\r{1.55}
+  \def\rmid{1.70}
+  \def\ang{45}
+
+  % Concentric circular tube
+  \draw[thick] (0,0) circle (\R);
+  \draw[thick] (0,0) circle (\r);
+
+  % Vertical rotation axis
+  \draw[thick] (0,-2.35) -- (0,2.65);
+
+  % Rotation arrow and omega
+  \draw[->, thick] (-0.25,2.42) arc (145:405:0.42 and 0.14);
+  \node[right=2pt] at (0.38,2.55) {$\omega$};
+
+  % Gravity vector on the left
+  \draw[->, thick] (-2.45,0.65) -- (-2.45,-0.65);
+  \node[left=2pt] at (-2.45,0) {$g$};
+
+  % Radial line to mass m
+  \coordinate (O) at (0,0);
+  \coordinate (Top) at (0,1);
+  \coordinate (M) at ({90-\ang}:\r);
+  \draw[thick] (O) -- (M);
+  \fill (M) circle (2.2pt);
+  \node at ({90-\ang}:{\R+0.32}) {$m$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\theta$"] {angle=M--O--Top};
+\end{tikzpicture}

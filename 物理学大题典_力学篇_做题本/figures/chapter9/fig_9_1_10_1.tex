@@ -1,0 +1,64 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling with hatching
+    \draw (-2.5,0) -- (2.5,0);
+    \foreach \x in {-2.35,-2.10,...,2.35} {
+        \draw[semithick] (\x,0) -- (\x+0.15,0.16);
+    }
+
+    % Two upper pulleys with suspension brackets
+    \foreach \sx in {-1.20, 1.20} {
+        \draw (\sx,0) -- (\sx,-1.0);
+        \draw[fill=white] (\sx-0.07,0) rectangle (\sx+0.07,-1.0);
+        \draw (\sx,-1.0) circle (0.45);
+        \fill (\sx,-1.0) circle (1.3pt);
+    }
+
+    % Iron plate (铁质薄板)
+    \draw (-2.35,-1.65) rectangle (2.35,-5.95);
+    \node[font=\small, align=center] at (1.88,-4.55) {铁\\质\\薄\\板};
+
+    % Outer cords from upper pulleys to iron plate
+    \draw[semithick] (-1.65,-1.0) -- (-1.65,-1.65);
+    \draw[semithick] (1.65,-1.0) -- (1.65,-1.65);
+
+    % Dimension y1
+    \draw[<->, thin] (0,0) -- (0,-1.65)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$y_1$};
+
+    % Bar magnet (磁棒) and inner cords
+    \draw[semithick] (-0.75,-1.0) -- (-0.75,-2.05);
+    \draw[semithick] (0.75,-1.0) -- (0.75,-2.05);
+    \draw[fill=white] (-1.75,-2.05) rectangle (1.75,-2.35);
+    \node[left=2pt, font=\small] at (-1.75,-2.20) {$\mathrm{S}$};
+    \node[right=2pt, font=\small] at (1.75,-2.20) {$\mathrm{N}$};
+    \node[below=1pt, font=\small] at (-0.75,-2.35) {$\alpha_1$};
+    \draw[thin] (0.65,-2.35) -- (0.95,-2.72) node[below, font=\small] {磁棒};
+
+    % Lower pulley suspended from bar magnet
+    \draw[fill=white] (-0.07,-2.35) rectangle (0.07,-3.55);
+    \draw (0,-3.55) circle (0.50);
+    \fill (0,-3.55) circle (1.3pt);
+
+    % Two magnetic poles A and B
+    \draw[semithick] (-0.50,-3.55) -- (-0.50,-4.90);
+    \draw[fill=white] (-0.76,-4.90) rectangle (-0.24,-5.40);
+    \node[font=\small] at (-0.50,-5.15) {$N$};
+    \node[above right=0pt, font=\small] at (-0.25,-4.90) {$A$};
+    \node[below left=0pt, font=\small] at (-0.72,-5.34) {$\alpha_2$};
+
+    \draw[semithick] (0.50,-3.55) -- (0.50,-4.55);
+    \draw[fill=white] (0.24,-4.55) rectangle (0.76,-5.05);
+    \node[font=\small] at (0.50,-4.80) {$N$};
+    \node[above right=0pt, font=\small] at (0.70,-4.55) {$B$};
+    \node[below right=0pt, font=\small] at (0.74,-5.00) {$\alpha_3$};
+
+    \node[font=\small] (pole) at (0.05,-5.68) {磁极};
+    \draw[thin] (-0.24,-5.28) -- (pole.north west);
+    \draw[thin] (0.50,-5.05) -- (pole.north east);
+
+    % Dimension y2
+    \draw[thin] (-1.45,-3.55) -- (-0.60,-3.55);
+    \draw[thin] (-1.45,-4.90) -- (-0.84,-4.90);
+    \draw[<->, thin] (-1.25,-3.55) -- (-1.25,-4.90)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$y_2$};
+\end{tikzpicture}

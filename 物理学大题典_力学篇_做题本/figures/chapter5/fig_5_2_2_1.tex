@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O1) at (0,0);
+  \coordinate (O2) at (1.497,1.170);
+  \coordinate (O3) at (2.994,2.339);
+  \coordinate (Mbc) at ($(O2)!0.5!(O3)$);
+
+  % Disks A, B, C
+  \draw[thick] (O1) circle (0.95);
+  \draw[thick] (O2) circle (0.95);
+  \draw[thick] (O3) circle (0.95);
+
+  % Radius lines labeled r
+  \foreach \c in {O1,O2,O3} {
+    \draw[thick] (\c) -- ($(\c)+(98:0.95)$) node[midway, right=1pt] {$r$};
+  }
+
+  % Ground base under disk A
+  \draw[thick] (-0.45,-0.95) -- (0.45,-0.95);
+  \foreach \x in {-0.34,-0.17,0,0.17,0.34} {
+    \draw (\x-0.14,-1.18) -- (\x,-0.95);
+  }
+  \draw[thick] (0.45,-0.95) -- (0.56,-1.18);
+
+  % Crank O1-O2-O3
+  \draw[thick]
+    ($(O1)+(128:0.13)$) -- ($(O3)+(128:0.13)$)
+    arc (128:-52:0.13) -- ($(O1)+(-52:0.13)$)
+    arc (-52:-232:0.13) -- cycle;
+
+  % Center dots and labels O1, O2, O3
+  \foreach \c/\lbl in {O1/O_1, O2/O_2, O3/O_3} {
+    \fill (\c) circle (0.035);
+    \node[below right=4pt] at (\c) {$\lbl$};
+  }
+
+  % Disk labels A, B, C
+  \node at (-1.12,-0.25) {$A$};
+  \node at ($(O2)+(145:1.12)$) {$B$};
+  \node at ($(O3)+(145:1.12)$) {$C$};
+
+  % Contact point labels P and Q
+  \node at ($(Mbc)+(-142:0.22)+(-52:0.29)$) {$P$};
+  \node at ($(Mbc)+(38:0.22)+(128:0.29)$) {$Q$};
+
+  % Rotation arrow omega(t) for disk B
+  \draw[->, thick] ($(O2)+(-25:1.15)$) arc (-25:-75:1.15);
+  \node[right=2pt] at ($(O2)+(-48:1.15)$) {$\omega(t)$};
+\end{tikzpicture}

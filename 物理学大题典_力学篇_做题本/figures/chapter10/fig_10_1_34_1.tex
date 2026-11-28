@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Three axes at 120 degrees
+  \draw[->] (0, 0) -- (90:2.85) node[right=2pt] {$x_1$};
+  \draw[->] (0, 0) -- (210:2.85) node[below right=1pt] {$x_2$};
+  \draw[->] (0, 0) -- (330:2.85) node[below left=1pt] {$x_3$};
+
+  % 120 degree angle arcs (inside dashed triangle)
+  \draw[<->, thin] (90:0.52) arc (90:210:0.52);
+  \node[fill=white, inner sep=1pt, font=\scriptsize] at (150:0.52) {$120^\circ$};
+  \draw[<->, thin] (210:0.52) arc (210:330:0.52);
+  \node[fill=white, inner sep=1pt, font=\scriptsize] at (270:0.52) {$120^\circ$};
+  \draw[<->, thin] (330:0.52) arc (330:450:0.52);
+  \node[fill=white, inner sep=1pt, font=\scriptsize] at (30:0.52) {$120^\circ$};
+
+  % Equilibrium positions O1, O2, O3
+  \coordinate (O1) at (90:1.34);
+  \coordinate (O2) at (210:1.34);
+  \coordinate (O3) at (330:1.34);
+  \draw[dashed] (O1) -- (O2) -- (O3) -- cycle;
+  \node[font=\small, right=1pt, yshift=-3pt] at (O1) {$O_1$};
+  \node[font=\small] at (-1.38, -0.48) {$O_2$};
+  \node[font=\small] at (1.38, -0.48) {$O_3$};
+
+  % Three masses m
+  \coordinate (M1) at (90:2.42);
+  \coordinate (M2) at (210:2.42);
+  \coordinate (M3) at (330:2.42);
+  \fill (M1) circle (2.3pt) node[right=3pt] {$m$};
+  \fill (M2) circle (2.3pt) node[below right=2pt and 2pt] {$m$};
+  \fill (M3) circle (2.3pt) node[above right=1pt and 2pt] {$m$};
+
+  % Three springs k
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6.5pt, amplitude=3.5pt, pre length=0.95cm, post length=0.95cm}]
+    (M1) -- (M2);
+  \node at (150:1.60) {$k$};
+
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6.5pt, amplitude=3.5pt, pre length=0.95cm, post length=0.95cm}]
+    (M2) -- (M3);
+  \node at (270:1.60) {$k$};
+
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6.5pt, amplitude=3.5pt, pre length=0.95cm, post length=0.95cm}]
+    (M3) -- (M1);
+  \node at (30:1.60) {$k$};
+\end{tikzpicture}

@@ -1,0 +1,52 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small]
+  % Center O
+  \coordinate (O) at (3.8, 1.5);
+
+  % Outer fixed semicircular shell B (0 to 180 deg)
+  \fill[pattern=north east lines]
+    ($(O)+(0:1.15)$) arc (0:180:1.15) --
+    ($(O)+(180:1.38)$) arc (180:0:1.38) -- cycle;
+  \draw
+    ($(O)+(0:1.15)$) arc (0:180:1.15)
+    ($(O)+(0:1.38)$) arc (0:180:1.38)
+    ($(O)+(-1.38,0)$) -- ($(O)+(1.38,0)$);
+
+  % Inner rotating semicircular shell A (theta to theta+180 deg, theta=42 deg)
+  \def\ang{42}
+  \fill[pattern=north east lines]
+    ($(O)+(\ang:0.85)$) arc (\ang:\ang+180:0.85) --
+    ($(O)+(\ang+180:1.03)$) arc (\ang+180:\ang:1.03) -- cycle;
+  \draw
+    ($(O)+(\ang:0.85)$) arc (\ang:\ang+180:0.85)
+    ($(O)+(\ang:1.03)$) arc (\ang:\ang+180:1.03)
+    ($(O)+(\ang:1.03)$) -- ($(O)+(\ang+180:1.03)$);
+
+  % Angle theta
+  \draw[->, thin] ($(O)+(0:0.48)$) arc (0:\ang:0.48);
+  \node at ($(O)+(21:0.70)$) {$\theta$};
+
+  % Labels on capacitor
+  \node at ($(O)+(145:1.62)$) {$B$};
+  \node at ($(O)+(-38:0.25)$) {$O$};
+  \node at ($(O)+(198:0.58)$) {$A$};
+  \node at ($(O)+(233:0.75)$) {$I$};
+
+  % Circuit connections
+  % Top wire with inductor L
+  \draw ($(O)+(90:1.38)$) -- (3.8, 3.2) -- (2.15, 3.2);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (2.15, 3.2) -- (0.95, 3.2);
+  \node[below=4pt] at (1.55, 3.2) {$L$};
+  \draw (0.95, 3.2) -- (0.2, 3.2) -- (0.2, 1.78);
+
+  % DC source E
+  \draw (0.0, 1.78) -- (0.4, 1.78);
+  \draw[line width=1.6pt] (0.09, 1.62) -- (0.31, 1.62);
+  \node[right=3pt] at (0.4, 1.70) {$E$};
+
+  % Bottom wire with resistor R
+  \draw (0.2, 1.62) -- (0.2, 0.2) -- (1.15, 0.2);
+  \draw (1.15, 0.08) rectangle (1.85, 0.32);
+  \node[above=2pt] at (1.50, 0.32) {$R$};
+  \draw (1.85, 0.2) -- (3.8, 0.2) -- (O);
+\end{tikzpicture}

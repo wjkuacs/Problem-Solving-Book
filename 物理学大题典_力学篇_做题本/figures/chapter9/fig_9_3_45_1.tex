@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Coordinate axes
+    \draw[->] (0,0) -- (4.8,0) node[below left] {$x$};
+    \draw[->] (0,0) -- (0,3.6) node[left] {$y$};
+
+    % Ring of mass M and radius r = 1.45 resting on x-axis
+    \coordinate (C) at (2.7, 1.45);
+    \draw (C) circle (1.45);
+    \node at ($(C) + (-35:1.72)$) {$M$};
+
+    % Vertical dashed diameter line
+    \draw[dashed, thin] (2.7, 0) -- (2.7, 3.6);
+
+    % Particle m inside ring at angle theta from top vertical
+    \coordinate (P) at ($(C) + (45:1.45)$);
+    \draw[thin] (C) -- (P);
+    \fill (P) circle (2.2pt) node[above right] {$m$};
+
+    % Angle theta arc from vertical to radius
+    \draw[->, thin] ($(C) + (90:0.58)$) arc (90:45:0.58);
+    \node at ($(C) + (67.5:0.82)$) {$\theta$};
+\end{tikzpicture}

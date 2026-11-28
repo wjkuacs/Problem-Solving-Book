@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Axes
+  \draw[->] (-0.6,0) -- (5.1,0) node[below=2pt] {$x$};
+  \draw[->] (0,-0.4) -- (0,2.2) node[left=2pt] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Bump curve: y0 = A(1 - cos(pi x / l)) on [0, 2l], with l = 2.1, A = 0.5
+  \draw[line width=0.8pt] plot[domain=0:4.2, samples=80] (\x, {0.5*(1 - cos(deg(pi*\x/2.1)))});
+
+  % Dashed vertical line at x = l and axis labels
+  \draw[dashed] (2.1,0) -- (2.1,1.0);
+  \node[below=2pt] at (2.1,0) {$l$};
+  \node[below=2pt] at (4.2,0) {$2l$};
+
+  % Left snapshot of mass-spring system
+  \draw (0.30,0.02) -- (0.30,0.20);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=3.2pt, amplitude=2.5pt}] (0.30,0.20) -- (0.30,0.68);
+  \draw (0.30,0.68) -- (0.30,0.80);
+  \draw[fill=white] (0.14,0.80) rectangle (0.46,1.02);
+  \node[above=1pt] at (0.30,1.02) {$m$};
+  \draw[->] (0.46,0.44) -- (0.95,0.44) node[right=1pt] {$v$};
+
+  % Middle snapshot of mass-spring system
+  \pgfmathsetmacro{\ymid}{0.5*(1 - cos(deg(pi*1.45/2.1)))}
+  \draw (1.45,\ymid) -- (1.45,\ymid+0.18);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=3.2pt, amplitude=2.5pt}] (1.45,\ymid+0.18) -- (1.45,\ymid+0.66);
+  \draw (1.45,\ymid+0.66) -- (1.45,\ymid+0.78);
+  \draw[fill=white] (1.29,\ymid+0.78) rectangle (1.61,\ymid+1.00);
+  \draw[->] (1.61,\ymid+0.42) -- (2.10,\ymid+0.42) node[right=1pt] {$v$};
+\end{tikzpicture}

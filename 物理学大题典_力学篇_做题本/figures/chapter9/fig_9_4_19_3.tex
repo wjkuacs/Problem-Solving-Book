@@ -1,0 +1,52 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.80, transform shape]
+  % Reference wall and ground
+  \draw (0, 2.60) -- (0, 0) -- (7.2, 0);
+
+  % Blocks m1, m2, m3
+  \draw (1.30, 0.14) rectangle (2.20, 0.82);
+  \node at (1.75, 0.48) {$m_1$};
+  \draw (3.60, 0.14) rectangle (4.50, 0.82);
+  \node at (4.05, 0.48) {$m_2$};
+  \draw (5.90, 0.14) rectangle (6.80, 0.82);
+  \node at (6.35, 0.48) {$m_3$};
+
+  % Force F
+  \draw[->, thin] (0.55, 0.48) -- (1.30, 0.48);
+  \node[above=1pt] at (0.92, 0.48) {$F$};
+
+  % Springs k1, k2
+  \draw (2.20, 0.48) -- (2.45, 0.48);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.3mm}]
+    (2.45, 0.48) -- (3.35, 0.48);
+  \draw (3.35, 0.48) -- (3.60, 0.48);
+  \node[above=4pt] at (2.90, 0.48) {$k_1$};
+
+  \draw (4.50, 0.48) -- (4.75, 0.48);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.3mm}]
+    (4.75, 0.48) -- (5.65, 0.48);
+  \draw (5.65, 0.48) -- (5.90, 0.48);
+  \node[above=4pt] at (5.20, 0.48) {$k_2$};
+
+  % Viscous friction arrows alpha1, alpha2, alpha3
+  \draw[->, thin] (2.25, -0.22) to[out=135, in=-10] (1.75, 0.10);
+  \node[right=1pt] at (2.25, -0.22) {$\alpha_1$};
+  \draw[->, thin] (4.55, -0.22) to[out=135, in=-10] (4.05, 0.10);
+  \node[right=1pt] at (4.55, -0.22) {$\alpha_2$};
+  \draw[->, thin] (6.85, -0.22) to[out=135, in=-10] (6.35, 0.10);
+  \node[right=1pt] at (6.85, -0.22) {$\alpha_3$};
+
+  % Dimension lines x1, x2, x3
+  \draw[thin] (1.30, 1.15) -- (1.30, 1.50);
+  \draw[<->, thin] (0, 1.34) -- (1.30, 1.34);
+  \node[above=1pt] at (0.65, 1.34) {$x_1$};
+
+  \draw[dashed, thin] (3.60, 0.82) -- (3.60, 1.65);
+  \draw[thin] (3.60, 1.65) -- (3.60, 2.00);
+  \draw[<->, thin] (0, 1.84) -- (3.60, 1.84);
+  \node[above=1pt] at (1.80, 1.84) {$x_2$};
+
+  \draw[dashed, thin] (5.90, 0.82) -- (5.90, 2.15);
+  \draw[thin] (5.90, 2.15) -- (5.90, 2.50);
+  \draw[<->, thin] (0, 2.34) -- (5.90, 2.34);
+  \node[above=1pt] at (2.95, 2.34) {$x_3$};
+\end{tikzpicture}

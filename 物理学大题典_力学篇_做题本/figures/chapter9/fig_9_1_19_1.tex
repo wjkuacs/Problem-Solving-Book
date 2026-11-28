@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Coordinate axes
+    \draw[->] (0,0) -- (4.5,0) node[below] {$x$};
+    \draw[->] (0,0) -- (0,4.0) node[left] {$y$};
+
+    % Ring center and circle
+    \coordinate (O) at (2.45,1.85);
+    \draw (O) circle (1.45);
+
+    % Dashed horizontal reference line
+    \draw[dashed] (O) -- ++(1.45,0);
+
+    % Body-fixed axes x', y' and radius at angle phi + alpha
+    \draw (O) -- ++(32:2.05) node[above right, inner sep=1pt] {$x'$};
+    \draw (O) -- ++(122:2.05) node[above left, inner sep=1pt] {$y'$};
+    \draw (O) -- ++(66:1.45);
+
+    % Labels
+    \node[below left, inner sep=1pt] at ($(O)+(-0.02,-0.04)$) {$O'$};
+    \node[below right, inner sep=1pt] at ($(O)+(0.22,-0.08)$) {$(x,y)$};
+    \node at ($(O)+(16:0.78)$) {$\varphi$};
+    \node at ($(O)+(49:0.75)$) {$\alpha$};
+\end{tikzpicture}

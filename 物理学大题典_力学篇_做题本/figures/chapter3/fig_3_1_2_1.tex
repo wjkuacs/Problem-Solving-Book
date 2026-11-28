@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Hatched walls and floor
+  \fill[pattern=north east lines] (-0.22, -0.22) rectangle (0, 1.35);
+  \fill[pattern=north east lines] (0, -0.22) rectangle (5.2, 0);
+  \fill[pattern=north east lines] (5.2, -0.22) rectangle (5.42, 1.35);
+  \draw[thick] (0, 1.35) -- (0, 0) -- (5.2, 0) -- (5.2, 1.35);
+
+  % Mass block
+  \draw[thick, fill=white] (2.15, 0) rectangle (3.05, 0.90);
+  \node at (2.60, 0.45) {$2\,\mathrm{kg}$};
+
+  % Left and right springs
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=14, post length=14}] (0, 0.45) -- (2.15, 0.45);
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=14, post length=14}] (3.05, 0.45) -- (5.2, 0.45);
+\end{tikzpicture}

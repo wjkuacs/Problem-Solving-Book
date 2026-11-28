@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+  % Key coordinates (AB and BD collinear at 35 deg, BD perp DE, A and E level)
+  \coordinate (A) at (0,0);
+  \coordinate (B) at ($(A)+(35:1.7)$);
+  \coordinate (D) at ($(B)+(35:2.4)$);
+  \coordinate (E) at ($(D)+(-55:2.87)$);
+
+  % Fixed supports at A and E
+  \foreach \P in {A, E} {
+    \draw[thick] ($(\P)+(-0.18,-0.4)$) -- (\P) -- ($(\P)+(0.18,-0.4)$);
+    \draw[thick] ($(\P)+(-0.32,-0.4)$) -- ($(\P)+(0.32,-0.4)$);
+    \foreach \dx in {-0.25, -0.1, 0.05, 0.2} {
+      \draw ($(\P)+(\dx,-0.4)$) -- ($(\P)+(\dx-0.12,-0.55)$);
+    }
+  }
+
+  % Draw rods AB, BD, DE as double-line bars
+  % Rod AB
+  \draw[thick, fill=white]
+    ($(A)+(125:0.06)$) -- ($(B)+(125:0.06)$) --
+    ($(B)+(-55:0.06)$) -- ($(A)+(-55:0.06)$) -- cycle;
+  % Rod BD
+  \draw[thick, fill=white]
+    ($(B)+(125:0.06)$) -- ($(D)+(125:0.06)$) --
+    ($(D)+(-55:0.06)$) -- ($(B)+(-55:0.06)$) -- cycle;
+  % Rod DE
+  \draw[thick, fill=white]
+    ($(D)+(35:0.05)$) -- ($(E)+(35:0.05)$) --
+    ($(E)+(-145:0.05)$) -- ($(D)+(-145:0.05)$) -- cycle;
+
+  % Coordinate axes at B: x along BD, y perpendicular
+  \draw[->, thick] ($(B)+(35:0.15)$) -- ($(D)+(35:0.95)$) node[right] {$x$};
+  \draw[->, thick] (B) -- ++(125:1.25) node[above] {$y$};
+
+  % Hinge pins (drawn on top)
+  \foreach \P in {A, B, D, E} {
+    \draw[thick, fill=white] (\P) circle (3.2pt);
+  }
+
+  % Labels
+  \node[left] at ($(A)+(-0.12,0.05)$) {$A$};
+  \node[below right] at ($(B)+(0.05,-0.08)$) {$B$};
+  \node[above left] at ($(D)+(-0.08,0.1)$) {$D$};
+  \node[right] at ($(E)+(0.12,0.05)$) {$E$};
+\end{tikzpicture}

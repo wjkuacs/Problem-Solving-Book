@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Lower shaft
+  \draw (0,-1.07) -- (0,-1.92);
+
+  % Turntable disk (3D ellipse + rim)
+  \draw (-2.6,0) -- (-2.6,-0.22) arc (180:360:2.6 and 0.85) -- (2.6,0);
+  \draw[fill=white] (0,0) ellipse (2.6 and 0.85);
+
+  % Central upper shaft
+  \draw (0,0) -- (0,1.88);
+
+  % Rotation arrow omega
+  \draw[->, very thick] (-0.62,-0.46) arc (238:302:1.2 and 0.38);
+  \node at (0.05,-0.24) {$\omega$};
+
+  % 3:4:5 wedge on turntable
+  \coordinate (W1) at (-2.10,-0.05);
+  \coordinate (W2) at (-0.95,-0.05);
+  \coordinate (W3) at (-2.10,0.81);
+  \coordinate (W2b) at (-0.50,0.35);
+  \coordinate (W3b) at (-1.65,1.21);
+
+  \fill[white] (W1) -- (W2) -- (W2b) -- (W3b) -- (W3) -- cycle;
+  \draw (W1) -- (W2) -- (W3) -- cycle;
+  \draw (W3) -- (W3b) -- (W2b) -- (W2);
+
+  \node[left=3pt] at (-2.12,0.52) {$3$};
+  \node[below=2pt] at (-1.52,-0.05) {$4$};
+  \node at (-1.24,0.40) {$5$};
+
+  % Small block resting on the sloped face
+  \filldraw[fill=white] (-1.62,0.72) -- (-1.45,0.62) -- (-1.34,0.72) -- (-1.51,0.82) -- cycle;
+  \filldraw[fill=white] (-1.62,0.72) -- (-1.62,0.86) -- (-1.45,0.76) -- (-1.45,0.62) -- cycle;
+  \filldraw[fill=white] (-1.45,0.62) -- (-1.45,0.76) -- (-1.34,0.86) -- (-1.34,0.72) -- cycle;
+  \filldraw[fill=white] (-1.62,0.86) -- (-1.45,0.76) -- (-1.34,0.86) -- (-1.51,0.96) -- cycle;
+
+  % 40 cm horizontal distance indicator
+  \draw (-1.50,0.98) -- (-1.50,1.88);
+  \draw[<->] (-1.50,1.68) -- (0,1.68) node[midway, above=1pt] {$40\,\mathrm{cm}$};
+\end{tikzpicture}

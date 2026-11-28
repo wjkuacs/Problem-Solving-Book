@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\thetaAng{34}
+  \def\rodLen{3.25}
+  \def\rLen{2.25}
+  \pgfmathsetmacro{\rodAng}{-90+\thetaAng}
+
+  % Vertical z-axis and horizontal x-axis at O
+  \coordinate (O) at (0,0);
+  \draw[->] (0,-3.05) -- (0,1.45) node[left] {$z$};
+  \draw[->] (O) -- (2.35,0) node[below] {$x$};
+  \node[above left=1pt] at (O) {$O$};
+
+  % Azimuthal rotation arrow phi around z-axis
+  \draw[->] (-0.42,0.88) arc[start angle=150, end angle=385, x radius=0.48, y radius=0.15];
+  \node[right=2pt] at (0.5,0.86) {$\varphi$};
+
+  % Rod OA (thin bar)
+  \coordinate (A) at (\rodAng:\rodLen);
+  \coordinate (P) at (\rodAng:\rLen);
+  \begin{scope}[rotate=\rodAng]
+    \draw[fill=white] (0,-0.06) rectangle (\rodLen,0.06);
+  \end{scope}
+  \node[below right=2pt] at (A) {$A$};
+  \node[above right=2pt] at (\rodAng:2.75) {$M$};
+
+  % Coiled spring around rod from O to P
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.5mm, amplitude=1.6mm, pre length=6.8mm, post length=1.5mm}]
+    (O) -- node[pos=0.6, above right=4pt] {$k$} (P);
+
+  % Bead P of mass m
+  \draw[fill=white] (P) circle (0.14);
+  \draw (P) circle (0.14);
+  \node[above right=3pt] at (P) {$P$};
+  \node[below left=2pt] at (P) {$m$};
+
+  % Angle theta cleanly inside sector
+  \coordinate (Zdown) at (0,-1.8);
+  \pic[draw, angle radius=0.82cm, angle eccentricity=0.74, "$\theta$"] {angle = Zdown--O--A};
+
+  % Dimension lines for 2a and r
+  \coordinate (ExtO) at (\rodAng-90:1.25);
+  \coordinate (ExtP) at ($(P)+(\rodAng-90:1.25)$);
+  \coordinate (ExtA) at ($(A)+(\rodAng-90:0.94)$);
+  \draw[thin] (O) -- (ExtO);
+  \draw[thin] ($(P)+(\rodAng-90:0.18)$) -- (ExtP);
+  \draw[thin] ($(A)+(\rodAng-90:0.08)$) -- (ExtA);
+
+  \draw[<->] (\rodAng-90:0.82) -- node[midway, fill=white, inner sep=1.2pt] {$2a$} ($(A)+(\rodAng-90:0.82)$);
+  \draw[<->] (\rodAng-90:1.14) -- node[midway, fill=white, inner sep=1.2pt] {$r$} ($(P)+(\rodAng-90:1.14)$);
+\end{tikzpicture}

@@ -1,0 +1,47 @@
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small}]
+  \def\R{2.3}
+  \coordinate (O) at (0, 0);
+  \coordinate (H) at (0, \R);
+  \coordinate (A) at (120:\R);
+  \coordinate (B) at (60:\R);
+  \coordinate (G) at (0, 1.50);
+  \coordinate (D) at ($(A) + (0, -1.4)$);
+  \coordinate (E) at ($(B) + (0, -1.65)$);
+
+  % Vertical circular hoop
+  \draw[thick] (O) circle (\R);
+
+  % Dashed radii OH, OA, OB
+  \draw[dashed] (O) -- (H);
+  \draw[dashed] (O) -- (A);
+  \draw[dashed] (O) -- (B);
+
+  % Angles 30 deg
+  \draw (0, 0.85) arc (90:120:0.85);
+  \node at (107:1.15) {$30^\circ$};
+  \draw (0, 0.85) arc (90:60:0.85);
+  \node at (73:1.15) {$30^\circ$};
+
+  % Small rings A and B
+  \draw[thick] (A) circle (0.13);
+  \draw[thick] (B) circle (0.13);
+
+  % String A-G-B and vertical ends to D and E
+  \draw[thick] (A) -- (G) -- (B);
+  \draw[thick] (A) -- (D);
+  \draw[thick] (B) -- (E);
+
+  % Weights G, D, E
+  \fill (G) circle (2pt);
+  \draw[thick, fill=white] (D) circle (2pt);
+  \draw[thick, fill=white] (E) circle (2pt);
+
+  % Labels
+  \node[above] at (H) {$H$};
+  \node[above left] at ($(A)+(-0.08,0.05)$) {$A$};
+  \node[above right] at ($(B)+(0.08,0.05)$) {$B$};
+  \node at (0.28, 1.85) {$G$};
+  \node[below] at (O) {$O$};
+  \node[below] at (D) {$D$};
+  \node[below] at (E) {$E$};
+\end{tikzpicture}

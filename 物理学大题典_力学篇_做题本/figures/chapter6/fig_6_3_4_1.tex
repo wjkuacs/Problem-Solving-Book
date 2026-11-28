@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Geometry: rods BA and BC of length 2a, angle ABC = 2*theta
+  \coordinate (B) at (-2.0,-0.95);
+  \coordinate (A) at ($(B)+(44:3.6)$);
+  \coordinate (C) at ($(B)+(-5:3.6)$);
+  \coordinate (D) at ($(B)!0.5!(A)$);
+  \coordinate (E) at ($(B)!0.5!(C)$);
+  \coordinate (M) at ($(A)!0.5!(C)$);
+  \coordinate (O) at ($(D)!0.5!(E)$);
+
+  % Rods AB and BC
+  \draw (A) -- (B) -- (C);
+  \node[above right] at (A) {$A$};
+  \node[below left] at (B) {$B$};
+  \node[below right] at (C) {$C$};
+  \node[above left] at (D) {$D$};
+  \node[below=2pt] at (E) {$E$};
+  \node[below=3pt] at ($(B)!0.5!(E)$) {$a$};
+
+  % Dashed median BM and segments DE, AC
+  \draw[dashed] (A) -- (C);
+  \draw[dashed] (D) -- (E);
+  \draw[dashed] (B) -- (M);
+
+  % Center-of-mass axes at O
+  \coordinate (Xtip) at ($(O)+(2.45,0)$);
+  \coordinate (Ytip) at ($(O)+(0,1.75)$);
+  \draw[->] (O) -- (Xtip) node[below] {$x$};
+  \draw[->] (O) -- (Ytip) node[left] {$y$};
+  \fill (O) circle (1.4pt);
+  \node[below left=2pt] at (O) {$O$};
+
+  % Angle theta at B
+  \pic[draw=none, angle radius=0.85cm, angle eccentricity=0.85, "$\theta$"] {angle=O--B--A};
+
+  % Intersection of x-axis and AC for angle phi
+  \coordinate (P) at (intersection of O--Xtip and A--C);
+  \pic[draw, thin, angle radius=0.38cm, angle eccentricity=1.45, "$\varphi$"] {angle=Xtip--P--A};
+\end{tikzpicture}

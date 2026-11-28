@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Three open-top vertical cylindrical tubes
+  \foreach \xc in {0, 1.4, 2.8} {
+    \draw (\xc-0.25, 0) -- (\xc-0.25, -4.5) -- (\xc+0.25, -4.5) -- (\xc+0.25, 0);
+  }
+
+  % Reference dashed lines and depth labels
+  \draw[dashed, thin] (-0.35, 0) -- (3.85, 0) node[right] {$0$};
+  \draw[dashed, thin] (-0.35, -0.80) -- (3.85, -0.80) node[right] {$15.95\,\mathrm{cm}$};
+  \draw[dashed, thin] (-0.35, -2.44) -- (3.85, -2.44) node[right] {$48.45\,\mathrm{cm}$};
+  \draw[dashed, thin] (-0.35, -4.08) -- (3.85, -4.08) node[right] {$80.95\,\mathrm{cm}$};
+
+  % Tube 1 (left): water level at 80.95 cm (y = -4.08), 5/4 wavelength
+  \draw[smooth, domain=0:-4.08, samples=80]
+    plot ({0 + 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  \draw[smooth, domain=0:-4.08, samples=80]
+    plot ({0 - 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  % Water surface symbol
+  \draw[thin] (-0.18, -4.16) -- (0.18, -4.16);
+  \draw[thin] (-0.12, -4.24) -- (0.12, -4.24);
+  \draw[thin] (-0.06, -4.32) -- (0.06, -4.32);
+
+  % Tube 2 (middle): water level at 48.45 cm (y = -2.44), 3/4 wavelength
+  \draw[smooth, domain=0:-2.44, samples=60]
+    plot ({1.4 + 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  \draw[smooth, domain=0:-2.44, samples=60]
+    plot ({1.4 - 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  % Water surface symbol
+  \draw[thin] (1.4-0.18, -2.52) -- (1.4+0.18, -2.52);
+  \draw[thin] (1.4-0.12, -2.60) -- (1.4+0.12, -2.60);
+  \draw[thin] (1.4-0.06, -2.68) -- (1.4+0.06, -2.68);
+
+  % Tube 3 (right): water level at 15.95 cm (y = -0.80), 1/4 wavelength
+  \draw[smooth, domain=0:-0.80, samples=40]
+    plot ({2.8 + 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  \draw[smooth, domain=0:-0.80, samples=40]
+    plot ({2.8 - 0.19*cos(90*(0.02 - \x)/0.82)}, {\x});
+  % Water surface symbol
+  \draw[thin] (2.8-0.18, -0.88) -- (2.8+0.18, -0.88);
+  \draw[thin] (2.8-0.12, -0.96) -- (2.8+0.12, -0.96);
+  \draw[thin] (2.8-0.06, -1.04) -- (2.8+0.06, -1.04);
+\end{tikzpicture}

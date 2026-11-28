@@ -1,0 +1,70 @@
+\begin{tikzpicture}[>=Stealth, scale=0.92, every node/.style={font=\small}]
+  % Inclined plane angle alpha = 25 deg
+  \def\ang{25}
+  \coordinate (R) at (5.6, 0);
+  \coordinate (T) at ($(R) + (180-\ang:4.2)$); % top of slope (~1.79, 1.775)
+  \coordinate (Vbase) at (1.79, 0);
+
+  % Ground
+  \draw[thick] (0.8, 0) -- (5.8, 0);
+  \fill[pattern=north east lines] (0.8, -0.25) rectangle (5.8, 0);
+
+  % Incline & support stand
+  \draw[thick] (R) -- (T) -- (Vbase);
+  % Perpendicular stop plate at top of incline
+  \coordinate (StopTop) at ($(T) + (90-\ang:0.55)$);
+  \coordinate (StopBot) at ($(T) + (-90-\ang:0.15)$);
+  \draw[thick] (StopBot) -- (StopTop);
+
+  % Pulley 2 center and mounting bracket
+  \coordinate (P2) at (1.40, 2.65);
+  \draw[thick] (T) -- (P2) -- ($(T) + (90-\ang:0.35)$);
+  \draw[thick, fill=white] (P2) circle (0.55);
+  \node at ($(P2) + (90:0.78)$) {$2$};
+
+  % Cart M on incline
+  % Along slope from R: distance 1.45 to center of cart
+  \coordinate (CartBase) at ($(R) + (180-\ang:1.25)$);
+  \begin{scope}[shift={(CartBase)}, rotate=-\ang]
+    % Two wheels
+    \draw[thick, fill=white] (-0.38, 0.14) circle (0.14);
+    \draw[thick, fill=white] (0.38, 0.14) circle (0.14);
+    % Cart body
+    \draw[thick, fill=white] (-0.65, 0.28) rectangle (0.65, 1.0);
+    \node at (0, 0.64) {$M$};
+  \end{scope}
+
+  % Pulley 1 (attached to cart M)
+  \coordinate (CartFront) at ($(CartBase) + (180-\ang:0.65) + (90-\ang:0.64)$);
+  \coordinate (P1) at ($(CartFront) + (180-\ang:0.95)$);
+  \draw[thick] (CartFront) -- (P1);
+  \draw[thick, fill=white] (P1) circle (0.52);
+  \node at ($(P1) + (90:0.75)$) {$1$};
+
+  % Ropes for Pulley 1 and Pulley 2
+  % Bottom tangent of P1 to stop plate
+  \coordinate (P1bot) at ($(P1) + (-90-\ang:0.52)$);
+  \coordinate (StopAnchor) at ($(T) + (90-\ang:0.25)$);
+  \draw[thick] (P1bot) -- (StopAnchor);
+  % Top tangent of P1 to top-right tangent of P2
+  \draw[thick] ($(P1) + (90-\ang:0.52)$) -- ($(P2) + (90-\ang:0.55)$);
+
+  % Pulley 3 (movable pulley)
+  \coordinate (P3) at (0.85, 1.25);
+  \draw[thick] (0.85, 2.65) -- (P3); % rope from left of P2 to center of P3
+  \draw[thick, fill=white] (P3) circle (0.52);
+  \node at ($(P3) + (135:0.75)$) {$3$};
+
+  % Rope over Pulley 3: right side anchored to ground, left side to mass m
+  \draw[thick] (1.37, 1.25) -- (1.37, 0);
+  \draw[thick] (1.37, 0.25) -- (1.79, 0.25); % base brace to stand
+  \draw[thick] (0.33, 1.25) -- (0.33, -0.35);
+
+  % Hanging mass m
+  \draw[thick] (0.0, -0.85) rectangle (0.66, -0.35);
+  \node at (0.33, -0.60) {$m$};
+
+  % Angle alpha
+  \draw (4.7, 0) arc (180:180-\ang:0.9);
+  \node at (4.55, 0.21) {$\alpha$};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\a{1.45}
+  \def\b{0.82}
+  \def\ang{42}
+  % Lower fixed sphere
+  \draw (0,0) circle (\a);
+  % Hatched base support
+  \draw (-0.85,-\a) -- (0.85,-\a);
+  \foreach \x in {-0.75,-0.50,...,0.75} {
+    \draw[thin] (\x,-\a) -- (\x-0.16,-\a-0.16);
+  }
+  % Upper rolling sphere
+  \coordinate (C2) at ({(\a+\b)*sin(\ang)},{(\a+\b)*cos(\ang)});
+  \coordinate (P) at ({\a*sin(\ang)},{\a*cos(\ang)});
+  \draw (C2) circle (\b);
+  \fill (C2) circle (1.4pt);
+  % Vertical radius and line of centers
+  \draw (0,0) -- (0,\a);
+  \draw (0,0) -- (C2);
+  % Labels a and b along line of centers
+  \node[below right=1pt] at ($0.5*(P)$) {$a$};
+  \node[below right=1pt] at ($(P)!0.5!(C2)$) {$b$};
+  % Angle theta
+  \draw (0,0.58) arc[start angle=90, end angle=90-\ang, radius=0.58];
+  \node at ({90-\ang/2}:0.82) {$\theta$};
+\end{tikzpicture}

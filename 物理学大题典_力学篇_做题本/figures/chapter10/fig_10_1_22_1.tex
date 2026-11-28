@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Wall and floor with hatching
+  \fill[pattern=north east lines] (-0.25, 0) rectangle (0, 2.0);
+  \fill[pattern=north east lines] (-0.25, -0.25) rectangle (4.25, 0);
+  \draw (0, 2.0) -- (0, 0) -- (4.5, 0) node[below=2pt] {$x$};
+
+  % Block M on horizontal floor
+  \draw[fill=white] (2.4, 0) rectangle (3.4, 0.72);
+  \node[above=2pt] at (2.9, 0.72) {$M$};
+
+  % Horizontal spring k
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6.5pt, amplitude=4.5pt, pre length=0.4cm, post length=0.4cm}]
+    (0, 0.36) -- (2.4, 0.36);
+  \node[above=6pt] at (1.2, 0.36) {$k$};
+
+  % Pendulum attached at center of block M
+  \coordinate (P) at (2.9, 0.36);
+  \coordinate (V) at (2.9, -1.85);
+  \coordinate (Q) at ($(P) + (-65:2.1)$);
+
+  \draw[dashed, thin] (P) -- (V);
+  \draw (P) -- (Q) node[pos=0.65, above right=1pt] {$l$};
+
+  % Angle theta (placed cleanly below the floor hatching)
+  \draw[thin] (P) ++(-90:0.8) arc (-90:-65:0.8);
+  \node[font=\small] at ($(P) + (-77.5:1.1)$) {$\theta$};
+
+  % Bob m
+  \fill (Q) circle (2.3pt) node[right=2pt] {$m$};
+\end{tikzpicture}

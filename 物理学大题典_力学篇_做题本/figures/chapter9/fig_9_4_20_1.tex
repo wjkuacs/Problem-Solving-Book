@@ -1,0 +1,59 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.85, transform shape]
+  % Left vertical branch with AC source E = E0 sin omega t
+  \draw (0.4, 0.3) -- (0.4, 1.29);
+  \draw (0.4, 2.01) -- (0.4, 3.0);
+  \draw (0.4, 1.95) circle (1.8pt);
+  \draw (0.4, 1.35) circle (1.8pt);
+  \node[right=3pt] at (0.4, 1.95) {$+$};
+  \node[right=3pt] at (0.4, 1.35) {$-$};
+  \node[fill=white, inner sep=1.5pt] at (0.50, 1.65) {$E=E_0\sin\omega t$};
+
+  % Top wire with currents q1_dot and q2_dot
+  \draw (0.4, 3.0) -- (5.8, 3.0);
+  \draw[->, thin] (2.25, 3.0) -- (1.95, 3.0);
+  \node[below=2pt] at (2.10, 3.0) {$\dot{q}_1$};
+  \fill (3.8, 3.0) circle (1.8pt);
+  \draw[->, thin] (4.95, 3.0) -- (4.65, 3.0);
+  \node[below=2pt] at (4.80, 3.0) {$\dot{q}_2$};
+
+  % Middle vertical branch (R3, C3, q3_dot)
+  \draw (3.8, 3.0) -- (3.8, 2.60);
+  \draw (3.68, 2.10) rectangle (3.92, 2.60);
+  \node[left=2pt] at (3.68, 2.35) {$R_3$};
+  \draw (3.8, 2.10) -- (3.8, 1.45);
+  \draw (3.58, 1.45) -- (4.02, 1.45);
+  \draw (3.58, 1.29) -- (4.02, 1.29);
+  \node[left=3pt] at (3.58, 1.37) {$C_3$};
+  \draw (3.8, 1.29) -- (3.8, 0.3);
+  \draw[->, thin] (3.8, 0.65) -- (3.8, 0.95);
+  \node[right=2pt] at (3.8, 0.80) {$\dot{q}_3$};
+  \fill (3.8, 0.3) circle (1.8pt);
+
+  % Bottom wire (R1, C1, L1)
+  \draw (0.4, 0.3) -- (0.95, 0.3);
+  \draw (0.95, 0.18) rectangle (1.55, 0.42);
+  \node[above=2pt] at (1.25, 0.42) {$R_1$};
+  \draw (1.55, 0.3) -- (2.02, 0.3);
+  \draw (2.02, 0.08) -- (2.02, 0.52);
+  \draw (2.18, 0.08) -- (2.18, 0.52);
+  \node[above=3pt] at (2.10, 0.52) {$C_1$};
+  \draw (2.18, 0.3) -- (2.60, 0.3);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (2.60, 0.3) -- (3.35, 0.3);
+  \node[above=4pt] at (2.98, 0.3) {$L_1$};
+  \draw (3.35, 0.3) -- (5.8, 0.3);
+
+  % Right vertical branch (L2, C2, R2)
+  \draw (5.8, 3.0) -- (5.8, 2.70);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (5.8, 2.70) -- (5.8, 2.00);
+  \node[right=4pt] at (5.8, 2.35) {$L_2$};
+  \draw (5.8, 2.00) -- (5.8, 1.65);
+  \draw (5.58, 1.65) -- (6.02, 1.65);
+  \draw (5.58, 1.49) -- (6.02, 1.49);
+  \node[right=3pt] at (6.02, 1.57) {$C_2$};
+  \draw (5.8, 1.49) -- (5.8, 1.15);
+  \draw (5.68, 0.65) rectangle (5.92, 1.15);
+  \node[right=2pt] at (5.92, 0.90) {$R_2$};
+  \draw (5.8, 0.65) -- (5.8, 0.3);
+\end{tikzpicture}

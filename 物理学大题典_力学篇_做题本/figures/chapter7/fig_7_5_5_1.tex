@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  \coordinate (O) at (0,0);
+
+  % Space-fixed axes zeta, eta, xi
+  \coordinate (ZetaTip) at (0,2.75);
+  \draw[->, thick] (O) -- (ZetaTip) node[right] {$\zeta$};
+  \draw[->, thick] (O) -- (2.5,0) node[below] {$\eta$};
+  \draw[->, thick] (O) -- (-1.65,-1.55) node[below right] {$\xi$};
+  \node[below] at (0.05,-0.08) {$O$};
+
+  % Body axis z (at 110 deg), x (at 20 deg), and omega_0 (at 65 deg -> 45 deg from z)
+  \coordinate (Ztip) at (110:2.25);
+  \coordinate (Wtip) at (65:2.45);
+  \coordinate (Xtip) at (20:2.15);
+
+  \draw[->, thick] (O) -- (Ztip) node[left] {$z$};
+  \draw[->, thick] (O) -- (Wtip) node[right] {$\boldsymbol{\omega}_0$};
+  \draw[->, thick] (O) -- (Xtip) node[above right] {$x$};
+
+  % Angle theta between zeta and z
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.32, "$\theta$"] {angle = ZetaTip--O--Ztip};
+
+  % Angle 45 deg between omega_0 and z (white fill prevents axis line slicing label)
+  \pic[draw, angle radius=1.55cm, angle eccentricity=1.22, "$45^{\circ}$" {fill=white, inner sep=1.5pt}] {angle = Wtip--O--Ztip};
+\end{tikzpicture}

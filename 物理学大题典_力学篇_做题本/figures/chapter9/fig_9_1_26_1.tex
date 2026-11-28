@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Ground line and hatching
+    \draw (-0.35,0) -- (4.55,0);
+    \foreach \x in {-0.25, 0.00, ..., 4.45} {
+        \draw[line width=0.45pt] (\x,0) -- (\x-0.16,-0.18);
+    }
+
+    % Gantry frame (double-walled inverted U)
+    \draw (0.20,0) -- (0.20,3.30) -- (4.00,3.30) -- (4.00,0)
+          (0.36,0) -- (0.36,3.14) -- (3.84,3.14) -- (3.84,0);
+
+    % Wooden pile (masks ground/hatching)
+    \draw[fill=white] (2.66,-0.32) rectangle (2.84,0.85);
+
+    % Rope coordinates
+    \coordinate (A) at (2.75,0.85);
+    \coordinate (B) at (2.75,2.08);
+    \coordinate (C) at (3.34,3.14);
+    \coordinate (D) at (1.38,2.08);
+    \coordinate (E) at (0.36,2.78);
+
+    % Ropes
+    \draw (A) -- (B) -- (C);
+    \draw (D) -- (B);
+    \draw (D) -- (E);
+
+    % Dashed angle references
+    \draw[dashed] (B) -- ++(0,0.68);
+    \draw[dashed] (D) -- ++(-0.68,0);
+
+    % Vertical downward arrows F and y
+    \draw[->] (D) -- ++(0,-0.78) node[below] {$F$};
+    \draw[->] (C) -- ++(0,-1.18) node[right] {$y$};
+
+    % Labels
+    \node[above right, inner sep=2pt] at (2.82,0.82) {$A$};
+    \node[right] at (B) {$B$};
+    \node[below right, inner sep=2pt] at (C) {$C$};
+    \node[above right, inner sep=2pt] at (D) {$D$};
+    \node[above right, inner sep=2pt] at (E) {$E$};
+    \node at (2.96,2.74) {$\alpha_1$};
+    \node at (0.86,2.24) {$\alpha_2$};
+\end{tikzpicture}

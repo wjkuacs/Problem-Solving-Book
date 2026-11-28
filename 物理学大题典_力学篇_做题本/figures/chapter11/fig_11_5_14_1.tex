@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Motor cylinder
+  \draw (0,3.25) ellipse (0.85 and 0.26);
+  \draw (-0.85,3.25) -- (-0.85,1.95);
+  \draw (0.85,3.25) -- (0.85,1.95);
+  \draw (-0.85,1.95) arc (180:360:0.85 and 0.26);
+
+  % Vertical rotating shaft with rounded tip
+  \draw (-0.11,1.69) -- (-0.11,1.08) arc (180:360:0.11) -- (0.11,1.69);
+
+  % Rotation arrow around shaft
+  \draw[->, preaction={draw=white, line width=2.2pt}]
+    ({0.40*cos(122)}, {1.36 + 0.14*sin(122)})
+    arc (122:392:0.40 and 0.14);
+  \node[right=2pt] at (0.40,1.40) {$\omega$};
+
+  % Vertical dashed reference line
+  \draw[dashed] (0,0.97) -- (0,-0.80);
+
+  % Pendulum rod and bob
+  \coordinate (O) at (0,0.97);
+  \coordinate (P) at ({2.05*sin(27)}, {0.97 - 2.05*cos(27)});
+  \draw (O) -- (P) node[midway, above right=1pt] {$l$};
+  \fill (P) circle (0.075) node[below right=1pt] {$m$};
+
+  % Angle theta
+  \draw (0,0.97-0.55) arc (-90:-63:0.55);
+  \node at ({0.78*sin(13.5)}, {0.97 - 0.78*cos(13.5)}) {$\theta$};
+\end{tikzpicture}

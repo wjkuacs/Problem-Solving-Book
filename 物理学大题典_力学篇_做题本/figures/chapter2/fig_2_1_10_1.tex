@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Left FBD: block M
+  \draw (-0.42,-0.30) rectangle (0.42,0.30);
+  \node[left=2pt] at (-0.42,0) {$M$};
+  \draw[->] (0,0.30) -- (0,1.25) node[right=1pt] {$T$};
+  \draw[->] (0,-0.30) -- (0,-1.25) node[below=1pt] {$Mg$};
+  \draw[->] (0.95,0.55) -- (0.95,-0.75) node[below=1pt] {$a_M$};
+
+  % Right FBD: ring m
+  \draw (2.8,0) ellipse (0.38 and 0.24);
+  \node[right=2pt] at (3.18,0) {$m$};
+  \draw[->] (2.8,0.24) -- (2.8,1.25) node[right=1pt] {$f$};
+  \draw[->] (2.8,-0.24) -- (2.8,-1.25) node[below=1pt] {$mg$};
+  \draw[->] (3.85,0.55) -- (3.85,-0.75) node[below=1pt] {$a - a_M$};
+\end{tikzpicture}

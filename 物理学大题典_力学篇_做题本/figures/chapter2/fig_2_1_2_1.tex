@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9, every node/.style={font=\small}]
+  % Ceiling
+  \draw[thick] (-1.5, 5.5) -- (2.6, 5.5);
+  \fill[pattern=north east lines] (-1.5, 5.5) rectangle (2.6, 5.75);
+
+  % Pulley 1 (top)
+  \draw[thick] (0, 5.5) -- (0, 4.35);
+  \draw[thick] (0, 4.35) circle (0.75);
+  \draw[thick] (-0.75, 4.35) -- (-0.75, 0.3);
+  \draw[thick] (0.75, 4.35) -- (0.75, 2.95);
+
+  % Pulley 2 (middle)
+  \draw[thick] (0.75, 2.95) circle (0.75);
+  \draw[thick] (0, 2.95) -- (0, 0.3);
+  \draw[thick] (1.5, 2.95) -- (1.5, 1.55);
+
+  % Pulley 3 (bottom)
+  \draw[thick] (1.5, 1.55) circle (0.75);
+  \draw[thick] (0.75, 1.55) -- (0.75, 0.3);
+  \draw[thick] (2.25, 1.55) -- (2.25, 0.3);
+
+  % Person standing on platform holding left rope of Pulley 3
+  \draw[thick] (0.3, 1.15) circle (0.14);
+  \draw[thick] (0.35, 1.01) -- (0.35, 0.58);
+  \draw[thick] (0.35, 0.58) -- (0.18, 0.3);
+  \draw[thick] (0.35, 0.58) -- (0.50, 0.3);
+  \draw[thick] (0.35, 0.92) -- (0.55, 0.78) -- (0.75, 0.98);
+  \draw[thick] (0.35, 0.80) -- (0.55, 0.68) -- (0.75, 0.90);
+  \node[right] at (0.8, 0.6) {$m_1$};
+
+  % Platform
+  \draw[thick] (-1.6, 0.05) rectangle (2.9, 0.3);
+  \node[below] at (0.35, 0.02) {$m_2$};
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Axes
+  \draw[->] (0,0) -- (5.0,0) node[below=2pt] {$t$};
+  \draw[->] (0,0) -- (0,2.1) node[left=2pt] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Tick for h
+  \draw (0,1.4) -- (0.10,1.4);
+  \node[left=2pt] at (0,1.4) {$h$};
+
+  % Three sawtooth periods (T = 1.45)
+  \draw[line width=0.8pt] (0,0) -- (1.45,1.4);
+  \draw[dashed] (1.45,1.4) -- (1.45,0);
+  \draw[line width=0.8pt] (1.45,0) -- (2.90,1.4);
+  \draw[dashed] (2.90,1.4) -- (2.90,0);
+  \draw[line width=0.8pt] (2.90,0) -- (4.35,1.4);
+  \draw[dashed] (4.35,1.4) -- (4.35,0);
+
+  % Period labels
+  \node[below=2pt] at (1.45,0) {$T$};
+  \node[below=2pt] at (2.90,0) {$2T$};
+  \node[below=2pt] at (4.35,0) {$3T$};
+\end{tikzpicture}

@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, scale=0.85]
+  % Truck body (main cargo bed + cab)
+  \draw[thick] (0,0) -- (3.4,0) -- (3.4,0.28) -- (4.5,0.28) -- (4.5,1.62) -- (3.4,1.62) -- (3.4,1.9) -- (0,1.9) -- cycle;
+
+  % Rear wheels
+  \draw[thick] (0.5,1.9) rectangle (1.15,2.15);
+  \draw[thick] (0.5,0) rectangle (1.15,-0.25);
+
+  % Front wheels / side mirrors
+  \draw[thick] (4.32,1.62) rectangle (4.45,1.88);
+  \draw[thick] (4.32,0.28) rectangle (4.45,0.02);
+
+  % Vertical dashed reference line from hinge
+  \draw[dashed, thick] (0,1.9) -- (0,3.25);
+
+  % Open rear door at angle theta (45 deg)
+  \draw[thick] (0,1.9) -- ++(135:1.7);
+
+  % Angle theta arc
+  \coordinate (H) at (0,1.9);
+  \coordinate (U) at (0,3.25);
+  \coordinate (D) at ($(H)+(135:1.7)$);
+  \pic[draw, angle radius=0.75cm, angle eccentricity=1.3, "$\theta$"] {angle = U--H--D};
+
+  % Hinge force components F_perp and F_parallel
+  \draw[->, thick] (0.12,1.98) -- ++(45:0.95) node[right] {$F_{\perp}$};
+  \draw[->, thick] (0.12,1.82) -- ++(-45:0.95) node[right] {$F_{\parallel}$};
+
+  % Acceleration arrows
+  \draw[->, thick] (-1.3,0.95) -- (-0.6,0.95) node[midway, above] {$a$};
+  \draw[->, thick] (4.7,0.95) -- (5.4,0.95) node[midway, above] {$a$};
+\end{tikzpicture}

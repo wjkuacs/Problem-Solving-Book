@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\dx{1.35}
+    \def\L{2.0}
+
+    % Ceiling
+    \fill[pattern=north east lines] (-0.35, \L) rectangle (3*\dx+0.7, \L+0.2);
+    \draw (-0.35, \L) -- (3*\dx+0.7, \L);
+
+    % Springs between bobs
+    \foreach \i in {0, 1, 2} {
+        \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=8pt, post length=8pt}]
+            (\i*\dx, 0) -- ({(\i+1)*\dx}, 0) node[midway, above=5pt] {$k$};
+    }
+
+    % Pendulum strings and bobs
+    \foreach \i in {0, 1, 2, 3} {
+        \draw (\i*\dx, \L) -- (\i*\dx, 0) node[midway, left=2pt] {$l$};
+        \filldraw[fill=white] (\i*\dx, 0) circle (2.8pt);
+        \node[below=3pt] at (\i*\dx, 0) {$m$};
+    }
+
+    % Ellipsis
+    \node at (3*\dx+0.48, 0) {$\cdots$};
+\end{tikzpicture}

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\R{2.0}
+    % Fixed ring
+    \draw (0,0) circle (\R);
+
+    % Six coiled springs along the circular ring
+    \foreach \ang in {0, 60, 120, 180, 240, 300} {
+        \draw[decorate, decoration={coil, aspect=0.6, segment length=6.8pt, amplitude=3.2pt, pre length=5pt, post length=5pt}]
+            (\ang:\R) arc (\ang:\ang+60:\R);
+        \node at (\ang+30:\R-0.45) {$k$};
+    }
+
+    % Six beads on top
+    \foreach \ang/\pos in {0/right, 60/above right, 120/above left, 180/left, 240/below left, 300/below right} {
+        \filldraw[fill=white] (\ang:\R) circle (3.5pt);
+        \node[\pos=3pt] at (\ang:\R) {$M$};
+    }
+\end{tikzpicture}

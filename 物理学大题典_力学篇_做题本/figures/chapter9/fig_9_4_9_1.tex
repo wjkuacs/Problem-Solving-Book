@@ -1,0 +1,49 @@
+\begin{tikzpicture}[>=Stealth, thick,
+    res/.style={draw, fill=white, minimum width=0.72cm, minimum height=0.22cm, inner sep=0pt},
+    vres/.style={draw, fill=white, minimum width=0.22cm, minimum height=0.72cm, inner sep=0pt}]
+    % Outer rectangle & middle branch
+    \draw (0,0) -- (0,2.8) -- (5.0,2.8) -- (5.0,0) -- cycle;
+    \draw (2.5,0) -- (2.5,2.8);
+
+    % Junction dots
+    \fill (2.5,2.8) circle (1.8pt);
+    \fill (2.5,0) circle (1.8pt);
+
+    % Left AC source epsilon_1
+    \draw[fill=white] (0,1.4) circle (0.34);
+    \node at (0,1.4) {$\sim$};
+    \node[right, font=\small] at (0.32,1.76) {$+$};
+    \node[right, font=\small] at (0.32,1.04) {$-$};
+    \node[right] at (0.38,1.4) {$\varepsilon_1$};
+
+    % Top-left resistor R_1
+    \node[res, label=above:$R_1$] at (1.25,2.8) {};
+
+    % Middle inductor L
+    \draw[fill=white, draw=none] (2.3,1.5) rectangle (2.7,2.45);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.5mm}] (2.5,2.5) -- (2.5,1.45);
+    \node[right] at (2.68,1.98) {$L$};
+
+    % Middle AC source epsilon_2
+    \draw[fill=white] (2.5,0.75) circle (0.34);
+    \node at (2.5,0.75) {$\sim$};
+    \node[right, font=\small] at (2.82,1.11) {$+$};
+    \node[right, font=\small] at (2.82,0.39) {$-$};
+    \node[right] at (2.88,0.75) {$\varepsilon_2$};
+
+    % Top-right capacitor C
+    \draw[fill=white, draw=none] (3.62,2.6) rectangle (3.88,3.0);
+    \draw (3.66,2.58) -- (3.66,3.02);
+    \draw (3.84,2.58) -- (3.84,3.02);
+    \node[above] at (3.75,3.02) {$C$};
+
+    % Right resistor R_2
+    \node[vres, label=right:$R_2$] at (5.0,1.4) {};
+
+    % Mesh current arrows
+    \draw[->] (1.00,1.25) .. controls (1.28,2.15) and (2.15,2.05) .. (1.88,0.85);
+    \node at (1.52,1.42) {$\dot{q}_1$};
+
+    \draw[->] (3.55,1.25) .. controls (3.83,2.15) and (4.55,2.05) .. (4.28,0.85);
+    \node at (3.95,1.42) {$\dot{q}_2$};
+\end{tikzpicture}

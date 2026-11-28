@@ -1,0 +1,56 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling with hatching
+    \draw (-2.2,0) -- (2.2,0);
+    \foreach \x in {-2.05,-1.80,...,2.05} {
+        \draw[semithick] (\x,0) -- (\x+0.15,0.16);
+    }
+
+    % Spring k and pulley
+    \draw (0,0) -- (0,-0.25);
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt}]
+        (0,-0.25) -- (0,-0.75);
+    \draw (0,-0.75) -- (0,-1.55);
+    \node[right=4pt, font=\small] at (0.04,-0.50) {$k$};
+
+    \coordinate (P) at (0,-1.55);
+    \draw (P) circle (0.62);
+    \fill (P) circle (1.4pt);
+
+    % Container and viscous liquid surface
+    \draw (-2.42,-1.92) -- (-2.22,-2.12) -- (-2.22,-4.30) -- (2.22,-4.30) -- (2.22,-2.12) -- (2.42,-1.92);
+    \draw[semithick] (-2.22,-2.22) -- (2.22,-2.22);
+    \node[font=\small] at (-1.42,-4.00) {黏性液体};
+
+    % Left mass m1 (A)
+    \coordinate (A) at (-0.62,-3.32);
+    \draw (-0.62,-1.55) -- (A);
+    \draw[fill=white] (A) circle (0.31);
+    \node[font=\small] at (A) {$m_1$};
+    \node[font=\small] at ($(A)+(0.36,0.28)$) {$\alpha_1$};
+    \node[font=\small] at ($(A)+(0.38,-0.28)$) {$A$};
+
+    % Right mass m2 (B)
+    \coordinate (B) at (0.62,-3.72);
+    \draw (0.62,-1.55) -- (B);
+    \draw[fill=white] (B) circle (0.31);
+    \node[font=\small] at (B) {$m_2$};
+    \node[font=\small] at ($(B)+(0.36,0.28)$) {$\alpha_2$};
+    \node[font=\small] at ($(B)+(0.38,-0.28)$) {$B$};
+
+    % Coordinate dimensions y1, y3, y, y2
+    \draw[thin] (-1.85,-3.32) -- (-0.98,-3.32);
+    \draw[<->, thin] (-1.68,0) -- (-1.68,-3.32)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$y_1$};
+
+    \draw[thin] (-1.32,-1.55) -- (-0.72,-1.55);
+    \draw[<->, thin] (-1.16,-1.55) -- (-1.16,-3.32)
+        node[pos=0.62, fill=white, inner sep=1.5pt, font=\small] {$y_3$};
+
+    \draw[thin] (0.72,-1.55) -- (1.42,-1.55);
+    \draw[<->, thin] (1.25,0) -- (1.25,-1.55)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$y$};
+
+    \draw[thin] (0.98,-3.72) -- (1.95,-3.72);
+    \draw[<->, thin] (1.78,0) -- (1.78,-3.72)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$y_2$};
+\end{tikzpicture}

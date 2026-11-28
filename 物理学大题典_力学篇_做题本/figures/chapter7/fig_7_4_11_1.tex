@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.45}
+  % Disk
+  \draw (0,0) circle (\R);
+  % Center O and dashed diameter B-O-A
+  \fill (0,0) circle (1.4pt) node[below=2pt] {$O$};
+  \draw[dashed] (-\R,0) -- (\R,0);
+  \node[left=2pt] at (-\R,0) {$B$};
+  \node[right=2pt] at (\R,0) {$A$};
+  % Tangential force f at A
+  \draw[->] (\R,0) -- (\R,\R*0.92) node[right=1pt] {$f$};
+  % Right-angle marker at A
+  \draw (\R-0.22,0) -- (\R-0.22,0.22) -- (\R,0.22);
+\end{tikzpicture}

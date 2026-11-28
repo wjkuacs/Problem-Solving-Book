@@ -1,0 +1,58 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\r{1.5}
+  \def\phiang{56}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (\phiang:\r);
+  \coordinate (N) at (\r,0);
+  % Direction from A to N
+  \pgfmathsetmacro{\dx}{\r - \r*cos(\phiang)}
+  \pgfmathsetmacro{\dy}{0 - \r*sin(\phiang)}
+  \pgfmathsetmacro{\rodang}{atan2(\dy,\dx)}
+  \def\Llen{3.45}
+  \coordinate (B) at ($(A)+(\rodang:\Llen)$);
+
+  % Dashed circle of radius r
+  \draw[dashed, thick] (O) circle (\r);
+  \draw[dashed, thick] (O) -- (N);
+
+  % Ground support under O
+  \draw[thick] (-0.28,-0.32) -- (0.28,-0.32);
+  \foreach \x in {-0.2,-0.1,0,0.1,0.2} {
+    \draw (\x,-0.32) -- (\x-0.1,-0.44);
+  }
+  \draw[thick] (-0.16,-0.32) -- (O) -- (0.16,-0.32);
+  \node[left=4pt] at (O) {$O$};
+
+  % Crank OA (double-line bar)
+  \draw[thick, fill=white]
+    (O) ++(\phiang+90:0.06) -- ($(A)+(\phiang+90:0.06)$) -- ($(A)+(\phiang-90:0.06)$) -- ($(O)+(\phiang-90:0.06)$) -- cycle;
+  \node[above left=2pt] at ($0.42*(O)+0.42*(A)$) {$r$};
+
+  % Connecting rod AB (double-line bar)
+  \draw[thick, fill=white]
+    (A) ++(\rodang+90:0.045) -- ($(B)+(\rodang+90:0.045)$) -- ($(B)+(\rodang-90:0.045)$) -- ($(A)+(\rodang-90:0.045)$) -- cycle;
+
+  % Hinge pins at O and A
+  \draw[thick, fill=white] (O) circle (0.09);
+  \draw[thick, fill=white] (A) circle (0.09);
+  \node[above=3pt] at (A) {$A$};
+  \node[below right=1pt] at (B) {$B$};
+
+  % Slider sleeve N
+  \begin{scope}[shift={(N)}, rotate=\rodang]
+    \draw[thick, fill=white] (-0.32,-0.12) rectangle (0.32,0.12);
+    \draw[thick] (0,0) circle (0.07);
+  \end{scope}
+  \node[above right=2pt] at ($(N)+(0.18,0.06)$) {$N$};
+
+  % Angle phi and angular velocity omega
+  \draw[->] (0.68,0) arc (0:\phiang-3:0.68);
+  \node at (0.5*\phiang:0.92) {$\varphi$};
+  \draw[->, thick] (\phiang-18:1.05) arc (\phiang-18:\phiang+26:1.05);
+  \node at (\phiang+34:1.14) {$\omega$};
+
+  % Dimension L
+  \draw[thin] (A) -- ++(\rodang+90:0.95);
+  \draw[thin] (B) -- ++(\rodang+90:0.95);
+  \draw[<->, thin] ($(A)+(\rodang+90:0.82)$) -- node[fill=white, inner sep=1.5pt] {$L$} ($(B)+(\rodang+90:0.82)$);
+\end{tikzpicture}

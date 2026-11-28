@@ -1,0 +1,54 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Top fixed support
+  \fill[pattern=north east lines] (-1.25,4.85) rectangle (1.25,5.03);
+  \draw[line width=0.9pt] (-1.25,4.85) -- (1.25,4.85);
+
+  % Left branch: dashpot gamma
+  \draw (-0.55,4.85) -- (-0.55,4.35);
+  \draw (-0.77,3.90) -- (-0.77,4.35) -- (-0.33,4.35) -- (-0.33,3.90);
+  \draw (-0.69,4.10) -- (-0.41,4.10);
+  \draw (-0.55,4.10) -- (-0.55,3.30);
+  \node[left=3pt] at (-0.77,4.12) {$\gamma$};
+
+  % Right branch: spring k
+  \draw (0.55,4.85) -- (0.55,4.52);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=4.2pt, amplitude=3.5pt}] (0.55,4.52) -- (0.55,3.62);
+  \draw (0.55,3.62) -- (0.55,3.30);
+  \node[right=4pt] at (0.55,4.07) {$k$};
+
+  % Mass block m
+  \draw (-1.20,2.75) rectangle (1.20,3.30);
+  \node at (0,3.025) {$m$};
+
+  % Lower spring k1
+  \draw (0,2.75) -- (0,2.38);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=4.2pt, amplitude=3.5pt}] (0,2.38) -- (0,1.48);
+  \draw (0,1.48) -- (0,1.18);
+  \node[right=4pt] at (0,1.93) {$k_1$};
+
+  % Guide walls and pushrod A
+  \fill[pattern=north east lines] (-0.82,0.32) rectangle (-0.34,1.25);
+  \draw (-0.82,1.25) -- (-0.34,1.25) -- (-0.34,0.32) -- (-0.82,0.32);
+  \fill[pattern=north east lines] (0.34,0.32) rectangle (0.82,1.25);
+  \draw (0.82,1.25) -- (0.34,1.25) -- (0.34,0.32) -- (0.82,0.32);
+  \draw (-0.22,0.30) rectangle (0.22,1.18);
+  \node at (0,0.74) {$A$};
+
+  % Cam profile below pushrod A
+  \draw[line width=0.8pt]
+    (0,-0.80)
+    .. controls (-0.65,-0.80) and (-0.72,-0.15) .. (-0.30,0.16)
+    .. controls (-0.05,0.34) and (0.38,0.22) .. (0.62,0.02)
+    .. controls (0.72,-0.07) and (0.52,-0.12) .. (0.45,-0.25)
+    .. controls (0.40,-0.55) and (0.30,-0.80) .. (0,-0.80);
+
+  % Cam pivot and fixed base
+  \fill[pattern=north east lines] (-0.34,-0.62) rectangle (0.34,-0.50);
+  \draw (-0.34,-0.50) -- (0.34,-0.50);
+  \draw (-0.18,-0.50) -- (-0.06,-0.26);
+  \draw (0.18,-0.50) -- (0.06,-0.26);
+  \draw[fill=white] (0,-0.22) circle (0.08);
+
+  % Rotation arrow on the left of cam
+  \draw[->] (-0.78,-0.05) to[bend right=30] (-0.78,-0.75);
+\end{tikzpicture}

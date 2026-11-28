@@ -1,0 +1,59 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\thetaAng{32}
+  \def\rone{2.5}
+  \def\rtwo{2.25}
+  \def\phiAng{42}
+
+  % Origin and axes
+  \coordinate (O) at (0,0);
+  \node[below left=1pt] at (O) {$O$};
+  \draw[->] (O) -- (3.1,0) node[below] {$x$};
+  \draw[->] (O) -- (0,3.4) node[left] {$y$};
+
+  % Ceiling support
+  \coordinate (P0) at (0,3.0);
+  \fill[pattern=north east lines] (-0.65,3.0) rectangle (0.65,3.18);
+  \draw (-0.65,3.0) -- (0.65,3.0);
+
+  % Mass m1 and rod r1
+  \coordinate (M1) at ({\rone*sin(\thetaAng)}, {3.0-\rone*cos(\thetaAng)});
+  \draw (P0) -- node[midway, above right=1pt] {$r_1$} (M1);
+  \fill (M1) circle (2.2pt) node[above right=2pt] {$m_1$};
+
+  % Angle theta
+  \coordinate (Ydown) at (0,1.5);
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.28, "$\theta$"] {angle = Ydown--P0--M1};
+
+  % Vertical dashed line from m1 and rod r2 to m2
+  \coordinate (M1down) at ($(M1)+(0,-1.45)$);
+  \draw[dashed] (M1) -- (M1down);
+  \coordinate (M2) at ($(M1)+({\rtwo*sin(\phiAng)}, {-\rtwo*cos(\phiAng)})$);
+  \draw (M1) -- (M2);
+  \node[below left=1pt] at ($(M1)!0.78!(M2)$) {$r_2$};
+  \fill (M2) circle (2.2pt) node[below right=1pt] {$m_2$};
+
+  % Angle phi
+  \pic[draw, angle radius=0.58cm, angle eccentricity=1.34, "$\varphi$"] {angle = M1down--M1--M2};
+
+  % Spring k1 and wall A
+  \coordinate (A) at (3.85,0.42);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.5mm, pre length=4.5mm, post length=4.5mm}]
+    (M1) -- node[midway, above=5pt] {$k_1$} (A);
+  \begin{scope}[shift={(A)}, rotate=-12]
+    \fill[pattern=north east lines] (0,-0.28) rectangle (0.16,0.28);
+    \draw (0,-0.28) -- (0,0.28);
+    \node[above=5pt] at (-0.1,0.25) {$(x_1, y_1)$};
+    \node[below=4pt] at (0,-0.25) {$A$};
+  \end{scope}
+
+  % Spring k2 and wall B (passes well below O)
+  \coordinate (B) at (-1.35,-1.65);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.5mm, pre length=5mm, post length=5mm}]
+    (M1) -- node[midway, below right=4pt] {$k_2$} (B);
+  \begin{scope}[shift={(B)}, rotate=42]
+    \fill[pattern=north east lines] (-0.28,-0.16) rectangle (0.28,0);
+    \draw (-0.28,0) -- (0.28,0);
+  \end{scope}
+  \node[above left=3pt] at ($(B)+(0.08,0.08)$) {$(x_2, y_2)$};
+  \node[below=5pt] at (B) {$B$};
+\end{tikzpicture}

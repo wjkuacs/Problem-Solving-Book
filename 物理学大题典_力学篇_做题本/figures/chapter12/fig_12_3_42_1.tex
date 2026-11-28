@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick, line cap=round, line join=round]
+  \coordinate (O) at (0, 0);
+  \coordinate (N) at (-3.8, 0);
+  \coordinate (A) at (-2.8, 2.8);
+  \coordinate (B) at (-2.8, -2.8);
+
+  % 散射靶（右侧竖直墙面及斜线阴影）
+  \draw[very thick] (0, -2.4) -- (0, 2.4);
+  \foreach \y in {-2.2, -1.85, ..., 2.15} {
+    \draw[thin] (0, \y) -- ++(0.25, 0.25);
+  }
+
+  % 法线（水平虚线）
+  \draw[dashed] (N) -- (O);
+
+  % 入射与散射电子束
+  \draw[postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}]
+    (A) -- (O);
+  \draw[postaction={decorate}, decoration={markings, mark=at position 0.55 with {\arrow{Stealth}}}]
+    (O) -- (B);
+
+  % 45 度角标注
+  \pic[draw, thin, angle radius=1.1cm, angle eccentricity=1.4, "$45^\circ$"] {angle=A--O--N};
+  \pic[draw, thin, angle radius=1.1cm, angle eccentricity=1.4, "$45^\circ$"] {angle=N--O--B};
+\end{tikzpicture}

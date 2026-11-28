@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Horizontal guide line and origin O
+  \draw[thick] (-0.4, 0) -- (4.2, 0);
+  \draw[thick] (0, 0.9) -- (0, -0.25);
+  \node[below left=1pt] at (0, 0) {$O$};
+
+  % Support block at x_s
+  \def\xs{2.0}
+  \draw[thick, fill=white] (\xs - 0.38, 0) rectangle (\xs + 0.38, 0.35);
+  \coordinate (P) at (\xs, 0.175);
+  \fill (P) circle (1.6pt);
+
+  % Dimension x_s
+  \draw[thick] (\xs, 0.45) -- (\xs, 0.9);
+  \draw[<->] (0, 0.72) -- (\xs, 0.72) node[midway, above=1pt] {$x_s$};
+
+  % Vertical dashed reference line
+  \coordinate (V) at (\xs, -2.8);
+  \draw[dashed] (P) -- (V);
+
+  % Pendulum rod of length l at angle theta
+  \def\len{2.8}
+  \def\ang{22}
+  \coordinate (M) at ($ (P) + ({\len*sin(\ang)}, {-\len*cos(\ang)}) $);
+  \draw[thick] (P) -- (M) node[midway, right=2pt] {$l$};
+  \fill (M) circle (2.6pt) node[below right=1pt] {$m$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.3, "$\theta$"] {angle = V--P--M};
+\end{tikzpicture}

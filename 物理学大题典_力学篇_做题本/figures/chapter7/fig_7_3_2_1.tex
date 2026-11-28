@@ -1,0 +1,54 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % 1. Left cube: suspended at corner (body diagonal vertical)
+  \begin{scope}[shift={(-2.0, 0)}]
+    \coordinate (T) at (0, 0);
+    \coordinate (V1) at (-0.25, -0.73);
+    \coordinate (V2) at (0.72, -0.49);
+    \coordinate (V3) at (-0.47, -0.36);
+    \coordinate (V12) at ($(V1)+(V2)$);
+    \coordinate (V13) at ($(V1)+(V3)$);
+    \coordinate (B) at ($(V1)+(V2)+(V3)$);
+
+    \draw (T) -- (V3) -- (V13) -- (B) -- (V12) -- (V2) -- cycle;
+    \draw (T) -- (V1) -- (V13);
+    \draw (V1) -- (V12);
+
+    % Wire and rotation arrow
+    \draw (0, 0) -- (0, 0.78);
+    \draw[->] (-0.28, 0.42) arc (160:380:0.28 and 0.11);
+  \end{scope}
+
+  % 2. Middle cube: suspended at face center
+  \begin{scope}[shift={(0, 0)}]
+    \draw (-0.52, -0.48) -- (0.42, -0.48) -- (0.42, -1.42) -- (-0.52, -1.42) -- cycle;
+    \draw (-0.52, -0.48) -- (-0.20, -0.18) -- (0.74, -0.18) -- (0.42, -0.48);
+    \draw (0.42, -1.42) -- (0.74, -1.12) -- (0.74, -0.18);
+
+    % Attachment point at top face center (0.11, -0.33)
+    \fill (0.11, -0.33) circle (1.4pt);
+    \draw (0.11, -0.33) -- (0.11, 0.78);
+    \draw[->] (-0.17, 0.42) arc (160:380:0.28 and 0.11);
+  \end{scope}
+
+  % 3. Right cube: suspended at edge midpoint
+  \begin{scope}[shift={(2.05, 0)}]
+    \coordinate (TL) at (-0.32, -0.36);
+    \coordinate (TR) at (0.32, -0.16);
+    \coordinate (E2) at (-0.38, -0.38);
+    \coordinate (E3) at (0.38, -0.72);
+
+    \coordinate (BL) at ($(TL)+(E2)$);
+    \coordinate (F) at ($(TL)+(E3)$);
+    \coordinate (Fp) at ($(TR)+(E3)$);
+    \coordinate (BF) at ($(BL)+(E3)$);
+    \coordinate (BR) at ($(Fp)+(E2)$);
+
+    \draw (TL) -- (TR) -- (Fp) -- (BR) -- (BF) -- (BL) -- cycle;
+    \draw (TL) -- (F) -- (Fp);
+    \draw (F) -- (BF);
+
+    % Wire at midpoint of top edge TL--TR: (0, -0.26)
+    \draw (0, -0.26) -- (0, 0.78);
+    \draw[->] (-0.28, 0.42) arc (160:380:0.28 and 0.11);
+  \end{scope}
+\end{tikzpicture}

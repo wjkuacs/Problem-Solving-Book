@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Axes
+  \draw[->] (-2.2, 0) -- (2.3, 0) node[below=2pt] {$x$};
+  \draw[->] (0, 0) -- (0, 3.85) node[left=2pt] {$y$};
+
+  % Disk of radius R = 1.6 centered at (0, 1.6)
+  \draw (0, 1.6) circle (1.6);
+
+  % Labels A and B
+  \node[below=2pt] at (0, 0) {$A$};
+  \node[above right=1pt and 2pt] at (0, 3.2) {$B$};
+
+  % Radius R arrow
+  \draw[->] (0, 1.6) -- ++(145:1.6) node[midway, above right=-1pt] {$R$};
+
+  % Dashed line to point mass m
+  \draw[dashed] (0, 1.6) -- (1.6, 1.6);
+  \fill (1.6, 1.6) circle (2.2pt) node[right=3pt] {$m$};
+\end{tikzpicture}

@@ -1,0 +1,60 @@
+\begin{tikzpicture}[>=Stealth,
+  x={(-0.56cm,-0.45cm)}, y={(0.86cm,-0.25cm)}, z={(0cm,1.0cm)}]
+
+  % Origin O'' and coordinate axes x, y, z
+  \coordinate (Opp) at (0,0,0);
+  \draw[->, thick] (Opp) -- (2.2,0,0) node[below left=1pt] {$x$};
+  \draw[->, thick] (Opp) -- (0,2.2,0) node[right=1pt] {$y$};
+  \draw[thick] (Opp) -- (0,0,2.70);
+  \node[below=2pt] at (Opp) {$O''$};
+
+  % Rod A tilting in xz-plane (angle theta = 27 deg from -z toward +x)
+  \coordinate (H) at (0,0,2.75);
+  \coordinate (T) at (1.203,0,0.389);
+  \coordinate (T_ext) at (1.42,0,-0.04);
+
+  % Angle theta arc between -z axis and rod A
+  \draw[thick] (0,0,1.45) .. controls (0.28,0,1.45) and (0.48,0,1.50) .. (0.64,0,1.58);
+  \node at (0.34,0,1.28) {$\theta$};
+
+  % Rod A (3D cylinder with dashed centerline)
+  \filldraw[fill=white, draw=black, thick]
+    ($(H)+(-0.10cm,0.045cm)$) -- ($(T)+(-0.10cm,0.045cm)$)
+    .. controls ($(T)+(-0.08cm,-0.08cm)$) and ($(T)+(0.08cm,-0.11cm)$) .. ($(T)+(0.10cm,-0.045cm)$)
+    -- ($(H)+(0.10cm,-0.045cm)$) -- cycle;
+  \draw[thick, dashed] (H) -- (T_ext);
+  \node[left=4pt] at ($(H)!0.55!(T)$) {$A$};
+
+  % Hinge axis oo' (dashed, parallel to y)
+  \draw[thick, dashed] (0,-2.1,2.75) node[left=1pt] {$o$} -- (0,-0.52,2.75);
+  \draw[thick, dashed] (0,-0.24,2.75) -- (0,0.24,2.75);
+  \draw[thick, dashed] (0,0.52,2.75) -- (0,2.0,2.75) node[below right=1pt] {$o'$};
+
+  % U-shaped bracket (clevis) around H = (0,0,2.75)
+  \filldraw[fill=white, draw=black, thick]
+    (0.28,-0.52,2.85) -- (0.28,-0.52,2.55) -- (0.28,-0.22,2.55) -- (0.28,-0.22,2.85) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.28,0.22,2.85) -- (0.28,0.22,2.55) -- (0.28,0.52,2.55) -- (0.28,0.52,2.85) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.28,0.52,2.85) -- (0.28,0.52,2.55) -- (-0.28,0.52,2.55) -- (-0.28,0.52,3.02)
+    -- (0.28,0.52,3.02) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.28,-0.52,2.85) -- (0.28,0.52,2.85) -- (0.28,0.52,3.02) -- (0.28,-0.52,3.02) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.28,-0.52,3.02) -- (0.28,0.52,3.02) -- (-0.28,0.52,3.02) -- (-0.28,-0.52,3.02) -- cycle;
+
+  % Square vertical stem on top of bracket
+  \filldraw[fill=white, draw=black, thick]
+    (0.13,-0.13,3.02) -- (0.13,0.13,3.02) -- (0.13,0.13,3.55) -- (0.13,-0.13,3.55) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.13,0.13,3.02) -- (-0.13,0.13,3.02) -- (-0.13,0.13,3.55) -- (0.13,0.13,3.55) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.13,-0.13,3.55) -- (0.13,0.13,3.55) -- (-0.13,0.13,3.55) -- (-0.13,-0.13,3.55) -- cycle;
+
+  % z-axis arrow continuing above square stem
+  \draw[->, thick] (0,0,3.55) -- (0,0,4.10) node[right=1pt] {$z$};
+
+  % Rotation arrow Omega around vertical stem
+  \draw[->, thick] (-0.30,-0.32,3.26) .. controls (-0.12,-0.45,3.15) and (0.42,-0.15,3.12) .. (0.36,0.34,3.34);
+  \node[right=3pt] at (0.36,0.34,3.36) {$\Omega$};
+\end{tikzpicture}

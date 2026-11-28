@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Dashed circle of radius a
+  \draw[dashed] (0,0) circle (1.85);
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Three equally spaced point sources and dashed radii
+  \foreach \ang in {30,150,-90} {
+    \draw[dashed] (0,0) -- (\ang:1.85);
+    \fill (\ang:1.85) circle (2.8pt);
+  }
+  \node at (-0.95,0.34) {$a$};
+  \node at (0.95,0.34) {$a$};
+  \node at (0.18,-0.95) {$a$};
+
+  % Particle m, position vector r0, and initial velocity v0
+  \coordinate (M) at (-0.52,0.98);
+  \draw[->] (0,0) -- (M) node[midway, right=1pt] {$\boldsymbol{r}_0$};
+  \node[left=2pt] at (M) {$m$};
+  \draw[->] (M) -- (-0.08,1.50) node[right=1pt] {$\boldsymbol{v}_0$};
+\end{tikzpicture}

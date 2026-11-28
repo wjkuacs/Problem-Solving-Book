@@ -1,0 +1,74 @@
+\begin{tikzpicture}[>=Stealth]
+  % Unit a = 1.40 cm
+  \coordinate (D) at (0,0);
+  \coordinate (A) at (1.212,0.700);
+  \coordinate (B) at (2.425,1.400);
+  \coordinate (O) at (1.912,-0.512);
+  \coordinate (C) at (3.660,0);
+  \coordinate (M) at (1.617,0);
+
+  % Horizontal dashed axis
+  \draw[thick, dashed] (-0.65,0) -- (4.30,0);
+
+  % Slider D and guide rails
+  \fill[white] (-0.32,-0.16) rectangle (0.32,0.16);
+  \draw[thick] (-0.32,-0.16) rectangle (0.32,0.16);
+  \draw[thick] (-0.55,0.20) -- (0.55,0.20);
+  \draw[thick] (-0.55,-0.20) -- (0.55,-0.20);
+  \foreach \x in {-0.45,-0.25,-0.05,0.15,0.35} {
+    \draw (\x,0.20) -- (\x+0.14,0.34);
+    \draw (\x,-0.34) -- (\x+0.14,-0.20);
+  }
+  \node[above=12pt] at (D) {$D$};
+
+  % Slider C and guide rails
+  \fill[white] (3.34,-0.16) rectangle (3.98,0.16);
+  \draw[thick] (3.34,-0.16) rectangle (3.98,0.16);
+  \draw[thick] (3.11,0.20) -- (4.21,0.20);
+  \draw[thick] (3.11,-0.20) -- (4.21,-0.20);
+  \foreach \x in {3.21,3.41,3.61,3.81,4.01} {
+    \draw (\x,0.20) -- (\x+0.14,0.34);
+    \draw (\x,-0.34) -- (\x+0.14,-0.20);
+  }
+  \node[above=12pt] at (C) {$C$};
+
+  % Fixed pivot support at O
+  \draw[thick, fill=white] ($(O)+(-0.24,-0.28)$) -- ($(O)+(-0.18,0)$)
+    arc (180:0:0.18) -- ($(O)+(0.24,-0.28)$) -- cycle;
+  \draw[thick] ($(O)+(-0.36,-0.28)$) -- ($(O)+(0.36,-0.28)$);
+  \foreach \x in {-0.28,-0.14,0,0.14,0.28} {
+    \draw ($(O)+(\x-0.10,-0.40)$) -- ($(O)+(\x,-0.28)$);
+  }
+  \node[left=6pt] at (O) {$O$};
+
+  % Links OA, DB, BC
+  \draw[thick] (O) -- (A);
+  \draw[thick] (D) -- (B);
+  \draw[thick] (B) -- (C);
+
+  % Right-angle mark at A
+  \draw ($(A)+(30:0.18)$) -- ($(A)+(30:0.18)+(-60:0.18)$) -- ($(A)+(-60:0.18)$);
+
+  % Pin joints at D, A, B, O, C
+  \foreach \pt in {D,A,B,O,C} {
+    \fill[white] (\pt) circle (0.08);
+    \draw[thick] (\pt) circle (0.08);
+    \fill (\pt) circle (0.02);
+  }
+
+  % Angle 60 deg
+  \draw ($(M)+(180:0.42)$) arc (180:120:0.42);
+  \node at ($(M)+(150:0.65)$) {$60^\circ$};
+
+  % Rotation arrow omega around O
+  \draw[->, thick] ($(O)+(150:0.46)$) arc (150:25:0.46);
+  \node[right=1pt] at ($(O)+(20:0.48)$) {$\omega$};
+
+  % Labels
+  \node[above left=2pt] at (A) {$A$};
+  \node[above right=2pt] at (B) {$B$};
+  \node[above left=2pt] at ($(D)!0.55!(A)$) {$a$};
+  \node[above left=2pt] at ($(A)!0.5!(B)$) {$a$};
+  \node[right=2pt] at ($(A)!0.38!(O)$) {$a$};
+  \node[right=2pt] at ($(B)!0.44!(C)$) {$b$};
+\end{tikzpicture}

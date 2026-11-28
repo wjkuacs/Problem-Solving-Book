@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Left wall with hatching
+  \fill[pattern=north east lines] (-0.25, 0.35) rectangle (0, 2.25);
+  \draw[thick] (0, 0.35) -- (0, 2.25);
+
+  % Horizontal ground with hatching
+  \fill[pattern=north east lines] (0, -0.22) rectangle (5.6, 0);
+  \draw[thick] (0, 0) -- (5.6, 0);
+
+  % Dashpot (top)
+  \draw[thick] (0, 1.65) -- (1.2, 1.65);
+  \draw[thick] (1.2, 1.42) -- (1.2, 1.88);
+  \draw[thick] (0.95, 1.98) -- (1.55, 1.98) -- (1.55, 1.32) -- (0.95, 1.32);
+  \draw[thick] (1.55, 1.65) -- (1.92, 1.65);
+  \node[above] at (1.25, 1.98) {$\gamma$};
+
+  % Spring (bottom)
+  \draw[thick] (0, 0.8) -- (0.5, 0.8);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    (0.5, 0.8) -- (1.5, 0.8);
+  \draw[thick] (1.5, 0.8) -- (1.92, 0.8);
+  \node[below] at (1.0, 0.62) {$k$};
+
+  % Vertical bumper plate
+  \draw[thick] (1.92, 0.35) rectangle (2.12, 2.05);
+
+  % Velocity arrow
+  \draw[->, thick] (3.55, 1.25) -- (2.8, 1.25) node[midway, above] {$v$};
+
+  % Mass cart with wheels
+  \draw[thick] (3.75, 0.42) rectangle (5.3, 1.65);
+  \node at (4.525, 1.035) {$m$};
+  \draw[thick] (4.1, 0.21) circle (0.21);
+  \draw[thick] (4.95, 0.21) circle (0.21);
+\end{tikzpicture}

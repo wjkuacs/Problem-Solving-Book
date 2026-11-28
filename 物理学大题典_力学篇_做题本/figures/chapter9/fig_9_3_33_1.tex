@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth]
+  % Hatched horizontal table
+  \fill[pattern=north east lines] (-2.0,-0.22) rectangle (3.4,0);
+  \draw[thick] (-2.0,0) -- (3.4,0);
+
+  % Circular track
+  \coordinate (C) at (0,1.35);
+  \draw[thick] (C) circle (1.35);
+  \draw[thick] (C) circle (1.15);
+
+  % Rigid connector and block M
+  \draw[thick] (1.35,1.35) -- (2.15,1.35);
+  \draw[thick] (2.15,0) rectangle (3.35,1.65);
+  \node at (2.75,0.825) {$M$};
+
+  % Radius a
+  \draw[->, thick] (C) -- ++(155:1.35) node[midway, above=2pt] {$a$};
+
+  % Particle m and angle theta
+  \coordinate (V) at (0,0.2);
+  \coordinate (P) at ($(C) + (-128:1.15)$);
+  \draw[dashed] (C) -- (V);
+  \draw[dashed] (C) -- (P);
+  \fill (P) circle (2.8pt);
+  \node at ($(C) + (-132:1.62)$) {$m$};
+
+  \pic[draw, angle radius=0.6cm, angle eccentricity=1.35, "$\theta$"] {angle = P--C--V};
+\end{tikzpicture}

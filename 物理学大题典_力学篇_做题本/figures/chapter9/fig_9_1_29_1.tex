@@ -1,0 +1,37 @@
+\begin{tikzpicture}[>=Stealth, scale=1.15]
+  % Axes
+  \draw[->] (0,0) -- (2.9,0) node[below left=1pt] {$x$};
+  \draw[->] (0,0) -- (0,3.55) node[left=1pt] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Wall hatching along y-axis (left side)
+  \foreach \y in {0.2,0.45,...,3.0} {
+    \draw (0,\y) -- (-0.18,\y-0.18);
+  }
+
+  % Smooth curved surface y = 0.192*x^2 tangent to x-axis at O
+  \draw[thick, domain=0:2.6, smooth, variable=\x] plot ({\x}, {0.192*\x*\x});
+  % Hatching beneath the curved surface
+  \foreach \x in {0.35,0.65,...,2.45} {
+    \pgfmathsetmacro{\yc}{0.192*\x*\x}
+    \draw (\x,\yc) -- (\x-0.16,\yc-0.24);
+  }
+
+  % Thin rectangular plate AB at angle theta = 30 deg from vertical
+  % Inner-left top corner touches y-axis at P1=(0, 2.87)
+  % Length L = 2.86, thickness w = 0.16
+  \coordinate (P1) at (0, 2.87);
+  \coordinate (P2) at ($(P1) + (2.86*0.5, -2.86*0.866)$);
+  \coordinate (P3) at ($(P2) + (0.16*0.866, 0.16*0.5)$);
+  \coordinate (P4) at ($(P1) + (0.16*0.866, 0.16*0.5)$);
+  \draw[thick, fill=white] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+
+  % Labels A, B, C, l, theta
+  \node[above right=1pt] at (P4) {$A$};
+  \node[above=3pt, xshift=4pt] at (P3) {$B$};
+  \coordinate (Cpt) at ($0.5*(P1)+0.5*(P2)+0.5*(0.16*0.866,0.16*0.5)$);
+  \fill (Cpt) circle (1.2pt);
+  \node[below left=1pt] at ($(0.5*0+0.5*1.43, 0.5*2.87+0.5*0.39)$) {$C$};
+  \node[right=4pt] at (Cpt) {$l$};
+  \node at (0.28, 2.05) {$\theta$};
+\end{tikzpicture}

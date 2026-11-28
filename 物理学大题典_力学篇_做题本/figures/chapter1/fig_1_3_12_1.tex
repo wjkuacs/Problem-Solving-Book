@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Plane I
+  \draw[thick] (0,0) -- (4.3,0) -- (5.3,2.2) -- (1.0,2.2) -- cycle;
+  \node at (4.75, 1.9) {$\mathrm{I}$};
+
+  % Plane II (smaller parallelogram on top of I)
+  \draw[thick, fill=white] (1.95,0.72) -- (3.55,0.72) -- (3.95,1.5) -- (2.35,1.5) -- cycle;
+  \node at (2.28, 0.92) {$\mathrm{II}$};
+
+  % Axis O1
+  \draw[thick] (1.3, 1.25) -- (1.3, 2.95);
+  \draw[dashed, thick] (1.3, 0) -- (1.3, 1.05);
+  \draw[thick] (1.3, -0.55) -- (1.3, 0);
+  \node[left=3pt] at (1.3, 1.15) {$O_1$};
+
+  % Rotation arrow omega1 (counterclockwise viewed from above, centered on axis x=1.3)
+  \draw[->, thick] ([shift=(145:0.34 and 0.13)]1.3, 2.54) arc (145:395:0.34 and 0.13);
+  \node[right=2pt] at (1.68, 2.54) {$\omega_1$};
+
+  % Axis O2
+  \draw[dashed, thick] (2.85, 0) -- (2.85, 1.08);
+  \draw[thick] (2.85, -0.78) -- (2.85, 0);
+  \node[right=3pt] at (2.85, 1.08) {$O_2$};
+
+  % Rotation arrow omega2 (opposite sense: clockwise viewed from above, centered on axis x=2.85)
+  \draw[->, thick] ([shift=(35:0.34 and 0.13)]2.85, -0.38) arc (35:-215:0.34 and 0.13);
+  \node[right=2pt] at (3.22, -0.40) {$\omega_2$};
+\end{tikzpicture}

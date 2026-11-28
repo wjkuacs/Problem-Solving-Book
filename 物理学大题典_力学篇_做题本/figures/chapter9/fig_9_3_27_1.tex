@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (0,0.055);
+  \coordinate (Ytop) at (0,3.6);
+  \coordinate (Rtop) at ($(B) + (68:3.1)$);
+
+  % Coordinate axes
+  \draw[->, thick] (-1.8,0) -- (2.4,0) node[right] {$x$};
+  \draw[->, thick] (O) -- (Ytop) node[left] {$y$};
+  \node[below right=1pt and -1pt] at (O) {$O$};
+
+  % Tilted uniform rod
+  \draw[thick, fill=white] (B) -- (Rtop) -- ++(-22:0.14) -- ++(-112:3.1) -- cycle;
+
+  % Angle theta
+  \pic[draw, angle radius=0.95cm, angle eccentricity=1.28, "$\theta$"] {angle = Rtop--B--Ytop};
+
+  % Amplitude A indicators on the left
+  \draw (-0.65,0.55) -- (-0.1,0.55);
+  \draw (-0.65,-0.55) -- (-0.1,-0.55);
+  \draw[<->] (-0.32,0.02) -- (-0.32,0.55) node[midway, left=1pt] {$A$};
+  \draw[<->] (-0.32,-0.55) -- (-0.32,-0.02) node[midway, left=1pt] {$A$};
+\end{tikzpicture}

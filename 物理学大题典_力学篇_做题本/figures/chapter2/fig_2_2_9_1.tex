@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\a{1.55}
+  \def\x{4.1}
+  \def\ang{42}
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (\ang:\a);
+  \coordinate (P) at (\x,0);
+
+  % Ring
+  \draw[thick] (O) circle (\a);
+
+  % Center O
+  \fill (O) circle (1.8pt);
+  \node[below=2pt] at (O) {$O$};
+
+  % Triangle sides
+  \draw[thick] (O) -- (A) node[midway, above left=0pt] {$a$};
+  \draw[thick] (O) -- (P) node[pos=0.68, below=2pt] {$x$};
+  \draw[thick] (A) -- (P);
+
+  % Point P
+  \node[right=2pt] at (P) {$P$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.58cm, angle eccentricity=1.38, "$\theta$"] {angle=P--O--A};
+\end{tikzpicture}

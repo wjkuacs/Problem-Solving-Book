@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Table legs and apron (drawn first so hanging strings pass cleanly in front)
+  \draw (-2.05,0.16) -- (-2.05,-2.05) -- (-1.85,-2.10) -- (-1.85,0.11);
+  \draw (-1.85,-2.10) -- (-1.73,-2.00) -- (-1.73,-0.55);
+  \draw (1.02,-0.546) -- (1.02,-2.45) -- (1.22,-2.50) -- (1.22,-0.592);
+  \draw (1.22,-2.50) -- (1.34,-2.40) -- (1.34,-0.51);
+
+  % Apron under tabletop
+  \draw (-1.85,-0.52) -- (1.02,-1.18);
+  \draw (1.34,-1.08) -- (2.45,-0.22);
+
+  % Tabletop surface and front/side thickness
+  \draw (-0.85,1.40) -- (-2.20,0.35) -- (1.30,-0.45) -- (2.65,0.60);
+  \draw (-2.20,0.35) -- (-2.20,0.19) -- (1.30,-0.61) -- (2.65,0.44);
+  \draw (1.30,-0.45) -- (1.30,-0.61);
+
+  % Slider M (ellipse on tabletop) and string wrapped around it
+  \draw[rotate around={-13:(0.47,0.954)}] (0.47,0.954) ellipse (0.503 and 0.25);
+  \node at (1.18,1.32) {$M$};
+  \draw (-0.02,1.066) -- (-1.22,0.126) -- (-1.22,-1.25);
+  \draw (0.96,0.842) -- (-0.24,-0.098) -- (-0.24,-1.58);
+
+  % Hanging masses m1 and m2
+  \draw[fill=white] (-1.42,-1.25) rectangle (-1.02,-1.58);
+  \node[right=2pt] at (-1.02,-1.42) {$m_1$};
+  \draw[fill=white] (-0.44,-1.58) rectangle (-0.04,-1.91);
+  \node[right=2pt] at (-0.04,-1.75) {$m_2$};
+\end{tikzpicture}

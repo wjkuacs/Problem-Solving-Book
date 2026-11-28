@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\ang{23}
+  \def\L{4.2}
+  \pgfmathsetmacro{\H}{\L*tan(\ang)}
+  \def\R{0.82}
+  \def\d{3.1}
+  % Ground with hatching
+  \draw (-0.15,0) -- (\L+0.15,0);
+  \foreach \x in {0.15,0.45,...,\L} {
+    \draw[thin] (\x,0) -- (\x-0.18,-0.18);
+  }
+  % Inclined plane
+  \coordinate (O) at (\L,0);
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (0,\H);
+  \draw (A) -- (B) -- (O) -- cycle;
+  % Angle theta
+  \draw (O) ++(-0.95,0) arc[start angle=180, end angle=180-\ang, radius=0.95];
+  \node at ($(\L,0)+({180-\ang/2}:1.25)$) {$\theta$};
+  % Cylinder on incline
+  \coordinate (P) at ($(\L,0)+({-\d*cos(\ang)},{\d*sin(\ang)})$);
+  \coordinate (C) at ($(P)+({\R*sin(\ang)},{\R*cos(\ang)})$);
+  \draw (C) circle (\R);
+  \fill (C) circle (1.4pt);
+  % Acceleration arrow along slope
+  \draw[->] (C) -- ++({1.45*cos(\ang)},{-1.45*sin(\ang)}) node[below right=1pt] {$a$};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\b{2.15}
+  \def\a{0.82}
+  \coordinate (C) at (0,0);
+  \coordinate (O) at (0, {\b-\a});
+  \coordinate (P) at (0, -\b);
+
+  % Outer circle (radius b) and inner circle (radius a)
+  \draw (C) circle (\b);
+  \draw (O) circle (\a);
+
+  % Vertical diameter through O, C, P
+  \draw (0, \b) -- (P);
+
+  % Radius arrow a (from O outward)
+  \draw[->] (O) -- ($(O)+(35:\a)$) node[midway, below right, inner sep=1pt] {$a$};
+
+  % Radius arrow b (from outer rim inward to C)
+  \draw[->] (205:\b) -- (C) node[midway, below right, inner sep=1pt] {$b$};
+
+  % Angular acceleration arrow beta (clockwise, upper right)
+  \draw[->] (42:{\b+0.32}) arc (42:18:{\b+0.32});
+  \node[above right, inner sep=1pt] at (32:{\b+0.36}) {$\beta$};
+
+  % Labels O, C, P
+  \node[left, inner sep=2.5pt] at (O) {$O$};
+  \node[right, inner sep=2.5pt] at (C) {$C$};
+  \node[below, inner sep=3pt] at (P) {$P$};
+\end{tikzpicture}

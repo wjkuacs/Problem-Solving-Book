@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (B) at (1.78,0);
+  \coordinate (A) at (3.78,0);
+
+  % Outer middle gear Z2 (drawn first so Z4 cleanly occludes overlap)
+  \draw[thick] (B) circle (1.00);
+
+  % Fixed left gear Z4
+  \fill[white] (O) circle (1.00);
+  \draw[thick] (O) circle (1.00);
+
+  % Inner middle gear Z1 and right gear Z3
+  \draw[thick] (B) circle (0.78);
+  \draw[thick] (A) circle (1.00);
+
+  % Ground hatching under gear Z4
+  \draw[thick] (-0.42,-1.00) -- (0.42,-1.00);
+  \foreach \x in {-0.32,-0.16,0,0.16,0.32} {
+    \draw (\x-0.12,-1.18) -- (\x,-1.00);
+  }
+  \draw[thick] (0.42,-1.00) -- (0.50,-1.18);
+
+  % Crank OA (rounded capsule)
+  \filldraw[fill=white, draw=black, thick]
+    (0,0.13) -- (3.78,0.13) arc (90:-90:0.13) -- (0,-0.13) arc (270:90:0.13) -- cycle;
+
+  % Center dots and labels O, B, A
+  \foreach \pt/\lbl in {O/O, B/B, A/A} {
+    \fill (\pt) circle (0.035);
+    \node[below=5pt] at (\pt) {$\lbl$};
+  }
+
+  % Gear labels
+  \node at (-0.40,0.58) {$Z_4$};
+  \node[above left=1pt] at (1.15,0.92) {$Z_2$};
+  \node at (1.44,0.50) {$Z_1$};
+  \node at (4.12,0.58) {$Z_3$};
+\end{tikzpicture}

@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (V) at (0,-3.5);
+  \coordinate (M) at (-66:3.4);
+
+  % Hatched ceiling
+  \fill[pattern=north east lines] (-1.2,0) rectangle (1.4,0.22);
+  \draw[thick] (-1.2,0) -- (1.4,0);
+
+  % Vertical reference line
+  \draw[dashed] (O) -- (V);
+
+  % Tilted spring and bob
+  \draw[thick] (O) -- (-66:0.95);
+  \draw[thick, decorate, decoration={zigzag, segment length=6.5pt, amplitude=3.5pt}] (-66:0.95) -- (-66:2.75);
+  \draw[thick] (-66:2.75) -- (M);
+  \filldraw[fill=white, draw=black, thick] (M) circle (3.5pt);
+  \node[below right=1pt and 3pt] at (M) {$m$};
+  \node[right=7pt] at (-66:1.85) {$k$};
+
+  % Angle phi
+  \pic[draw, angle radius=0.72cm, angle eccentricity=1.35, "$\varphi$"] {angle = V--O--M};
+
+  % Dimension r parallel to the spring
+  \coordinate (R1) at (0.72,0);
+  \coordinate (R1dir) at ($(R1) + (-66:1)$);
+  \coordinate (R2) at ($(R1)!(M)!(R1dir)$);
+  \draw (M) -- ($(R2) + (24:0.25)$);
+  \draw[<->] (R1) -- (R2) node[midway, right=2pt] {$r$};
+\end{tikzpicture}

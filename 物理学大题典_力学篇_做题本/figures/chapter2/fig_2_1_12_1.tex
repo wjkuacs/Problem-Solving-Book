@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rope curve from center cusp (0,0) to both nails and tangent extensions
+  \draw (0,0) .. controls (-0.85,0.42) and (-1.28,0.95) .. (-1.6,1.8) -- (-1.97,2.78);
+  \draw (0,0) .. controls (0.85,0.42) and (1.28,0.95) .. (1.6,1.8) -- (1.97,2.78);
+
+  % Nails
+  \fill (-1.6,1.8) circle (2.2pt) node[right=2pt] {钉子};
+  \fill (1.6,1.8) circle (2.2pt) node[left=2pt] {钉子};
+
+  % Vertical dashed reference lines and beta angles at nails
+  \draw[dashed] (-1.6,1.8) -- (-1.6,2.80);
+  \draw[dashed] (1.6,1.8) -- (1.6,2.80);
+  \node at (-1.77,2.64) {$\beta$};
+  \node at (1.77,2.64) {$\beta$};
+
+  % Vertical dashed reference and tangents at bottom cusp (alpha angles)
+  \draw[dashed] (0,0) -- (0,0.85);
+  \draw (0,0) -- (-0.95,0.47);
+  \draw (0,0) -- (0.95,0.47);
+  \node at (-0.28,0.36) {$\alpha$};
+  \node at (0.28,0.36) {$\alpha$};
+
+  % Hanging mass m
+  \draw (0,0) -- (0,-0.92);
+  \draw (-0.52,-0.92) rectangle (0.52,-1.52);
+  \node at (0,-1.22) {$m$};
+\end{tikzpicture}

@@ -1,0 +1,86 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.72, transform shape]
+  % Shaft 1 and Disk I1
+  \draw (0.3, 1.42) rectangle (2.5, 1.58);
+  \draw[fill=white] (1.75, 0.55) rectangle (2.00, 2.45);
+  \node[above=2pt] at (1.875, 2.45) {$I_1$};
+
+  % Bearings for Disk 1
+  \foreach \bx in {1.35, 2.12} {
+    \fill[pattern=north east lines] (\bx, 1.58) rectangle (\bx+0.28, 1.88);
+    \draw (\bx, 1.88) -- (\bx, 1.58) -- (\bx+0.28, 1.58);
+    \fill[pattern=north east lines] (\bx, 1.12) rectangle (\bx+0.28, 1.42);
+    \draw (\bx, 1.12) -- (\bx, 1.42) -- (\bx+0.28, 1.42);
+  }
+
+  % Torque tau and angular velocity theta1_dot
+  \draw[->, thin] (0.50, 1.25) arc (240:60:0.22 and 0.30);
+  \node[left=2pt] at (0.18, 1.55) {$\tau$};
+  \draw[->, thin] (0.95, 1.25) arc (240:60:0.16 and 0.26);
+  \node[above=2pt] at (0.95, 1.72) {$\dot{\theta}_1$};
+
+  % Damper b1
+  \draw (1.50, 0.42) -- (2.25, 0.42);
+  \fill[pattern=north east lines] (1.50, 0.24) rectangle (2.25, 0.42);
+  \draw[->, thin] (2.35, 0.28) to[out=135, in=0] (1.92, 0.48);
+  \node[right=1pt] at (2.35, 0.28) {$b_1$};
+
+  % Spring k1 (3 clear loops)
+  \draw (2.50, 1.50) -- (2.62, 1.50);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.6mm, amplitude=1.2mm}]
+    (2.62, 1.50) -- (3.30, 1.50);
+  \draw (3.30, 1.50) -- (3.42, 1.50);
+  \node[above=4pt] at (2.96, 1.50) {$k_1$};
+
+  % Shaft 2 and Disk I2
+  \draw (3.42, 1.42) rectangle (5.32, 1.58);
+  \draw[fill=white] (4.07, 0.25) rectangle (4.32, 2.75);
+  \node[above=2pt] at (4.195, 2.75) {$I_2$};
+
+  % Bearings for Disk 2
+  \foreach \bx in {3.67, 4.44} {
+    \fill[pattern=north east lines] (\bx, 1.58) rectangle (\bx+0.28, 1.88);
+    \draw (\bx, 1.88) -- (\bx, 1.58) -- (\bx+0.28, 1.58);
+    \fill[pattern=north east lines] (\bx, 1.12) rectangle (\bx+0.28, 1.42);
+    \draw (\bx, 1.12) -- (\bx, 1.42) -- (\bx+0.28, 1.42);
+  }
+
+  % Angular velocity theta2_dot
+  \draw[->, thin] (4.94, 1.25) arc (240:60:0.16 and 0.26);
+  \node[above=2pt] at (4.94, 1.72) {$\dot{\theta}_2$};
+
+  % Damper b2
+  \draw (3.82, 0.12) -- (4.57, 0.12);
+  \fill[pattern=north east lines] (3.82, -0.06) rectangle (4.57, 0.12);
+  \draw[->, thin] (4.67, -0.02) to[out=135, in=0] (4.24, 0.18);
+  \node[right=1pt] at (4.67, -0.02) {$b_2$};
+
+  % Spring k2 (3 clear loops)
+  \draw (5.32, 1.50) -- (5.44, 1.50);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.6mm, amplitude=1.2mm}]
+    (5.44, 1.50) -- (6.12, 1.50);
+  \draw (6.12, 1.50) -- (6.24, 1.50);
+  \node[above=4pt] at (5.78, 1.50) {$k_2$};
+
+  % Shaft 3 and Disk I3
+  \draw (6.24, 1.42) rectangle (7.89, 1.58);
+  \draw[fill=white] (6.89, 0.45) rectangle (7.14, 2.55);
+  \node[above=2pt] at (7.015, 2.55) {$I_3$};
+
+  % Bearings for Disk 3
+  \foreach \bx in {6.49, 7.26} {
+    \fill[pattern=north east lines] (\bx, 1.58) rectangle (\bx+0.28, 1.88);
+    \draw (\bx, 1.88) -- (\bx, 1.58) -- (\bx+0.28, 1.58);
+    \fill[pattern=north east lines] (\bx, 1.12) rectangle (\bx+0.28, 1.42);
+    \draw (\bx, 1.12) -- (\bx, 1.42) -- (\bx+0.28, 1.42);
+  }
+
+  % Angular velocity theta3_dot
+  \draw[->, thin] (7.66, 1.25) arc (240:60:0.16 and 0.26);
+  \node[above=2pt] at (7.66, 1.72) {$\dot{\theta}_3$};
+
+  % Damper b3
+  \draw (6.64, 0.32) -- (7.39, 0.32);
+  \fill[pattern=north east lines] (6.64, 0.14) rectangle (7.39, 0.32);
+  \draw[->, thin] (7.49, 0.18) to[out=135, in=0] (7.06, 0.38);
+  \node[right=1pt] at (7.49, 0.18) {$b_3$};
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\Rbig{2.2}
+  \def\r{0.6}
+  \pgfmathsetmacro{\R}{\Rbig-\r}
+  \def\ang{38}
+
+  % Outer fixed ring
+  \coordinate (O) at (0,0);
+  \draw (O) circle (\Rbig);
+
+  % Bottom ground support hatching
+  \draw (-0.75,-\Rbig) -- (0.75,-\Rbig);
+  \foreach \x in {-0.6,-0.35,-0.1,0.15,0.4,0.65} {
+    \draw (\x,-\Rbig) -- (\x-0.18,-\Rbig-0.2);
+  }
+
+  % Vertical radius line labeled R+r
+  \coordinate (B) at (0,-\Rbig);
+  \draw (O) -- node[left=1pt] {$R+r$} (B);
+
+  % Small sphere inside the ring
+  \coordinate (C) at ({\R*sin(\ang)}, {-\R*cos(\ang)});
+  \draw (C) circle (\r);
+  \draw (O) -- (C);
+
+  % Radius r inside small sphere
+  \draw (C) -- ++(15:\r) node[midway, above=-1pt] {$r$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\theta$"] {angle = B--O--C};
+
+  % Rotation arrow \dot{\varphi}
+  \draw[->] ($(C)+(75:\r+0.25)$) arc (75:25:\r+0.25);
+  \node at ($(C)+(52:\r+0.55)$) {$\dot{\varphi}$};
+\end{tikzpicture}

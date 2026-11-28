@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling
+    \fill[pattern=north east lines] (-1.9, 3.8) rectangle (1.9, 4.0);
+    \draw (-1.9, 3.8) -- (1.9, 3.8);
+
+    % Two vertical springs
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=12pt, post length=12pt}]
+        (-1.1, 3.8) -- (-1.1, 2.2);
+    \node[right=4pt] at (-1.1, 3.0) {$k$};
+
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=12pt, post length=12pt}]
+        (1.1, 3.8) -- (1.1, 2.2);
+    \node[right=4pt] at (1.1, 3.0) {$k$};
+
+    % Square plate
+    \draw (-1.1, 0) rectangle (1.1, 2.2);
+\end{tikzpicture}

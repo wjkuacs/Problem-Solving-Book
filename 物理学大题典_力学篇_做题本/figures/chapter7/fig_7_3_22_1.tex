@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{1.35}
+
+  % 坐标轴
+  \draw[thick, ->] (-1.75,0) -- (1.90,0) node[below=2pt] {$x$};
+  \draw[thick, ->] (0,0) -- (0,3.20) node[left=2pt] {$y$};
+  \node[below=2pt] at (0,0) {$A$};
+
+  % 圆与标注
+  \draw[thick] (0,\R) circle (\R);
+  \node[above right=1pt] at (0,{2*\R}) {$B$};
+  \draw[thick, ->] (0,\R) -- ++(145:\R) node[midway, above right=0pt] {$R$};
+
+  % 质点 m
+  \draw[thick, dashed] (0,\R) -- (\R,\R);
+  \fill (\R,\R) circle (2pt) node[right=3pt] {$m$};
+\end{tikzpicture}

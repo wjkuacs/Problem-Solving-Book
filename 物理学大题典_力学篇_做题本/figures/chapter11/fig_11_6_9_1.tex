@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Vertices of inclined plane and horizontal base
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (3.6,0);
+  \coordinate (C) at (1.2,0.65);
+  \coordinate (D) at (4.8,0.65);
+  \coordinate (E) at (1.2,1.90);
+  \coordinate (F) at (4.8,1.90);
+
+  % Horizontal base (hidden/back edges)
+  \draw[dashed] (A) -- (C);
+  \draw[dash dot] (C) -- (D);
+  \draw (B) -- (D);
+
+  % Inclined plane
+  \draw (A) -- (B) -- (F) -- (E) -- cycle;
+
+  % Inclination angle alpha
+  \draw (B) ++(28.44:0.65) arc (28.44:57.72:0.65);
+  \node at ($(B) + (43:0.90)$) {$\alpha$};
+
+  % Pendulum on the inclined plane
+  \coordinate (P) at (3.25,1.90);
+  \coordinate (Q) at (2.88,0.42);
+  \draw[dashed] (P) -- ++(-0.80,-1.27);
+  \draw (P) -- (Q) node[midway, right=3pt] {$l$};
+  \fill (Q) circle (0.07) node[right=2pt] {$m$};
+
+  % Angle theta between steepest-descent line and string
+  \draw (P) ++(-122.2:0.78) arc (-122.2:-104.0:0.78);
+  \node at ($(P) + (-113.1:1.06)$) {$\theta$};
+\end{tikzpicture}

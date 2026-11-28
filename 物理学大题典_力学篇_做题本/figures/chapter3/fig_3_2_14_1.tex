@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Top ceiling and hinge
+  \fill[pattern=north east lines] (2.25,2.22) rectangle (3.15,2.39);
+  \draw[line width=0.9pt] (2.25,2.22) -- (3.15,2.22);
+  \draw (2.52,2.22) -- (2.63,1.80);
+  \draw (2.88,2.22) -- (2.77,1.80);
+
+  % L-shaped rigid massless bar
+  \draw (2.62,1.80) -- (2.62,0.40) -- (2.78,0.40) -- (2.78,1.72) -- (5.40,1.72) -- (5.40,1.88) -- (2.62,1.88) -- cycle;
+
+  % Hinge circle and mass m
+  \draw[fill=white] (2.70,1.80) circle (0.11);
+  \draw[fill=white] (5.40,1.80) circle (0.24);
+  \node[above=2pt] at (5.40,2.04) {$m$};
+
+  % Left guide slot and slider block
+  \fill[pattern=north east lines] (-0.20,0.82) rectangle (0.65,0.98);
+  \draw[line width=0.9pt] (-0.20,0.82) -- (0.65,0.82);
+  \fill[pattern=north east lines] (-0.20,-0.18) rectangle (0.65,-0.02);
+  \draw[line width=0.9pt] (-0.20,-0.02) -- (0.65,-0.02);
+  \draw (0.04,0.08) rectangle (0.42,0.72);
+
+  % Spring k between slider and vertical bar
+  \draw (0.42,0.40) -- (1.02,0.40);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=4.5pt, amplitude=3.5pt}] (1.02,0.40) -- (1.88,0.40);
+  \draw (1.88,0.40) -- (2.62,0.40);
+  \node[above=4pt] at (1.45,0.40) {$k$};
+
+  % Dashpot gamma to the right wall
+  \draw (2.78,0.40) -- (3.85,0.40);
+  \draw (3.85,0.26) -- (3.85,0.54);
+  \draw (3.65,0.18) -- (4.10,0.18) -- (4.10,0.62) -- (3.65,0.62);
+  \draw (4.10,0.40) -- (5.05,0.40);
+  \node[below=3pt] at (3.92,0.18) {$\gamma$};
+  \fill[pattern=north east lines] (5.05,0.05) rectangle (5.22,0.75);
+  \draw[line width=0.9pt] (5.05,0.05) -- (5.05,0.75);
+
+  % Dimension l (vertical)
+  \draw[thin] (2.15,1.80) -- (2.56,1.80);
+  \draw[<->] (2.28,0.40) -- (2.28,1.80) node[midway, left=2pt] {$l$};
+
+  % Dimension 2l (horizontal)
+  \draw[thin] (5.40,1.52) -- (5.40,1.15);
+  \draw[<->] (2.78,1.32) -- (5.40,1.32) node[midway, above=2pt] {$2l$};
+
+  % Coordinate axis x_s at bottom left
+  \draw[->] (-0.25,-0.55) -- (1.40,-0.55);
+  \node[below=2pt] at (-0.25,-0.55) {$O$};
+  \node[below=2pt] at (1.30,-0.55) {$x_s$};
+\end{tikzpicture}

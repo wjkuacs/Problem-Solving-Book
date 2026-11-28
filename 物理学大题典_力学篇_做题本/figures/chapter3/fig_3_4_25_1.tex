@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth]
+  % Upper fixed U-tube (path A) with left/right ports
+  \draw[thick] (-1.28, -1.15) -- (-1.28, -0.20) -- (-1.78, -0.20);
+  \draw[thick] (-1.78, 0.20) -- (-1.28, 0.20) -- (-1.28, 1.0) arc (180:0:1.28)
+    -- (1.28, 0.20) -- (1.78, 0.20);
+  \draw[thick] (1.78, -0.20) -- (1.28, -0.20) -- (1.28, -1.15);
+  \draw[thick] (-0.78, -1.15) -- (-0.78, 1.0) arc (180:0:0.78) -- (0.78, -1.15);
+  \node[below=4pt] at (0, 1.78) {$A$};
+
+  % Lower sliding U-tube (path B)
+  \draw[thick] (-0.70, -0.82) -- (-0.70, -1.30) arc (180:360:0.70) -- (0.70, -0.82);
+  \draw[thick] (-1.36, -0.82) -- (-1.36, -1.30) arc (180:360:1.36) -- (1.36, -0.82);
+  \node[above=4pt] at (0, -2.00) {$B$};
+
+  % Sound source S (speaker icon)
+  \draw[thick] (-2.28, -0.10) rectangle (-2.12, 0.10);
+  \draw[thick] (-2.12, 0.10) -- (-1.92, 0.22) -- (-1.92, -0.22) -- (-2.12, -0.10);
+  \node[below=4pt] at (-2.12, -0.22) {$S$};
+
+  % Detector D (ear icon)
+  \draw[thick] (2.00, 0.12)
+    .. controls (2.05, 0.24) and (2.22, 0.22) .. (2.22, 0.04)
+    .. controls (2.22, -0.12) and (2.10, -0.24) .. (2.02, -0.16)
+    .. controls (1.98, -0.11) and (2.02, -0.05) .. (2.06, -0.06);
+  \draw[thick] (2.06, 0.06) .. controls (2.13, 0.10) and (2.15, -0.02) .. (2.08, -0.04);
+  \node[below=4pt] at (2.10, -0.22) {$D$};
+\end{tikzpicture}

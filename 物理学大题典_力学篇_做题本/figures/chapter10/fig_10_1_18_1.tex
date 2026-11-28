@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ceiling
+  \fill[pattern=north east lines] (-0.65,0) rectangle (3.95,0.18);
+  \draw (-0.65,0) -- (3.95,0);
+
+  % Pivots and vertical references
+  \coordinate (P1) at (0.20,0);
+  \coordinate (P2) at (2.35,0);
+  \draw[dashed] (P1) -- ++(0,-2.00);
+  \draw[dashed] (P2) -- ++(0,-2.00);
+
+  % Left pendulum
+  \coordinate (B1) at ($(P1)+(-74:2.50)$);
+  \draw (P1) -- (B1) node[midway, right=2pt] {$l$};
+  \draw (P1) ++(-90:1.05) arc (-90:-74:1.05);
+  \node at ($(P1)+(-82:1.40)$) {$\theta_1$};
+
+  % Right pendulum
+  \coordinate (B2) at ($(P2)+(-64:2.50)$);
+  \draw (P2) -- (B2) node[midway, right=2pt] {$l$};
+  \draw (P2) ++(-90:0.75) arc (-90:-64:0.75);
+  \node at ($(P2)+(-77:1.10)$) {$\theta_2$};
+
+  % Coupling spring k
+  \draw (B1) -- ($(B1)!0.22!(B2)$)
+    decorate[decoration={coil, aspect=0.45, segment length=2.4mm, amplitude=1.5mm}] {-- ($(B1)!0.78!(B2)$)}
+    -- (B2);
+  \node[above=5pt] at ($(B1)!0.5!(B2)$) {$k$};
+
+  % Bobs m
+  \fill (B1) circle (2.3pt) node[below left=1pt] {$m$};
+  \fill (B2) circle (2.3pt) node[below right=1pt] {$m$};
+\end{tikzpicture}

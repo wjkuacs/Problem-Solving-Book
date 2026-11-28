@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\A{2.0}
+  \def\B{2.0}
+
+  % Bounding rectangle
+  \draw[thick] (-\A, -\B) rectangle (\A, \B);
+
+  % Coordinate axes
+  \draw[->, thick] (-\A, 0) -- (\A + 0.55, 0) node[below] {$x$};
+  \draw[->, thick] (0, -\B) -- (0, \B + 0.55) node[left] {$y$};
+
+  % Lissajous curve: x(t) = A cos(2t), y(t) = -B cos(3t) for t in [0, pi]
+  \draw[thick,
+    postaction={decorate},
+    decoration={markings, mark=at position 0.21 with {\arrow{Stealth}}}
+  ] plot[domain=0:3.14159265, samples=80, smooth]
+    ({\A*cos(deg(2*\x))}, {-\B*cos(deg(3*\x))});
+
+  % Key point labels
+  \node[below right] at (\A, -\B) {$S$};
+  \node[below right] at (0.5*\A, 0) {$P$};
+  \node[below] at (-0.5*\A, \B - 0.08) {$Q$};
+
+  % Dimension 2B (left)
+  \draw (-\A - 0.15, \B) -- (-\A - 0.55, \B);
+  \draw (-\A - 0.15, -\B) -- (-\A - 0.55, -\B);
+  \draw[<->] (-\A - 0.35, -\B) -- (-\A - 0.35, \B)
+    node[midway, left] {$2B$};
+
+  % Dimension 2A (bottom)
+  \draw (-\A, -\B - 0.15) -- (-\A, -\B - 0.55);
+  \draw (\A, -\B - 0.15) -- (\A, -\B - 0.55);
+  \draw[<->] (-\A, -\B - 0.35) -- (\A, -\B - 0.35)
+    node[midway, below] {$2A$};
+\end{tikzpicture}

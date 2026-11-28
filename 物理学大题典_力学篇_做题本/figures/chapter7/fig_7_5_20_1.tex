@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ground surface with hatching
+  \fill[pattern=north east lines] (-0.45, -0.25) rectangle (0.75, 0);
+  \draw (-0.45, 0) -- (0.75, 0);
+
+  % Vertical support post and beveled pivot joint O
+  \draw (0, 0) -- (0, 1.56) -- (0.12, 1.68) -- (0.24, 1.56) -- (0.24, 0);
+  \node[above left=0pt] at (0.05, 1.58) {$O$};
+
+  % Horizontal rod connecting pivot O to the disc
+  \draw (0.12, 1.68) -- (2.56, 1.68);
+  \draw (0.24, 1.56) -- (2.56, 1.56);
+
+  % Homogeneous disc with visible thickness
+  \coordinate (D) at (3.08, 1.62);
+  % Back rim arc
+  \draw ($(D)+(-0.15, 0)$) ++(90:0.48 and 0.96)
+    arc[start angle=90, end angle=270, x radius=0.48, y radius=0.96];
+  \draw ($(D)+(-0.15, 0.96)$) -- ($(D)+(0, 0.96)$);
+  \draw ($(D)+(-0.15, -0.96)$) -- ($(D)+(0, -0.96)$);
+  % Front face ellipse (white fill hides back rod overlap)
+  \draw[fill=white] (D) ellipse[x radius=0.48, y radius=0.96];
+
+  % Symmetry axis spin vector Omega
+  \draw[->] (D) -- (4.35, 1.62) node[above=2pt, pos=0.75] {$\Omega$};
+
+  % Dimension l from vertical post to disc center
+  \draw[thin] (3.08, 0.56) -- (3.08, 0.34);
+  \draw[<->] (0.24, 0.45) -- (3.08, 0.45) node[midway, above=2pt] {$l$};
+\end{tikzpicture}

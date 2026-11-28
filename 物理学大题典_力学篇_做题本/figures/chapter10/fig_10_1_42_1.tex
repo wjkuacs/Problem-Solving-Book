@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\a{1.8}
+
+    % Left and right walls
+    \fill[pattern=north east lines] (-0.2, -0.85) rectangle (0, 0.55);
+    \draw (0, -0.85) -- (0, 0.55);
+
+    \fill[pattern=north east lines] (3*\a, -0.85) rectangle (3*\a+0.2, 0.55);
+    \draw (3*\a, -0.85) -- (3*\a, 0.55);
+
+    % Three springs
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=10pt, post length=10pt}]
+        (0, 0) -- (\a, 0) node[midway, above=5pt] {$k$};
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=10pt, post length=10pt}]
+        (\a, 0) -- (2*\a, 0) node[midway, above=5pt] {$k$};
+    \draw[decorate, decoration={zigzag, segment length=5pt, amplitude=3pt, pre length=10pt, post length=10pt}]
+        (2*\a, 0) -- (3*\a, 0) node[midway, above=5pt] {$k$};
+
+    % Two masses
+    \fill (\a, 0) circle (2.2pt) node[above=4pt] {$M$};
+    \fill (2*\a, 0) circle (2.2pt) node[above=4pt] {$M$};
+
+    % Dimension ticks and arrows
+    \draw[thin] (\a, -0.15) -- (\a, -0.85);
+    \draw[thin] (2*\a, -0.15) -- (2*\a, -0.85);
+
+    \draw[<->] (0, -0.65) -- (\a, -0.65) node[midway, above=1pt] {$a$};
+    \draw[<->] (\a, -0.65) -- (2*\a, -0.65) node[midway, above=1pt] {$a$};
+    \draw[<->] (2*\a, -0.65) -- (3*\a, -0.65) node[midway, above=1pt] {$a$};
+\end{tikzpicture}

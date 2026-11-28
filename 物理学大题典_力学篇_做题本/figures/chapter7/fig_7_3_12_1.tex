@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{3.2}
+  \def\ha{32}
+  \coordinate (O) at (0,0);
+  \coordinate (U) at (\ha:\R);
+  \coordinate (L) at (-\ha:\R);
+
+  % 扇形轮廓与对称轴
+  \draw[thick] (O) -- (U) arc (\ha:-\ha:\R) -- cycle;
+  \draw[thick, ->] (O) -- (4.1,0) node[below=2pt] {$x$};
+  \node[left=2pt] at (O) {$O$};
+
+  % 质心 C
+  \fill (2.10,0) circle (1.8pt) node[below=3pt] {$C$};
+
+  % 半角标注
+  \draw (0.88,0) arc (0:\ha:0.88);
+  \node at ({0.48*\ha}:1.34) {$\frac{1}{2}\alpha$};
+  \draw (0.88,0) arc (0:-\ha:0.88);
+  \node at ({-0.48*\ha}:1.34) {$\frac{1}{2}\alpha$};
+
+  % 半径 R 标注
+  \coordinate (Oext) at ({\ha+90}:0.52);
+  \coordinate (Uext) at ($(U)+({\ha+90}:0.52)$);
+  \draw (O) -- (Oext);
+  \draw (U) -- (Uext);
+  \draw[<->] ({\ha+90}:0.36) -- ($(U)+({\ha+90}:0.36)$) node[midway, above left=1pt] {$R$};
+\end{tikzpicture}

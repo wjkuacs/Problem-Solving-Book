@@ -1,0 +1,51 @@
+\begin{tikzpicture}[>=Stealth, thick,
+    res/.style={draw, fill=white, minimum width=0.68cm, minimum height=0.20cm, inner sep=0pt},
+    vres/.style={draw, fill=white, minimum width=0.20cm, minimum height=0.68cm, inner sep=0pt}]
+    % Grid of 3 loops
+    \draw (0,0) -- (0,2.2) -- (5.4,2.2) -- (5.4,0) -- cycle;
+    \draw (1.8,0) -- (1.8,2.2);
+    \draw (3.6,0) -- (3.6,2.2);
+
+    % Junction dots
+    \foreach \x in {1.8, 3.6} {
+        \fill (\x,0) circle (1.8pt);
+        \fill (\x,2.2) circle (1.8pt);
+    }
+
+    % Left current source i
+    \draw[fill=white] (0,1.1) circle (0.32);
+    \draw (-0.32,1.1) -- (0.32,1.1);
+    \node[left] at (-0.36,1.1) {$i$};
+
+    % Vertical resistor R_1
+    \node[vres, label=right:$R_1$] at (1.8,1.1) {};
+
+    % Top capacitor C
+    \draw[fill=white, draw=none] (2.58,2.0) rectangle (2.82,2.4);
+    \draw (2.62,1.98) -- (2.62,2.42);
+    \draw (2.78,1.98) -- (2.78,2.42);
+    \node[above] at (2.7,2.42) {$C$};
+
+    % Vertical resistor R_2
+    \node[vres, label=right:$R_2$] at (3.6,1.1) {};
+
+    % Top resistor R_3
+    \node[res, label=above:$R_3$] at (4.5,2.2) {};
+
+    % Right AC voltage source epsilon
+    \draw[fill=white] (5.4,1.1) circle (0.32);
+    \node at (5.4,1.1) {$\sim$};
+    \node[right, font=\small] at (5.70,1.44) {$+$};
+    \node[right, font=\small] at (5.70,0.76) {$-$};
+    \node[right] at (5.76,1.1) {$\varepsilon$};
+
+    % Mesh current arrows
+    \draw[->] (0.62,1.00) .. controls (0.85,1.65) and (1.42,1.55) .. (1.22,0.65);
+    \node at (0.96,1.06) {$\dot{q}$};
+
+    \draw[->] (2.56,1.00) .. controls (2.78,1.65) and (3.26,1.55) .. (3.08,0.65);
+    \node at (2.86,1.06) {$\dot{q}_1$};
+
+    \draw[->] (4.36,1.00) .. controls (4.58,1.65) and (5.02,1.55) .. (4.84,0.65);
+    \node at (4.65,1.06) {$\dot{q}_2$};
+\end{tikzpicture}

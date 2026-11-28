@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  % Ceiling support
+  \draw (-0.55,1.8) -- (0.65,1.8);
+  \foreach \x in {-0.45,-0.2,0.05,0.3,0.55} {
+    \draw (\x,1.8) -- (\x+0.18,2.0);
+  }
+
+  % Left vertical string with tension T
+  \draw (0,1.8) -- (0,0);
+  \draw[->] (0,0.4) -- (0,1.05) node[right=2pt] {$T$};
+
+  % Horizontal rod of length l
+  \draw (0,0) rectangle (4.0,-0.14);
+  \node[below left=1pt] at (0,-0.14) {$A$};
+
+  % Midpoint C and weight W
+  \coordinate (C) at (2.0,-0.07);
+  \fill (C) circle (1.6pt);
+  \node[below left=2pt] at (C) {$C$};
+  \draw[->] (C) -- (2.0,-1.25) node[below] {$W$};
+
+  % Angular acceleration arrow \dot{\omega}
+  \draw[->] (1.65,0.12) arc (145:-55:0.45);
+  \node[right=1pt] at (2.35,-0.35) {$\dot{\omega}$};
+
+  % Dimension line for l
+  \draw[thin] (0,0.12) -- (0,0.65);
+  \draw[thin] (4.0,0.12) -- (4.0,0.65);
+  \draw[<->] (0,0.5) -- (4.0,0.5) node[midway, fill=white, inner sep=2pt] {$l$};
+\end{tikzpicture}

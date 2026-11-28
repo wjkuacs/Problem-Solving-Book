@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\T{1.3}
+  \def\A{1.4}
+
+  % Axes
+  \draw[->, thick] (-0.35, 0) -- (3.45*\T, 0) node[below] {$t$};
+  \draw[->, thick] (0, -0.35) -- (0, \A + 0.55) node[left] {$x$};
+  \node[below left] at (0, 0) {$O$};
+  \node[left] at (0, \A) {$A$};
+
+  % Sawtooth periods
+  \foreach \k in {0, 1, 2} {
+    \draw[thick] (\k*\T, 0) -- ({(\k+1)*\T}, \A);
+    \draw[thick, dashed] ({(\k+1)*\T}, \A) -- ({(\k+1)*\T}, 0);
+  }
+  % Continuation after 3rd period
+  \draw[thick] (3*\T, 0) -- (3.22*\T, 0.22*\A);
+
+  % Period labels
+  \node[below] at (\T, -0.05) {$\dfrac{2\pi}{\omega}$};
+  \node[below] at (2*\T, -0.05) {$\dfrac{4\pi}{\omega}$};
+  \node[below] at (3*\T, -0.05) {$\dfrac{6\pi}{\omega}$};
+\end{tikzpicture}

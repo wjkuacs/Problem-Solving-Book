@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  % Left diagram: trash can with upright conical lid
+  \begin{scope}[shift={(0,0)}]
+    % Cylindrical trash can body
+    \draw[thick] (-1.05,0) -- (-1.05,1.25);
+    \draw[thick] (1.05,0) -- (1.05,1.25);
+    \draw[thick] (0,1.25) ellipse (1.05cm and 0.42cm);
+
+    % Conical lid sitting at center
+    \draw[thick, fill=white] (-0.58,1.22) -- (0,2.25) -- (0.58,1.22);
+    \draw[thick] (-0.58,1.22) arc[start angle=195, end angle=345, x radius=0.6cm, y radius=0.22cm];
+
+    \node[below] at (0,-0.1) {垃圾箱};
+  \end{scope}
+
+  % Right diagram: tilted spinning cone
+  \begin{scope}[shift={(3.2,0.5)}]
+    \coordinate (Apex) at (0,1.65);
+
+    % Cone outline (tilted to the right)
+    \coordinate (BL) at (-0.42,0.28);
+    \coordinate (BR) at (1.08,0.72);
+    \draw[thick] (BL) -- (Apex) -- (BR);
+    \draw[thick] (BL) to[bend right=18] (BR);
+
+    % Vertical support axis (支承轴)
+    \draw[dashed, thick] (Apex) -- (0,0.28);
+    \draw[thick] (0,0.28) -- (0,-1.2);
+    \node[left, align=center] at (-0.12,-0.58) {支\\承\\轴};
+
+    % Symmetry axis (对称轴) tilted at ~-22 deg from vertical
+    \draw[thick] (Apex) -- ++(112:0.75);
+    \draw[dashed, thick] (Apex) -- (0.45,0.42);
+    \draw[thick] (0.45,0.42) -- (1.05,-1.15);
+    \node[right, align=center] at (1.15,-0.52) {对\\称\\轴};
+
+    % Spin arrow omega around symmetry axis above apex
+    \begin{scope}[shift={($(Apex)+(112:0.38)$)}, rotate=-22]
+      \draw[->, thick] (-0.16,0.08) arc[start angle=125, end angle=405, x radius=0.30cm, y radius=0.12cm];
+      \node[right] at (0.36,0.04) {$\omega$};
+    \end{scope}
+  \end{scope}
+\end{tikzpicture}

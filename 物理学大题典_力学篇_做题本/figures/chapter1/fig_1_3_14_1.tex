@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\ang{30}
+  \def\rlen{3.2}
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (\ang:\rlen);
+
+  % Axes
+  \draw[->, thick] (O) -- (4.2,0) node[right=2pt] {$x$};
+  \draw[->, thick] (O) -- (0,3.2) node[left=2pt] {$y$};
+  \node[below left=1pt] at (O) {$O$};
+
+  % Position vector line r
+  \draw[thick] (O) -- (P) node[midway, above left=1pt] {$\boldsymbol{r}$};
+  \node at (0.5*\ang:1.05) {$\varphi$};
+
+  % Unit vectors at P
+  \draw[->, thick] (P) -- ++(0.9, 0) node[right=1pt] {$\boldsymbol{i}$};
+  \draw[->, thick] (P) -- ++(0, 0.9) node[above=1pt] {$\boldsymbol{j}$};
+  \draw[->, thick] (P) -- ++(\ang:0.95) node[above right=0pt] {$\boldsymbol{e}_r$};
+  \draw[->, thick] (P) -- ++(\ang+90:0.95) node[above left=0pt] {$\boldsymbol{e}_\varphi$};
+
+  % Right-angle mark between OP and e_phi
+  \draw[thin] ($(P)+(\ang+180:0.18)$) -- ++(\ang+90:0.18) -- ++(\ang:0.18);
+\end{tikzpicture}

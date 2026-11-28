@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (V) at (0,-3.2);
+  \coordinate (M) at (-58:3.1);
+
+  % Hatched ceiling
+  \fill[pattern=north east lines] (-1.0,0) rectangle (1.3,0.22);
+  \draw[thick] (-1.0,0) -- (1.3,0);
+
+  % Vertical reference line
+  \draw[dashed] (O) -- (V);
+
+  % Tilted spring and bob
+  \draw[thick] (O) -- (-58:0.98);
+  \draw[thick, decorate, decoration={zigzag, segment length=6.5pt, amplitude=3.5pt}] (-58:0.98) -- (-58:2.48);
+  \draw[thick] (-58:2.48) -- (M);
+  \filldraw[fill=white, draw=black, thick] (M) circle (3.5pt);
+  \node[right=4pt] at (M) {$m$};
+  \node[above right=0pt and 6pt] at (-58:1.72) {$k$};
+
+  % Angle phi
+  \pic[draw, angle radius=0.72cm, angle eccentricity=1.35, "$\varphi$"] {angle = V--O--M};
+\end{tikzpicture}

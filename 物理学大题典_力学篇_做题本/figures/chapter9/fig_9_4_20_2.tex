@@ -1,0 +1,57 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.78, transform shape]
+  % Fixed walls and floor
+  \fill[pattern=north east lines] (-0.18, 0) rectangle (0, 2.25);
+  \fill[pattern=north east lines] (6.80, 0) rectangle (6.98, 2.25);
+  \draw (0, 3.25) -- (0, 0) -- (6.80, 0) -- (6.80, 2.25);
+
+  % Blocks m1 and m2
+  \draw (2.05, 0.28) rectangle (2.95, 1.90);
+  \node at (2.50, 1.09) {$m_1$};
+  \node at (2.50, 0.14) {$\alpha_1$};
+
+  \draw (4.25, 0.28) rectangle (5.45, 1.15);
+  \node at (4.85, 0.72) {$m_2$};
+  \node at (4.85, 0.14) {$\alpha_2$};
+
+  % Springs k1, k3, k2
+  \draw (0, 0.72) -- (0.45, 0.72);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.3mm}]
+    (0.45, 0.72) -- (1.60, 0.72);
+  \draw (1.60, 0.72) -- (2.05, 0.72);
+  \node[above=4pt] at (1.02, 0.72) {$k_1$};
+
+  \draw (2.95, 0.72) -- (3.15, 0.72);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.3mm}]
+    (3.15, 0.72) -- (4.05, 0.72);
+  \draw (4.05, 0.72) -- (4.25, 0.72);
+  \node[above=4pt] at (3.60, 0.72) {$k_3$};
+
+  \draw (5.45, 0.72) -- (5.65, 0.72);
+  \draw[decorate, decoration={zigzag, segment length=2.4mm, amplitude=1.3mm}]
+    (5.65, 0.72) -- (6.60, 0.72);
+  \draw (6.60, 0.72) -- (6.80, 0.72);
+  \node[above=4pt] at (6.12, 0.72) {$k_2$};
+
+  % Driving force F = F0 sin omega t
+  \draw[->, thin] (0.85, 1.25) -- (2.05, 1.25);
+  \node[above=1pt] at (1.05, 1.28) {$F=F_0\sin\omega t$};
+
+  % Dashpot between m1 and m2
+  \draw (2.95, 1.50) -- (4.85, 1.50);
+  \draw (4.85, 1.22) -- (4.85, 1.78);
+  \draw (4.45, 1.70) -- (4.45, 1.85) -- (5.25, 1.85) -- (5.25, 1.15);
+  \draw (4.45, 1.15) -- (4.45, 1.30);
+  \foreach \px/\py in {4.98/1.68, 5.08/1.55, 4.98/1.40, 5.12/1.30, 5.02/1.23, 5.15/1.72}
+    \fill (\px, \py) circle (0.7pt);
+
+  % Dimension lines x1 and x2
+  \draw[dashed, thin] (2.95, 1.90) -- (2.95, 2.35);
+  \draw[thin] (2.95, 2.35) -- (2.95, 2.65);
+  \draw[<->, thin] (0, 2.50) -- (2.95, 2.50);
+  \node[above=1pt] at (1.48, 2.50) {$x_1$};
+
+  \draw[dashed, thin] (5.45, 1.15) -- (5.45, 2.95);
+  \draw[thin] (5.45, 2.95) -- (5.45, 3.25);
+  \draw[<->, thin] (0, 3.10) -- (5.45, 3.10);
+  \node[above=1pt] at (2.72, 3.10) {$x_2$};
+\end{tikzpicture}

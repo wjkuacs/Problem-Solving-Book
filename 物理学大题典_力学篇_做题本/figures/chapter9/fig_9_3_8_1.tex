@@ -1,0 +1,61 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, scale=0.95]
+  \def\alphaAng{28}
+  \def\bLen{2.65}
+  \def\aLen{0.92}
+  \pgfmathsetmacro{\betaAng}{atan(\aLen/\bLen)}
+  \pgfmathsetmacro{\rodAng}{180+\alphaAng-\betaAng}
+
+  % Horizontal base and inclined plane
+  \coordinate (BaseV) at (0,0);
+  \coordinate (BaseH) at (2.4,0);
+  \coordinate (O) at (\alphaAng:4.1);
+  \draw (BaseV) -- (BaseH);
+  \draw[->] ($(\alphaAng:-0.55)$) -- ($(\alphaAng:5.1)$) node[above right] {$\eta$};
+  \pic[draw, angle radius=0.72cm, angle eccentricity=1.32, "$\alpha$"] {angle = BaseH--BaseV--O};
+  \node[below right=2pt] at (O) {$O$};
+
+  % Zeta axis perpendicular to incline
+  \coordinate (ZetaTip) at ($(O)+(\alphaAng+90:3.1)$);
+  \draw[->, postaction={decorate}, decoration={markings, mark=at position 0.38 with {\arrow{Stealth}}}]
+    (O) -- (ZetaTip) node[above left] {$\zeta$};
+  \node[right=3pt] at ($(O)+(\alphaAng+90:1.25)$) {$\dot{\varphi}$};
+
+  % Rod AC (double-line bar along rodAng)
+  \coordinate (C) at ($(O)+(\rodAng:\bLen)$);
+  \coordinate (ZTip) at ($(O)+(\rodAng:\bLen+1.35)$);
+  \begin{scope}[shift={(O)}, rotate=\rodAng]
+    \draw[fill=white] (0,-0.065) rectangle (\bLen,0.065);
+  \end{scope}
+  \node[above left=2pt] at ($(O)+(\rodAng:0.42)+(\rodAng-90:0.06)$) {$A$};
+  \node[above right=2pt] at ($(C)+(\rodAng-90:0.06)$) {$C$};
+
+  % z-axis along rod AC with psi-dot arrow
+  \draw[->, postaction={decorate}, decoration={markings, mark=at position 0.42 with {\arrow{Stealth}}}]
+    (O) -- (ZTip) node[below left] {$z$};
+  \node[above=4pt] at ($(O)+(\rodAng:1.58)$) {$\dot{\psi}$};
+
+  % Thin circular disk at C (perpendicular to rod)
+  \begin{scope}[shift={(C)}, rotate=\rodAng]
+    \draw[fill=white] (-0.065,-\aLen) rectangle (0.065,\aLen);
+  \end{scope}
+
+  % Angles theta and beta
+  \pic[draw, angle radius=1.05cm, angle eccentricity=1.22, "$\theta$"] {angle = ZetaTip--O--C};
+  \coordinate (IncDown) at ($(\alphaAng:1.5)$);
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.32, "$\beta$"] {angle = C--O--IncDown};
+
+  % Dimension a (upper radius of disk)
+  \coordinate (DiskTop) at ($(C)+(\rodAng-90:\aLen)$);
+  \coordinate (DimATop) at ($(DiskTop)+(\rodAng:0.55)$);
+  \coordinate (DimACen) at ($(C)+(\rodAng:0.55)$);
+  \draw[thin] ($(DiskTop)+(\rodAng:0.1)$) -- ($(DimATop)+(\rodAng:0.1)$);
+  \draw[thin] ($(C)+(\rodAng:0.1)$) -- ($(DimACen)+(\rodAng:0.1)$);
+  \draw[<->] (DimATop) -- node[midway, left=1pt] {$a$} (DimACen);
+
+  % Dimension b (length OC below rod)
+  \coordinate (DimBC) at ($(C)+(\rodAng+90:0.56)$);
+  \coordinate (DimBO) at ($(O)+(\rodAng+90:0.56)$);
+  \draw[thin] ($(C)+(\rodAng+90:0.08)$) -- ($(DimBC)+(\rodAng+90:0.1)$);
+  \draw[thin] ($(O)+(\rodAng+90:0.08)$) -- ($(DimBO)+(\rodAng+90:0.1)$);
+  \draw[<->] (DimBC) -- node[midway, fill=white, inner sep=1.5pt] {$b$} (DimBO);
+\end{tikzpicture}

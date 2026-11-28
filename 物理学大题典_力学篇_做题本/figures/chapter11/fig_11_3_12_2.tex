@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+  % Axes
+  \draw[->, thick] (0, 0) -- (4.2, 0) node[below] {$t$};
+  \draw[->, thick] (0, 0) -- (0, 2.95) node[left] {$r$};
+  \node[below left=1pt] at (0, 0) {$0$};
+
+  % Broken line r(t)
+  \draw[thick] (0, 1.10) -- (1.7, 2.55) -- (3.4, 1.65);
+
+  % Dashed guides
+  \draw[dashed] (1.7, 0) -- (1.7, 2.55);
+  \draw[dashed] (3.4, 0) -- (3.4, 1.65);
+  \draw[dashed] (0, 1.65) -- (3.4, 1.65);
+
+  % Ticks and labels
+  \draw (0, 0.55) -- (0.08, 0.55);
+  \node[left=2pt] at (0, 0.55) {$1$};
+  \node[left=2pt] at (0, 1.10) {$2$};
+  \node[left=2pt] at (0, 1.65) {$3$};
+  \node[below=2pt] at (1.7, 0) {$1$};
+  \node[below=2pt] at (3.4, 0) {$2$};
+
+  % Peak height alpha
+  \draw (1.7, 2.55) -- (2.4, 2.55);
+  \draw[<->] (2.2, 0) -- (2.2, 2.55) node[midway, fill=white, inner sep=2pt] {$\alpha$};
+\end{tikzpicture}

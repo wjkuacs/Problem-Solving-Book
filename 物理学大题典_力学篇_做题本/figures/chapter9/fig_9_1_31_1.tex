@@ -1,0 +1,52 @@
+\begin{tikzpicture}[>=Stealth, scale=0.82]
+  % Ceiling
+  \draw[thick] (-1.6, 1.8) -- (1.6, 1.8);
+  \foreach \x in {-1.45,-1.2,...,1.45} {
+    \draw (\x, 1.8) -- (\x+0.18, 2.02);
+  }
+
+  % Upper compound pulley centered at (0,0)
+  \def\rTwo{1.20}
+  \def\rOne{0.62}
+  \draw[thick] (0,0) circle (\rTwo);
+  \draw[thick] (0,0) circle (\rOne);
+  \fill (0,0) circle (1.3pt);
+
+  % Upper hanger bracket
+  \draw[thick, fill=white] (-0.13, 1.8) -- (-0.13, 0) arc (180:360:0.13) -- (0.13, 1.8) -- cycle;
+  \fill (0,0) circle (1.3pt);
+
+  % Radius arrows r1 and r2
+  \draw[->] (0,0) -- (165:\rOne);
+  \node at (205:0.35) {$r_1$};
+  \draw[->] (0,0) -- (55:\rTwo) node[midway, right=2pt] {$r_2$};
+
+  % Lower movable pulley centered at (0, -3.3)
+  \def\rLow{0.90}
+  \coordinate (L) at (0, -3.3);
+  \draw[thick] (L) circle (\rLow);
+  \fill (L) circle (1.3pt);
+
+  % Left rope: external tangent between (0,0, rTwo) and (0,-3.3, rLow)
+  % sin(phi) = (rTwo - rLow)/3.3 = 0.30/3.3 -> ~5.2 deg
+  \draw[thick] (185.2:\rTwo) -- ($(L) + (185.2:\rLow)$);
+  % Middle-right rope: external tangent between (0,0, rOne) and (0,-3.3, rLow)
+  % sin(psi) = (rLow - rOne)/3.3 = 0.28/3.3 -> ~4.9 deg
+  \draw[thick] (4.9:\rOne) -- ($(L) + (-4.9:\rLow)$);
+
+  % Right loop with force F (exact semicircular loop at bottom-right)
+  \coordinate (U1) at (38:\rTwo);
+  \coordinate (U2) at ($(U1) + (-52:2.65)$);
+  \coordinate (D1) at (218:\rOne);
+  \coordinate (D2) at ($(D1) + (-52:2.65)$);
+  \draw[thick] (U1) -- (U2) arc (38:-142:{0.5*(\rTwo+\rOne)}) -- (D1);
+  % Force arrow F along upper branch
+  \draw[thick, ->] (U1) -- ($(U1)!0.52!(U2)$) node[above right=1pt] {$F$};
+
+  % Lower hanger bracket and weight P
+  \draw[thick, fill=white] (-0.11, -3.3) arc (180:0:0.11) -- (0.11, -4.5) arc (360:180:0.11) -- cycle;
+  \fill (L) circle (1.3pt);
+  \draw[thick] (0, -4.61) -- (0, -5.05);
+  \draw[thick, fill=white] (-0.35, -5.05) rectangle (0.35, -5.48);
+  \draw[->] (0, -5.26) -- (0, -6.05) node[right=1pt] {$P$};
+\end{tikzpicture}

@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Frame S
+  \draw[->] (0,0) -- (1.35,0) node[below=2pt] {$x$};
+  \draw[->] (0,0) -- (0,1.35) node[right=2pt] {$y$};
+  \draw[->] (0,0) -- (-0.48,-0.48) node[below right=1pt] {$z$};
+  \node at (0.95,1.08) {$S$};
+
+  % Frame S'
+  \begin{scope}[shift={(2.15,0)}]
+    \draw[->] (0,0) -- (1.35,0) node[below=2pt] {$x'$};
+    \draw[->] (0,0) -- (0,1.35) node[right=2pt] {$y'$};
+    \draw[->] (0,0) -- (-0.48,-0.48) node[below right=1pt] {$z'$};
+    \node at (0.95,1.08) {$S'$};
+    \draw[->] (0,0.72) -- (0.85,0.72);
+    \node[below right=2pt and 3pt] at (0,0.72) {$v_1(\mbox{对}\,S)$};
+  \end{scope}
+
+  % Frame S''
+  \begin{scope}[shift={(4.30,0)}]
+    \draw[->] (0,0) -- (1.35,0) node[below=2pt] {$x''$};
+    \draw[->] (0,0) -- (0,1.35) node[right=2pt] {$y''$};
+    \draw[->] (0,0) -- (-0.48,-0.48) node[below right=1pt] {$z''$};
+    \node at (0.95,1.08) {$S''$};
+    \draw[->] (0,0.72) -- (0.85,0.72);
+    \node[below right=2pt and 3pt] at (0,0.72) {$v_2(\mbox{对}\,S')$};
+  \end{scope}
+\end{tikzpicture}

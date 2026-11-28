@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\b{1.75}
+    \def\a{0.75}
+    \def\th{52}
+    \pgfmathsetmacro{\ax}{(\b-\a)*sin(\th)}
+    \pgfmathsetmacro{\ay}{-(\b-\a)*cos(\th)}
+
+    % Outer vertical guide frame
+    \draw (-2.30,0.70) -- (-2.30,-3.65) -- (2.30,-3.65) -- (2.30,0.70);
+
+    % Block M with semicircular trough of radius b
+    \draw (-2.15,0) -- (-1.75,0) arc (180:360:\b) -- (2.15,0) -- (2.15,-2.25) -- (-2.15,-2.25) -- cycle;
+    \node[font=\small] at (-1.65,-1.85) {$M$};
+
+    % Spring k supporting block M
+    \draw (0,-3.65) -- (0,-3.32);
+    \draw[decorate, decoration={zigzag, segment length=5.5pt, amplitude=3.2pt}]
+        (0,-3.32) -- (0,-2.58);
+    \draw (0,-2.58) -- (0,-2.25);
+    \node[right=4pt, font=\small] at (0.05,-2.95) {$k$};
+
+    % Central vertical axis x
+    \draw[->, semithick] (0,-2.25) -- (0,0.95) node[left=1pt, font=\small] {$x$};
+
+    % Center B and trough radius b
+    \coordinate (B) at (0,0);
+    \node[above left=1pt, font=\small] at (B) {$B$};
+    \draw[->, semithick] (B) -- ({-\b*cos(22)}, {-\b*sin(22)})
+        node[midway, above left=0pt, font=\small] {$b$};
+
+    % Cylinder m of radius a centered at A
+    \coordinate (A) at (\ax,\ay);
+    \draw (A) circle (\a);
+    \fill (A) circle (1.2pt);
+    \node[right=2pt, font=\small] at (A) {$A$};
+    \node[font=\small] at ($(A)+(0.20,0.34)$) {$m$};
+
+    % Angle theta and radius a
+    \draw[semithick] (B) -- (A);
+    \draw[semithick] (0,-0.48) arc (270:{270+\th}:0.48);
+    \node[font=\small] at ({0.68*cos(270+\th/2)}, {0.68*sin(270+\th/2)}) {$\theta$};
+
+    \draw[->, semithick] (A) -- ($(A)+({\a*cos(-128)}, {\a*sin(-128)})$)
+        node[midway, below right=0pt, font=\small] {$a$};
+\end{tikzpicture}

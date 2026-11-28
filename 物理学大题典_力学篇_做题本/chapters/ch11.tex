@@ -1,0 +1,974 @@
+\chapter{力学的哈密顿表述}
+
+\section{哈密顿正则方程}
+
+\begin{problem}{11.1.1}
+用柱坐标和球坐标分别写出质量为 $m$ 的质点在势场 $V(x, y, z)$ 中运动的哈密顿函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.2}
+写出 9.3.11 题所述系统的哈密顿函数, 并由正则方程得到它的运动微分方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.3}
+用哈密顿正则方程重解 9.3.48 题.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.4}
+一个单位质量的质点在用极坐标表达的势能为 $V = \frac{k\cos\varphi}{r^2}$ (其中 $k$ 为常量) 的力场中在一个平面上运动. 如 $t = 0$ 时, $r = a, \dot{r} = 0$ , 试用哈密顿正则方程证明 $t = \left(\frac{r^2 - a^2}{2E}\right)^{1/2}$ , 其中 $E$ 是恒定的总能量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.5}
+一个质量为 $m$ 的质点在具有势能为 $V(r)$ 的保守力作用下运动，用球坐标 $r, \theta, \varphi$ 为广义坐标，证明 $p_{\varphi}, \frac{p_r^2}{2m} + \frac{p_{\varphi}^2}{2mr^2\sin^2\theta} + V(r)$ 和 $p_{\theta}^2 + \frac{p_{\varphi}^2}{\sin^2\theta}$ 都是运动常数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.6}
+质量分别为 $m$ 和 $M$ 的两个质点相互作用, 其势能为 $V(r)$ , 其中 $r$ 是两个质点间的距离, 选系统的质心的笛卡儿坐标 $X, Y, Z$ 和质点 $m$ 相对于 $M$ 的球坐标 $r, \theta, \varphi$ 为广义坐标, 写出系统的哈密顿函数, 并找出六个运动常数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.7}
+一个质量为 $m$ 的质点悬于质量不计、不可伸长的绳子的一端，绳子穿过桌上一个小孔，以恒定的速率 $\alpha$ 往上拉，开始时绳长为 $l_0$ ，质点在竖直平面内运动。选绳子与铅垂线的夹角 $\theta$ 为广义坐标，写出系统的哈密顿函数，此哈密顿函数是否是总能量？是否是运动常数？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.8}
+一个处于均匀重力场中质量为 m 的质点被约束在一个球面上运动, 球的半径 r 随时间变化, $r = r(t)$ . 选球心为原点, 竖直向上的轴为极轴, 以球坐标 $\theta$ 、 $\varphi$ 为广义坐标, 写出系统的哈密顿函数和运动微分方程, 哈密顿函数是否是总能量?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.9}
+一个质量为 $m$ 的质点，在力 $f = \frac{k}{x^2}\mathrm{e}^{-\frac{t}{\tau}}$ （其中 $k, \tau$ 都是正值常量）作用下做一维运动，写出它的拉格朗日函数和哈密顿函数，哈密顿函数是否系统的总能量？是否运动常数？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.10}
+一个单位质量的质点在广义势场 $U = \frac{1 + \dot{r}^2}{r}$ ( $r$ 是质点离原点的距离) 中在一个平面上运动, 用极坐标写出哈密顿函数, 并找出两个运动积分.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.11}
+质量为 m 的粒子在半径为 R 的球面上运动, 粒子未受其他外力作用.
+
+(1) 此题需要几个广义坐标?
+
+(2) 选择一组广义坐标, 写出系统的拉格朗日函数;
+
+(3) 写出系统的哈密顿函数, 它是否守恒?
+
+(4) 证明粒子沿球的一个大圆运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.12}
+一个粒子在重力作用下，在光滑的、对称轴是竖直的旋转抛物面内侧面运动，用离轴的距离 r 和方位角 $\varphi$ 作为广义坐标，求：
+
+(1) 系统的拉格朗日函数、广义动量和哈密顿函数；
+
+(2) r 作为时间的函数满足的运动微分方程；
+
+(3) 如 $\frac{d\varphi}{dt}=0$ ，证明粒子能围绕抛物面最低点做小振动，并求小振动的角频率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.13}
+两个质量均为 $m$ 的质点用一根长为 $L$ 的轻绳连接，绳子穿过一个半角为 $\alpha$ 、直立的圆锥顶端的小孔。一个质点悬挂在圆锥内，另一个被限制在圆锥的表面上运动，如图11.1所示，不计摩擦。
+
+(1) 选适当的广义坐标, 写出系统的拉格朗日函数和哈密顿函数;
+
+(2) 各广义坐标满足的微分方程；
+
+(3) 求在圆锥面上运动的质点做圆轨道运动的角频率.
+\begin{center}
+\input{figures/chapter11/fig_11_1_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.14}
+一轻的、粗细均匀的细 U 形管部分地注入水银(总质量为 M、单位长度的质量为 $\rho$ )，如图 11.2 所示。管子能绕一根竖直臂转动，忽略摩擦、玻璃管的质量和转动惯量以及转轴处水银柱的转动惯量。
+
+（1）计算管子不转时水银柱的势能，并描述它可能的运动.
+
+(2) 管子以初角速度 $\omega_{0}$ 旋转, 水银柱在偏离不转动时平衡的竖直位移 $z_{0}$ 处静止开始运动:
+
+(a) 写出系统的拉格朗日函数和哈密顿函数；
+
+(b) 写出运动微分方程；
+
+(c) 运动中有哪些守恒量, 写出它们的表达式;
+
+(d) 尽可能完全地对运动作定性描述.
+\begin{center}
+\input{figures/chapter11/fig_11_1_14_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.15}
+图 11.3 中的系统由一个质量为 m 的粒子和一个质量为 M 的转子组成, 转子是一个密度均匀、有一个旋转对称轴的刚体, 粒子和转子的每一体元间有万有引力或库仑力互相吸引, 粒子和转子的运动是自由的. 讨论这个系统的运动, 在讨论中回答以下问题:
+
+(1) 这个系统有几个自由度；
+
+(2) 取一组适当的坐标, 写出拉格朗日函数或哈密顿函数, 说明如何写亦可;
+
+(3) 粒子和转子间的相互作用与哪些坐标有关；
+
+(4) 能给出多少运动常数, 它们有何物理意义?
+
+(5) 这个系统的什么轨道十分类似于两个点质量的轨道？说明它们之间有(小的)差别的原因，什么原因使转子相对于其质心有运动？
+\begin{center}
+\input{figures/chapter11/fig_11_1_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.16}
+地球以恒定的角速度 $\omega = \omega k$ 相对于惯性参考系运动， $k$ 是固连于地球的 $z$ 轴的单位矢量，用固连于地球的笛卡儿坐标 $x, y, z$ 为广义坐标，写出质量为 $m$ 的质点在势场 $V(x, y, z)$ 中运动的哈密顿函数，证明 $H$ 不是总能量，但是一个守恒量。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.17}
+质量为 $m$ 的质点作一维运动的拉格朗日函数 $L = \frac{1}{2} m e^{\gamma t} (\dot{x}^2 - \omega^2 x^2)$ , 其中 $m, \gamma$ 和 $\omega$ 都是正实数.
+
+(1) 求运动微分方程, 根据作用在质点上的力的类型对运动微分方程作些说明;
+
+(2) 求广义动量, 由此构造哈密顿函数;
+
+(3) 该哈密顿函数是否是运动常数？机械能是否守恒？
+
+(4) 若初始条件为 $x(0) = 0, \dot{x}(0) = v_0$ ，问当 $t \to \infty$ 时， $x(t)$ 渐近地等于什么？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.18}
+一个自由度数为 1 的系统的哈密顿函数为 $H = \frac{p^2}{2\alpha} - bqpe^{-\alpha} + \frac{1}{2} bae^{-\alpha} (\alpha + be^{-\alpha}) + \frac{1}{2} kq^2$ ，式中 $a, b, \alpha$ 和 $k$ 都是常量，求此系统的拉格朗日函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.19}
+两个惰性气体原子,每一个质量都是 m,它们之间的经典相互作用势能为
+
+\[
+V (r) = - \frac {2 A}{r ^ {6}} + \frac {B}{r ^ {1 2}}
+\]
+
+$A, B > 0$ ，且为常量， $r$ 为两原子间的距离.
+
+(1) 写出这两个原子构成的系统的哈密顿函数(取适当的广义坐标);
+
+(2) 求出这个系统的能量最低的经典态；
+
+(3) 若能量稍高于(2)所求的最低能态, 求这个系统的振动频率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.20}
+一个质量为 $m$ 、带电荷量为 $-e$ 的非相对论电子在圆柱形磁控管内运动，磁控管由一个半径为 $a$ 、电势为 $-\phi_0 (\phi_0 > 0$ ，为常量)的导线和电势为零的半径为 $R$ 的同轴圆柱面组成。磁控管内有一平行其轴的匀强磁场 $B$ ，选用柱坐标 $r, \varphi, z$ 为广义坐标，标势 $\phi = -\phi_0 \ln \left( \frac{r}{R} \right) / \ln \left( \frac{a}{R} \right)$ ，矢势 $A = \frac{1}{2} B r e_\varphi$ （其中 $e_\varphi$ 是沿 $\varphi$ 增大方向的单位矢量）。
+
+(1) 写出哈密顿函数；
+
+(2) 证明存在三个运动常数, 并讨论可能出现的运动类型;
+
+(3) 假定某电子以等于零的初始速度离开里面的那根导线, 则存在某个磁场值 $B_{c}$ , 当 $B \leqslant B_{c}$ 时, 该电子能到达外面的圆柱面, 当 $B > B_{c}$ 时, 它不能到达外面的圆柱面, 求出 $B_{c}$ 的值.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.21}
+对于处在重力场中的对称陀螺, 使用劳斯方程获得非循环坐标满足的运动微分方程, 已知质心离固定点的距离为 $h$ , 对固定点的三个主转动惯量为 $I_{1}, I_{1}, I_{3}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.22}
+一个质量为 $m$ 的质点在重力作用下，在 $z = x^{2} + y^{2}$ 面内滑动， $z$ 轴竖直向上，采用柱坐标，用劳斯方程推导出非循环坐标满足的运动微分方程。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.23}
+一个力学系统具有动能 $T = \frac{1}{2}\left(\dot{q}_1^2 +\frac{\dot{q}_2^2}{a + bq_1^2}\right)$ ，势能 $V = \frac{1}{2} (k_1q_1^2 +k_2)$ ，式中 $a,b,k_{1}$ 和 $k_{2}$ 均为常量，写出劳斯函数和劳斯方程。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.1.24}
+一个质量为 $m$ 的质点在势能 $V(r)$ 表示的有心力 $f(r)$ 作用下做圆周运动。采用极坐标，用劳斯方程讨论质点做圆周运动的稳定性条件。
+\end{problem}
+\clearpage
+
+
+\section{泊松括号和泊松定理}
+
+\begin{problem}{11.2.1}
+(1) 若哈密顿函数 $H$ 和某正则变量和时间的函数 $F$ 都是运动常数, 证明 $\frac{\partial F}{\partial t}$ 也是一个运动常数;
+
+(2) 一个自由粒子的一维运动, 哈密顿函数 $H$ 是运动常数, 直接计算说明 $F = x - \frac{p}{m} t$ 是运动常数, $\frac{\partial F}{\partial t}$ 也是运动常数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.2}
+如正则方程的解已经获得, $p_{i},q_{i}(i=1,2,\cdots,s)$ 均为 t 和 2s 个积分常数 $C_{1}$ 、 $C_{2}$ 、 $\cdots$ 、 $C_{2s}$ 的函数,则拉格朗日括号
+
+\[
+(C _ {\alpha}, C _ {\beta}) = \sum_ {i = 1} ^ {s} \left(\frac {\partial q _ {i}}{\partial C _ {\alpha}} \frac {\partial p _ {i}}{\partial C _ {\beta}} - \frac {\partial q _ {i}}{\partial C _ {\beta}} \frac {\partial p _ {i}}{\partial C _ {\alpha}}\right)
+\]
+
+也是运动常数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.3}
+若 $\varphi$ 是坐标和动量的任意标量函数, 试证 $[\varphi, J_{z}] = 0$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.4}
+试用泊松定理证明系统的角动量和动量的笛卡儿坐标分量 $J_{x}, J_{y}, J_{z}, p_{x}, p_{y}, p_{z}$ 中角动量的任何两个分量和动量的第三个分量（例如 $J_{x}, J_{z}$ 和 $p_{y}$ 或 $J_{x}, J_{y}$ 和 $p_{z}$ ）为运动常数，则 $J$ 和 $p$ 都是运动常数。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.5}
+设 A 是平方反比律力作用下的有心运动中的拉普拉斯-龙格-楞次矢量，
+
+\[
+\boldsymbol {A} = \boldsymbol {p} \times \boldsymbol {J} - m ^ {2} \alpha \frac {\boldsymbol {r}}{r}
+\]
+
+其中 J 是关于力心的角动量， $\alpha$ 是有心力中的系数， $F = -\frac{m\alpha}{r^{2}}e_{r}$ . 利用泊松括号的性质，求以下各泊松括号： $[A_{\alpha}, J_{\beta}]$ ， $[A_{\alpha}, H]$ （脚标 $\alpha, \beta$ 表示笛卡儿坐标的分量），并证明它们都是守恒量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.6}
+已知某系统的哈密顿函数
+
+\[
+H = q _ {1} p _ {1} - q _ {2} p _ {2} - a q _ {1} ^ {2} + b q _ {2} ^ {2}
+\]
+
+式中 a、b 均为常量（这个哈密顿函数并不来自拉格朗日函数，是假想的），证明 $F_{1}=q_{1}q_{2}$ ， $F_{2}=q_{1}e^{-t}, F_{3}=\frac{p_{2}-bq_{2}}{q_{1}}$ 都是运动常量，讨论它们的独立性，能否由它们找出新的独立的运动常量。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.7}
+找出各向同性的三维谐振子尽可能多的运动积分,其拉格朗日函数为
+
+\[
+L = \frac {1}{2} m \left(\dot {x} ^ {2} + \dot {y} ^ {2} + \dot {z} ^ {2}\right) - \frac {1}{2} k \left(x ^ {2} + y ^ {2} + z ^ {2}\right)
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.8}
+(1) 对于任何正则变量和时间的函数 $a(q_{1}, q_{2}, \cdots, q_{s}, p_{1}, p_{2}, \cdots, p_{s}, t)$ , 证明
+
+\[
+\frac {\mathrm{d} a}{\mathrm{d} t} = \frac {\partial a}{\partial t} + [ a, H ]
+\]
+
+(2) 某个两维振子, 动能、势能分别为
+
+\[
+T = \frac {1}{2} m (\dot {x} ^ {2} + \dot {y} ^ {2})
+\]
+
+\[
+V = \frac {1}{2} k (x ^ {2} + y ^ {2}) + c x y
+\]
+
+其中 c 和 k 是常量.
+
+(a) 用坐标变换证明该振子是一个各向异性的谐振子；
+
+(b) 找出两个运动常数, 并用(1)的结论证明;
+
+(c) 若 $c = 0$ ，找出第三个运动常数；
+
+(d) 对于各向同性的振子, 证明对称矩阵
+
+\[
+A _ {i j} = \frac {1}{2 m} p _ {i} p _ {j} + \frac {1}{2} k x _ {i} x _ {j}
+\]
+
+是运动常数,证明方法是设法将此矩阵的每一矩阵元用已知的运动常数表示出来.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.9}
+已知
+
+\[
+\begin{array}{r l} & \varphi = f _ {1} (q _ {1}, p _ {1}) f _ {2} (q _ {2}, p _ {2}) \\ & \psi = f _ {3} (q _ {1}, p _ {1}) f _ {4} (q _ {2}, p _ {2}) \end{array}
+\]
+
+计算泊松括号 $[\varphi,\psi]$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.10}
+若系统的哈密顿函数可写成下列形式：
+
+\[
+H = H \left[ f \left(q _ {1}, q _ {2}, \dots , q _ {m}, p _ {2}, p _ {2}, \dots , p _ {m}\right), q _ {m + 1}, \dots , q _ {s}, p _ {m + 1}, \dots , p _ {s}, t \right]
+\]
+
+则 $f(q_{1},q_{2},\cdots,q_{m},p_{1},p_{2},\cdots,p_{n})$ 是守恒量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.2.11}
+若两个已知函数 $\varphi(q, p, t)$ 、 $\psi(q, p, t)$ 有下列恒等式：
+
+\[
+\varphi \Bigl \{\frac {\partial \varphi}{\partial t} + [ \varphi , H ] \Bigr \} \equiv \frac {\partial \psi}{\partial t} + [ \psi , H ]
+\]
+
+其中 $H$ 是哈密顿函数， $[\varphi, H]$ 、 $[\psi, H]$ 均为泊松括号，找出此正则方程的一个运动积分.
+\end{problem}
+\clearpage
+
+
+\section{哈密顿原理}
+
+\begin{problem}{11.3.1}
+求在 $xy$ 平面内经过两个固定点的一条曲线；绕 $z$ 轴的转动惯量为极小值，用平面极坐标写出该曲线必须满足的微分方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.2}
+试用哈密顿原理求复摆做微振动的周期.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.3}
+试用哈密顿原理求解 7.4.30 题.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.4}
+在 $xy$ 平面上的一条通过 $P_{1}, P_{2}$ 的坐标分别为 $(x_{1}, y_{1}), (x_{2}, y_{2})$ 的一条曲线
+
+$y = y(x)$ 绕 $x$ 轴转动时扫出的一个曲面，问 $y(x)$ 为何函数时该曲面面积最小？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.5}
+一个系统的拉格朗日函数为
+
+\[
+L = \frac {1}{2} \dot {x} ^ {2} - \frac {1}{2} x ^ {2}
+\]
+
+(1) 直接验证对路径 $x = A \sin t$ 有
+
+\[
+\delta \int_ {0} ^ {\frac {\pi}{8}} L \mathrm{d} t = 0
+\]
+
+(2) 比较在 $t = 0$ 和 $t = \frac{\pi}{8}$ 均有同样的 $x$ 值的路径族 $x = A(\sin t + c\sin 8t)$ ( $c$ 可取各种值), 证明当 $c = 0$ 时, $\int_{0}^{\frac{\pi}{8}} L \mathrm{d}t$ 有最小值.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.6}
+一个质点在竖直平面内从一点无初速地沿某一条光滑曲线滑到给定的另一点,要所需时间最短,求此光滑曲线满足的微分方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.7}
+证明在圆柱面上任何两点间最短曲线是螺旋线
+
+\[
+z = A r \varphi + B
+\]
+
+$r, \varphi, z$ 是柱坐标， $z$ 轴沿圆柱的对称轴， $r$ 为圆柱的半径， $A, B$ 由所给两点的 $z, \varphi$ 值确定.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.8}
+分别用哈密顿原理和变形的哈密顿原理得到 9.3.27 题得到的运动微分方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.9}
+用哈密顿原理求 9.3.13 题所述系统的运动微分方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.10}
+图 11.7 中质量为 m 的质点通过一个劲度系数为 k 的弹簧连在动坐标系 x=0 处，动系沿 x 正方向以 $s=vt+\frac{1}{3}at^{3}$ (其中 v、a 均为常量) 做直线运动，减震器对质点的作用力与相对速率的立方成正比，比例系数为 b，由哈密顿原理导出质点的运动微分方程.
+\begin{center}
+\input{figures/chapter11/fig_11_3_10_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.11}
+一个具有单位质量的质点在外力 $F = -(x + t)$ 作用下沿 $x$ 轴运动，在 $t = 0$ 及 $t = 1$ 时均位于 $x = 0$ 处，用里茨法求出此问题的近似解，并与准确解作比较，比较 $t = 0.5$ 时的结果.
+
+提示: 近似解可用 $x(t)=t(1-t)(\alpha_{0}+\alpha_{1}t+\cdots+\alpha_{n}t^{n})$ 的形式, 仅要求对 n=0 作计算, 求精确解可作变换 $y=x+t$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.12}
+质点运动的拉格朗日函数为
+
+\[
+L = \frac {1}{2} (\dot {r} ^ {2} + r ^ {2} \dot {\varphi} ^ {2})
+\]
+
+已知 t=0 时, r=2, $\varphi=0$ ; t=2 时, r=3, $\varphi=1$ . 试用里茨法求 t=1 时的质点位置的近似值, 并与精确值作比较.
+
+提示：可采用图11.8(a)、(b)的折线所示的 $r(t)$ 和 $\varphi(t)$ 计算 $s = \int_0^2 L\mathrm{d}t$ ，由 $\frac{\partial s}{\partial\alpha} = 0$ $\frac{\partial s}{\partial\beta} = 0$ 决定待定的 $\alpha, \beta$ 值. 这样确定的 $r(t), \varphi(t)$ ，在 $t \neq 0, 1, 2$ 时，不能得到好的近似
+
+(a)
+
+(b)
+
+值. 多考虑几点, 可得更好一点的近似.
+\begin{center}
+\input{figures/chapter11/fig_11_3_12_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter11/fig_11_3_12_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.13}
+用莫培督原理重解 11.3.2 题.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.14}
+用莫培督原理重解 7.4.30 题.
+\begin{center}
+\input{figures/chapter11/fig_11_3_14_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.3.15}
+用莫培督原理的雅可比形式推导有心运动的运动微分方程.
+\end{problem}
+\clearpage
+
+
+\section{正则变换}
+
+\begin{problem}{11.4.1}
+试证
+
+\[
+\begin{array}{l} {Q = \ln \left(\frac {1}{q} \sin p\right)} \\ {P = - q \omega t p} \end{array}
+\]
+
+为一正则变换.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.2}
+证明下列变换都是正则变换：
+
+(1) $Q=q^{2}+\frac{p^{2}}{n^{2}},P=\frac{n}{2}\arctan\left(\frac{p}{nq}\right)$ ，式中n是一个常数；
+
+(2) 
+
+\[
+Q _ {1} = q _ {1} ^ {2} + p _ {1} ^ {2}, \quad Q _ {2} = \frac {1}{2} (q _ {1} ^ {2} + q _ {2} ^ {2} + p _ {1} ^ {2} + p _ {2} ^ {2})
+\]
+
+\[
+P _ {1} = \frac {1}{2} \arctan \left(\frac {q _ {2}}{p _ {2}}\right) - \frac {1}{2} \arctan \left(\frac {q _ {1}}{p _ {1}}\right)
+\]
+
+\[
+P _ {2} = - \arctan \left(\frac {q _ {2}}{p _ {2}}\right)
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.3}
+证明 $Q = q + te^{p}, P = p$ 是一正则变换，找出 $S(q, Q, t)$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.4}
+证明
+
+\[
+\begin{array}{c} Q = \ln (1 + q ^ {1 / 2} \cos p) \\ P = 2 (1 + q ^ {1 / 2} \cos p) q ^ {1 / 2} \sin p \end{array}
+\]
+
+是正则变换,证明产生这正则变换的母函数为
+
+\[
+S = - \left(\mathrm{e} ^ {Q} - 1\right) ^ {2} \tan p
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.5}
+用拉格朗日括号检验 11.4.2 题的变换是正则变换.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.6}
+$\alpha, \beta$ 为何值时，变换
+
+\[
+Q = q ^ {a} \cos \beta p, \quad P = q ^ {a} \sin \beta p
+\]
+
+为一正则变换.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.7}
+证明变换
+
+\[
+\begin{array}{l l} Q _ {1} = a _ {1 1} q _ {1} + a _ {1 2} q _ {2}, & Q _ {2} = a _ {2 1} q _ {1} + a _ {2 2} q _ {2} \\ P _ {1} = b _ {1 1} p _ {1} + b _ {1 2} p _ {2}, & P _ {2} = b _ {2 1} p _ {1} + b _ {2 2} p _ {2} \end{array}
+\]
+
+在 $b_{ij} = |A_{ij}| / |A|$ 对所有 $i, j$ 均成立，其中 $|A|$ 是矩阵 $(a_{ij})$ 的行列式， $|A_{ij}|$ 是矩阵元 $a_{ij}$ 的代数余子式，且所有 $a_{ij}$ 和 $b_{ij}$ 都是常数这些条件下是正则变换。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.8}
+(1) 要使
+
+\[
+Q _ {1} = q _ {1} ^ {2}, Q _ {2} = q _ {1} + q _ {2}
+\]
+
+\[
+P _ {1} = P _ {1} \left(q _ {1}, q _ {2}, p _ {1}, p _ {2}\right), \quad P _ {2} = P _ {2} \left(q _ {1}, q _ {2}, p _ {1}, p _ {2}\right)
+\]
+
+为一正则变换, 找出 $P_{1}, P_{2}$ 最一般的函数形式.
+
+提示: 可用拉格朗日括号表述的正则变换条件给出的偏微分方程组求解.
+
+(2) 对上述正则变换,作何种特别的选择,可将
+
+\[
+H = \left(\frac {p _ {1} - p _ {2}}{2 q _ {1}}\right) ^ {2} + p _ {2} + (q _ {1} + q _ {2}) ^ {2}
+\]
+
+变换为
+
+\[
+H ^ {*} = P _ {1} ^ {2} + P _ {2}
+\]
+
+并用此题验证
+
+\[
+\frac {\mathrm{d}}{\mathrm{d} t} \left(\frac {\partial L ^ {*}}{\partial \dot {Q} _ {i}}\right) - \frac {\partial L ^ {*}}{\partial Q _ {i}} = 0
+\]
+
+\[
+\frac {\mathrm{d}}{\mathrm{d} t} \left(\frac {\partial L ^ {*}}{\partial \dot {P} _ {i}}\right) - \frac {\partial L ^ {*}}{\partial P _ {i}} = 0
+\]
+
+成立.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.9}
+求出下列母函数产生的正则变换：
+
+(1) $S_{1}(\bm {q},\bm {Q},t) = \sum_{i = 1}^{s}q_{i}Q_{i};$ 
+
+(2) $S_{2}(p, Q, t) = -\tan p(\mathrm{e}^{Q} - 1)$ ; 
+
+(3) $S_{3}(\bm {q},\bm {P},t) = \sum_{i = 1}^{s}q_{i}P_{i};$ 
+
+(4) $S_{4}(\bm {p},\bm {P},t) = \sum_{i = 1}^{s}p_{i}P_{i}.$
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.10}
+证明 $Q_{1} = p_{1}^{2}, Q_{2} = p_{2}^{2} + q_{2}, P_{1} = -\frac{q_{1}}{2p_{1}} + t, P_{2} = p_{2} + t$ 是正则变换，并求出产生该正则变换的 $S_{1}(q, Q, t), S_{3}(q, P, t)$ 两种形式的母函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.11}
+证明
+
+\[
+\begin{array}{c} Q = \ln \left(1 + q ^ {\frac {1}{2}} \cos p\right) \\ P = \left(1 + q ^ {\frac {1}{2}} \cos p\right) q ^ {\frac {1}{2}} \sin p \end{array}
+\]
+
+为正则变换,并求出产生它的母函数.
+
+提示: 用 $\mathrm{d}S = -q\mathrm{d}p - cP\mathrm{d}Q$ 时需令 $c = 2$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.12}
+用母函数 $S_{1} = Q_{1}^{1 / 2}q_{1} - \frac{2}{3} (Q_{2} - q_{2})^{3 / 2} - (Q_{1} + Q_{2})t$ 产生的正则变换来求解哈密顿函数为 $H = p_1^2 +p_2^2 +q_2$ 的系统的运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.4.13}
+一质量为 m 的质点在势场 $V(q)$ 中做一维运动, 质点受到正比于其速度的阻力 $-2m\gamma\dot{q}$ .
+
+(1) 证明可由拉格朗日函数 $L = \mathrm{e}^{2\gamma t}\left[\frac{1}{2} m\dot{q}^2 - V(q)\right]$ 得到运动微分方程；
+
+(2) 用母函数 $S_{3}(q, P, t) = \mathrm{e}^{\gamma t} q P$ ，求正则变换后的哈密顿函数 $H^{*}(Q, P, t)$ ，对于 $V(q) = \frac{1}{2} m \omega^{2} q^{2}$ ，证明变换后的哈密顿函数
+
+\[
+H ^ {*} = \frac {1}{2 m} P ^ {2} + \frac {1}{2} m \omega^ {2} Q ^ {2} + \gamma Q P
+\]
+
+为运动常数；
+
+(3) 对于弱阻尼情况 $\gamma < \omega$ ，由(2)问中的运动常数求阻尼振子的解 $q(t)$ .
+\end{problem}
+\clearpage
+
+
+\section{哈密顿-雅可比方程}
+
+\begin{problem}{11.5.1}
+一个质量为 m 的质点以初速 v、对水平线仰角为 $\alpha$ 的方向，在不计阻力的空气中抛射，用哈密顿-雅可比方程求其运动规律.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.2}
+求对称陀螺在重力作用下绕固定点转动时的哈密顿主函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.3}
+用哈密顿-雅可比方程求二维势场 $V = \frac{k}{r}$ ( $k$ 为常量)中运动的质点的轨道方程, 可采用 $u = r + x$ 和 $v = r - x$ 为广义坐标.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.4}
+某系统的哈密顿函数为
+
+\[
+H = \frac {1}{2 m} p _ {1} ^ {2} + \frac {1}{2 m} (p _ {2} - k q _ {1}) ^ {2}
+\]
+
+其中 m、k 均为常量。用哈密顿正则方程和哈密顿-雅可比方程解此系统的运动轨道。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.5}
+用哈密顿-雅可比方程求哈密顿函数为
+
+\[
+H = \frac {1}{2} (p _ {1} ^ {2} + p _ {2} ^ {2}) (q _ {1} ^ {2} + q _ {2} ^ {2}) ^ {- 1} + (q _ {1} ^ {2} + q _ {2} ^ {2}) ^ {- 1}
+\]
+
+的质点的轨道.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.6}
+用哈密顿-雅可比方程求哈密顿函数为 $H = p^2 - q$ 的系统的运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.7}
+(1) 对于一个哈密顿函数为 $H = \frac{1}{2} p^2$ 的粒子的运动, 求解母函数 $S(q, \alpha, t)$ 的哈密顿-雅可比方程, 求出正则变换 $q = q(\beta, \alpha), p = p(\beta, \alpha)$ , 其中 $\beta$ 和 $\alpha$ 分别是变换后的坐标和动量. 说明所得的结果;
+
+(2) 若存在一扰动, 哈密顿函数变为 $H = \frac{1}{2} q^2 + \frac{1}{2} p^2$ , 仍用 (1) 所得的正则变换, 用 $\alpha$ 、 $\beta$ 、 $t$ 表示变换后的哈密顿函数 $H^*$ , 求解 $\beta(t)$ 和 $\alpha(t)$ , 并证明扰动后的解是简谐的.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.8}
+一个质量为 $m$ 的质点在 $xy$ 平面内运动，受到力心位于 $(1,0)$ 和 $(-1,0)$ ，势能为 $V = A_{1}r_{1}^{-1} + A_{2}r_{2}^{-1}$ （其中 $r_1, r_2$ 分别是到两个力心的距离， $A_{1}$ 和 $A_{2}$ 是常数）的力场作用，用椭圆坐标 $\xi, \eta$ ，它与 $x, y$ 的变换关系为
+
+\[
+x = \operatorname{ch} \xi \cos \eta , \quad y = \operatorname{sh} \xi \sin \eta
+\]
+
+用哈密顿-雅可比方程求质点的运动轨道(用 $\xi,\eta$ 表达即可).
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.9}
+一个质量为 $m$ 的质点在球坐标表达的势场中运动, $V = f(r) + \frac{1}{r^2} g(\theta)$ , 其中 $f(r), g(\theta)$ 是已知的函数, 求轨道的一般解.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.10}
+一个质量为 $m$ 的粒子在一个恒力及一个与力心的距离平方成反比的力场中运动, 其势能为 $V = \frac{A}{r} - Bz (A, B$ 均为常量, $r$ 为球坐标), 求其运动学方程.
+
+提示: 可采用抛物线坐标 $\xi, \eta, \theta$ , 它与柱坐标 $\rho, \varphi, z$ 的关系为
+
+\[
+\xi = r + z, \quad \eta = r - z, \quad \theta = \varphi , \quad r ^ {2} = \rho^ {2} + z ^ {2}
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.11}
+一个质量为 $m$ 的粒子在下列势场中运动
+
+\[
+V = \frac {\sigma^ {2}}{r _ {1} r _ {2}} \left[ f \left(\frac {r _ {2} + r _ {1}}{2 \sigma}\right) + g \left(\frac {r _ {2} - r _ {1}}{2 \sigma}\right) \right],
+\]
+
+其中 $r_1, r_2$ 分别为粒子距两个固定点 $P_1, P_2$ 的距离， $\sigma$ 是一个常数， $f(x), g(x)$ 是给定的任意函数。求用椭圆坐标 $\xi, \eta, \theta$ 表达的哈密顿主函数。 $\xi, \eta, \theta$ 和柱坐标的关系为
+
+\[
+\begin{array}{l} \rho = \sigma [ (\xi^ {2} - 1) (1 - \eta^ {2}) ] ^ {1 / 2} \\ z = \sigma \xi \eta , \quad \varphi = \theta \end{array}
+\]
+
+选坐标轴 z 和 $\sigma$ 时使 $P_{1}, P_{2}$ 在 z 轴上且分别处在 $z = \sigma$ 和 $z = -\sigma$ 两点.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.12}
+用拉格朗日-沙比方法重解 11.5.4 题.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.13}
+质量为 $m$ 的粒子在势场 $V(r) = \frac{k}{r^2} (k > 0)$ 且为常量)中运动, 用拉格朗日-沙比方法求轨道方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.14}
+一个电机使一根竖直轴随之旋转, 轴的下端挂一个长度为 l、质量为 m 的单摆, 单摆被限制在一个平面内运动, 这个平面由电动机带动以恒定的角速度 $\omega$ 旋转, 如图 11.11 所示.
+
+(1) 用拉格朗日-沙比方法得到质点的运动微分方程；
+
+(2) 求出在转动参考系中的平衡位置及绕平衡位置做小振动的频率,说明平衡的稳定条件.
+\begin{center}
+\input{figures/chapter11/fig_11_5_14_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.5.15}
+一个质量为 $m$ 的质点在随时间变化的势场中沿直线运动, $V = mAxt^2$ , $A$ 为常数. 用拉格朗日-沙比方法求此质点运动的一般解.
+\end{problem}
+\clearpage
+
+
+\section{作用变量、角变量及其应用}
+
+\begin{problem}{11.6.1}
+用作用变量和角变量分析一个粒在下列有心力作用下的运动,这个有心力
+
+的势能为
+
+\[
+V (r) = - \frac {k}{r} - \frac {\beta}{r ^ {2}}
+\]
+
+其中 $r$ 是粒子离力心的距离， $k$ 和 $\beta$ 是正的常量。设 $-\frac{mk^2}{2h^2 - 4m\beta} < E < 0$ ，其中 $E$ 是粒子的机械能， $h$ 是粒子对力心的角动量。在粒子运动所跨越的 $r$ 的范围内有 $\beta \ll kr$ 。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.2}
+一质量为 $m$ 的质点在势能 $V(x) = F|x|(F$ 是一正值常量)作用下做一维运动, 利用作用变量、角变量把运动的周期表达成能量的函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.3}
+一质量为 $m$ 的质点在势能 $V = -\frac{k}{|x|}$ ( $k$ 为正值常量)作用下做一维运动，能量为负值时,运动是有界的和振荡的.用作用变量、角变量把运动的周期表达成能量的函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.4}
+利用作用变量、角变量求力常数各不相同的三维谐振子的频率，并求出笛卡儿坐标以及与之共轭的动量表成作用变量、角变量的函数.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.5}
+一个力常数为 $k$ 的线性谐振子, 它的质量突然增加一个小量 $\varepsilon$ , 用正则微扰论求振子的频率增量 $\nu - \nu^0$ , 算到 $\varepsilon$ 的二次方为止. 证明在 $\varepsilon$ 的同级近似下所得结果与增量的严格预期值是一致的.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.6}
+用正则微扰论求有限振幅振动的单摆运动, 设总能量 $E \ll mgl$ , 求振子较之小振幅振动的频率增量, 只考虑一级近似.
+
+提示：
+
+\[
+H = \frac {1}{2 m l ^ {2}} p ^ {2} + \frac {1}{2} m g l \theta^ {2} - \frac {1}{2 4} m g l \theta^ {4}
+\]
+
+前两项为 $H_{0}$ ，最后一项为 $H_{1}$ .
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.7}
+如图 11.12 所示, 一质量为 $m$ 的质点被约束在一直线上运动, 并被系于劲度系数均为 $k$ 、原长为 $b$ 的两弹簧的端点, 另一端固定. 质点运动轨道离弹簧的固定端点的最短距离为 $a, a > b$ . 由正则微扰论, 考虑一级微扰, 求有限振幅的振荡频率的最低级修正.
+\begin{center}
+\input{figures/chapter11/fig_11_6_7_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.8}
+一个非线性谐振子的势能为
+
+\[
+V (x) = \frac {1}{2} k x ^ {2} - \frac {1}{3} m \lambda x ^ {3}
+\]
+
+其中 $\lambda$ 是个小量, 求受扰的作用、角变量与未受扰的线性谐振子的作用、角变量间的变换关系.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.9}
+如图 11.13 所示, 一个质量为 $m$ 、绳长为 $l$ 的平面摆被约束在一斜面上做小振动, 当平面的倾角 $\alpha$ 缓慢变化时, 它的振幅和能量将如何变化? 如 $\alpha = \alpha_{1}$ 时, 振幅为 $A_{1}$ , 缓慢变到 $\alpha = \alpha_{2}$ 时, 振动的振幅 $A_{2}$ 多大? 在此过程中, 对系统做了多少功?
+\begin{center}
+\input{figures/chapter11/fig_11_6_9_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.10}
+考虑 11.6.2 题所述系统, 假定参量 F 从初始值缓慢变化, 质点的能量、振动周期和振动振幅将如何变化?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.11}
+考虑 11.6.3 题所述系统, 假定参量 k 从初始值开始缓慢变化, 质点的能量、振动周期和振动振幅将如何变化?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.12}
+一个完全弹性的球在两个平行的墙之间做一维运动, 设两墙相距为 l, 问:
+
+(1) 当一个墙缓慢地移动时；
+
+(2) 当球的质量缓慢变化时, 球的能量、振动周期将如何变化?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.13}
+在小振动极限下,考虑一个质量为 m 的单摆,假定长为 l 的摆线非常缓慢地被缩短(通过在支承点处一个无摩擦小孔向上拉摆线,如图11.14所示),使l在一个周期内的相对变化很小.问振动幅度怎样随l改变?
+\begin{center}
+\input{figures/chapter11/fig_11_6_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.14}
+一个质量为 $m$ 的粒子, 被限制在一个盒子里仅能沿 $x$ 轴运动, 盒子的两端的面以比粒子的速率小得多的速率 $v$ 向中心移动, 如图 11.15 所示.
+
+(1) 若盒壁相距 $x_{0}$ 时粒子的动量为 $p_{0}$ ，求出以后任何时候粒子的动量（粒子和盒壁的碰撞是完全弹性的，并设在所考虑的时间内粒子的速率都远小
+
+于光速);
+
+(2) 当盒壁相距 $x$ 时, 为使两壁以恒定速率 $v$ 运动, 必须施加在每一盒壁平均外力多大?
+\begin{center}
+\input{figures/chapter11/fig_11_6_14_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{11.6.15}
+一摆由一根长为 $L$ 、质量为 $M$ 均质刚性杆和一个质量为 $\frac{1}{3} M$ 沿杆爬动的昆虫组成, 如图 11.16 所示. 杆的一端安上轴, 在竖直平面内摆动. 当 $t = 0$ 时, 杆偏离铅垂线的角度为 $\theta_0$ , 处于静止, 昆虫爬在杆上有轴的那一端以固定速率 $v$ 慢慢爬向杆的底端, 假设 $\theta_0 \ll 1\mathrm{rad}$ .
+
+(1) 求当昆虫沿杆爬了 l 时摆的摆动频率；
+
+(2) 求当昆虫爬到杆的底端时摆的振幅；
+
+(3) 为了使(1)、(2)中的结论有效, 昆虫的爬动应该多慢?
+\begin{center}
+\input{figures/chapter11/fig_11_6_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+

@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\ang{42}
+  % Rod AB
+  \draw[thick] (-2.6,0) node[below=2pt] {$A$} -- (2.4,0) node[below=2pt] {$B$};
+
+  % Rod CD
+  \draw[thick] (180+\ang:2.35) node[below right=1pt] {$C$} -- (\ang:2.35) node[right=2pt] {$D$};
+
+  % Ring M at intersection (0,0)
+  \draw[thick] (0,0) circle (0.11);
+  \node[above left=2pt] at (0,0.05) {$M$};
+
+  % Angle alpha
+  \node at (0.5*\ang:0.55) {$\alpha$};
+
+  % Velocity vectors
+  \draw[->, thick] (-1.35,0) -- (-1.35,1.05) node[right=2pt] {$\boldsymbol{v}_1$};
+  \coordinate (Q) at (180+\ang:1.25);
+  \draw[->, thick] (Q) -- ++(\ang-90:1.05) node[right=2pt] {$\boldsymbol{v}_2$};
+\end{tikzpicture}

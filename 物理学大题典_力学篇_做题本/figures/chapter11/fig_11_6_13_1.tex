@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Ceiling with frictionless hole
+  \fill[pattern=north east lines] (-1.4,2.0) rectangle (1.4,2.18);
+  \draw[line width=0.85pt] (-1.4,2.0) -- (1.4,2.0);
+
+  % Pulling arrow above ceiling
+  \draw[->] (0,2.0) -- (0.85,2.85);
+
+  % Pendulum string and bob
+  \coordinate (Q) at ({2.05*cos(-62)}, {2.0 + 2.05*sin(-62)});
+  \draw (0,2.0) -- (Q) node[midway, below left=1pt] {$l$};
+  \fill (Q) circle (0.075) node[below right=1pt] {$m$};
+\end{tikzpicture}

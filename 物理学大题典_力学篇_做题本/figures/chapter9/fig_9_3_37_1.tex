@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth]
+  % Hatched horizontal ground
+  \fill[pattern=north east lines] (-2.7,-0.22) rectangle (2.7,0);
+  \draw[thick] (-2.7,0) -- (2.7,0);
+
+  % Two uniform rods of length l at 30 deg
+  \coordinate (Lbot) at (-2.295,0);
+  \coordinate (Rbot) at (2.295,0);
+  \coordinate (Apex) at (0,1.325);
+
+  \draw[thick, fill=white] (Lbot) -- (Apex) -- ++(120:0.11) -- ++(-150:2.65) -- cycle;
+  \draw[thick, fill=white] (Rbot) -- (Apex) -- ++(60:0.11) -- ++(-30:2.65) -- cycle;
+
+  % Connecting string
+  \draw[thick] (-1.048,0.72) -- (1.048,0.72);
+  \node[below=2pt] at (0,0.72) {线};
+
+  % Smooth hinge at apex
+  \filldraw[fill=white, draw=black, thick] (0,1.36) circle (0.11);
+  \node (hinge) at (0.85,1.95) {铰链};
+  \draw[->, thick] (hinge.west) to[bend right=25] (0.12,1.48);
+
+  % Mass M label
+  \node[above right=1pt and 1pt] at (1.15,0.75) {$M$};
+
+  % 30 degree angle markings
+  \draw (-1.55,0) arc (0:30:0.745);
+  \node at (-1.12,0.22) {$30^\circ$};
+  \draw (1.55,0) arc (180:150:0.745);
+  \node at (1.12,0.22) {$30^\circ$};
+
+  % Length l dimension along left rod
+  \draw ($(Lbot) + (120:0.20)$) -- ($(Lbot) + (120:0.78)$);
+  \draw ($(Apex) + (120:0.20)$) -- ($(Apex) + (120:0.78)$);
+  \draw[<->] ($(Lbot) + (120:0.62)$) -- ($(Apex) + (120:0.62)$) node[midway, above left=1pt and 1pt] {$l$};
+\end{tikzpicture}

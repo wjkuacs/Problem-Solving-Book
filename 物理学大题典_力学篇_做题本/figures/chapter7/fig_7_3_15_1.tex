@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\a{2.2}
+  \def\b{2.05}
+  \def\th{115}
+
+  \coordinate (A) at (0,0);
+  \coordinate (P) at (0,\a);
+  \coordinate (B) at ({\b*sin(\th)},{\b*cos(\th)});
+  \coordinate (W) at (-2.15,-0.15);
+
+  % 竖直虚线
+  \draw[thick, dashed] (0,-0.65) -- (0,\a+0.65);
+
+  % 弹簧及固定端
+  \draw[thick] (-2.38,0.08) -- (-1.92,-0.38);
+  \foreach \i in {0,1,2,3,4} {
+    \pgfmathsetmacro\t{\i*0.2}
+    \draw (-2.34+\t*0.46, 0.04-\t*0.46) -- ++(-0.32, 0);
+  }
+  \draw[thick] (W) -- ($(W)!0.22!(P)$);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    ($(W)!0.22!(P)$) -- ($(W)!0.74!(P)$) node[midway, above left=4pt] {$k$};
+  \draw[thick] ($(W)!0.74!(P)$) -- (P);
+
+  % 细棒 AB
+  \draw[thick] (A) -- (B) -- ($(B)+({\th-90}:-0.08)$) -- ($(A)+({\th-90}:-0.08)$) -- cycle;
+  \node[above right=1pt] at ($(A)!0.38!(B)$) {$b$};
+  \node[below=2pt] at ($(A)!0.82!(B)$) {$m$};
+
+  % 绳 PB
+  \draw[thick] (P) -- (B) node[midway, above right=1pt] {$c$};
+
+  % 滑轮 P
+  \filldraw[fill=white, draw=black, thick] (P) circle (3.6pt);
+  \node[above right=2pt] at (P) {$P$};
+  \node[left=3pt] at (0,{0.54*\a}) {$a$};
+  \node[left=3pt] at (A) {$A$};
+
+  % 角度 theta 与 phi
+  \pic[draw, angle radius=0.45cm, angle eccentricity=1.45, "$\theta$"] {angle = B--A--P};
+  \pic[draw, angle radius=0.58cm, angle eccentricity=1.38, "$\varphi$"] {angle = P--B--A};
+\end{tikzpicture}

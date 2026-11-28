@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Frame S axes
+    \draw[->] (0, 0) -- (3.8, 0) node[below=2pt] {$x$};
+    \draw[->] (0, 0) -- (0, 2.2) node[left=2pt] {$y$};
+    \node at (0.55, 1.45) {$S$};
+
+    % Light source and propagation ray at 60 deg
+    \coordinate (src) at (1.05, 0);
+    \coordinate (Op) at (2.35, 2.25);
+    \node[below=3pt] at (src) {\small 光源};
+    \draw (src) -- (Op);
+
+    % 60 degree angle arc
+    \draw (src) ++(0:0.55) arc (0:60:0.55);
+    \node at ($(src) + (28:0.86)$) {$60^\circ$};
+
+    % Frame S' axes at O'
+    \draw[->] (Op) -- ++(1.9, 0) node[below=2pt] {$x'$};
+    \draw[->] (Op) -- ++(0, 1.75) node[left=2pt] {$y'$};
+    \node at ($(Op) + (0.65, 1.35)$) {$S'$};
+    \node[below right=1pt] at (Op) {$O'$};
+    \node at ($(Op) + (0.55, -0.62)$) {\small 观察者};
+
+    % Velocity v of observer/frame S'
+    \draw[->] ($(Op) + (-0.15, 0.12)$) -- ++(-0.95, 0) node[midway, above=2pt] {$v$};
+\end{tikzpicture}

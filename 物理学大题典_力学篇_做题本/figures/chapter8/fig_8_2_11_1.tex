@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Hemisphere bowl (radius r = 2.4)
+  \def\rx{2.4}
+  \def\ry{0.72}
+  \coordinate (O) at (0, 0);
+  \coordinate (B) at (0, -\rx);
+  \coordinate (C) at (\rx, 0);
+  \coordinate (A) at ({\rx*cos(-112)}, {\ry*sin(-112)});
+
+  % Top rim ellipse and bottom semicircle
+  \draw (O) ellipse[x radius=\rx, y radius=\ry];
+  \draw (-\rx, 0) arc[start angle=180, end angle=360, radius=\rx];
+
+  % x-axis through C
+  \draw[->] (-\rx, 0) -- (3.2, 0) node[below=2pt] {$x$};
+
+  % y-axis through A
+  \draw[->] ({-\rx*cos(-112)}, {-\ry*sin(-112)}) -- (-2.30, -1.71) node[below left=0pt] {$y$};
+
+  % z-axis pointing straight down through B
+  \draw[->] (O) -- (0, -3.15) node[right=2pt] {$z$};
+
+  % Meridian arc from A to B on front spherical surface
+  \draw[smooth, samples=30, domain=0:90]
+    plot ({-\rx*0.3746*cos(\x)}, {-\ry*0.9272*cos(\x) - \rx*sin(\x)});
+
+  % Force vector N into the octant (dashed inside, solid outside)
+  \draw[dashed] (O) -- (-44:\rx);
+  \draw[->] (-44:\rx) -- (-44:3.15) node[right=2pt] {$N$};
+
+  % Labels
+  \node[above left=1pt] at (O) {$O$};
+  \node[above left=1pt] at (A) {$A$};
+  \node[below left=2pt] at (B) {$B$};
+  \node[above right=1pt] at (C) {$C$};
+\end{tikzpicture}

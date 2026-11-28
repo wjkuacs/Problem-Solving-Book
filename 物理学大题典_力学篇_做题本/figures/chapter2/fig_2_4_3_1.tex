@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Smooth horizontal floor with hatching
+  \fill[pattern=north east lines] (0,-0.22) rectangle (5.6,0);
+  \draw (0,0) -- (5.6,0);
+
+  % Left cart of mass m
+  \draw (0.95,0.18) circle (0.18);
+  \draw (1.65,0.18) circle (0.18);
+  \draw (0.72,0.36) rectangle (1.88,1.10);
+  \node at (1.30,0.73) {$m$};
+  \draw[->] (0.95,1.32) -- (1.65,1.32) node[midway, above=1pt] {$v$};
+
+  % Right cart of mass 3m with attached spring
+  \draw (4.00,0.20) circle (0.20);
+  \draw (4.85,0.20) circle (0.20);
+  \draw (3.60,0.40) rectangle (5.25,1.25);
+  \node at (4.42,0.82) {$3m$};
+
+  % Coiled spring on left side of 3m cart
+  \draw (3.60,0.82) -- (3.45,0.82);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=4.8pt, amplitude=3.8pt}]
+    (3.45,0.82) -- (2.82,0.82);
+\end{tikzpicture}

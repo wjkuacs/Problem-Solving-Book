@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Horizontal equilibrium string axis
+  \draw (-1.4, 0) -- (3.8, 0);
+
+  % Fixed vertical wall at x = 0 with hatching on the left
+  \draw (0, -1.6) -- (0, 1.6);
+  \foreach \y in {-1.45, -1.25, ..., 1.55} {
+    \draw[thin] (-0.16, \y-0.14) -- (0, \y);
+  }
+
+  % Incident pulse (peak at x = +0.42): dashed for x < 0, solid for x >= 0
+  \draw[dashed, smooth, domain=-0.65:0, samples=30]
+    plot (\x, {1.35*exp(-(\x-0.42)^2/0.16)});
+  \draw[smooth, domain=0:1.45, samples=50]
+    plot (\x, {1.35*exp(-(\x-0.42)^2/0.16)});
+
+  % Reflected inverted pulse (peak at x = -0.42): dashed for x < 0, solid for x >= 0
+  \draw[dashed, smooth, domain=-1.45:0, samples=50]
+    plot (\x, {-1.35*exp(-(\x+0.42)^2/0.16)});
+  \draw[smooth, domain=0:0.65, samples=30]
+    plot (\x, {-1.35*exp(-(\x+0.42)^2/0.16)});
+
+  % Direction arrows and labels
+  \draw[<-] (0.55, 1.35) -- (1.05, 1.35) node[right] {入射脉冲};
+  \draw[->] (0.50, -0.65) -- (1.00, -0.65) node[right] {反射脉冲};
+\end{tikzpicture}

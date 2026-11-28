@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\hT{0.82} % half period pi/omega
+  \def\A{1.35}
+
+  % Axes
+  \draw[->, thick] (-0.35, 0) -- (5.7*\hT, 0) node[below] {$t$};
+  \draw[->, thick] (0, -0.35) -- (0, \A + 0.55) node[left] {$x$};
+  \node[below left] at (0, 0) {$O$};
+  \node[left] at (0, \A) {$A$};
+
+  % Triangle wave
+  \draw[thick] (0, \A) -- (\hT, 0) -- (2*\hT, \A) -- (3*\hT, 0)
+    -- (4*\hT, \A) -- (5*\hT, 0) -- (5.25*\hT, 0.25*\A);
+
+  % Ticks and labels on t-axis
+  \node[below] at (\hT, -0.05) {$\dfrac{\pi}{\omega}$};
+  \draw (2*\hT, 0) -- (2*\hT, 0.07);
+  \node[below] at (2*\hT, -0.05) {$\dfrac{2\pi}{\omega}$};
+  \node[below] at (3*\hT, -0.05) {$\dfrac{3\pi}{\omega}$};
+\end{tikzpicture}

@@ -1,0 +1,10 @@
+\begin{tikzpicture}[>=Stealth]
+  % Axes
+  \draw[->] (-0.1, 0) -- (4.8, 0) node[below] {$x$};
+  \draw[->] (0, -0.75) -- (0, 1.45) node[left] {$y$};
+  \node[below left] at (0, 0) {$O$};
+
+  % Wave profile and massless ring at x = 0
+  \draw[thick, smooth] plot[domain=0:4.35, samples=80] (\x, {0.62*sin(deg(1.45*\x + 0.45))});
+  \fill (0, {0.62*sin(deg(0.45))}) circle (1.8pt);
+\end{tikzpicture}

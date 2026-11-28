@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.15}
+  % Coordinate axes
+  \draw[->] (-2.55,0) -- (2.75,0) node[below=2pt] {$z$};
+  \draw[->] (0,0) -- (0,-1.45) node[right=2pt] {$x$};
+  \node[above left=1pt] at (0,0) {$O$};
+
+  % S-shaped crank (two semicircles of radius a)
+  \draw[very thick] (0,0) arc (180:0:\R);
+  \draw[very thick] (-2*\R,0) arc (180:360:\R);
+
+  % Radius a and angle theta in the right semicircle
+  \coordinate (C) at (\R,0);
+  \coordinate (P) at ({\R + \R*cos(135)}, {\R*sin(135)});
+  \draw (C) -- (P) node[midway, above right=-1pt] {$a$};
+  \draw (C) ++(180:0.45) arc (180:135:0.45);
+  \node at ({\R + 0.68*cos(158)}, {0.68*sin(158)}) {$\theta$};
+\end{tikzpicture}

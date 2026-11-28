@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Ceiling with hatching
+    \draw (-1.2,4.2) -- (1.2,4.2);
+    \foreach \x in {-1.05,-0.80,...,1.05} {
+        \draw[semithick] (\x,4.2) -- (\x+0.15,4.38);
+    }
+    \node[left=2pt, font=\small] at (0,4.02) {$A$};
+
+    % Spring k
+    \draw (0,4.2) -- (0,3.85);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=4.5pt, amplitude=4.2pt}]
+        (0,3.85) -- (0,2.55);
+    \node[right=4pt, font=\small] at (0.12,3.2) {$k$};
+    \draw (0,2.55) -- (0,2.25);
+
+    % Uniform rod BC
+    \draw (-0.14,0.25) rectangle (0.14,2.25);
+    \node[left=2pt, font=\small] at (-0.14,2.20) {$B$};
+    \node[left=2pt, font=\small] at (-0.14,0.30) {$C$};
+    \node[left=3pt, font=\small] at (-0.14,1.25) {$m$};
+
+    % Dimension 2a
+    \draw[thin] (0.28,2.25) -- (0.80,2.25);
+    \draw[thin] (0.28,0.25) -- (0.80,0.25);
+    \draw[<->, thin] (0.58,2.25) -- (0.58,0.25)
+        node[midway, fill=white, inner sep=1.5pt, font=\small] {$2a$};
+\end{tikzpicture}

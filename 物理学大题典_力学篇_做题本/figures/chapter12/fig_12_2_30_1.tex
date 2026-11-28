@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Axes for S and S'
+    \draw[->] (0, 0) -- (4.8, 0) node[below=2pt] {$x, x'$};
+    \draw[->] (0, 0) -- (0, 2.55);
+    \node[below=2pt] at (0, 0) {$O$};
+
+    % Light source on y-axis
+    \coordinate (src) at (0, 2.0);
+    \fill (src) circle (2pt);
+    \node[above right=1pt and 2pt] at (src) {\small 光源};
+
+    % Vertical line of frame S' at O'
+    \coordinate (Op) at (2.75, 0);
+    \draw (Op) -- (2.75, 2.35);
+    \node[below=2pt] at (Op) {$O'$};
+    \node[below=14pt] at (Op) {\small 观察者};
+
+    % Frame labels
+    \node at (1.35, 1.75) {$S$};
+    \node at (3.45, 1.75) {$S'$};
+
+    % Ray from source to observer
+    \draw (src) -- (Op);
+
+    % Angle theta at source
+    \draw (src) ++(-90:0.52) arc (-90:{-90 + atan2(2.75, 2.0)}:0.52);
+    \node at ($(src) + ({-90 + 0.45*atan2(2.75, 2.0)}:0.84)$) {$\theta$};
+
+    % Distance d
+    \draw (-0.45, 0) -- (-0.12, 0);
+    \draw (-0.45, 2.0) -- (-0.12, 2.0);
+    \node (dnode) at (-0.30, 1.0) {$d$};
+    \draw[->] (dnode.north) -- (-0.30, 1.96);
+    \draw[->] (dnode.south) -- (-0.30, 0.04);
+
+    % Distance x
+    \node (xnode) at (1.375, 0.55) {$x$};
+    \draw[->] (xnode.west) -- (0.04, 0.55);
+    \draw[->] (xnode.east) -- (2.71, 0.55);
+\end{tikzpicture}

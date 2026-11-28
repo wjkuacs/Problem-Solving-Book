@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, scale=1.1]
+  % Sphere
+  \draw[very thick] (0,0) circle (1.65cm);
+
+  % Vertical rotation axis
+  \draw[dashed, thick] (0,-2.05) -- (0,2.65);
+
+  % Little house at the north pole
+  \draw[thick, fill=white] (-0.13,1.64) rectangle (0.13,1.86);
+  \draw[thick, fill=white] (-0.22,1.86) -- (0.22,1.86) -- (0,2.04) -- cycle;
+
+  % Rotation arrow omega around axis above house
+  \draw[->, thick] (-0.18,2.34) arc[start angle=120, end angle=405, x radius=0.35cm, y radius=0.14cm];
+  \node[right] at (0.38,2.34) {$\omega$};
+\end{tikzpicture}

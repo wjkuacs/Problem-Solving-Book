@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\a{0.95}
+  \def\b{1.45}
+
+  % Rotation axis
+  \draw (-2.15,0) -- (2.55,0);
+
+  % Crankshaft segments
+  \draw[very thick] (-\b,0) -- (-\b,-\a) -- (0,-\a) -- (0,\a) -- (\b,\a) -- (\b,0);
+
+  % Left bearing
+  \draw (-\b-0.30, 0.10) -- (-\b-0.02, 0.10);
+  \draw (-\b-0.30,-0.10) -- (-\b-0.02,-0.10);
+  \fill[pattern=north east lines] (-\b-0.30, 0.10) rectangle (-\b-0.02, 0.24);
+  \fill[pattern=north east lines] (-\b-0.30,-0.24) rectangle (-\b-0.02,-0.10);
+
+  % Right bearing
+  \draw (\b+0.02, 0.10) -- (\b+0.30, 0.10);
+  \draw (\b+0.02,-0.10) -- (\b+0.30,-0.10);
+  \fill[pattern=north east lines] (\b+0.02, 0.10) rectangle (\b+0.30, 0.24);
+  \fill[pattern=north east lines] (\b+0.02,-0.24) rectangle (\b+0.30,-0.10);
+
+  % Top dimensions b, b
+  \draw[thin] (-\b,0.32) -- (-\b,1.65);
+  \draw[thin] (0,\a+0.12) -- (0,1.65);
+  \draw[thin] (\b,\a+0.12) -- (\b,1.65);
+  \draw[<->] (-\b,1.45) -- (0,1.45) node[midway, fill=white, inner sep=1.5pt] {$b$};
+  \draw[<->] (0,1.45) -- (\b,1.45) node[midway, fill=white, inner sep=1.5pt] {$b$};
+
+  % Left dimension a
+  \draw[thin] (-\b-0.12,-\a) -- (-2.15,-\a);
+  \draw[<->] (-1.95,0) -- (-1.95,-\a) node[midway, fill=white, inner sep=1.5pt] {$a$};
+
+  % Right dimension a
+  \draw[thin] (\b+0.12,\a) -- (2.15,\a);
+  \draw[<->] (1.95,0) -- (1.95,\a) node[midway, fill=white, inner sep=1.5pt] {$a$};
+
+  % Rotation arrow omega
+  \draw[->] (2.25,0.22) arc (65:305:0.18 and 0.28);
+  \node[below=2pt] at (2.20,-0.32) {$\omega$};
+\end{tikzpicture}

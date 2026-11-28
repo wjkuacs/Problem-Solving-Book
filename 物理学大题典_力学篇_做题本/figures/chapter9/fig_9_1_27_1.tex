@@ -1,0 +1,70 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    \def\r{0.36}
+    \coordinate (C1) at (-0.72,2.22);
+    \coordinate (C2) at (0.72,2.22);
+    \coordinate (C3) at (0,0.72);
+
+    % Tangent points for inclined ropes (alpha = 42 deg, beta = 48 deg)
+    \coordinate (T1) at ($(C1)+(132:\r)$);
+    \coordinate (T2) at ($(C2)+(42:\r)$);
+
+    % Left incline (42 deg) and rounded wedge
+    \draw (-2.80,0.58) -- (-1.62,1.65);
+    \draw (-2.55,0.81) -- (-0.78,0.81) -- (-0.78,1.62)
+          .. controls (-0.78,1.86) and (-1.20,1.88) .. (-1.62,1.65);
+    \draw (C1) -- (-1.05,1.60);
+
+    % Right incline (48 deg) and rounded wedge
+    \draw (2.58,0.41) -- (1.58,1.52);
+    \draw (2.22,0.81) -- (0.78,0.81) -- (0.78,1.62)
+          .. controls (0.78,1.86) and (1.18,1.86) .. (1.58,1.52);
+    \draw (C2) -- (1.05,1.60);
+
+    % Angle labels inside wedges
+    \draw (-1.90,0.81) arc (0:42:0.65);
+    \node at (-1.66,1.03) {$\alpha$};
+    \draw (1.57,0.81) arc (180:132:0.65);
+    \node at (1.35,1.03) {$\beta$};
+
+    % Vertical ropes between pulleys
+    \draw (-0.36,2.22) -- (-0.36,0.72);
+    \draw (0.36,2.22) -- (0.36,0.72);
+
+    % Block P1 on left incline
+    \coordinate (B1) at ($(T1)+(222:0.84)$);
+    \draw (T1) -- (B1);
+    \begin{scope}[shift={(B1)}, rotate=42]
+        \draw[fill=white] (-0.18,-0.18) rectangle (0.18,0.18);
+    \end{scope}
+    \draw[->] (B1) -- ++(0,-0.62);
+    \node[right] at ($(B1)+(0.02,-0.50)$) {$P_1$};
+
+    % Block P2 on right incline
+    \coordinate (B2) at ($(T2)+(-48:0.84)$);
+    \draw (T2) -- (B2);
+    \begin{scope}[shift={(B2)}, rotate=-48]
+        \draw[fill=white] (-0.18,-0.18) rectangle (0.18,0.18);
+    \end{scope}
+    \draw[->] (B2) -- ++(0,-0.62);
+    \node[left] at ($(B2)+(-0.02,-0.50)$) {$P_2$};
+
+    % Hanging block P on movable pulley C3
+    \draw (C3) -- (0,-0.02);
+    \draw[fill=white] (-0.22,-0.34) rectangle (0.22,-0.02);
+    \draw[->] (0,-0.18) -- (0,-0.75) node[right] {$P$};
+
+    % Pulleys (drawn last with white fill for clean stem/rope junctions)
+    \draw[fill=white] (C1) circle (\r);
+    \draw (C1) -- (-1.02,1.66);
+    \draw[fill=white] (C2) circle (\r);
+    \draw (C2) -- (1.02,1.66);
+    \draw[fill=white] (C3) circle (\r);
+    \draw (C3) -- (0,0.36);
+
+    % Coordinate labels x1, x2, x3 and angular velocity phi dot
+    \node[below left, inner sep=1pt] at (-2.76,0.58) {$x_1$};
+    \node[below right, inner sep=1pt] at (2.54,0.42) {$x_2$};
+    \draw[->] (0,2.65) -- (0,1.82) node[below] {$x_3$};
+    \draw[->] (0.48,0.88) arc (20:-45:0.50);
+    \node[right] at (0.48,0.58) {$\dot{\varphi}$};
+\end{tikzpicture}

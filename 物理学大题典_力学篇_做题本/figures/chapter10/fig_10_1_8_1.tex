@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Lever bar (total length 2L, tilted slightly or horizontal at equilibrium)
+  \draw (0,3.0) rectangle (3.8,3.16);
+  \node at (2.85,2.80) {$M$};
+
+  % Dimension annotations for L and L above the lever
+  \draw[thin] (0,3.26) -- (0,3.68);
+  \draw[thin] (1.9,3.26) -- (1.9,3.68);
+  \draw[thin] (3.8,3.26) -- (3.8,3.68);
+  \draw[<->] (0,3.50) -- (1.9,3.50) node[midway, above] {$L$};
+  \draw[<->] (1.9,3.50) -- (3.8,3.50) node[midway, above] {$L$};
+
+  % Pivot and cliff wall hatching
+  \fill[pattern=north east lines]
+    (0,2.55) -- (1.55,2.55) -- (1.9,3.0) -- (1.96,2.88) -- (1.50,2.40) -- (0,2.40) -- cycle;
+  \fill[pattern=north east lines]
+    (1.97,0.0) -- (2.12,0.0) -- (2.12,2.55) -- (1.97,2.55) -- cycle;
+  \draw (0,2.55) -- (1.55,2.55) -- (1.9,3.0) -- (2.12,2.55) -- (2.12,0.0);
+
+  % Water surface and dashed ripples
+  \draw (2.12,1.45) -- (5.10,1.45);
+  \foreach \x/\y in {
+    2.30/1.28, 2.75/1.32, 2.96/1.18, 4.48/1.30, 4.80/1.22,
+    2.45/1.05, 2.86/0.98, 4.62/1.02,
+    2.25/0.82, 2.70/0.86, 4.18/0.76, 4.68/0.82,
+    2.50/0.58, 2.88/0.62, 4.22/0.52,
+    2.28/0.36, 2.72/0.32, 4.25/0.32, 4.75/0.36,
+    2.45/0.14, 2.95/0.16, 4.45/0.15
+  } {
+    \draw[thin] (\x,\y) -- ++(0.18,0);
+  }
+  \node at (4.22,1.08) {$M$};
+  \node at (4.72,0.58) {$\rho$};
+
+  % Spring
+  \draw (3.8,3.0) -- (3.8,2.82)
+    decorate[decoration={coil, aspect=0.45, segment length=2.4mm, amplitude=1.6mm}] {-- (3.8,2.02)}
+    -- (3.8,1.85);
+  \node[right] at (4.02,2.42) {$k$};
+
+  % Cylindrical log of length L and cross-section A
+  \draw[fill=white] (3.67,0.25) rectangle (3.93,1.85);
+  \node[below] at (3.80,0.22) {$A$};
+
+  % Dimension annotation for log length L
+  \draw[thin] (3.15,1.85) -- (3.58,1.85);
+  \draw[thin] (3.15,0.25) -- (3.58,0.25);
+  \draw[<->] (3.30,0.25) -- (3.30,1.85);
+  \node[fill=white, inner sep=1.5pt, rotate=90] at (3.30,0.88) {$L$};
+\end{tikzpicture}

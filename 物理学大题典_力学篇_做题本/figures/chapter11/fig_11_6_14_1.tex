@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Horizontal floor
+  \draw (-0.4,0) -- (5.2,0);
+
+  % Left and right moving walls
+  \fill[pattern=north east lines] (0,0) rectangle (0.24,2.1);
+  \draw (0,0) rectangle (0.24,2.1);
+  \fill[pattern=north east lines] (4.56,0) rectangle (4.80,2.1);
+  \draw (4.56,0) rectangle (4.80,2.1);
+
+  % Distance x between walls
+  \draw[<->] (0.24,1.85) -- (4.56,1.85) node[midway, fill=white, inner sep=3pt] {$x$};
+
+  % Wall velocities v
+  \draw[->] (0.24,1.22) -- (0.86,1.22) node[right=2pt] {$v$};
+  \draw[->] (4.56,1.22) -- (3.94,1.22) node[left=2pt] {$v$};
+
+  % Particle momentum p
+  \draw[->] (1.85,0.52) -- (2.95,0.52) node[midway, above=2pt] {$p$};
+\end{tikzpicture}

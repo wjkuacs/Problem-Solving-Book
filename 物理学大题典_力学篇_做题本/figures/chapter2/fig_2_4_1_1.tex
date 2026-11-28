@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Horizontal floor and right wall with hatching
+  \fill[pattern=north east lines] (0,-0.22) rectangle (5.4,0);
+  \fill[pattern=north east lines] (5.18,0) rectangle (5.4,1.65);
+  \draw (0,0) -- (5.18,0) -- (5.18,1.65);
+
+  % Bullet of mass m and initial velocity v_0
+  \draw (0.35,0.48) -- (0.75,0.58) -- (0.35,0.68) -- cycle;
+  \node at (0.52,0.88) {$m$};
+  \draw[->] (0.98,0.58) -- (1.68,0.58) node[midway, above=2pt] {$v_0$};
+
+  % Block M on smooth floor
+  \draw (1.95,0) rectangle (3.05,1.10);
+  \node at (2.50,0.55) {$M$};
+
+  % Spring of stiffness k connected to wall
+  \draw (3.05,0.55) -- (3.35,0.55);
+  \draw[decorate, decoration={zigzag, segment length=7pt, amplitude=4pt}]
+    (3.35,0.55) -- (4.88,0.55);
+  \draw (4.88,0.55) -- (5.18,0.55);
+  \node at (4.12,0.88) {$k$};
+\end{tikzpicture}

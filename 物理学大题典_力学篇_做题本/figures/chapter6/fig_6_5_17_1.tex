@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Scale base (trapezoid)
+  \draw (-1.05,-2.5) -- (1.05,-2.5) -- (0.62,-1.95);
+  \draw (-1.05,-2.5) -- (-0.62,-1.95);
+
+  % Scale dial
+  \draw (0,-1.0) circle (1.15);
+  \fill (0,-1.0) circle (2pt);
+  \draw (0,-1.0) -- (34:0.82);
+
+  % Hourglass container (lower and upper cones)
+  \draw (-1.95,0.15) -- (1.95,0.15) -- (-1.10,2.25) -- (1.10,2.25) -- cycle;
+
+  % Sand / falling stream dashed lines
+  \draw[dashed] (-0.18,1.72) -- (0.18,1.72);
+  \draw[dashed] (0,1.72) -- (0,0.34);
+  \draw[dashed] (-0.72,0.15) .. controls (-0.25,0.38) and (0.25,0.38) .. (0.72,0.15);
+
+  % Height h dimension
+  \draw[dashed, thin] (0,1.40) -- (2.45,1.40);
+  \draw[thin] (2.05,0.15) -- (2.45,0.15);
+  \draw[<->, thin] (2.30,0.15) -- (2.30,1.40) node[midway, fill=white, inner sep=2pt] {$h$};
+\end{tikzpicture}

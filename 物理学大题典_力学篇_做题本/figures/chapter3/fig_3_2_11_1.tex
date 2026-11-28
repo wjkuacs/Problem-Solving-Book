@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Guide walls on left and right of sliding support
+  \fill[pattern=north east lines] (-1.35, 3.0) rectangle (-0.45, 3.6);
+  \draw[thick] (-1.35, 3.6) -- (-0.45, 3.6) -- (-0.45, 3.0) -- (-1.35, 3.0);
+
+  \fill[pattern=north east lines] (0.45, 3.0) rectangle (1.35, 3.6);
+  \draw[thick] (1.35, 3.6) -- (0.45, 3.6) -- (0.45, 3.0) -- (1.35, 3.0);
+
+  % Sliding support block
+  \draw[thick] (-0.38, 2.88) rectangle (0.38, 3.72);
+
+  % Spring
+  \draw[thick] (0, 2.88) -- (0, 2.38);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    (0, 2.38) -- (0, 1.38);
+  \node[left] at (-0.15, 1.88) {$k$};
+  \draw[thick] (0, 1.38) -- (0, 0.88);
+
+  % Mass block
+  \draw[thick] (-0.65, 0.25) rectangle (0.65, 0.88);
+  \node[left] at (-0.72, 0.56) {$m$};
+
+  % Coordinate axes on the right
+  \draw[->, thick] (1.75, 3.72) -- (1.75, 2.35) node[right] {$x_s$};
+  \node[right] at (1.78, 3.62) {$0$};
+
+  \draw[->, thick] (0.95, 2.3) -- (0.95, -0.25) node[right] {$x$};
+  \node[right] at (0.98, 2.2) {$0$};
+\end{tikzpicture}

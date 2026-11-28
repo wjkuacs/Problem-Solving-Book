@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Frame S axes
+    \draw[->] (0, 0) -- (3.85, 0) node[below=2pt] {$x$};
+    \draw[->] (0, 0) -- (0, 2.25) node[right=2pt] {$y$};
+
+    % Galactic plane ellipse
+    \draw (0, 0) ellipse (0.55 and 1.55);
+    \node[below=4pt] at (0, -1.58) {\small 银河系平面};
+
+    % Spacecraft on x-axis moving at v
+    \coordinate (ship) at (2.05, 0);
+    \fill (ship) circle (2pt);
+    \draw[->] (ship) -- (2.90, 0) node[midway, below=2pt] {$v$};
+
+    % Pointer to spacecraft
+    \draw[->] (2.55, -0.82) -- (2.10, -0.10);
+    \node[below=2pt] at (2.55, -0.82) {\small 宇宙飞船};
+
+    % Dashed line from edge of galactic plane through spacecraft
+    \draw[dashed] (0.20, -1.44) -- (2.95, 0.70);
+    \draw (ship) ++(0:0.48) arc (0:38:0.48);
+    \node at ($(ship) + (19:0.75)$) {$\theta$};
+
+    % Frame label
+    \node at (2.15, 1.55) {\small $S\text{（银河参考系）}$};
+\end{tikzpicture}

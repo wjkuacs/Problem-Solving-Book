@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth]
+  % Fixed ceiling with hatching
+  \draw[thick] (-0.65, 2.15) -- (0.65, 2.15);
+  \foreach \x in {-0.55, -0.35, -0.15, 0.05, 0.25, 0.45} {
+    \draw (\x, 2.15) -- (\x+0.15, 2.32);
+  }
+
+  % Axes and external force F(t)
+  \draw[->] (-2.7, 0) -- (2.8, 0) node[below] {$x$};
+  \draw[->] (0, 2.15) -- (0, 2.65) node[left] {$y$};
+  \draw[->, thick] (0, -0.85) -- (0, 0.22);
+  \node[right=2pt] at (0, -0.45) {$F(t)$};
+  \node[below left] at (0, 0) {$O$};
+
+  % Spring and point mass m
+  \draw[decorate, decoration={zigzag, segment length=5.5pt, amplitude=3pt, pre length=12pt, post length=12pt}]
+    (0, 2.15) -- (0, 0.30);
+  \node[right=4pt] at (0, 1.25) {$k$};
+  \fill (0, 0.30) circle (2pt) node[above right=1pt] {$m$};
+
+  % Symmetric wave along the string
+  \draw[thick] (0, 0.30)
+    .. controls (0.35, 0.16) and (0.70, 0.16) .. (1.05, 0.40)
+    .. controls (1.35, 0.62) and (1.65, 0.66) .. (2.00, 0.56)
+    .. controls (2.30, 0.46) and (2.48, 0.32) .. (2.60, 0.20);
+  \draw[thick] (0, 0.30)
+    .. controls (-0.35, 0.16) and (-0.70, 0.16) .. (-1.05, 0.40)
+    .. controls (-1.35, 0.62) and (-1.65, 0.66) .. (-2.00, 0.56)
+    .. controls (-2.30, 0.46) and (-2.48, 0.32) .. (-2.60, 0.20);
+
+  % Transverse displacement markers y_1 and y_2
+  \draw[dashed] (-1.60, 0) -- (-1.60, 0.63);
+  \node[right=1pt] at (-1.60, 0.30) {$y_1$};
+  \draw[dashed] (1.60, 0) -- (1.60, 0.63);
+  \node[right=1pt] at (1.60, 0.30) {$y_2$};
+\end{tikzpicture}

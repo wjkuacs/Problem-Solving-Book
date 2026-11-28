@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Plate with sides a and 2a, diagonal along horizontal axis:
+  % half-diagonal D = 1.65, cos(2*alpha)=3/5, sin(2*alpha)=4/5
+  \def\D{1.65}
+  \coordinate (A) at (-\D, 0);
+  \coordinate (B) at (\D, 0);
+  \coordinate (T) at (-0.6*\D, 0.8*\D);
+  \coordinate (Bot) at (0.6*\D, -0.8*\D);
+
+  % Rectangular plate
+  \draw[very thick] (A) -- (T) -- (B) -- (Bot) -- cycle;
+
+  % Shaft segments outside bearings
+  \draw (-2.45,0) -- (A);
+  \draw (B) -- (2.95,0);
+
+  % Left bearing
+  \fill[pattern=north east lines] (-\D-0.22, 0.08) rectangle (-\D-0.02, 0.34);
+  \draw (-\D-0.22, 0.08) rectangle (-\D-0.02, 0.34);
+  \fill[pattern=north east lines] (-\D-0.22,-0.34) rectangle (-\D-0.02,-0.08);
+  \draw (-\D-0.22,-0.34) rectangle (-\D-0.02,-0.08);
+
+  % Right bearing
+  \fill[pattern=north east lines] (\D+0.02, 0.08) rectangle (\D+0.22, 0.34);
+  \draw (\D+0.02, 0.08) rectangle (\D+0.22, 0.34);
+  \fill[pattern=north east lines] (\D+0.02,-0.34) rectangle (\D+0.22,-0.08);
+  \draw (\D+0.02,-0.34) rectangle (\D+0.22,-0.08);
+
+  % Dimension 2a along bottom-left edge (unit outward normal: (-0.6, -0.8)? Wait: A-Bot direction is (0.8,-0.6), normal is (-0.6,-0.8))
+  \draw[thin] ($(A) + (-0.24,-0.32)$) -- ($(A) + (-0.54,-0.72)$);
+  \draw[thin] ($(Bot) + (-0.12,-0.16)$) -- ($(Bot) + (-0.54,-0.72)$);
+  \draw[<->] ($(A) + (-0.42,-0.56)$) -- ($(Bot) + (-0.42,-0.56)$)
+    node[midway, fill=white, inner sep=1.5pt] {$2a$};
+
+  % Dimension a along bottom-right edge (unit outward normal: (0.8, -0.6))
+  \draw[thin] ($(Bot) + (0.16,-0.12)$) -- ($(Bot) + (0.60,-0.45)$);
+  \draw[thin] ($(B) + (0.28,-0.21)$) -- ($(B) + (0.60,-0.45)$);
+  \draw[<->] ($(Bot) + (0.48,-0.36)$) -- ($(B) + (0.48,-0.36)$)
+    node[midway, fill=white, inner sep=1.5pt] {$a$};
+
+  % Rotation arrow omega
+  \draw[->] (2.55,0.22) arc (65:305:0.18 and 0.28);
+  \node[below=2pt] at (2.52,-0.32) {$\omega$};
+\end{tikzpicture}

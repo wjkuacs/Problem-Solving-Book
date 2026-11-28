@@ -1,0 +1,75 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Key coordinates
+    \coordinate (B) at (0,0);
+    \coordinate (C) at (2.80,0);
+    \coordinate (O1) at (0.918,1.311);
+    \coordinate (A) at (1.513,2.161);
+    \coordinate (O2) at (3.632,-1.188);
+    \coordinate (D) at (4.882,-1.523);
+
+    % Mechanism bars
+    \draw (B) -- (A);
+    \draw (B) -- (C);
+    \draw (C) -- (O2) -- (D);
+
+    % Forces
+    \draw[->] (A) -- ++(-0.78,0) node[left] {$F_A$};
+    \draw[->] (D) -- ++(0,0.78) node[above, inner sep=2pt] {$F_D$};
+
+    % Dashed reference lines for angles
+    \draw[dashed] (C) -- ++(0.85,0) coordinate (CH);
+    \draw[dashed] (O2) -- ++(0.95,0) coordinate (O2H);
+
+    % Angle arcs
+    \pic[draw, angle radius=0.48cm, "$\varphi_1$", angle eccentricity=1.42] {angle = C--B--O1};
+    \pic[draw, angle radius=0.48cm, "$\varphi_2$", angle eccentricity=1.42] {angle = O2--C--CH};
+    \pic[draw, angle radius=0.72cm, "$\theta$", angle eccentricity=1.26] {angle = D--O2--O2H};
+
+    % Fixed support at O1 (tilted)
+    \draw (O1) ++(0.04,-0.03) -- ++(0.06,-0.25) -- ++(0.20,0.14) -- cycle;
+    \draw ($(O1)+(0.04,-0.32)$) -- ($(O1)+(0.36,-0.10)$);
+    \foreach \t in {0.1,0.3,0.5,0.7,0.9} {
+        \coordinate (P) at ($($(O1)+(0.04,-0.32)$)!\t!($(O1)+(0.36,-0.10)$)$);
+        \draw[line width=0.45pt] (P) -- ++(-0.08,-0.10);
+    }
+
+    % Fixed support at O2 (horizontal)
+    \draw (O2) -- ++(-0.14,-0.24) -- ++(0.28,0) -- cycle;
+    \draw ($(O2)+(-0.24,-0.24)$) -- ($(O2)+(0.24,-0.24)$);
+    \foreach \dx in {-0.20,-0.10,0,0.10,0.20} {
+        \draw[line width=0.45pt] ($(O2)+(\dx,-0.24)$) -- ++(-0.08,-0.10);
+    }
+
+    % Hinge circles
+    \foreach \p in {B,C,O2} {
+        \draw[fill=white] (\p) circle (0.055);
+    }
+    \draw[fill=white] ($(O1)+(0.05,-0.04)$) circle (0.05);
+
+    % Dimensions r1, r2, h, H
+    \coordinate (n1) at (-0.819,0.574);
+    \draw[line width=0.45pt] (B) -- ($(B)+0.60*(n1)$);
+    \draw[line width=0.45pt] (O1) -- ($(O1)+0.60*(n1)$);
+    \draw[<->] ($(B)+0.48*(n1)$) -- ($(O1)+0.48*(n1)$) node[midway, above left, inner sep=1pt] {$r_1$};
+
+    \coordinate (n2) at (-0.819,-0.574);
+    \draw[line width=0.45pt] (C) -- ($(C)+0.55*(n2)$);
+    \draw[line width=0.45pt] (O2) -- ($(O2)+0.55*(n2)$);
+    \draw[<->] ($(C)+0.44*(n2)$) -- ($(O2)+0.44*(n2)$) node[midway, below left, inner sep=1pt] {$r_2$};
+
+    \draw[line width=0.45pt] (1.88,2.161) -- (2.22,2.161);
+    \draw[line width=0.45pt] (1.88,1.311) -- (2.22,1.311);
+    \draw[<->] (2.05,1.311) -- (2.05,2.161) node[midway, right] {$h$};
+
+    \draw[line width=0.45pt] (3.632,-1.68) -- (3.632,-2.02);
+    \draw[line width=0.45pt] (4.882,-1.60) -- (4.882,-2.02);
+    \draw[<->] (3.632,-1.88) -- (4.882,-1.88) node[midway, below] {$H$};
+
+    % Labels
+    \node[right] at (A) {$A$};
+    \node[below left, inner sep=2pt] at (B) {$B$};
+    \node[above] at (C) {$C$};
+    \node[right] at (D) {$D$};
+    \node[left] at ($(O1)+(-0.08,0.06)$) {$O_1$};
+    \node[above right, inner sep=2pt] at (O2) {$O_2$};
+\end{tikzpicture}

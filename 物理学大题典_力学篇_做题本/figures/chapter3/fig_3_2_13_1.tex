@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Left fixed wall and hinge A
+  \fill[pattern=north east lines] (-0.65,-0.55) rectangle (-0.45,0.55);
+  \draw[line width=0.9pt] (-0.45,-0.55) -- (-0.45,0.55);
+  \draw (-0.45,0.22) -- (0,0.08);
+  \draw (-0.45,-0.22) -- (0,-0.08);
+
+  % Rigid massless bar AB
+  \draw (0,0.08) -- (4.8,0.08) -- (4.8,-0.08) -- (0,-0.08) -- cycle;
+
+  % Hinge circle A and mass m
+  \draw[fill=white] (0,0) circle (0.11);
+  \node[above=5pt] at (0,0.11) {$A$};
+  \draw[fill=white] (1.6,0) circle (0.24);
+  \node[above=2pt] at (1.6,0.24) {$m$};
+
+  % Dashpot at x = 3.2
+  \draw (3.2,-0.08) -- (3.2,-0.98);
+  \draw (3.06,-0.98) -- (3.34,-0.98);
+  \draw (2.98,-0.80) -- (2.98,-1.25) -- (3.42,-1.25) -- (3.42,-0.80);
+  \draw (3.2,-1.25) -- (3.2,-1.75);
+  \node[right=2pt] at (3.42,-1.02) {$\gamma$};
+  \fill[pattern=north east lines] (2.8,-1.92) rectangle (3.6,-1.75);
+  \draw[line width=0.9pt] (2.8,-1.75) -- (3.6,-1.75);
+
+  % Force F(t) and label B at x = 4.8
+  \draw[->] (4.8,0.08) -- (4.8,1.05) node[left=2pt, pos=0.85] {$F(t)$};
+  \node[right=3pt] at (4.8,0) {$B$};
+
+  % Spring k at x = 4.8
+  \draw (4.8,-0.08) -- (4.8,-0.45);
+  \draw[decorate, decoration={coil, aspect=0.4, segment length=4.5pt, amplitude=3.5pt}] (4.8,-0.45) -- (4.8,-1.40);
+  \draw (4.8,-1.40) -- (4.8,-1.75);
+  \node[right=4pt] at (4.8,-0.92) {$k$};
+  \fill[pattern=north east lines] (4.4,-1.92) rectangle (5.2,-1.75);
+  \draw[line width=0.9pt] (4.4,-1.75) -- (5.2,-1.75);
+
+  % Bottom dimension lines (l, l, l)
+  \foreach \x in {0, 1.6, 3.2, 4.8} {
+    \draw[thin] (\x,-2.22) -- (\x,-2.65);
+  }
+  \draw[<->] (0,-2.48) -- (1.6,-2.48) node[midway, above=2pt] {$l$};
+  \draw[<->] (1.6,-2.48) -- (3.2,-2.48) node[midway, above=2pt] {$l$};
+  \draw[<->] (3.2,-2.48) -- (4.8,-2.48) node[midway, above=2pt] {$l$};
+\end{tikzpicture}

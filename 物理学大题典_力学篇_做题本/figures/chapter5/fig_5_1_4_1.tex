@@ -1,0 +1,64 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\R{1.6}
+  \coordinate (O) at (0,0);
+  \coordinate (C) at (\R, 0);
+  \coordinate (A) at (120:\R);
+
+  % Dashed circle centered at O
+  \draw[dashed] (O) circle (\R);
+
+  % Horizontal dashed baseline through O and C
+  \draw[dashed] (-1.2, 0) -- (C);
+
+  % Radius label 20cm
+  \draw (O) -- (205:\R) node[midway, below, inner sep=4pt] {$20\,\mathrm{cm}$};
+
+  % Fixed supports at O and C
+  \foreach \P in {O, C} {
+    \draw ($(\P)+(-0.18,-0.28)$) -- (\P) -- ($(\P)+(0.18,-0.28)$);
+    \draw ($(\P)+(-0.32,-0.28)$) -- ($(\P)+(0.32,-0.28)$);
+    \foreach \x in {-0.24,-0.12,0,0.12,0.24} {
+      \draw ($(\P)+(\x,-0.28)$) -- ($(\P)+(\x-0.08,-0.38)$);
+    }
+  }
+
+  % Crank OA (angle 120 deg, extends slightly past A)
+  \coordinate (OAtop) at (120:{\R+0.18});
+  \draw[fill=white]
+    ($(O)+(210:0.12)$) arc (210:390:0.12) --
+    ($(OAtop)+(30:0.12)$) arc (30:210:0.12) -- cycle;
+
+  % Slotted link BC along direction 150 deg from C
+  \pgfmathsetmacro{\LenAC}{sqrt(3)*\R}
+  \coordinate (B) at ($(C)+(150:{\LenAC+0.9})$);
+  \draw[fill=white]
+    ($(C)+(60:0.16)$) -- ($(B)+(60:0.16)$) arc (60:240:0.16) --
+    ($(C)+(240:0.16)$) arc (240:420:0.16) -- cycle;
+
+  % Inner slot of BC
+  \coordinate (S1) at ($(C)+(150:0.35)$);
+  \coordinate (S2) at ($(C)+(150:{\LenAC+0.55})$);
+  \draw
+    ($(S1)+(60:0.055)$) -- ($(S2)+(60:0.055)$) arc (60:240:0.055) --
+    ($(S1)+(240:0.055)$) arc (240:420:0.055) -- cycle;
+
+  % Hidden part of OA behind BC (subtle dashed edge)
+  \draw[dashed] ($(A)+(30:0.12)$) -- ($(O)!0.75!(A)+(30:0.12)$);
+
+  % Pivots and pin A
+  \draw[fill=white] (O) circle (2.5pt);
+  \draw[fill=white] (C) circle (2.5pt);
+  \fill (A) circle (2.0pt);
+
+  % Angle 2theta at O and theta at C
+  \draw (-0.52, 0) arc (180:120:0.52);
+  \node at (150:0.78) {$2\theta$};
+  \draw ($(C)+(180:0.65)$) arc (180:150:0.65);
+  \node at ($(C)+(165:0.95)$) {$\theta$};
+
+  % Labels
+  \node[above right, inner sep=3.5pt] at ($(O)+(0.03, 0.02)$) {$O$};
+  \node[above right, inner sep=3.5pt] at ($(C)+(0.03, 0.02)$) {$C$};
+  \node[above right, inner sep=2pt] at (120:{\R+0.26}) {$A$};
+  \node[above left, inner sep=2pt] at (B) {$B$};
+\end{tikzpicture}

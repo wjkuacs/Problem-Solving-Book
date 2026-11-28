@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{1.65}
+  \def\yc{2.20}
+
+  % 地面及阴影线
+  \draw[thick] (-2.15,0) -- (2.15,0);
+  \foreach \x in {-2.0,-1.75,...,1.75} {
+    \draw (\x,0) -- ++(-0.18,-0.22);
+  }
+
+  % 鼠笼圆周
+  \draw[thick] (0,\yc) circle (\R);
+
+  % 支架（白色填充遮挡后面的圆弧）
+  \filldraw[fill=white, draw=black, thick]
+    (-0.58,0) -- (-0.23,\yc) arc (180:0:0.23) -- (0.58,0) -- cycle;
+  \fill (0,\yc) circle (1.6pt);
+
+  % 鼠笼内底右侧的松鼠剪影
+  \begin{scope}[shift={(0.98,1.02)}, rotate=35, scale=0.82]
+    % 尾巴
+    \fill[black] (-0.22,0.02)
+      .. controls (-0.42,0.06) and (-0.45,0.32) .. (-0.30,0.40)
+      .. controls (-0.25,0.42) and (-0.32,0.28) .. (-0.24,0.18)
+      .. controls (-0.18,0.12) and (-0.14,0.06) .. (-0.14,0.02) -- cycle;
+    % 身体与四肢
+    \fill[black] (0,0.08) ellipse (0.20 and 0.11);
+    \fill[black] (0.21,0.14) ellipse (0.09 and 0.075);
+    % 耳朵
+    \fill[black] (0.18,0.20) -- (0.21,0.27) -- (0.25,0.20) -- cycle;
+    % 腿与爪
+    \draw[line width=1.6pt] (-0.10,0.01) -- (-0.14,-0.08) -- (-0.04,-0.08);
+    \draw[line width=1.6pt] (0.13,0.05) -- (0.18,-0.04) -- (0.24,-0.03);
+  \end{scope}
+\end{tikzpicture}

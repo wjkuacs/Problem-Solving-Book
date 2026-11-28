@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Left and right walls with hatching
+  \fill[pattern=north east lines] (-0.22, -0.5) rectangle (0, 0.5);
+  \fill[pattern=north east lines] (5.2, -0.5) rectangle (5.42, 0.5);
+  \draw (0, -0.5) -- (0, 0.5);
+  \draw (5.2, -0.5) -- (5.2, 0.5);
+
+  % Equilibrium vertical dashed lines
+  \draw[dashed, thin] (1.75, -0.75) -- (1.75, 0.55);
+  \draw[dashed, thin] (3.45, -0.75) -- (3.45, 0.55);
+
+  % Left spring k
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=4pt, pre length=0.2cm, post length=0.2cm}]
+    (0, 0) -- (1.25, 0);
+  \node[above=6pt] at (0.625, 0) {$k$};
+
+  % Middle spring k'
+  \draw (1.25, 0) -- (1.95, 0);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=4pt, pre length=0.1cm, post length=0.1cm}]
+    (1.95, 0) -- (3.25, 0);
+  \draw (3.25, 0) -- (3.95, 0);
+  \node[above=6pt] at (2.6, 0) {$k'$};
+
+  % Right spring k
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=4pt, pre length=0.2cm, post length=0.2cm}]
+    (3.95, 0) -- (5.2, 0);
+  \node[above=6pt] at (4.575, 0) {$k$};
+
+  % Equilibrium markers and masses m
+  \fill (1.75, 0) circle (1pt);
+  \fill (3.45, 0) circle (1pt);
+  \fill (1.25, 0) circle (2.3pt) node[above=3pt] {$m$};
+  \fill (3.95, 0) circle (2.3pt) node[above=3pt] {$m$};
+
+  % Initial displacement b arrows
+  \draw[thin] (1.25, -0.15) -- (1.25, -0.75);
+  \draw[<->, thin] (1.25, -0.55) -- (1.75, -0.55) node[midway, below=2pt] {$b$};
+
+  \draw[thin] (3.95, -0.15) -- (3.95, -0.75);
+  \draw[<->, thin] (3.45, -0.55) -- (3.95, -0.55) node[midway, below=2pt] {$b$};
+\end{tikzpicture}

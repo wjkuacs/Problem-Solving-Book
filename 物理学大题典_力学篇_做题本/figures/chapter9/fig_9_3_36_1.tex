@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth]
+  \begin{scope}[rotate=38]
+    % Center of mass C marker
+    \draw[thick] (1.65,-0.09) -- (1.65,0.09);
+
+    % Position vectors from C
+    \draw[->, thick] (1.58,0.04) -- (0.08,0.04) node[midway, above left=2pt and -2pt] {$\boldsymbol{r}_2$};
+    \draw[->, thick] (1.72,0.04) -- (4.42,0.04) node[midway, above left=2pt and -2pt] {$\boldsymbol{r}$};
+
+    % Vector below from m2 to m1
+    \draw[thick] (0,0) -- (0,-0.52);
+    \draw[->, thick] (0,-0.52) -- (4.42,-0.52) node[pos=0.68, below right=2pt and -2pt] {$\boldsymbol{r}_1$};
+
+    % Point labels
+    \node[below left=3pt and 2pt] at (0,0) {$m_2$};
+    \node[above right=2pt and 2pt] at (4.5,0) {$m_1$};
+    \node at (1.65,-0.28) {$C$};
+  \end{scope}
+\end{tikzpicture}

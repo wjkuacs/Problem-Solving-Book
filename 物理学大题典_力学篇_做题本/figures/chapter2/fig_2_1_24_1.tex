@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rough horizontal ground
+  \draw (-1.1,0) -- (4.1,0);
+  \foreach \x in {-0.9,-0.6,...,3.9} {
+    \draw[thin] (\x,0) -- (\x-0.25,-0.25);
+  }
+  \node at (1.5,-0.48) {$\mu$};
+
+  % Wedge M
+  \draw (0,0) -- (3.6,0) -- (0,2.0) -- cycle;
+  \node at (1.15,0.68) {$M$};
+  \node at (2.82,0.22) {$\theta$};
+
+  % Pulley at top-left corner
+  \draw (0,2.0) -- (-0.14,2.14);
+  \draw[fill=white] (-0.14,2.14) circle (0.22);
+
+  % Hanging mass m1
+  \draw (-0.36,2.14) -- (-0.36,1.08);
+  \draw (-0.58,0.66) rectangle (-0.14,1.08);
+  \node[left=2pt] at (-0.58,0.87) {$m_1$};
+
+  % Block m2 on the incline and string
+  \begin{scope}[shift={(1.512,1.16)}, rotate=-29.05]
+    \draw (0,0) rectangle (0.56,0.52);
+    \node at (0.28,0.78) {$m_2$};
+    \coordinate (m2attach) at (0,0.26);
+  \end{scope}
+  \draw (-0.033,2.332) -- (m2attach);
+\end{tikzpicture}

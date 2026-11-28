@@ -1,0 +1,54 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{0.72}
+  \def\l{0.96}
+  \def\rx{0.28}
+  \def\d{1.90}
+
+  % 左半轴
+  \draw[thick, fill=white] (-2.70,-0.05) -- (-\l,-0.05) arc (-90:90:0.05) -- (-2.70,0.05) arc (90:270:0.05);
+
+  % 右半轴
+  \draw[thick, fill=white] ({\l+\rx},-0.05) -- (2.70,-0.05) arc (-90:90:0.05) -- ({\l+\rx},0.05);
+
+  % 圆柱体
+  \draw[thick] (-\l,0) ellipse ({\rx} and {\R});
+  \draw[thick] (-\l,\R) -- (\l,\R);
+  \draw[thick] (-\l,-\R) -- (\l,-\R);
+  \draw[thick] (\l,-\R) arc (-90:90:{\rx} and {\R});
+
+  % 重画左半轴前端覆盖左端面中心线
+  \fill[white] (-\l-0.02,-0.045) rectangle (-\l+0.02,0.045);
+  \draw[thick] (-\l-0.30,0.05) -- (-\l,0.05) arc (90:-90:0.05) -- (-\l-0.30,-0.05);
+
+  % 半径 R 与盘质量 M
+  \draw[thick, ->] (-\l,0) -- (-\l,-\R) node[pos=0.52, right=0.5pt] {$R$};
+  \node at (0.52,0.44) {$M$};
+
+  % 两个附加质量块 m
+  \fill (-\l,\R) circle (2.2pt) node[above left=1pt] {$m$};
+  \fill (\l,-\R) circle (2.2pt) node[right=3pt, yshift=-2pt] {$m$};
+
+  % 左右轴承（斜线阴影）
+  \foreach \bx in {-\d, \d} {
+    \fill[pattern=north east lines] (\bx-0.26,0.16) rectangle (\bx+0.26,0.52);
+    \draw[thick] (\bx-0.26,0.52) -- (\bx-0.26,0.16) -- (\bx+0.26,0.16) -- (\bx+0.26,0.52);
+    \fill[pattern=north east lines] (\bx-0.26,-0.52) rectangle (\bx+0.26,-0.16);
+    \draw[thick] (\bx-0.26,-0.52) -- (\bx-0.26,-0.16) -- (\bx+0.26,-0.16) -- (\bx+0.26,-0.52);
+  }
+
+  % 转动方向 omega
+  \draw[thick, ->] (2.45,0.22) arc (65:325:0.13 and 0.25);
+  \node[below=2pt] at (2.51,-0.22) {$\omega$};
+
+  % 尺寸标注 2l
+  \draw (-\l,{-\R-0.08}) -- (-\l,{-\R-0.44});
+  \draw (\l,{-\R-0.08}) -- (\l,{-\R-0.44});
+  \draw[<->] (-\l,{-\R-0.26}) -- (\l,{-\R-0.26}) node[midway, fill=white, inner sep=1.5pt] {$2l$};
+
+  % 尺寸标注 d 和 d
+  \draw (-\d,{-\R-0.48}) -- (-\d,{-\R-0.84});
+  \draw (0,{-\R-0.48}) -- (0,{-\R-0.84});
+  \draw (\d,{-\R-0.48}) -- (\d,{-\R-0.84});
+  \draw[<->] (-\d,{-\R-0.66}) -- (0,{-\R-0.66}) node[midway, fill=white, inner sep=1.5pt] {$d$};
+  \draw[<->] (0,{-\R-0.66}) -- (\d,{-\R-0.66}) node[midway, fill=white, inner sep=1.5pt] {$d$};
+\end{tikzpicture}

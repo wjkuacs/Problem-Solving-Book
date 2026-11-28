@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small]
+  % Ceiling with hatching
+  \fill[pattern=north east lines] (-0.9, 0) rectangle (1.65, 0.22);
+  \draw (-0.9, 0) -- (0, 0);
+
+  % Coordinate axes x and y
+  \draw[->] (0, 0) -- (1.75, 0) node[below left=2pt] {$x$};
+  \draw[->] (0, 0) -- (0, -4.35) node[left=2pt] {$y$};
+
+  % First pendulum (3l, angle theta)
+  \coordinate (O) at (0, 0);
+  \coordinate (P1) at (1.00, -1.73);
+  \draw (O) -- (P1);
+  \fill (P1) circle (2.2pt) node[right=2pt] {$m$};
+  \node[above right=1pt] at ($(O)!0.50!(P1)$) {$3l$};
+
+  % Angle theta
+  \draw[thin] (0, -0.68) arc (-90:-60:0.68);
+  \node at (-75:0.92) {$\theta$};
+
+  % Second pendulum (4l, angle phi)
+  \coordinate (P2) at ($(P1)+(0.80, -2.47)$);
+  \draw[dashed, thin] (P1) -- ($(P1)+(0, -1.85)$);
+  \draw (P1) -- (P2);
+  \fill (P2) circle (2.2pt) node[right=2pt] {$m$};
+  \node[right=2pt] at ($(P1)!0.50!(P2)$) {$4l$};
+
+  % Angle phi
+  \draw[thin] ($(P1)+(0, -0.95)$) arc (-90:-72:0.95);
+  \node at ($(P1)+(-81:1.22)$) {$\varphi$};
+\end{tikzpicture}

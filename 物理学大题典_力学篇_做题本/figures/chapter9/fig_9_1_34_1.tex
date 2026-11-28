@@ -1,0 +1,55 @@
+\begin{tikzpicture}[>=Stealth, scale=1.05]
+  % Arch rib (center (0,0), radius 2a with a=1)
+  \draw[thick] (2.06, 0) arc (0:180:2.06);
+  \draw[thick] (1.94, 0) arc (0:180:1.94);
+
+  % Left support A
+  \draw[thick] (-2, 0) -- (-2.65, 0);
+  \draw[thick] (-2, 0) -- (-2, -0.65);
+  \draw[thick] (-2.65, 0) -- (-2.65, -0.65) -- (-2, -0.65);
+  \foreach \y in {-0.1,-0.3,-0.5} {
+    \draw (-2.65, \y) -- (-2.82, \y-0.17);
+  }
+  \foreach \x in {-2.6,-2.4,-2.2,-2.0} {
+    \draw (\x, -0.65) -- (\x-0.17, -0.82);
+  }
+
+  % Right support B
+  \draw[thick] (2, 0) -- (2.65, 0);
+  \draw[thick] (2, 0) -- (2, -0.65);
+  \draw[thick] (2.65, 0) -- (2.65, -0.65) -- (2, -0.65);
+  \foreach \y in {-0.1,-0.3,-0.5} {
+    \draw (2.65, \y) -- (2.82, \y-0.17);
+  }
+  \foreach \x in {2.0,2.2,2.4,2.6} {
+    \draw (\x, -0.65) -- (\x+0.17, -0.82);
+  }
+
+  % Hinge circles
+  \foreach \pt in {(-2,0), (-2.65,0), (-2,-0.65), (2,0), (2.65,0), (2,-0.65), (0,2)} {
+    \draw[thick, fill=white] \pt circle (2.8pt);
+  }
+  \node[below right=2pt] at (-2, 0) {$A$};
+  \node[below left=2pt] at (2, 0) {$B$};
+  \node[below=4pt] at (0, 2) {$C$};
+
+  % Forces P and Q
+  \draw[thick, ->] (-1, 3.05) -- (-1, 1.80);
+  \node[right=1pt] at (-1, 2.90) {$P$};
+  \draw[thick, ->] (2.75, 1.0) -- (1.80, 1.0);
+  \node[right=1pt] at (2.75, 1.0) {$Q$};
+
+  % Horizontal dimension lines (top)
+  \draw (-2, 0.25) -- (-2, 2.65);
+  \draw (0, 2.05) -- (0, 2.65);
+  \draw (2, 1.05) -- (2, 2.65);
+  \draw[<->] (-2, 2.45) -- (-1, 2.45) node[midway, fill=white, inner sep=1.5pt] {$a$};
+  \draw[<->] (-1, 2.45) -- (0, 2.45) node[midway, fill=white, inner sep=1.5pt] {$a$};
+  \draw[<->] (0, 2.45) -- (2, 2.45) node[midway, fill=white, inner sep=1.5pt] {$2a$};
+
+  % Vertical dimension lines (right)
+  \draw (0.08, 2) -- (2.55, 2);
+  \draw (2.10, 0) -- (2.55, 0);
+  \draw[<->] (2.30, 1.0) -- (2.30, 2.0) node[midway, fill=white, inner sep=1.5pt] {$a$};
+  \draw[<->] (2.30, 0.0) -- (2.30, 1.0) node[midway, fill=white, inner sep=1.5pt] {$a$};
+\end{tikzpicture}

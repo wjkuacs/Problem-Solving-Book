@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.3}
+  % Ground with hatching
+  \draw (-2.0,0) -- (2.0,0);
+  \foreach \x in {-1.8,-1.5,...,1.8} {
+    \draw[thin] (\x,0) -- (\x-0.18,-0.18);
+  }
+  % Wheel
+  \draw (0,\R) circle (\R);
+  % Radius R
+  \draw[->] (0,\R) -- ++(138:\R) node[midway, above right=1pt] {$R$};
+  % Center velocity v_0
+  \draw[->] (0,\R) -- (\R+0.8,\R) node[right] {$v_0$};
+  % Coordinate x arrow
+  \draw[->] (\R+0.6, 0.72) -- (\R+1.6, 0.72) node[below=2pt] {$x$};
+  % Counterclockwise angular velocity omega_0
+  \draw[->] ($(0,\R)+(28:\R+0.32)$) arc[start angle=28, end angle=84, radius=\R+0.32];
+  \node at ($(0,\R)+(56:\R+0.56)$) {$\omega_0$};
+\end{tikzpicture}

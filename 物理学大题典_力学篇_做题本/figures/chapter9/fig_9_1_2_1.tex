@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\th{32}
+    \def\R{1.05}
+    \pgfmathsetmacro{\xc}{\R/tan(\th/2)}
+    \def\rodlen{4.6}
+    \def\rodthick{0.07}
+
+    % Horizontal x-axis
+    \draw (-0.3,0) -- ({\xc+\R+0.8},0) node[below left=1pt, font=\small] {$x$};
+
+    % Angle theta_1
+    \draw[semithick] (0.85,0) arc (0:\th:0.85);
+    \node[font=\small] at ({1.10*cos(\th/2)}, {1.10*sin(\th/2)}) {$\theta_1$};
+
+    % Homogeneous disk of radius R
+    \coordinate (C) at (\xc,\R);
+    \coordinate (T) at ({\xc*cos(\th)}, {\xc*sin(\th)});
+    \draw (C) circle (\R);
+    \fill (C) circle (1.3pt);
+    \draw[->, semithick] (C) -- (T) node[midway, right=2pt, font=\small] {$R$};
+
+    % Angular velocity indicator
+    \draw[->, semithick] ($(C) + ({1.28*cos(24)}, {1.28*sin(24)})$) arc (24:-24:1.28);
+    \node[right=2pt, font=\small] at ($(C) + (1.28,0)$) {$\dot{\theta}_2$};
+
+    % Thin rod of length 2l
+    \begin{scope}[rotate=\th]
+        \draw[fill=white] (0,0) rectangle (\rodlen,\rodthick);
+
+        % Dimension 2l above the rod
+        \draw[thin] (0,\rodthick+0.08) -- (0,\rodthick+0.78);
+        \draw[thin] (\rodlen,\rodthick+0.08) -- (\rodlen,\rodthick+0.78);
+        \draw[<->, thin] (0,\rodthick+0.62) -- (\rodlen,\rodthick+0.62)
+            node[midway, fill=white, inner sep=1.5pt, font=\small] {$2l$};
+
+        % Dimension s along the rod to contact point
+        \draw[thin] (2.60,-0.08) -- (2.60,-0.65);
+        \draw[thin] (\xc,-0.08) -- (\xc,-0.65);
+        \draw[<->, thin] (2.60,-0.50) -- (\xc,-0.50)
+            node[midway, fill=white, inner sep=1pt, font=\small] {$s$};
+    \end{scope}
+
+    % Rod center of mass label (upright)
+    \node[font=\small] at ({1.68*cos(\th)+0.34*sin(\th)}, {1.68*sin(\th)-0.34*cos(\th)}) {$(x_1, y_1)$};
+\end{tikzpicture}

@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth]
+  % Horizontal ground
+  \fill[pattern=north east lines] (-1.2, -0.20) rectangle (4.65, 0);
+  \draw[thick] (-1.2, 0) -- (4.65, 0);
+
+  % Left disk/cylinder
+  \coordinate (O1) at (0, 0.92);
+  \draw[thick] (O1) circle (0.92);
+  \node[below left=1pt] at (O1) {$O_1$};
+  \draw[->, thick] (O1) -- ++(25:0.92) node[midway, above left=0pt and 1pt] {$a$};
+  \node at (0.85, 1.72) {$M$};
+
+  % Right disk/cylinder
+  \coordinate (O2) at (2.65, 0.92);
+  \draw[thick] (O2) circle (0.92);
+  \node[left=1pt] at (O2) {$O_2$};
+  \draw[->, thick] (O2) -- ++(25:0.92) node[midway, above left=0pt and 1pt] {$a$};
+  \node at (3.50, 1.72) {$M$};
+
+  % Crank arms of length b and connecting rod of mass m
+  \coordinate (P1) at ($(O1) + (-52:0.58)$);
+  \coordinate (P2) at ($(O2) + (-52:0.58)$);
+  \draw[thick] (O1) -- (P1) -- (P2) -- (O2);
+  \node[right=2pt] at ($(O1)!0.65!(P1)$) {$b$};
+  \node[right=2pt] at ($(O2)!0.65!(P2)$) {$b$};
+  \node[above=1pt] at ($(P1)!0.5!(P2)$) {$m$};
+
+  % Spring k and right wall
+  \draw[thick, decorate, decoration={zigzag, segment length=5, amplitude=2.5, pre length=14, post length=12}]
+    (O2) -- (4.65, 0.92);
+  \node at (3.95, 1.18) {$k$};
+  \fill[pattern=north east lines] (4.65, 0.35) rectangle (4.87, 1.60);
+  \draw[thick] (4.65, 0.35) -- (4.65, 1.60);
+\end{tikzpicture}

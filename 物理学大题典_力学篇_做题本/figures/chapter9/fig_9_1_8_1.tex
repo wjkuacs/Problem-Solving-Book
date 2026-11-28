@@ -1,0 +1,37 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\th{32}
+    \def\rlen{2.05}
+    \def\yplate{-0.95}
+
+    % Ceiling with hatching
+    \draw (-1.6,1.15) -- (1.6,1.15);
+    \foreach \x in {-1.45,-1.15,...,1.45} {
+        \draw[semithick] (\x,1.15) -- (\x+0.18,1.33);
+    }
+
+    % Vertical y-axis and horizontal x-axis
+    \draw[->, semithick] (0,1.15) -- (0,-3.15) node[left=1pt, font=\small] {$y$};
+    \draw[->, semithick] (0,0) -- (2.10,0) node[above left=1pt, font=\small] {$x$};
+    \node[left=2pt, font=\small] at (0,0) {$O$};
+
+    % Moving plate B with central hole
+    \draw (-1.65,\yplate+0.14) -- (-0.07,\yplate+0.14) -- (-0.07,\yplate) -- (-1.65,\yplate);
+    \draw (1.50,\yplate+0.14) -- (0.07,\yplate+0.14) -- (0.07,\yplate) -- (1.50,\yplate);
+    \node[above=2pt, font=\small] at (-1.40,\yplate+0.14) {$B$};
+
+    % Displacement s of plate B
+    \draw[thin] (1.55,\yplate) -- (1.90,\yplate);
+    \draw[<->, thin] (1.72,0) -- (1.72,\yplate) node[midway, right=2pt, font=\small] {$s$};
+
+    % String and particle m
+    \coordinate (H) at (0,\yplate);
+    \coordinate (M) at ({\rlen*sin(\th)}, {\yplate-\rlen*cos(\th)});
+    \draw (H) -- (M);
+    \draw[fill=white] (M) circle (0.14);
+    \node[right=3pt, font=\small] at (M) {$m$};
+
+    % Angle theta and string length r
+    \draw[semithick] (0,\yplate-0.60) arc (270:{270+\th}:0.60);
+    \node[font=\small] at ({0.80*sin(\th/2)}, {\yplate-0.80*cos(\th/2)}) {$\theta$};
+    \node[above right=1pt, font=\small] at ($(H)!0.48!(M)$) {$r$};
+\end{tikzpicture}

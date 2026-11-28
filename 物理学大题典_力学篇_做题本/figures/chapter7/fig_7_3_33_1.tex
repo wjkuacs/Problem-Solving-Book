@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Oblique projection of tilted square plate centered at O
+  % Plate plane spanned by x-axis (66 deg) and y-axis (205 deg)
+  \def\s{1.25}
+  \coordinate (O) at (0,0);
+  \coordinate (ux) at (66:1);
+  \coordinate (uy) at (205:1);
+
+  \coordinate (P1) at ($(O) + \s*(ux) + \s*(uy)$);   % top-left
+  \coordinate (P2) at ($(O) + \s*(ux) - \s*(uy)$);   % top-right
+  \coordinate (P3) at ($(O) - \s*(ux) - \s*(uy)$);   % bottom-right
+  \coordinate (P4) at ($(O) - \s*(ux) + \s*(uy)$);   % bottom-left
+
+  % Square plate
+  \draw[very thick] (P1) -- (P2) -- (P3) -- (P4) -- cycle;
+
+  % Lab frame (xi, eta, zeta) and body frame (x, y, z)
+  \draw[->] (O) -- (0, 2.05) node[left=1pt] {$\xi$};
+  \draw[->] (O) -- (2.35, 0) node[right=1pt] {$\zeta$};
+  \draw[->] (O) -- (205:2.15) node[above left=0pt] {$\eta,\,y$};
+
+  \draw[->] (O) -- (66:2.15) node[right=1pt] {$x$};
+  \draw[->] (O) -- (-26:2.10) node[below right=1pt] {$z$};
+
+  % Origin label O
+  \node[below left=1pt] at (O) {$O$};
+
+  % Angle theta between zeta and z
+  \draw (0.72,0) arc (0:-26:0.72);
+  \node at (-13:0.96) {$\theta$};
+\end{tikzpicture}

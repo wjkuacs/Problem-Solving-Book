@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (O) at (0,0);
+  \def\R{2.0}
+
+  % Flywheel rim and spokes
+  \draw (O) circle (\R);
+  \draw (O) -- (145:\R);
+  \draw (O) -- (18:\R);
+  \node at (70:0.28) {$O$};
+
+  % Spoke with spring k and sliding ball m
+  \coordinate (M) at (-105:1.28);
+  \draw (O) -- (-105:0.15)
+    decorate[decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}] {-- (-105:1.15)}
+    -- (M) -- (-105:\R);
+  \node[right=4pt] at (-105:0.65) {$k$};
+  \fill (M) circle (2.2pt) node[below right=1pt] {$m$};
+\end{tikzpicture}

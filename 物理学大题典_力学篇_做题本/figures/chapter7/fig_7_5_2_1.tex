@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  \coordinate (O) at (0,0);
+
+  % Rigid disk / wheel in x1-x2 plane
+  \draw[very thick] (O) ellipse (1.6cm and 0.55cm);
+
+  % Principal axes x1, x2, x3
+  \draw[->, thick] (O) -- (0,2.5) node[left] {$x_3$};
+  \draw[->, thick] (O) -- (2.5,0) node[below right] {$x_2$};
+  \draw[->, thick] (O) -- (-1.35,-1.25) node[left] {$x_1$};
+
+  % Angular velocity vector omega
+  \draw[->, thick] (O) -- (1.35,2.05) node[above right] {$\boldsymbol{\omega}$};
+
+  % Origin label
+  \node[below right] at (0.02,-0.02) {$O$};
+\end{tikzpicture}

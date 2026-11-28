@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Shaft (thin massless bar)
+  \draw (-2.35,0.08) -- (2.35,0.08) -- (2.35,-0.08) -- (-2.35,-0.08) -- cycle;
+
+  % Bearings O and O'
+  \draw (-2.15,0.20) -- (-2.48,0.20) -- (-2.48,-0.20) -- (-2.15,-0.20);
+  \node[above=2pt] at (-2.32,0.20) {$O$};
+  \draw (2.15,0.20) -- (2.48,0.20) -- (2.48,-0.20) -- (2.15,-0.20);
+  \node[above=2pt] at (2.32,0.20) {$O'$};
+
+  % Left masses (2m on shaft, m above by l)
+  \fill (-1.05,0) circle (1.5pt);
+  \node[below left=2pt] at (-1.05,-0.08) {$2m$};
+  \draw (-1.05,0) -- (-1.05,1.15);
+  \fill (-1.05,1.15) circle (2.2pt) node[right=3pt] {$m$};
+
+  % Right masses (2m on shaft, m below by l)
+  \fill (1.05,0) circle (1.5pt);
+  \node[above=2pt] at (1.05,0.08) {$2m$};
+  \draw (1.05,0) -- (1.05,-1.15);
+  \fill (1.05,-1.15) circle (2.2pt) node[left=3pt] {$m$};
+
+  % Dimension l (left)
+  \draw[thin] (-1.20,1.15) -- (-1.75,1.15);
+  \draw[thin] (-1.20,0.08) -- (-1.75,0.08);
+  \draw[<->] (-1.52,0.08) -- (-1.52,1.15)
+    node[midway, fill=white, inner sep=1.5pt] {$l$};
+
+  % Dimension l (right)
+  \draw[thin] (1.20,-0.08) -- (1.75,-0.08);
+  \draw[thin] (1.20,-1.15) -- (1.75,-1.15);
+  \draw[<->] (1.52,-0.08) -- (1.52,-1.15)
+    node[midway, fill=white, inner sep=1.5pt] {$l$};
+
+  % Dimension 2l (bottom)
+  \draw[thin] (-1.05,-0.15) -- (-1.05,-1.00);
+  \draw[thin] (1.05,-0.15) -- (1.05,-1.00);
+  \draw[<->] (-1.05,-0.80) -- (1.05,-0.80)
+    node[midway, fill=white, inner sep=1.5pt] {$2l$};
+\end{tikzpicture}

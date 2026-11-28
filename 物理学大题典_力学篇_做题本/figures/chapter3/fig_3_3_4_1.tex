@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Axes
+  \draw[->] (0,0) -- (5.3,0);
+  \node[below=2pt] at (5.1,-0.05) {\shortstack{$x$\\[-2pt](m)}};
+  \draw[->] (0,-1.55) -- (0,1.75);
+  \node[left=2pt] at (-0.02,1.55) {\shortstack{$y$\\[-2pt](mm)}};
+
+  % Wave curve: y(x) = 1.05 * sin(360 * x / 5.0 + 30)
+  % Zero crossings at x = 2.0833 and x = 4.5833 (half-wavelength = 2.5 cm -> 10 m)
+  \draw[line width=0.85pt] plot[domain=0:4.85, samples=100] (\x, {1.05*sin(360*\x/5.0 + 30)});
+
+  % Dashed extrema lines and y-axis labels
+  \draw[dashed] (0,1.05) -- (0.833,1.05);
+  \draw[dashed] (0,-1.05) -- (3.333,-1.05);
+  \node[left=2pt] at (0,1.05) {$10$};
+  \node[left=2pt] at (0,0.525) {$5$};
+  \node[left=2pt] at (0,0) {$0$};
+  \node[left=2pt] at (0,-1.05) {$-10$};
+
+  % Half-wavelength dimension 10
+  \draw[thin] (2.0833,0.06) -- (2.0833,1.05);
+  \draw[thin] (4.5833,0.06) -- (4.5833,1.05);
+  \draw[<->] (2.0833,0.84) -- (4.5833,0.84) node[midway, above=2pt] {$10$};
+\end{tikzpicture}

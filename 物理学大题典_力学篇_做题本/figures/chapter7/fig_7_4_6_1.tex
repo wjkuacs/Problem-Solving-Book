@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.35}
+  % Ground with hatching
+  \draw (-2.0,0) -- (2.0,0);
+  \foreach \x in {-1.8,-1.5,...,1.8} {
+    \draw[thin] (\x,0) -- (\x-0.18,-0.18);
+  }
+  % Thin cylinder
+  \draw (0,\R) circle (\R);
+  % Center velocity v_0
+  \draw[->] (0,\R) -- (\R+0.85,\R) node[right] {$v_0$};
+  % Counterclockwise angular velocity omega_0
+  \draw[->] ($(0,\R)+(105:\R+0.32)$) arc[start angle=105, end angle=162, radius=\R+0.32];
+  \node at ($(0,\R)+(102:\R+0.56)$) {$\omega_0$};
+\end{tikzpicture}

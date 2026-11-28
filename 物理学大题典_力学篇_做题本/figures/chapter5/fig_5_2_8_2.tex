@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (1.85,0);
+  \coordinate (B) at (1.85,1.85);
+  \coordinate (C) at (1.85,-1.85);
+  \coordinate (D) at (-1.85,-1.85);
+
+  % Dashed cone geometry lines and solid segment BC
+  \draw[thick, dashed] (O) -- (A);
+  \draw[thick, dashed] (D) -- (B);
+  \draw[thick, dashed] (O) -- (C);
+  \draw[thick, dashed] (D) -- (C);
+  \draw[thick] (B) -- (C);
+
+  % Angular velocity vectors omega_1, omega_2, omega
+  \draw[->, thick] (O) -- (0,1.35) node[right=2pt] {$\boldsymbol{\omega}_1$};
+  \draw[->, thick] (O) -- (-1.35,0) node[below=2pt] {$\boldsymbol{\omega}_2$};
+  \draw[->, thick] (O) -- (-1.35,1.35) node[above=1pt] {$\boldsymbol{\omega}$};
+  \draw[thick, dashed] (0,1.35) -- (-1.35,1.35) -- (-1.35,0);
+
+  % Point labels
+  \node[below=3pt] at (O) {$O$};
+  \node[right=2pt] at (A) {$A$};
+  \node[above right=1pt] at (B) {$B$};
+  \node[below right=1pt] at (C) {$C$};
+\end{tikzpicture}

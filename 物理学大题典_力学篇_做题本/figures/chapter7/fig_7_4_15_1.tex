@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.15}
+  \def\rb{0.11}
+  \coordinate (O) at (0,\R);
+  % Circular loop
+  \draw (O) circle (\R);
+  % Tangent ramp at 225 deg (slope -1)
+  \pgfmathsetmacro{\xT}{-\R/sqrt(2)}
+  \pgfmathsetmacro{\yT}{\R-\R/sqrt(2)}
+  \pgfmathsetmacro{\yTop}{2*\R-\rb}
+  \pgfmathsetmacro{\yBot}{\rb}
+  \def\h{0.82}
+  \pgfmathsetmacro{\yStart}{\yTop+\h}
+  % Ball of radius rb tangent to slope -1 ramp has center offset (+rb/sqrt(2), +rb/sqrt(2)) from contact
+  \pgfmathsetmacro{\xStart}{\xT+\yT-\yStart+\rb*sqrt(2)}
+  \pgfmathsetmacro{\xC}{\xStart-\rb/sqrt(2)}
+  \pgfmathsetmacro{\yC}{\yStart-\rb/sqrt(2)}
+  \pgfmathsetmacro{\xArrow}{\xStart-0.68}
+  \pgfmathsetmacro{\xDashLeft}{\xStart-0.88}
+  % Small balls inside top and bottom of loop, and at start on ramp
+  \draw (0,\yTop) circle (\rb);
+  \draw (0,\yBot) circle (\rb);
+  \draw (\xStart,\yStart) circle (\rb);
+  \draw (\xT,\yT) -- (\xC,\yC);
+  % Horizontal dashed reference lines
+  \draw[dashed] (\xDashLeft,\yStart) -- (\xStart,\yStart);
+  \draw[dashed] (\xDashLeft,\yTop) -- (1.65,\yTop);
+  \draw[dashed] (0,\yBot) -- (1.65,\yBot);
+  % Height h dimension
+  \draw[<->] (\xArrow,\yTop) -- (\xArrow,\yStart) node[midway, left=2pt] {$h$};
+  % Diameter D=2R dimension
+  \draw[<->] (1.5,\yBot) -- (1.5,\yTop) node[midway, right=2pt] {$D=2R$};
+\end{tikzpicture}

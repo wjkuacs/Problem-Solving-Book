@@ -1,0 +1,42 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Wall and pivot hinge at (0, 0)
+  \fill[pattern=north east lines] (-0.42, -0.45) rectangle (-0.22, 0.45);
+  \draw[thick] (-0.22, -0.45) -- (-0.22, 0.45);
+  \draw[thick] (-0.22, 0.24) -- (0.0, 0.24) arc (90:-90:0.24) -- (-0.22, -0.24);
+  \draw[thick] (0, 0) circle (0.06);
+
+  % Rigid horizontal rod (from x=0.06 to x=4.68) and mass bob at x=4.95
+  \draw[thick] (0.06, 0.07) -- (4.72, 0.07);
+  \draw[thick] (0.06, -0.07) -- (4.72, -0.07);
+  \draw[thick] (4.72, 0.07) arc (166:-166:0.25) -- cycle;
+  \node[above right] at (4.95, 0.18) {$m$};
+
+  % Dashpot at x = 1.9 (above rod)
+  \fill[pattern=north east lines] (1.6, 1.75) rectangle (2.2, 1.95);
+  \draw[thick] (1.6, 1.75) -- (2.2, 1.75);
+  \draw[thick] (1.9, 1.75) -- (1.9, 1.15);
+  \draw[thick] (1.72, 1.15) -- (2.08, 1.15);
+  \draw[thick] (1.65, 1.35) -- (1.65, 0.85) -- (2.15, 0.85) -- (2.15, 1.35);
+  \draw[thick] (1.9, 0.85) -- (1.9, 0.07);
+  \node[right] at (2.18, 1.1) {$\gamma$};
+
+  % Spring at x = 3.2 (below rod)
+  \draw[thick] (3.2, -0.07) -- (3.2, -0.45);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    (3.2, -0.45) -- (3.2, -1.35);
+  \draw[thick] (3.2, -1.35) -- (3.2, -1.75);
+  \node[right] at (3.32, -0.9) {$k$};
+  \fill[pattern=north east lines] (2.9, -1.95) rectangle (3.5, -1.75);
+  \draw[thick] (2.9, -1.75) -- (3.5, -1.75);
+
+  % Dimension extension lines
+  \draw (0, -0.35) -- (0, -3.05);
+  \draw (1.9, -0.2) -- (1.9, -1.0);
+  \draw (3.2, -2.0) -- (3.2, -2.4);
+  \draw (4.95, -0.35) -- (4.95, -3.05);
+
+  % Dimension arrows a, b, l
+  \draw[<->] (0, -0.75) -- (1.9, -0.75) node[midway, above] {$a$};
+  \draw[<->] (0, -2.25) -- (3.2, -2.25) node[midway, above] {$b$};
+  \draw[<->] (0, -2.88) -- (4.95, -2.88) node[midway, above] {$l$};
+\end{tikzpicture}

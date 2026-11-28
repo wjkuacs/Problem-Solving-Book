@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Coordinate axes on the left
+    \draw[->] (0, 0) -- (1.45, 0) node[below=2pt] {$x$};
+    \draw[->] (0, 0) -- (0, 1.75) node[left=2pt] {$y$};
+
+    % Moving vertical mirror with back hatching on the left
+    \coordinate (M) at (2.45, 0.95);
+    \draw (2.45, -0.55) -- (2.45, 2.25);
+    \foreach \y in {-0.45, -0.25, ..., 2.15} {
+        \draw (2.45, \y) -- (2.30, \y - 0.14);
+    }
+
+    % Normal to the mirror
+    \draw (M) -- (4.85, 0.95);
+
+    % Incident photon ray
+    \draw[postaction={decorate}, decoration={markings, mark=at position 0.5 with {\arrow{Stealth}}}]
+        (4.65, -0.22) -- (M);
+    \node[below=3pt] at (3.85, 0.25) {$\nu$};
+
+    % Reflected photon ray
+    \draw[postaction={decorate}, decoration={markings, mark=at position 0.55 with {\arrow{Stealth}}}]
+        (M) -- (4.55, 1.92);
+    \node[above=3pt] at (3.95, 1.65) {$\nu_r$};
+
+    % Incidence and reflection angles
+    \draw (M) ++(-28:0.65) arc (-28:0:0.65);
+    \node at ($(M) + (-14:1.00)$) {$\theta_i$};
+    \draw (M) ++(0:0.75) arc (0:25:0.75);
+    \node at ($(M) + (12.5:1.12)$) {$\theta_r$};
+
+    % Mirror velocity v
+    \draw[->] (2.45, -0.18) -- (3.30, -0.18) node[midway, below=2pt] {$v$};
+\end{tikzpicture}

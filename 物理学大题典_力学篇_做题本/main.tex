@@ -1,0 +1,66 @@
+\documentclass[a4paper,11pt,oneside]{ctexbook}
+
+\usepackage[top=2.2cm, bottom=2.0cm, left=2.0cm, right=2.0cm]{geometry}
+\usepackage{amsmath, amssymb, amsfonts, bm}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, decorations.pathmorphing, decorations.markings, patterns, angles, quotes, calc, positioning}
+\usepackage{fancyhdr}
+\usepackage{titlesec}
+\usepackage{hyperref}
+
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    pdftitle={物理学大题典·力学篇 做题本},
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small\rightmark}
+\fancyfoot[C]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\ctexset{
+    chapter/pagestyle = fancy,
+    chapter/format = \Large\bfseries\centering,
+    section/format = \large\bfseries,
+}
+
+\newenvironment{problem}[1]{%
+    \par\noindent\textbf{\large 题 #1}\quad
+}{%
+    \par\vfill
+}
+
+\begin{document}
+
+\begin{titlepage}
+    \centering
+    \vspace*{4cm}
+    {\Huge\bfseries 物理学大题典 $\cdot$ 力学篇\par}
+    \vspace{1cm}
+    {\LARGE 做题本\par}
+    \vspace{2cm}
+    {\large 强元棨、程稼夫 编著（题目整理版）\par}
+    \vfill
+    {\normalsize 一页一题 $\cdot$ 仅含题干与题干附图\par}
+\end{titlepage}
+
+\tableofcontents
+\clearpage
+
+\input{chapters/ch01.tex}
+\input{chapters/ch02.tex}
+\input{chapters/ch03.tex}
+\input{chapters/ch04.tex}
+\input{chapters/ch05.tex}
+\input{chapters/ch06.tex}
+\input{chapters/ch07.tex}
+\input{chapters/ch08.tex}
+\input{chapters/ch09.tex}
+\input{chapters/ch10.tex}
+\input{chapters/ch11.tex}
+\input{chapters/ch12.tex}
+
+\end{document}

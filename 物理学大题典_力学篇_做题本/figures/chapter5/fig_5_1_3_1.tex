@@ -1,0 +1,67 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\R{1.25}
+  \def\L{3.1}
+  \def\phiang{48}
+  \pgfmathsetmacro{\Ax}{\R*cos(\phiang)}
+  \pgfmathsetmacro{\Ay}{\R*sin(\phiang)}
+  \pgfmathsetmacro{\Bx}{\Ax + sqrt(\L*\L - \Ay*\Ay)}
+  \pgfmathsetmacro{\thetaang}{asin(\Ay/\L)}
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (\Ax, \Ay);
+  \coordinate (B) at (\Bx, 0);
+
+  % Crank circle (dashed)
+  \draw[dashed] (O) circle (\R);
+
+  % Horizontal centerline
+  \draw[dashed] (O) -- (\Bx-0.35, 0);
+
+  % Fixed support at O
+  \draw (-0.18,-0.28) -- (O) -- (0.18,-0.28);
+  \draw (-0.32,-0.28) -- (0.32,-0.28);
+  \foreach \x in {-0.24,-0.12,0,0.12,0.24} {
+    \draw (\x,-0.28) -- (\x-0.08,-0.38);
+  }
+
+  % Guide channel walls for piston B
+  \draw (\Bx-0.45, 0.22) -- (\Bx+0.75, 0.22);
+  \draw (\Bx-0.45, -0.22) -- (\Bx+0.75, -0.22);
+  \foreach \x in {-0.4,-0.22,-0.04,0.14,0.32,0.50,0.68} {
+    \draw (\Bx+\x, 0.22) -- (\Bx+\x+0.10, 0.34);
+    \draw (\Bx+\x, -0.22) -- (\Bx+\x-0.10, -0.34);
+  }
+
+  % Piston slider block at B
+  \draw[fill=white] (\Bx-0.36, 0.16) -- (\Bx+0.22, 0.16) -- (\Bx+0.22, -0.16) -- (\Bx-0.36, -0.16);
+  \draw[dashed] (\Bx-0.36, 0.16) -- (\Bx-0.36, -0.16);
+
+  % Connecting rod AB (rounded tip into piston)
+  \pgfmathsetmacro{\rodang}{-\thetaang}
+  \draw[fill=white]
+    ($(A)+(\rodang+90:0.06)$) -- ($(B)+(\rodang+90:0.06)$)
+    arc (\rodang+90:\rodang-90:0.06) -- ($(A)+(\rodang-90:0.06)$) -- cycle;
+
+  % Crank OA
+  \draw[fill=white]
+    ($(O)+(\phiang+90:0.07)$) -- ($(A)+(\phiang+90:0.07)$) --
+    ($(A)+(\phiang-90:0.07)$) -- ($(O)+(\phiang-90:0.07)$) -- cycle;
+  \draw[fill=white] (O) circle (2.5pt);
+  \draw[fill=white] (A) circle (2.5pt);
+
+  % Angles phi and theta
+  \draw (0.45, 0) arc (0:\phiang:0.45);
+  \node at ({0.5*\phiang}:0.66) {$\varphi$};
+  \draw ($(B)+(180:0.75)$) arc (180:{180-\thetaang}:0.75);
+  \node at ($(B)+({180-0.5*\thetaang}:1.05)$) {$\theta$};
+
+  % Angular velocity arrow omega
+  \draw[->] (-25:0.35) arc (-25:120:0.35) node[above left, inner sep=1pt] {$\omega$};
+
+  % Labels
+  \node[left, inner sep=3.5pt] at (O) {$O$};
+  \node[above left, inner sep=1pt] at ($(O)!0.55!(A)+(\phiang+90:0.08)$) {$R$};
+  \node[above, inner sep=3.5pt] at (A) {$A$};
+  \node[above right, inner sep=1pt] at ($(A)!0.48!(B)$) {$l$};
+  \node[above, inner sep=2pt] at (\Bx+0.15, 0.36) {$B$};
+\end{tikzpicture}

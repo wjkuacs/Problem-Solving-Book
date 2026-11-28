@@ -1,0 +1,984 @@
+\chapter{有限多自由度系统的小振动}
+
+\section{自由的小振动}
+
+\begin{problem}{10.1.1}
+一个刚性结构由三根无质量的杆联结在一起，并贴着质量均为 $m$ 的两个点质量组成， $AB = BC = L$ ， $BD = l$ ， $\angle ABD = \angle DBC = \theta$ ，如图10.1那样支承在固定点 $D$ 上，并以小振幅前后摆动。求振动的角频率，要做这样的振动对 $l$ 有何要求？
+\begin{center}
+\input{figures/chapter10/fig_10_1_1_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.2}
+质量为 $m_{1}$ 的质点用长为 $l_{1}$ 的、不可伸长的轻绳系于固定点 O，另一质量为 $m_{2}$ 的质点用长为 $l_{2}$ 不可伸长的轻绳系于前一质点上，求此系统做小振动的简正模式和相应的角频率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.3}
+半径为 r 的均质球在一个半径为 R 的固定球壳内表面滚动, 试求该球在平衡位置附近做小振动的周期.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.4}
+前题所述的双摆,能否在一定条件下,系统的运动为一个单摆?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.5}
+一个长度为 $4l$ 、质量为 $m$ 的单摆悬挂在另一个长度为 $3l$ 、质量为 $m$ 的单摆下面，如图10.4所示。这系统可能做这样的绕平衡位置的小振动：下面单摆上的某一点无水平位移，找出这一点的位置。
+\begin{center}
+\input{figures/chapter10/fig_10_1_5_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.6}
+$\mathrm{CO}_{2}$ 的简单经典模型是由三个质点组成的线状结构，用弹簧力代替原子间的作用力，两个弹簧自然长度为 $l$ ，劲度系数为 $k$ ，只允许沿连线方向运动. $\mathbf{C}^{4+}$ 的质量为 $M,\mathrm{O}^{2-}$ 的质量为 $m$ 
+
+(1) 这个系统有多少个振动自由度?
+
+(2) 写出各质点的运动微分方程；
+
+(3) 求简正频率和振动模式(振幅比).
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.7}
+若上题中系统处于平衡位置,突然左边的质点受到一冲量 p 的作用,求此后该质点的运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.8}
+一根长 L、截面积 A、质量 M 的均质圆木垂直地浮在水中，并用劲度系数为 k 的轻弹簧与均质的、质量为 M、长度为 2L 的杠杆相连，杠杆的枢轴装在其中心，圆木限于做竖直运动，弹簧为自然长度时杠杆处于水平的平衡位置，如图 10.5 所示，水的密度为 $\rho$ .
+
+(1) 求杠杆小角位移时的简正模(频率和位移比);
+
+(2) 讨论劲度系数 k 很大时的极限情况.
+\begin{center}
+\input{figures/chapter10/fig_10_1_8_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.9}
+用一根劲度系数为 k 的弹簧, 把一个质量为 m 的木块拴在质量为 M 的楔上, 楔的斜面与水平面成 $\alpha$ 角, 楔又在水平面上滑动, 如图 10.6 所示, 所有的接触面都是光滑的.
+
+（1）已知弹簧的原长为 d，求木块和楔都处于静止时的弹簧长度 $s_{0}$ ;
+
+(2) 以楔的坐标 x 和弹簧长度 s 为广义坐标, 写出系统的拉格朗日函数和运动微分方程;
+
+(3) 求振动的角频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_9_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.10}
+一个粒子在由式
+
+\[
+z = \frac {1}{2} b (x ^ {2} + y ^ {2})
+\]
+
+(其中 b 为常量, z 轴沿竖直方向)给出的轴对称容器的内壁上做无摩擦运动, 如图 10.9 所示.
+
+(1) 粒子在高度 $z = z_{0}$ 处的圆轨道中运动, 求质量为 m 的粒子的能量和对 z 轴的角动量;
+
+(2) 微微向下拨动在水平圆轨道上运动的粒子, 求围绕原来轨道的小振幅振动的角频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_10_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter10/fig_10_1_10_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.11}
+一个质量为 M、半径为 R 的环被悬挂在位于环上一点的枢轴上，环可围绕枢轴在它自己的垂直平面内自由转动，一个质量为 m 的珠子在环上做无摩擦滑动。
+
+(1) 选适当的广义坐标, 写出此系统的拉格朗日函数;
+
+(2) 对于 $m, M$ 的一般情况及 $m \gg M$ 和 $m \ll M$ 两种极限情况求小振动的简正频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_11_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.12}
+一个质量为 $m$ 、带电量为 $q$ 的小物体，被限制在张角为 $2\alpha$ 的圆锥面内侧做无摩擦运动，一个 $-q$ 的电荷固定在圆锥的顶点上，不计重力，图10.9中虚线是运动物体在圆锥内表面的稳定轨道，绕 $z$ 轴的角速度为 $\dot{\varphi}_0$ ，求围绕此稳定轨道小振动的角频率，假定 $v \ll c$ （光速）所以辐射是可以忽略的。
+\begin{center}
+\input{figures/chapter10/fig_10_1_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.13}
+一个转动惯量(对其对称轴)为 I 的飞轮，在水平面内绕固定的过圆心 O 与圆平面垂直的对称轴转动，一个质量为 m 的小球可以自由地沿半径方向的一条轴滑动，小球用一根劲度系数为 k、自然长度为 l 的轻弹簧连接在轮的中心，如图 10.10 所示，求：
+
+(1) 飞轮以恒定角速度 $\Omega_{0}$ 转动与弹簧有稳定长度 $r_{0}$ 之间的关系；
+
+(2) 用弹簧长度 r、飞轮的转角 $\theta$ 为广义坐标, 写出系
+
+统的运动微分方程；
+
+(3) 飞轮的角速度在 $\Omega_{0}$ 附近, 小球离轮心的距离在 $r_{0}$ 附近, 即系统在 (1) 的稳定运动附近做小振动的角频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.14}
+一质量为 $m$ 的珠子被限制在半径为 $b$ 的光滑圆环上运动, 该圆环以固定的角速度绕同它的直径相重合的固定的竖直轴旋转.
+
+(1) 写出拉格朗日函数和珠子的运动微分方程；
+
+(2) 求临界角速度 $\Omega, \omega < \Omega$ 时，圆环的底部是珠子的一个稳定平衡位置；
+
+(3) 当 $\omega > \Omega$ 时, 求珠子的稳定平衡位置.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.15}
+质量为 $m$ 的粒子在竖直平面内的光滑的抛物线 $z = \frac{1}{a} x^2 (a$ 为常量， $z$ 轴竖直向上)上运动.
+
+(1) 写出拉格朗日函数；
+
+(2) 给出关于平衡位置做小振动的运动微分方程并求解.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.16}
+长 $\frac{3}{2} l$ 、质量为 $m$ 的均质棒，用一根长 $l$ 、可不计其质量的弦线悬于固定点，如图 10.12 所示。求在平面内小振动的简正频率和振动模式。
+\begin{center}
+\input{figures/chapter10/fig_10_1_16_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.17}
+飞球节速器由连在长 l 的臂上的两个质量 m 和质量 M 组成, 如图 10.14 所示. 该组合件绕竖直轴转动, 质量 M 可沿该轴无摩擦上下滑动, 忽略各臂质量、空气阻力, 并假定 M 的直径很小. 假定轴以恒定角速度 $\omega_{0}$ 转动.
+
+(1) 计算质量 M 的平衡高度；
+
+(2) 求质量 M 在平衡位置附近小振动的角频率；
+
+(3) 现假定轴被允许自由转动, 小振动的角频率是否改变? 若变, 计算新的值.
+\begin{center}
+\input{figures/chapter10/fig_10_1_17_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.18}
+两个长度均为 $l$ 、质量均为 $m$ 的单摆悬在同一水平线上，用一根劲度系数为 $k$ 的无质量的弹簧将两质点连起来，弹簧的自然长度等于两悬点间的距离。求系统在平衡位置附近做小振动的简正频率和简正坐标。若开始时两质点处于平衡位置，左边的质点由于受到一个冲量获得一个向右的水平速度 $v_0$ ，用简正坐标表达系统的运动规律。
+\begin{center}
+\input{figures/chapter10/fig_10_1_18_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.19}
+两个质量分别为 $M, m$ , 且 $M > m$ 的质点被两根长 $l$ 不可伸长的轻绳挂在支架上, 用一根劲度系数为 $k$ , 原长等于两支点间距的轻弹簧将两质点相连, 如图 10.16 所示. 求沿两质点连线在平衡位置附近做小振动的简正频率, 给出在每个模式中 $m$ 和 $M$ 的运动之间的关系, 写出通解. 若 $t = 0$ 时, $m$ 静止在它的平衡位置, $M$ 从一个初始正位移处静止释放. 系统的总能量为 $E_0$ (取平衡位置为
+
+势能的零点）、弹簧很弱，且 $M = 2m$ ，求以后运动期间被 $m$ 获得的最大能量.说明在哪里用了弹簧很弱的条件.
+\begin{center}
+\input{figures/chapter10/fig_10_1_19_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.20}
+质量均为 m、荷电均为 e 的两金属小球，用同样长度为 l 的、不可伸长的轻绝缘绳系在同一水平线上，两悬点相距为 a。让两球在其平衡位置附近做小振动，求简正频率（设电场力比重力小得多）。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.21}
+质量为 M 的物体被限制在水平的 x 轴上无摩擦地滑动, 质量为 m 的质点通过一根无质量的、长度为 b 的、不可伸长的线和 M 联结, m 限在竖直的 xy 平面内运动, 如图 10.18 所示.
+
+(1) 写出系统的拉格朗日函数；
+
+(2) 就小振动情形. 求简正坐标, 并加以说明;
+
+(3) 求用简正坐标表达的系统的运动学方程.
+\begin{center}
+\input{figures/chapter10/fig_10_1_21_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.22}
+由质量为 m 的质点和长为 l 的轻绳组成的单摆, 悬挂在质量为 M 的物体上, 该物体置在光滑的水平面上, 并用一根劲度系数为 k 的水平轻弹簧连到一固定点, 如图 10.19 所示.
+
+(1) 写出系统的拉格朗日函数；
+
+(2) 求系统做小振动的角频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_22_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.23}
+质量为 $2m$ 和 $m$ 的两个质点，用两根劲度系数均为 $k$ 的轻弹簧悬挂在固定的支架上，如图10.20所示，只考虑竖直方向上的运动.
+
+(1) 求系统的简正频率, 并描述每种模式的运动;
+
+(2) 将质量为 $2m$ 的质点从平衡位置缓慢地向下移动一段距离 $l$ , 然后放开, 让系统自由振动, 求质量为 $m$ 的质点的运动.
+\begin{center}
+\input{figures/chapter10/fig_10_1_23_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.24}
+对于如图 10.21 所示的、两个质量为 m 的质点、用三根无质量的、劲度系数分别为 b 和 $\lambda'$ 的弹簧连接组成的系统，如果这两个质点从图上所标出的对称的初始位置静止释放，求此振动周期。
+
+如只考虑两质点沿连线方向的运动, 这个系统有两个自由度. 取 $x_{1}, x_{2}$ 分别表示左、右两个质点的位置, 原点均取在平衡位置, $x_{1}$ 向左为正方向, $x_{2}$ 向右为正方向,
+
+\[
+L = \frac {1}{2} m \dot {x} _ {1} ^ {2} + \frac {1}{2} m \dot {x} _ {2} ^ {2} - \frac {1}{2} k x _ {1} ^ {2} - \frac {1}{2} k x _ {2} ^ {2} - \frac {1}{2} k ^ {\prime} (x _ {1} + x _ {2}) ^ {2}
+\]
+
+由
+
+\[
+\frac {\mathrm{d}}{\mathrm{d} t} \left(\frac {\partial L}{\partial \dot {x} _ {i}}\right) - \frac {\partial L}{\partial x _ {i}} = 0
+\]
+
+得
+
+\[
+m \ddot {x} _ {1} + k x _ {1} + k ^ {\prime} (x _ {1} + x _ {2}) = 0\tag{1}
+\]
+
+\[
+m \ddot {x} _ {2} + k x _ {2} + k ^ {\prime} (x _ {1} + x _ {2}) = 0\tag{2}
+\]
+
+由系统和所给初始条件的对称性, 只有一种振动模式被激发. 用上述的 $x_{1}, x_{2}$ 坐标, 两质点始终有 $x_{1} = x_{2}$ , 即两质点的振动振幅和相位都相同的振动模式被激发.
+
+(1)、(2)式可改写为
+
+\[
+\begin{array}{l} m \ddot {x} _ {1} + (2 k ^ {\prime} + k) x _ {1} = 0 \\ m \ddot {x} _ {2} + (2 k ^ {\prime} + k) x _ {2} = 0 \end{array}
+\]
+
+立即可得振动的角频率和周期分别为
+
+\[
+\omega = \sqrt {\frac {2 k ^ {\prime} + k}{m}}, \quad T = 2 \pi \sqrt {\frac {m}{2 k ^ {\prime} + k}}
+\]
+\begin{center}
+\input{figures/chapter10/fig_10_1_24_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.25}
+考虑一质量为 $m$ 的粒子在二维势场
+
+\[
+V (x, y) = - \frac {1}{2} k x ^ {2} + \frac {1}{2} \lambda_ {0} x ^ {2} y ^ {2} + \frac {1}{4} \lambda_ {1} x ^ {4}
+\]
+
+$(k, \lambda_{0}, \lambda_{1} > 0, \text{均为常量})$ 中的运动，求：
+
+(1) 在什么点 $(x_0, y_0)$ 质点处于稳定平衡？
+
+(2) 给出围绕这个平衡位置做小振动的拉格朗日函数；
+
+(3) 求(2)问所述振动的简正频率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.26}
+一个质量为 m、半径为 r 的小球，用一根长为 l 的、绝缘的、不可伸长的轻绳挂在电容器两极板的中间，两极板接地，间距为 L，球的电势为 V，平衡时，球位于距两极板等距离处，绳子在铅垂方向，电势满足什么条件时，球可在平衡位置附近做小振动，求振动的角频率，为了简化计算，可作适当的近似.
+
+提示: 可用两个镜像电荷代替两个接地
+
+的极板,而不是用两串镜像电荷来代替两个接地的极板.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.27}
+三个自然长度为 $\sqrt{2}$ 、劲度系数为 $k$ 的轻弹簧，与一质量为 $m$ 的质点相连，三个弹簧的另一端分别固定在 $(-1,1)$ 、(1,1)和 $(-1,-1)$ 处，质点 $m$ 仅在水平且光滑的 $xy$ 平面内运动.
+
+(1) 写出系统的拉格朗日函数；
+
+(2) 确定平衡位置, 并说明是否稳定平衡;
+
+(3) 写出系统在平衡位置附近做小振动的拉格朗日函数；
+
+(4) 求简正频率和简正坐标；
+
+(5) 画出振动模式图.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.28}
+一质量为 $m$ 的质点在重力作用下在一个方程为
+
+\[
+z = x ^ {2} + y ^ {2} - x y
+\]
+
+的光滑曲面上运动,其中 z 轴指向竖直向上.
+
+(1) 求此质点的运动微分方程；
+
+(2) 求质点围绕稳定平衡位置做小振动的简正频率；
+
+(3) 若将质点由平衡位置稍微移开一点再放开它, 要保证只有较高频率的简正模式被激发, x 和 y 的位移之比应为多大?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.29}
+图 10.24 中两物体质量均为 m、两弹簧的劲度系数均为 k，绳子不可伸长，绳子与滑轮间无摩擦力。当系统在平衡位置时给左边物体向下的初速度 $v_{0}$ ，求系统的运动。
+\begin{center}
+\input{figures/chapter10/fig_10_1_29_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.30}
+质量均为 m 的两小球固定在长度为 2l 的轻杆上, 杆的两端支撑在劲度系数均为 k 的弹簧上, 如图 10.25 所示, 求系统只做竖直方向的小振动时的简正频率以及节点(振动模式中保持不动的点)的位置.
+\begin{center}
+\input{figures/chapter10/fig_10_1_30_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.31}
+一个质量为 $4m$ 、半径为 $2b$ 的均质半球形碗静置在一光滑的桌面上，其边缘所在平面是水平的。在它内部躺着一个质量为 $m$ 、半径为 $b$ 的完全粗糙的均质球，系统运动时，球心与碗心保持在一个竖直平面内，即系统平衡时它们所在的竖直平面。证明：小
+
+振动的简正频率为 $\omega_{1},\omega_{2}$ ，其平方 $\omega_1^2,\omega_2^2$ 是下列方程的根：
+
+\[
+1 5 6 b ^ {2} x ^ {2} - 2 6 0 b g x + 7 5 g ^ {2} = 0
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.32}
+质量为 $m$ 的质点用长为 $l$ 的不可伸长的轻绳系在另一质量为 $m$ 的质点上, 这个质点又用同样的轻绳系在套在光滑水平杆上的、质量为 $2m$ 的小环上. 试证: 在平衡位置附近的小振动中有一种振动模式, 下半段绳子与铅垂线所成的角恒为上半段绳子与铅垂线所成的角的两倍; 另一种振动模式, 上述两个角度大小相等但符号相反.
+\begin{center}
+\input{figures/chapter10/fig_10_1_32_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.33}
+一个系统运动时,其动能和势能分别为
+
+\[
+T = \frac {1}{2} (\dot {q} _ {1} ^ {2} + \dot {q} _ {2} ^ {2} + \dot {q} _ {3} ^ {2})
+\]
+
+\[
+V = 2 q _ {1} ^ {2} + \frac {5}{2} q _ {2} ^ {2} + 2 q _ {3} ^ {2} - q _ {1} q _ {2} - q _ {2} q _ {3}
+\]
+
+如开始时， $q_{1} = q_{10}, q_{2} = q_{20}, q_{3} = q_{30}, \dot{q}_{1} = \dot{q}_{2} = \dot{q}_{3} = 0$ ，求此系统的运动.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.34}
+三个质量均为 $m$ 的物体, 被限制在沿交于一点相互成 $120^{\circ}$ 角、处于同一水平面的三条光滑直线运动, 用三根劲度系数均为 $k$ 的轻弹簧将它们相互连结, 如图 10.30 所示. 图中三质点分别位于 $O_{1}, O_{2}, O_{3}$ 时, 系统处于平衡位置. 考虑系统在平衡位置附近的小振动.
+
+(1) 写出系统的运动微分方程；
+
+(2) 求简正频率和振动模式.
+\begin{center}
+\input{figures/chapter10/fig_10_1_34_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.35}
+三个质量均为 $m$ 的质点在由势能
+
+\[
+V = V _ {0} \left(\mathrm{e} ^ {- \alpha} + \mathrm{e} ^ {- \beta} + \mathrm{e} ^ {- \gamma}\right)
+\]
+
+[其中 $V_{0}$ 为常量, $\alpha$ 、 $\beta$ 、 $\gamma$ 是它们的角距离(以弧度为单位)]给出的力作用下在半径为 b 的水平圆圈上无摩擦地运动. 当 $\alpha = \beta = \gamma = \frac{2\pi}{3}$ 时, 系统处于平衡. 求系统偏离平衡位置做小振动的简正频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_35_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.36}
+三个质点, 其中两个质量为 $m$ , 一个质量为 $M$ , 被约束在半径为 $r$ 的光滑的水平圆环上运动, 并用三根相同的轻弹簧将它们互相连接. 如图 10.33 所示, 劲度系数为 $k$ . 让系统只围绕一个平衡位置做小振动.
+
+(1) 定性描述系统做简谐振动的振动模式；
+
+(2) 找出一组简正坐标, 求出简正频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_36_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter10/fig_10_1_36_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.37}
+两个质量为 m 和一个质量为 M 的点状物体用两根劲度系数为 k、自然长度为零的轻弹簧连结，一起被限制在竖直的半径为 R 的光滑圆管道内运动，如图 10.35 所示，物体可以相互通过，求系统围绕平衡位置小振动的振动模式，并描述每一个模式。
+\begin{center}
+\input{figures/chapter10/fig_10_1_37_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.38}
+一块质量为 $m$ 的均质正方形薄板，在相邻的两个角用劲度系数为 $k$ 的、完全相同的弹簧悬挂起来，如图10.37所示，弹簧和薄板在竖直平面内做小振动，求简正频率.
+\begin{center}
+\input{figures/chapter10/fig_10_1_38_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.39}
+三个质量均为 $M$ 的质点被图10.39中所画的六根弹簧连接起来， $A, B, C$ 三点是固定的，组成等边三角形，所有弹簧的劲度系数均为 $k$ . 平衡时，三个质点组成一个等边三角形，如质点受到约束，只能沿 $\Delta ABC$ 的三条中线运动，运动所在的平面是光滑的水平面，求小振动的简正频率和振动模式.
+\begin{center}
+\input{figures/chapter10/fig_10_1_39_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.40}
+一个质量为 $M$ 、长为 $a$ 、宽度为 $b$ 的均质矩形板，在其每个角用一根劲度系数为 $k$ 的同样的轻弹簧支撑，这些弹簧只能在铅垂方向运动，求小振动时振动的简正频率。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.41}
+一个质量为 $M$ 、半径为 $R$ 的均质薄圆盘用两根劲度系数均为 $k$ 、原长均为 $l_0$ 的轻弹簧，连在一个无摩擦的桌面上的两个固定点，盘可在桌面上做平面平行运动。处于平衡时弹簧长度为 $l (>l_0)$ ，求围绕平衡位置做小振动的简正频率。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.42}
+两个质量为 $M$ 的小球用三根劲度系数均为 $k$ 、原长均为 $\frac{a}{2}$ 的轻弹簧相连，且连到两个固定点上，如图10.45所示，小球能做左右和上下运动，求
+
+系统围绕图示的平衡位置
+
+做小振动的简正频率(重力可以不计).
+\begin{center}
+\input{figures/chapter10/fig_10_1_42_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.43}
+四个质量为 $m$ 的全同质点用四根劲度系数为 $k$ 的全同弹簧连起来, 被限制在一半径为 $b$ 的光滑的水平圆周上运动, 如图 10.47 所示.
+
+(1) 有几种小振动振动模式；
+
+(2) 小振动简正频率多大?
+\begin{center}
+\input{figures/chapter10/fig_10_1_43_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.44}
+一质点在一个三维各向同性谐振子势场中振动的角频率为 $\omega_0$ ，若质点带电荷 $e$ ，还受到均匀的电磁场作用， $B = B_0k, E = E_0i$ . 求质点的振动频率，并讨论在弱场和强场两种极限情况下的振动频率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.45}
+一个苯环模型是由一个光滑的、无质量的圆环上串上六个质量为 $M$ 的小珠子，珠子之间用劲度系数为 $k$ 的六根轻弹簧相连，如图10.48所示那样组成,并考虑圆环是固定的.
+
+(1) 说明系统有多少个小振动振动模式；
+
+(2) 算出所有的小振动简正频率和振动模式并画出振动模式图, 用箭号表示珠子的运动的振幅和相位, 涂黑表示小珠静止不动;
+
+(3) 哪些振动模式与实际的苯分子的振动模式有联系.
+
+提示: 可利用问题的对称性简化计算.
+\begin{center}
+\input{figures/chapter10/fig_10_1_45_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.46}
+在小振动理论中,常遇到如下形式的拉格朗日函数:
+
+其中
+
+\[
+\begin{array}{c} L = T - V \\ T = \sum_ {i, j = 1} ^ {N} a _ {i j} \dot {q} _ {i} \dot {q} _ {j} \\ V = \sum_ {i, j = 1} ^ {N} b _ {i j} q _ {i} q _ {j} \end{array}
+\]
+
+矩阵 $A = (a_{ij})$ 和 $\bm {B} = (b_{ij})$ 是实对称的.
+
+（1）证明 $\bm{A}$ 是正定的，即 $x^{T} \cdot A \cdot x \geqslant 0$ ，对任何的列矩阵均成立。证明一般这样一个矩阵的本征值大于或等于零，并说明我们不会涉及零本征值；
+
+(2) 证明矩阵 $A^{\pm1/2}$ 是存在的；
+
+(3) 用坐标变换关系 $q_{i} = \sum_{j=1}^{N} (A^{\pm 1/2} S)_{ij} \theta_{j}$ , 其中 $S$ 是 $N \times N$ 矩阵, 引入新坐标 $\theta_{j}$ , 证明可以选用矩阵 $S$ 使 $A$ 和 $B$ 都对角化, 说明对角化后的 $B$ 的对角元素的物理意义.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.47}
+一根轻弹性绳在两个固定点 A、B 之间拉紧，A、B 间距离为 4a，绳的张力为 $\tau$ ，一个质量为 3m 的质点系在绳子中点 C，两个质量为 4m 的质点分别系在 AC、CB 的中点，该系统开始处于平衡状态，突然给两个质量为 4m 的质点以同样方向的横向速度 u，证明质量为 3m 的质点在 t 时刻的位移为
+
+\[
+\frac {4 u}{5 \omega} \left(- \sin \omega t + \sqrt {6} \sin \frac {1}{\sqrt {6}} \omega t\right)
+\]
+
+其中 $\omega=\sqrt{\frac{\tau}{ma}}$ (不考虑重力的作用).
+\begin{center}
+\input{figures/chapter10/fig_10_1_47_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.1.48}
+(1) 两相同单摆, 质点质量为 $m$ , 摆长为 $l$ , 用劲度系数为 $k$ 的轻弹簧连起来, 弹簧的自然长度等于两悬点间距, 如图 10.52(a) 所示. 试求此系统围绕平衡位置做小
+
+(a)
+
+(b)
+
+振动的简正频率和振动模式；
+
+(2) 无限多个这样的单摆,两两用弹簧耦合,如图 10.52(b) 所示,求此系统的振动模式和相应的简正频率.
+
+\[
+L = \frac {1}{2} m l ^ {2} \dot {\theta} _ {1} ^ {2} + \frac {1}{2} m l ^ {2} \dot {\theta} _ {2} ^ {2} - \frac {1}{2} m g l \theta_ {1} ^ {2} - \frac {1}{2} m g l \theta_ {2} ^ {2} - \frac {1}{2} k (l \theta_ {2} - l \theta_ {1}) ^ {2}
+\]
+
+由 $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial\dot{\theta}_i}\right) - \frac{\partial L}{\partial\theta_i} = 0$ 得
+
+\[
+\begin{array}{l} m l ^ {2} \ddot {\theta} _ {1} + m g l \theta_ {1} - k l ^ {2} (\theta_ {2} - \theta_ {1}) = 0 \\ m l ^ {2} \ddot {\theta} _ {2} + m g l \theta_ {2} + k l ^ {2} (\theta_ {2} - \theta_ {1}) = 0 \end{array}\tag{1}
+\]
+
+(2) 
+
+式(1)+式(2)得
+
+\[
+l (\ddot {\theta} _ {1} + \ddot {\theta} _ {2}) + g (\theta_ {1} + \theta_ {2}) = 0
+\]
+
+式(1)-式(2)得
+
+\[
+m l \left(\ddot {\theta} _ {1} - \dot {\theta} _ {2}\right) + (m g + 2 k l) \left(\theta_ {1} - \theta_ {2}\right) = 0
+\]
+
+可取简正坐标 $\xi, \eta,$ 
+
+\[
+\xi = \theta_ {1} + \theta_ {2}, \quad \eta = \theta_ {1} - \theta_ {2}
+\]
+
+\[
+\theta_ {1} = \frac {1}{2} (\xi + \eta), \quad \theta_ {2} = \frac {1}{2} (\xi - \eta)
+\]
+
+简正频率为
+
+\[
+\omega_ {1} = \sqrt {\frac {g}{l}}, \quad \omega_ {2} = \sqrt {\frac {g}{l} + \frac {2 k}{m}}
+\]
+
+振动模式:用简正坐标, $\omega_{1}:\xi,\eta$ 方向振动的振幅比为1:0; $\omega_{2}:\xi,\eta$ 方向振动的振幅比为0:1.
+
+用坐标 $\theta_{1},\theta_{2},\omega_{1}:\frac{u_{1}^{(1)}}{u_{2}^{(1)}} = 1;\omega_{2}:\frac{u_{1}^{(1)}}{u_{2}^{(2)}} = -1.$ 
+
+(2) 
+
+\[
+\begin{array}{r l} L = & \frac {1}{2} m l ^ {2} (\dot {\theta} _ {1} ^ {2} + \dot {\theta} _ {2} ^ {2} + \dots) - \frac {1}{2} m g l (\theta_ {1} ^ {2} + \theta_ {2} ^ {2} + \dots) \\ & - \frac {1}{2} k l ^ {2} [ (\theta_ {2} - \theta_ {1}) ^ {2} + (\theta_ {3} - \theta_ {2}) ^ {2} + \dots ] \end{array}
+\]
+
+由 $\frac{\mathrm{d}}{\mathrm{d}t}\left(\frac{\partial L}{\partial\dot{\theta}_i}\right) - \frac{\partial L}{\partial\theta_i} = 0$ 得
+
+\[
+m l ^ {2} \dot {\theta} _ {n} + m g l \theta_ {n} + k l ^ {2} \left[ \left(\theta_ {n} - \theta_ {n - 1}\right) - \left(\theta_ {n + 1} - \theta_ {n}\right) \right] = 0
+\]
+
+即
+
+\[
+m l \ddot {\theta} _ {n} + m g \theta_ {n} + k l (2 \theta_ {n} - \theta_ {n + 1} - \theta_ {n - 1}) = 0\tag{3}
+\]
+
+因为 $n \to \infty$ 时 $\theta_{n}$ 保持有限，可假定振幅在空间和在时间上都周期地变化，即令
+
+\[
+\theta_ {n} = A \mathrm{e} ^ {\mathrm{i} (k n a - \omega t)}\tag{4}
+\]
+
+其中 a 为弹簧的自然长度，“波数” $k=\frac{2\pi}{\lambda}$ ， $\lambda$ 为“波长”必为 a 的整数倍，即 $\lambda=a,2a,3a,\cdots$ ，对应的 $\omega$ （简正频率）由将式(4)代入式(3)得到的关系确定，此关系为
+
+\[
+\cos k a = 1 + \frac {m g - m l \omega^ {2}}{2 k l}
+\]
+
+\[
+\omega = \sqrt {\frac {g}{l} + \frac {2 k}{m} (1 - \cos k a)}
+\]
+
+相应于 $\lambda=a,2a,3a,4a,\cdots$ 的简正频率 $\omega_{1},\omega_{2},\omega_{3},\omega_{4},\cdots$ 分别为
+
+\[
+\omega_ {1} = \sqrt {\frac {g}{l}}, \quad \omega_ {2} = \sqrt {\frac {g}{l} + \frac {4 k}{m}}, \quad \omega_ {3} = \sqrt {\frac {g}{l} + \frac {3 k}{m}}
+\]
+
+\[
+a _ {k} = \sqrt {\frac {g}{l} + \frac {2 k}{m}}, \dots
+\]
+
+计算相应的振动模式: 将 $\omega_{1}=\sqrt{\frac{\xi}{l}}$ (相应的 $k=\frac{2\pi}{a}$ ) 代入式(4)得
+
+\[
+\theta_ {n} = A \mathrm{e} ^ {\mathrm{i} (k n t - \omega_ {1} t)} = A \mathrm{e} ^ {\mathrm{i} (2 \pi n - \omega_ {1} t)}
+\]
+
+可见振动模式
+
+\[
+u _ {1} ^ {(1)}: u _ {2} ^ {(1)}: \mathcal {M} _ {3} ^ {(1)}: \dots = 1: 1: 1: \dots
+\]
+
+将 $\omega_{2} = \sqrt{\frac{g}{l} + \frac{4k}{m}}$ （相应的 $k = \frac{2\pi}{2a} = \frac{\pi}{a}$ ）代入式(4)得
+
+\[
+\theta_ {n} = A \mathrm{e} ^ {\mathrm{i} (\pi n - \omega_ {2} t)}
+\]
+
+振动模式可表示为
+
+\[
+(u _ {1} ^ {(2)}, u _ {2} ^ {(2)}, u _ {3} ^ {(2)}, \dots) = (- 1, 1, - 1, \dots)
+\]
+
+将 $\omega_{3} = \sqrt{\frac{g}{l} + \frac{3k}{m}}$ 代入式(4)，相应的 $k = \frac{2\pi}{3a}$ 
+
+\[
+\theta_ {n} = A \mathrm{e} ^ {\mathrm{i} \left(\frac {2 \pi}{3} n - \omega_ {3} t\right)}
+\]
+
+振动模式为
+
+\[
+\left(u _ {1} ^ {(3)}, u _ {2} ^ {(3)}, u _ {3} ^ {(3)}, \dots\right) = \left(\mathrm{e} ^ {\mathrm{i} \frac {2 \pi}{3}}, \mathrm{e} ^ {\mathrm{i} \frac {4 \pi}{3}}, 1, \dots\right)
+\]
+
+将 $\omega_{4} = \sqrt{\frac{g}{l} + \frac{2k}{m}}$ （相应的 $k = \frac{\pi}{2a}$ ）代入式(4)得
+
+\[
+\theta_ {n} = A \mathrm{e} ^ {\mathrm{i} \left(\frac {\pi n}{2} - \omega_ {4} t\right)}
+\]
+
+振动模式为
+
+\[
+(u _ {1} ^ {(4)}, u _ {2} ^ {(4)}, u _ {3} ^ {(4)}, \dots) = (i, - 1, - i, \dots)
+\]
+
+照此做法,可计算相应于简正频率 $\omega_{5}$ 、 $\omega_{6}$ 、 $\cdots$ 的振动模式.
+\begin{center}
+\input{figures/chapter10/fig_10_1_48_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter10/fig_10_1_48_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\section{有阻尼和(或)有周期性外力作用下的小振动}
+
+\begin{problem}{10.2.1}
+三个质量均为 $m$ 的相同的物体, 用两根劲度系数均为 $k$ 的轻弹簧连结, 如图 10.53 所示. 设运动是一维的, 开始时 $(t = 0)$ 三个物体均静止并分别在各自的平衡位置, 设物体 $A$ 受一外力 $F(t) = f\cos \omega t (t > 0)$ , 求物体 $C$ 的运动.
+\begin{center}
+\input{figures/chapter10/fig_10_2_1_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.2}
+两个质量为 $M$ 的质点分别用劲度系数为 $k$ 的轻
+
+弹簧与质量为 $m(m < M)$ 的质点相连，如图10.54所示做一维运动，若中间的质点被频率为 $\omega_0 = 2\sqrt{\frac{k}{m}}$ 的简谐方式所驱动，问左边质点的稳态运动和驱动运动同相位还是反相位？
+\begin{center}
+\input{figures/chapter10/fig_10_2_2_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.3}
+一单摆悬挂在一随时间沿水平方向驱动的支座上,如图 10.55 所示.
+
+(1) 已知支座的运动 $x_{s}(t)$ ，写出摆线与竖直方向的夹角 $\theta$ 满足的运动微分方程；
+
+(2) 若 $x_{s}=A\cos\omega t$ ，运动中角位移 $\theta$ 很小，求摆锤的运动.
+\begin{center}
+\input{figures/chapter10/fig_10_2_3_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.4}
+若双摆中两质点质量均为 $m$ ，摆线长度均为 $l$ ，两质点受到介质的阻力，其大小与速率成正比，比例系数为 $b$ 。求：
+
+(1) 两种频率的阻尼振动都是弱阻尼的条件；
+
+(2) 在上述条件下运动的一般解.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.5}
+若 10.1.40 题的振动受到介质的阻力, 其单位面积受力的大小与速率成正比, 比例系数为 $\beta$ , 求:
+
+(1) 三个自由度的阻尼振动都是过阻尼的条件；
+
+(2) 在上述条件下运动的一般解.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.6}
+一个摆长为 $L$ 的单摆被悬挂在半径为 $b$ 的轮子的边缘, 轮子在竖直面内以恒定角速度 $\Omega$ 绕固定的水平轴转动, 摆锤在轮子平面内摆动. 假定 $b$ 和振幅都很小, 求运动方程的稳态解.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.7}
+若给 10.1.22 题中 M 一个水平的简谐力 $F_{0}\cos\Omega t$ ，为简化计算，设 M=4m， $k=\frac{3mg}{l}$ ，求此振动的一般解.
+
+\[
+L = \frac {1}{2} (M + m) \dot {x} ^ {2} + \frac {1}{2} m l ^ {2} \dot {\theta} ^ {2} + m l \dot {x} \dot {\theta} \cos \theta - \frac {1}{2} k x ^ {2} - m g l (1 - \cos \theta)
+\]
+
+今 $M = 4m, k = 3mg / l$ . 为书写简便起见， $k$ 值暂不代入，考虑小振动，
+
+\[
+L = \frac {5}{2} m x ^ {2} + \frac {1}{2} m l ^ {2} \dot {\theta} ^ {2} + m l x \dot {\theta} - \frac {1}{2} k x ^ {2} - \frac {1}{2} m g l \theta^ {2}
+\]
+
+令 $s = l\theta$ ，并用 $3mg / l = k$ 
+
+\[
+\frac {1}{2} m g l \theta^ {2} = \frac {1}{6} \frac {3 m g}{l} (l \theta) ^ {2} = \frac {1}{6} k s ^ {2}
+\]
+
+\[
+L = \frac {5}{2} m \dot {x} ^ {2} + \frac {1}{2} m \dot {s} ^ {2} + m \dot {x} \dot {s} - \frac {1}{2} k x ^ {2} - \frac {1}{6} k s ^ {2}
+\]
+
+\[
+\boldsymbol {M} = \left( \begin{array}{c c} 5 m & m \\ m & m \end{array} \right)
+\]
+
+\[
+\boldsymbol {K} = \left( \begin{array}{c c} k & 0 \\ 0 & \frac {1}{3} k \end{array} \right)
+\]
+
+再令 $y = \frac{1}{\sqrt{3}} s, x$ 不变，变换矩阵为
+
+\[
+\boldsymbol {D} = \left( \begin{array}{c c} 1 & 0 \\ 0 & \sqrt {3} \end{array} \right)
+\]
+
+\[
+\binom {x} {s} = \left( \begin{array}{c c} 1 & 0 \\ 0 & \sqrt {3} \end{array} \right) \binom {x} {y}
+\]
+
+变换后的 M、K 分别变为 $M'$ 、 $K'$ ，
+
+\[
+\boldsymbol {M} ^ {\prime} = \left( \begin{array}{c c} 5 m & \sqrt {3} m \\ \sqrt {3} m & 3 m \end{array} \right)
+\]
+
+\[
+\boldsymbol {K} ^ {\prime} = \left( \begin{array}{c c} \boldsymbol {k} & 0 \\ 0 & \boldsymbol {k} \end{array} \right)
+\]
+
+再作正交变换 E，使惯性矩阵对角化，为书写简便起见，写 $M'$ 以 m 为单位，求 $M'$ 矩阵的特征值 $\lambda$ ，其特征方程为
+
+\[
+\left| \begin{array}{cc} 5 - \lambda & \sqrt {3} \\ \sqrt {3} & 3 - \lambda \end{array} \right| = 0\tag{1}
+\]
+
+\[
+\lambda^ {2} - 8 \lambda + 1 2 = 0
+\]
+
+解出
+
+\[
+\lambda_ {1} = 2, \quad \lambda_ {2} = 6
+\]
+
+将 $\lambda_{1}$ 代入式(1)左边相应的矩阵, 得
+
+\[
+\left( \begin{array}{c c} 3 & \sqrt {3} \\ \sqrt {3} & 1 \end{array} \right)
+\]
+
+其伴随矩阵为
+
+\[
+\operatorname{adj} \left( \begin{array}{c c} 3 & \sqrt {3} \\ \sqrt {3} & 1 \end{array} \right) = \left( \begin{array}{c c} 1 & - \sqrt {3} \\ - \sqrt {3} & 3 \end{array} \right)
+\]
+
+其归一化的列矩阵为 $\left(\frac{1}{2}, -\frac{\sqrt{3}}{2}\right)$ .
+
+将 $\lambda_{2}$ 代入式(1)左边相应的矩阵. 求其伴随矩阵中归一化的列矩阵, 得 $\left(-\frac{\sqrt{3}}{2}, -\frac{1}{2}\right)$ .
+
+这两个列矩阵作第一列和第二列,构成
+
+\[
+\boldsymbol {E} = \left( \begin{array}{c c} \frac {1}{2} & - \frac {\sqrt {3}}{2} \\ - \frac {\sqrt {3}}{2} & - \frac {1}{2} \end{array} \right)
+\]
+
+变换后的 $M'$ 写成 $M''$ 已对角化，对角元素即上述两个本征值，
+
+\[
+\boldsymbol {M} ^ {\prime \prime} = \left( \begin{array}{c c} 2 m & 0 \\ 0 & 6 m \end{array} \right)
+\]
+
+已成“球”型的对角矩阵 $K'$ 在正交变换下不变.
+
+从 $x, s$ 到简正坐标 $\xi, \eta$ 的变换矩阵为
+
+\[
+\boldsymbol {G} = \boldsymbol {D} \cdot \boldsymbol {E} = \left( \begin{array}{c c} 1 & 0 \\ 1 & \sqrt {3} \end{array} \right) \left( \begin{array}{c c} \frac {1}{2} & - \frac {\sqrt {3}}{2} \\ - \frac {\sqrt {3}}{2} & - \frac {1}{2} \end{array} \right) = \left( \begin{array}{c c} \frac {1}{2} & - \frac {\sqrt {3}}{2} \\ - \frac {3}{2} & - \frac {\sqrt {3}}{2} \end{array} \right)
+\]
+
+用广义坐标 $x, s$ 时，广义力为
+
+\[
+Q _ {x} = F _ {0} \cos \Omega t, \quad Q _ {s} = 0
+\]
+
+采用简正坐标 $\xi, \eta$ 后，广义力 $Q_{\xi}, Q_{\eta}$ 与 $Q_{x}, Q_{s}$ 有下列关系：
+
+\[
+\binom {Q _ {\xi}} {Q _ {\eta}} = \left( \begin{array}{c c} \frac {1}{2} & - \frac {3}{2} \\ - \frac {\sqrt {3}}{2} & - \frac {\sqrt {3}}{2} \end{array} \right) \binom {Q _ {x}} {Q _ {s}}
+\]
+
+其中变换矩阵为 $G^{T}$ ，代入 $Q_{x}, Q_{s}$ ，得
+
+\[
+Q _ {\xi} = \frac {1}{2} F _ {0} \cos \Omega t
+\]
+
+\[
+Q _ {\eta} = - \frac {\sqrt {3}}{2} F _ {0} \cos \Omega t
+\]
+
+\[
+\left( \begin{array}{l} x \\ s \end{array} \right) = \left( \begin{array}{l l} \frac {1}{2} & - \frac {\sqrt {3}}{2} \\ - \frac {3}{2} & - \frac {\sqrt {3}}{2} \end{array} \right) \left( \begin{array}{l} \xi \\ \eta \end{array} \right) = \left( \begin{array}{l l} \frac {1}{2} \xi & - \frac {\sqrt {3}}{2} \eta \\ - \frac {3}{2} \xi & - \frac {\sqrt {3}}{2} \eta \end{array} \right)
+\]
+
+采用简正坐标 $\xi$ 、 $\eta$ 后，运动微分方程为
+
+\[
+2 m \ddot {\xi} + k \xi = \frac {1}{2} F _ {0} \cos \Omega t
+\]
+
+\[
+6 m \ddot {\eta} + k \eta = - \frac {\sqrt {3}}{2} F _ {0} \cos \Omega t
+\]
+
+上述两非齐次线性常系数微分方程的特解为
+
+\[
+\xi^ {*} = \frac {\frac {F _ {0}}{4 m}}{\frac {k}{2 m} - \Omega^ {2}} \cos \Omega t = \frac {F _ {0} l}{2 m (3 g - 2 l \Omega^ {2})} \cos \Omega t
+\]
+
+\[
+\eta^ {*} = \frac {\frac {- \sqrt {3} F _ {0}}{1 2 m}}{\frac {k}{6 m} - \Omega^ {2}} \cos \Omega t = \frac {- \sqrt {3} F _ {0} l}{6 m (g - 2 l \Omega^ {2})} \cos \Omega t
+\]
+
+非齐次方程的一般解等于非齐次方程的特解加上相应的齐次方程的一般解,所以一般解为
+
+\[
+\begin{array}{l} \xi = \frac {F _ {0} l}{2 m (3 g - 2 l \Omega^ {2})} \cos \Omega t + C _ {1} ^ {\prime} \cos \left(\sqrt {\frac {3 g}{2 l}} t + \alpha_ {1}\right) \\ \eta = - \frac {\sqrt {3} F _ {0} l}{6 m (g - 2 l \Omega^ {2})} \cos \Omega t + C _ {2} ^ {\prime} \cos \left(\sqrt {\frac {g}{2 l}} t + \alpha_ {2}\right) \end{array}
+\]
+
+写上述 $\xi^{*},\eta^{*},\xi ,\eta$ 时都用了 $k = \frac{3mg}{l}$ 
+
+\[
+\begin{array}{r l} x & = \frac {1}{2} \xi - \frac {\sqrt {3}}{2} \eta = \left[ \frac {F _ {0} l}{4 m (3 g - 2 l \Omega^ {2})} + \frac {F _ {0} l}{4 m (g - 2 l \Omega^ {2})} \right] \cos \Omega t \\ & + C _ {1} \cos \left(\sqrt {\frac {3 g}{2 l}} t + \alpha_ {1}\right) + C _ {2} \cos \left(\sqrt {\frac {g}{2 l}} t + \alpha_ {2}\right) \\ \theta & = - \frac {3}{2 l} \xi - \frac {\sqrt {3}}{2 l} \eta = \left[ - \frac {3 F _ {0}}{4 m (3 g - 2 l \Omega^ {2})} + \frac {F _ {0}}{4 m (g - 2 l \Omega^ {2})} \right] \cos \Omega t \end{array}
+\]
+
+\[
+- \frac {3}{l} C _ {1} \cos \left(\sqrt {\frac {3 g}{2 l}} t + \alpha_ {1}\right) + \frac {1}{l} C _ {2} \cos \left(\sqrt {\frac {g}{2 l}} t + \alpha_ {2}\right)
+\]
+\begin{center}
+\input{figures/chapter10/fig_10_2_7_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{10.2.8}
+一根长为 $4a$ 的轻弹性绳两端系在固定点, 处于拉紧状态, 在离两个端点各为 $a$ 处各系一个质量为 $m$ 的质点, 此时绳的张力为 $\tau$ , 给其中一个质点加一个垂直于绳的力 $F_{0} \cos \Omega t$ , 两质点均受到空气的阻力, 其大小与速率成正比, 比例系数为 $\beta$ , 求两质点运动的稳态解.
+\end{problem}
+\clearpage
+

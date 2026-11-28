@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth]
+  % Left panel: side view
+  \fill[pattern=north east lines] (-1.0,3.6) rectangle (1.0,3.82);
+  \draw[thick] (-1.0,3.6) -- (1.0,3.6);
+  \fill[pattern=north east lines] (-1.0,-0.22) rectangle (1.0,0);
+  \draw[thick] (-1.0,0) -- (1.0,0);
+
+  % Torsion shaft segments
+  \draw[thick] (-0.08,0) rectangle (0.08,0.96);
+  \draw[thick] (-0.08,1.32) rectangle (0.08,2.28);
+  \draw[thick] (-0.08,2.64) rectangle (0.08,3.60);
+
+  % Two identical disks
+  \draw[thick, fill=white] (-0.8,0.96) rectangle (0.8,1.32);
+  \draw[thick, fill=white] (-0.8,2.28) rectangle (0.8,2.64);
+  \node at (-1.04,2.46) {$1$};
+  \node at (-1.04,1.14) {$2$};
+
+  % Length labels l
+  \draw[<->] (-0.58,0) -- (-0.58,0.96) node[midway, left=1pt] {$l$};
+  \draw[<->] (-0.58,1.32) -- (-0.58,2.28) node[midway, left=1pt] {$l$};
+  \draw[<->] (-0.58,2.64) -- (-0.58,3.60) node[midway, left=1pt] {$l$};
+
+  % Right panel: top view
+  \coordinate (D) at (2.75,1.6);
+  \draw[thick] (D) circle (1.05);
+  \draw (2.75,0.3) -- (2.75,3.3);
+  \draw (D) -- ++(52:1.55);
+  \draw (D) -- ++(28:1.65);
+
+  % Angular displacements theta_1 and theta_2
+  \draw[->] (D) ++(90:0.82) arc (90:52:0.82);
+  \node at ($(D) + (71:0.56)$) {$\theta_1$};
+  \draw[->] (D) ++(90:1.35) arc (90:28:1.35);
+  \node at ($(D) + (59:1.60)$) {$\theta_2$};
+\end{tikzpicture}

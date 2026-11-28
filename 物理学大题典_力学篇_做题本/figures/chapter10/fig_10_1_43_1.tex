@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\R{2.0}
+    % Outer circle
+    \draw (0,0) circle (\R);
+
+    % Four mass positions on the circle
+    \coordinate (m1) at (114:\R);
+    \coordinate (m2) at (22:\R);
+    \coordinate (m3) at (326:\R);
+    \coordinate (m4) at (212:\R);
+
+    % Four springs
+    \draw[decorate, decoration={zigzag, segment length=6.5pt, amplitude=3pt, pre length=14pt, post length=14pt}]
+        (m1) -- (m2) node[midway, below=4pt] {$k$};
+    \draw[decorate, decoration={zigzag, segment length=6.5pt, amplitude=3pt, pre length=14pt, post length=14pt}]
+        (m2) -- (m3) node[midway, left=4pt] {$k$};
+    \draw[decorate, decoration={zigzag, segment length=6.5pt, amplitude=3pt, pre length=14pt, post length=14pt}]
+        (m3) -- (m4) node[midway, above=4pt] {$k$};
+    \draw[decorate, decoration={zigzag, segment length=6.5pt, amplitude=3pt, pre length=14pt, post length=14pt}]
+        (m4) -- (m1) node[midway, right=4pt] {$k$};
+
+    % Radius arrow b
+    \draw[->] (0,0) -- (308:\R);
+    \node[above right=2pt] at (308:0.48*\R) {$b$};
+
+    % Masses
+    \fill (m1) circle (2.2pt) node[above left=1pt] {$m$};
+    \fill (m2) circle (2.2pt) node[above right=1pt] {$m$};
+    \fill (m3) circle (2.2pt) node[below right=1pt] {$m$};
+    \fill (m4) circle (2.2pt) node[below left=1pt] {$m$};
+\end{tikzpicture}

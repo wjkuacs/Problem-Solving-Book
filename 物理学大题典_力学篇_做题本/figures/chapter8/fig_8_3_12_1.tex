@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Asymmetric U-tube
+  \draw (-2.1, 2.0) -- (-2.1, 0) -- (2.1, 0) -- (2.1, 2.0);
+  \draw (-1.55, 2.0) -- (-1.55, 0.52) -- (1.00, 0.52) -- (1.00, 2.0);
+
+  % Liquid surfaces at height d = 1.45
+  \draw (-2.1, 1.45) -- (-1.55, 1.45);
+  \draw (1.00, 1.45) -- (2.1, 1.45);
+
+  % Height d dimension
+  \draw[thin] (-2.1, 1.45) -- (-2.75, 1.45);
+  \draw[thin] (-2.1, 0) -- (-2.75, 0);
+  \draw[<->] (-2.55, 0) -- (-2.55, 1.45) node[midway, left] {$d$};
+
+  % Cross-sectional area A1
+  \draw[->] (-2.50, 1.75) -- (-2.1, 1.75);
+  \draw[->] (-1.15, 1.75) -- (-1.55, 1.75);
+  \node at (-1.825, 1.75) {$A_1$};
+
+  % Cross-sectional area A2
+  \draw[<->] (1.00, 1.75) -- (2.1, 1.75) node[midway, above] {$A_2$};
+\end{tikzpicture}

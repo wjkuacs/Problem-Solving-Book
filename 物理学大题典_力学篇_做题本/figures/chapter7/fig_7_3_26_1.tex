@@ -1,0 +1,47 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\rx{1.65}
+  \def\ry{0.54}
+  \def\H{2.15}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,\H);
+  \coordinate (D) at (-\rx,0);
+  \coordinate (B) at (\rx,0);
+
+  % Base ellipse (dashed back half, solid front half)
+  \draw[dashed, very thick] (B) arc (0:180:{\rx} and {\ry});
+  \draw[very thick] (D) arc (180:360:{\rx} and {\ry});
+
+  % Cone edges and internal dashed lines
+  \draw (D) -- (A) -- (B);
+  \draw[dashed] (D) -- (B);
+  \draw[dashed] (O) -- (A);
+
+  % Center of mass C
+  \fill (0,0.62) circle (1.6pt) node[right=2pt] {$C$};
+
+  % Base radius r
+  \draw[->] (O) -- ({ \rx*cos(-44) }, { \ry*sin(-44) })
+    node[pos=0.58, below left=-2pt] {$r$};
+
+  % Labels A, B, D
+  \node[above=1pt] at (A) {$A$};
+  \node[right=2pt] at (B) {$B$};
+  \node[below left=1pt] at (D) {$D$};
+
+  % Coordinate axes at D
+  \draw[->] (D) -- (-\rx, 1.95) node[left=1pt] {$z$};
+  \draw[->] (D) -- (-2.75, 0) node[below=1pt] {$y$};
+
+  % Angular velocity Omega along generatrix DA
+  \path (D) -- (A) coordinate[pos=0.56] (OmTip);
+  \draw[->] (D) -- (OmTip);
+  \node[above left=-1pt] at ($(D)!0.54!(A)$) {$\Omega$};
+
+  % Angle alpha between z-axis and generatrix DA
+  \pgfmathsetmacro{\genAng}{atan2(\H, \rx)}
+  \draw (-\rx, 0.50) arc (90:\genAng:0.50);
+  \node at ($(D) + (71:0.70)$) {$\alpha$};
+
+  % Auxiliary ray from D labeled alpha
+  \draw[<-] ($(D) + (38:0.12)$) -- ($(D) + (38:1.45)$) node[above right=-1pt] {$\alpha$};
+\end{tikzpicture}

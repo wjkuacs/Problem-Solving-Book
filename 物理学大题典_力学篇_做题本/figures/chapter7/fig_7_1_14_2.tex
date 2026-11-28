@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rod
+  \draw (-2.6, 0) rectangle (2.6, 0.55);
+
+  % Center of mass C
+  \fill (-0.35, 0.275) circle (1.5pt) node[right=2pt] {$C$};
+
+  % Left roller 1 (CW)
+  \draw (-1.2, -0.45) circle (0.45);
+  \draw[->] (-1.2, -0.45) ++(225:0.68) arc (225:135:0.68);
+  \node at (-1.85, -0.95) {$1$};
+
+  % Right roller 2 (CCW)
+  \draw (1.2, -0.45) circle (0.45);
+  \draw[->] (1.2, -0.45) ++(-45:0.68) arc (-45:45:0.68);
+  \node at (1.85, -0.95) {$2$};
+
+  % Dimension x above rod
+  \draw[thin] (-1.2, 0.72) -- (-1.2, 1.18);
+  \draw[thin] (-0.35, 0.72) -- (-0.35, 1.18);
+  \draw[thin, ->] (-1.7, 0.95) -- (-1.2, 0.95);
+  \draw[thin, ->] (0.15, 0.95) -- (-0.35, 0.95);
+  \node at (-0.775, 0.95) {$x$};
+
+  % Dimension a below rollers
+  \draw[thin] (-1.2, -1.05) -- (-1.2, -1.55);
+  \draw[thin] (1.2, -1.05) -- (1.2, -1.55);
+  \draw[thin, <->] (-1.2, -1.32) -- (1.2, -1.32) node[midway, fill=white, inner sep=2pt] {$a$};
+\end{tikzpicture}

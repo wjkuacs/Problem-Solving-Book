@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\a{0.95}
+  \def\b{0.52}
+  \def\ang{-36}
+
+  % Horizontal ground with hatching
+  \draw (-0.4,0) -- (5.4,0);
+  \foreach \x in {-0.25,0.05,...,5.2} {
+    \draw (\x,0) -- (\x-0.18,-0.2);
+  }
+
+  % Two wheels
+  \coordinate (O1) at (0.95,\a);
+  \coordinate (O2) at (3.45,\a);
+  \draw (O1) circle (\a);
+  \draw (O2) circle (\a);
+  \fill (O1) circle (1.3pt) node[left=2pt] {$O_1$};
+  \fill (O2) circle (1.3pt) node[left=2pt] {$O_2$};
+
+  % Rods O1A, O2B, and connecting bar AB
+  \coordinate (A) at ($(O1)+(\ang:\b)$);
+  \coordinate (B) at ($(O2)+(\ang:\b)$);
+  \draw (O1) -- (A) -- (B) -- (O2);
+  \node[below left=1pt] at (A) {$A$};
+  \node[below=1pt] at (B) {$B$};
+
+  % Right vertical wall with hatching
+  \draw (5.4,0.3) -- (5.4,1.6);
+  \foreach \y in {0.4,0.65,...,1.5} {
+    \draw (5.4,\y) -- (5.58,\y+0.18);
+  }
+
+  % Spring from O2 to wall
+  \draw (O2) -- ($(O2)+(0.32,0)$)
+    decorate [decoration={zigzag, segment length=7pt, amplitude=3.2pt}] {
+      -- (5.1,\a)
+    }
+    -- (5.4,\a);
+  \node at (4.78,\a+0.28) {$k$};
+\end{tikzpicture}

@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Source and receiver dot + label
+  \coordinate (S) at (0, 0.75);
+  \fill (S) circle (1.4pt);
+  \node[above left=0.12cm and -0.25cm of S, align=left, font=\small] {声源和\\接收器};
+
+  % Concentric ultrasonic wavefront arcs
+  \draw (S) ++(-35:0.30) arc (-35:30:0.30);
+  \draw (S) ++(-38:0.55) arc (-38:28:0.55);
+  \draw (S) ++(-40:0.82) arc (-40:26:0.82);
+
+  % Incident beam direction arrow at small angle to artery
+  \draw[->] (1.05, 0.56) -- (1.75, 0.38);
+
+  % Artery walls
+  \draw (-0.3, 0.15) -- (4.8, 0.15);
+  \draw (-0.3, -0.55) -- (4.8, -0.55);
+
+  % Blood flow velocity arrow
+  \draw[->] (2.7, -0.20) -- (3.6, -0.20) node[right] {$v=1\,\mathrm{m/s}$};
+\end{tikzpicture}

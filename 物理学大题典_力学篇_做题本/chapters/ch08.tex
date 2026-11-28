@@ -1,0 +1,657 @@
+\chapter{流体力学基础}
+
+\section{流体运动学}
+
+\begin{problem}{8.1.1}
+已知流体运动的速度场为
+
+\[
+v _ {x} = x + t, \quad v _ {y} = y + t, \quad v _ {z} = 0
+\]
+
+求用拉格朗日变量表示的速度分布.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.2}
+某一流体流动的拉格朗日描述是
+
+\[
+x = \sqrt {x _ {0} ^ {2} + y _ {0} ^ {2}} \cos \left(\omega t + \arctan \frac {y _ {0}}{x _ {0}}\right)
+\]
+
+\[
+y = \sqrt {x _ {0} ^ {2} + y _ {0} ^ {2}} \sin \left(\omega t + \arctan \frac {y _ {0}}{x _ {0}}\right)
+\]
+
+其中 $\omega$ 是常量, 求出用欧拉方式描述的速度场.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.3}
+流体运动的速度场为
+
+\[
+v _ {z} = y z t, \quad v _ {y} = z x t, \quad v _ {z} = 0
+\]
+
+问当 $t = 10$ 时，在点(2,5,3)处的质元的加速度为何值？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.4}
+流体沿 x 方向定常运动, 速度按线性规律递增, 已知流体质元流经相距 l =
+
+50cm 的 A、B 两点的速度 $v_{A}=2ms^{-1}$ 、 $v_{B}=6ms^{-1}$ ，如图 8.1 所示。试求流经这两点时质元的加速度。
+\begin{center}
+\input{figures/chapter8/fig_8_1_4_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.5}
+流体在平面上做定常流动,其速度场用极坐标表示为
+
+\[
+\boldsymbol {v} (r, \varphi) = b r e _ {\varphi}
+\]
+
+其中 b 为常量, 求该流动的加速度场.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.6}
+已知一定常流动的速度场为
+
+\[
+v _ {x} = 2 k x, \quad v _ {y} = 2 k y, \quad v _ {z} = - 4 k z
+\]
+
+其中 k 为常量, 试求通过 $(1,1,1)$ 点的流线方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.7}
+已知某运动的速度场为
+
+\[
+\boldsymbol {v} = (1 + A t) \boldsymbol {i} + 2 x \boldsymbol {j}
+\]
+
+其中 $A$ 为常量. 求：
+
+(1) $t=t_{0}$ 时通过 $(x_{0},y_{0})$ 点的流线方程；
+
+(2) $t=t_{0}$ 时位于 $(x_{0},y_{0})$ 点的流体质元的轨道方程；
+
+(3) $t=t_{0}$ 时位于 $(x_{0},y_{0})$ 点的流体质元在t时刻的速度.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.8}
+流体运动的速度分布若为
+
+\[
+\boldsymbol {v} = (x + t) \boldsymbol {i} - (y - t) \boldsymbol {j}
+\]
+
+求通过 $(-1,-1)$ 点的流线及t=0时通过 $(-1,-1)$ 点的迹线.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.9}
+流体运动的轨迹为
+
+\[
+x = x _ {0} \mathrm{e} ^ {- 2 b t}, \quad y = y _ {0} \mathrm{e} ^ {b t}, \quad z = z _ {0} \mathrm{e} ^ {b t}
+\]
+
+其中 b 为非零常量. 判断此流动是否定常流动?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.10}
+对 8.1.5 题所述的流体运动, 如取以恒定速度 $V$ 沿 $x$ 轴向正方向运动的参考系 $S'$ , 固连于它的两个坐标轴 $x'$ 、 $y'$ 轴分别与 $x$ 、 $y$ 轴平行, 且 $t=0$ 时, 两坐标系完全重合. 问在 $S'$ 系中看此流动是否是定常流动? 给出 $t$ 时刻通过任意点 $(x'_{0}, y'_{0})$ 的流线方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.11}
+判断下述不可压缩流体的运动是否可能存在：
+
+(1) $v_{x} = x, v_{y} = y, v_{z} = z$ ; 
+
+(2) $v_{x}=2x^{2}+y,v_{y}=2y^{2}+z,v_{z}=-4(x+y)z+xy;$ 
+
+(3) $v_{x}=yzt,v_{y}=xzt,v_{z}=xyt.$
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.12}
+分别判断 8.1.5 题, 8.1.9 题所述流动的流体是不是不可压缩流体?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.13}
+某流体沿截面积不变的直圆管流动,流速为
+
+\[
+v = \frac {1}{2} (v _ {1} + v _ {2}) + \frac {1}{2} (v _ {2} - v _ {1}) \mathrm{th} x
+\]
+
+其中 $v_{1}, v_{2}$ 为常量，在 $x = -\infty$ 处，密度 $\rho = \rho_{1}$ . 问此流体是否可压缩？并求沿管道的密度分布.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.1.14}
+判断以下流动的类型: 定常不定常, 有旋无旋, 如果是无旋的, 求出速度势, 流体可否压缩?
+
+\[
+\begin{array}{l} \text {(1)} v _ {x} = - \frac {2 x y z}{(x ^ {2} + y ^ {2}) ^ {2}}, \quad v _ {y} = \frac {(x ^ {2} - y ^ {2}) z}{(x ^ {2} + y ^ {2}) ^ {2}}, \quad v _ {z} = \frac {y}{x ^ {2} + y ^ {2}}; \\ \text {(2)} v _ {r} = (n + 1) a r ^ {n} e ^ {- k (n + 1) \varphi}, \quad v _ {\varphi} = - k (n + 1) a r ^ {n} e ^ {- k (n + 1)} \varphi , \quad v _ {z} = 0, \end{array}
+\]
+
+其中 $k, n, a$ 均为常量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.1}
+一根横截面积为 $1\mathrm{cm}^2$ 的管子铅直地连在一个容器上，容器高度为 $1\mathrm{cm}$ ，横截面积为 $100\mathrm{cm}^2$ 。今把水注入到离容器底面的高度 $100\mathrm{cm}$ ，管子上端封闭，并将水面上方的
+
+气体抽空,求:
+
+(1) 水对容器底面的作用力：
+
+(2) 系统内水的重量；
+
+(3) 解释(1)问和(2)问所得数值为何不同?
+
+（4）如置于磅秤上，磅秤示重多大？（容器质量可忽略不计）.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.2}
+设一盛着水的长方体水箱以与水平面夹角为 $\alpha$ 的恒力 $F$ 往斜面上拉，斜面的倾角为 $\theta$ 。取固连于水箱的 $x, y, z$ 坐标，如图 8.7 所示。水箱置于水平面上静止时，水面高度为 $h$ ，水箱 $x$ 方向的边长为 $L_{1}, z$ 方向的边长为 $L_{2}$ ，水的密度为 $\rho$ ，大气压强为 $p_{0}$ ，求相对于水箱平衡后：
+
+(1)水的压强分布 $\rho(x,y)$ ;
+
+(2) x=0 处的水箱壁受到的总压力 N;
+
+(水箱的质量可以忽略不计.)
+\begin{center}
+\input{figures/chapter8/fig_8_2_2_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.3}
+在平行放置的半径为 $a$ 、相距为 $2b$ 的两个金属环之间张一肥皂薄膜，如图 8.8 所示。求肥皂膜达到平衡后的形状（重力忽略不计）。
+\begin{center}
+\input{figures/chapter8/fig_8_2_3_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.4}
+一桶水围绕它的竖直对称轴以恒定的角速度 $\omega$ 旋转, 求稳定后水的表面的形状.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.5}
+若上题的圆桶半径为 R，装入密度为 $\rho$ 的不可压缩的液体，不转动时可装到桶底以上 h 处，以恒定角速度 $\omega$ 转动后达到稳定状态，液体既未溢出，底部仍处处充满液体。求：
+
+(1) 在底部上方高度为 $z$ 处的圆桶壁上的压强 $p_1(z)$ 的表达式；
+
+(2) 沿轴线在底部上方高度为 z 处的压强 $p_{0}(z)$ 的表达式；
+
+(3) 在一位静止的观察者看来, 流体的运动是不是无旋流动?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.7}
+杆式天平被用来测量密度 $\rho_{1}$ 很低、体积为 $V_{1}$ 的固体的质量 $m_{1}$ . 将固体放在天平的左盘, 将具有很高密度的金属砝码放在天平的右盘, 使之达到平衡.
+
+(1) 如先在空气中实现平衡, 然后将天平罩抽成真空, 还能保持平衡吗? 若不能, 哪边的盘子将下沉?
+
+(2) 确定在空气(密度为 $\rho_{A}$ ) 中达到平衡测得的质量 $m_{1}$ 的百分数误差.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.8}
+组成天体的一种假想物质具有状态方程
+
+\[
+p = \frac {1}{2} k \rho^ {2}
+\]
+
+其中 p 是压强, $\rho$ 是质量密度, k 为常量.
+
+(1) 证明对于这种物质, 在流体静力学平衡条件下, 密度和引力势之间有线性关系,
+
+注意正比项的代数符号；
+
+(2) 写出在流体静力学平衡时密度所满足的微分方程, 可用什么边界条件或别的物理约束?
+
+(3) 假定是球对称的, 求出平衡时天体的半径.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.9}
+为描述由于行星的缓慢转动使赤道鼓起, 计算旋转的表面形状. 假定行星完全由不可压缩的密度为 $\rho$ 、总质量为 $M$ 以恒定角速度 $\omega$ 转动的流体组成. 转动时, 行星中心至两极的平衡距离为 $R_{p}$ .
+
+(1) 写出本题的流体静力学平衡方程；
+
+(2) 作粗糙近似, 即用靠近表面处引力场写为 $-\frac{GM}{r^2} e_r$ , 求行星表面附近的压强;
+
+(3) 求出行星表面的方程；
+
+（4）如赤道鼓起 $R_{e} - R_{p}$ 是行星半径的小部分，对(3)问得到的表达式作近似，用以描述表面对球状的偏离；
+
+（5）对于地球的情形 $(R_{p}=6400\mathrm{km},M=6\times10^{24}\mathrm{kg})$ ，对赤道鼓起的高度作一数值估计.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.10}
+用图 8.13 所示的 U 形管测量汽车的加速度. 当汽车加速行驶时, 测得 h = 100mm, 求汽车的加速度(图中 L = 200mm).
+\begin{center}
+\input{figures/chapter8/fig_8_2_10_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.11}
+具有铅垂轴的、半径为 $r$ 的半球内盛满液体。求被两个互相垂直的平面所切出的八分之一球面上压力的合力 $N$ 及其作用线。设自由面上压力为零，液体的密度为 $\rho$ 。解 考虑 $x \geqslant 0, y \geqslant 0, z \geqslant 0$ 的处于四分之一的半球内的液体为系统。
+
+对八分之一球面的压力的合力 $N$ 可写成
+
+\[
+N = N _ {x} \boldsymbol {i} + N _ {y} \boldsymbol {j} + N _ {z} \boldsymbol {k}
+\]
+
+$N_{x}$ 等于 $x \leqslant 0, y \geqslant 0, z \geqslant 0$ 处四分之一半球内的液体对系统的作用力.
+
+界面 OAB 上在 $z \sim z + dz$ 间作用于系统的压力为
+
+\[
+\mathrm{d} N _ {x} = \rho g z \sqrt {r ^ {2} - z ^ {2}} \mathrm{d} z
+\]
+
+通过 OAB 面对系统的作用力
+
+\[
+\begin{array}{r l} N _ {x} & = \int_ {0} ^ {r} \rho g z \sqrt {r ^ {2} - z ^ {2}} \mathrm{d} z \\ & = - \frac {1}{2} \rho g \int \sqrt {r ^ {2} - z ^ {2}} \mathrm{d} (- z ^ {2}) = \frac {1}{3} \rho g r ^ {3} \end{array}
+\]
+
+根据对称性,可以写出
+
+\[
+N _ {y} = \frac {1}{3} \rho g r ^ {3}
+\]
+
+$N_{z}$ 的大小等于八分之一球面 $ABC$ 对系统的作用力的 $z$ 方向的分量，等于这八分之一球体内液体的重量，
+
+所以
+
+\[
+\begin{array}{r l} N _ {z} & = \frac {1}{8} \times \frac {4}{3} \pi r ^ {3} \rho g = \frac {1}{6} \pi \rho g r ^ {3} \\ N & = \frac {1}{3} \rho g r ^ {3} i + \frac {1}{3} \rho g r ^ {3} j + \frac {1}{6} \pi \rho g r ^ {3} k \\ N & = \sqrt {N _ {x} ^ {2} + N _ {y} ^ {2} + N _ {z} ^ {2}} = \frac {1}{6} \rho g r \sqrt {8 + \pi^ {2}} \end{array}
+\]
+
+八分之一球面 $ABC$ 上各处的压力均沿球面的法线方向, 其作用线都汇交于球心 $O$ , 其合力的作用线亦必通过共点力系的作用线交点 $O$ , 设合力的作用点为 $(x, y, z)$ , 则
+
+\[
+N \times (x i + y j + z k) = 0
+\]
+
+\[
+\begin{array}{r l} & {\left| \begin{array}{c c c} i & j & k \\ N _ {x} & N _ {y} & N _ {z} \\ x & y & z \end{array} \right| = 0} \\ & {N _ {x} y - N _ {y} x = 0} \\ & {N _ {y} z - N _ {z} y = 0} \end{array}
+\]
+
+代入 $N_{x}, N_{y}, N_{z}$ , 从上述两个方程可得
+
+\[
+x = y, \quad z = \frac {\pi}{2} y
+\]
+
+作用线是这两个平面的交线,作用点是此交线与八分之一球面 ABC 的交点.两式与 $x^{2}+y^{2}+z^{2}=r^{2}$ 联立解得
+
+\[
+x = y = \frac {2 r}{\sqrt {8 + \pi^ {2}}}, \quad z = \frac {\pi r}{\sqrt {8 + \pi^ {2}}}
+\]
+
+作用线也可表示为参数方程形式，
+
+\[
+x = \frac {2 r}{\sqrt {8 + \pi^ {2}}} t, \quad y = \frac {2 r}{\sqrt {8 + \pi^ {2}}} t, \quad z = \frac {\pi r}{\sqrt {8 + \pi^ {2}}} t
+\]
+
+其中 t 为参数.
+\begin{center}
+\input{figures/chapter8/fig_8_2_11_1.tex}
+\end{center}
+\begin{center}
+\input{figures/chapter8/fig_8_2_11_2.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.12}
+证明:任意曲面在彻体力仅有重力的静止流体中,所受的总压力的水平分量等于该曲面在垂直面上的投影面积上所受的总压力.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.13}
+一半径为 R 的圆柱形容器, 其顶盖中心装有一敞口的测压管(见图 8.17). 容器装满密度为 $\rho$ 的水, 测压管中的水面比顶盖高 h, 大气压为 $p_{0}$ , 当容器绕其对称轴以角速度 $\omega$ 旋转时, 顶盖受到水向上的作用力有多大?
+\begin{center}
+\input{figures/chapter8/fig_8_2_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.14}
+一离心分离机, 其容器半径为 $R$ , 高度为 $H$ . 容器静止时装水高度为 $h$ , 水的密度为 $\rho$ . 为使水不溢出, 角速度不能超过何值?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.15}
+设有单位质量受到的彻体力场为：
+
+\[
+\begin{array}{l} F _ {x} = \frac {1}{2} (y ^ {2} + z ^ {2}) + 2 \lambda (y + z) x \\ F _ {y} = \frac {1}{2} (z ^ {2} + x ^ {2}) + 2 \mu (z + x) y \\ F _ {z} = \frac {1}{2} (x ^ {2} + y ^ {2}) + 2 \nu (x + y) z \end{array}
+\]
+
+其中 $\lambda, \mu, \nu$ 均为常数. 问 $\lambda, \mu, \nu$ 为何值时, 在此力场作用下的均质流体可能达到平衡.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.16}
+一个充满水的密闭容器,以等角速度 $\omega$ 绕一水平轴旋转,能否达到相对平衡?如能达到相对平衡,求出等压面方程.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.17}
+图 8.18 中圆形截面的活塞直径 d=4cm，圆柱体状重物 W 的底面直径 D=24cm。当作用在活塞上的力 F 为 100N 时，能举起重物的质量多大？
+\begin{center}
+\input{figures/chapter8/fig_8_2_17_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.18}
+许多初等教科书表述流体静力学的帕斯卡原理为：“封闭液体压强的任何变化可无缩减地、瞬时地传递到该液体的所有其他部分。”这是否违背相对论？解释清楚这里
+
+所说时“瞬时地”意味着什么？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.19}
+如图 8.19 所示, 盛水容器底部开有直径 $d = 5\mathrm{cm}$ 的圆孔, 用空心金属球封住. 球重 2.45N, 半径 $r = 4\mathrm{cm}$ , 水深 $H = 20\mathrm{cm}$ . 试求升起该球所需之力.
+\begin{center}
+\input{figures/chapter8/fig_8_2_19_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.20}
+一个均质的正立方体木块, 边长为 $1\mathrm{m}$ , 加重物后浸入水中达到平衡时, 恰好一半浸入水中, 重心位置如图 8.20(a) 所示, 当木块转过 $45^{\circ}$ 角, 如图 8.20(b) 所示. 求此位置木块受到的恢复力矩.
+\begin{center}
+\input{figures/chapter8/fig_8_2_20_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.21}
+一个空间站是一个充满空气的半径为 $a$ 的大圆筒, 圆筒围绕其对称轴以角速度 $\omega$ 自旋, 以提供边缘的加速度等于地球表面的重力加速度. 若空间站内部温度 $T$ 是常数, 求圆筒中心处的压强与边缘处的压强之比.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.2.22}
+一个由气体组成的、半径为 $R$ 的球状物体具有球对称性，密度 $\rho = \rho(r)$ ，引力势 $U = U(r)$ ，由压力支承自身的引力，压强 $p = p(r)$ . 下列哪些式子是物体的引力势能 $V$ 的正确表达式. 而另一些仅差一个正的或负的数字因子.
+
+\[
+\begin{array}{l l} \text {(i)} - 4 \pi \int_ {0} ^ {R} \rho \frac {\mathrm{d} U}{\mathrm{d} r} r ^ {3} \mathrm{d} r, & \text {(ii)} \frac {1}{G} \int_ {0} ^ {R} \left(\frac {\mathrm{d} U}{\mathrm{d} r}\right) ^ {2} r ^ {2} \mathrm{d} r \\ \text {(iii)} 2 \pi \int_ {0} ^ {R} \rho U r ^ {2} \mathrm{d} r, & \text {(iv)} - 4 \pi \int_ {0} ^ {R} p r ^ {2} \mathrm{d} r \end{array}
+\]
+\end{problem}
+\clearpage
+
+
+\section{流体动力学}
+
+\begin{problem}{8.3.1}
+如图 8.21 所示, 一低速风洞具有开口式的试验段, 其横截面直径为 $d$ , 一杯式酒精压力计连接于风洞较粗段上, 此处横截面的直径为 $D$ . 当重力作用下的、密度为 $\rho$ 的理想气体流过时, 压力计高度读数为 $h$ , 大气压强为 $p_0$ . 酒精密度为 $\rho'$ , 流动是定常的. 求试验段流体的速度.
+\begin{center}
+\input{figures/chapter8/fig_8_3_1_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.2}
+密度为 $\rho$ 的水从一大容器流入一喇叭型导管, 入口和出口处截面积分别为
+
+$S_{1}$ 和 $S_{2}$ ，导管长 H，如图 8.22 所示，大气压强为 $p_{0}$ ，运动是定常的，问 h 多大时，导管入口处压强为零。
+\begin{center}
+\input{figures/chapter8/fig_8_3_2_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.3}
+如图 8.23 所示, 压强为 $1.08 \times 10^{5}$ Pa 的空气以 $30 \, ms^{-1}$ 的速度从 A、B 两个进口流进箱内，进口面积都为 $5cm^{2}$ ，箱内的空气经过 C 排气口排入大气，排气压强等于大气压强，为 $1.013 \times 10^{5}Pa$ 。气体不可压缩，密度为 $1.225kg/m^{3}$ ，进出口 A、B、C 处于同一高度，设为定常流动。试求反作用力 $R_{1}$ 和 $R_{2}$ 。
+\begin{center}
+\input{figures/chapter8/fig_8_3_3_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.4}
+水塔的蓄水箱底离地面的高度 $H_0 = 20\mathrm{m}$ , 其横截面为半径 $R = 2\mathrm{m}$ 的圆, 蓄水深 $h = 1\mathrm{m}$ , 如果用装在高 $H_1 = 5\mathrm{m}$ 处截面积为 $2\mathrm{cm}^2$ 的水龙头放水, 假定始终都是定常流动, 问需多久才能将水放完?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.5}
+洒水车的大水槽的后端底部有一小孔, 当洒水车以匀加速 a 前进时, 后端水面的高度为 h. 求此刻水从小孔流出的速率. (以洒水车为参考系)
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.6}
+半径为 R 的圆柱形水槽绕自身的铅直对称轴以匀角速 $\omega$ 转动, 水槽侧壁有一小孔, 水面最低处在小孔上方 h 处. 求此刻水从小孔流出时相对于水槽的速率.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.7}
+密度为 $\rho$ 的理想流体通过截面积为正方形的、水平的圆弧形管道(见图8.26)做定常流动, 正方形边长为 $2L$ , 圆形轨道的中心线的半径为 $R$ , 测得通道在同一高度上内外侧压差为 $\Delta p$ , 通道内水流速度为 $v_{r} = v_{z} = 0, v_{\varphi} = \frac{A}{r}$ , $A$ 为待定常数. 试证明通过通道的水流质量流量为
+
+\[
+Q = \sqrt {\frac {2 \rho L \Delta p}{R}} (R ^ {2} - L ^ {2}) \ln \left(\frac {R + L}{R - L}\right)
+\]
+\begin{center}
+\input{figures/chapter8/fig_8_3_7_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.8}
+密度为 $\rho$ 的理想流体做定常流动, 其流场的速度分布为
+
+\[
+\boldsymbol {v} = \left\{ \begin{array}{l l} r \omega e \varphi & 0 \leqslant r \leqslant r _ {0} \\ \frac {r _ {0} ^ {2} \omega}{r} e \varphi & r \geqslant r _ {0} \end{array} \right.
+\]
+
+其中 $\omega$ 为常量，求此流场的压强分布. 设 $r \to \infty$ 时， $p = p_0$ 为周围的大气压强（不计重力的影响）.
+
+提示: 可采用绕对称轴以恒定角速度 $\omega$ 转动的参考系或解用柱坐标表示的微分方程，
+
+\[
+\frac {\partial \boldsymbol {v}}{\partial t} + \boldsymbol {v} \cdot \nabla \boldsymbol {v} = \boldsymbol {F} - \frac {1}{\rho} \nabla p
+\]
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.9}
+理想流体沿水平圆环做二维定常流动, 不计重力的影响, 若 $v_{r}=0, v_{\varphi}$ 不随 $\varphi$ 变化, 试求:
+
+(1) p 和 $v_{\varphi}$ 、r 满足的微分方程；
+
+(2) 分别对 $v_{\varphi}=k$ 、 $v_{\varphi}=kr$ 和 $v_{\varphi}=\frac{k}{r}$ 三种情况写出 p 与 r 的函数关系.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.10}
+密度为 $\rho$ 的理想流体运动的速度势 $\phi = a(x^2 - y^2)$ , 其中 $a$ 为常量, 若静止处压强为 $p_0$ , 求压强分布 (不计重力).
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.11}
+一种自己有引力作用的气体在没有压力的情况下球对称膨胀,未给膨胀的初条件,但知当密度为 $\rho_0$ 时,在离中心半径为 $R_0$ 处的表面流体元的速率为 $v_0$ ,即 $v(R_0) = v_0$ .
+
+(1) 求 $v(R)$ ;
+
+(2) 用 $v_{0}, R_{0}$ 和 $\rho_{0}$ 描述气体的最终结局.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.12}
+(1)一艘质量为 $M$ 的船浮在有竖直侧壁的深水槽中，一块质量为 $m$ 的石头
+
+投入船内,槽中的水平面升高多少? 如果石头没击中船而是落入水中,水平面升高多少?(如果需要,你可以对水槽、船和石头假设一个合理的形状);
+
+(2) 一个两臂有不同的截面积 $A_{1}, A_{2}$ 的 U 形管装入不可压缩的液体, 液面高度为 $d$ , 如图 8.28 所示. 空气被冲击性地吹入管的一端, 忽略表面张力效应和液体的黏性, 定量地描述液体
+
+以后的运动.
+\begin{center}
+\input{figures/chapter8/fig_8_3_12_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.13}
+一个半径为 $R$ 的球在不可压缩的 $(\nabla \cdot \boldsymbol{v}(\boldsymbol{r}) = 0, \boldsymbol{v}(\boldsymbol{r})$ 为以球为参考系时在位矢 $\bm{r}$ 处流体的速度）、无黏性理想流体中做速度为 $\bm{u}$ 的匀速运动。
+
+(1) 以球为参考系, 求流体流过球表面任何点时的速度 v.
+
+(2) 求出球的表面处的压强分布；
+
+(3) 求保持球做匀速运动所必需的力.
+\begin{center}
+\input{figures/chapter8/fig_8_3_13_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.14}
+两个倾斜的、可视为无穷大的平行平板，倾角为 $\alpha$ ，相距为 $b$ ，如图8.31所示.其间有密度为 $\rho$ 、黏度为 $\eta$ 的不可压缩流体做定常的二维流动，平均速度为 $\bar{v}$ ，考虑重力的影响，求图中1、2两点的压强差.
+\begin{center}
+\input{figures/chapter8/fig_8_3_14_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.15}
+如图 8.33, 某不可压缩的密度为 $\rho$ 、黏度为 $\eta$ 的流体, 在重力作用下沿倾角为 $\alpha$ 的固定平面做二维的定常层流型流动, 流层厚度为 $b$ , 有自由表面, 求:
+
+(1) 垂直于纸面的单位宽度流量；
+
+(2) 在自由表面下深度 d 为何值, 该处的流速等于流动的平均速度.
+\begin{center}
+\input{figures/chapter8/fig_8_3_15_1.tex}
+\end{center}
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.16}
+以长为 $1\mathrm{m}$ 、半径为 $1\mathrm{mm}$ 的圆形管道连接两水槽。试求两水槽水面差为 $50\mathrm{cm}$ 时管道中心线处的流速及流量。已知水在 $20^{\circ}\mathrm{C}$ 时黏度为 $1.00\times 10^{-3}\mathrm{Ns / m}^2$
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.17}
+以 $400\mathrm{kW}$ 的泵在 $4\mathrm{km}$ 的距离上要以 $1.5\mathrm{m}^3/\mathrm{s}$ 通过一水平圆管输送重燃油。若效率为 $75\%$ ，此油的密度为 $0.92\mathrm{g/cm}^3$ ，黏度为 $0.19\mathrm{Pas}$ 。求圆管的半径至少多大？
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.18}
+就一定常的圆管中的层流, 离中心线 r 多大处的速度等于平均速度?
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.19}
+水在 $20^{\circ}C$ 时通过一直径为 0.20m 的水平圆管，当平均速度为 2.5m/s 时，管中每米有 3.77Pa/m 的压强降落。问与用泊肃叶公式计算的所需压强降落比较有多大的误差？水在此温度下的黏度为 $1.53 \times 10^{-3}Pas$ 。
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.20}
+密度 $\rho = 0.93\mathrm{g} / \mathrm{cm}^3$ 、黏度 $\eta = 1.48\times 10^{-1}\mathrm{Pas}$ 的原油沿一半径 $r = 1.27\mathrm{cm}$ 的铅直圆管做定常的层流流动.相距 $15\mathrm{m}$ 的上下两个压力计的读数分别为 $1.72\times 10^{5}\mathrm{Pa}$ 和 $4.13\times 10^{5}\mathrm{Pa}$ .
+
+(1) 确定流动的方向；
+
+(2) 求出流量.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.21}
+设 8.3.4 题的水塔中, 蓄水箱是大容器, 其中的水是黏性流体, 黏度为 $\eta = 1.00 \times 10^{-3} \mathrm{Pas}$ .
+
+(1) 假定流体做定常的层流流动, 求流量;
+
+(2) 若水是理想流体, 并假定做定常的层流流动, 求流量;
+
+(3) 计算雷诺数, 判断流动的真实类型.
+\end{problem}
+\clearpage
+
+
+\begin{problem}{8.3.22}
+试用纳维尔-斯托克斯方程导出适用于不可压缩的黏性流体在不计重力的圆管中做定常流动的关于流量的泊肃叶公式.
+\end{problem}
+\clearpage
+

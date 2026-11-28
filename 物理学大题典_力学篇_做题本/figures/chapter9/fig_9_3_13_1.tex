@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  % Ceiling
+  \fill[pattern=north east lines] (-0.9,2.2) rectangle (0.9,2.38);
+  \draw (-0.9,2.2) -- (0.9,2.2);
+
+  % Vertical suspension and spring k
+  \draw (0,2.2) -- (0,1.75);
+  \draw[decorate, decoration={zigzag, segment length=2.3mm, amplitude=1.6mm}]
+    (0,1.75) -- node[midway, right=5pt] {$k$} (0,0.65);
+  \draw (0,0.65) -- (0,0);
+
+  % Origin O and coordinate axes
+  \coordinate (O) at (0,0);
+  \node[left=2pt] at (O) {$O$};
+  \draw[->] (O) -- (1.9,0) node[right] {$x$};
+  \draw[->] (O) -- (0,-2.85) node[left] {$y$};
+
+  % Equilibrium position label
+  \draw[->] (1.15,0.88) node[above right=-1pt] {平衡位置} -- (0.08,0.06);
+
+  % Pivot at distance y below O and pendulum rod b
+  \coordinate (P) at (0,-1.05);
+  \node[left=2pt] at (0,-0.55) {$y$};
+  \coordinate (Bob) at ($(P)+(-58:1.85)$);
+  \draw (P) -- node[midway, above right=1pt] {$b$} (Bob);
+  \fill (Bob) circle (2.3pt);
+  \node[right=3pt] at (Bob) {$m$};
+  \node[below=5pt] at ($(Bob)+(0.15,0)$) {$(x, y)$};
+
+  % Angle theta
+  \coordinate (Ydown) at (0,-2.5);
+  \pic[draw, angle radius=0.62cm, angle eccentricity=1.35, "$\theta$"] {angle = Ydown--P--Bob};
+\end{tikzpicture}

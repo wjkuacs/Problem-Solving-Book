@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate axes
+  \coordinate (O) at (0,0);
+  \draw[->] (O) -- (0,2.55) node[left=1pt] {$y$};
+  \draw[->] (O) -- (4.35,0) node[right=1pt] {$x$};
+
+  % Two identical touching spheres
+  \coordinate (C1) at (1.50,1.15);
+  \coordinate (C2) at (3.20,1.15);
+  \draw (C1) circle (0.85);
+  \draw (C2) circle (0.85);
+  \fill (C1) circle (1.4pt);
+  \fill (C2) circle (1.4pt);
+  \node at (0.68,2.08) {$1$};
+  \node at (3.20,2.22) {$2$};
+
+  % Velocity components and initial velocity on sphere 1
+  \coordinate (V1x) at (2.22,1.15);
+  \coordinate (V1y) at (1.50,2.60);
+  \coordinate (V0)  at (2.34,2.60);
+  \draw[->] (C1) -- (V1x) node[midway, below=2pt] {$v_{1x}$};
+  \draw[->] (C1) -- (V1y) node[left=1pt] {$v_{1y}$};
+  \draw[->] (C1) -- (V0)  node[above right=-1pt] {$v_0$};
+  \draw[dashed] (V1y) -- (V0);
+
+  % 60 degree angle
+  \pic[draw, thin, angle radius=0.42cm, angle eccentricity=1.48, "$60^\circ$"] {angle = V1x--C1--V0};
+
+  % Velocity of sphere 2
+  \draw[->] (C2) -- (4.55,1.15) node[right=1pt] {$v_2=\frac{3}{8}v_0$};
+\end{tikzpicture}

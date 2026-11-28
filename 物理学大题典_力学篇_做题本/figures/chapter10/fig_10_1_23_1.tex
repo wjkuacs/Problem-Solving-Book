@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Ceiling
+  \draw[thick] (-1.2, 0) -- (1.2, 0);
+  \foreach \x in {-1.0, -0.75, ..., 1.0} {
+    \draw (\x, 0) -- (\x + 0.2, 0.25);
+  }
+
+  % Top spring k
+  \draw[thick] (0, 0) -- (0, -0.3);
+  \draw[thick, decorate, decoration={coil, aspect=0.45, segment length=6pt, amplitude=4.5pt}]
+    (0, -0.3) -- (0, -1.5) node[midway, right=6pt] {$k$};
+  \draw[thick] (0, -1.5) -- (0, -1.8);
+
+  % Upper block 2m
+  \draw[thick] (-0.4, -1.8) rectangle (0.4, -2.35);
+  \node[right=4pt] at (0.4, -2.075) {$2m$};
+
+  % Bottom spring k
+  \draw[thick] (0, -2.35) -- (0, -2.65);
+  \draw[thick, decorate, decoration={coil, aspect=0.45, segment length=6pt, amplitude=4.5pt}]
+    (0, -2.65) -- (0, -3.85) node[midway, right=6pt] {$k$};
+  \draw[thick] (0, -3.85) -- (0, -4.15);
+
+  % Lower block m
+  \draw[thick] (-0.4, -4.15) rectangle (0.4, -4.7);
+  \node[right=4pt] at (0.4, -4.425) {$m$};
+\end{tikzpicture}

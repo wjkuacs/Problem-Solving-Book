@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\R{2.6}
+    \coordinate (O) at (0, \R);
+
+    % Circular tube arc
+    \draw ($(O)+(198:\R)$) arc (198:342:\R);
+
+    % Radius arrow
+    \draw[->] (O) -- node[above right=2pt] {$R$} ($(O)+(332:\R)$);
+
+    % Springs along the arc
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=4.5pt, amplitude=3.2pt, pre length=2pt, post length=2pt}]
+        ($(O)+(241:\R)$) arc (241:269:\R);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=4.5pt, amplitude=3.2pt, pre length=2pt, post length=2pt}]
+        ($(O)+(271:\R)$) arc (271:299:\R);
+
+    % Masses
+    \fill ($(O)+(240:\R)$) circle (2.2pt) node[below left=1pt] {$m$};
+    \fill ($(O)+(270:\R)$) circle (2.2pt) node[below=2pt] {$M$};
+    \fill ($(O)+(300:\R)$) circle (2.2pt) node[below right=1pt] {$m$};
+\end{tikzpicture}

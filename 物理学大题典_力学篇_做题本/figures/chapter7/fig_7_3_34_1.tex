@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate axes
+  \draw[->] (-1.65,0) -- (1.85,0) node[right=1pt] {$x$};
+  \draw[->] (0,-0.80) -- (0,2.75) node[left=1pt] {$y$};
+  \node[below right=1pt] at (0,0) {$O$};
+
+  % Uniform rod tilted at angle theta from +y axis
+  \def\th{24}
+  \def\L{2.55}
+  \def\w{0.10}
+  \begin{scope}[rotate=-\th]
+    \draw[very thick, fill=white] (-\w/2,0) rectangle (\w/2,\L);
+  \end{scope}
+
+  % Angle theta
+  \draw (0,1.05) arc (90:{90-\th}:1.05);
+  \node at ({90-\th/2}:1.28) {$\theta$};
+
+  % Oscillation amplitude A (above and below origin)
+  \draw[thin] (-0.25,0.48) -- (-0.82,0.48);
+  \draw[thin] (-0.25,-0.48) -- (-0.82,-0.48);
+  \draw[<->] (-0.55,0) -- (-0.55,0.48) node[midway, left=2pt] {$A$};
+  \draw[<->] (-0.55,0) -- (-0.55,-0.48) node[midway, left=2pt] {$A$};
+\end{tikzpicture}

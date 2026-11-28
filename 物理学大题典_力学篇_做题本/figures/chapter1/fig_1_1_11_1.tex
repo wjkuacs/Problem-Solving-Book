@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\R{2.0}
+  \def\phiang{28}
+  \coordinate (O) at (-\R, 0);
+  \coordinate (C) at (0, 0);
+  \coordinate (P) at ({2*\phiang}:\R);
+
+  % Circle
+  \draw[thick] (C) circle (\R);
+
+  % Polar axis from O through C past right edge
+  \draw[thick] (O) -- (\R+0.5, 0);
+  \node[left=2pt] at (O) {$O$};
+
+  % Chord r from O to P
+  \draw[thick] (O) -- (P) node[midway, above left=1pt] {$r$};
+
+  % Dashed radius from C to P
+  \draw[dashed, thick] (C) -- (P);
+
+  % Solid radius arrow R
+  \draw[->, thick] (C) -- (-32:\R) node[midway, below left=1pt] {$R$};
+
+  % Tangent velocity vector v at P
+  \draw[->, thick] (P) -- ++({2*\phiang+90}:0.85) node[above right=1pt] {$\boldsymbol{v}$};
+
+  % Angle labels
+  \node at ($(O)+(\phiang/2:0.75)$) {$\varphi$};
+  \node at ($(C)+(0.72*\phiang:0.58)$) {$2\varphi$};
+\end{tikzpicture}

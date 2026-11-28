@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{1.60}
+  \def\b{0.56}
+  \def\h{2.75}
+  % 正切角 t0: sin(t0) = b/h
+  \pgfmathsetmacro\tzero{asin(\b/\h)}
+
+  \coordinate (Top) at (0,\h);
+  \coordinate (O) at (0,0);
+  \coordinate (Ltan) at ({180-\tzero}:{\R} and {\b});
+  \coordinate (Rtan) at ({\tzero}:{\R} and {\b});
+  \coordinate (SlotEnd) at (240:{\R} and {\b});
+
+  % 圆锥底面与侧棱
+  \draw[thick, dashed] (Rtan) arc (\tzero:{180-\tzero}:{\R} and {\b});
+  \draw[thick] (Ltan) arc ({180-\tzero}:{360+\tzero}:{\R} and {\b});
+  \draw[thick] (Top) -- (Ltan);
+  \draw[thick] (Top) -- (Rtan);
+
+  % 竖直转轴与槽
+  \draw[thick] (O) -- (0,{\h+0.82});
+  \draw[thick] (Top) -- (SlotEnd);
+  \draw[thick] (O) -- (\R,0) node[midway, above=0pt] {$R$};
+
+  % 绕轴转动箭头
+  \draw[thick, ->] (155:0.42 and 0.12) ++(0,{\h+0.42})
+    arc (155:395:0.42 and 0.12);
+  \node[right=2pt] at (0.45,{\h+0.46}) {$\omega_0$};
+
+  % 小珠与标注
+  \fill (Top) circle (2pt);
+  \node[below left=1pt] at (Top) {$m$};
+  \draw (Top) -- (0.65,{\h+0.02}) node[right=1pt] {小珠};
+
+  % 槽的弯引线
+  \coordinate (SlotMid) at ($(Top)!0.58!(SlotEnd)$);
+  \draw[thick, ->] (1.35,1.88) .. controls (0.85,1.45) and (0.25,1.72) .. ($(SlotMid)+(0.06,0.02)$);
+  \node[right=1pt] at (1.35,1.92) {槽};
+
+  % 高度 h 标注
+  \draw (-1.95,\h) -- (-0.25,\h);
+  \draw (-1.95,0) -- (-1.62,0);
+  \draw[<->] (-1.75,0) -- (-1.75,\h) node[midway, left=2pt] {$h$};
+\end{tikzpicture}

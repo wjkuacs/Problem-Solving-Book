@@ -1,0 +1,16 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  % Particle m
+  \draw (-2.6,2.5) circle (0.16);
+  \node[below=4pt] at (-2.6,2.5) {$m$};
+
+  % Velocity arrow v and dashed impact line
+  \draw[->] (-2.35,2.5) -- (-1.35,2.5) node[midway, above=2pt] {$v$};
+  \draw[dashed] (-1.25,2.5) -- (0,2.5);
+
+  % Vertical rod M
+  \draw (0,0) rectangle (0.2,2.54);
+  \node[right=2pt] at (0.2,0.18) {$M$};
+
+  % Right-angle mark
+  \draw (-0.28,2.5) -- (-0.28,2.22) -- (0,2.22);
+\end{tikzpicture}

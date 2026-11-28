@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small]
+  % Coordinates
+  \coordinate (B) at (3.0, 3.8);
+  \coordinate (D) at ($(B)+(240:2.5)$);
+  \coordinate (A) at ($(B)+(220:3.3)$);
+  \coordinate (C) at ($(B)+(260:3.3)$);
+
+  % Hatched support post under D
+  \fill[pattern=north east lines] ($(D)+(-0.18, -1.72)$) rectangle ($(D)+(0.18, 0)$);
+  \draw ($(D)+(-0.18, -1.72)$) -- ($(D)+(-0.18, 0)$) -- ($(D)+(0.18, 0)$) -- ($(D)+(0.18, -1.72)$);
+
+  % Three rigid massless rods
+  \draw (B) -- (A);
+  \draw (B) -- (D);
+  \draw (B) -- (C);
+
+  % Point masses and pivot dots
+  \fill (B) circle (2.2pt);
+  \fill (D) circle (2.2pt);
+  \fill (A) circle (2.2pt);
+  \fill (C) circle (2.2pt);
+
+  % Angle arcs theta at B
+  \draw[thin] ($(B)+(220:0.65)$) arc (220:240:0.65);
+  \node at ($(B)+(230:0.95)$) {$\theta$};
+  \draw[thin] ($(B)+(240:0.78)$) arc (240:260:0.78);
+  \node at ($(B)+(250:1.08)$) {$\theta$};
+
+  % Point and mass labels
+  \node[above right=1pt] at (B) {$B$};
+  \node[above left=1pt] at (A) {$A$};
+  \node[below=2pt] at (A) {$m$};
+  \node[above right=1pt] at (D) {$D$};
+  \node[above right=1pt] at (C) {$C$};
+  \node[below=2pt] at (C) {$m$};
+
+  % Length labels (well clear of angle arcs)
+  \node[above left=1pt] at ($(B)!0.55!(A)$) {$L$};
+  \node[right=2pt] at ($(B)!0.68!(D)$) {$l$};
+  \node[right=2pt] at ($(B)!0.58!(C)$) {$L$};
+\end{tikzpicture}

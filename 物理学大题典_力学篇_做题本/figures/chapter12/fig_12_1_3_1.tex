@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Glass cylinder cross-section of radius R = 1.65
+  \draw (0,0) circle (1.65);
+  \fill (0,0) circle (0.055);
+
+  % Chord of length l at y = 0.85 (half-chord = sqrt(1.65^2 - 0.85^2) = 1.414)
+  \draw (-1.414,0.85) -- (1.414,0.85);
+
+  % Dimension indicator l above chord
+  \draw[thin] (-1.414,1.05) -- (-1.414,1.45);
+  \draw[thin] (1.414,1.05) -- (1.414,1.45);
+  \draw[<->] (-1.414,1.26) -- (1.414,1.26) node[midway, fill=white, inner sep=2pt] {$l$};
+
+  % Radii and perpendicular distance d
+  \draw (0,0) -- (-1.414,0.85) node[midway, below left=1pt] {$R$};
+  \draw (0,0) -- (0,0.85) node[midway, left=1pt] {$d$};
+  \draw (0,0) -- (1.10,0.85) node[midway, below right=1pt] {$r$};
+  \node[below right=1pt] at (1.08,0.85) {$A$};
+
+  % Angle alpha
+  \draw (0,0.42) arc (90:37.7:0.42);
+  \node at (63.8:0.62) {$\alpha$};
+\end{tikzpicture}

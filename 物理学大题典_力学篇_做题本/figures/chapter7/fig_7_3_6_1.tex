@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rod tilted at 38 degrees
+  \begin{scope}[rotate=38]
+    \draw (0, -0.07) rectangle (4.2, 0.07);
+  \end{scope}
+
+  % Hand gripping the bottom-left end
+  \draw[fill=white] (-0.52, 0.14) .. controls (-0.30, 0.14) and (-0.24, 0.24) .. (-0.08, 0.20)
+    .. controls (0.04, 0.16) and (0.04, 0.06) .. (-0.02, 0.02)
+    .. controls (0.08, 0.00) and (0.08, -0.10) .. (-0.04, -0.12)
+    .. controls (0.04, -0.16) and (0.00, -0.25) .. (-0.12, -0.24)
+    .. controls (-0.26, -0.23) and (-0.32, -0.14) .. (-0.52, -0.14);
+  \draw (-0.08, 0.10) .. controls (-0.16, 0.06) and (-0.16, -0.02) .. (-0.04, -0.04);
+  \draw (-0.06, -0.06) .. controls (-0.15, -0.09) and (-0.15, -0.17) .. (-0.05, -0.18);
+
+  % Clockwise rotation arrow with omega
+  \draw[->] (0.25, 1.25) arc (95:-10:1.05 and 1.05) node[below=2pt] {$\omega$};
+
+  % Rock at bottom-right
+  \draw (2.20, -0.52) .. controls (2.42, -0.45) and (2.52, -0.10) .. (2.78, 0.06)
+    .. controls (2.98, 0.16) and (3.22, -0.05) .. (3.32, -0.28)
+    .. controls (3.44, -0.36) and (3.64, -0.48) .. (3.58, -0.76)
+    .. controls (3.52, -0.98) and (3.22, -1.16) .. (2.82, -1.18)
+    .. controls (2.42, -1.20) and (2.06, -1.04) .. (2.02, -0.82)
+    .. controls (2.00, -0.68) and (2.10, -0.56) .. (2.20, -0.52) -- cycle;
+  \node at (2.82, -0.66) {岩石};
+\end{tikzpicture}

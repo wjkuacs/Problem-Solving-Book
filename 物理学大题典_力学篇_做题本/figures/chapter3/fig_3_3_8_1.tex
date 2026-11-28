@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  % Left and right fixed walls
+  \fill[pattern=north east lines] (-0.16,-0.32) rectangle (0,0.32);
+  \draw[line width=0.8pt] (0,-0.32) -- (0,0.32);
+  \fill[pattern=north east lines] (6.00,-0.32) rectangle (6.16,0.32);
+  \draw[line width=0.8pt] (6.00,-0.32) -- (6.00,0.32);
+
+  % String baseline and triangular pulse
+  \draw[line width=0.8pt] (0,0) -- (6.00,0);
+  \draw[line width=0.8pt] (1.95,0) -- (2.40,0.36) -- (2.85,0);
+
+  % Top dimensions (40m, 60m)
+  \draw[thin] (0,0.52) -- (0,0.98);
+  \draw[thin] (2.40,0.52) -- (2.40,0.98);
+  \draw[thin] (6.00,0.52) -- (6.00,0.98);
+  \draw[<->] (0,0.80) -- (2.40,0.80) node[midway, above=2pt] {$40\,\mathrm{m}$};
+  \draw[<->] (2.40,0.80) -- (6.00,0.80) node[midway, above=2pt] {$60\,\mathrm{m}$};
+
+  % Pulse height dimension (0.1m)
+  \draw[thin] (2.82,0.36) -- (3.22,0.36);
+  \draw[<->] (3.06,0) -- (3.06,0.36);
+  \node[right=2pt] at (3.06,0.18) {$0.1\,\mathrm{m}$};
+
+  % Pulse half-width dimensions (1m, 1m)
+  \draw[thin] (1.95,-0.12) -- (1.95,-0.62);
+  \draw[thin] (2.40,-0.12) -- (2.40,-0.62);
+  \draw[thin] (2.85,-0.12) -- (2.85,-0.62);
+  \draw[<->] (1.95,-0.46) -- (2.40,-0.46) node[midway, above=1pt] {$1\,\mathrm{m}$};
+  \draw[<->] (2.40,-0.46) -- (2.85,-0.46) node[midway, above=1pt] {$1\,\mathrm{m}$};
+\end{tikzpicture}

@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\Ra{1.15}
+  \def\Rb{0.72}
+  \coordinate (C1) at (0,0);
+  \coordinate (C2) at (\Ra+\Rb,-2.2);
+  % Disk 1
+  \draw (C1) circle (\Ra);
+  \fill (C1) circle (1.4pt);
+  \draw (C1) -- ++(28:\Ra) node[midway, above left=0pt] {$R_1$};
+  \node at ($(C1)+(135:\Ra+0.25)$) {$1$};
+  % Disk 2
+  \draw (C2) circle (\Rb);
+  \fill (C2) circle (1.4pt);
+  \draw (C2) -- ++(24:\Rb) node[midway, above left=0pt] {$R_2$};
+  \node at ($(C2)+(90:\Rb+0.25)$) {$2$};
+  % Vertical connecting string
+  \draw (\Ra,0) -- (\Ra,-2.2);
+\end{tikzpicture}

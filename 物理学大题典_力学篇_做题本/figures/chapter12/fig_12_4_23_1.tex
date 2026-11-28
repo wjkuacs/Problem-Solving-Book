@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick, line cap=round, line join=round,
+  fermion/.style={postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}}]
+  % 中心相互作用区域（椭圆）
+  \draw (0, 0) ellipse [x radius=0.9cm, y radius=0.5cm];
+
+  % 椭圆边界连接点
+  \coordinate (BL) at ({0.9*cos(225)}, {0.5*sin(225)});
+  \coordinate (BR) at ({0.9*cos(-45)}, {0.5*sin(-45)});
+  \coordinate (TL) at ({0.9*cos(135)}, {0.5*sin(135)});
+  \coordinate (TR) at ({0.9*cos(45)},  {0.5*sin(45)});
+
+  % 外部端点
+  \coordinate (P1in)  at (-2.0, -1.45);
+  \coordinate (P2in)  at (2.0, -1.45);
+  \coordinate (P3out) at (-2.0, 1.45);
+  \coordinate (P4out) at (2.0, 1.45);
+
+  % 入射粒子
+  \draw[fermion] (P1in) -- node[pos=0.45, above left=0pt and 2pt] {$\boldsymbol{k}_1$} (BL);
+  \node[below=2pt] at (P1in) {$m_1$};
+
+  \draw[fermion] (P2in) -- node[pos=0.45, above right=0pt and 2pt] {$\boldsymbol{p}_1$} (BR);
+  \node[below=2pt] at (P2in) {$m_2$};
+
+  % 出射粒子
+  \draw[fermion] (TL) -- node[pos=0.55, above right=0pt and 2pt] {$\boldsymbol{k}_2$} (P3out);
+  \node[above left=-1pt and 1pt] at (P3out) {$m_3$};
+
+  \draw[fermion] (TR) -- node[pos=0.55, above left=0pt and 2pt] {$\boldsymbol{p}_2$} (P4out);
+  \node[above right=-1pt and 1pt] at (P4out) {$m_4$};
+\end{tikzpicture}

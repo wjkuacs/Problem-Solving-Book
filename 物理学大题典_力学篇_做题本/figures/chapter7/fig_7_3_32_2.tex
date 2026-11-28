@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\D{1.55}
+  \pgfmathsetmacro{\alp}{atan(0.5)}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (-\D, 0);
+  \coordinate (B) at (\D, 0);
+  \coordinate (T) at (-0.6*\D, 0.8*\D);
+  \coordinate (Bot) at (0.6*\D, -0.8*\D);
+
+  % Rectangular plate
+  \draw[very thick] (A) -- (T) -- (B) -- (Bot) -- cycle;
+
+  % z-axis (rotation axis)
+  \draw[->] (-2.45,0) -- (2.65,0) node[right=1pt] {$z$};
+  \node[below left=1pt] at (A) {$A$};
+  \node[above right=1pt] at (B) {$B$};
+  \node[below left=1pt] at (O) {$O$};
+
+  % x-axis
+  \draw[->] (O) -- (0,1.65) node[above=1pt] {$x$};
+
+  % Principal axes 1 and 2
+  \draw[->] (O) -- (-\alp:2.25) node[below right=1pt] {$1$};
+  \draw[->] (O) -- ({90-\alp}:1.55) node[above right=1pt] {$2$};
+
+  % Angle alpha between z-axis and axis 1
+  \draw (0.62,0) arc (0:-\alp:0.62);
+  \node at ({-\alp/2}:0.86) {$\alpha$};
+
+  % Rotation arrow omega
+  \draw[->] (2.25,0.22) arc (65:305:0.18 and 0.28);
+  \node[below=2pt] at (2.22,-0.32) {$\omega$};
+\end{tikzpicture}

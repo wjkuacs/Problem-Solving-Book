@@ -1,0 +1,41 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{2.15}
+
+  % Circular ring
+  \draw (0, 0) circle (\R);
+
+  % Reference radii OA, OB, OC
+  \draw (0, 0) -- (0:\R) node[right=2pt] {$A$};
+  \draw (0, 0) -- (120:\R) node[above left=1pt] {$B$};
+  \draw (0, 0) -- (240:\R) node[below left=1pt] {$C$};
+  \node at (-25:0.28) {$O$};
+
+  % Radii to masses m
+  \draw (0, 0) -- (28:\R);
+  \draw (0, 0) -- (144:\R);
+  \draw (0, 0) -- (270:\R);
+
+  \fill (28:\R) circle (2.3pt) node[above right=1pt] {$m$};
+  \fill (144:\R) circle (2.3pt) node[above left=1pt] {$m$};
+  \fill (270:\R) circle (2.3pt) node[below=2pt] {$m$};
+
+  % Displacement angles theta1, theta2, theta3
+  \draw[thin] (0:0.62) arc (0:28:0.62);
+  \node[font=\small] at (14:0.90) {$\theta_1$};
+
+  \draw[thin] (120:0.62) arc (120:144:0.62);
+  \node[font=\small] at (132:0.95) {$\theta_2$};
+
+  \draw[thin] (240:0.62) arc (240:270:0.62);
+  \node[font=\small] at (255:0.92) {$\theta_3$};
+
+  % Angular separations alpha, beta, gamma
+  \draw[<->, thin] (28:1.58) arc (28:144:1.58);
+  \node[fill=white, inner sep=1.5pt] at (86:1.58) {$\alpha$};
+
+  \draw[<->, thin] (144:1.52) arc (144:270:1.52);
+  \node[fill=white, inner sep=1.5pt] at (207:1.52) {$\beta$};
+
+  \draw[<->, thin] (270:1.30) arc (270:388:1.30);
+  \node[fill=white, inner sep=1.5pt] at (329:1.30) {$\gamma$};
+\end{tikzpicture}

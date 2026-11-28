@@ -1,0 +1,12 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rod
+  \draw (-2.6, 0) rectangle (2.6, 0.55);
+
+  % Left roller (CCW)
+  \draw (-1.2, -0.45) circle (0.45);
+  \draw[->] (-1.2, -0.45) ++(135:0.68) arc (135:230:0.68);
+
+  % Right roller (CW)
+  \draw (1.2, -0.45) circle (0.45);
+  \draw[->] (1.2, -0.45) ++(45:0.68) arc (45:-50:0.68);
+\end{tikzpicture}

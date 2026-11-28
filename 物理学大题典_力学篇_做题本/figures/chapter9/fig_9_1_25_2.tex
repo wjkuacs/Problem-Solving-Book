@@ -1,0 +1,66 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Key coordinates
+    \coordinate (O1) at (1.50,1.50);
+    \coordinate (B) at (0.439,0.439);
+    \coordinate (A) at (2.207,2.207);
+    \coordinate (O2) at (4.00,-1.20);
+    \coordinate (C) at (3.638,-0.04);
+    \coordinate (D) at (5.113,-1.650);
+
+    % Coordinate axes x (left from O1) and y (up from O2)
+    \draw[->] (O1) -- (-0.25,1.50) node[below] {$x$};
+    \draw[->] (O2) -- (4.00,0.85) node[right] {$y$};
+
+    % Mechanism bars
+    \draw (B) -- (A);
+    \draw (B) -- (C);
+    \draw (C) -- (O2) -- (D);
+
+    % Forces
+    \draw[->] (A) -- ++(-0.80,0) node[left] {$F_A$};
+    \draw[->] (D) -- ++(0,0.75) node[above] {$F_D$};
+
+    % Dashed reference lines
+    \draw[dashed] (B) -- ++(1.45,0) coordinate (BH);
+    \draw[dashed] (C) -- ++(1.15,0) coordinate (CH);
+    \draw[dashed] (C) -- ($(C)!-0.36!(B)$) coordinate (BCext);
+    \draw[dashed] (O2) -- ++(0.95,0) coordinate (O2H);
+
+    % Angle arcs
+    \pic[draw, angle radius=0.58cm, "$\varphi_1$", angle eccentricity=1.36] {angle = C--B--A};
+    \pic[draw, angle radius=1.12cm] {angle = C--B--BH};
+    \node[right] at ($(B)+(1.16,-0.09)$) {$\psi$};
+    \pic[draw, angle radius=0.95cm] {angle = BCext--C--CH};
+    \node[right] at ($(C)+(0.98,-0.08)$) {$\psi$};
+    \pic[draw, angle radius=0.50cm, "$\varphi_2$", angle eccentricity=1.42] {angle = O2--C--BCext};
+    \pic[draw, angle radius=0.70cm, "$\theta$", angle eccentricity=1.26] {angle = D--O2--O2H};
+
+    % Fixed support at O1
+    \draw (O1) ++(0.05,-0.04) -- ++(0.06,-0.24) -- ++(0.20,0.14) -- cycle;
+    \draw ($(O1)+(0.05,-0.31)$) -- ($(O1)+(0.36,-0.09)$);
+    \foreach \t in {0.1,0.3,0.5,0.7,0.9} {
+        \coordinate (P) at ($($(O1)+(0.05,-0.31)$)!\t!($(O1)+(0.36,-0.09)$)$);
+        \draw[line width=0.45pt] (P) -- ++(-0.08,-0.10);
+    }
+
+    % Fixed support at O2
+    \draw (O2) -- ++(-0.14,-0.24) -- ++(0.28,0) -- cycle;
+    \draw ($(O2)+(-0.24,-0.24)$) -- ($(O2)+(0.24,-0.24)$);
+    \foreach \dx in {-0.20,-0.10,0,0.10,0.20} {
+        \draw[line width=0.45pt] ($(O2)+(\dx,-0.24)$) -- ++(-0.08,-0.10);
+    }
+
+    % Hinge circles
+    \draw[fill=white] ($(O1)+(0.05,-0.04)$) circle (0.05);
+    \draw[fill=white] (O2) circle (0.055);
+
+    % Labels
+    \node[right] at (A) {$A$};
+    \node[below left, inner sep=2pt] at (B) {$B$};
+    \node[above left, inner sep=2pt] at (C) {$C$};
+    \node[right] at (D) {$D$};
+    \node[above left, inner sep=2pt] at ($(O1)+(-0.04,0.04)$) {$O_1$};
+    \node[left] at ($(O2)+(-0.06,0.02)$) {$O_2$};
+    \node[above left, inner sep=1pt] at ($(B)!0.55!(O1)$) {$r_1$};
+    \node[left] at ($(C)!0.52!(O2)$) {$r_2$};
+\end{tikzpicture}

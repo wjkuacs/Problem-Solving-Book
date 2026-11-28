@@ -1,0 +1,81 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Coordinate axes
+    \draw[->, semithick] (0,0) -- (0,2.05) node[left=1pt, font=\small] {$y$};
+    \draw[->, semithick] (0,0) -- (6.0,0) node[below left=1pt, font=\small] {$x$};
+
+    % Spring k1
+    \draw[semithick] (0,0.32) -- (0.18,0.32);
+    \draw[semithick, decorate, decoration={zigzag, segment length=4.5pt, amplitude=2.6pt}]
+        (0.18,0.32) -- (0.72,0.32);
+    \draw[semithick] (0.72,0.32) -- (0.90,0.32);
+    \node[above=2pt, font=\small] at (0.45,0.44) {$k_1$};
+
+    % Block m1 and damper alpha1 / P1
+    \draw[fill=white] (0.90,0) rectangle (2.20,0.72);
+    \node[font=\small] at (1.55,0.36) {$m_1$};
+    \node[below=2pt, font=\small] at (0.90,0) {$x_1$};
+
+    \draw[fill=white] (1.15,0.72) rectangle (1.95,1.25);
+    \node[font=\small] at (1.40,0.98) {$\alpha_1$};
+    % Piston P1
+    \draw[semithick] (1.65,0.72) -- (1.65,1.32);
+    \draw[semithick] (1.95,0.72) -- (1.95,1.32);
+    \draw[semithick] (1.58,1.32) -- (2.02,1.32);
+    \foreach \yy in {0.84,1.08,1.16,1.24} {
+        \draw[thin] (1.65,\yy) -- (1.95,\yy);
+    }
+    \node[above=1pt, font=\small] at (1.80,1.32) {$P_1$};
+
+    % Spring k2
+    \draw[semithick] (2.20,0.32) -- (2.32,0.32);
+    \draw[semithick, decorate, decoration={zigzag, segment length=4.5pt, amplitude=2.6pt}]
+        (2.32,0.32) -- (2.73,0.32);
+    \draw[semithick] (2.73,0.32) -- (2.85,0.32);
+    \node[above=2pt, font=\small] at (2.52,0.44) {$k_2$};
+
+    % Horizontal rod from P1 to m3
+    \draw[semithick] (1.95,1.02) -- (2.85,1.02);
+    \draw[semithick] (1.95,1.12) -- (2.85,1.12);
+
+    % Block m3
+    \draw[fill=white] (2.85,0) rectangle (3.35,1.50);
+    \node[font=\small] at (3.10,0.75) {$m_3$};
+    \node[below=2pt, font=\small] at (2.85,0) {$x_3$};
+
+    % Spring k3
+    \draw[semithick] (3.35,0.32) -- (3.47,0.32);
+    \draw[semithick, decorate, decoration={zigzag, segment length=4.5pt, amplitude=2.6pt}]
+        (3.47,0.32) -- (3.88,0.32);
+    \draw[semithick] (3.88,0.32) -- (4.00,0.32);
+    \node[above=2pt, font=\small] at (3.68,0.44) {$k_3$};
+
+    % Horizontal rod from m3 to P2
+    \draw[semithick] (3.35,1.02) -- (4.25,1.02);
+    \draw[semithick] (3.35,1.12) -- (4.25,1.12);
+
+    % Block m2 and damper alpha2 / P2
+    \draw[fill=white] (4.00,0) rectangle (5.45,0.72);
+    \node[font=\small] at (4.72,0.36) {$m_2$};
+    \node[below=2pt, font=\small] at (4.00,0) {$x_2$};
+
+    \draw[fill=white] (4.25,0.72) rectangle (5.05,1.25);
+    \node[font=\small] at (4.80,0.98) {$\alpha_2$};
+    % Piston P2
+    \draw[semithick] (4.25,0.72) -- (4.25,1.32);
+    \draw[semithick] (4.55,0.72) -- (4.55,1.32);
+    \draw[semithick] (4.18,1.32) -- (4.62,1.32);
+    \foreach \yy in {0.84,1.08,1.16,1.24} {
+        \draw[thin] (4.25,\yy) -- (4.55,\yy);
+    }
+    \node[above=1pt, font=\small] at (4.40,1.32) {$P_2$};
+
+    % Dimension q2 (top)
+    \draw[thin] (0.90,1.62) -- (0.90,2.02);
+    \draw[thin] (2.85,1.62) -- (2.85,2.02);
+    \draw[<->, thin] (0.90,1.82) -- (2.85,1.82) node[midway, above=1pt, font=\small] {$q_2$};
+
+    % Dimension q1 (bottom)
+    \draw[thin] (0.90,-0.45) -- (0.90,-0.88);
+    \draw[thin] (4.00,-0.45) -- (4.00,-0.88);
+    \draw[<->, thin] (0.90,-0.72) -- (4.00,-0.72) node[midway, above=1pt, font=\small] {$q_1$};
+\end{tikzpicture}

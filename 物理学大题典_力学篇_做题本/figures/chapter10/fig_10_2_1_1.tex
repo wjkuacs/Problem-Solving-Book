@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth]
+  % Ground line
+  \draw[thick] (-0.9, 0) -- (4.9, 0);
+
+  % Force F
+  \draw[->, thick] (-0.85, 0.45) -- (0, 0.45) node[midway, above] {$F$};
+
+  % Block A
+  \draw[thick] (0, 0) rectangle (0.9, 0.9);
+  \node at (0.45, 0.45) {$A$};
+  \node[above=2pt] at (0.45, 0.9) {$m$};
+
+  % Spring 1
+  \draw[thick, decorate, decoration={zigzag, segment length=5, amplitude=2.5, pre length=5, post length=5}]
+    (0.9, 0.45) -- (1.9, 0.45);
+  \node[above=5pt] at (1.4, 0.45) {$k$};
+
+  % Block B
+  \draw[thick] (1.9, 0) rectangle (2.8, 0.9);
+  \node at (2.35, 0.45) {$B$};
+  \node[above=2pt] at (2.35, 0.9) {$m$};
+
+  % Spring 2
+  \draw[thick, decorate, decoration={zigzag, segment length=5, amplitude=2.5, pre length=5, post length=5}]
+    (2.8, 0.45) -- (3.8, 0.45);
+  \node[above=5pt] at (3.3, 0.45) {$k$};
+
+  % Block C
+  \draw[thick] (3.8, 0) rectangle (4.7, 0.9);
+  \node at (4.25, 0.45) {$C$};
+  \node[above=2pt] at (4.25, 0.9) {$m$};
+\end{tikzpicture}

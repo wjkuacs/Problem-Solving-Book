@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \def\R{1.85}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,\R);
+  \coordinate (B) at (-\R,0);
+
+  % Disk
+  \draw[thick] (O) circle (\R);
+
+  % Radii OA and OB
+  \draw[thick] (O) -- (A) node[above=2pt] {$A$};
+  \draw[thick] (O) -- (B) node[left=2pt] {$B$};
+  \node[below right=1pt] at (O) {$O$};
+
+  % Counterclockwise angular velocity arrow omega
+  \draw[->, thick] (-45:0.62) arc (-45:155:0.62);
+  \node at (45:0.86) {$\omega$};
+\end{tikzpicture}

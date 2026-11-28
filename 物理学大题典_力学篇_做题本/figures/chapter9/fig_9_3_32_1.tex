@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth]
+  % Horizontal reference line
+  \draw[dashed] (-0.9,0) -- (3.8,0);
+
+  % Inclined tube, sliding rod, and dimensions
+  \begin{scope}[rotate=32]
+    \draw[thick] (-1.0,0.11) -- (3.2,0.11);
+    \draw[thick] (-1.0,-0.11) -- (3.2,-0.11);
+    \draw[thick, dashed] (3.2,0.11) -- (3.9,0.11);
+    \draw[thick, dashed] (3.2,-0.11) -- (3.9,-0.11);
+
+    % Sliding rod of length l
+    \fill[pattern=north east lines] (2.4,-0.11) rectangle (3.3,0.11);
+    \draw[thick] (2.4,-0.11) -- (2.4,0.11) (3.3,-0.11) -- (3.3,0.11);
+
+    % Dimension x
+    \draw (0,0.18) -- (0,0.85);
+    \draw (2.4,0.18) -- (2.4,0.85);
+    \draw[<->] (0,0.7) -- (2.4,0.7) node[midway, above=2pt] {$x$};
+
+    % Dimension l
+    \draw (2.4,-0.18) -- (2.4,-0.75);
+    \draw (3.3,-0.18) -- (3.3,-0.75);
+    \draw[<->] (2.4,-0.6) -- (3.3,-0.6) node[midway, below=2pt] {$l$};
+  \end{scope}
+
+  % Pivot point and angle phi
+  \fill (0,0) circle (2.5pt);
+  \draw (1.05,0) arc (0:32:1.05);
+  \node at (16:1.35) {$\varphi$};
+\end{tikzpicture}

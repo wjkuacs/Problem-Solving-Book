@@ -1,0 +1,5 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  \draw[thick] (-1.55, -2.05) rectangle (1.55, 2.05);
+  \draw[thick, domain=0:360, samples=240, smooth]
+    plot ({1.55*sin(3*\x)}, {-2.05*cos(2*\x - 20)});
+\end{tikzpicture}

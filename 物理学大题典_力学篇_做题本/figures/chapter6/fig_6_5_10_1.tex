@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Table surface
+  \draw (-1.6,-0.35) -- (-1.6,0) -- (1.6,0) -- (1.6,-0.35);
+
+  % Vertical chain links
+  \foreach \i in {0,...,12} {
+    \draw (0, 0.12 + \i*0.23) ellipse (0.075 and 0.115);
+  }
+
+  % Coiled chain links resting on the table
+  \draw (-0.22,0.065) ellipse (0.13 and 0.065);
+  \draw (-0.52,0.065) ellipse (0.14 and 0.065);
+  \draw (-0.82,0.055) ellipse (0.12 and 0.055);
+  \draw (0.23,0.065) ellipse (0.13 and 0.065);
+  \draw (0.53,0.065) ellipse (0.14 and 0.065);
+  \draw (0.81,0.055) ellipse (0.12 and 0.055);
+
+  % Upward force F
+  \draw[->] (0,3.05) -- (0,4.05) node[right] {$F$};
+
+  % Height dimension h
+  \draw[thin] (0.08,3.0) -- (1.75,3.0);
+  \draw[<->, thin] (1.45,0) -- (1.45,3.0) node[midway, fill=white, inner sep=2pt] {$h$};
+\end{tikzpicture}

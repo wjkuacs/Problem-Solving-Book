@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Axes
+  \draw[->] (0, 0) -- (3.3, 0) node[below=2pt] {$x$};
+  \draw[->] (0, 0) -- (0, 3.3) node[left=2pt] {$y$};
+  \node[below left=1pt] at (0, 0) {$O$};
+
+  % Cone projection (triangle)
+  \draw (0, 0) -- (1.35, 2.45) -- (2.7, 0);
+
+  % Dashed symmetry axis and height line
+  \draw[dashed] (1.35, 0) -- (1.35, 2.85);
+  \draw[dashed] (0, 2.45) -- (3.25, 2.45);
+
+  % Labels A, B, C
+  \node[above left=0pt and 1pt] at (1.35, 2.45) {$A$};
+  \node[below=2pt] at (1.35, 0) {$B$};
+  \fill (1.35, 0.65) circle (2pt) node[right=2pt] {$C$};
+
+  % Height ka dimension
+  \draw[thin, <->] (3.05, 0) -- (3.05, 2.45) node[midway, fill=white, inner sep=2pt] {$ka$};
+
+  % Horizontal a dimension
+  \draw[thin] (0, -0.46) -- (0, -0.94);
+  \draw[thin] (1.35, -0.46) -- (1.35, -0.94);
+  \draw[thin, <->] (0, -0.70) -- (1.35, -0.70) node[midway, fill=white, inner sep=2pt] {$a$};
+\end{tikzpicture}

@@ -1,0 +1,35 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{2.1}
+
+  % Hatched plate inside large circle, outside the two holes
+  \begin{scope}
+    \clip (0,0) circle (\R);
+    \foreach \k in {-14,-13,...,14} {
+      \draw[thin] (-2.6, \k*0.26 - 0.9) -- (2.6, \k*0.26 + 0.9);
+    }
+    \fill[white] (0,\R) circle (0.5*\R);
+    \fill[white] (0,-0.5*\R) circle (0.5*\R);
+  \end{scope}
+
+  % Circle boundaries
+  \draw (0,0) circle (\R);
+  \begin{scope}
+    \clip (0,0) circle (\R);
+    \draw (0,\R) circle (0.5*\R);
+  \end{scope}
+  \draw (0,-0.5*\R) circle (0.5*\R);
+
+  % Coordinate axes
+  \draw[->] (0,0) -- (2.6,0) node[below] {$x$};
+  \draw[->] (0,0) -- (0,2.7) node[left] {$y$};
+  \node[below right, inner sep=1pt] at (0.08,-0.08) {$O$};
+
+  % Labels A, B and radius arrows
+  \node[above right=1pt] at (0.04,\R) {$A$};
+  \draw[->] (0,\R) -- ++(-60:0.5*\R) node[pos=0.60, right=2pt, inner sep=1pt] {$\frac{1}{2}R$};
+
+  \draw[->] (0,0) -- (22:\R) node[pos=0.65, above, fill=white, inner sep=1.5pt] {$R$};
+
+  \node[left=2pt] at (-0.06,-0.5*\R) {$B$};
+  \draw[->] (0,-0.5*\R) -- ++(-18:0.5*\R) node[pos=0.58, above=2pt, inner sep=1pt] {$\frac{1}{2}R$};
+\end{tikzpicture}

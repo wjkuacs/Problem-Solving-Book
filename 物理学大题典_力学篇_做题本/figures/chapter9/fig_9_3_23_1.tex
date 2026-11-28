@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\phiAng{36}
+
+  % Coordinate axes
+  \coordinate (O) at (0,0);
+  \draw[->] (-2.3,0) -- (2.5,0) node[below] {$x$};
+  \draw[->] (0,-1.65) -- (0,1.95) node[left] {$y$};
+  \node[below right=1pt] at (O) {$O$};
+
+  % Position vectors r2 and r1
+  \coordinate (R2) at (\phiAng:2.25);
+  \coordinate (R1) at (\phiAng+180:1.75);
+  \draw[->] (O) -- node[midway, above left=1pt] {$\boldsymbol{r}_2$} (R2);
+  \node[above right=1pt] at (R2) {$m_2$};
+
+  \draw[->] (O) -- node[midway, above left=1pt] {$\boldsymbol{r}_1$} (R1);
+  \node[below left=1pt] at (R1) {$m_1$};
+
+  % Angle phi2
+  \coordinate (Xpos) at (1.5,0);
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\varphi_2$"] {angle = Xpos--O--R2};
+\end{tikzpicture}

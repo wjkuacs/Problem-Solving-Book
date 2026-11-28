@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Horizontal plane (top face and front/right thickness)
+  \draw[fill=white] (-2.2,-1.1) -- (1.6,-1.1) -- (2.8,1.1) -- (-1.0,1.1) -- cycle;
+  \draw (-2.2,-1.1) -- (-2.2,-1.24) -- (1.6,-1.24) -- (1.6,-1.1);
+  \draw (1.6,-1.24) -- (2.8,0.96) -- (2.8,1.1);
+
+  % Circular orbit in perspective
+  \coordinate (O) at (0.3,0.02);
+  \draw (O) ellipse [x radius=1.35, y radius=0.52];
+  \fill (O) circle (1.4pt);
+
+  % Point on orbit, radius string, and tangential velocity
+  \coordinate (P) at ($(O) + (35:1.35 and 0.52)$);
+  \draw (O) -- (P);
+  \draw[->] (P) -- ++(-0.78, 0.45) node[above right=-1pt] {$v_0$};
+
+  % Vertical string passing through the hole
+  \draw[dashed] (O) -- (0.3,-1.24);
+  \draw (0.3,-1.24) -- (0.3,-2.25);
+\end{tikzpicture}

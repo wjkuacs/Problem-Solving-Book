@@ -1,0 +1,85 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, xscale=0.40, yscale=0.72]
+  % Meshing gears G1, G2, G3
+  \draw (0,1.2) rectangle (0.9,2.4);
+  \node at (0.45,1.52) {$G_1$};
+  \node[right=1pt] at (0.9,2.38) {$I_1$};
+
+  \draw (0,-0.6) rectangle (0.9,1.2);
+  \node at (0.45,-0.32) {$G_2$};
+  \node[right=1pt] at (0.9,-0.38) {$I_2$};
+
+  \draw (0,-2.0) rectangle (0.9,-0.6);
+  \node at (0.45,-1.68) {$G_3$};
+  \node[right=1pt] at (0.9,-1.98) {$I_3$};
+
+  % Diameter dimension annotations: 2r1 (left), 2r2 (right), 2r3 (left)
+  \draw[thin] (-1.25,2.4) -- (-0.15,2.4);
+  \draw[thin] (-0.42,1.8) -- (-0.15,1.8);
+  \draw[thin] (-1.25,1.2) -- (-0.15,1.2);
+  \draw[->] (-0.85,2.10) -- (-0.85,2.4);
+  \draw[->] (-0.85,1.50) -- (-0.85,1.2);
+  \node at (-0.85,1.8) {$2r_1$};
+
+  \draw[thin] (1.65,1.2) -- (2.65,1.2);
+  \draw[thin] (1.65,-0.6) -- (2.65,-0.6);
+  \draw[->] (2.25,0.64) -- (2.25,1.2);
+  \draw[->] (2.25,-0.04) -- (2.25,-0.6);
+  \node at (2.25,0.3) {$2r_2$};
+
+  \draw[thin] (-1.25,-0.6) -- (-0.15,-0.6);
+  \draw[thin] (-0.42,-1.3) -- (-0.15,-1.3);
+  \draw[thin] (-1.25,-2.0) -- (-0.15,-2.0);
+  \draw[->] (-0.85,-0.96) -- (-0.85,-0.6);
+  \draw[->] (-0.85,-1.64) -- (-0.85,-2.0);
+  \node at (-0.85,-1.3) {$2r_3$};
+
+  % Top branch: G1 -- k2 -- D5 (y = 1.8)
+  \draw (0.9,1.72) rectangle (3.65,1.88);
+  \draw (3.65,1.8) -- (3.95,1.8);
+  \draw[decorate, decoration={zigzag, segment length=2.2mm, amplitude=1.4mm}] (3.95,1.8) -- node[midway, above=5pt] {$k_2$} (5.65,1.8);
+  \draw (5.65,1.8) -- (6.0,1.8);
+  \draw (6.0,1.72) rectangle (6.7,1.88);
+  \draw (6.7,1.1) rectangle (7.12,2.5);
+  \node[right=1pt] at (7.12,2.52) {$I_5$};
+  \node[right=1pt] at (7.12,1.1) {$D_5$};
+  \draw (7.12,1.72) rectangle (9.1,1.88);
+  \draw (9.1,1.8) -- (9.55,1.8);
+  % Rotation arrows theta1, theta5
+  \draw[->] (3.2,1.42) arc[start angle=-70, end angle=-290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (3.2,2.2) {$\theta_1$};
+  \draw[->] (8.65,1.42) arc[start angle=-70, end angle=-290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (8.65,2.2) {$\theta_5$};
+
+  % Middle branch: D4 -- k1 -- G2 (y = 0.3)
+  \draw (-1.75,0.22) rectangle (0,0.38);
+  \draw (-2.05,0.3) -- (-1.75,0.3);
+  \draw[decorate, decoration={zigzag, segment length=2.2mm, amplitude=1.4mm}] (-3.75,0.3) -- node[midway, above=5pt] {$k_1$} (-2.05,0.3);
+  \draw (-4.05,0.3) -- (-3.75,0.3);
+  \draw (-4.75,0.22) rectangle (-4.05,0.38);
+  \draw (-5.18,-1.8) rectangle (-4.75,2.4);
+  \node[right=1pt] at (-4.75,2.4) {$I_4$};
+  \node[right=1pt] at (-4.75,-1.8) {$D_4$};
+  \draw (-6.35,0.22) rectangle (-5.18,0.38);
+  % Rotation arrows theta2, theta4
+  \draw[->] (-1.2,0.68) arc[start angle=70, end angle=290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (-1.2,0.72) {$\theta_2$};
+  \draw[->] (-5.8,0.68) arc[start angle=70, end angle=290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (-5.8,0.72) {$\theta_4$};
+
+  % Bottom branch: G3 -- k3 -- D6 (y = -1.3)
+  \draw (0.9,-1.38) rectangle (3.65,-1.22);
+  \draw (3.65,-1.3) -- (3.95,-1.3);
+  \draw[decorate, decoration={zigzag, segment length=2.2mm, amplitude=1.4mm}] (3.95,-1.3) -- node[midway, above=5pt] {$k_3$} (5.65,-1.3);
+  \draw (5.65,-1.3) -- (6.0,-1.3);
+  \draw (6.0,-1.38) rectangle (6.7,-1.22);
+  \draw (6.7,-2.15) rectangle (7.12,-0.45);
+  \node[right=1pt] at (7.12,-0.43) {$I_6$};
+  \node[right=1pt] at (7.12,-2.15) {$D_6$};
+  \draw (7.12,-1.38) rectangle (9.1,-1.22);
+  \draw (9.1,-1.3) -- (9.55,-1.3);
+  % Rotation arrows theta3, theta6
+  \draw[->] (3.2,-1.68) arc[start angle=-70, end angle=-290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (3.2,-0.9) {$\theta_3$};
+  \draw[->] (8.65,-0.92) arc[start angle=70, end angle=290, x radius=0.25, y radius=0.38];
+  \node[above=1pt] at (8.65,-0.88) {$\theta_6$};
+\end{tikzpicture}

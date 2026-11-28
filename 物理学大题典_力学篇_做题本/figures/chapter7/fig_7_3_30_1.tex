@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\ang{37}
+  \def\L{1.85}
+
+  % Coordinate axes
+  \draw[->] (-2.45,0) -- (2.65,0) node[right=1pt] {$z$};
+  \draw[->] (0,-1.35) -- (0,1.65) node[left=1pt] {$x$};
+  \node[below right=1pt] at (0,0) {$O$};
+  \node at (-1.45,0.38) {转轴};
+
+  % Dumbbell rod and masses
+  \coordinate (M1) at ({\L*cos(\ang)}, {\L*sin(\ang)});
+  \coordinate (M2) at ({-\L*cos(\ang)}, {-\L*sin(\ang)});
+  \draw[very thick] (M2) -- (M1);
+  \fill (M1) circle (2.2pt) node[above right=1pt] {$m$};
+  \fill (M2) circle (2.2pt) node[below left=1pt] {$m$};
+
+  % Angle theta
+  \draw (0.58,0) arc (0:\ang:0.58);
+  \node at ({\ang/2}:0.82) {$\theta$};
+
+  % Dimension 2A parallel to rod
+  \coordinate (N) at ({\ang+90}:0.42);
+  \draw[thin] ($(M1) + ({\ang+90}:0.12)$) -- ($(M1) + ({\ang+90}:0.56)$);
+  \draw[thin] ($(M2) + ({\ang+90}:0.12)$) -- ($(M2) + ({\ang+90}:0.56)$);
+  \draw[<->] ($(M2)+(N)$) -- ($(M1)+(N)$)
+    node[pos=0.58, above left=-1pt] {$2A$};
+
+  % Rotation arrow omega
+  \draw[->] (2.15,0.22) arc (65:305:0.18 and 0.28);
+  \node[below=2pt] at (2.12,-0.32) {$\omega$};
+\end{tikzpicture}

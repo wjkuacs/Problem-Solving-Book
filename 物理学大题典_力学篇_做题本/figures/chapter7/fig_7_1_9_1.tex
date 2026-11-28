@@ -1,0 +1,45 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate origin and axes
+  \coordinate (O) at (0,0);
+  \coordinate (Ztop) at (0,3.6);
+  \coordinate (Yend) at (3.35,0);
+  \coordinate (Xend) at (-2.1,-1.5);
+  \coordinate (Xa) at (-1.26,-0.9);
+  \coordinate (B) at (1.75,-0.9);
+  \coordinate (A) at (0,2.55);
+  \coordinate (C) at ($(A)!0.5!(B)$);
+
+  \draw[->] (O) -- (Ztop) node[left] {$z$};
+  \draw[->] (O) -- (Yend) node[below] {$y$};
+  \draw[->] (O) -- (Xend) node[below right] {$x$};
+  \node[above left, inner sep=2pt] at (O) {$O$};
+
+  % Horizontal line through B parallel to y-axis
+  \draw (-2.15,-0.9) -- (2.95,-0.9);
+  \node at ($(Xa)+(-0.18,0.20)$) {$a$};
+
+  % Rod AB and projection OB
+  \draw[very thick] (A) -- (B);
+  \draw[dashed] (O) -- (B);
+
+  % Labels A, B, C
+  \node[left, inner sep=2pt] at ($(A)+(-0.02,0.12)$) {$A$};
+  \node[below] at (B) {$B$};
+  \node[above right, inner sep=2pt] at (C) {$C$};
+
+  % Weight mg at C
+  \draw[->] (C) -- ++(0,-0.95) node[pos=0.45, left=1pt] {$mg$};
+
+  % Angles theta and alpha
+  \pic[draw, thin, angle radius=18pt, "$\theta$", angle eccentricity=1.35] {angle=O--A--B};
+  \pic[draw, thin, angle radius=17pt, "$\alpha$", angle eccentricity=1.35] {angle=Xend--O--B};
+
+  % Reactions at A
+  \draw[->] (A) -- ++(1.05,0) node[right] {$R_1$};
+  \draw[->] (A) -- ++(-0.88,-0.63) node[below left, inner sep=1pt] {$R_2$};
+
+  % Forces at B
+  \draw[->] (B) -- ++(0,0.95) node[above] {$N_1$};
+  \draw[->] (B) -- ++(0.84,0.60) node[above right, inner sep=1pt] {$N_2$};
+  \draw[->] (B) -- ++(-0.95,0) node[below] {$f$};
+\end{tikzpicture}

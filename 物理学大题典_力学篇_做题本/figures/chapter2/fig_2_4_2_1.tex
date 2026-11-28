@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Smooth horizontal floor with hatching
+  \fill[pattern=north east lines] (0,-0.22) rectangle (5.4,0);
+  \draw (0,0) -- (5.4,0);
+
+  % Target block M with horizontal cavity open on the right
+  \draw (0.75,0) -- (1.95,0) -- (1.95,0.24) -- (1.05,0.24)
+    -- (1.05,0.78) -- (1.95,0.78) -- (1.95,1.02) -- (0.75,1.02) -- cycle;
+  \node at (1.35,1.32) {$M$};
+
+  % Coiled spring inside the cavity
+  \draw (1.05,0.51) -- (1.20,0.51);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=4.8pt, amplitude=3.5pt}]
+    (1.20,0.51) -- (1.82,0.51);
+
+  % Incoming bullet m moving left with velocity v
+  \draw[->] (3.95,0.51) -- (3.20,0.51) node[midway, above=2pt] {$v$};
+  \draw (4.82,0.41) -- (4.82,0.61)
+    .. controls (4.52,0.62) and (4.35,0.57) .. (4.22,0.51)
+    .. controls (4.35,0.45) and (4.52,0.40) .. (4.82,0.41) -- cycle;
+  \node at (4.56,0.85) {$m$};
+\end{tikzpicture}

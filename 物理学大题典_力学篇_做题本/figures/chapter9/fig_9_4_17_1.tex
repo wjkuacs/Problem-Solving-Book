@@ -1,0 +1,124 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.84, transform shape]
+  % Top-left ceiling support
+  \fill[pattern=north east lines] (0.0, 3.72) rectangle (1.55, 3.90);
+  \draw (0.0, 3.60) rectangle (1.55, 3.72);
+
+  % Suspension wire and rotation arrow theta
+  \draw (0.78, 3.60) -- (0.78, 2.95);
+  \fill (0.78, 2.95) circle (1.6pt);
+  \draw[->, thin] (0.60, 3.28) arc (175:395:0.18 and 0.08);
+  \node[right=1pt] at (0.97, 3.25) {$\theta$};
+
+  % Rectangular coil
+  \draw (0.38, 2.00) rectangle (1.18, 2.95);
+  \draw (0.47, 2.09) rectangle (1.09, 2.86);
+  \node at (0.63, 2.26) {$I$};
+  \node at (0.92, 2.26) {$L_1$};
+
+  % Magnet pole N (left)
+  \path[pattern=north east lines]
+    (0.20, 1.92) -- (-0.30, 1.92) -- (-0.38, 2.08) -- (-0.26, 2.22) --
+    (-0.38, 2.38) -- (-0.26, 2.54) -- (-0.38, 2.70) -- (-0.26, 2.86) --
+    (-0.34, 3.03) -- (0.20, 3.03) -- cycle;
+  \draw
+    (-0.30, 1.92) -- (0.20, 1.92) -- (0.20, 3.03) -- (-0.34, 3.03)
+    (-0.30, 1.92) -- (-0.38, 2.08) -- (-0.26, 2.22) -- (-0.38, 2.38) --
+    (-0.26, 2.54) -- (-0.38, 2.70) -- (-0.26, 2.86) -- (-0.34, 3.03);
+  \node[fill=white, inner sep=1.5pt] at (-0.07, 2.48) {$\mathrm{N}$};
+
+  % Magnet pole S (right)
+  \path[pattern=north east lines]
+    (1.36, 1.92) -- (1.86, 1.92) -- (1.94, 2.08) -- (1.82, 2.22) --
+    (1.94, 2.38) -- (1.82, 2.54) -- (1.94, 2.70) -- (1.82, 2.86) --
+    (1.90, 3.03) -- (1.36, 3.03) -- cycle;
+  \draw
+    (1.86, 1.92) -- (1.36, 1.92) -- (1.36, 3.03) -- (1.90, 3.03)
+    (1.86, 1.92) -- (1.94, 2.08) -- (1.82, 2.22) -- (1.94, 2.38) --
+    (1.82, 2.54) -- (1.94, 2.70) -- (1.82, 2.86) -- (1.90, 3.03);
+  \node[fill=white, inner sep=1.5pt] at (1.63, 2.48) {$\mathrm{S}$};
+
+  % Radial B pointer (clear of middle wire at x=3.15)
+  \draw[->, thin] (1.50, 3.35) to[out=195, in=80] (1.27, 2.88);
+  \node[right=0pt] at (1.50, 3.37) {$B\,(\text{沿径向})$};
+
+  % Torsion spring k1 and resistor R1
+  \draw (0.78, 2.00) -- (0.78, 1.80);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.6mm, amplitude=1.1mm}]
+    (0.78, 1.80) -- (0.78, 1.30);
+  \node[right=3pt] at (0.78, 1.55) {$k_1$};
+  \draw (0.78, 1.30) -- (0.78, 1.15);
+  \draw (0.66, 0.65) rectangle (0.90, 1.15);
+  \node[right=2pt] at (0.90, 0.90) {$R_1$};
+  \draw (0.78, 0.65) -- (0.78, 0.25);
+
+  % Bottom wire with E1, E2 and currents q1_dot, q3_dot
+  \draw (0.78, 0.25) -- (1.80, 0.25);
+  \draw (1.80, 0.07) -- (1.80, 0.43);
+  \draw[line width=1.6pt] (1.94, 0.14) -- (1.94, 0.36);
+  \node[above=2pt] at (1.87, 0.43) {$E_1$};
+  \draw (1.94, 0.25) -- (3.15, 0.25);
+  \draw[->, thin] (2.35, 0.25) -- (2.65, 0.25);
+  \node[below=2pt] at (2.50, 0.25) {$\dot{q}_1$};
+
+  \draw (3.15, 0.25) -- (4.05, 0.25);
+  \draw[->, thin] (3.80, 0.25) -- (3.50, 0.25);
+  \node[below=2pt] at (3.65, 0.25) {$\dot{q}_3$};
+  \draw (4.05, 0.07) -- (4.05, 0.43);
+  \draw[line width=1.6pt] (4.19, 0.14) -- (4.19, 0.36);
+  \node[above=2pt] at (4.12, 0.43) {$E_2$};
+  \draw (4.19, 0.25) -- (5.45, 0.25);
+
+  % Middle vertical branch (R2, L2, q2_dot)
+  \fill (3.15, 0.25) circle (1.8pt);
+  \fill (3.15, 3.66) circle (1.8pt);
+  \draw (3.15, 0.25) -- (3.15, 1.05);
+  \draw[->, thin] (3.15, 0.55) -- (3.15, 0.80);
+  \node[right=2pt] at (3.15, 0.68) {$\dot{q}_2$};
+  \draw (3.03, 1.05) rectangle (3.27, 1.55);
+  \node[right=2pt] at (3.27, 1.30) {$R_2$};
+  \draw (3.15, 1.55) -- (3.15, 2.20);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.8mm, amplitude=1.3mm}]
+    (3.15, 2.95) -- (3.15, 2.20);
+  \node[right=4pt] at (3.15, 2.58) {$L_2$};
+  \draw (3.15, 2.95) -- (3.15, 3.66);
+
+  % Top wire to right capacitor support
+  \draw (1.55, 3.66) -- (5.45, 3.66) -- (5.45, 3.45);
+
+  % Right ceiling support
+  \fill[pattern=north east lines] (4.75, 3.45) rectangle (6.15, 3.63);
+  \draw (4.75, 3.33) rectangle (6.15, 3.45);
+
+  % Spring k2 and dashed equilibrium line
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.6mm, amplitude=1.2mm}]
+    (5.45, 3.33) -- (5.45, 2.65);
+  \node[right=4pt] at (5.45, 2.99) {$k_2$};
+  \draw[dashed] (3.95, 2.65) -- (6.15, 2.65);
+
+  % Dimension l0
+  \draw[<->, thin] (4.78, 3.33) -- (4.78, 2.65);
+  \node[left=1pt] at (4.78, 2.99) {$l_0$};
+
+  % Movable plate m
+  \draw (5.45, 2.65) -- (5.45, 2.15);
+  \draw (4.55, 2.05) rectangle (6.35, 2.15);
+  \node[right=2pt] at (6.35, 2.10) {$m$};
+
+  % Dimension x
+  \draw[<->, thin] (5.92, 2.65) -- (5.92, 2.15);
+  \node[right=1pt] at (5.92, 2.40) {$x$};
+
+  % Fixed lower plate
+  \draw (3.95, 1.35) -- (6.40, 1.35);
+  \fill[pattern=north east lines] (4.45, 1.18) rectangle (6.40, 1.35);
+
+  % Dimension d
+  \draw[<->, thin] (4.10, 2.65) -- (4.10, 1.35);
+  \node[left=1pt] at (4.10, 2.00) {$d$};
+
+  % Capacitance label
+  \node at (5.32, 1.72) {$C=\dfrac{A_2}{d-x}$};
+
+  % Wire from lower plate to bottom wire
+  \draw (5.45, 1.35) -- (5.45, 0.25);
+\end{tikzpicture}

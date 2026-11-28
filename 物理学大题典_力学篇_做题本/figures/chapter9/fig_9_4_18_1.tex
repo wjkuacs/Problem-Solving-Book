@@ -1,0 +1,121 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.78, transform shape]
+  % Disk centered at (3.1, 4.7)
+  \coordinate (C) at (3.1, 4.7);
+  \draw (C) circle (1.10);
+  \draw (C) circle (0.14);
+
+  % Pointer arrows for elastic rod and k1
+  \draw[->, thin] (4.35, 5.45) -- (3.22, 4.80);
+  \node[right=1pt] at (4.35, 5.48) {弹性棒};
+  \draw[->, thin] (3.62, 4.46) -- (3.23, 4.65);
+  \node[right=0pt] at (3.60, 4.42) {$k_1$};
+
+  % Radius r and moment of inertia I
+  \draw[->, thin] (C) -- ($(C)+(225:1.10)$);
+  \node[above left=-2pt] at ($(C)+(225:0.65)$) {$r$};
+  \node at (3.45, 4.02) {$I$};
+
+  % Rotation arrow theta
+  \draw[->, thin] ($(C)+(168:1.28)$) arc (168:124:1.28);
+  \node at ($(C)+(148:1.52)$) {$\theta$};
+
+  % Gravity g
+  \draw[->, thin] (1.10, 5.05) -- (1.10, 4.15);
+  \node[right=2pt] at (1.10, 4.60) {$g$};
+
+  % Left string to m2
+  \draw (2.00, 4.70) -- (2.00, 3.00);
+
+  % Right string + spring k2 to m1
+  \draw (4.20, 4.70) -- (4.20, 3.65);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=1.6mm, amplitude=1.1mm}]
+    (4.20, 3.65) -- (4.20, 2.92);
+  \node[left=4pt] at (4.20, 3.28) {$k_2$};
+  \draw (4.20, 2.92) -- (4.20, 2.68);
+  \fill (4.20, 2.68) circle (1.6pt);
+
+  % Dashed reference line at rim of fixed cylinders
+  \draw[dashed] (1.25, 2.32) -- (5.15, 2.32);
+
+  % Cylinder m2 (left)
+  \draw (1.92, 1.82) rectangle (2.62, 3.00);
+  \node at (2.38, 2.55) {$m_2$};
+  \draw[<->, thin] (2.08, 1.82) -- (2.08, 3.00);
+  \node[right=0pt] at (2.08, 2.12) {$l_2$};
+
+  % Dimension y2
+  \draw[thin] (2.62, 3.00) -- (3.02, 3.00);
+  \draw[<->, thin] (2.90, 2.32) -- (2.90, 3.00);
+  \node[right=1pt] at (2.90, 2.66) {$y_2$};
+
+  % Fixed conducting cylinder (left)
+  \draw (1.68, 2.32) -- (1.80, 2.32) -- (1.80, 1.38) -- (2.74, 1.38) -- (2.74, 2.32) -- (2.86, 2.32);
+  \draw (1.80, 1.38) -- (1.80, 0.88);
+  \fill (1.80, 0.88) circle (1.6pt);
+
+  % Cylinder m1 (right)
+  \draw (4.05, 1.55) rectangle (4.70, 2.68);
+  \node at (4.48, 2.30) {$m_1$};
+  \draw[<->, thin] (4.20, 1.55) -- (4.20, 2.68);
+  \node[right=0pt] at (4.20, 1.86) {$l_1$};
+
+  % Dimension y1
+  \draw[thin] (3.62, 2.68) -- (4.05, 2.68);
+  \draw[<->, thin] (3.74, 2.32) -- (3.74, 2.68);
+  \node[left=1pt] at (3.74, 2.50) {$y_1$};
+
+  % Fixed conducting cylinder (right)
+  \draw (3.81, 2.32) -- (3.93, 2.32) -- (3.93, 1.38) -- (4.82, 1.38) -- (4.82, 2.32) -- (4.94, 2.32);
+  \draw (4.82, 1.38) -- (4.82, 0.88);
+  \fill (4.82, 0.88) circle (1.6pt);
+
+  % Label for fixed conducting cylinders (clear of wires below)
+  \node[align=center] at (3.34, 1.56) {固定的\\导电圆筒};
+  \draw[->, thin] (2.82, 1.30) to[out=195, in=-90] (2.35, 1.38);
+  \draw[->, thin] (3.86, 1.30) to[out=-15, in=-90] (4.30, 1.38);
+
+  % Left flexible wire + DC source E2 + R2
+  \draw[decorate, decoration={snake, amplitude=1.4mm, segment length=4.5mm}]
+    (1.92, 2.95) -- (0.35, 2.95);
+  \draw (0.35, 2.95) -- (0.35, 1.72);
+  \draw (0.17, 1.72) -- (0.53, 1.72);
+  \draw[line width=1.6pt] (0.24, 1.58) -- (0.46, 1.58);
+  \node[right=3pt] at (0.53, 1.65) {$E_2$};
+  \draw (0.35, 1.58) -- (0.35, 1.05);
+  \draw (0.23, 0.55) rectangle (0.47, 1.05);
+  \node[right=2pt] at (0.47, 0.80) {$R_2$};
+  \draw (0.35, 0.55) -- (0.35, 0.10) -- (2.98, 0.10);
+  \draw[->, thin] (1.40, 0.10) -- (1.70, 0.10);
+  \node[above=2pt] at (1.55, 0.10) {$\dot{q}_2$};
+
+  % Right flexible wire + AC source E1 + R1
+  \draw[decorate, decoration={snake, amplitude=1.4mm, segment length=4.5mm}]
+    (4.70, 2.63) -- (6.25, 2.63);
+  \draw[->, thin] (5.35, 3.18) -- (5.20, 2.78);
+  \node[above=1pt] at (5.45, 3.16) {软导线};
+  \draw (6.25, 2.63) -- (6.25, 2.02);
+  \draw (6.25, 1.97) circle (1.8pt);
+  \draw (6.25, 1.48) circle (1.8pt);
+  \node[fill=white, inner sep=1pt] at (6.15, 1.72) {$E_1=E_0\sin\omega t$};
+  \draw (6.25, 1.43) -- (6.25, 1.05);
+  \draw (6.13, 0.55) rectangle (6.37, 1.05);
+  \node[right=2pt] at (6.37, 0.80) {$R_1$};
+  \draw (6.25, 0.55) -- (6.25, 0.10) -- (3.62, 0.10);
+  \draw[->, thin] (5.15, 0.10) -- (4.85, 0.10);
+  \node[above=2pt] at (5.00, 0.10) {$\dot{q}_1$};
+
+  % Mutual inductors L2 and L1
+  \draw (2.98, 0.10) -- (2.98, 0.25);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.0mm, amplitude=1.3mm}]
+    (2.98, 0.25) -- (2.98, 0.88);
+  \node[left=4pt] at (2.98, 0.55) {$L_2$};
+  \draw (2.98, 0.88) -- (1.80, 0.88);
+
+  \draw (3.62, 0.10) -- (3.62, 0.25);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.0mm, amplitude=1.3mm}]
+    (3.62, 0.88) -- (3.62, 0.25);
+  \node[right=4pt] at (3.62, 0.55) {$L_1$};
+  \draw (3.62, 0.88) -- (4.82, 0.88);
+
+  \node at (3.30, 0.72) {$M$};
+\end{tikzpicture}

@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Two rotating cylinders
+  \draw[thick] (-1.45, 0) circle (0.95);
+  \draw[thick] (1.45, 0) circle (0.95);
+
+  % Rotation arrows (left clockwise, right counterclockwise)
+  \draw[->, thick] (-1.45, 0) ++(155:0.72) arc (155:100:0.72);
+  \draw[->, thick] (1.45, 0) ++(25:0.72) arc (25:80:0.72);
+
+  % Horizontal plank resting on top
+  \draw[thick, fill=white] (-2.75, 0.95) rectangle (2.75, 1.13);
+
+  % Distance 2L between cylinder axes
+  \draw[thin] (-1.45, -1.08) -- (-1.45, -1.52);
+  \draw[thin] (1.45, -1.08) -- (1.45, -1.52);
+  \draw[<->, thin] (-1.45, -1.32) -- (1.45, -1.32) node[midway, above=2pt] {$2L$};
+\end{tikzpicture}

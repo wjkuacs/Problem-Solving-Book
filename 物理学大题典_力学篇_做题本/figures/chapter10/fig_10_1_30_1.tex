@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Light rod of length 2l
+  \draw[fill=white] (0, 1.93) rectangle (4.2, 2.07);
+
+  % Spheres of mass m at center (2) and right end (1)
+  \draw[fill=white] (2.1, 2.0) circle (0.28);
+  \draw[fill=white] (4.2, 2.0) circle (0.28);
+
+  % Labels 3, 2, 1 and masses m
+  \node[below left=1pt and 1pt] at (0, 1.93) {$3$};
+  \node at (1.72, 1.66) {$2$};
+  \node at (2.46, 1.66) {$m$};
+  \node at (3.82, 1.66) {$1$};
+  \node at (4.58, 1.66) {$m$};
+
+  % Left supporting spring k and ground
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6pt, amplitude=4.5pt, pre length=0.33cm, post length=0.3cm}]
+    (0, 1.93) -- (0, 0);
+  \node[right=6pt] at (0, 0.95) {$k$};
+  \fill[pattern=north east lines] (-0.4, -0.22) rectangle (0.4, 0);
+  \draw (-0.4, 0) -- (0.4, 0);
+
+  % Right supporting spring k and ground
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=6pt, amplitude=4.5pt, pre length=0.25cm, post length=0.25cm}]
+    (4.2, 1.72) -- (4.2, 0);
+  \node[right=6pt] at (4.2, 0.86) {$k$};
+  \fill[pattern=north east lines] (3.8, -0.22) rectangle (4.6, 0);
+  \draw (3.8, 0) -- (4.6, 0);
+
+  % Dimension arrows l and l
+  \draw[thin] (0, 2.22) -- (0, 2.85);
+  \draw[thin] (2.1, 2.38) -- (2.1, 2.85);
+  \draw[thin] (4.2, 2.38) -- (4.2, 2.85);
+  \draw[<->, thin] (0, 2.68) -- (2.1, 2.68) node[midway, above=2pt] {$l$};
+  \draw[<->, thin] (2.1, 2.68) -- (4.2, 2.68) node[midway, above=2pt] {$l$};
+\end{tikzpicture}

@@ -1,0 +1,39 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, scale=0.95]
+  % Horizontal floor
+  \draw[->] (-0.4,0) -- (5.4,0) node[below] {$x$};
+
+  % Inclined wedge M
+  \coordinate (BL) at (0.2,0.06);
+  \coordinate (BR) at (4.95,0.06);
+  \coordinate (TL) at (0.2,2.15);
+  \draw (BL) -- (BR) -- (TL) -- cycle;
+  \node at (1.55,0.68) {$M$};
+
+  % Angle alpha
+  \pic[draw, angle radius=0.85cm, angle eccentricity=1.28, "$\alpha$"] {angle = TL--BR--BL};
+
+  % Coordinate s along incline
+  \pgfmathsetmacro{\dx}{4.95-0.2}
+  \pgfmathsetmacro{\dy}{0.06-2.15}
+  \pgfmathsetmacro{\slen}{veclen(\dx,\dy)}
+  \pgfmathsetmacro{\ux}{\dx/\slen}
+  \pgfmathsetmacro{\uy}{\dy/\slen}
+  % Upward normal unit vector to slope: (-\uy, \ux)
+  \pgfmathsetmacro{\nx}{-\uy}
+  \pgfmathsetmacro{\ny}{\ux}
+
+  \coordinate (S1) at ($(TL)+0.1*(\dx,\dy)-0.13*(\nx,\ny)$);
+  \coordinate (S2) at ($(TL)+0.64*(\dx,\dy)-0.13*(\nx,\ny)$);
+  \draw[->] (S1) -- (S2) node[below left=1pt] {$s$};
+
+  % Rolling hoop m
+  \def\r{0.72}
+  \coordinate (T) at ($(TL)+0.33*(\dx,\dy)$);
+  \coordinate (C) at ($(T)+\r*(\nx,\ny)$);
+  \draw (C) circle (\r);
+  \node at ($(C)+(162:\r+0.25)$) {$m$};
+
+  % Clockwise rotation arrow phi
+  \draw[->] ($(C)+(38:\r+0.26)$) arc[start angle=38, end angle=-18, radius=\r+0.26];
+  \node[right=1pt] at ($(C)+(10:\r+0.3)$) {$\varphi$};
+\end{tikzpicture}

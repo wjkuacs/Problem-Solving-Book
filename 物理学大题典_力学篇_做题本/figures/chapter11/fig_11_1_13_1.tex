@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth]
+  % Coordinate axes at cone apex
+  \coordinate (O) at (0, 0);
+  \draw[->, thick] (O) -- (0, 1.65) node[left] {$z$};
+  \draw[->, thick] (O) -- (1.35, 0) node[right] {$y$};
+  \draw[->, thick] (O) -- (-1.25, -0.72) node[below left] {$x$};
+
+  % Cone geometry (tangent angles to base ellipse: sin(t) = 0.40/2.50 => t = 9.2 deg)
+  \draw[thick] (0, -2.5) ++(170.8:1.55 and 0.40) coordinate (L)
+    arc (170.8:369.2:1.55 and 0.40) coordinate (R);
+  \draw[thick, dashed] (R) arc (9.2:170.8:1.55 and 0.40);
+  \draw[thick] (O) -- (L);
+  \draw[thick] (O) -- (R);
+
+  % Vertical dashed cone axis and half-angle alpha
+  \draw[dashed, thick] (O) -- (0, -1.65);
+  \draw (0, -0.75) arc (-90:-59.5:0.75);
+  \node at (0.28, -0.98) {$\alpha$};
+
+  % Hanging mass inside cone
+  \draw[thick] (O) -- (-0.60, -1.75) coordinate (M1);
+  \draw[thick, fill=white] (M1) circle (2.2pt);
+  \node[below=2pt] at (M1) {$m$};
+
+  % Mass on cone surface
+  \draw[thick] (O) -- (0.60, -1.32) coordinate (M2);
+  \draw[thick, fill=white] (M2) circle (2.2pt);
+  \node[below=2pt] at (M2) {$m$};
+\end{tikzpicture}

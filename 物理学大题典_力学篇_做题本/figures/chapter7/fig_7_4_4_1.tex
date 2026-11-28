@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.35}
+  % Horizontal axis
+  \draw[->] (-2.2,0) -- (2.2,0) node[below] {$x$};
+  % Friction arrow along surface
+  \draw[->, very thick] (0,0) -- (0.95,0) node[below=2pt] {$f$};
+  % Coin
+  \draw (0,\R) circle (\R);
+  % Center C and bottom point P
+  \fill (0,\R) circle (1.4pt) node[above right=1pt] {$C$};
+  \node at (0,0.32) {$P$};
+  % Clockwise rotation arrow
+  \draw[->] (48:\R+0.32) ++(0,\R) arc[start angle=48, end angle=12, radius=\R+0.32];
+  \node at ($(0,\R)+(52:\R+0.52)$) {$\theta$};
+\end{tikzpicture}

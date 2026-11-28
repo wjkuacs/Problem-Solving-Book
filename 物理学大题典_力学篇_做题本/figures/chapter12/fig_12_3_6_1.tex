@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Axes in S' (y' horizontal right, x' vertical down)
+    \draw[->] (-1.35, 0) -- (4.15, 0) node[below=2pt] {$y'$};
+    \draw[->] (0, 1.25) -- (0, -1.45) node[right=2pt] {$x'$};
+    \node[below left=2pt] at (0, 0) {$O'$};
+
+    % Cycloid-like trajectory with cusp at c (phi = pi)
+    \draw[domain=-1.95:3.14159, samples=90, smooth]
+        plot ({0.48*(\x + sin(\x r))}, {-0.78*cos(\x r)});
+    \draw[domain=3.14159:6.85, samples=90, smooth]
+        plot ({0.48*(\x + sin(\x r))}, {-0.78*cos(\x r)});
+
+    % Marked points a, b, c, d, e
+    \coordinate (pa) at (0, -0.78);
+    \coordinate (pb) at (1.234, 0);
+    \coordinate (pc) at (1.508, 0.78);
+    \coordinate (pd) at (1.782, 0);
+    \coordinate (pe) at (3.016, -0.78);
+
+    \foreach \p in {pa, pb, pc, pd, pe} {
+        \fill (\p) circle (2pt);
+    }
+
+    \node[below right=1pt] at (pa) {$a$};
+    \node[above left=1pt] at (pb) {$b$};
+    \node[above=3pt] at (pc) {$c$};
+    \node[above right=1pt] at (pd) {$d$};
+    \node[below right=1pt] at (pe) {$e$};
+\end{tikzpicture}

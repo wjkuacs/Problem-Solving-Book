@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (O) at (0,0);
+
+  % Ceiling
+  \fill[pattern=north east lines] (-1.0,0) rectangle (1.0,0.18);
+  \draw (-1.0,0) -- (1.0,0);
+
+  % Axes
+  \draw[->] (O) -- (1.45,0) node[below] {$y$};
+  \draw[->] (O) -- (0,-3.50) node[left] {$x$};
+
+  % String of length l
+  \coordinate (P) at (-65:1.85);
+  \draw (O) -- (P) node[midway, right=1pt] {$l$};
+  \draw (0,-0.60) arc (-90:-65:0.60);
+  \node at (-77.5:0.86) {$\varphi$};
+
+  % Vertical reference at P and rod of length 3/2 l
+  \draw[dashed] (P) -- ++(0,-1.65);
+  \begin{scope}[shift={(P)}, rotate=-52]
+    \draw[fill=white] (0,-0.045) rectangle (2.55,0.045);
+  \end{scope}
+  \node at ($(P)+(-52:1.25)+(0.42,0.22)$) {$\dfrac{3}{2}l$};
+  \draw (P) ++(-90:0.55) arc (-90:-52:0.55);
+  \node at ($(P)+(-71:0.80)$) {$\theta$};
+\end{tikzpicture}

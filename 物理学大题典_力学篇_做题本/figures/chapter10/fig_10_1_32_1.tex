@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Horizontal smooth rod (x-axis)
+  \draw[->] (-0.5, 0) -- (4.0, 0) node[below=2pt] {$x$};
+  \draw[thin] (0, -0.06) -- (0, 0.06);
+  \node[below=2pt] at (0, 0) {$O$};
+
+  % Ring of mass 2m on the rod
+  \coordinate (P0) at (1.35, 0);
+  \draw (P0) circle (3.5pt);
+  \node[above=4pt] at (P0) {$2m$};
+
+  % Upper pendulum
+  \coordinate (V1) at (1.35, -2.0);
+  \coordinate (P1) at ($(P0) + (-65:1.85)$);
+  \draw[dashed, thin] (P0) -- (V1);
+  \draw (P0) -- (P1) node[midway, above right=1pt] {$l$};
+  \draw[thin] (P0) ++(-90:0.6) arc (-90:-65:0.6);
+  \node[font=\small] at ($(P0) + (-77.5:0.88)$) {$\theta$};
+  \fill (P1) circle (2.3pt) node[right=3pt] {$m$};
+
+  % Lower pendulum
+  \coordinate (V2) at ($(P1) + (0, -1.85)$);
+  \coordinate (P2) at ($(P1) + (-48:1.85)$);
+  \draw[dashed, thin] (P1) -- (V2);
+  \draw (P1) -- (P2) node[midway, above right=1pt] {$l$};
+  \draw[thin] (P1) ++(-90:0.6) arc (-90:-48:0.6);
+  \node[font=\small] at ($(P1) + (-69:0.88)$) {$\varphi$};
+  \fill (P2) circle (2.3pt) node[right=3pt] {$m$};
+\end{tikzpicture}

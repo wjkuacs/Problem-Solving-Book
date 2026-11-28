@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Cube vertices (oblique projection)
+  \coordinate (E) at (0,0);
+  \coordinate (F) at (-1.15,-0.95);
+  \coordinate (H) at (2.4,0);
+  \coordinate (G) at (1.25,-0.95);
+  \coordinate (A) at (0,2.4);
+  \coordinate (B) at (-1.15,1.45);
+  \coordinate (D) at (2.4,2.4);
+  \coordinate (C) at (1.25,1.45);
+
+  % Coordinate axes
+  \draw[->] (E) -- (-1.9,-1.57) node[below right] {$x$};
+  \draw[->] (E) -- (3.3,0) node[below] {$y$};
+  \draw[->] (E) -- (0,3.2) node[left] {$z$};
+
+  % Dashed cube helper edges and diagonal ED
+  \draw[dashed] (A) -- (B) (A) -- (D);
+  \draw[dashed] (B) -- (F) (D) -- (H);
+  \draw[dashed] (F) -- (G) -- (H);
+  \draw[dashed] (E) -- (D);
+
+  % Solid truss rods: BC, BD, CD, CE, CG, DG
+  \draw[very thick] (B) -- (C) -- (D) -- (B);
+  \draw[very thick] (C) -- (E) (C) -- (G) (D) -- (G);
+
+  % External forces P at C and Q at D
+  \draw[->] ($(C)+(0,1.28)$) -- ($(C)+(0,0.08)$) node[pos=0.06, right=1pt] {$P$};
+  \draw[->] (D) -- ++(0.75,0.75) node[right] {$Q$};
+
+  % Hinges (open circles) at B, C, D, E, G
+  \foreach \p in {B,C,D,E,G} {
+    \fill[white] (\p) circle (2.4pt);
+    \draw (\p) circle (2.4pt);
+  }
+
+  % Vertex labels
+  \node[left] at (A) {$A$};
+  \node[left=3pt] at (B) {$B$};
+  \node at ($(C)+(0.26,-0.16)$) {$C$};
+  \node[below right=2pt] at (D) {$D$};
+  \node[left=3pt] at (E) {$E$};
+  \node[above left=1pt] at (F) {$F$};
+  \node[below right=2pt] at (G) {$G$};
+  \node[below right=1pt] at (H) {$H$};
+\end{tikzpicture}

@@ -1,0 +1,15 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Outer dashed circle representing apocenter envelope
+  \draw[dashed] (0, 0) circle (2.1);
+
+  % Precessing rosette orbit: r(t) = p / (1 - e*cos(t)), theta(t) = 65 - (13/12)*t
+  % Apocenters at t = 0, 360, 720, 1080 -> theta = 65, 35, 5, -25 deg
+  \draw[smooth, domain=-180:1360, samples=400]
+    plot ({(0.336 / (1 - 0.84*cos(\x))) * cos(65 - 1.0833*\x)},
+          {(0.336 / (1 - 0.84*cos(\x))) * sin(65 - 1.0833*\x)});
+
+  % Angular separation phi between two consecutive apocenters (35 deg and 5 deg)
+  \draw[thin] (35:2.1) -- (35:2.55);
+  \draw[thin] (5:2.1) -- (5:2.55);
+  \draw[<->, thin] (35:2.42) arc (35:5:2.42) node[midway, right=2pt] {$\varphi$};
+\end{tikzpicture}

@@ -1,0 +1,84 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (P) at (0,1.02);
+  \coordinate (Lp) at (0,-1.45);
+  \coordinate (ArmL) at (0.94,-0.85);
+  \coordinate (ArmR) at (2.92,-1.38);
+  \coordinate (OXYZ) at (2.92,-2.52);
+
+  % 1. Right vertical shaft, flange collar, and XYZ axes
+  \filldraw[fill=white, draw=black, thick] (2.82,-2.52) rectangle (3.02,-1.38);
+  \filldraw[fill=white, draw=black, thick] (2.92,-2.05) ellipse (0.44 and 0.14);
+  \filldraw[fill=white, draw=black, thick] (2.92,-2.00) ellipse (0.44 and 0.14);
+  \fill[white] (2.82,-2.00) rectangle (3.02,-1.45);
+  \draw[thick] (2.82,-2.00) -- (2.82,-1.45);
+  \draw[thick] (3.02,-2.00) -- (3.02,-1.45);
+  \draw[->, thick] (2.50,-2.16) -- (2.50,-1.84);
+  \draw[->, thick] (3.34,-2.16) -- (3.34,-1.84);
+  \draw[->, thick] (2.70,-1.72) arc (160:380:0.22 and 0.08);
+  \node[right=2pt] at (3.14,-1.74) {$\omega_1$};
+
+  \draw[->, thick] (OXYZ) -- ($(OXYZ)+(-0.98,-0.63)$) node[below left=1pt] {$Y$};
+  \draw[->, thick] (OXYZ) -- ($(OXYZ)+(1.15,-0.31)$) node[right=1pt] {$Z$};
+
+  % 2. Horizontal arm (rounded 3D slab from ArmL to ArmR)
+  \filldraw[fill=white, draw=black, thick]
+    ($(ArmL)+(-0.12,0.34)$) -- ($(ArmR)+(-0.08,0.34)$)
+    .. controls ($(ArmR)+(0.32,0.34)$) and ($(ArmR)+(0.44,-0.02)$) .. ($(ArmR)+(0.26,-0.22)$)
+    -- ($(ArmL)+(0,-0.28)$) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    ($(ArmL)+(0,0.28)$) -- ($(ArmR)+(0,0.28)$)
+    arc (90:-90:0.28) -- ($(ArmL)+(0,-0.28)$) arc (270:90:0.28) -- cycle;
+
+  % X-axis rising from right pivot on ArmR
+  \fill[white] (ArmR) circle (0.075);
+  \draw[thick] (ArmR) circle (0.075);
+  \draw[->, thick] ($(ArmR)+(0,0.075)$) -- (2.92,1.25) node[left=1pt] {$X$};
+
+  % 3. Disk centered at O=(0,0) behind frame A
+  \filldraw[fill=white, draw=black, thick]
+    (-0.20,1.02) -- (0,1.02) arc (90:270:0.78 and 1.02) -- (-0.20,-1.02)
+    arc (270:90:0.78 and 1.02) -- cycle;
+  \filldraw[fill=white, draw=black, thick] (O) ellipse (0.78 and 1.02);
+  \draw[->, thick] (-0.42,1.16) arc (122:162:1.25);
+  \node[above left=1pt] at (-0.64,1.06) {$\Omega$};
+
+  % 4. Shaft segment from ArmL forward-left toward Lp
+  \draw[thick] ($(ArmL)+(-0.20,-0.04)$) -- (0.28,-1.21);
+  \draw[thick] ($(ArmL)+(-0.10,-0.16)$) -- (0.28,-1.35);
+
+  % 5. Frame A (vertical rounded-end bracket between Lp and O)
+  \filldraw[fill=white, draw=black, thick]
+    (0.36,0) arc (0:180:0.26 and 0.22) -- (-0.16,-1.45)
+    arc (180:360:0.26 and 0.22) -- cycle;
+  \filldraw[fill=white, draw=black, thick]
+    (0.26,0) arc (0:180:0.26 and 0.22) -- (-0.26,-1.45)
+    arc (180:360:0.26 and 0.22) -- cycle;
+  \node at (0,-0.28) {$O$};
+  \node at (0,-0.84) {$A$};
+
+  % Dashed continuation of y' shaft inside frame A
+  \draw[thick, dashed] (0.26,-1.28) -- (Lp);
+
+  % Lower pivot pin at Lp and upper pivot pin at O
+  \fill[white] (Lp) circle (0.075);
+  \draw[thick] (Lp) circle (0.075);
+  \fill (Lp) circle (0.025);
+  \fill[white] (O) circle (0.075);
+  \draw[thick] (O) circle (0.075);
+
+  % y' axis from Lp forward-left, with omega_2 arrow
+  \draw[->, thick] (Lp) -- (-1.28,-2.27) node[below=1pt] {$y'$};
+  \draw[->, thick] (-0.98,-1.90) arc (125:345:0.16 and 0.22);
+  \node[right=2pt] at (-0.72,-2.10) {$\omega_2$};
+
+  % 6. Axes x, y, z at O
+  \draw[->, thick] (0,0.075) -- (0,1.75) node[left=1pt] {$x$};
+  \node[above left=2pt] at (-0.04,1.02) {$P$};
+  \draw[->, thick] (O) -- (-1.28,-0.82) node[left=1pt] {$y$};
+  \draw[->, thick] (0.075,-0.02) -- (1.05,-0.28) node[right=1pt] {$z$};
+
+  % 7. Dimension arrows b and c
+  \draw[<->, thick] (-1.05,-0.67) -- (-1.05,-2.12) node[midway, left=1pt] {$b$};
+  \draw[<->, thick] (P) -- (2.92,0.24) node[midway, above=1pt] {$c$};
+\end{tikzpicture}

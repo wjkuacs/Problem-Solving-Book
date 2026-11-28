@@ -1,0 +1,66 @@
+\begin{tikzpicture}[>=Stealth, thick, font=\small, scale=0.80, transform shape]
+  % Left vertical branch with DC source E and current q1_dot
+  \draw (0.4, 0.3) -- (0.4, 1.23);
+  \draw (0.20, 1.37) -- (0.60, 1.37);
+  \draw[line width=1.6pt] (0.28, 1.23) -- (0.52, 1.23);
+  \node[left=3pt] at (0.20, 1.30) {$E$};
+  \draw (0.4, 1.37) -- (0.4, 2.3);
+  \draw[->, thin] (0.4, 1.65) -- (0.4, 1.95);
+  \node[right=2pt] at (0.4, 1.80) {$\dot{q}_1$};
+
+  % Top wire with L1, L2, q2_dot, L3
+  \draw (0.4, 2.3) -- (1.05, 2.3);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (1.05, 2.3) -- (1.95, 2.3);
+  \node[below=4pt] at (1.50, 2.3) {$L_1$};
+  \draw (1.95, 2.3) -- (3.15, 2.3);
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (3.15, 2.3) -- (4.05, 2.3);
+  \node[below=4pt] at (3.60, 2.3) {$L_2$};
+  \draw (4.05, 2.3) -- (5.35, 2.3);
+  \draw[->, thin] (4.25, 2.3) -- (4.55, 2.3);
+  \node[below=2pt] at (4.40, 2.3) {$\dot{q}_2$};
+  \draw[decorate, decoration={coil, aspect=0.45, segment length=2.2mm, amplitude=1.4mm}]
+    (5.35, 2.3) -- (6.25, 2.3);
+  \node[below=4pt] at (5.80, 2.3) {$L_3$};
+  \draw (6.25, 2.3) -- (6.9, 2.3);
+
+  % Right vertical branch with q3_dot
+  \draw (6.9, 2.3) -- (6.9, 0.3);
+  \draw[->, thin] (6.9, 1.45) -- (6.9, 1.15);
+  \node[left=2pt] at (6.9, 1.30) {$\dot{q}_3$};
+
+  % Bottom wire with R1, R2, R3
+  \draw (0.4, 0.3) -- (1.15, 0.3);
+  \draw (1.15, 0.18) rectangle (1.85, 0.42);
+  \node[above=2pt] at (1.50, 0.42) {$R_1$};
+  \draw (1.85, 0.3) -- (3.35, 0.3);
+  \draw (3.35, 0.18) rectangle (4.05, 0.42);
+  \node[above=2pt] at (3.70, 0.42) {$R_2$};
+  \draw (4.05, 0.3) -- (5.45, 0.3);
+  \draw (5.45, 0.18) rectangle (6.15, 0.42);
+  \node[above=2pt] at (5.80, 0.42) {$R_3$};
+  \draw (6.15, 0.3) -- (6.9, 0.3);
+
+  % Middle vertical branch 1 (q4_dot and C1)
+  \fill (2.6, 2.3) circle (1.8pt);
+  \fill (2.6, 0.3) circle (1.8pt);
+  \draw (2.6, 2.3) -- (2.6, 1.24);
+  \draw[->, thin] (2.6, 1.95) -- (2.6, 1.65);
+  \node[right=2pt] at (2.6, 1.80) {$\dot{q}_4$};
+  \draw (2.38, 1.24) -- (2.82, 1.24);
+  \draw (2.38, 1.08) -- (2.82, 1.08);
+  \node[right=3pt] at (2.82, 1.16) {$C_1$};
+  \draw (2.6, 1.08) -- (2.6, 0.3);
+
+  % Middle vertical branch 2 (C2 and q5_dot)
+  \fill (4.8, 2.3) circle (1.8pt);
+  \fill (4.8, 0.3) circle (1.8pt);
+  \draw (4.8, 2.3) -- (4.8, 1.48);
+  \draw (4.58, 1.48) -- (5.02, 1.48);
+  \draw (4.58, 1.32) -- (5.02, 1.32);
+  \node[right=3pt] at (5.02, 1.40) {$C_2$};
+  \draw (4.8, 1.32) -- (4.8, 0.3);
+  \draw[->, thin] (4.8, 0.95) -- (4.8, 0.65);
+  \node[right=2pt] at (4.8, 0.80) {$\dot{q}_5$};
+\end{tikzpicture}

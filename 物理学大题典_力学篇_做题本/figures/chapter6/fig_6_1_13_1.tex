@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.8,0);
+  \coordinate (C) at (4.1,0);
+  \coordinate (Iend) at ($(B)+(36:1.45)$);
+
+  \draw (A) -- (B);
+  \draw[dashed] (B) -- (C);
+  \draw[->] (B) -- (Iend) node[above] {$I$};
+
+  \fill (A) circle (2.2pt);
+  \fill (B) circle (2.2pt);
+  \node[below=3pt] at (A) {$A$};
+  \node[below=3pt] at (B) {$B$};
+
+  \pic[draw, thin, angle radius=0.55cm, angle eccentricity=1.35, "$\alpha$"] {angle=C--B--Iend};
+\end{tikzpicture}

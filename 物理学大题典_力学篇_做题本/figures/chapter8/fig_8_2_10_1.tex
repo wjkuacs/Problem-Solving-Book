@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Fluid region fill inside U-tube
+  \fill[gray!12] (0, 0) -- (3.4, 0) -- (3.4, 1.85) -- (3.12, 1.85)
+    -- (3.12, 0.28) -- (0.28, 0.28) -- (0.28, 2.75) -- (0, 2.75) -- cycle;
+
+  % Fluid dashes/dots
+  \foreach \x/\y in {0.14/2.45, 0.14/2.00, 0.14/1.50, 0.14/1.05, 0.14/0.60,
+                     3.26/0.55, 3.26/1.05, 3.26/1.50} {
+    \draw[thin] (\x, \y) -- ++(0, -0.14);
+  }
+  \foreach \x in {0.55, 1.15, 1.75, 2.35, 2.85} {
+    \draw[thin] (\x, 0.14) -- ++(0.16, 0);
+  }
+
+  % U-tube walls and coordinate axes
+  \draw[->] (0, 0) -- (0, 3.85) node[left=2pt] {$y$};
+  \draw[->] (0, 0) -- (4.15, 0) node[above=2pt] {$x$};
+  \draw (0.28, 3.45) -- (0.28, 0.28) -- (3.12, 0.28) -- (3.12, 3.45);
+  \draw (3.4, 0) -- (3.4, 3.45);
+
+  % Liquid free surfaces and reference dashed line
+  \draw (0, 2.75) -- (0.28, 2.75);
+  \draw (3.12, 1.85) -- (3.4, 1.85);
+  \draw[dashed] (0.28, 1.85) -- (3.12, 1.85);
+
+  % Height difference h
+  \draw[thin] (0.42, 2.75) -- (1.05, 2.75);
+  \draw[<->] (0.76, 1.85) -- (0.76, 2.75)
+    node[midway, fill=white, inner sep=1.5pt] {$h$};
+
+  % Tube width L
+  \draw[thin] (0, -0.08) -- (0, -0.62);
+  \draw[thin] (3.4, -0.08) -- (3.4, -0.62);
+  \draw[<->] (0, -0.44) -- (3.4, -0.44)
+    node[midway, fill=white, inner sep=2pt] {$L$};
+\end{tikzpicture}

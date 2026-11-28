@@ -1,0 +1,17 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Rocket body with rounded nose circle
+  \draw (0,3.1) circle (0.24);
+  \draw (-0.24,3.1) .. controls (-0.52,2.1) and (-0.72,1.1) .. (-0.72,0)
+        -- (0.72,0)
+        .. controls (0.72,1.1) and (0.52,2.1) .. (0.24,3.1);
+
+  % Exhaust gas streams (broken downward arrows)
+  \foreach \x in {-0.54,-0.27,0,0.27,0.54} {
+    \draw (\x,-0.15) -- (\x,-0.70);
+    \draw[->] (\x,-0.92) -- (\x,-1.55);
+  }
+  \node[right] at (0.62,-0.82) {$u_0$};
+
+  % Gravity arrow
+  \draw[->] (1.35,3.2) -- (1.35,2.05) node[midway, right] {$g$};
+\end{tikzpicture}

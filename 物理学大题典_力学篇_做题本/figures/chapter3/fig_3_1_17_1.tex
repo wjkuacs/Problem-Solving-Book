@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Hatched ceiling
+  \fill[pattern=north east lines] (-0.2, 3.2) rectangle (4.5, 3.42);
+  \draw[thick] (-0.2, 3.2) -- (4.5, 3.2);
+
+  % Left spring and mass m
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=14, post length=8}] (0.9, 3.2) -- (0.9, 1.51);
+  \node[left=5pt] at (0.9, 2.35) {$k_1$};
+  \draw[thick, fill=white] (0.9, 1.15) circle (0.36);
+  \node[left=3pt] at (0.54, 1.15) {$m$};
+
+  % Right spring and screen M
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=6, post length=6}] (3.25, 3.2) -- (3.25, 2.00);
+  \node[right=5pt] at (3.25, 2.65) {$k_2$};
+  \draw[thick, fill=white] (2.45, 2.25) -- (4.05, 1.75) -- (4.05, 0.05) -- (2.45, 0.55) -- cycle;
+  \node at (3.65, 0.55) {$M$};
+
+  % Horizontal projection onto screen
+  \draw[dashed, thick] (0.9, 1.51) -- (3.25, 1.51);
+  \draw[dashed, thick] (0.9, 0.79) -- (3.25, 0.79);
+  \draw[dashed, thick] (3.25, 1.15) ellipse (0.14 and 0.36);
+\end{tikzpicture}

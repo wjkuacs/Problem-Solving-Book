@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, line width=0.7pt]
+  \def\L{4.5}
+  \def\ang{22.5}
+  \coordinate (O) at (0,0);
+  \coordinate (A) at ({\L*cos(\ang)},{\L*sin(\ang)});
+  \coordinate (B) at ({\L*cos(\ang)-\L},{\L*sin(\ang)});
+
+  % Horizontal reference line
+  \draw (O) -- (\L,0);
+
+  % Vectors
+  \draw[->, line width=0.8pt] (O) -- (A) node[midway, below right=2pt] {$0.6\pi$};
+  \draw[->, line width=0.8pt] (A) -- (B) node[midway, above=2pt] {$0.6\pi$};
+  \draw[->, line width=0.8pt] (O) -- (B) node[midway, left=3pt] {$|\dot{y}_2 - \dot{y}_1|_{\max}$};
+
+  % Angle labels
+  \node at (1.95,0.34) {$\dfrac{\pi}{8}$};
+  \node at (2.45,1.35) {$\dfrac{\pi}{8}$};
+\end{tikzpicture}

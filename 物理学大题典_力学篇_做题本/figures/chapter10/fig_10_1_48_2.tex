@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\dx{2.6}
+    \def\L{2.4}
+
+    % Ceiling
+    \fill[pattern=north east lines] (-0.4, \L) rectangle (\dx+0.4, \L+0.2);
+    \draw (-0.4, \L) -- (\dx+0.4, \L);
+
+    % Coupling spring
+    \draw[decorate, decoration={zigzag, segment length=5.5pt, amplitude=3pt, pre length=14pt, post length=14pt}]
+        (0, 0) -- (\dx, 0) node[midway, above=5pt] {$k$};
+
+    % Two pendulums
+    \foreach \x in {0, \dx} {
+        \draw (\x, \L) -- (\x, 0) node[midway, left=2pt] {$l$};
+        \filldraw[fill=white] (\x, 0) circle (2.8pt);
+        \node[below=3pt] at (\x, 0) {$m$};
+    }
+\end{tikzpicture}

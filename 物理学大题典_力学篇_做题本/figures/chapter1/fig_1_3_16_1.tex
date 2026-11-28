@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth, every node/.style={font=\small}]
+  \coordinate (O) at (0, 0);
+  \fill (O) circle (1.5pt);
+
+  % Dashed reference lines
+  \draw[dashed] (O) -- (1.9, 0);
+  \draw[dashed] (O) -- (-37:2.2);
+  \draw[dashed] (O) -- (0, -2.6);
+
+  % Angle labels
+  \draw (0.85, 0) arc (0:-37:0.85);
+  \node at (-18:1.15) {$\beta$};
+  \node at (-81:1.35) {$\alpha$};
+
+  % Acceleration vectors
+  \draw[->, thick] (O) -- (-2.1, 0) node[below left] {$\boldsymbol{a}_{A}$};
+  \draw[->, thick] (O) -- (143:1.8) node[above left] {$\boldsymbol{a}_{Ar}$};
+  \draw[->, thick] (O) -- (53:1.45) node[above right] {$\boldsymbol{a}_{Ac}$};
+  \draw[->, thick] (O) -- (-164:1.65) node[below] {$\boldsymbol{a}_{Aec}$};
+  \draw[->, thick] (O) -- (-72:2.05) node[right] {$\boldsymbol{a}_{Aen}$};
+\end{tikzpicture}

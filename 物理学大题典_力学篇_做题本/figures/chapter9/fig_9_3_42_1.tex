@@ -1,0 +1,21 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (V) at (0,-1.65);
+  \coordinate (P) at (-54:1.65);
+
+  % Rotating circular hoop and vertical axis
+  \draw[thick] (O) circle (1.65);
+  \draw[thick] (0,-2.25) -- (0,2.65);
+
+  % Rotation arrow omega
+  \draw[->, thick] (-0.32,2.22) arc (140:395:0.32 and 0.11);
+  \node at (0.55,2.24) {$\omega$};
+
+  % Radius a and bead m
+  \draw[thick] (O) -- (P) node[pos=0.52, above right=-1pt and 2pt] {$a$};
+  \fill (P) circle (3pt);
+  \node[below right=1pt and 2pt] at (P) {$m$};
+
+  % Angle phi
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.32, "$\varphi$"] {angle = V--O--P};
+\end{tikzpicture}

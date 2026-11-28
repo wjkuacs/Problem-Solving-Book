@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+    % Parallel trajectories
+    \draw[dashed] (0, -1.65) -- (0, 1.65);
+    \draw[dashed] (2.6, -1.65) -- (2.6, 1.65);
+
+    % Spaceship (1) moving downward
+    \draw[fill=white] (-0.11, 1.48) -- (0.11, 1.48)
+        .. controls (0.11, 1.18) and (0.04, 1.02) .. (0, 0.96)
+        .. controls (-0.04, 1.02) and (-0.11, 1.18) .. (-0.11, 1.48) -- cycle;
+    \node[right=4pt] at (0.11, 1.30) {$(1)$};
+    \draw[->] (-0.38, 1.52) -- (-0.38, 0.78) node[midway, left=2pt] {$\frac{c}{2}$};
+
+    % Spaceship (2) moving upward
+    \draw[fill=white] (2.49, -1.48) -- (2.71, -1.48)
+        .. controls (2.71, -1.18) and (2.64, -1.02) .. (2.6, -0.96)
+        .. controls (2.56, -1.02) and (2.49, -1.18) .. (2.49, -1.48) -- cycle;
+    \node[left=4pt] at (2.49, -1.30) {$(2)$};
+    \draw[->] (2.98, -1.52) -- (2.98, -0.78) node[midway, right=2pt] {$\frac{c}{2}$};
+
+    % Closest-approach dashed line AB with end ticks
+    \draw[dashed] (0, 0) -- (2.6, 0);
+    \draw (0, -0.07) -- (0, 0.07);
+    \draw (2.6, -0.07) -- (2.6, 0.07);
+    \node[left=3pt] at (0, 0) {$A$};
+    \node[right=3pt] at (2.6, 0) {$B$};
+
+    % Track separation d
+    \node (dlabel) at (1.3, -0.72) {$d$};
+    \draw[->] (dlabel.west) -- (0.04, -0.72);
+    \draw[->] (dlabel.east) -- (2.56, -0.72);
+\end{tikzpicture}

@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\a{1.95}
+  \coordinate (C) at (0,0);
+  \coordinate (V) at (0,-\a-0.45);
+  \coordinate (P) at (-112:\a);
+  \coordinate (A) at (-48:\a);
+
+  % Disk
+  \draw (C) circle (\a);
+  \node[above=2pt] at (C) {$C$};
+
+  % Radial and vertical lines
+  \draw (C) -- (V);
+  \draw (C) -- (P);
+  \draw (C) -- (A) node[midway, above right] {$a$};
+  \node[right=3pt] at (A) {$A$};
+
+  % Angles phi and theta
+  \pic[draw=none, angle radius=0.95cm, angle eccentricity=0.82, "$\varphi$"] {angle=P--C--V};
+  \pic[draw=none, angle radius=0.95cm, angle eccentricity=0.80, "$\theta$"] {angle=V--C--A};
+
+  % Forces at A: weight (1/10 mg) and tangential force F
+  \draw[->] (A) -- ++(0,-1.15) node[pos=0.8, right=2pt] {$\dfrac{1}{10}mg$};
+  \draw[->] (A) -- ++(42:0.95) node[above right=-1pt] {$F$};
+\end{tikzpicture}

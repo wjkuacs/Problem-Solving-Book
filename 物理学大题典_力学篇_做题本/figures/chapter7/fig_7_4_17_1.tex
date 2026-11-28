@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\b{1.6}
+  \def\a{0.9}
+  \def\ang{48}
+
+  % Fixed cylinder of radius b
+  \draw (0,0) circle (\b);
+
+  % Initial position at top (dashed)
+  \draw[dashed] (0,\b+\a) circle (\a);
+
+  % Vertical line from center to initial sphere center
+  \draw (0,0) -- (0,\b+\a);
+
+  % Displaced sphere at angle theta
+  \coordinate (C) at ({(\b+\a)*sin(\ang)}, {(\b+\a)*cos(\ang)});
+  \draw (C) circle (\a);
+  \fill (C) circle (1.2pt);
+
+  % Radial line from cylinder center to displaced sphere center
+  \draw (0,0) -- (C);
+
+  % Angle arc and label
+  \coordinate (O) at (0,0);
+  \coordinate (V) at (0,\b+\a);
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\theta$"] {angle = C--O--V};
+\end{tikzpicture}

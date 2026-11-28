@@ -1,0 +1,22 @@
+\begin{tikzpicture}[>=Stealth, thick, line cap=round, line join=round,
+  fermion/.style={postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}}]
+  \coordinate (V1) at (-1.4, 0);
+  \coordinate (V2) at (1.4, 0);
+
+  % 相互作用顶点及编号
+  \fill (V1) circle (2.2pt) node[below=3pt] {$1$};
+  \fill (V2) circle (2.2pt) node[below=3pt] {$2$};
+
+  % 左侧粒子初末态
+  \draw[fermion] (-2.3, -1.25) -- node[pos=0.45, below right=0pt and 3pt] {$\boldsymbol{p}_1$} (V1);
+  \draw[fermion] (V1) -- node[pos=0.62, above right=0pt and 3pt] {$\boldsymbol{p}_1'$} (-2.6, 1.1);
+
+  % 右侧粒子初末态
+  \draw[fermion] (2.8, -0.55) -- node[pos=0.45, below left=2pt and 1pt] {$\boldsymbol{p}_2$} (V2);
+  \draw[fermion] (V2) -- node[pos=0.62, above left=0pt and 3pt] {$\boldsymbol{p}_2'$} (2.15, 1.2);
+
+  % 交换粒子（波浪线，箭头由 2 指向 1）
+  \draw[decorate, decoration={snake, amplitude=2.0mm, segment length=8.5mm},
+        postaction={decorate, decoration={markings, mark=at position 0.50 with {\arrow{Stealth[reversed]}}}}]
+    (V1) -- (V2);
+\end{tikzpicture}

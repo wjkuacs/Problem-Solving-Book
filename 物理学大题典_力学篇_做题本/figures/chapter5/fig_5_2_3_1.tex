@@ -1,0 +1,43 @@
+\begin{tikzpicture}[>=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (Op) at (2.144,1.558);
+
+  % Disk A and Disk B
+  \draw[thick] (O) circle (1.75);
+  \draw[thick] (Op) circle (0.90);
+
+  % Radius lines a and b
+  \draw[thick] (O) -- (200:1.75) node[midway, above=1pt] {$a$};
+  \draw[thick] (Op) -- ($(Op)+(0,-0.90)$) node[midway, right=1pt] {$b$};
+
+  % Fixed pivot support at O
+  \draw[thick, fill=white] ($(O)+(-0.28,-0.34)$) -- ($(O)+(-0.20,0.02)$)
+    arc (180:0:0.20) -- ($(O)+(0.28,-0.34)$) -- cycle;
+  \draw[thick] ($(O)+(-0.46,-0.34)$) -- ($(O)+(0.46,-0.34)$);
+  \foreach \x in {-0.34,-0.17,0,0.17,0.34} {
+    \draw (\x-0.12,-0.50) -- (\x,-0.34);
+  }
+
+  % Connecting rod OO'
+  \filldraw[fill=white, draw=black, thick]
+    ($(O)+(126:0.14)$) -- ($(Op)+(126:0.14)$)
+    arc (126:-54:0.14) -- ($(O)+(-54:0.14)$)
+    arc (-54:-234:0.14) -- cycle;
+
+  % Center dots and labels O, O'
+  \fill (O) circle (0.035);
+  \fill (Op) circle (0.035);
+  \node[above left=2pt] at ($(O)+(-0.14,0.14)$) {$O$};
+  \node[above right=2pt] at ($(Op)+(0.14,0.06)$) {$O'$};
+
+  % Disk labels A, B
+  \node at (-52:1.95) {$A$};
+  \node at ($(Op)+(-22:1.08)$) {$B$};
+
+  % Angular velocity arrows omega_A and omega_B
+  \draw[->, thick] (115:1.30) arc (115:155:1.30);
+  \node[right=2pt] at (130:1.28) {$\omega_A$};
+
+  \draw[->, thick] ($(Op)+(105:1.08)$) arc (105:150:1.08);
+  \node[below=2pt] at ($(Op)+(122:0.94)$) {$\omega_B$};
+\end{tikzpicture}

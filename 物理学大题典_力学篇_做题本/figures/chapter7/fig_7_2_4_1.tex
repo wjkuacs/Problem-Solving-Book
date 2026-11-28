@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Axes
+  \draw[->] (-2.1, 0) -- (2.2, 0) node[below=2pt] {$x$};
+  \draw[->] (0, -2.2) -- (0, 2.3) node[left=2pt] {$y$};
+  \node[below left=1pt] at (0, 0) {$O$};
+
+  % Four point masses
+  \fill (-0.95, 0) circle (2.2pt);
+  \node[above=2pt] at (-0.95, 0) {$m$};
+  \node[below=2pt] at (-0.95, 0) {$-a$};
+
+  \fill (0.95, 0) circle (2.2pt);
+  \node[above=2pt] at (0.95, 0) {$m$};
+  \node[below=2pt] at (0.95, 0) {$a$};
+
+  \fill (0, 1.8) circle (2.2pt);
+  \node[left=3pt] at (0, 1.8) {$m$};
+  \node[right=3pt] at (0, 1.8) {$2a$};
+
+  \fill (0, -1.8) circle (2.2pt);
+  \node[left=3pt] at (0, -1.8) {$-2a$};
+  \node[right=3pt] at (0, -1.8) {$m$};
+\end{tikzpicture}

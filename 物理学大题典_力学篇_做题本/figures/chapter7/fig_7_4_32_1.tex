@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\R{1.25}
+  \def\h{1.75}
+  \def\thick{0.11}
+  \pgfmathsetmacro{\xbot}{-sqrt(\R*\R - (\h-\R)*(\h-\R))}
+  \pgfmathsetmacro{\xtop}{-sqrt(\R*\R - (\h+\thick-\R)*(\h+\thick-\R))}
+
+  % Table surface
+  \draw (-2.6,0) -- (2.1,0);
+
+  % Billiard ball
+  \coordinate (O) at (0,\R);
+  \draw (O) circle (\R);
+
+  % Radius R
+  \draw[->] (O) -- ++(25:\R) node[midway, below right=0pt] {$R$};
+
+  % Horizontal cue hitting at height h
+  \draw (-2.4,\h) -- (\xbot,\h) (\xtop,\h+\thick) -- (-2.4,\h+\thick) -- (-2.4,\h);
+
+  % Height h dimension arrow
+  \draw[<->] (-1.9,0) -- (-1.9,\h) node[midway, fill=white, inner sep=2pt] {$h$};
+\end{tikzpicture}

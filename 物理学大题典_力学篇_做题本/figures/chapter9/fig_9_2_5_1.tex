@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0]
+  % Ceiling
+  \draw[thick] (-0.9, 0) -- (0.9, 0);
+  \foreach \x in {-0.75,-0.5,...,0.75} {
+    \draw (\x, 0) -- (\x+0.16, 0.2);
+  }
+  \node[below left=1pt] at (0, 0) {$A$};
+
+  % Vertical line Ax
+  \draw[thick] (0, 0) -- (0, -4.1) node[left=2pt] {$x$};
+
+  % Spring AB at angle 28 deg from vertical
+  \coordinate (B) at (1.05, -1.95);
+  \draw[thick, decorate, decoration={coil, aspect=0.45, segment length=7pt, amplitude=4pt, pre length=8pt, post length=8pt}] (0,0) -- (B);
+  \node[above right=2pt] at (0.52, -0.92) {$r$};
+  \node at (0.28, -1.15) {$\theta$};
+  \node[above right=1pt] at (B) {$B$};
+
+  % Vertical dashed line from B and rod BC
+  \draw[dashed] (B) -- ++(0, -1.75);
+  \coordinate (C) at (2.45, -3.95);
+  \draw[thick] (B) -- (C) node[right=1pt] {$C$};
+  \coordinate (D) at ($(B)!0.58!(C)$);
+  \fill (D) circle (1.5pt);
+  \node[above right=1pt] at (D) {$D$};
+  \node at (1.32, -2.95) {$\varphi$};
+\end{tikzpicture}

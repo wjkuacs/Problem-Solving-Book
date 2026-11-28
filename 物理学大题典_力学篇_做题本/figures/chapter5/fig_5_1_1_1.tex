@@ -1,0 +1,60 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\R{1.7}
+  \def\Rear{1.95}
+  \def\rcrank{0.72}
+  \def\crankang{45}
+
+  \coordinate (O) at (0,0);
+  \coordinate (c) at (90:\Rear);
+  \coordinate (a) at (210:\Rear);
+  \coordinate (b) at (330:\Rear);
+
+  \coordinate (C) at ($(c)-(\crankang:\rcrank)$);
+  \coordinate (A) at ($(a)-(\crankang:\rcrank)$);
+  \coordinate (B) at ($(b)-(\crankang:\rcrank)$);
+
+  % Drum outline with three smooth rounded lobes at 90, 210, 330 deg
+  \draw
+    (102:\R) arc (102:198:\R)
+    .. controls (202:1.9) and (204:2.12) .. (210:2.12)
+    .. controls (216:2.12) and (218:1.9) .. (222:\R)
+    arc (222:318:\R)
+    .. controls (322:1.9) and (324:2.12) .. (330:2.12)
+    .. controls (336:2.12) and (338:1.9) .. (342:\R)
+    arc (342:438:\R)
+    .. controls (82:1.9) and (84:2.12) .. (90:2.12)
+    .. controls (96:2.12) and (98:1.9) .. (102:\R);
+
+  % Drum center O
+  \fill (O) circle (1.4pt);
+  \node[right, inner sep=3pt] at (O) {$O$};
+
+  % Helper-like repetition for the three cranks and fixed supports
+  \foreach \P/\p/\labP/\labp/\posP/\posp in {
+    A/a/A/a/left/above right,
+    B/b//b/left/above,
+    C/c/C/c/left/right%
+  } {
+    % Fixed support triangle and hatched ground
+    \draw ($(\P)+(-0.18,-0.28)$) -- (\P) -- ($(\P)+(0.18,-0.28)$);
+    \draw ($(\P)+(-0.3,-0.28)$) -- ($(\P)+(0.3,-0.28)$);
+    \foreach \x in {-0.22,-0.11,0,0.11,0.22} {
+      \draw ($(\P)+(\x,-0.28)$) -- ($(\P)+(\x-0.08,-0.38)$);
+    }
+
+    % Crank bar (two parallel edges + pivot circles)
+    \draw ($(\P)+(\crankang+90:0.06)$) -- ($(\p)+(\crankang+90:0.06)$);
+    \draw ($(\P)+(\crankang-90:0.06)$) -- ($(\p)+(\crankang-90:0.06)$);
+    \draw[fill=white] (\P) circle (2.4pt);
+    \draw[fill=white] (\p) circle (2.4pt);
+
+    % Crank length label r and angular velocity arrow omega
+    \node[above left, inner sep=1pt] at ($(\P)!0.65!(\p)+(\crankang+90:0.06)$) {$r$};
+    \draw[->] ($(\P)+(105:0.30)$) arc (105:-15:0.30) node[right, inner sep=1pt] {$\omega$};
+
+    % Pivot labels
+    \node[\posP, inner sep=4pt] at (\P) {$\labP$};
+    \node[\posp, inner sep=3.5pt] at (\p) {$\labp$};
+  }
+  \node[below right, inner sep=1pt] at ($(B)+(0.24, -0.26)$) {$B$};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ceiling with hatching
+  \draw (-1.35,0) -- (1.45,0);
+  \foreach \x in {-1.25,-1.00,...,1.25} {
+    \draw[thin] (\x,0) -- (\x+0.22,0.22);
+  }
+
+  % Upper spring k
+  \draw (0,0) -- (0,-0.28);
+  \draw[decorate, decoration={zigzag, segment length=5.5pt, amplitude=3.5pt}] (0,-0.28) -- (0,-1.24);
+  \node[left=6pt] at (0,-0.76) {$k$};
+  \draw (0,-1.24) -- (0,-1.52);
+
+  % Ball M
+  \draw (0,-1.90) circle (0.38);
+  \node at (0,-1.90) {$M$};
+
+  % Lower spring k
+  \draw (0,-2.28) -- (0,-2.56);
+  \draw[decorate, decoration={zigzag, segment length=5.5pt, amplitude=3.5pt}] (0,-2.56) -- (0,-3.52);
+  \node[left=6pt] at (0,-3.04) {$k$};
+  \draw (0,-3.52) -- (0,-3.80);
+
+  % Bottom point and applied force F(t)
+  \fill (0,-3.80) circle (2pt);
+  \draw[->] (0,-3.80) -- (0,-4.48) node[pos=0.85, right=2pt] {$F(t)$};
+
+  % Dimension ticks and arrows x1, x2
+  \draw[thin] (0.68,-1.90) -- (1.45,-1.90);
+  \draw[thin] (0.68,-3.80) -- (1.45,-3.80);
+  \draw[<->] (1.15,0) -- (1.15,-1.90) node[midway, right=2pt] {$x_1$};
+  \draw[<->] (1.15,-1.90) -- (1.15,-3.80) node[midway, right=2pt] {$x_2$};
+\end{tikzpicture}

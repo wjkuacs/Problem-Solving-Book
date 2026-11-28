@@ -1,0 +1,72 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Total span l = 5.6 cm (bay width w = 0.7 cm = l/8, half-span = 2.8 cm)
+  % Height at apex C: 2.8 * tan(30) = 1.6166 cm
+  \coordinate (A) at (-2.8,0);
+  \coordinate (B1) at (-2.1,0);
+  \coordinate (B2) at (-1.4,0);
+  \coordinate (F) at (-0.7,0);
+  \coordinate (D) at (0,0);
+  \coordinate (B5) at (0.7,0);
+  \coordinate (B6) at (1.4,0);
+  \coordinate (B7) at (2.1,0);
+  \coordinate (B) at (2.8,0);
+
+  \coordinate (T1) at (-2.1,0.404);
+  \coordinate (T2) at (-1.4,0.808);
+  \coordinate (E) at (-0.7,1.212);
+  \coordinate (C) at (0,1.617);
+  \coordinate (T5) at (0.7,1.212);
+  \coordinate (T6) at (1.4,0.808);
+  \coordinate (T7) at (2.1,0.404);
+
+  % Outer triangle and web members
+  \draw (A) -- (B) -- (C) -- cycle;
+  \draw (D) -- (C);
+  \draw (B1) -- (T1) -- (B2) -- (T2) -- (F) -- (E) -- (D);
+  \draw (B7) -- (T7) -- (B6) -- (T6) -- (B5) -- (T5) -- (D);
+
+  % Supports at A and B
+  \foreach \p in {A,B} {
+    \draw ($(\p)+(-0.14,-0.22)$) -- (\p) -- ($(\p)+(0.14,-0.22)$);
+    \draw ($(\p)+(-0.28,-0.22)$) -- ($(\p)+(0.28,-0.22)$);
+    \foreach \dx in {-0.22,-0.11,0,0.11,0.22} {
+      \draw[thin] ($(\p)+(\dx,-0.22)$) -- ($(\p)+(\dx-0.09,-0.33)$);
+    }
+    \fill[white] (\p) circle (2pt);
+    \draw (\p) circle (2pt);
+  }
+
+  % External vertical loads
+  \draw[->] ($(A)+(0,0.68)$) -- ($(A)+(0,0.06)$);
+  \node[above] at ($(A)+(0,0.68)$) {$\dfrac{Q}{2}$};
+  \draw[->] ($(B)+(0,0.68)$) -- ($(B)+(0,0.06)$);
+  \node[above] at ($(B)+(0,0.68)$) {$\dfrac{Q}{2}$};
+
+  \foreach \p in {T1,T2,E,C,T5,T6,T7} {
+    \draw[->] ($(\p)+(0,0.68)$) -- (\p);
+    \node[above] at ($(\p)+(0,0.68)$) {$Q$};
+  }
+
+  % Joint labels
+  \node[left=3pt] at (A) {$A$};
+  \node[right=3pt] at (B) {$B$};
+  \node at ($(C)+(0.22,0.20)$) {$C$};
+  \node[below=2pt] at (D) {$D$};
+  \node at ($(E)+(-0.20,0.22)$) {$E$};
+  \node[below=2pt] at (F) {$F$};
+
+  % 30 deg angle at A with clean leader
+  \draw[thin] ($(A)+(0:0.48)$) arc (0:30:0.48);
+  \draw[thin] ($(A)+(15:0.48)$) -- ($(A)+(0.58,-0.26)$) node[right, inner sep=1.5pt] {$30^\circ$};
+
+  % Bottom dimensions: l/8 and l/2
+  \draw[thin] (-0.7,-0.45) -- (-0.7,-0.95);
+  \draw[thin] (0,-0.45) -- (0,-1.55);
+  \draw[thin] (2.8,-0.45) -- (2.8,-1.55);
+
+  \draw[->, thin] (-1.05,-0.72) -- (-0.7,-0.72);
+  \draw[->, thin] (0.35,-0.72) -- (0,-0.72);
+  \node at (-0.35,-0.72) {$\dfrac{l}{8}$};
+
+  \draw[<->, thin] (0,-1.32) -- (2.8,-1.32) node[midway, fill=white, inner sep=2pt] {$\dfrac{l}{2}$};
+\end{tikzpicture}

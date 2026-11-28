@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{2.0}
+
+  % Smooth circular ring
+  \draw (0, 0) circle (\R);
+
+  % Center O and radius arrow r
+  \fill (0, 0) circle (2pt) node[below right=1pt] {$O$};
+  \draw[->] (0, 0) -- (132:\R) node[midway, above right=1pt] {$r$};
+
+  % Three springs coiled along the ring
+  \draw[decorate, decoration={coil, aspect=0.55, segment length=7pt, amplitude=4.5pt, pre length=0.25cm, post length=0.25cm}]
+    (35:\R) arc (35:185:\R);
+  \node at (148:\R+0.38) {$k$};
+
+  \draw[decorate, decoration={coil, aspect=0.55, segment length=7pt, amplitude=4.5pt, pre length=0.25cm, post length=0.25cm}]
+    (185:\R) arc (185:300:\R);
+  \node at (242:\R+0.38) {$k$};
+
+  \draw[decorate, decoration={coil, aspect=0.55, segment length=7pt, amplitude=4.5pt, pre length=0.25cm, post length=0.25cm}]
+    (300:\R) arc (300:395:\R);
+  \node at (348:\R+0.38) {$k$};
+
+  % Three masses m, m, M on the ring
+  \fill (35:\R) circle (2.4pt) node[above right=1pt] {$m$};
+  \fill (185:\R) circle (2.4pt) node[left=3pt] {$m$};
+  \fill (300:\R) circle (2.4pt) node[below right=1pt] {$M$};
+\end{tikzpicture}

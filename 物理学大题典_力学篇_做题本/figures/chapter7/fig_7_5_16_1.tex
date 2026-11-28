@@ -1,0 +1,51 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ground surface with hatching
+  \fill[pattern=north east lines] (-1.6, -0.25) rectangle (2.9, 0);
+  \draw (-1.6, 0) -- (2.9, 0);
+
+  % Pivot O and vertical reference axis
+  \coordinate (O) at (0, 0);
+  \draw (O) -- (0, 4.1);
+
+  % Center C and three orthogonal rods in 3D perspective
+  \coordinate (C) at (0.76, 1.78);
+  % Rod 1: along symmetry axis from O through C to top mass
+  \draw (O) -- (1.66, 3.88);
+  \coordinate (M1) at (1.52, 3.56);
+
+  % Rod 2: upper-left to lower-right through C
+  \coordinate (M2a) at (-0.62, 3.06);
+  \coordinate (M2b) at (2.14, 0.50);
+  \draw (M2a) -- (M2b);
+
+  % Rod 3: middle-left to middle-right through C
+  \coordinate (M3a) at (-1.08, 1.62);
+  \coordinate (M3b) at (2.60, 1.94);
+  \draw (M3a) -- (M3b);
+
+  % Right-angle marks at C in 3D perspective
+  \coordinate (u3) at (0.14, 0.33);
+  \coordinate (u2) at (-0.27, 0.25);
+  \coordinate (u1) at (0.34, 0.03);
+  \draw[thin] ($(C)+(u2)$) -- ($(C)+(u2)+(u3)$) -- ($(C)+(u3)$)
+              -- ($(C)+(u3)+(u1)$) -- ($(C)+(u1)$)
+              -- ($(C)+(u1)-(u2)$) -- ($(C)-(u2)$);
+
+  % Angle theta between vertical axis and symmetry axis
+  \draw[<->] (0, 2.55) arc[start angle=90, end angle=66.8, radius=2.55]
+    node[midway, above, yshift=1pt] {$\theta$};
+
+  % Six point masses m
+  \foreach \p in {O, M1, M2a, M2b, M3a, M3b} {
+    \fill (\p) circle (2.2pt);
+  }
+
+  % Labels
+  \node[below=3pt, fill=white, inner sep=1.5pt] at (O) {$O$};
+  \node[right=4pt, yshift=5pt] at (O) {$m$};
+  \node[right=2pt] at (M1) {$m$};
+  \node[left=2pt] at (M2a) {$m$};
+  \node[below right=1pt] at (M2b) {$m$};
+  \node[below left=1pt] at (M3a) {$m$};
+  \node[below right=1pt] at (M3b) {$m$};
+\end{tikzpicture}

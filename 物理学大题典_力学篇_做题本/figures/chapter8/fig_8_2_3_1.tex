@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Left metal ring (full ellipse)
+  \draw (-1.85, 0) ellipse[x radius=0.52, y radius=1.15];
+  \draw[->] (-1.85, 0) -- (-1.85, 1.15) node[pos=0.45, right=1pt] {$a$};
+
+  % Right metal ring (front solid, back dashed)
+  \draw (1.85, -1.15) arc[start angle=-90, end angle=90, x radius=0.52, y radius=1.15];
+  \draw[dashed] (1.85, 1.15) arc[start angle=90, end angle=270, x radius=0.52, y radius=1.15];
+
+  % Catenoid soap film upper and lower profiles
+  \draw[smooth, samples=50, domain=-1.72:1.72] plot (\x, {0.65*cosh(\x/1.505)});
+  \draw[smooth, samples=50, domain=-1.72:1.72] plot (\x, {-0.65*cosh(\x/1.505)});
+
+  % Center dot
+  \fill (0, 0) circle (2.2pt);
+
+  % Labels with leader lines
+  \draw[thin] (-2.12, 0.72) -- (-2.55, 1.32) node[above=1pt] {金属环};
+  \draw[thin] (0.55, 0.69) -- (0.95, 1.25) node[above right=-1pt] {肥皂膜};
+
+  % Distance 2b dimension
+  \draw[thin] (-1.85, -1.23) -- (-1.85, -1.78);
+  \draw[thin] (1.85, -1.23) -- (1.85, -1.78);
+  \draw[<->] (-1.85, -1.60) -- (1.85, -1.60)
+    node[midway, fill=white, inner sep=2pt] {$2b$};
+\end{tikzpicture}

@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\Rout{2.8}
+    \def\Rin{1.05}
+
+    \coordinate (C) at (90:\Rout);
+    \coordinate (A) at (210:\Rout);
+    \coordinate (B) at (330:\Rout);
+
+    \coordinate (MC) at (90:\Rin);
+    \coordinate (MA) at (210:\Rin);
+    \coordinate (MB) at (330:\Rin);
+
+    % Outer fixed triangle ABC
+    \draw (A) -- (B) -- (C) -- cycle;
+    \node[below left=1pt] at (A) {$A$};
+    \node[below right=1pt] at (B) {$B$};
+    \node[above=1pt] at (C) {$C$};
+
+    % Dashed medians from center to inner masses
+    \draw[dashed] (0,0) -- (MC);
+    \draw[dashed] (0,0) -- (MA);
+    \draw[dashed] (0,0) -- (MB);
+
+    % Outer three springs
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (C) -- (MC) node[midway, left=4pt] {$k$};
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (A) -- (MA) node[midway, below right=3pt] {$k$};
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (B) -- (MB) node[midway, below left=3pt] {$k$};
+
+    % Inner three springs
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (MC) -- (MA) node[midway, above left=3pt] {$k$};
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (MC) -- (MB) node[midway, above right=3pt] {$k$};
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=5.5pt, amplitude=3pt, pre length=5pt, post length=5pt}]
+        (MA) -- (MB) node[midway, below=4pt] {$k$};
+
+    % Mass labels
+    \node[right=3pt] at (MC) {$M$};
+    \node[above left=2pt] at (MA) {$M$};
+    \node[above right=2pt] at (MB) {$M$};
+\end{tikzpicture}

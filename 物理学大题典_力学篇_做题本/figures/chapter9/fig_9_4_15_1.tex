@@ -1,0 +1,68 @@
+\begin{tikzpicture}[>=Stealth, thick,
+    vres/.style={draw, fill=white, minimum width=0.20cm, minimum height=0.68cm, inner sep=0pt}]
+    % Left circuit loop
+    \draw (3.8,4.2) -- (3.8,4.4) -- (0,4.4) -- (0,0) -- (3.8,0) -- (3.8,0.35);
+
+    % Left branch: L and R
+    \draw[fill=white, draw=none] (-0.2,2.7) rectangle (0.2,3.55);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.1mm, amplitude=1.4mm}] (0,3.55) -- (0,2.7);
+    \node[right] at (0.18,3.12) {$L$};
+    \node[vres, label=right:$R$] at (0,1.25) {};
+
+    % Bottom branch: DC battery E and current q dot
+    \draw[fill=white, draw=none] (1.72,-0.2) rectangle (1.96,0.2);
+    \draw[ultra thick] (1.76,-0.14) -- (1.76,0.14);
+    \draw (1.92,-0.26) -- (1.92,0.26);
+    \node[above right] at (1.92,0.08) {$E$};
+
+    \draw[->] (2.5,0) -- (2.95,0);
+    \node[below] at (2.72,-0.05) {$\dot{q}$};
+
+    % Top fixed support
+    \draw[fill=white] (3.1,4.10) rectangle (4.5,4.20);
+    \foreach \x in {3.2,3.4,...,4.45} {
+        \draw[thin] (\x,4.20) -- (\x+0.14,4.34);
+    }
+
+    % Upper spring k_1
+    \draw (3.8,4.10) -- (3.8,3.88);
+    \draw[decorate, decoration={zigzag, segment length=2.3mm, amplitude=1.2mm}] (3.8,3.88) -- (3.8,3.15);
+    \draw (3.8,3.15) -- (3.8,2.95);
+    \node[right] at (3.96,3.58) {$k_1$};
+
+    % Upper equilibrium dashed line
+    \draw[dashed, thin] (2.0,3.42) -- (4.9,3.42);
+
+    % Upper plate m_1
+    \draw[fill=white] (2.8,2.86) rectangle (4.8,2.95);
+    \node[right] at (4.82,2.90) {$m_1$};
+
+    % Capacitance formula
+    \node[font=\small] at (3.8,2.30) {$C = \dfrac{A}{s - x_1 - x_2}$};
+
+    % Lower plate m_2
+    \draw[fill=white] (2.8,1.72) rectangle (4.8,1.81);
+    \node[right] at (4.82,1.76) {$m_2$};
+
+    % Lower equilibrium dashed line
+    \draw[dashed, thin] (2.0,1.12) -- (4.9,1.12);
+
+    % Lower spring k_2
+    \draw (3.8,1.72) -- (3.8,1.48);
+    \draw[decorate, decoration={zigzag, segment length=2.3mm, amplitude=1.2mm}] (3.8,1.48) -- (3.8,0.75);
+    \draw (3.8,0.75) -- (3.8,0.45);
+    \node[right] at (3.96,1.02) {$k_2$};
+
+    % Bottom fixed support
+    \draw[fill=white] (3.1,0.35) rectangle (4.5,0.45);
+    \foreach \x in {3.2,3.4,...,4.45} {
+        \draw[thin] (\x,0.35) -- (\x-0.14,0.21);
+    }
+
+    % Dimension arrows: l_10, x_1, s, x_2, l_20
+    \draw[<->, thin] (3.32,3.42) -- (3.32,4.10) node[midway, left] {$l_{10}$};
+    \draw[<->, thin] (4.55,2.95) -- (4.55,3.42) node[midway, right] {$x_1$};
+    \draw[<->, thin] (2.25,1.12) -- (2.25,3.42) node[midway, left] {$s$};
+    \draw[<->, thin] (4.55,1.12) -- (4.55,1.72) node[midway, right] {$x_2$};
+    \draw[<->, thin] (3.32,0.45) -- (3.32,1.12) node[midway, left] {$l_{20}$};
+\end{tikzpicture}

@@ -1,0 +1,29 @@
+\begin{tikzpicture}[>=Stealth]
+  % Horizontal rail
+  \draw[thick] (-0.4, 0) -- (4.2, 0);
+
+  % Origin marker
+  \draw (0, -0.22) -- (0, 0.95);
+  \node[below left=1pt] at (0, 0) {$O$};
+
+  % Slider block
+  \draw[thick, fill=white] (1.6, 0) rectangle (2.3, 0.34);
+  \coordinate (P) at (1.95, 0.17);
+  \fill (P) circle (1.6pt);
+
+  % Position dimension x_s
+  \draw (1.95, 0.42) -- (1.95, 0.95);
+  \draw[<->] (0, 0.78) -- (1.95, 0.78) node[midway, above=1pt] {$x_s$};
+
+  % Vertical dashed reference and pendulum rod
+  \coordinate (V) at (1.95, -2.45);
+  \coordinate (M) at ($(P) + (-65:2.55)$);
+  \draw[dashed, thick] (P) -- (V);
+  \draw[thick] (P) -- (M) node[midway, above right=0pt and 1pt] {$l$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\theta$"] {angle = V--P--M};
+
+  % Pendulum bob
+  \fill (M) circle (2.2pt) node[below right=1pt] {$m$};
+\end{tikzpicture}

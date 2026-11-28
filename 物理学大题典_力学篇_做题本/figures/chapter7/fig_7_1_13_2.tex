@@ -1,0 +1,50 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Free body AEF (AF = 3.45 cm = 3l/8, FD = 1.15 cm = l/8, EF = 3.45*tan(30) = 1.992 cm)
+  \coordinate (A) at (0,0);
+  \coordinate (F) at (3.45,0);
+  \coordinate (D) at (4.60,0);
+  \coordinate (E) at (3.45,1.992);
+  \coordinate (P1) at ($(A)!0.333!(E)$);
+  \coordinate (P2) at ($(A)!0.667!(E)$);
+
+  % Triangle AEF and dashed line ED
+  \draw (A) -- (F) -- (E) -- cycle;
+  \draw[dashed] (E) -- (D);
+
+  % Loads on A, P1, P2, E
+  \draw[->] ($(A)+(0,0.75)$) -- ($(A)+(0,0.04)$);
+  \node[left] at ($(A)+(0,0.52)$) {$\dfrac{1}{2}Q$};
+
+  \draw[->] ($(A)+(-0.82,0)$) -- ($(A)+(-0.04,0)$);
+  \node[left] at ($(A)+(-0.82,0)$) {$N_{Ax}$};
+
+  \draw[->] ($(A)+(0,-1.18)$) -- ($(A)+(0,-0.04)$);
+  \node[left] at ($(A)+(-0.04,-0.98)$) {$4Q$};
+
+  \foreach \p in {P1,P2,E} {
+    \draw[->] ($(\p)+(0,0.72)$) -- (\p);
+    \node[above] at ($(\p)+(0,0.72)$) {$Q$};
+  }
+
+  % Sectioned bar forces S_CE, S_ED, S_FD
+  \draw[->] (E) -- ($(E)+(30:0.95)$) node[right] {$S_{CE}$};
+  \draw[->] (E) -- ($(E)!0.48!(D)$) node[right=2pt] {$S_{ED}$};
+  \draw[->] (F) -- ($(F)+(0.82,0)$) node[midway, above=2pt] {$S_{FD}$};
+
+  % Angles 30 deg at A and theta at E
+  \pic[draw, thin, angle radius=24pt, "$30^\circ$", angle eccentricity=1.35] {angle=F--A--E};
+  \pic[draw, thin, angle radius=20pt, "$\theta$", angle eccentricity=1.35] {angle=F--E--D};
+
+  % Joint labels
+  \node at ($(A)+(-0.22,-0.22)$) {$A$};
+  \node[above left=1pt] at (E) {$E$};
+  \node[below left=1pt] at (F) {$F$};
+  \node[below=2pt] at (D) {$D$};
+
+  % Bottom dimension lines: 3l/8 and l/8
+  \draw[thin] (3.45,-0.45) -- (3.45,-0.95);
+  \draw[thin] (4.60,-0.45) -- (4.60,-0.95);
+
+  \draw[<->, thin] (0,-0.75) -- (3.45,-0.75) node[midway, fill=white, inner sep=2pt] {$\dfrac{3}{8}l$};
+  \draw[<->, thin] (3.45,-0.75) -- (4.60,-0.75) node[midway, fill=white, inner sep=1.5pt] {$\dfrac{l}{8}$};
+\end{tikzpicture}

@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, scale=0.9]
+  % Ceiling with hatching
+  \draw[thick] (-0.3,2.4) -- (4.3,2.4);
+  \foreach \x in {-0.2, 0.05, ..., 4.2} {
+    \draw (\x,2.4) -- (\x+0.18,2.62);
+  }
+
+  % Dimension L above ceiling
+  \draw (0,2.72) -- (0,3.22);
+  \draw (4,2.72) -- (4,3.22);
+  \draw[<->, thick] (0,2.97) -- (4,2.97) node[midway, above] {$L$};
+
+  % Left spring k1
+  \draw[thick] (0,2.4) -- (0,1.9);
+  \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=3pt}] (0,1.9) -- (0,0.65);
+  \draw[thick] (0,0.65) -- (0,0.16);
+  \node[left] at (-0.15,1.28) {$k_1$};
+
+  % Right spring k2
+  \draw[thick] (4,2.4) -- (4,1.9);
+  \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=3pt}] (4,1.9) -- (4,0.65);
+  \draw[thick] (4,0.65) -- (4,0.16);
+  \node[right] at (4.15,1.28) {$k_2$};
+
+  % Horizontal uniform rod
+  \draw[thick] (0,0) rectangle (4,0.16);
+
+  % Center of mass C
+  \fill (2,0.08) circle (1.5pt);
+  \node[above] at (2,0.22) {$C$};
+\end{tikzpicture}

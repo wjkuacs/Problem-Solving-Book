@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ground
+  \fill[pattern=north east lines] (-0.45,-0.18) rectangle (4.65,0);
+  \draw (-0.45,0) -- (4.65,0);
+
+  % Wedge M
+  \coordinate (A) at (0,2.05);
+  \coordinate (B) at (4.20,0);
+  \coordinate (C) at (0,0);
+  \draw (C) -- (B) -- (A) -- cycle;
+  \node at (1.35,0.58) {$M$};
+
+  % Angle alpha
+  \draw (B) ++(180:0.75) arc (180:154:0.75);
+  \node at (3.26,0.20) {$\alpha$};
+
+  % Spring, block m, and coordinate s along the incline
+  \begin{scope}[shift={(A)}, rotate=-26.02]
+    \draw (0,0) -- (0,0.55);
+    \draw (0,0.24) -- (0.35,0.24)
+      decorate[decoration={coil, aspect=0.45, segment length=2.3mm, amplitude=1.5mm}] {-- (1.28,0.24)}
+      -- (1.55,0.24);
+    \node[above] at (0.82,0.42) {$k$};
+    \draw[fill=white] (1.55,0) rectangle (2.30,0.48);
+    \node at (1.925,0.24) {$m$};
+    \draw[->] (0.35,0.82) -- (1.85,0.82) node[right] {$s$};
+  \end{scope}
+\end{tikzpicture}

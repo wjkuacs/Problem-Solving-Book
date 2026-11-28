@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\R{2.0}
+    % Circle
+    \draw (0,0) circle (\R);
+    \node[right=3pt] at (0,0) {$O$};
+
+    % Dashed equilibrium radii (180, 60, -60 deg)
+    \draw[dashed] (0,0) -- (180:\R);
+    \draw[dashed] (0,0) -- (60:\R);
+    \draw[dashed] (0,0) -- (-60:\R);
+
+    % Solid displaced radii
+    \draw (0,0) -- (203:\R);
+    \draw (0,0) -- (-42:\R);
+    \draw (0,0) -- (90:\R);
+
+    % Masses
+    \fill (203:\R) circle (2.2pt) node[below left=1pt] {$m$};
+    \fill (-42:\R) circle (2.2pt) node[below right=1pt] {$M$};
+    \fill (90:\R) circle (2.2pt) node[above=2pt] {$m$};
+
+    % Angle arcs
+    \draw[->] (180:0.95) arc (180:203:0.95);
+    \node at (191.5:1.28) {$\theta_1$};
+
+    \draw[->] (-60:1.1) arc (-60:-42:1.1);
+    \node at (-51:1.42) {$\theta_2$};
+
+    \draw[->] (60:0.95) arc (60:90:0.95);
+    \node at (75:1.25) {$\theta_3$};
+\end{tikzpicture}

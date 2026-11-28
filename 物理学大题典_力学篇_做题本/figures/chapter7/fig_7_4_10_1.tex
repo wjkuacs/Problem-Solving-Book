@@ -1,0 +1,18 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.45}
+  \def\b{0.68}
+  % Horizontal surface
+  \draw (-2.1,0) -- (2.2,0);
+  % Friction arrow
+  \draw[->, very thick] (0,0) -- (-1.15,0) node[below=2pt] {$f$};
+  % Outer wheel and inner axle
+  \draw (0,\R) circle (\R);
+  \draw (0,\R) circle (\b);
+  \fill (0,\R) circle (1.4pt);
+  % Radius r (label placed in outer ring below inner axle)
+  \draw (0,\R) -- (0,0) node[pos=0.73, right=2pt] {$r$};
+  % Radius b
+  \draw (0,\R) -- ++(212:\b) node[pos=0.55, above left=-1pt] {$b$};
+  % Pulling force F at top of inner axle
+  \draw[->] (0,\R+\b) -- (\R+0.75,\R+\b) node[right] {$F$};
+\end{tikzpicture}

@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Paraboloid inner wall and top rim
+  \draw (0,2.65) ellipse (1.55 and 0.42);
+  \draw plot[domain=-1.55:1.55, samples=60] (\x, {0.35 + 2.30*(\x/1.55)^2});
+
+  % Horizontal circular orbit at z = z0
+  \draw[dashed] (0,1.35) ellipse (1.02 and 0.28);
+
+  % Vertical z-axis
+  \draw[->] (0,-0.10) -- (0,3.65) node[right] {$z$};
+
+  % Gravity vector
+  \draw[->] (2.05,2.55) -- (2.05,1.35) node[midway, right] {$g$};
+\end{tikzpicture}

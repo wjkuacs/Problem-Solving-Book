@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    \def\ang{-16}
+    \def\b{1.25}
+    \def\d{0.62}
+    \def\len{5.4}
+
+    % Horizontal reference line and inclination angle at bottom right
+    \coordinate (R) at ({\len*cos(\ang)}, {\len*sin(\ang)});
+    \draw[dashed, semithick] (R) -- ++(-2.0,0);
+    \draw[semithick] (R) ++(-1.25,0) arc (180:{180+\ang}:1.25);
+    \node[fill=white, inner sep=1pt, font=\small] at ($(R) + ({1.52*cos(180+\ang/2)}, {1.52*sin(180+\ang/2)})$) {$\alpha$};
+
+    \begin{scope}[rotate=\ang]
+        % Fixed inclined plane and hatching
+        \draw (0,0) -- (\len,0);
+        \foreach \x in {0.25,0.60,...,5.15} {
+            \draw[semithick] (\x,0) -- (\x-0.22,-0.25);
+        }
+
+        % Free surface
+        \draw (0.3,\b) -- (4.5,\b);
+
+        % Fluid layer thickness b
+        \draw[<->, semithick] (0.95,0) -- (0.95,\b) node[midway, fill=white, inner sep=1.5pt, font=\small] {$b$};
+
+        % Depth d indicator
+        \draw[semithick] (3.15,\b) -- (3.15,{\b-\d});
+        \node[right=2pt, font=\small] at (3.15,{\b-\d/2}) {$d$};
+    \end{scope}
+\end{tikzpicture}

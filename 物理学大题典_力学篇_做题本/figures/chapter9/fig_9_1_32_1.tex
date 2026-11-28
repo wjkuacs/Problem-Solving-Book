@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0]
+  % Ground
+  \draw[thick] (-2.3, 0) -- (2.3, 0);
+  \foreach \x in {-2.15,-1.9,...,2.15} {
+    \draw (\x, 0) -- (\x-0.16, -0.2);
+  }
+
+  % Lower semi-cylinder B
+  \def\R{1.9}
+  \draw[thick] (\R, 0) arc (0:180:\R);
+  \draw[->] (0,0) -- (140:\R) node[midway, below left=1pt] {$R$};
+  \node at (1.35, 0.55) {$B$};
+
+  % Upper inverted semi-cylinder A
+  \def\r{1.1}
+  \coordinate (CA) at (0, \R+\r);
+  \draw[thick] ($(CA) + (-\r, 0)$) -- ($(CA) + (\r, 0)$) arc (0:-180:\r) -- cycle;
+  \draw[->] (CA) -- ++(-42:\r) node[midway, below left=1pt] {$r$};
+  \node at (-0.55, \R+\r-0.38) {$A$};
+\end{tikzpicture}

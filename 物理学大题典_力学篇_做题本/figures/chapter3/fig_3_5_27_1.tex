@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Key coordinates
+  \coordinate (O) at (0, 0);
+  \coordinate (H) at (0, 1.6);
+  \coordinate (S) at (3.2, 1.6);
+  \coordinate (U) at (4.3, 1.6);
+
+  % Observer and vertical height
+  \node[below left] at (O) {$O$};
+  \draw (O) -- (H) node[midway, left] {$h$};
+
+  % Horizontal source trajectory
+  \draw (H) -- (4.7, 1.6);
+  \draw[->] (H) -- (0.65, 1.6) node[below] {$u$};
+  \node[above left=0.04cm and 0.02cm] at (S) {$S$};
+
+  % Line of sight OS and sound speed v
+  \draw (O) -- (S);
+  \draw[->] (S) -- ($(S)!0.24!(O)$) node[below right=0pt and 1pt] {$v$};
+
+  % Velocity decomposition at S: u = u_1 + u_2
+  \draw[->] (S) -- (U) node[below=2pt] {$u$};
+  \coordinate (U1) at ($(S)!(U)!($(S)+(S)-(O)$)$);
+  \coordinate (U2) at ($(S)+(U)-(U1)$);
+  \draw[->] (S) -- (U1) node[above right] {$u_1$};
+  \draw[->] (S) -- (U2) node[below right] {$u_2$};
+  \draw[dashed, thin] (U1) -- (U) -- (U2);
+
+  % Top dimension line for ut_s
+  \draw[thin] (0, 2.05) -- (0, 2.35);
+  \draw[thin] (3.2, 2.05) -- (3.2, 2.35);
+  \draw[<->, thin] (0, 2.20) -- (3.2, 2.20) node[midway, fill=white, inner sep=2pt] {$ut_s$};
+
+  % Bottom dimension line parallel to OS for v(t - t_s)
+  \coordinate (Ooff) at ($(O)!0.55cm!-90:(S)$);
+  \coordinate (Soff) at ($(S)!0.55cm!90:(O)$);
+  \draw[thin] ($(O)!0.42cm!-90:(S)$) -- ($(O)!0.68cm!-90:(S)$);
+  \draw[thin] ($(S)!0.42cm!90:(O)$) -- ($(S)!0.68cm!90:(O)$);
+  \draw[<->, thin] (Ooff) -- (Soff) node[midway, fill=white, inner sep=1.5pt] {$v(t-t_s)$};
+\end{tikzpicture}

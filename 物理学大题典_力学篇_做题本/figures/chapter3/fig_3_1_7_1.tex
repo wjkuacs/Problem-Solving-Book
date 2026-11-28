@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Pulley
+  \draw[thick] (-0.72, 2.80) circle (0.72);
+
+  % String and spring
+  \draw[thick] (0, 2.80) -- (0, 2.25);
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2}] (0, 2.25) -- (0, 1.15);
+  \draw[thick] (0, 1.15) -- (0, 0.72);
+
+  % Mass block and initial velocity
+  \draw[thick, fill=white] (-0.42, 0.08) rectangle (0.42, 0.72);
+  \node at (0, 0.40) {$m$};
+  \draw[->, thick] (0, 0.08) -- (0, -0.58) node[below=1pt] {$v_0$};
+
+  % Elongation lambda and t=0 mark
+  \draw[thin] (-0.08, 1.15) -- (-0.82, 1.15);
+  \draw[thin] (-0.42, 0.40) -- (-0.82, 0.40);
+  \draw[<->, thin] (-0.64, 0.40) -- (-0.64, 1.15) node[midway, left=2pt] {$\lambda$};
+  \node[anchor=north east] at (-0.46, 0.34) {$t=0\text{ 时}$};
+
+  % Coordinate axis x
+  \draw[thin] (0.72, 0.40) -- (1.12, 0.40) node[right=2pt] {$0$};
+  \draw[->, thick] (0.92, 0.40) -- (0.92, -1.05) node[below=1pt] {$x$};
+\end{tikzpicture}

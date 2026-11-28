@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Axes
+  \draw[->, thick] (0,0) -- (4.8,0) node[above left=2pt] {$x$};
+  \draw[->, thick] (0,0) -- (0,3.5) node[left=2pt, anchor=north east] {$y$};
+
+  % Target path y = h and target dot
+  \draw[thick] (0,2.7) node[left=2pt] {$h$} -- (4.2,2.7);
+  \fill (4.2,2.7) circle (0.08);
+  \node[right=3pt] at (4.2,2.7) {$(vt, h)$};
+
+  % Missile position (x,y) and velocity vector
+  \coordinate (M) at (2.2, 1.45);
+  \coordinate (T) at (4.2, 2.7);
+  \draw[dashed, thick] (M) -- (2.2, 2.5);
+  \draw[dashed, thick] (M) -- (T);
+  \draw[->, thick] (M) -- ($(M)!0.62!(T)$) node[midway, below right=1pt] {$2v$};
+
+  \node[below=2pt] at (M) {$(x,y)$};
+  \node at (2.46, 1.98) {$\alpha$};
+\end{tikzpicture}

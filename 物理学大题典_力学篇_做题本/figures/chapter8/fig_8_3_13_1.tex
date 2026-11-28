@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Sphere of radius 1.25 cm
+  \draw (0, 0) circle (1.25);
+  \fill (0, 0) circle (1.4pt);
+
+  % z-axis pointing right
+  \draw[->] (0, 0) -- (2.25, 0);
+  \node[below] at (1.92, -0.04) {$z$};
+
+  % Position vector r on sphere at angle theta
+  \draw (0, 0) -- (48:1.25) node[midway, above left=-1pt] {$r$};
+
+  % Angle theta
+  \draw[thin] (0.45, 0) arc (0:48:0.45);
+  \node at (24:0.68) {$\theta$};
+
+  % Incoming uniform flow arrows from the right
+  \draw[<-] (3.25, 0.72) -- (4.05, 0.72);
+  \draw[<-] (3.25, 0.0) -- (3.85, 0.0);
+  \node[right] at (3.88, 0.0) {$u$};
+  \draw[<-] (3.25, -0.62) -- (4.05, -0.62);
+  \draw[<-] (3.25, -1.12) -- (4.05, -1.12);
+\end{tikzpicture}

@@ -1,0 +1,13 @@
+\begin{tikzpicture}[>=Stealth]
+  % Rotor circle and center of mass
+  \draw[thick] (0, 0) circle (0.75);
+  \fill (0, 0) circle (2.2pt);
+
+  % Symmetry axis with small gaps inside circle rim
+  \draw[thick] (-1.55, -1.55) -- (-0.53, -0.53);
+  \draw[thick] (-0.30, -0.30) -- (0.30, 0.30);
+  \draw[thick] (0.53, 0.53) -- (1.55, 1.55);
+
+  % Mass label
+  \node at (1.10, 0.12) {$M$};
+\end{tikzpicture}

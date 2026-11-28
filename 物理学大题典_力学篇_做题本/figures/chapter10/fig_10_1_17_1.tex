@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Vertical shaft
+  \draw (-0.06,-1.65) rectangle (0.06,2.00);
+
+  % Coordinate axes at top of shaft
+  \draw[->] (0,2.00) -- (0,2.85) node[left] {$z$};
+  \draw[->] (0.06,2.00) -- (1.05,2.00) node[right] {$x$};
+
+  % Masses m and collar M
+  \coordinate (ML) at (-1.35,0.75);
+  \coordinate (MR) at (1.35,0.75);
+
+  % Four arms of length l
+  \draw (-0.06,2.00) -- (ML) node[midway, above left=0pt] {$l$};
+  \draw (0.06,2.00) -- (MR) node[midway, above right=0pt] {$l$};
+  \draw (ML) -- (-0.21,-0.28) node[midway, below left=0pt] {$l$};
+  \draw (MR) -- (0.21,-0.28) node[midway, below right=0pt] {$l$};
+
+  % Collar M
+  \draw[fill=white] (-0.21,-0.66) rectangle (0.21,-0.24);
+  \node[right=3pt] at (0.21,-0.45) {$M$};
+
+  % Masses m
+  \fill (ML) circle (2.3pt) node[left=3pt] {$m$};
+  \fill (MR) circle (2.3pt) node[right=3pt] {$m$};
+
+  % Rotation arrow omega
+  \draw[->] (110:0) ++(-0.11,-1.04) arc (110:395:0.32 and 0.12);
+  \node[right=2pt] at (0.34,-1.14) {$\omega$};
+\end{tikzpicture}

@@ -1,0 +1,33 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (O) at (0,0);
+
+  % Cone top rim and tangent slant edges
+  \draw (0,3.2) ellipse (1.55 and 0.45);
+  \draw (O) -- (-1.535,3.137);
+  \draw (O) -- (1.535,3.137);
+
+  % Horizontal circular orbit (dashed)
+  \draw[dashed] (0,1.90) ellipse (0.92 and 0.29);
+
+  % Coordinate axes
+  \draw[dashed] (O) -- (0,3.65);
+  \draw[->] (0,3.65) -- (0,4.25) node[left] {$z$};
+  \draw[->] (O) -- (1.85,0) node[right] {$y$};
+  \draw[->] (O) -- (-1.55,-1.05) node[right=2pt] {$x$};
+
+  % Particle q and projection onto xy-plane
+  \coordinate (C) at (0,1.90);
+  \coordinate (Q) at (0.42,1.64);
+  \coordinate (P) at (0.42,-0.26);
+  \draw (C) -- (Q) node[midway, above right=-2pt] {$r$};
+  \draw (Q) -- (P) node[midway, right] {$z$};
+  \draw (O) -- (1.25,-0.77);
+
+  % Azimuthal angle phi
+  \draw (-146:0.55) arc (-146:-31.6:0.55);
+  \node at (-88:0.78) {$\varphi$};
+
+  % Charges
+  \fill (O) circle (2pt) node[left=3pt] {$-q$};
+  \fill (Q) circle (2.2pt) node[below left=1pt] {$q$};
+\end{tikzpicture}

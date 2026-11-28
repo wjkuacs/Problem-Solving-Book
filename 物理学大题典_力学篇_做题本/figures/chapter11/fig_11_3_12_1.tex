@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth]
+  % Axes
+  \draw[->, thick] (0, 0) -- (4.2, 0) node[below] {$t$};
+  \draw[->, thick] (0, 0) -- (0, 2.75) node[left] {$\varphi$};
+  \node[below left=1pt] at (0, 0) {$0$};
+
+  % Broken line phi(t)
+  \draw[thick] (0, 0) -- (1.7, 2.2) -- (3.4, 1.0);
+
+  % Dashed guides
+  \draw[dashed] (1.7, 0) -- (1.7, 2.2);
+  \draw[dashed] (3.4, 0) -- (3.4, 1.0);
+  \draw[dash dot] (0, 1.0) -- (3.4, 1.0);
+
+  % Tick labels
+  \node[below=2pt] at (1.7, 0) {$1$};
+  \node[below=2pt] at (3.4, 0) {$2$};
+  \node[left=2pt] at (0, 1.0) {$1$};
+
+  % Peak height beta
+  \draw (1.7, 2.2) -- (2.4, 2.2);
+  \draw[<->] (2.2, 0) -- (2.2, 2.2) node[midway, fill=white, inner sep=2pt] {$\beta$};
+\end{tikzpicture}

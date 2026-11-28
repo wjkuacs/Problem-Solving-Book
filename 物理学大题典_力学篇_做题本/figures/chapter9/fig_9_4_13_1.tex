@@ -1,0 +1,91 @@
+\begin{tikzpicture}[>=Stealth, thick,
+    res/.style={draw, fill=white, minimum width=0.64cm, minimum height=0.18cm, inner sep=0pt},
+    vres/.style={draw, fill=white, minimum width=0.18cm, minimum height=0.64cm, inner sep=0pt}]
+    % Main rails and branches
+    \draw (0,0) -- (0,3.6) -- (5.6,3.6);
+    \draw (0,0) -- (5.6,0);
+    \draw (1.5,3.6) -- (1.5,0.95);
+    \draw (1.5,0.35) -- (1.5,0);
+
+    % Junction dots
+    \fill (1.5,3.6) circle (1.7pt);
+    \fill (1.5,0) circle (1.7pt);
+    \fill (3.9,3.6) circle (1.7pt);
+    \fill (3.9,0) circle (1.7pt);
+
+    % Left branch (x=0): R_1, C, L_1, arrow q_1 dot
+    \node[vres, label=left:$R_1$] at (0,0.8) {};
+    \draw[fill=white, draw=none] (-0.2,1.58) rectangle (0.2,1.80);
+    \draw (-0.22,1.61) -- (0.22,1.61);
+    \draw (-0.22,1.77) -- (0.22,1.77);
+    \node[left] at (-0.22,1.69) {$C$};
+    \draw[fill=white, draw=none] (-0.2,2.15) rectangle (0.2,2.95);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.0mm, amplitude=1.3mm}] (0,2.95) -- (0,2.15);
+    \node[left] at (-0.18,2.55) {$L_1$};
+    \draw[->] (0,3.12) -- (0,3.45);
+    \node[left] at (-0.05,3.28) {$\dot{q}_1$};
+
+    % Top-left battery E_1 (long thin on left, short thick on right)
+    \draw[fill=white, draw=none] (0.62,3.4) rectangle (0.86,3.8);
+    \draw (0.66,3.36) -- (0.66,3.84);
+    \draw[ultra thick] (0.82,3.46) -- (0.82,3.74);
+    \node[below] at (0.74,3.36) {$E_1$};
+
+    % Second vertical branch (x=1.5): q_2 dot, R_2, L_2, E_2 = E_0 sin(wt)
+    \draw[->] (1.5,3.42) -- (1.5,3.05);
+    \node[right] at (1.55,3.24) {$\dot{q}_2$};
+    \node[vres, label=right:$R_2$] at (1.5,2.5) {};
+    \draw[fill=white, draw=none] (1.3,1.25) rectangle (1.7,2.0);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.0mm, amplitude=1.3mm}] (1.5,2.0) -- (1.5,1.25);
+    \node[right] at (1.68,1.62) {$L_2$};
+
+    % AC terminal circles for E_2
+    \draw[fill=white] (1.5,0.95) circle (2.0pt);
+    \draw[fill=white] (1.5,0.35) circle (2.0pt);
+    \node[right, font=\small] at (1.58,0.95) {$+$};
+    \node[right, font=\small] at (1.58,0.35) {$-$};
+    \node[font=\footnotesize] at (1.5,0.65) {$E_2 = E_0\sin\omega t$};
+
+    % Top-middle branch: L_3, R_3, q_3 dot
+    \draw[fill=white, draw=none] (1.85,3.4) rectangle (2.6,3.8);
+    \draw[decorate, decoration={coil, aspect=0.45, segment length=2.0mm, amplitude=1.3mm}] (1.85,3.6) -- (2.6,3.6);
+    \node[below] at (2.22,3.4) {$L_3$};
+    \node[res, label=below:$R_3$] at (3.00,3.6) {};
+    \draw[->] (3.76,3.6) -- (3.48,3.6);
+    \node[above] at (3.62,3.62) {$\dot{q}_3$};
+
+    % Left vacuum tube diode at x=3.9, center (3.9, 1.55)
+    \draw (3.9,1.55) circle (0.62);
+    % Anode at bottom
+    \draw (3.9,0) -- (3.9,1.23);
+    \draw (3.68,1.23) -- (4.12,1.23);
+    % Cathode & heater at top
+    \draw (3.9,3.6) -- (3.9,2.85);
+    \fill (3.9,2.85) circle (1.7pt);
+    \draw (3.9,2.85) -- (3.9,1.67) -- (3.68,1.67);
+    % Heater loop & filament battery at top-left of diode
+    \draw (3.68,1.67) -- (3.68,1.83) -- (4.06,1.83) -- (4.06,2.45) -- (3.35,2.45) -- (3.35,2.85);
+    \draw (3.9,2.85) -- (3.58,2.85);
+    \draw (3.35,2.85) -- (3.48,2.85);
+    \draw (3.48,2.67) -- (3.48,3.03);
+    \draw[ultra thick] (3.58,2.74) -- (3.58,2.96);
+
+    % E_3 voltage arrow between top and bottom rails
+    \draw[<->, thin] (4.72,0) -- (4.72,3.6) node[midway, fill=white, inner sep=1.5pt] {$E_3$};
+
+    % Right vacuum tube diode at x=5.6, center (5.6, 1.55)
+    \draw (5.6,1.55) circle (0.62);
+    % Anode at top
+    \draw (5.6,3.6) -- (5.6,1.87);
+    \draw (5.38,1.87) -- (5.82,1.87);
+    % Cathode & heater at bottom
+    \draw (5.6,0) -- (5.6,0.55);
+    \fill (5.6,0.55) circle (1.7pt);
+    \draw (5.6,0.55) -- (5.6,1.43) -- (5.82,1.43);
+    % Heater loop & filament battery at bottom-right of diode
+    \draw (5.82,1.43) -- (5.82,1.27) -- (5.44,1.27) -- (5.44,0.85) -- (6.15,0.85) -- (6.15,0.55);
+    \draw (5.6,0.55) -- (5.92,0.55);
+    \draw (6.15,0.55) -- (6.02,0.55);
+    \draw (5.92,0.37) -- (5.92,0.73);
+    \draw[ultra thick] (6.02,0.44) -- (6.02,0.66);
+\end{tikzpicture}

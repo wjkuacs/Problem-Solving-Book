@@ -1,0 +1,60 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, scale=0.60]
+  % Left wall and bottom x-axis
+  \draw[->] (0,0) -- (0,2.95);
+  \draw[->] (0,0) -- (10.1,0) node[below] {$x$};
+
+  % Plank m1 and its left stop
+  \draw (1.75,0.06) rectangle (9.45,0.72);
+  \draw (1.75,0.72) rectangle (1.98,2.05);
+  \node at (6.25,0.38) {$m_1$};
+
+  % Spring k1
+  \draw (0,0.39) -- (0.25,0.39);
+  \draw[decorate, decoration={zigzag, segment length=2.1mm, amplitude=1.4mm}] (0.25,0.39) -- node[midway, above=4pt] {$k_1$} (1.5,0.39);
+  \draw (1.5,0.39) -- (1.75,0.39);
+
+  % Blocks m2 and m3
+  \draw (4.15,0.78) rectangle (4.9,2.85);
+  \node at (4.525,1.82) {$m_2$};
+
+  \draw (7.75,0.78) rectangle (8.5,2.85);
+  \node at (8.125,1.82) {$m_3$};
+
+  % Spring k2
+  \draw (1.98,1.5) -- (2.25,1.5);
+  \draw[decorate, decoration={zigzag, segment length=2.1mm, amplitude=1.4mm}] (2.25,1.5) -- node[midway, above=4pt] {$k_2$} (3.88,1.5);
+  \draw (3.88,1.5) -- (4.15,1.5);
+
+  % Spring k3
+  \draw (4.9,1.2) -- (5.2,1.2);
+  \draw[decorate, decoration={zigzag, segment length=2.1mm, amplitude=1.4mm}] (5.2,1.2) -- node[midway, above=4pt] {$k_3$} (7.45,1.2);
+  \draw (7.45,1.2) -- (7.75,1.2);
+
+  % Dashpot (damper) between m2 and m3
+  \draw (4.9,2.32) -- (6.85,2.32);
+  \draw (4.9,2.44) -- (6.85,2.44);
+  \draw (6.85,2.06) -- (6.85,2.70);
+  % Cylinder open on left
+  \draw (6.55,2.82) -- (6.72,2.74) -- (7.75,2.74);
+  \draw (6.55,1.94) -- (6.72,2.02) -- (7.75,2.02);
+  \node[above=2pt] at (7.22,2.76) {减震器};
+  % Dots inside dashpot cylinder
+  \foreach \px/\py in {7.02/2.20, 7.08/2.56, 7.22/2.36, 7.30/2.14, 7.38/2.60, 7.52/2.26, 7.56/2.47, 7.16/2.11, 7.42/2.40, 7.60/2.62} {
+    \fill (\px,\py) circle (1.2pt);
+  }
+
+  % Position labels x1, x2, x3
+  \node[below=2pt] at (1.75,0) {$x_1$};
+  \node[below=2pt] at (4.525,0) {$x_2$};
+  \node[below=2pt] at (7.75,0) {$x_3$};
+
+  % Friction / damping coefficients alpha1, alpha2, alpha3
+  \draw[->] (2.55,0.28) to[bend right=25] (2.1,0.06);
+  \node[right=1pt] at (2.52,0.32) {$\alpha_1$};
+
+  \draw[->] (4.72,0.42) to[bend right=25] (4.52,0.75);
+  \node[right=1pt] at (4.7,0.42) {$\alpha_2$};
+
+  \draw[->] (8.32,0.42) to[bend right=25] (8.12,0.75);
+  \node[right=1pt] at (8.3,0.42) {$\alpha_3$};
+\end{tikzpicture}

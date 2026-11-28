@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  % Left guide walls for sliding support
+  \fill[pattern=north east lines] (0, 1.55) rectangle (1.15, 1.78);
+  \draw[thick] (0, 1.55) -- (1.15, 1.55);
+  \fill[pattern=north east lines] (0, 0.22) rectangle (1.15, 0.45);
+  \draw[thick] (0, 0.45) -- (1.15, 0.45);
+
+  % Sliding support block
+  \draw[thick] (0.15, 0.52) rectangle (0.85, 1.48);
+
+  % Spring
+  \draw[thick] (0.85, 1.0) -- (1.25, 1.0);
+  \draw[thick, decorate, decoration={zigzag, segment length=7pt, amplitude=3.5pt}]
+    (1.25, 1.0) -- (2.45, 1.0);
+  \draw[thick] (2.45, 1.0) -- (2.85, 1.0);
+  \node[above] at (1.85, 1.18) {$k$};
+
+  % Floor under cart
+  \fill[pattern=north east lines] (2.2, -0.22) rectangle (4.65, 0);
+  \draw[thick] (2.2, 0) -- (4.65, 0);
+
+  % Mass cart with wheels
+  \draw[thick] (2.85, 0.42) rectangle (4.15, 1.45);
+  \node at (3.5, 0.935) {$m$};
+  \draw[thick] (3.15, 0.21) circle (0.21);
+  \draw[thick] (3.85, 0.21) circle (0.21);
+
+  % Applied force F(t)
+  \draw[->, thick] (4.15, 0.95) -- (5.2, 0.95) node[midway, above] {$F(t)$};
+
+  % Coordinate axes below
+  \draw[->, thick] (0.15, -0.65) -- (1.45, -0.65) node[below] {$x_s$};
+  \node[below] at (0.15, -0.68) {$0$};
+
+  \draw[->, thick] (2.25, -0.65) -- (5.2, -0.65) node[below] {$x$};
+  \draw (2.85, -0.65) -- (2.85, -0.57);
+  \node[below] at (2.85, -0.68) {$0$};
+\end{tikzpicture}

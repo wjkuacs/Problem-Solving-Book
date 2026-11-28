@@ -1,0 +1,24 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Hatched walls and floor
+  \fill[pattern=north east lines] (-0.22, -0.22) rectangle (0, 1.35);
+  \fill[pattern=north east lines] (0, -0.22) rectangle (5.2, 0);
+  \fill[pattern=north east lines] (5.2, -0.22) rectangle (5.42, 1.35);
+  \draw[thick] (0, 1.35) -- (0, 0) -- (5.2, 0) -- (5.2, 1.35);
+
+  % Mass block
+  \draw[thick, fill=white] (2.25, 0) rectangle (2.95, 0.85);
+  \node[above=2pt] at (2.60, 0.85) {$m$};
+
+  % Left and right springs
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=14, post length=14}] (0, 0.425) -- (2.25, 0.425);
+  \draw[thick, decorate, decoration={zigzag, segment length=5.5, amplitude=3.2, pre length=14, post length=14}] (2.95, 0.425) -- (5.2, 0.425);
+  \node at (1.125, 0.72) {$k$};
+  \node at (4.075, 0.72) {$k$};
+
+  % Dimension labels 2l_0
+  \draw[thin] (0, -0.28) -- (0, -0.96);
+  \draw[thin] (2.60, -0.28) -- (2.60, -0.96);
+  \draw[thin] (5.2, -0.28) -- (5.2, -0.96);
+  \draw[<->, thin] (0, -0.78) -- (2.60, -0.78) node[midway, above=2pt] {$2l_0$};
+  \draw[<->, thin] (2.60, -0.78) -- (5.2, -0.78) node[midway, above=2pt] {$2l_0$};
+\end{tikzpicture}

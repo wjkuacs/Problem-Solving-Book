@@ -1,0 +1,25 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Sun at origin
+  \fill (0, 0) circle (1.5pt);
+  \node[below=2pt] at (0, 0) {太阳};
+
+  % Circular orbits of Earth (R1) and Mars (R2)
+  \draw (0, 0) circle (1.35);
+  \draw (0, 0) circle (2.15);
+
+  % Spacecraft transfer ellipse tangent at (+1.35, 0) and (-2.15, 0)
+  \draw (-0.40, 0) ellipse (1.75 and 0.78);
+
+  % Radius vectors R1 and R2
+  \draw[->] (0, 0) -- (52:1.35) node[pos=0.38, right=2pt] {$R_1$};
+  \draw[->] (0, 0) -- (105:2.15) node[pos=0.78, left=2pt] {$R_2$};
+
+  % Orbit labels and leader arrows
+  \node[left] (earth) at (-2.25, 1.85) {地球轨道};
+  \draw[->] (earth.east) -- (138:1.35);
+
+  \node[left] at (-2.15, 1.05) {火星轨道};
+
+  \node[left] (ship) at (-2.25, -1.55) {飞船轨道};
+  \draw[->] (ship.east) -- (-1.35, -0.66);
+\end{tikzpicture}

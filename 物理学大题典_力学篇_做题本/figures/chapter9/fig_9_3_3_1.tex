@@ -1,0 +1,64 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  % Axes
+  \draw[thick, ->] (-2.9, 0) -- (3.15, 0) node[below=2pt] {$x$};
+  \draw[thick, ->] (0, -1.9) -- (0, 2.0) node[left=1pt] {$y$};
+  \node[below left=1pt] at (0,0) {$O$};
+
+  % Fixed anchor points A, B, C, D and displaced point P
+  \coordinate (A) at (2.55, 1.55);
+  \coordinate (B) at (-2.40, 1.10);
+  \coordinate (C) at (-1.75, -1.35);
+  \coordinate (D) at (1.60, -1.45);
+  \coordinate (P) at (0.25, 0.52);
+
+  % Equilibrium dashed lines
+  \draw[dashed] (0,0) -- (A) node[pos=0.62, below right=1pt] {$l_1$};
+  \draw[dashed] (0,0) -- (B) node[pos=0.48, below left=1pt] {$l_2$};
+  \draw[dashed] (0,0) -- (C) node[pos=0.64, below right=2pt] {$l_3$};
+  \draw[dashed] (0,0) -- (D) node[pos=0.68, below left=1pt] {$l_4$};
+
+  % Springs
+  \tikzset{spring/.style={thick, decorate, decoration={zigzag, segment length=6pt, amplitude=2.5pt, pre length=14pt, post length=14pt}}}
+  \draw[spring] (P) -- (A) node[midway, above left=2pt] {$k_1$};
+  \draw[spring] (P) -- (B) node[midway, above right=1pt] {$k_2$};
+  \draw[thick, decorate, decoration={zigzag, segment length=6pt, amplitude=2.5pt, pre length=24pt, post length=12pt}] (P) -- (C) node[pos=0.66, above left=2pt] {$k_3$};
+  \draw[spring] (P) -- (D) node[midway, above right=1pt] {$k_4$};
+
+  % Point P label
+  \fill (P) circle (1.5pt);
+  \node[above=2pt] at (P) {$P$};
+  \node[right=4pt, fill=white, inner sep=1pt] at (P) {$(x,y)$};
+
+  % Hatched wall supports at A, B, C, D
+  % Wall at A (tilt ~ -50 deg)
+  \draw[thick] ($(A)+(-0.18,0.24)$) -- ($(A)+(0.18,-0.24)$);
+  \foreach \t in {-0.15,-0.05,0.05,0.15} {
+    \draw ($(A)+(\t,-\t*1.33)$) -- ++(0.16, 0.08);
+  }
+  \node[above right=2pt] at (A) {$A$};
+  \node[below right=2pt] at (A) {$(x_1,y_1)$};
+
+  % Wall at B (vertical)
+  \draw[thick] ($(B)+(0,-0.24)$) -- ($(B)+(0,0.24)$);
+  \foreach \y in {-0.2,-0.1,0,0.1,0.2} {
+    \draw ($(B)+(0,\y)$) -- ++(-0.15, -0.15);
+  }
+  \node[left=5pt] at (B) {$B$};
+  \node[below left=6pt] at (B) {$(x_2,y_2)$};
+
+  % Wall at C (tilt ~ -30 deg)
+  \draw[thick] ($(C)+(-0.22,0.12)$) -- ($(C)+(0.22,-0.12)$);
+  \foreach \t in {-0.18,-0.06,0.06,0.18} {
+    \draw ($(C)+(\t,-0.55*\t)$) -- ++(-0.08, -0.15);
+  }
+  \node[below left=4pt] at (C) {$C$};
+  \node[below=14pt] at (C) {$(x_3,y_3)$};
+
+  % Wall at D (tilt ~ 35 deg)
+  \draw[thick] ($(D)+(-0.20,-0.14)$) -- ($(D)+(0.20,0.14)$);
+  \foreach \t in {-0.15,-0.05,0.05,0.15} {
+    \draw ($(D)+(\t,0.7*\t)$) -- ++(0.08, -0.15);
+  }
+  \node[below=5pt] at (D) {$D$};
+  \node[below right=4pt] at (D) {$(x_4,y_4)$};
+\end{tikzpicture}

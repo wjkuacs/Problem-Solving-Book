@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Circular hoop of radius R
+  \draw (0, 0) circle (1.75);
+
+  % Center and radius R
+  \fill (0, 0) circle (1.8pt);
+  \draw[->] (0, 0) -- (30:1.75) node[midway, above left=-1pt] {$R$};
+
+  % Mass label M
+  \node at (-1.3, 0.3) {$M$};
+
+  % Knife-edge support at top inside rim
+  \draw (0, 1.75) -- (-0.22, 1.37) -- (0.22, 1.37) -- cycle;
+\end{tikzpicture}

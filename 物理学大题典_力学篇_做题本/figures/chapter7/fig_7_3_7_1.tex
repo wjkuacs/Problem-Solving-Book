@@ -1,0 +1,14 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\R{1.35}
+  % 轮子
+  \draw[thick] (0,0) circle (\R);
+  \fill (0,0) circle (1.5pt);
+  \node[below=2pt] at (0,0) {$O$};
+  \draw[thick, ->] (0,0) -- (30:\R) node[midway, above left=1pt] {$R$};
+  \node at (-25:{\R+0.32}) {$m$};
+
+  % 轻绳与重物 M
+  \draw[thick] (-\R,0) -- (-\R,-2.7);
+  \draw[thick] ({\R*-1-0.45},-2.7) rectangle ({\R*-1+0.45},-3.3);
+  \node[right=4pt] at ({\R*-1+0.45},-3.0) {$M$};
+\end{tikzpicture}

@@ -1,0 +1,40 @@
+\begin{tikzpicture}[>=Stealth, scale=1.05]
+  \def\ang{22}
+  % Inclined plane sloping down to the left
+  \coordinate (Lend) at (-2.7, {-2.7*tan(\ang)});
+  \coordinate (Rend) at (2.2, {2.2*tan(\ang)});
+  \draw[thick, ->] (Rend) -- ($(Lend) - ({0.6*cos(\ang)}, {0.6*sin(\ang)})$) node[below right=1pt] {$x$};
+  \draw[thick, ->] (Rend) -- ++({-2.7*sin(\ang)}, {2.7*cos(\ang)}) node[right=2pt] {$y$};
+
+  % Horizontal reference line and angle alpha
+  \draw (-2.7, {-2.7*tan(\ang)}) -- (-1.0, {-2.7*tan(\ang)});
+  \node at (-1.58, {-2.7*tan(\ang)+0.18}) {$\alpha$};
+
+  % Hatching under inclined plane
+  \foreach \s in {-2.1,-1.8,...,2.1} {
+    \pgfmathsetmacro{\px}{\s}
+    \pgfmathsetmacro{\py}{\s*tan(\ang)}
+    \draw (\px,\py) -- (\px-0.14,\py-0.2);
+  }
+
+  % Wheel and axle resting on the incline at s = 0
+  \def\R{1.15}
+  \def\r{0.58}
+  \coordinate (O) at ({-\R*sin(\ang)}, {\R*cos(\ang)});
+  \draw[thick] (O) circle (\R);
+  \draw[thick] (O) circle (\r);
+  \fill (O) circle (1.3pt);
+
+  % Radius arrows R and r
+  \draw[->] (O) -- ++(155:\R) node[midway, below left=1pt] {$R$};
+  \draw[->] (O) -- ++(25:\r) node[pos=0.55, below=2pt] {$r$};
+
+  % Weight Q of wheel-axle
+  \draw[->] (O) -- ++(0, -0.88) node[right=1pt] {$Q$};
+
+  % Vertical rope from right side of inner drum down to weight P
+  \coordinate (T) at ($(O) + (\r, 0)$);
+  \draw[thick] (T) -- ++(0, -2.1);
+  \draw[thick, fill=white] ($(T) + (-0.28, -2.1)$) rectangle ++(0.56, -0.38);
+  \draw[->] ($(T) + (0, -2.29)$) -- ++(0, -0.65) node[right=1pt] {$P$};
+\end{tikzpicture}

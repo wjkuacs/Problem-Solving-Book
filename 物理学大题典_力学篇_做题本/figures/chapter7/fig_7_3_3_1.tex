@@ -1,0 +1,53 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Ceiling
+  \fill[pattern=north east lines] (-2.75, 2.95) rectangle (2.85, 3.15);
+  \draw (-2.75, 2.95) -- (2.85, 2.95);
+
+  % Left pendulum (disk only)
+  \begin{scope}[shift={(-1.4, 0)}]
+    % Disk
+    \draw (-1.1, 0.35) -- (-1.1, 0.21) arc (180:360:1.1 and 0.36) -- (1.1, 0.35);
+    \draw[fill=white] (0, 0.35) ellipse (1.1 and 0.36);
+    % Wire
+    \draw (0, 0.35) -- (0, 2.95);
+    \node at (0.24, 0.32) {$M$};
+    % Radius R
+    \draw[->] (0, 0.35) -- ++(205:1.1 and 0.36) node[midway, above left=-2pt] {$R$};
+  \end{scope}
+
+  % Right pendulum (disk + two cylinders)
+  \begin{scope}[shift={(1.35, 0)}]
+    % Disk
+    \draw (-1.1, 0.35) -- (-1.1, 0.21) arc (180:360:1.1 and 0.36) -- (1.1, 0.35);
+    \draw[fill=white] (0, 0.35) ellipse (1.1 and 0.36);
+    % Wire
+    \draw (0, 0.35) -- (0, 2.95);
+    \node at (0.24, 0.24) {$M$};
+    % Radius R
+    \draw[->] (0, 0.35) -- ++(212:1.1 and 0.36) node[midway, above left=-2pt] {$R$};
+
+    % Left cylinder (center at -0.825, radius 0.275)
+    \fill[white] (-1.10, 0.35) rectangle (-0.55, 1.32);
+    \draw (-1.10, 1.32) -- (-1.10, 0.35) arc (180:360:0.275 and 0.09) -- (-0.55, 1.32);
+    \draw[fill=white] (-0.825, 1.32) ellipse (0.275 and 0.09);
+    \node at (-0.825, 0.78) {$M$};
+
+    % Right cylinder (center at 0.825, radius 0.275)
+    \fill[white] (0.55, 0.35) rectangle (1.10, 1.32);
+    \draw (0.55, 1.32) -- (0.55, 0.35) arc (180:360:0.275 and 0.09) -- (1.10, 1.32);
+    \draw[fill=white] (0.825, 1.32) ellipse (0.275 and 0.09);
+    \node at (0.825, 0.78) {$M$};
+
+    % Dimension 3/4 R
+    \draw[thin] (0.825, 1.32) -- (0.825, 2.30);
+    \draw[thin, ->] (-0.35, 1.72) -- (0, 1.72);
+    \draw[thin, ->] (1.18, 1.72) -- (0.825, 1.72);
+    \node at (0.4125, 1.72) {$\frac{3}{4}R$};
+
+    % Dimension 1/4 R
+    \draw[thin] (1.10, 1.32) -- (1.10, 2.30);
+    \draw[thin, ->] (0.52, 2.12) -- (0.825, 2.12);
+    \draw[thin, ->] (1.40, 2.12) -- (1.10, 2.12);
+    \node at (0.9625, 2.46) {$\frac{1}{4}R$};
+  \end{scope}
+\end{tikzpicture}

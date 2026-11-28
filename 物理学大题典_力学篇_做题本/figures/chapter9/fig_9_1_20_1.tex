@@ -1,0 +1,30 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Coordinates: O is centroid of triangle ABC
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (-2.10,0.35);
+    \coordinate (B) at (0.65,-1.20);
+    \coordinate (C) at (1.45,0.85);
+    \coordinate (D) at (0,2.55);
+    \coordinate (M) at ($(B)!0.5!(C)$);
+
+    % Coordinate axes
+    \draw[->] (O) -- (0,3.35) node[left] {$y$};
+    \draw[->] (O) -- (2.45,1.44) node[above left, inner sep=2pt] {$x$};
+
+    % Tripod legs and base rope triangle
+    \draw (D) -- (A);
+    \draw (D) -- (B);
+    \draw (D) -- (C);
+    \draw (A) -- (B) -- (C) -- cycle;
+    \draw (A) -- (M);
+
+    % Angle theta between DA and DO
+    \pic[draw, angle radius=0.65cm, "$\theta$", angle eccentricity=1.40] {angle = A--D--O};
+
+    % Labels
+    \node[above left, inner sep=2pt] at (D) {$D$};
+    \node[left] at (A) {$A$};
+    \node[below] at (B) {$B$};
+    \node[above, inner sep=3pt] at (C) {$C$};
+    \node[below, inner sep=2pt] at ($(O)+(0,-0.04)$) {$O$};
+\end{tikzpicture}

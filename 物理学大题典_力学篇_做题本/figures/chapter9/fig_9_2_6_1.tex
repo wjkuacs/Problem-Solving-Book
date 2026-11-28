@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, scale=1.0]
+  \def\R{1.80}
+  \coordinate (O) at (0,0);
+  \draw[thick] (O) circle (\R);
+
+  % Top polar axis (t=0)
+  \draw[thick] (0, \R) -- (-2.1, \R);
+  \node[above] at (-1.15, \R) {极轴（$t=0$ 时）};
+
+  % Vertical radius R
+  \draw[thick] (O) -- (0, \R) node[midway, left=1pt] {$R$};
+
+  % Point O' at -35 deg (psi = 125 deg from top vertical)
+  \coordinate (Op) at (-35:\R);
+  \draw[thick] (O) -- (Op);
+  % Inward radial acceleration arrow R\dot{\psi}^2 along O'O
+  \draw[thick, ->] (Op) -- ($(Op)!0.48!(O)$);
+  \node[below left=1pt] at ($(Op)!0.70!(O)$) {$R\dot{\psi}^2$};
+
+  % Polar axis at O'
+  \draw[thick] (Op) -- ++(-2.1, 0);
+  \node[below=2pt] at ($(Op) + (-1.45, 0)$) {极轴};
+
+  % Angle psi
+  \draw (90:0.42) arc (90:-35:0.42);
+  \node at (32:0.65) {$\psi$};
+
+  % Angle theta between leftward polar axis (180 deg) and tangent O'P (55 deg)
+  \draw ($(Op) + (180:0.55)$) arc (180:55:0.55);
+  \node at ($(Op) + (118:0.78)$) {$\theta$};
+  \node[below right=1pt] at (Op) {$O'$};
+
+  % Tangent line: downward arrow R\ddot{\psi} and string O'P of length l=2.55
+  \draw[thick, ->] (Op) -- ++(-125:0.95) node[right=2pt] {$R\ddot{\psi}$};
+  \coordinate (P) at ($(Op) + (55:2.55)$);
+  \draw[thick] (Op) -- (P);
+  \fill (P) circle (2pt);
+
+  % Acceleration vectors at P
+  \draw[thick, ->] (P) -- ++(55:0.75) node[above=1pt] {$\ddot{l}$};
+  \draw[thick, ->] (P) -- ++(-125:0.85) node[right=2pt] {$l\dot{\theta}^2$};
+  \draw[thick, ->] (P) -- ++(-35:0.68) node[above right=1pt] {$2\dot{l}\dot{\theta}$};
+  \draw[thick, ->] ($(P) + (-125:0.18)$) -- ++(-35:0.68) node[below right=1pt] {$l\ddot{\theta}$};
+\end{tikzpicture}

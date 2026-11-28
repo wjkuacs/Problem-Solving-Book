@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth]
+  % Axes
+  \draw[->] (-0.1, 0) -- (4.5, 0) node[below] {$x$};
+  \draw[->] (0, -0.85) -- (0, 1.85) node[left] {$y$};
+
+  % Angular velocity Omega around y-axis
+  \draw[->, thick] (-0.21, 1.41) arc (145:395:0.26 and 0.10);
+  \node[right=3pt] at (0.24, 1.42) {$\Omega$};
+
+  % Vibrating rotating string
+  \draw[thick] plot[smooth] coordinates {
+    (0, 0) (0.55, 0.22) (1.10, 0) (1.70, -0.16) (2.30, 0)
+    (2.85, 0.22) (3.35, 0) (3.68, -0.17) (3.92, 0) (4.05, 0.18)
+  };
+
+  % String length L
+  \draw (4.05, -0.28) -- (4.05, -0.75);
+  \draw[<->] (0, -0.55) -- (4.05, -0.55) node[midway, above=2pt] {$L$};
+\end{tikzpicture}

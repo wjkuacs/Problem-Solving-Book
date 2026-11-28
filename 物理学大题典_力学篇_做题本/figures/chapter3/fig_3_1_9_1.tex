@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, scale=1]
+  % Horizontal tabletop in perspective
+  \draw[thick] (-2.4, -0.70) -- (1.6, -0.70) -- (2.4, 0.70) -- (-1.6, 0.70) -- cycle;
+
+  % Dashed circular orbit
+  \draw[dashed, thick] (0, 0) ellipse (1.25 and 0.46);
+
+  % Strings and masses
+  \coordinate (M1) at ({1.25*cos(28)}, {0.46*sin(28)});
+  \draw[thick] (0, 0) -- (M1);
+  \draw[thick] (0, 0) -- (0, -2.15);
+
+  % Small hole at center
+  \draw[thick, fill=white] (0, 0) circle (0.065);
+
+  % Masses m1 and m2
+  \fill (M1) circle (0.075) node[right=3pt] {$m_1$};
+  \fill (0, -2.15) circle (0.075) node[right=3pt] {$m_2$};
+\end{tikzpicture}

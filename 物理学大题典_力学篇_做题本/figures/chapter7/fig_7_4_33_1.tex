@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  % Axes
+  \draw[->] (-2.4,0) -- (2.6,0) node[right] {$x$};
+  \draw[->] (0,-1.85) -- (0,1.25) node[above] {$y$};
+  \node[below right=1pt] at (0,0) {$O$};
+
+  % Rod A at y=0 (slightly below x-axis, shifted right by epsilon)
+  \draw (-1.95,0) rectangle (0.06,-0.12);
+  \node at (-1.45,-0.32) {$A$};
+
+  % Rod B at y=0 (slightly above x-axis)
+  \draw (0,0) rectangle (2.0,0.12);
+  \node at (0.65,-0.25) {$B$};
+
+  % Initial dashed Rod A
+  \draw[dashed] (-1.95,-1.2) rectangle (0.06,-1.32);
+  \node at (-1.45,-1.55) {$A$};
+  \draw[->] (-0.95,-1.2) -- (-0.95,-0.65) node[left=1pt, pos=0.65] {$v_{A0}$};
+
+  % Post-collision velocities and angular velocities
+  \draw[->] (-0.95,0) -- (-0.95,0.65) node[left=1pt] {$v_A$};
+  \draw[->] (-1.3,0.18) arc (145:-50:0.38);
+  \node[below=1pt] at (-0.72,-0.32) {$\omega_A$};
+
+  \draw[->] (1.0,0.12) -- (1.0,0.75) node[left=1pt] {$v_B$};
+  \draw[->] (0.65,0.28) arc (145:-50:0.38);
+  \node[below=1pt] at (1.20,-0.23) {$\omega_B$};
+\end{tikzpicture}

@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\L{3.3}
+  \def\ang{28} % angle with vertical y-axis
+  \def\d{0.11}
+
+  % Axes
+  \draw[->] (-1.3,0) -- (2.4,0) node[right] {$x$};
+  \draw[->] (0,-0.4) -- (0,3.5) node[above] {$y$};
+
+  % Rod starting near origin
+  \coordinate (A) at (0,0);
+  \coordinate (Top) at ({\L*sin(\ang)},{\L*cos(\ang)});
+  \coordinate (u) at ({cos(\ang)*\d},{-sin(\ang)*\d});
+  \draw (A) -- (Top) -- ($(Top)+(u)$) -- ($(A)+(u)$) -- cycle;
+  \node[below left=1pt] at (A) {$A$};
+
+  % Midpoint C and weight mg
+  \coordinate (C) at ($0.5*(A)+0.5*(Top)$);
+  \node[above left=0pt] at (C) {$C$};
+  \draw[->] ($(C)+0.5*(u)$) -- ++(0,-1.25) node[right=1pt] {$mg$};
+
+  % Normal force N along y-axis
+  \draw[->] (0,0) -- (0,1.25) node[left=1pt] {$N$};
+
+  % Angle theta_0
+  \coordinate (Y) at (0,2.0);
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.35, "$\theta_0$"] {angle = Top--A--Y};
+\end{tikzpicture}

@@ -1,0 +1,38 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Parameters: R = 3.6 cm
+  \def\R{3.6}
+
+  % Coordinate axes
+  \draw[->] (0, 0) -- (4.4, 0) node[below=2pt] {$x$};
+  \draw[->] (0, 0) -- (0, 4.2) node[left=2pt] {$y$};
+  \node[below left=1pt] at (0, 0) {$O$};
+
+  % Dashed square boundary
+  \draw[dashed] (0, \R) -- (\R, \R) -- (\R, 0);
+  \node[left=2pt] at (0, \R) {$R$};
+  \node[below=2pt] at (\R, 0) {$R$};
+  \node[right=2pt] at (\R, \R) {$(R, R)$};
+
+  % Quarter-circle arc centered at (R, R)
+  \draw (\R, \R) ++(180:\R) arc (180:270:\R);
+
+  % Radius R arrow
+  \draw[->] (\R, \R) -- ++(200:\R) node[midway, below right=1pt] {$R$};
+
+  % Ray l at 30 degrees extending past dashed line
+  \coordinate (O) at (0, 0);
+  \coordinate (Xdir) at (1, 0);
+  \coordinate (Ltip) at (30:4.45);
+  \draw (O) -- (Ltip) node[above right=-1pt] {$l$};
+
+  % Area element at polar coordinates (62:1.20)
+  \coordinate (P) at (62:1.20);
+  \coordinate (Q) at (30:{1.20*cos(32)});
+  \draw[thin] (O) -- (P) node[pos=0.60, above left=-1pt] {$r$};
+  \draw[thin] (P) -- (Q) node[pos=0.45, right=0pt] {$\rho$};
+  \node[draw, fill=white, inner sep=1.8pt] at (P) {};
+
+  % Angles 30 deg and theta
+  \pic[draw, thin, angle radius=0.88cm, angle eccentricity=1.36, "$30^\circ$"] {angle=Xdir--O--Ltip};
+  \pic[draw, thin, angle radius=0.58cm, angle eccentricity=1.35, "$\theta$"] {angle=Ltip--O--P};
+\end{tikzpicture}

@@ -1,0 +1,46 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\ang{21}
+  % Horizontal ground with hatching
+  \fill[pattern=north east lines] (-0.2, -0.25) rectangle (5.0, 0);
+  \draw (-0.2, 0) -- (5.0, 0);
+
+  % Inclined plane (x-axis)
+  \draw[->] (0, 0) -- (\ang:5.2) node[below right=1pt] {$x$};
+
+  % Incline angle theta
+  \draw (1.15, 0) arc[start angle=0, end angle=\ang, radius=1.15];
+  \node at (\ang/2:0.86) {$\theta$};
+
+  % Tank and water in rotated frame aligned with incline
+  \begin{scope}[shift={(\ang:1.45)}, rotate=\ang]
+    % Water region (slightly tilted free surface)
+    \fill[gray!12] (0, 0) -- (1.75, 0) -- (1.75, 1.52) -- (0, 2.22) -- cycle;
+    % Water dashes
+    \foreach \rx/\ry in {0.3/1.75, 0.75/1.68, 1.25/1.55, 0.45/1.35, 1.0/1.32,
+                         1.4/1.18, 0.25/0.98, 0.85/0.95, 1.35/0.85, 0.55/0.62,
+                         1.15/0.58, 0.35/0.30, 0.95/0.28, 1.45/0.32} {
+      \draw[thin] (\rx, \ry) -- ++(-18:0.20);
+    }
+    % Free water surface
+    \draw (0, 2.22) -- (1.75, 1.52);
+
+    % Left wall (y-axis) and right wall
+    \draw[->] (0, 0) -- (0, 2.60) node[left=2pt] {$y$};
+    \draw (1.75, 0) -- (1.75, 2.45);
+
+    % Dimension L1 below incline
+    \draw[thin] (0, -0.08) -- (0, -0.58);
+    \draw[thin] (1.75, -0.08) -- (1.75, -0.58);
+    \draw[<->] (0, -0.40) -- (1.75, -0.40)
+      node[midway, fill=white, inner sep=2pt] {$L_1$};
+
+    % Force attachment point on right wall
+    \coordinate (P) at (1.75, 1.25);
+  \end{scope}
+
+  % Horizontal reference line and pulling force F at angle alpha
+  \draw[dashed] (P) -- ++(1.55, 0);
+  \draw[->] (P) -- ++(43:1.65) node[above right=1pt] {$F$};
+  \draw (P) ++(0.70, 0) arc[start angle=0, end angle=43, radius=0.70];
+  \node at ($(P)+(21.5:0.92)$) {$\alpha$};
+\end{tikzpicture}

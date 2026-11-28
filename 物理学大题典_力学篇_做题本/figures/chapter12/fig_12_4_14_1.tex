@@ -1,0 +1,20 @@
+\begin{tikzpicture}[>=Stealth, thick, line cap=round, line join=round,
+  fermion/.style={postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}}]
+  \coordinate (V1) at (-1.4, 0);
+  \coordinate (V2) at (1.4, 0);
+
+  % 相互作用顶点
+  \fill (V1) circle (2.2pt);
+  \fill (V2) circle (2.2pt);
+
+  % 左侧粒子世界线
+  \draw[fermion] (-2.3, -1.25) -- (V1);
+  \draw[fermion] (V1) -- (-2.6, 1.1);
+
+  % 右侧粒子世界线
+  \draw[fermion] (2.8, -0.55) -- (V2);
+  \draw[fermion] (V2) -- (2.15, 1.2);
+
+  % 交换粒子（波浪线）
+  \draw[decorate, decoration={snake, amplitude=2.0mm, segment length=8.5mm}] (V1) -- (V2);
+\end{tikzpicture}

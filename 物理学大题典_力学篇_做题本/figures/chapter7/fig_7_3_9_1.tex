@@ -1,0 +1,32 @@
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round]
+  \def\ra{0.76}
+  \def\rb{0.56}
+  \def\gap{0.40}
+  \pgfmathsetmacro\xc{\ra+\gap+\rb}
+  \def\shift{3.55}
+
+  % 左图：两圆柱体转动初态
+  \draw[thick] (0,0) circle (\ra);
+  \fill (0,0) circle (1.3pt);
+  \draw[thick, ->] (0,0) -- (215:\ra) node[midway, below right=-2pt] {$r_1$};
+  \node at (162:{\ra-0.25}) {$m_1$};
+  \draw[thick, ->] (95:{\ra+0.18}) arc (95:52:{\ra+0.18});
+  \node[above] at (75:{\ra+0.20}) {$\omega_1$};
+
+  \begin{scope}[xshift=\xc cm]
+    \draw[thick] (0,0) circle (\rb);
+    \fill (0,0) circle (1.3pt);
+    \draw[thick, ->] (0,0) -- (225:\rb) node[midway, below right=-2pt] {$r_2$};
+    \node at (165:{\rb-0.22}) {$m_2$};
+    \draw[thick, ->] (110:{\rb+0.16}) arc (110:55:{\rb+0.16});
+    \node[above] at (85:{\rb+0.18}) {$\omega_2$};
+  \end{scope}
+
+  % 右图：冲量 I
+  \begin{scope}[xshift=\shift cm]
+    \draw[thick] (0,0) circle (\ra);
+    \draw[thick] (\xc,0) circle (\rb);
+    \draw[thick, ->] ({\ra+0.06},-0.04) -- ({\ra+0.06},0.58) node[right=1pt, pos=0.78] {$I$};
+    \draw[thick, ->] ({\ra+\gap-0.06},0.04) -- ({\ra+\gap-0.06},-0.58) node[left=1pt, pos=0.78] {$I$};
+  \end{scope}
+\end{tikzpicture}

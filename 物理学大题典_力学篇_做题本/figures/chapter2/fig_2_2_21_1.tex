@@ -1,0 +1,52 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\R{1.45}
+  \pgfmathsetmacro{\xCtwo}{\R*sqrt(3)}
+  \pgfmathsetmacro{\xA}{\R*sqrt(3)/2}
+  \pgfmathsetmacro{\yA}{\R/2}
+
+  \coordinate (C1) at (0,\R);
+  \coordinate (C2) at (\xCtwo,0);
+  \coordinate (A) at (\xA,\yA);
+  \coordinate (B) at (\xCtwo,\R);
+
+  % Ground
+  \draw[thick] (-2.85,0) -- (3.85,0);
+  \foreach \x in {-2.65,-2.35,...,3.75} {
+    \draw (\x,0) -- (\x-0.22,-0.25);
+  }
+
+  % Left incline + valley arc (225 deg to 330 deg around C1) + hill arc (150 deg down to 35 deg around C2)
+  \coordinate (JoinL) at ($(C1)+(225:\R)$);
+  \coordinate (TopL) at ($(JoinL)+(-1.55,1.55)$);
+  \draw[thick] (TopL) -- (JoinL)
+    arc (225:330:\R)
+    arc (150:35:\R);
+
+  % Block near top of left incline (rotated -45 deg)
+  \coordinate (Blk) at ($(TopL)+(0.16,-0.16)$);
+  \begin{scope}[shift={(Blk)}, rotate=-45]
+    \draw[thick, fill=white] (-0.18,0) rectangle (0.18,0.22);
+    \draw (-0.06,0) -- (-0.06,0.22) (0.06,0) -- (0.06,0.22);
+  \end{scope}
+
+  % Height h arrow
+  \draw[<->] (Blk |- 0,0) -- (Blk) node[midway, left=2pt] {$h$};
+
+  % Centers, dashed construction lines, and radius arrows
+  \fill (C1) circle (1.5pt);
+  \fill (C2) circle (1.5pt);
+  \draw[dashed] (C1) -- (B);
+  \draw[dashed] (C2) -- (A);
+
+  % Radius arrows labeled R
+  \draw[->, thick] (C1) -- ($(C1)+(302:\R)$) node[midway, left=1pt] {$R$};
+  \draw[->, thick] (C2) -- ($(C2)+(110:\R)$) node[midway, right=1pt] {$R$};
+
+  % Angle 30 deg at C2
+  \coordinate (LeftG) at (0,0);
+  \pic[draw, angle radius=0.65cm, angle eccentricity=1.55, "$30^\circ$"] {angle=A--C2--LeftG};
+
+  % Labels A and B
+  \node[above left=1pt] at (A) {$A$};
+  \node[above=2pt] at (B) {$B$};
+\end{tikzpicture}

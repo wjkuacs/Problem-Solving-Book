@@ -1,0 +1,31 @@
+\begin{tikzpicture}[>=Stealth, scale=0.95]
+  \coordinate (O) at (0,0);
+
+  % Space-fixed axes zeta, eta
+  \draw[->, thick] (O) -- (0,2.6) node[right] {$\zeta$};
+  \draw[->, thick] (O) -- (2.65,0) node[below] {$\eta$};
+  \node[below] at (0,-0.08) {$O$};
+
+  % Body axes z, y, x and initial angular velocity omega(0)
+  \coordinate (Ztip) at (-1.65,1.65);
+  \coordinate (ZetaTop) at (0,2.6);
+  \draw[->, thick] (O) -- (Ztip) node[above left] {$z$};
+  \draw[->, thick] (O) -- (-0.42,1.02) node[above left=-1pt] {$y$};
+  \draw[->, thick] (O) -- (1.92,1.88) node[above right] {$x$};
+  \draw[->, thick] (O) -- (0.98,2.48) node[right] {$\boldsymbol{\omega}(0)$};
+
+  % Angle theta between z and zeta (placed high enough to clear y)
+  \pic[draw, angle radius=1.5cm, angle eccentricity=1.18, "$\theta$"] {angle = ZetaTop--O--Ztip};
+
+  % Tilted body equatorial surface contour (closed smooth curve)
+  \draw[thick] plot [smooth cycle, tension=0.72] coordinates {
+    (-1.85, 0.35) (-0.42, 1.02) (1.28, 1.52) (1.58, 0.42)
+    (0.65, -0.92) (-0.98, -0.80)
+  };
+
+  % Lower horizontal reference plane arc intersecting the body contour
+  \draw[thick] (-1.22,-0.62) .. controls (-1.75,-1.55) and (1.95,-1.75) .. (1.52,0.18);
+
+  % Node line label xi, N at lower intersection
+  \node[below right] at (0.58,-0.92) {$\xi, N$};
+\end{tikzpicture}

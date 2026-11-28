@@ -1,0 +1,59 @@
+\begin{tikzpicture}[>=Stealth, line width=0.6pt, font=\small]
+    % Rhombus vertices
+    \coordinate (A) at (0,2.40);
+    \coordinate (B) at (-1.60,0.20);
+    \coordinate (C) at (0,-2.00);
+    \coordinate (D) at (1.60,0.20);
+    \coordinate (O) at (0,1.30);
+
+    % Peg contact coordinates at y = 1.30 (a = 0.80)
+    \coordinate (PL) at (-0.80,1.30);
+    \coordinate (PR) at (0.80,1.30);
+
+    % Rhombus bars and horizontal rope BD
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw (B) -- (D);
+
+    % Tension arrows along BD
+    \draw[->] (B) -- (-0.65,0.20);
+    \node[below] at (-0.65,0.18) {$T$};
+    \draw[->] (D) -- (0.65,0.20);
+    \node[below] at (0.65,0.18) {$T$};
+
+    % Coordinate axes
+    \draw[->] (A) -- (0,-2.95) node[right] {$y$};
+    \draw[->] (PL) -- (2.15,1.30) node[below] {$x$};
+
+    % Weight arrow W below C
+    \draw[->] (0,-2.00) -- (0,-2.65);
+    \node[right] at (0,-2.48) {$W$};
+
+    % Pegs (small circles tangent beneath AB and AD)
+    \draw[fill=white] (-0.75,1.22) circle (0.065);
+    \draw[fill=white] (0.75,1.22) circle (0.065);
+
+    % Dimension a
+    \draw[line width=0.45pt] (0.75,1.15) -- (0.75,0.72);
+    \draw[<->] (0,0.88) -- (0.75,0.88) node[midway, above] {$a$};
+
+    % Dimension l parallel to AB
+    \coordinate (nAB) at (-0.809,0.588); % outward unit normal to AB
+    \coordinate (Aoff) at ($(A)+0.55*(nAB)$);
+    \coordinate (Boff) at ($(B)+0.55*(nAB)$);
+    \draw[line width=0.45pt] (A) -- ($(A)+0.67*(nAB)$);
+    \draw[line width=0.45pt] (B) -- ($(B)+0.67*(nAB)$);
+    \draw[<->] (Aoff) -- (Boff) node[midway, above left, inner sep=2pt] {$l$};
+
+    % Hinge dots
+    \foreach \p in {A,B,C,D} {
+        \fill (\p) circle (0.055);
+    }
+
+    % Labels
+    \node[above] at (A) {$A$};
+    \node[left] at (B) {$B$};
+    \node[below left, inner sep=2pt] at (C) {$C$};
+    \node[right] at (D) {$D$};
+    \node[below left, inner sep=2pt] at (O) {$O$};
+    \node at (-0.23,1.72) {$\alpha$};
+\end{tikzpicture}

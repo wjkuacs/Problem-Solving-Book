@@ -1,0 +1,49 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinates
+  \coordinate (O) at (0,0);
+  \coordinate (C) at (0,-3.2);     % Base center
+  \coordinate (L) at (-1.75,-3.2); % Left base point
+  \coordinate (R) at (1.75,-3.2);  % Right base point
+  % Split plane intersection with base ellipse (x_rad=1.75, y_rad=0.52) at -65 deg / +115 deg
+  \coordinate (BF) at ({1.75*cos(-65)}, {-3.2 + 0.52*sin(-65)});
+  \coordinate (BB) at ({1.75*cos(115)}, {-3.2 + 0.52*sin(115)});
+
+  % Upper cross-section at ratio t = 0.42 from O
+  \def\t{0.42}
+  \coordinate (Cz) at (0, -3.2*\t);
+  \coordinate (Lz) at (-1.75*\t, -3.2*\t);
+  \coordinate (Rz) at (1.75*\t, -3.2*\t);
+  \coordinate (BFz) at ({1.75*\t*cos(-65)}, {-3.2*\t + 0.52*\t*sin(-65)});
+  \coordinate (BBz) at ({1.75*\t*cos(115)}, {-3.2*\t + 0.52*\t*sin(115)});
+
+  % Axes at O
+  \draw[->] (O) -- (-2.1,0) node[left] {$y$};
+  \draw[->] (O) -- (1.6,-1.15) node[below right] {$x$};
+  \draw[->] (O) -- (0,-4.4) node[right] {$z$};
+  \node[above right] at (O) {$O$};
+
+  % Cone outer generators
+  \draw (O) -- (L);
+  \draw (O) -- (BF);
+  \draw[dashed] (O) -- (BB);
+
+  % Base ellipse: front/right solid, back-left dashed
+  \draw (L) arc[start angle=180, end angle=360, x radius=1.75, y radius=0.52]
+        arc[start angle=0, end angle=115, x radius=1.75, y radius=0.52];
+  \draw[dashed] (L) arc[start angle=180, end angle=115, x radius=1.75, y radius=0.52];
+
+  % Base radii and labels
+  \draw (L) -- (C) node[midway, below] {$a$};
+  \draw[dashed] (BB) -- (BF);
+  \node[right] at (0.04,-3.12) {$h$};
+
+  % Cross-section at height z
+  \draw (Lz) arc[start angle=180, end angle=295, x radius=1.75*\t, y radius=0.52*\t];
+  \draw[dashed] (Lz) arc[start angle=180, end angle=115, x radius=1.75*\t, y radius=0.52*\t];
+  \draw[dashed] (BFz) arc[start angle=-65, end angle=115, x radius=1.75*\t, y radius=0.52*\t];
+  \draw[dashed] (Lz) -- (Cz);
+  \draw[dashed] (BBz) -- (BFz);
+
+  % Label for cross-section radius
+  \draw[thin] (-0.32, -3.2*\t + 0.06) -- (-1.05, -3.2*\t + 0.06) node[left] {$\dfrac{a}{h}z$};
+\end{tikzpicture}

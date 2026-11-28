@@ -1,0 +1,44 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Main rectangular box with gaps for A, B, C
+  \draw (-1.75, 1.05) -- (1.75, 1.05) -- (1.75, 0.85);
+  \draw (1.75, 0.60) -- (1.75, -1.05);
+  \draw (1.42, -1.05) -- (-0.82, -1.05);
+  \draw (-1.12, -1.05) -- (-1.75, -1.05) -- (-1.75, 1.05);
+
+  % Inlet A (top right)
+  \draw (1.75, 0.85) -- (2.18, 0.85);
+  \draw (1.75, 0.60) -- (2.18, 0.60);
+  \node[above] at (2.0, 0.90) {$A$};
+  \draw[->] (2.82, 0.725) -- (2.25, 0.725);
+
+  % Outlet C (bottom left)
+  \draw (-1.12, -1.05) -- (-1.12, -1.48);
+  \draw (-0.82, -1.05) -- (-0.82, -1.48);
+  \node[right] at (-0.80, -1.32) {$C$};
+  \draw[->] (-0.97, -1.58) -- (-0.97, -2.18);
+
+  % Inlet B (bottom right, 45 deg)
+  \draw (1.75, -1.05) -- (2.15, -1.45);
+  \draw (1.42, -1.05) -- (1.82, -1.45);
+  \node[below left=1pt] at (1.82, -1.45) {$B$};
+  \draw[->] (2.52, -1.92) -- (2.06, -1.46);
+
+  % 45 deg angle reference
+  \draw[dashed, thin] (1.75, -1.05) -- (2.55, -1.05);
+  \draw[thin] (2.22, -1.05) arc (0:-45:0.47);
+  \node[anchor=west] at (2.24, -1.28) {$45^\circ$};
+
+  % Top roller support & R1
+  \draw (0, 1.19) circle (0.14);
+  \fill[pattern=north east lines] (-0.38, 1.33) rectangle (0.38, 1.50);
+  \draw (-0.38, 1.33) -- (0.38, 1.33);
+  \draw[->] (0, 1.58) -- (0, 2.08);
+  \node[right] at (0, 1.88) {$R_1$};
+
+  % Left roller support & R2
+  \draw (-1.89, 0) circle (0.14);
+  \fill[pattern=north east lines] (-2.20, -0.38) rectangle (-2.03, 0.38);
+  \draw (-2.03, -0.38) -- (-2.03, 0.38);
+  \draw[->] (-2.28, 0) -- (-2.82, 0);
+  \node[above] at (-2.60, 0.04) {$R_2$};
+\end{tikzpicture}

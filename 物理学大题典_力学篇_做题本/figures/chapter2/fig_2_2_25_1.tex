@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\R{3.2}
+  \def\aEnd{52}
+  \def\aChord{58}
+
+  \coordinate (O) at (0,0);
+  \fill (O) circle (1.6pt);
+
+  % Earth surface arc
+  \draw[very thick] (\aEnd:\R) arc (\aEnd:{180-\aEnd}:\R);
+
+  % Straight tunnel chord
+  \coordinate (P1) at ({180-\aChord}:\R);
+  \coordinate (P2) at (\aChord:\R);
+  \draw[thick] (P1) -- (P2);
+
+  % Dimension 130km
+  \pgfmathsetmacro{\yCh}{\R*sin(\aChord)}
+  \pgfmathsetmacro{\xCh}{\R*cos(\aChord)}
+  \draw (-\xCh,\yCh) -- (-\xCh,\yCh-0.56);
+  \draw (\xCh,\yCh) -- (\xCh,\yCh-0.56);
+  \draw[<->] (-\xCh,\yCh-0.42) -- (\xCh,\yCh-0.42) node[midway, above=1pt] {$130\,\mathrm{km}$};
+
+  % Radius arrow R
+  \draw[->, thick] (O) -- (\aEnd:\R) node[midway, below right=1pt] {$R$};
+\end{tikzpicture}

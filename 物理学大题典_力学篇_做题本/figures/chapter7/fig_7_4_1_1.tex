@@ -1,0 +1,51 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Slope 30 deg, cylinder radius 0.65, pulley radius 0.72
+  \def\rc{0.65}
+  \def\rp{0.72}
+  \coordinate (Base) at (0,0);
+  \coordinate (P) at (1.386, 0.800);
+  \coordinate (Oc) at (1.061, 1.363);
+  \coordinate (Tc) at (0.736, 1.926);
+  \coordinate (Op) at (3.391, 2.627);
+  \coordinate (Tp) at (3.031, 3.251);
+  \coordinate (Rp) at (4.111, 2.627);
+
+  % Horizontal dashed baseline and 30 degree angle
+  \draw[dashed] (Base) -- (1.45,0);
+  \draw (0.72,0) arc (0:30:0.72);
+  \node at (14:1.12) {$30^\circ$};
+
+  % Inclined plane rounding into vertical cliff
+  \draw[very thick] (Base) -- (2.51,1.45)
+    .. controls (2.95,1.70) and (3.55,1.82) .. (3.64,1.55)
+    -- (3.64,0.15);
+
+  % Hatching along incline and cliff
+  \foreach \s in {0.32, 0.62, 0.92, 1.22, 1.52, 1.82, 2.12, 2.42, 2.72} {
+    \draw ({\s*0.866}, {\s*0.5}) -- ++(235:0.22);
+  }
+  \draw (2.68,1.53) -- ++(235:0.22);
+  \draw (2.98,1.67) -- ++(235:0.22);
+  \draw (3.28,1.72) -- ++(235:0.22);
+  \foreach \y in {1.38, 1.12, 0.86, 0.60, 0.34} {
+    \draw (3.64,\y) -- ++(225:0.22);
+  }
+
+  % Cylinder and contact point P
+  \draw[very thick, fill=white] (Oc) circle (\rc);
+  \fill (P) circle (2pt) node[below right=2pt] {$P$};
+
+  % Pulley
+  \draw[very thick, fill=white] (Op) circle (\rp);
+
+  % Pulley bracket bolted to cliff
+  \draw[very thick, fill=white, rounded corners=4pt] (3.24,1.45) rectangle (3.54,2.78);
+  \fill (Op) circle (1.5pt);
+  \fill (3.391,1.62) circle (1.5pt);
+  \fill (3.391,1.76) circle (1.5pt);
+
+  % Rope and hanging block
+  \draw (Tc) -- (Tp);
+  \draw (Rp) -- (4.111,1.15);
+  \draw[very thick, fill=white] (3.89,0.75) rectangle (4.33,1.15);
+\end{tikzpicture}

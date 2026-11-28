@@ -1,0 +1,27 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \coordinate (O) at (0,0);
+  \coordinate (M1) at (-2.15,0);
+  \coordinate (U1) at (-1.15,0);
+  \coordinate (Xtip) at (2.4,0);
+  \coordinate (Ytip) at (0,1.55);
+  \coordinate (M2) at (24:2.25);
+  \coordinate (U2) at (24:1.30);
+
+  % Axes
+  \draw[->] (O) -- (Xtip) node[below] {$x$};
+  \draw[->] (O) -- (Ytip) node[left] {$y$};
+  \node[below=2pt] at (O) {$O$};
+
+  % Particle m1 and velocity u
+  \fill (M1) circle (2.8pt) node[above=3pt] {$m_1$};
+  \draw[->] (M1) -- (U1) node[midway, above=2pt] {$u$};
+  \draw[dashed] (U1) -- (O);
+
+  % Particle m2 and velocity u
+  \fill (M2) circle (2.8pt) node[right=3pt] {$m_2$};
+  \draw[->] (M2) -- (U2) node[midway, above left=1pt] {$u$};
+  \draw[dashed] (U2) -- (O);
+
+  % Angle theta_0
+  \pic[draw=none, angle radius=1.05cm, angle eccentricity=0.92, "$\theta_0$"] {angle=Xtip--O--M2};
+\end{tikzpicture}

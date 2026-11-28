@@ -1,0 +1,23 @@
+\begin{tikzpicture}[>=Stealth, thick]
+    % Square linkage ABCD centered at origin O
+    \coordinate (A) at (-1.5,-1.5);
+    \coordinate (B) at (1.5,-1.5);
+    \coordinate (C) at (1.5,1.5);
+    \coordinate (D) at (-1.5,1.5);
+
+    \draw (A) -- (B) -- (C) -- (D) -- cycle;
+
+    \node[left] at (A) {$A$};
+    \node[below right] at (B) {$B$};
+    \node[above right] at (C) {$C$};
+    \node[above left] at (D) {$D$};
+
+    % Coordinate axes from origin O
+    \draw[->] (0,0) -- (2.1,0) node[below] {$x$};
+    \draw[->] (0,0) -- (0,2.1) node[left] {$y$};
+    \node[below left] at (0,0) {$O$};
+
+    % Impulse arrow I at A along AD direction
+    \draw[->] (-1.5,-2.45) -- (-1.5,-1.55);
+    \node[right] at (-1.5,-2.0) {$I$};
+\end{tikzpicture}

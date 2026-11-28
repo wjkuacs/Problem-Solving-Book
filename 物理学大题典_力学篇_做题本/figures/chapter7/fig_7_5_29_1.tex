@@ -1,0 +1,36 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Coordinate axes
+  \coordinate (B) at (0, 0);
+  \coordinate (A) at (1.55, 0);
+  \draw[->] (B) -- (0, 3.6) node[left=2pt] {$z$};
+  \draw[->] (B) -- (4.2, 0) node[below=2pt] {$x$};
+  \node[below=2pt] at (B) {$B$};
+  \node[below left=2pt] at (A) {$A$};
+
+  % Rotation arrow omega around z-axis
+  \draw[->] (-0.25, 2.15) arc[start angle=140, end angle=385, x radius=0.36, y radius=0.17]
+    node[right=2pt] {$\omega$};
+
+  % Vertical dashed reference line through A
+  \draw[dashed] (A) -- (1.55, 3.5);
+
+  % Radius b dimension
+  \draw[<->] (0, 0.90) -- (1.55, 0.90) node[midway, above=2pt] {$b$};
+
+  % Uniform rod of length 2a tilted by theta = 40 deg from vertical
+  \begin{scope}[shift={(A)}, rotate=50]
+    \draw (0, -0.05) rectangle (2.65, 0.05);
+    % Dimension 2a along rod
+    \draw[thin] (0, -0.10) -- (0, -0.58);
+    \draw[thin] (2.65, -0.10) -- (2.65, -0.58);
+    \draw[<->] (0, -0.42) -- (2.65, -0.42)
+      node[midway, fill=white, inner sep=2pt] {$2a$};
+  \end{scope}
+
+  % Angle theta arc
+  \draw[->] (1.55, 1.22) arc[start angle=90, end angle=52, radius=1.22]
+    node[midway, above right=1pt] {$\theta$};
+
+  % Gravity vector g
+  \draw[->] (4.6, 2.55) -- (4.6, 1.35) node[midway, right=2pt] {$g$};
+\end{tikzpicture}

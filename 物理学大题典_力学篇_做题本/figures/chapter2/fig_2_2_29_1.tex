@@ -1,0 +1,79 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  \def\b{2.1}
+  \def\th{65}
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,-\b);
+  \coordinate (B) at ({-\b*sin(\th)}, {-\b*cos(\th)});
+  \coordinate (D) at ({\b*sin(\th)}, {\b*cos(\th)});
+
+  % Ceiling support at O
+  \draw[thick] (-0.36,0.45) -- (0.36,0.45);
+  \foreach \x in {-0.30,-0.15,0.0,0.15,0.30} {
+    \draw (\x,0.45) -- (\x+0.12,0.59);
+  }
+  \draw[thick] (-0.18,0.45) -- (-0.07,0.07);
+  \draw[thick] (0.18,0.45) -- (0.07,0.07);
+
+  % Rod BD
+  \draw[thick, double=white, double distance=2.6pt] (B) -- (D);
+  \node[above left=1pt] at ($(O)!0.52!(B)$) {$b$};
+  \node[above left=1pt] at ($(O)!0.52!(D)$) {$b$};
+
+  % Mass sphere at D
+  \draw[thick, fill=white] (D) circle (0.24);
+  \node[above left=3pt and 4pt] at (D) {$D$};
+
+  % Vertical dashed line OA and dimension b
+  \draw[dashed, thick] (O) -- (A);
+  \draw (0.22,0) -- (0.72,0);
+  \draw (0.32,-\b) -- (0.72,-\b);
+  \draw[<->] (0.56,0) -- (0.56,-\b) node[midway, right=2pt] {$b$};
+
+  % Angle theta
+  \pic[draw, angle radius=0.45cm, angle eccentricity=1.45, "$\theta$"] {angle=B--O--A};
+
+  % Rod BC direction from B through A to C
+  \pgfmathsetmacro{\dx}{0 - (-\b*sin(\th))}
+  \pgfmathsetmacro{\dy}{-\b - (-\b*cos(\th))}
+  \pgfmathsetmacro{\angBA}{atan2(\dy,\dx)}
+  \coordinate (C) at ($(A)+(\angBA:2.25)$);
+
+  % Rod BC (double line)
+  \draw[thick, double=white, double distance=2.6pt] (B) -- (C);
+
+  % Spring along AC (from sleeve exit to plate C)
+  \coordinate (SpStart) at ($(A)+(\angBA:0.32)$);
+  \coordinate (SpEnd) at ($(C)+(\angBA:-0.08)$);
+  \draw[thick, decorate, decoration={coil, aspect=0.45, segment length=2.8mm, amplitude=2.1mm}]
+    (SpStart) -- (SpEnd);
+  \node[above right=5pt and 2pt] at ($(SpStart)!0.5!(SpEnd)$) {$k$};
+
+  % End plate at C
+  \begin{scope}[shift={(C)}, rotate=\angBA]
+    \draw[thick, fill=white] (-0.06,-0.22) rectangle (0.06,0.22);
+  \end{scope}
+  \node[right=4pt] at (C) {$C$};
+
+  % Sleeve at A
+  \begin{scope}[shift={(A)}, rotate=\angBA]
+    \draw[thick, fill=white] (-0.32,-0.15) rectangle (0.32,0.15);
+  \end{scope}
+
+  % Floor support at A
+  \draw[thick] (-0.42,-\b-0.48) -- (0.42,-\b-0.48);
+  \foreach \x in {-0.35,-0.20,-0.05,0.10,0.25,0.38} {
+    \draw (\x,-\b-0.48) -- (\x-0.12,-\b-0.62);
+  }
+  \draw[thick] (-0.24,-\b-0.48) -- (-0.08,-\b-0.14);
+  \draw[thick] (0.24,-\b-0.48) -- (0.08,-\b-0.14);
+
+  % Pivot pins at O, B, A
+  \draw[thick, fill=white] (O) circle (2.4pt);
+  \draw[thick, fill=white] (B) circle (2.4pt);
+  \draw[thick, fill=white] (A) circle (2.0pt);
+
+  \node[above left=2pt and 6pt] at (O) {$O$};
+  \node[left=3pt] at (B) {$B$};
+  \node[below left=2pt and 7pt] at (A) {$A$};
+\end{tikzpicture}

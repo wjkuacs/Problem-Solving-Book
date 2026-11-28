@@ -1,0 +1,34 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\r{2.8}
+  \def\za{1.10}
+  \def\zb{1.45}
+  \pgfmathsetmacro{\ya}{-sqrt(\r*\r - \za*\za)}
+  \pgfmathsetmacro{\yb}{-sqrt(\r*\r - \zb*\zb)}
+
+  \coordinate (O) at (0, 0);
+  \coordinate (A) at (-\r, 0);
+  \coordinate (B) at (0, -\r);
+
+  % Coordinate axes (y left, z down)
+  \draw[->] (O) -- (-3.8, 0) node[below=2pt] {$y$};
+  \draw[->] (O) -- (0, -3.6) node[right=2pt] {$z$};
+
+  % Quarter-circle boundary AB
+  \draw (A) arc[start angle=180, end angle=270, radius=\r];
+
+  % Horizontal differential strip between z and z + dz
+  \fill[pattern=north east lines]
+    (\ya, -\za) -- (0, -\za) -- (0, -\zb) -- (\yb, -\zb) -- cycle;
+  \draw (\ya, -\za) -- (0, -\za);
+  \draw (\yb, -\zb) -- (0, -\zb);
+
+  % Radius r to upper-left corner of strip
+  \draw (O) -- (\ya, -\za) node[midway, above left=0pt] {$r$};
+
+  % Labels
+  \node[above right=1pt] at (O) {$O$};
+  \node[above=2pt] at (A) {$A$};
+  \node[below left=1pt] at (B) {$B$};
+  \node[right=2pt, font=\small] at (0, -\za) {$z$};
+  \node[right=2pt, font=\small] at (0, -\zb) {$z+\mathrm{d}z$};
+\end{tikzpicture}

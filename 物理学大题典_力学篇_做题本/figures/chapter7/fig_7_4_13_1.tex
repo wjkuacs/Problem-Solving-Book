@@ -1,0 +1,11 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  \def\R{1.15}
+  \def\r{0.52}
+  % Outer disk and inner axle
+  \draw (0,0) circle (\R);
+  \draw (0,0) circle (\r);
+  % String with tension T
+  \draw[->] (\r,0) -- (\r,\R+1.05) node[right=2pt] {$T$};
+  % Downward motion arrow
+  \draw[->] (0,-\R-0.25) -- (0,-\R-0.95);
+\end{tikzpicture}

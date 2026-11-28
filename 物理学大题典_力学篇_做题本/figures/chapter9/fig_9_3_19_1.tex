@@ -1,0 +1,28 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt, scale=0.95]
+  % Coordinate axes
+  \draw[->] (0,0) -- (4.95,0) node[below] {$x$};
+  \draw[->] (0,0) -- (0,4.85) node[left] {$y$};
+
+  % Large disk M of radius R
+  \coordinate (C1) at (2.7,2.45);
+  \def\R{2.05}
+  \draw (C1) circle (\R);
+  \node at (3.6,1.25) {$M$};
+
+  % Horizontal reference line and radius R
+  \coordinate (H) at ($(C1)+(1.65,0)$);
+  \draw (C1) -- (H);
+  \draw[->] (C1) -- node[midway, above left=1pt] {$R$} ($(C1)+(228:\R)$);
+
+  % Small disk m of radius r at distance b and angle phi
+  \def\b{1.18}
+  \def\r{0.66}
+  \coordinate (C2) at ($(C1)+(125:\b)$);
+  \draw (C1) -- node[midway, below left=1pt] {$b$} (C2);
+  \draw (C2) circle (\r);
+  \fill (C2) circle (1.8pt) node[above=2pt] {$m$};
+  \draw[->] (C2) -- node[midway, below right=0pt] {$r$} ($(C2)+(192:\r)$);
+
+  % Angle phi
+  \pic[draw, angle radius=0.45cm, angle eccentricity=1.45, "$\varphi$"] {angle = H--C1--C2};
+\end{tikzpicture}

@@ -1,0 +1,26 @@
+\begin{tikzpicture}[>=Stealth]
+  % Axes
+  \draw[->] (-0.1, 0) -- (4.5, 0) node[below] {$x$};
+  \draw[->] (0, -0.1) -- (0, 2.55) node[left] {$y$};
+
+  % Coordinate projections
+  \draw[dashed] (1.2, 0) node[below] {$(n-1)a$} -- (1.2, 0.72) -- (0, 0.72) node[left] {$y_{n-1}$};
+  \draw[dashed] (2.35, 0) node[below] {$na$} -- (2.35, 1.25) -- (0, 1.25) node[left] {$y_n$};
+  \draw[dashed] (3.5, 0) node[below] {$(n+1)a$} -- (3.5, 1.82) -- (0, 1.82) node[left] {$y_{n+1}$};
+
+  % String segments with tension direction arrows
+  \draw[thick] (0.55, 0.92) -- (1.2, 0.72);
+  \draw[thick, postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}]
+    (2.35, 1.25) -- (1.2, 0.72);
+  \draw[thick, postaction={decorate}, decoration={markings, mark=at position 0.52 with {\arrow{Stealth}}}]
+    (2.35, 1.25) -- (3.5, 1.82);
+  \draw[thick] (3.5, 1.82) -- (4.15, 2.18);
+
+  % Mass points and labels
+  \fill (1.2, 0.72) circle (1.8pt);
+  \node[above=3pt] at (1.2, 0.76) {$T_{n-1}$};
+  \fill (2.35, 1.25) circle (1.8pt);
+  \node[above=3pt] at (2.35, 1.25) {$M$};
+  \fill (3.5, 1.82) circle (1.8pt);
+  \node[above=3pt] at (3.5, 1.82) {$T_{n+1}$};
+\end{tikzpicture}

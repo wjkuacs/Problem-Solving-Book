@@ -1,0 +1,19 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Horizontal ground
+  \draw (-1.0,0) -- (4.5,0);
+  \foreach \x in {-0.8,-0.5,...,4.3} {
+    \draw[thin] (\x,0) -- (\x-0.25,-0.25);
+  }
+
+  % Fixed inclined plane
+  \draw (-0.8,2.4) -- (4.3,0);
+  \node at (3.35,0.20) {$\alpha$};
+
+  % Wedge M with horizontal top surface
+  \draw (0.369,1.85) -- (2.6,1.85) -- (2.6,0.80);
+  \node at (1.98,1.45) {$M$};
+
+  % Block m on top of wedge M
+  \draw (1.15,1.85) rectangle (1.95,2.45);
+  \node at (1.55,2.15) {$m$};
+\end{tikzpicture}

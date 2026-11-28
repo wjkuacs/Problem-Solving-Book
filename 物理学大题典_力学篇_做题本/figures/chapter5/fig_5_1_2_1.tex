@@ -1,0 +1,47 @@
+\begin{tikzpicture}[>=Stealth, line width=0.8pt]
+  \def\r{1.75}
+  \def\hw{0.07}
+  \pgfmathsetmacro{\H}{2*(\r+\hw)} % A=(0,H) so left edge of rod is tangent at theta=30 deg
+
+  \coordinate (O) at (0,0);
+  \coordinate (A) at (0,\H);
+  \coordinate (C) at (30:\r);
+
+  % Ground line and hatches
+  \draw (-2.3, 0) -- (2.3, 0);
+  \foreach \x in {-2.15,-1.95,...,2.15} {
+    \draw (\x, 0) -- (\x-0.12, -0.16);
+  }
+  \node[below, inner sep=3.5pt] at (0, -0.14) {$O$};
+
+  % Semicircle cam
+  \draw (\r, 0) arc (0:180:\r);
+
+  % Radius r arrow
+  \draw[->] (O) -- (140:\r) node[midway, below left, inner sep=1pt] {$r$};
+
+  % Vertical dashed line OA
+  \draw[dashed] (O) -- (A);
+
+  % Rod AB (centerline starts at A, angle -60 deg, half-width hw)
+  \coordinate (Bend) at ($(A)+(-60:3.72)$);
+  \draw[fill=white]
+    ($(A)+(-150:\hw)$) -- ($(Bend)+(-150:\hw)$) -- ($(Bend)+(30:\hw)$) -- ($(A)+(30:\hw)$) -- cycle;
+
+  % Ceiling support at A
+  \draw ($(A)+(-0.26,0.42)$) -- (A) -- ($(A)+(0.26,0.42)$);
+  \draw (-0.42, \H+0.42) -- (0.42, \H+0.42);
+  \foreach \x in {-0.35,-0.20,-0.05,0.10,0.25,0.40} {
+    \draw (\x, \H+0.42) -- (\x+0.12, \H+0.55);
+  }
+  \draw[fill=white] (A) circle (2.6pt);
+
+  % Angle theta
+  \draw ($(A)+(-90:0.75)$) arc (-90:-60:0.75);
+  \node at ($(A)+(-75:1.05)$) {$\theta$};
+
+  % Labels A, C, B
+  \node[right, inner sep=4pt] at (A) {$A$};
+  \node[below left, inner sep=2pt] at (C) {$C$};
+  \node[right, inner sep=2pt] at (Bend) {$B$};
+\end{tikzpicture}

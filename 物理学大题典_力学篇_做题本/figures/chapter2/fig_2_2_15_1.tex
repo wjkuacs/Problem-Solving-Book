@@ -1,0 +1,56 @@
+\begin{tikzpicture}[>=Stealth, font=\small]
+  % Platform and lower ground
+  \draw[thick] (-3.1,1.65) -- (-0.25,1.65) arc (90:0:0.25) -- (0,0) -- (3.8,0);
+
+  % Hatching for platform, wall, and ground
+  \foreach \x in {-2.95,-2.65,...,-0.25} {
+    \draw (\x,1.65) -- (\x-0.2,1.42);
+  }
+  \foreach \y in {0.2,0.5,0.8,1.1,1.4} {
+    \draw (0,\y) -- (-0.2,\y-0.2);
+  }
+  \foreach \x in {0.2,0.5,...,3.6} {
+    \draw (\x,0) -- (\x-0.2,-0.23);
+  }
+
+  % Pulley
+  \coordinate (Pul) at (0.22,1.92);
+  \def\rp{0.24}
+  \draw[thick] (Pul) circle (\rp);
+  \fill (Pul) circle (1.5pt);
+
+  % Cart
+  \draw[thick] (-2.6,1.93) rectangle (-1.5,2.52);
+  \draw[thick] (-2.35,1.79) circle (0.14);
+  \draw[thick] (-1.75,1.79) circle (0.14);
+
+  % Rope from cart to pulley top
+  \pgfmathsetmacro{\yrope}{1.92+\rp}
+  \draw[thick] (-1.5,\yrope) -- (0.22,\yrope);
+
+  % Exact tangent from person's hand (2.68,0.52) to pulley
+  \coordinate (Hand) at (2.68,0.52);
+  \pgfmathsetmacro{\dx}{2.68-0.22}
+  \pgfmathsetmacro{\dy}{0.52-1.92}
+  \pgfmathsetmacro{\dist}{sqrt(\dx*\dx+\dy*\dy)}
+  \pgfmathsetmacro{\baseang}{atan2(\dy,\dx)}
+  \pgfmathsetmacro{\offsetang}{acos(\rp/\dist)}
+  \pgfmathsetmacro{\tang}{\baseang+\offsetang}
+  \coordinate (TanPt) at ($(Pul)+(\tang:\rp)$);
+  \draw[thick] (TanPt) -- (Hand);
+
+  % Height dimension h
+  \draw (-1.0,0) -- (-0.2,0);
+  \draw[<->] (-0.8,0) -- (-0.8,\yrope) node[midway, left=2pt] {$h$};
+
+  % Person pulling the rope
+  \draw[thick] (2.95,0.78) circle (0.11); % head
+  \draw[thick] (2.95,0.67) -- (2.92,0.34); % torso
+  \draw[thick] (2.94,0.58) -- (Hand); % back arm holding rope
+  \draw[thick] (2.94,0.58) -- (3.08,0.46) -- (3.12,0.57); % front arm
+  \draw[thick] (2.92,0.34) -- (2.78,0.18) -- (2.72,0); % back leg
+  \draw[thick] (2.92,0.34) -- (3.06,0.18) -- (2.98,0); % front leg
+
+  % Velocity arrow v_0
+  \draw[->, thick] (3.25,0.50) -- (3.80,0.50) node[above=2pt, pos=0.65] {$v_0$};
+\end{tikzpicture}

@@ -1,0 +1,48 @@
+\begin{tikzpicture}[>=Stealth, thick]
+  % Nodes of 5 equilateral triangles (side L = 1.35)
+  \coordinate (A) at (0,0);
+  \coordinate (C) at (1.35,0);
+  \coordinate (E) at (2.70,0);
+  \coordinate (G) at (4.05,0);
+  \coordinate (B) at (0.675,1.169);
+  \coordinate (D) at (2.025,1.169);
+  \coordinate (F) at (3.375,1.169);
+
+  % 11 rods
+  \draw (A) -- (C) -- (E) -- (G);
+  \draw (B) -- (D) -- (F);
+  \draw (A) -- (B) -- (C) -- (D) -- (E) -- (F) -- (G);
+
+  % Left pin support at A
+  \draw (-0.12,-0.20) -- (A) -- (0.12,-0.20);
+  \fill[white] (A) circle (2.2pt);
+  \draw (A) circle (2.2pt);
+  \fill[pattern=north east lines] (-0.55,-0.20) rectangle (0.35,-0.34);
+  \fill[pattern=north east lines] (0.21,-0.34) rectangle (0.35,-0.85);
+  \draw (-0.55,-0.20) -- (0.35,-0.20) -- (0.35,-0.85);
+
+  % Right vertical roller pad at G
+  \draw (3.72,-0.20) rectangle (4.38,0);
+  \fill[pattern=north east lines] (3.72,-0.20) rectangle (4.65,-0.34);
+  \fill[pattern=north east lines] (3.72,-0.34) rectangle (3.86,-0.85);
+  \draw (3.72,-0.85) -- (3.72,-0.20) -- (4.65,-0.20);
+
+  % Hanging weight W at E
+  \draw (E) -- (2.70,-0.45);
+  \draw (2.36,-0.45) rectangle (3.04,-0.85);
+  \node[right] at (3.08,-0.65) {$W$};
+
+  % Support reaction arrows
+  \draw[->] (-0.32,0.12) -- (-0.32,0.92) node[midway, left] {$N_{Ay}$};
+  \draw[->] (0.36,0.13) -- (1.00,0.13) node[midway, above=1pt] {$N_{Ax}$};
+  \draw[->] (4.55,0.12) -- (4.55,0.92) node[midway, right] {$N_{Gy}$};
+
+  % Joint labels
+  \node[left=3pt] at (A) {$A$};
+  \node[above] at (B) {$B$};
+  \node[below] at (C) {$C$};
+  \node[above] at (D) {$D$};
+  \node[below left=1pt] at (E) {$E$};
+  \node[above] at (F) {$F$};
+  \node[above right=2pt] at (G) {$G$};
+\end{tikzpicture}
